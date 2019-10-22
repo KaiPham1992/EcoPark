@@ -186,7 +186,7 @@ extension LoginViewController: UITextFieldDelegate {
             for _ in 0 ..< passwordText.count {  hashPassword += "*" }
             textField.text = hashPassword
             if textField.text&.count > 0 {
-                vPassword.textFieldDidChanged(vPassword.tfInput)
+//                vPassword.textFieldDidChanged(vPassword.tfInput)
             }
             print(self.passwordText)
             return false

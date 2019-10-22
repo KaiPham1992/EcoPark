@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
+		22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
+		22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
+		22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */; };
+		22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */; };
+		22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */; };
+		2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */; };
+		2243174B235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */; };
+		2243174C235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */; };
 		228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071FA235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
@@ -799,6 +808,9 @@
 
 /* Begin PBXFileReference section */
 		187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		228071F7235C11D70076D5CC /* RestoreParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreParam.swift; sourceTree = "<group>"; };
 		25ECF64E91EE97854783E905 /* Pods-EnglishApp_Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Dev.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev.release.xcconfig"; sourceTree = "<group>"; };
 		28D786760AE73B0AF55038DE /* Pods-EnglishApp_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_AppStore.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1902,6 +1914,9 @@
 		DE750BAE228C424300596D3B /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */,
+				22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */,
+				22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */,
 				DEC7F92022C4EDA90096D3D1 /* Comfortaa-Bold.ttf */,
 				DEC7F92122C4EDAA0096D3D1 /* Comfortaa-Light.ttf */,
 				DEC7F91F22C4EDA90096D3D1 /* Comfortaa-Regular.ttf */,
@@ -2297,6 +2312,7 @@
 				769A3BDE22A24E8C00CA55BD /* ViewTime.xib in Resources */,
 				769A3BD922A0A69200CA55BD /* DateCell.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
+				22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				7629BDDA22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
 				DE49F81122A3D83A00A92C63 /* NotificationCell.xib in Resources */,
 				DE89D1F222A41B44000638B0 /* LevelUpContent.xib in Resources */,
@@ -2304,11 +2320,13 @@
 				DE95318A228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE361E832283E60500FA3B0D /* AppDropDownCell.xib in Resources */,
 				766AE80022B0234D002D474E /* UpdateFeatureView.xib in Resources */,
+				2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				7680749D22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE361E792283E60500FA3B0D /* AppSearchBar.xib in Resources */,
 				76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				DE2ADE7A22841BB9003768CE /* MenuViewController.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
+				22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DEBCBC7622945C9A00DF7F74 /* InfoPackView.xib in Resources */,
 				DE361E8C2283E60500FA3B0D /* AppCheckBox.xib in Resources */,
 				DE2ADE5922841756003768CE /* GoogleService-Dev-Info.plist in Resources */,
@@ -2353,6 +2371,7 @@
 				769A3BDF22A24E8C00CA55BD /* ViewTime.xib in Resources */,
 				769A3BDA22A0A69200CA55BD /* DateCell.xib in Resources */,
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
+				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				7629BDDB22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
 				DE49F81222A3D83A00A92C63 /* NotificationCell.xib in Resources */,
 				DE89D1F322A41B44000638B0 /* LevelUpContent.xib in Resources */,
@@ -2360,11 +2379,13 @@
 				DE95318B228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE9530492287DF4800E3F688 /* AppDropDownCell.xib in Resources */,
 				766AE80122B0234D002D474E /* UpdateFeatureView.xib in Resources */,
+				2243174B235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				DE95304B2287DF4800E3F688 /* MenuViewController.xib in Resources */,
 				DE9531122287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
+				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DEBCBC7722945C9A00DF7F74 /* InfoPackView.xib in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
 				DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info.plist in Resources */,
@@ -2409,6 +2430,7 @@
 				769A3BE022A24E8C00CA55BD /* ViewTime.xib in Resources */,
 				769A3BDB22A0A69200CA55BD /* DateCell.xib in Resources */,
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
+				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				7629BDDC22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
 				DE49F81322A3D83A00A92C63 /* NotificationCell.xib in Resources */,
 				DE89D1F422A41B44000638B0 /* LevelUpContent.xib in Resources */,
@@ -2416,11 +2438,13 @@
 				DE95318C228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE9530F72287DF6400E3F688 /* AppDropDownCell.xib in Resources */,
 				766AE80222B0234D002D474E /* UpdateFeatureView.xib in Resources */,
+				2243174C235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				DE9530F92287DF6400E3F688 /* MenuViewController.xib in Resources */,
 				DE9531132287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
+				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DEBCBC7822945C9A00DF7F74 /* InfoPackView.xib in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
 				DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info.plist in Resources */,

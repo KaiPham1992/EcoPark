@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,21 +57,21 @@
                                     <rect key="frame" x="40" y="175" width="295" height="320"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFi-dk-4OB" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="70"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="VuQ-YS-jlG"/>
+                                                <constraint firstAttribute="height" constant="70" id="VuQ-YS-jlG"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQE-ZN-Hrs" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="80" width="295" height="50"/>
+                                            <rect key="frame" x="0.0" y="100" width="295" height="50"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Jr8-Wq-CzJ"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axM-dQ-ReL">
-                                            <rect key="frame" x="0.0" y="140" width="295" height="20"/>
+                                            <rect key="frame" x="0.0" y="160" width="295" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="J5L-MB-apS"/>
                                             </constraints>
@@ -80,7 +80,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glm-Fl-VGK">
-                                            <rect key="frame" x="0.0" y="170" width="295" height="42"/>
+                                            <rect key="frame" x="0.0" y="190" width="295" height="42"/>
                                             <color key="backgroundColor" red="1" green="0.82745098039999998" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="42" id="bzH-Qk-jn5"/>
@@ -94,7 +94,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoặc đăng nhập bằng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1l-hb-KMj">
-                                            <rect key="frame" x="76" y="232" width="143" height="20"/>
+                                            <rect key="frame" x="76" y="252" width="143" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="hdN-hI-e7U"/>
                                                 <constraint firstAttribute="width" constant="143" id="xKJ-KS-e1v"/>
@@ -104,7 +104,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryJ-Zf-EO4">
-                                            <rect key="frame" x="147" y="241.5" width="1" height="1"/>
+                                            <rect key="frame" x="147" y="261.5" width="1" height="1"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="1" id="JTv-Bc-ngY"/>
@@ -112,7 +112,7 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLR-te-mwV">
-                                            <rect key="frame" x="98" y="266" width="40" height="40"/>
+                                            <rect key="frame" x="98" y="286" width="40" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="t2r-je-q9D"/>
@@ -124,7 +124,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4g-c3-ZqJ">
-                                            <rect key="frame" x="157" y="266" width="40" height="40"/>
+                                            <rect key="frame" x="157" y="286" width="40" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="aUR-37-yqX"/>
@@ -202,7 +202,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="PtA-lY-E6q" firstAttribute="top" secondItem="xcF-eD-88o" secondAttribute="bottom" constant="111" id="2u9-WK-hd1"/>
                                 <constraint firstItem="xr6-jr-Mic" firstAttribute="leading" secondItem="K4f-S4-jdv" secondAttribute="leading" constant="12" id="7dn-21-C0d"/>

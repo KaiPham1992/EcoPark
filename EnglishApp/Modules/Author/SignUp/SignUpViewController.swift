@@ -169,7 +169,7 @@ extension SignUpViewController: UITextFieldDelegate {
             for _ in 0 ..< passwordText.count {  hashPassword += "*" }
             textField.text = hashPassword
             if textField.text&.count > 0 {
-                vPassword.textFieldDidChanged(vPassword.tfInput)
+//                vPassword.textFieldDidChanged(vPassword.tfInput)
             }
             print(self.passwordText)
             return false
@@ -187,7 +187,7 @@ extension SignUpViewController: UITextFieldDelegate {
             for _ in 0 ..< rePasswordText.count {  hashPassword += "*" }
             textField.text = hashPassword
             if textField.text&.count > 0 {
-                vRePassword.textFieldDidChanged(vRePassword.tfInput)
+//                vRePassword.textFieldDidChanged(vRePassword.tfInput)
             }
             print(self.rePasswordText)
             return false
