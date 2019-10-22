@@ -43,11 +43,14 @@ class LoginViewController: BaseViewController {
     var paramLogin: Any?
     var passwordText: String = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         vPassword.tfInput.delegate = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().presentingViewController = self
+        
+        
     }
     
     override func setUpNavigation() {

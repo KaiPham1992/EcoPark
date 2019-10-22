@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppDateDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
             <connections>
                 <outlet property="lbTitle" destination="eCy-Lb-K4C" id="Maj-nx-69P"/>
                 <outlet property="tfInput" destination="Nfz-Bu-dbs" id="0MM-PL-rJO"/>
@@ -43,8 +43,8 @@
                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop_down" translatesAutoresizingMaskIntoConstraints="NO" id="Ibt-Jz-jQf">
-                            <rect key="frame" x="383" y="55" width="15" height="10"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar_outlined" translatesAutoresizingMaskIntoConstraints="NO" id="Ibt-Jz-jQf">
+                            <rect key="frame" x="374" y="48" width="24" height="24"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
@@ -97,6 +97,6 @@
         </view>
     </objects>
     <resources>
-        <image name="drop_down" width="15" height="9.5"/>
+        <image name="ic_calendar_outlined" width="24" height="24"/>
     </resources>
 </document>

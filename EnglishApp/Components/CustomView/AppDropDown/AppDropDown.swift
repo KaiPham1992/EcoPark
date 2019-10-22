@@ -28,6 +28,7 @@ protocol AppTextFieldDropDownDelegate: class {
 class AppDropDown: BaseViewXib {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var tfInput: UITextField!
+    @IBOutlet weak var vContain: UIView!
     
     let dropDown = DropDown()
     var selectedItem: Any?
@@ -63,15 +64,14 @@ class AppDropDown: BaseViewXib {
     }
     
     @IBAction func btnActionTapped() {
-        dropDown.width = tfInput.frame.width
+        dropDown.width = vContain.frame.width
         dropDown.show()
     }
     
     func setUpDropDown() {
         dropDown.anchorView = tfInput
         dropDown.backgroundColor = .white
-        dropDown.width = tfInput.frame.width
-//        dropDown.multiSelectionAction
+        dropDown.width = vContain.frame.width
         
         dropDown.cellNib = UINib(nibName: "AppDropDownCell", bundle:  nil)
         dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
