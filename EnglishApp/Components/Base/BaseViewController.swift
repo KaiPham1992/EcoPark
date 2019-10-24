@@ -41,7 +41,7 @@ open class BaseViewController: UIViewController {
         //store.subscribe(self)
         if #available(iOS 13.0, *) {
             // Always adopt a light interface style.
-            overrideUserInterfaceStyle = .light
+//            overrideUserInterfaceStyle = .light
         }
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         setUpViews()

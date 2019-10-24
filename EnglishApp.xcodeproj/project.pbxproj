@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
@@ -753,6 +756,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17155F03236160FF001B81AE /* AppTextfiledLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfiledLogin.swift; sourceTree = "<group>"; };
 		187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -1561,6 +1565,7 @@
 		DE361EA82283E6DB00FA3B0D /* CustomTextfield */ = {
 			isa = PBXGroup;
 			children = (
+				17155F03236160FF001B81AE /* AppTextfiledLogin.swift */,
 				DE361EA92283E6DB00FA3B0D /* CustomTextfield.swift */,
 			);
 			path = CustomTextfield;
@@ -2676,6 +2681,7 @@
 				DE952F9C2287D2A700E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
 				2A9A81EA22EC5AA300345C5F /* WordEntity.swift in Sources */,
+				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FC22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				76CF522422CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
@@ -2884,6 +2890,7 @@
 				DE95303B2287DF4800E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
 				2A9A81EB22EC5AA300345C5F /* WordEntity.swift in Sources */,
+				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FD22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				76CF522522CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
@@ -3092,6 +3099,7 @@
 				DE9530E92287DF6400E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
 				2A9A81EC22EC5AA300345C5F /* WordEntity.swift in Sources */,
+				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FE22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				76CF522622CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
