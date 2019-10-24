@@ -36,7 +36,7 @@ class SignUpViewController: BaseViewController {
     
     
     override func setTitleUI() {
-        self.hideNavigation()
+//        self.hideNavigation()
         setColorStatusBar(color: AppColor.yellowLogin)
         vDisplayName.setTitleAndPlaceHolder(title: LocalizableKey.DisplayName.showLanguage, placeHolder: LocalizableKey.enterDisplayName.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
@@ -49,7 +49,7 @@ class SignUpViewController: BaseViewController {
         vPassword.tfInput.delegate = self
         vRePassword.tfInput.delegate = self
         
-        tfCaptcha.placeholder = LocalizableKey.enterCaptcha.showLanguage
+//        tfCaptcha.placeholder = LocalizableKey.enterCaptcha.showLanguage
     }
     
     @IBAction func btnBackBlackTapped() {
