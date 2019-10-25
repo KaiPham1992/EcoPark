@@ -15,8 +15,8 @@ enum StyleNavigation {
 
 open class BaseViewController: UIViewController {
     
-    let mainBackgroundColor = UIColor.white
-    let mainNavigationBarColor = UIColor.white
+    let mainBackgroundColor = UIColor.black
+    let mainNavigationBarColor = UIColor.black
     
     lazy var btnLike : UIButton = {
         let btn = UIButton()
@@ -70,11 +70,11 @@ open class BaseViewController: UIViewController {
         return UIStatusBarStyle.lightContent
     }
     
-    func setColorStatusBar(color: UIColor = AppColor.yellow) {
+    func setColorStatusBar(color: UIColor = UIColor.black) {
         guard #available(iOS 13, *) else {
             if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
-               statusBar.backgroundColor = color
-               statusBar.tintColor =  color
+                statusBar.backgroundColor = color
+                statusBar.tintColor =  color
             }
             return
         }
@@ -119,7 +119,7 @@ open class BaseViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
     }
     
-    func setNavigationColor(color: UIColor = AppColor.yellow) {
+    func setNavigationColor(color: UIColor = UIColor.black) {
         self.navigationController?.navigationBar.barTintColor = color
     }
     
@@ -351,11 +351,23 @@ extension BaseViewController {
         }
     }
     
-    func setTitleNavigation(title: String, textColor: UIColor = UIColor.white, action: Selector? = nil ) {
+    func setTitleNavigation(title: String, textColor: UIColor = UIColor.white, action: Selector? = nil, textAlight: NSTextAlignment = NSTextAlignment.center ) {
         
         showNavigation()
         let vTitle = TitleNavigationBar()
         vTitle.lbTitle.text = title
+        vTitle.lbTitle.textAlignment = textAlight
+        vTitle.frame = CGRect(x: 0, y: 0, width: 375, height: 44)
+        self.navigationItem.titleView = vTitle
+        
+    }
+    
+    func setTitleBoldLeftNavigation(title: String, action: Selector? = nil ) {
+        showNavigation()
+        let vTitle = TitleNavigationBar()
+        vTitle.lbTitle.text = title
+        vTitle.lbTitle.font = AppFont.fontBold17
+        vTitle.lbTitle.textAlignment = .left
         vTitle.frame = CGRect(x: 0, y: 0, width: 375, height: 44)
         self.navigationItem.titleView = vTitle
         
@@ -431,12 +443,12 @@ extension BaseViewController {
     }
     
     func addHeaderUser() {
-//        let header = HeaderUserView()
-//        
-//        //        header.frame = CGRect(x: 0, y: 0, width: 414, height: 375)
-//        //         self.navigationItem.titleView = header
-//        self.navigationController?.navigationBar.addSubview(header)
-//        header.fillSuperview()
+        //        let header = HeaderUserView()
+        //
+        //        //        header.frame = CGRect(x: 0, y: 0, width: 414, height: 375)
+        //        //         self.navigationItem.titleView = header
+        //        self.navigationController?.navigationBar.addSubview(header)
+        //        header.fillSuperview()
     }
 }
 

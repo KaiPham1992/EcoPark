@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
+		2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
+		2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
+		2220A789235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */; };
+		2220A78A235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */; };
+		2220A78B235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */; };
+		2220A78C235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */; };
+		2220A78D235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */; };
+		2220A78E235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */; };
+		2220A78F235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A783235EDA3A00E9C0F1 /* HomeRouter.swift */; };
+		2220A790235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A783235EDA3A00E9C0F1 /* HomeRouter.swift */; };
+		2220A791235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A783235EDA3A00E9C0F1 /* HomeRouter.swift */; };
+		2220A792235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A784235EDA3A00E9C0F1 /* HomeViewController.swift */; };
+		2220A793235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A784235EDA3A00E9C0F1 /* HomeViewController.swift */; };
+		2220A794235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A784235EDA3A00E9C0F1 /* HomeViewController.swift */; };
+		2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
+		2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
+		2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
 		22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
@@ -754,6 +772,12 @@
 
 /* Begin PBXFileReference section */
 		187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		2220A783235EDA3A00E9C0F1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		2220A784235EDA3A00E9C0F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -1070,6 +1094,19 @@
 			path = PopUpSelectDate;
 			sourceTree = "<group>";
 		};
+		22431764235ED91800CA1E13 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */,
+				2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */,
+				2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */,
+				2220A783235EDA3A00E9C0F1 /* HomeRouter.swift */,
+				2220A784235EDA3A00E9C0F1 /* HomeViewController.swift */,
+				2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2A2B015A22F085F800A08EEA /* ListManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1322,6 +1359,7 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				22431764235ED91800CA1E13 /* Home */,
 				DE89D1C922A4126C000638B0 /* WebView */,
 				DE49F7F122A3D7FD00A92C63 /* Notification */,
 				DEDDEF6322914A790043A62D /* MainTabbar */,
@@ -2171,6 +2209,7 @@
 				22431761235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE3CC3482283DD990037DBE4 /* LaunchScreen.storyboard in Resources */,
 				766AE7F222AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
+				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531142287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
@@ -2223,6 +2262,7 @@
 				22431762235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE9530502287DF4800E3F688 /* LaunchScreen.storyboard in Resources */,
 				766AE7F322AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
+				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531152287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
@@ -2275,6 +2315,7 @@
 				22431763235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE9530FE2287DF6400E3F688 /* LaunchScreen.storyboard in Resources */,
 				766AE7F422AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
+				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531162287E00A00E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
@@ -2504,6 +2545,8 @@
 				DE361DD62283E4BD00FA3B0D /* LoginPresenter.swift in Sources */,
 				76E2FEFB228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE361DFF2283E57900FA3B0D /* NSObjectProtocol+Extension.swift in Sources */,
+				2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
+				2220A78F235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
 				DE952F8B2287D2A700E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				DE361E982283E60500FA3B0D /* AnimationHelper.swift in Sources */,
 				DE73CF1E22B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
@@ -2571,6 +2614,7 @@
 				DE952FA92287DD2A00E3F688 /* Login+Facebook.swift in Sources */,
 				DE2ADE7622841BB9003768CE /* MenuRouter.swift in Sources */,
 				DE952F9D2287D2A700E3F688 /* KActivityIndicatorView.swift in Sources */,
+				2220A789235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */,
 				DE49F80522A3D81D00A92C63 /* NotificationListInteractor.swift in Sources */,
 				DE952F862287D2A700E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				2A36B8A0231A4AE100E9696F /* BaseTableViewController.swift in Sources */,
@@ -2579,6 +2623,7 @@
 				DE361F552283E8E200FA3B0D /* ParentNotificationEntity.swift in Sources */,
 				DE361DD72283E4BD00FA3B0D /* LoginRouter.swift in Sources */,
 				DE361DD92283E4BD00FA3B0D /* LoginProtocols.swift in Sources */,
+				2220A78C235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				DE361E9D2283E60500FA3B0D /* NotificationPopUp.swift in Sources */,
 				DE952F8D2287D2A700E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE361DFB2283E57900FA3B0D /* String+extension.swift in Sources */,
@@ -2602,6 +2647,7 @@
 				DE952F8F2287D2A700E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				DE361F4B2283E85000FA3B0D /* UserEndPoint.swift in Sources */,
+				2220A792235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				DE49F7FF22A3D81D00A92C63 /* NotificationListViewController.swift in Sources */,
 				228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */,
 				DE2ADE7922841BB9003768CE /* MenuInteractor.swift in Sources */,
@@ -2712,6 +2758,8 @@
 				DE952FC02287DF4800E3F688 /* LoginPresenter.swift in Sources */,
 				76E2FEFC228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE952FC12287DF4800E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
+				2220A790235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
 				DE952FC22287DF4800E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				DE952FC32287DF4800E3F688 /* AnimationHelper.swift in Sources */,
 				DE73CF1F22B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
@@ -2779,6 +2827,7 @@
 				DE952FEA2287DF4800E3F688 /* Login+Facebook.swift in Sources */,
 				DE952FEB2287DF4800E3F688 /* MenuRouter.swift in Sources */,
 				DE952FEC2287DF4800E3F688 /* KActivityIndicatorView.swift in Sources */,
+				2220A78A235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */,
 				DE49F80622A3D81D00A92C63 /* NotificationListInteractor.swift in Sources */,
 				DE952FED2287DF4800E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				7624A6C6231AB570000BA1C6 /* BaseTableViewController.swift in Sources */,
@@ -2787,6 +2836,7 @@
 				DE952FEF2287DF4800E3F688 /* ParentNotificationEntity.swift in Sources */,
 				DE952FF02287DF4800E3F688 /* LoginRouter.swift in Sources */,
 				DE952FF12287DF4800E3F688 /* LoginProtocols.swift in Sources */,
+				2220A78D235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				DE952FF22287DF4800E3F688 /* NotificationPopUp.swift in Sources */,
 				DE952FF32287DF4800E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE952FF42287DF4800E3F688 /* String+extension.swift in Sources */,
@@ -2810,6 +2860,7 @@
 				DE9530022287DF4800E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				DE9530032287DF4800E3F688 /* UserEndPoint.swift in Sources */,
+				2220A793235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				DE49F80022A3D81D00A92C63 /* NotificationListViewController.swift in Sources */,
 				228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */,
 				DE9530042287DF4800E3F688 /* MenuInteractor.swift in Sources */,
@@ -2920,6 +2971,8 @@
 				DE95306E2287DF6400E3F688 /* LoginPresenter.swift in Sources */,
 				76E2FEFD228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE95306F2287DF6400E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
+				2220A791235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
 				DE9530702287DF6400E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				DE9530712287DF6400E3F688 /* AnimationHelper.swift in Sources */,
 				2ADDCB04232F83890087B427 /* TermAndConditionResponse.swift in Sources */,
@@ -2987,6 +3040,7 @@
 				2AA9E36822F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				DE9530952287DF6400E3F688 /* RecordParam.swift in Sources */,
 				DE9530962287DF6400E3F688 /* Utils.swift in Sources */,
+				2220A78B235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */,
 				DE9530972287DF6400E3F688 /* SignUpParam.swift in Sources */,
 				DE89D1F122A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE9530982287DF6400E3F688 /* Login+Facebook.swift in Sources */,
@@ -2995,6 +3049,7 @@
 				DE49F80722A3D81D00A92C63 /* NotificationListInteractor.swift in Sources */,
 				DE95309B2287DF6400E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				DE49F83122A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
+				2220A78E235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				DE95311A228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE95309D2287DF6400E3F688 /* ParentNotificationEntity.swift in Sources */,
 				DE95309E2287DF6400E3F688 /* LoginRouter.swift in Sources */,
@@ -3018,6 +3073,7 @@
 				DE9530AE2287DF6400E3F688 /* BaseViewController.swift in Sources */,
 				DE9530AF2287DF6400E3F688 /* PostRecordParam.swift in Sources */,
 				DE9530B02287DF6400E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				2220A794235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				DE9530B12287DF6400E3F688 /* UserEndPoint.swift in Sources */,
 				DE49F80122A3D81D00A92C63 /* NotificationListViewController.swift in Sources */,
 				DE9530B22287DF6400E3F688 /* MenuInteractor.swift in Sources */,

@@ -86,6 +86,12 @@ struct AppImage {
     static let imgStudyPack = UIImage(named: "crown")!
     
     static let iconFilter = UIImage(named: "ic_filter")!
+    
+    
+    //APP Moi
+    
+    static let iconCheckout = UIImage(named: "ic_qrcheckin")!
+    static let iconCheckin = UIImage(named: "ic_qrcheckout")!
 
     
 }

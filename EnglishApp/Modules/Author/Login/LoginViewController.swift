@@ -49,8 +49,6 @@ class LoginViewController: BaseViewController {
         vPassword.tfInput.delegate = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().presentingViewController = self
-        
-        
     }
     
     override func setUpNavigation() {

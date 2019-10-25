@@ -17,7 +17,7 @@ struct AppFont {
     
     static let fontBold12 = UIFont(name: "OpenSans-Bold", size: 12)!
     static let fontBold14 = UIFont(name: "OpenSans-Bold", size: 14)!
-    static let fontBold16 = UIFont(name: "OpenSans-Bold", size: 16)!
+    static let fontBold17 = UIFont(name: "OpenSans-Bold", size: 17)!
     static let fontBold18 = UIFont(name: "OpenSans-Bold", size: 18)!
     
 }

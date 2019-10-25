@@ -58,7 +58,7 @@ class AppRouter {
     func openHome() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
-        let tabBar = MainTabbar()
-        windowApp.rootViewController = tabBar
+        let homeVC = HomeRouter.createModule()
+        windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }
 }
