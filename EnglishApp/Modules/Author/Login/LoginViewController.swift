@@ -46,7 +46,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vPassword.tfInput.delegate = self
+//        vPassword.tfInput.delegate = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().presentingViewController = self
     }
@@ -56,22 +56,22 @@ class LoginViewController: BaseViewController {
     }
     
     override func setTitleUI() {
-        hideNavigation()
-        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
-        
-        vPassword.setTitleAndPlaceHolder(title: LocalizableKey.LoginPassword.showLanguage, placeHolder: LocalizableKey.enterPassword.showLanguage)
-        btnLogin.setTitle(LocalizableKey.LoginButtonLogin.showLanguage.uppercased(), for: .normal)
-        lbFbGmail.text = LocalizableKey.FBorGmail.showLanguage
-        lbForgot.text = LocalizableKey.ForgotPass.showLanguage
-        
-        let attr = NSMutableAttributedString()
-        let attr1 = LocalizableKey.NotYetAccount.showLanguage.toAttributedString(color: AppColor.color48_48_48, font: AppFont.fontRegular12)
-        let attr2 = "\(LocalizableKey.Register.showLanguage)".toAttributedString(color: AppColor.color255_211_17, font: AppFont.fontRegular12, isUnderLine: true)
-        attr.append(attr1)
-        attr.append(attr2)
-        lbRegister.attributedText = attr
-        
-        lbError.text = ""
+//        hideNavigation()
+//        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
+//
+//        vPassword.setTitleAndPlaceHolder(title: LocalizableKey.LoginPassword.showLanguage, placeHolder: LocalizableKey.enterPassword.showLanguage)
+//        btnLogin.setTitle(LocalizableKey.LoginButtonLogin.showLanguage.uppercased(), for: .normal)
+//        lbFbGmail.text = LocalizableKey.FBorGmail.showLanguage
+//        lbForgot.text = LocalizableKey.ForgotPass.showLanguage
+//
+//        let attr = NSMutableAttributedString()
+//        let attr1 = LocalizableKey.NotYetAccount.showLanguage.toAttributedString(color: AppColor.color48_48_48, font: AppFont.fontRegular12)
+//        let attr2 = "\(LocalizableKey.Register.showLanguage)".toAttributedString(color: AppColor.color255_211_17, font: AppFont.fontRegular12, isUnderLine: true)
+//        attr.append(attr1)
+//        attr.append(attr2)
+//        lbRegister.attributedText = attr
+//
+//        lbError.text = ""
     }
     
     @IBAction func btnLoginTapped() {
