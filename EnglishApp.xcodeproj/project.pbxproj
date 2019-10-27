@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
 		2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
 		2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
@@ -25,9 +28,6 @@
 		2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
 		2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
 		2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
-		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
-		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
-		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
@@ -55,6 +55,33 @@
 		228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071FA235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
+		2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
+		2292F20923653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
+		2292F20A23653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
+		2292F20B23653B0400B570E3 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20623653B0300B570E3 /* DrawerViewController.swift */; };
+		2292F20C23653B0400B570E3 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20623653B0300B570E3 /* DrawerViewController.swift */; };
+		2292F20D23653B0400B570E3 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20623653B0300B570E3 /* DrawerViewController.swift */; };
+		2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
+		2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
+		2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
+		22F33AA523645B8100D136EB /* HomeFindInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */; };
+		22F33AA623645B8100D136EB /* HomeFindInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */; };
+		22F33AA723645B8100D136EB /* HomeFindInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */; };
+		22F33AA823645B8100D136EB /* HomeFindPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA023645B8100D136EB /* HomeFindPresenter.swift */; };
+		22F33AA923645B8100D136EB /* HomeFindPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA023645B8100D136EB /* HomeFindPresenter.swift */; };
+		22F33AAA23645B8100D136EB /* HomeFindPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA023645B8100D136EB /* HomeFindPresenter.swift */; };
+		22F33AAB23645B8100D136EB /* HomeFindProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA123645B8100D136EB /* HomeFindProtocols.swift */; };
+		22F33AAC23645B8100D136EB /* HomeFindProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA123645B8100D136EB /* HomeFindProtocols.swift */; };
+		22F33AAD23645B8100D136EB /* HomeFindProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA123645B8100D136EB /* HomeFindProtocols.swift */; };
+		22F33AAE23645B8100D136EB /* HomeFindRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA223645B8100D136EB /* HomeFindRouter.swift */; };
+		22F33AAF23645B8100D136EB /* HomeFindRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA223645B8100D136EB /* HomeFindRouter.swift */; };
+		22F33AB023645B8100D136EB /* HomeFindRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA223645B8100D136EB /* HomeFindRouter.swift */; };
+		22F33AB123645B8100D136EB /* HomeFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA323645B8100D136EB /* HomeFindViewController.swift */; };
+		22F33AB223645B8100D136EB /* HomeFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA323645B8100D136EB /* HomeFindViewController.swift */; };
+		22F33AB323645B8100D136EB /* HomeFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33AA323645B8100D136EB /* HomeFindViewController.swift */; };
+		22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
+		22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
+		22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
 		23643E6810F21B2466B06EBA /* Pods_EnglishApp_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759C0A7C02170E0CF342085F /* Pods_EnglishApp_AppStore.framework */; };
 		2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
@@ -791,6 +818,15 @@
 		22431759235ECFBF00CA1E13 /* PopUpSelectDateContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpSelectDateContent.swift; sourceTree = "<group>"; };
 		2243175A235ECFBF00CA1E13 /* PopUpSelectDateContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpSelectDateContent.xib; sourceTree = "<group>"; };
 		228071F7235C11D70076D5CC /* RestoreParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreParam.swift; sourceTree = "<group>"; };
+		2292F20523653B0300B570E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		2292F20623653B0300B570E3 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		2292F20723653B0300B570E3 /* NecContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecContainerViewController.swift; sourceTree = "<group>"; };
+		22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindInteractor.swift; sourceTree = "<group>"; };
+		22F33AA023645B8100D136EB /* HomeFindPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindPresenter.swift; sourceTree = "<group>"; };
+		22F33AA123645B8100D136EB /* HomeFindProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindProtocols.swift; sourceTree = "<group>"; };
+		22F33AA223645B8100D136EB /* HomeFindRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindRouter.swift; sourceTree = "<group>"; };
+		22F33AA323645B8100D136EB /* HomeFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindViewController.swift; sourceTree = "<group>"; };
+		22F33AA423645B8100D136EB /* HomeFindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFindViewController.xib; sourceTree = "<group>"; };
 		25ECF64E91EE97854783E905 /* Pods-EnglishApp_Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Dev.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev.release.xcconfig"; sourceTree = "<group>"; };
 		28D786760AE73B0AF55038DE /* Pods-EnglishApp_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_AppStore.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		2A13591C2311A67100587C0E /* EnglishApp_Dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Dev.entitlements; sourceTree = "<group>"; };
@@ -1111,6 +1147,29 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		2292F20423653B0300B570E3 /* ContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				2292F20523653B0300B570E3 /* ContainerViewController.swift */,
+				2292F20623653B0300B570E3 /* DrawerViewController.swift */,
+				2292F20723653B0300B570E3 /* NecContainerViewController.swift */,
+			);
+			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		22F33A9E23645B6F00D136EB /* HomeFind */ = {
+			isa = PBXGroup;
+			children = (
+				22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */,
+				22F33AA023645B8100D136EB /* HomeFindPresenter.swift */,
+				22F33AA123645B8100D136EB /* HomeFindProtocols.swift */,
+				22F33AA223645B8100D136EB /* HomeFindRouter.swift */,
+				22F33AA323645B8100D136EB /* HomeFindViewController.swift */,
+				22F33AA423645B8100D136EB /* HomeFindViewController.xib */,
+			);
+			path = HomeFind;
+			sourceTree = "<group>";
+		};
 		2A2B015A22F085F800A08EEA /* ListManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1363,6 +1422,8 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2292F20423653B0300B570E3 /* ContainerView */,
+				22F33A9E23645B6F00D136EB /* HomeFind */,
 				22431764235ED91800CA1E13 /* Home */,
 				DE89D1C922A4126C000638B0 /* WebView */,
 				DE49F7F122A3D7FD00A92C63 /* Notification */,
@@ -2185,6 +2246,7 @@
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80422B02371002D474E /* ViewFeature.xib in Resources */,
 				2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */,
+				22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE361E9C2283E60500FA3B0D /* NotificationContent.xib in Resources */,
 				DE49F83322A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
 				DE361E812283E60500FA3B0D /* AppDropDown.xib in Resources */,
@@ -2238,6 +2300,7 @@
 				22431754235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
 				2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */,
+				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE9530442287DF4800E3F688 /* NotificationContent.xib in Resources */,
 				DE49F83422A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
 				DE9530452287DF4800E3F688 /* AppDropDown.xib in Resources */,
@@ -2291,6 +2354,7 @@
 				22431755235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
 				DE9530F22287DF6400E3F688 /* NotificationContent.xib in Resources */,
+				22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE49F83522A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
 				DE9530F32287DF6400E3F688 /* AppDropDown.xib in Resources */,
 				2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */,
@@ -2558,8 +2622,10 @@
 				DE6FDB0722AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE361E692283E60500FA3B0D /* AppColor.swift in Sources */,
 				DE952F8C2287D2A700E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
+				2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE361F2F2283E85000FA3B0D /* PhoneEntity.swift in Sources */,
 				DE952F912287D2A700E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				DE49F82422A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE361F272283E85000FA3B0D /* NotificationEntity.swift in Sources */,
 				DE49F80222A3D81D00A92C63 /* NotificationListProtocols.swift in Sources */,
@@ -2586,9 +2652,11 @@
 				DE2C07F822857FF100BAE311 /* BaseTabStripViewController.swift in Sources */,
 				7629BDDE22ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				DE952F962287D2A700E3F688 /* KActivityIndicatorAnimationBallZigZag.swift in Sources */,
+				22F33AA823645B8100D136EB /* HomeFindPresenter.swift in Sources */,
 				2A9A81DD22EC4B6B00345C5F /* RealmDBManager.swift in Sources */,
 				DE952F882287D2A700E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
 				DE361E682283E60500FA3B0D /* Strings.swift in Sources */,
+				22F33AAB23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
 				DEDDEF6522914A980043A62D /* MainTabbar.swift in Sources */,
 				76CF522022CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				DE361F452283E85000FA3B0D /* BaseParam.swift in Sources */,
@@ -2606,6 +2674,7 @@
 				DEECF89F22871D1B00A4678B /* ForgotPasswordProtocols.swift in Sources */,
 				DE361F3B2283E85000FA3B0D /* Network.swift in Sources */,
 				2243175E235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
+				22F33AA523645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				DE361F402283E85000FA3B0D /* UpdateProfileParam.swift in Sources */,
 				DE361F3A2283E85000FA3B0D /* BaseResponse.swift in Sources */,
 				DE361DDA2283E4BD00FA3B0D /* LoginInteractor.swift in Sources */,
@@ -2627,8 +2696,10 @@
 				DE953118228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE361F552283E8E200FA3B0D /* ParentNotificationEntity.swift in Sources */,
 				DE361DD72283E4BD00FA3B0D /* LoginRouter.swift in Sources */,
+				22F33AAE23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				DE361DD92283E4BD00FA3B0D /* LoginProtocols.swift in Sources */,
 				2220A78C235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
+				2292F20B23653B0400B570E3 /* DrawerViewController.swift in Sources */,
 				DE361E9D2283E60500FA3B0D /* NotificationPopUp.swift in Sources */,
 				DE952F8D2287D2A700E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE361DFB2283E57900FA3B0D /* String+extension.swift in Sources */,
@@ -2721,6 +2792,7 @@
 				DE952F832287D2A700E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				DE361E9F2283E60500FA3B0D /* YesNoContentView.swift in Sources */,
 				DE361E8B2283E60500FA3B0D /* AppTextView.swift in Sources */,
+				22F33AB123645B8100D136EB /* HomeFindViewController.swift in Sources */,
 				DE361DF72283E57900FA3B0D /* Date+extension.swift in Sources */,
 				DEECF89D22871D1B00A4678B /* ForgotPasswordRouter.swift in Sources */,
 				DEECF89022871D0400A4678B /* SignUpRouter.swift in Sources */,
@@ -2772,8 +2844,10 @@
 				DE6FDB0822AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE952FC42287DF4800E3F688 /* AppColor.swift in Sources */,
 				DE952FC52287DF4800E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
+				2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE952FC62287DF4800E3F688 /* PhoneEntity.swift in Sources */,
 				DE952FC72287DF4800E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				2292F20923653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				DE49F82522A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE952FC82287DF4800E3F688 /* NotificationEntity.swift in Sources */,
 				DE49F80322A3D81D00A92C63 /* NotificationListProtocols.swift in Sources */,
@@ -2800,9 +2874,11 @@
 				DE952FD42287DF4800E3F688 /* BaseTabStripViewController.swift in Sources */,
 				7629BDDF22ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				DE952FD52287DF4800E3F688 /* KActivityIndicatorAnimationBallZigZag.swift in Sources */,
+				22F33AA923645B8100D136EB /* HomeFindPresenter.swift in Sources */,
 				2A9A81DE22EC4B6B00345C5F /* RealmDBManager.swift in Sources */,
 				DE952FD62287DF4800E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
 				DE952FD72287DF4800E3F688 /* Strings.swift in Sources */,
+				22F33AAC23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
 				DEDDEF6622914A980043A62D /* MainTabbar.swift in Sources */,
 				76CF522122CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				DE952FD82287DF4800E3F688 /* BaseParam.swift in Sources */,
@@ -2820,6 +2896,7 @@
 				DE952FDF2287DF4800E3F688 /* ForgotPasswordProtocols.swift in Sources */,
 				DE952FE12287DF4800E3F688 /* Network.swift in Sources */,
 				2243175F235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
+				22F33AA623645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				DE952FE22287DF4800E3F688 /* UpdateProfileParam.swift in Sources */,
 				DE952FE32287DF4800E3F688 /* BaseResponse.swift in Sources */,
 				DE952FE42287DF4800E3F688 /* LoginInteractor.swift in Sources */,
@@ -2841,8 +2918,10 @@
 				DE953119228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE952FEF2287DF4800E3F688 /* ParentNotificationEntity.swift in Sources */,
 				DE952FF02287DF4800E3F688 /* LoginRouter.swift in Sources */,
+				22F33AAF23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				DE952FF12287DF4800E3F688 /* LoginProtocols.swift in Sources */,
 				2220A78D235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
+				2292F20C23653B0400B570E3 /* DrawerViewController.swift in Sources */,
 				DE952FF22287DF4800E3F688 /* NotificationPopUp.swift in Sources */,
 				DE952FF32287DF4800E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE952FF42287DF4800E3F688 /* String+extension.swift in Sources */,
@@ -2935,6 +3014,7 @@
 				DE9530352287DF4800E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				DE9530362287DF4800E3F688 /* YesNoContentView.swift in Sources */,
 				DE9530372287DF4800E3F688 /* AppTextView.swift in Sources */,
+				22F33AB223645B8100D136EB /* HomeFindViewController.swift in Sources */,
 				DE9530382287DF4800E3F688 /* Date+extension.swift in Sources */,
 				DE9530392287DF4800E3F688 /* ForgotPasswordRouter.swift in Sources */,
 				DE95303A2287DF4800E3F688 /* SignUpRouter.swift in Sources */,
@@ -2986,8 +3066,10 @@
 				DE73CF2022B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
 				DE6FDB0922AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE9530722287DF6400E3F688 /* AppColor.swift in Sources */,
+				2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE9530732287DF6400E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
 				DE9530742287DF6400E3F688 /* PhoneEntity.swift in Sources */,
+				2292F20A23653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				DE9530752287DF6400E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				DE49F82622A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE9530762287DF6400E3F688 /* NotificationEntity.swift in Sources */,
@@ -3014,9 +3096,11 @@
 				DE9530802287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				766AE80A22B02393002D474E /* ViewFeature.swift in Sources */,
 				DE9530812287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
+				22F33AAA23645B8100D136EB /* HomeFindPresenter.swift in Sources */,
 				DE953180228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
 				228071FA235C11D70076D5CC /* RestoreParam.swift in Sources */,
 				DE9530822287DF6400E3F688 /* BaseTabStripViewController.swift in Sources */,
+				22F33AAD23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
 				7629BDE022ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				DE9530832287DF6400E3F688 /* KActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				DE9530842287DF6400E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
@@ -3034,6 +3118,7 @@
 				DE95308A2287DF6400E3F688 /* CommonEndPoint.swift in Sources */,
 				DE95308B2287DF6400E3F688 /* AppDelegate+GoogleSignIn.swift in Sources */,
 				7629BDD322ACCBBA0051B835 /* ReportQuestionPopUp.swift in Sources */,
+				22F33AA723645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				22431760235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				DE95308C2287DF6400E3F688 /* PhotoEntity.swift in Sources */,
 				DE95308D2287DF6400E3F688 /* ForgotPasswordProtocols.swift in Sources */,
@@ -3055,8 +3140,10 @@
 				DE95309A2287DF6400E3F688 /* KActivityIndicatorView.swift in Sources */,
 				DE49F80722A3D81D00A92C63 /* NotificationListInteractor.swift in Sources */,
 				DE95309B2287DF6400E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				22F33AB023645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				DE49F83122A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
 				2220A78E235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
+				2292F20D23653B0400B570E3 /* DrawerViewController.swift in Sources */,
 				DE95311A228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE95309D2287DF6400E3F688 /* ParentNotificationEntity.swift in Sources */,
 				DE95309E2287DF6400E3F688 /* LoginRouter.swift in Sources */,
@@ -3149,6 +3236,7 @@
 				DE9530E32287DF6400E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				DE9530E42287DF6400E3F688 /* YesNoContentView.swift in Sources */,
 				DE9530E52287DF6400E3F688 /* AppTextView.swift in Sources */,
+				22F33AB323645B8100D136EB /* HomeFindViewController.swift in Sources */,
 				DE9530E62287DF6400E3F688 /* Date+extension.swift in Sources */,
 				DE9530E72287DF6400E3F688 /* ForgotPasswordRouter.swift in Sources */,
 				DE9530E82287DF6400E3F688 /* SignUpRouter.swift in Sources */,
@@ -3313,19 +3401,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Dev.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nghia Nguyen (G7RSC937JS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ngoc Duong (39DGKB335U)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
+				DEVELOPMENT_TEAM = Q3TBY53XUC;
 				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nghianguyen.obee-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engma.ecopark-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.nghianguyen.obee-ios";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.engma.ecopark-ios";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3338,19 +3426,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Dev.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Nghia Nguyen (8HQRBRRH7Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ENGMA Engineering Services Trading Company Limited (Q3TBY53XUC)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
+				DEVELOPMENT_TEAM = Q3TBY53XUC;
 				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nghianguyen.obee-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engma.ecopark-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.nghianguyen.obee-ios";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.engma.ecopark-ios";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

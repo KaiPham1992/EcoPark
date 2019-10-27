@@ -189,6 +189,16 @@ extension UIView {
             }
         }
     }
+    
+    func fillSuperviewWithOnlyTopSafe() {
+          translatesAutoresizingMaskIntoConstraints = false
+          if let superview = superview {
+              topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor).isActive = true
+              leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+              rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+              bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+          }
+      }
 
     func fillVerticalSuperview(constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false

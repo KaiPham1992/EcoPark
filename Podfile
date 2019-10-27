@@ -23,6 +23,9 @@ def main_pods
 #    pod 'Crashlytics'
     pod 'netfox'
     pod 'Zip', '~> 1.1'
+    
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 end
 
 target 'EnglishApp_Dev' do

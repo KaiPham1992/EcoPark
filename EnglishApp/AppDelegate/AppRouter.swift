@@ -22,14 +22,7 @@ class AppRouter {
 //            openLogin()
 //        }
 //    }
-    
-    func setTest() {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
-//
-//        let vcLogin = EditProfileRouter.createModule()
-//        let nc = UINavigationController(rootViewController: vcLogin)
-//        windowApp.rootViewController = nc
-    }
+
     
     func pushTo(viewController: UIViewController) {
         viewController.hidesBottomBarWhenPushed = true
@@ -47,12 +40,12 @@ class AppRouter {
     }
     
     func openTest() {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
-//        //---
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
+        //---
 //        let vcLogin = HomeRouter.createModule()
-//
+
 //        let nc = UINavigationController(rootViewController: vcLogin)
-//        windowApp.rootViewController = nc
+        windowApp.rootViewController = NecContainerViewController()
     }
     
     func openHome() {

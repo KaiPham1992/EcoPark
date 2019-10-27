@@ -9,21 +9,168 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
+
+
+protocol HomeViewControllerDelegate: class {
+    func showLefMenuTapped()
+}
 
 class HomeViewController: BaseViewController, HomeViewProtocol {
-
-	var presenter: HomePresenterProtocol?
-
-	override func viewDidLoad() {
+    
+    var presenter: HomePresenterProtocol?
+    @IBOutlet weak var vSearch: AppSearchBar!
+    @IBOutlet weak var mapView : GMSMapView!
+    var marker:GMSMarker!
+    
+    var locationManager = CLLocationManager()
+    var centerMapCoordinate:CLLocationCoordinate2D!
+    
+    weak var delegate: HomeViewControllerDelegate?
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // remove later
+        centerMapCoordinate = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
+        setUpMap()
+    }
+    
+    func setUpMap() {
+        self.mapView?.isMyLocationEnabled = true
+        //Location Manager code to fetch current location
+        self.locationManager.delegate = self
+        self.locationManager.startUpdatingLocation()
+        mapView.settings.myLocationButton = true
+        mapView.delegate = self
     }
     
     override func setUpNavigation() {
         super.setUpNavigation()
         
-        addButtonToNavigation(image: AppImage.imgMenu, style: .left, action: nil)
+        addButtonToNavigation(image: AppImage.imgMenu, style: .left, action: #selector(btnMenuTapped))
         addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: nil)
         setTitleBoldLeftNavigation(title: "EcoParking", action: nil)
     }
+    
+    @objc func btnMenuTapped() {
+        if let containerController = navigationController?.parent as? ContainerViewController {
+                   containerController.toggleLeftPanel()
+        }
+    }
+    
+    override func setUpViews() {
+        super.setUpViews()
+        vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: "Nhập điểm đến")
+    }
+    
+    @IBAction func btnFilterTapped() {
+        let vc = HomeFindRouter.createModule()
+        
+        self.push(controller: vc)
+    }
+    
+}
 
+
+extension HomeViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
+        
+        self.mapView?.animate(to: camera)
+        self.locationManager.stopUpdatingLocation()
+        
+    }
+}
+
+
+//MARK: - delegate map position
+extension HomeViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        let latitude = mapView.camera.target.latitude
+        let longitude = mapView.camera.target.longitude
+        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.placeMarkerOnCenter(centerMapCoordinate:centerMapCoordinate)
+//        print(centerMapCoordinate)
+    }
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//        print(mapView.camera.target)
+//        print(position.target)
+//        let long = CGFloat(position.target.longitude)
+//        let lat = CGFloat(position.target.latitude)
+//        if isTextfieldDelegate {
+//            isTextfieldDelegate = false
+//        } else {
+//            getAddressFromLocation(pdblLatitude: lat, withLongitude: long)
+//        }
+//
+//        guard let distance = self.distance else { return }
+//        presenter?.getCountRecord(long: long, lat: lat, radius: Int(distance.value&))
+    }
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+//        vTitleMarker.isHidden = true
+    }
+    
+    func placeMarkerOnCenter(centerMapCoordinate:CLLocationCoordinate2D) {
+        if marker == nil {
+            marker = GMSMarker()
+        }
+        
+        marker.position = centerMapCoordinate
+        marker.map = self.mapView
+    }
+    
+    
+//    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
+//        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+//        let lat: Double = Double("\(pdblLatitude)")!
+//        //21.228124
+//        let lon: Double = Double("\(pdblLongitude)")!
+//        //72.833770
+//        let ceo: CLGeocoder = CLGeocoder()
+//        center.latitude = lat
+//        center.longitude = lon
+//
+//        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+//
+//        var addressString : String = ""
+//        ceo.reverseGeocodeLocation(loc, completionHandler:
+//            {(placemarks, error) in
+//                if (error != nil)
+//                {
+//                    print("reverse geodcode fail: \(error!.localizedDescription)")
+//                }
+//
+//                guard let pm = placemarks  else { return }
+//
+//                if pm.count > 0 {
+//                    let pm = placemarks![0]
+//                    if pm.thoroughfare != nil {
+//                        addressString = addressString + pm.thoroughfare! + ", "
+//                    }
+//
+//                    if pm.subLocality != nil {
+//                        addressString = addressString + pm.subLocality! + ", "
+//                    }
+//
+//                    if pm.locality != nil {
+//                        addressString = addressString + pm.locality! + ", "
+//                    }
+//                    if pm.country != nil {
+//                        addressString = addressString + pm.country! + ", "
+//                    }
+//                    if pm.postalCode != nil {
+//                        addressString = addressString + pm.postalCode! + " "
+//                    }
+//                    print(addressString)
+////                    self.tfAddress.text = addressString
+//                }
+//        })
+//    }
 }

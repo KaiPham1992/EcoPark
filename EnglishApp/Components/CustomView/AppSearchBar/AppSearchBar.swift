@@ -14,9 +14,13 @@ class AppSearchBar: BaseViewXib {
     @IBOutlet weak var btnSearch: UIButton!
     var actionSearch : ((String) -> ())?
     
-    func setTitleAndPlaceHolder(placeHolder: String? = nil) {
+    func setTitleAndPlaceHolder(icon: UIImage? = nil, placeHolder: String? = nil) {
         if placeHolder != nil {
             self.tfInput.placeholder = placeHolder
+        }
+        
+        if icon != nil {
+            self.btnSearch.setImage(icon, for: .normal)
         }
     }
     
