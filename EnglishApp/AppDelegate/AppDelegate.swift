@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaultHelper.shared.appLanguage == nil {
             LanguageHelper.setAppleLAnguageTo(lang: LanguageType.english)
         }
+        
         IQKeyboardManager.shared.enable = true
         
         configureGoogle()
@@ -46,8 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 //        checkLogin()
-        realmConfig()
-        AppRouter.shared.openHome()
+//        realmConfig()
+        AppRouter.shared.openTest()
 //        AppRouter.shared.updateRootView()
         
        
@@ -148,7 +149,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        LiveData.listDownloading.removeAll()
+//        LiveData.listDownloading.removeAll()
     }
 }
 

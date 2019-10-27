@@ -119,13 +119,6 @@ class UserEntity: BaseEntity  {
         return self.fullName&
     }
     
-    var imageStudyPack: UIImage? {
-        if self.typeUser.contains("STUDY_PACK") {
-            return AppImage.imgStudyPack
-        }
-        return nil
-    }
-    
     var isUserPremium : Bool {
         get {
             return self.typeUser.contains("PREMIUM")
@@ -136,13 +129,6 @@ class UserEntity: BaseEntity  {
         get {
             return self.typeUser.contains("STUDY_PACK")
         }
-    }
-    
-    var imagePremium: UIImage? {
-        if self.typeUser.contains("PREMIUM") {
-            return AppImage.imgPremium
-        }
-        return nil
     }
     
 }

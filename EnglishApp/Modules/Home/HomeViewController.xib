@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="mapView" destination="JfX-bT-O35" id="ybx-wy-zQi"/>
+                <outlet property="vSearch" destination="uD5-Bf-Mag" id="tNa-sc-E2S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,29 +32,33 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w26-gL-p8l">
-                    <rect key="frame" x="0.0" y="53" width="375" height="614"/>
-                </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frR-0y-yRy">
-                    <rect key="frame" x="303" y="0.0" width="64" height="45"/>
+                    <rect key="frame" x="295" y="0.0" width="64" height="45"/>
                     <state key="normal" title=" Lọc" image="ic_filter">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="btnFilterTapped" destination="-1" eventType="touchUpInside" id="SO5-Gt-K5D"/>
+                    </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfX-bT-O35" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="53" width="375" height="614"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="w26-gL-p8l" secondAttribute="trailing" id="1Mc-KH-nWM"/>
-                <constraint firstItem="frR-0y-yRy" firstAttribute="leading" secondItem="uD5-Bf-Mag" secondAttribute="trailing" constant="8" id="Kc6-4O-ixe"/>
-                <constraint firstItem="w26-gL-p8l" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" id="PJt-Jh-bBJ"/>
+                <constraint firstItem="6a4-Dh-U8n" firstAttribute="bottom" secondItem="JfX-bT-O35" secondAttribute="bottom" id="0Fy-Mp-JTZ"/>
+                <constraint firstItem="frR-0y-yRy" firstAttribute="leading" secondItem="uD5-Bf-Mag" secondAttribute="trailing" id="Kc6-4O-ixe"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="trailing" secondItem="6a4-Dh-U8n" secondAttribute="trailing" constant="-80" id="S5g-sB-LT3"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" constant="24" id="Umr-bi-QGF"/>
-                <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="frR-0y-yRy" secondAttribute="trailing" constant="8" id="Xou-ud-jFx"/>
-                <constraint firstItem="w26-gL-p8l" firstAttribute="top" secondItem="uD5-Bf-Mag" secondAttribute="bottom" constant="8" id="k4T-2P-F7r"/>
-                <constraint firstItem="6a4-Dh-U8n" firstAttribute="bottom" secondItem="w26-gL-p8l" secondAttribute="bottom" id="oeS-Qw-bps"/>
+                <constraint firstItem="JfX-bT-O35" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" id="Vxh-kr-Dpg"/>
+                <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="frR-0y-yRy" secondAttribute="trailing" constant="16" id="Xou-ud-jFx"/>
                 <constraint firstItem="frR-0y-yRy" firstAttribute="top" secondItem="uD5-Bf-Mag" secondAttribute="top" id="quX-9l-FVf"/>
                 <constraint firstItem="frR-0y-yRy" firstAttribute="bottom" secondItem="uD5-Bf-Mag" secondAttribute="bottom" id="ul4-mI-OuE"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="top" secondItem="6a4-Dh-U8n" secondAttribute="top" id="w2J-Sm-rWK"/>
+                <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="JfX-bT-O35" secondAttribute="trailing" id="ywt-zq-0ht"/>
+                <constraint firstItem="JfX-bT-O35" firstAttribute="top" secondItem="uD5-Bf-Mag" secondAttribute="bottom" constant="8" id="yyc-KL-8GE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="6a4-Dh-U8n"/>
             <point key="canvasLocation" x="138" y="145"/>
