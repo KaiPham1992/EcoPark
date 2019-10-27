@@ -40,5 +40,8 @@ struct AppImage {
     static let iconPlaceMap = UIImage(named: "ic_placeholder_map")!
     static let imgPlaceHolder = UIImage(named: "placeHolderImage")!
 
+    //Login
+    static let iconUsername = UIImage(named: "ic_person")
+    static let iconPadlock = UIImage(named: "ic_padlock")
     
 }

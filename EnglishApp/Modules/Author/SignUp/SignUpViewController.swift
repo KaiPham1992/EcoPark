@@ -31,12 +31,14 @@ class SignUpViewController: BaseViewController {
         super.viewDidLoad()
         
         presenter?.getCaptcha()
-        
+        addBackToNavigation()
     }
     
     
     override func setTitleUI() {
 //        self.hideNavigation()
+        self.showNavigation()
+        self.setTitleNavigation(title: LocalizableKey.Register.showLanguage)
         setColorStatusBar(color: AppColor.yellowLogin)
         vDisplayName.setTitleAndPlaceHolder(title: LocalizableKey.DisplayName.showLanguage, placeHolder: LocalizableKey.enterDisplayName.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)

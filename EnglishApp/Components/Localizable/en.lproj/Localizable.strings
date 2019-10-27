@@ -33,9 +33,11 @@
 "Register" = "Register";
 "LoginButtonSignUp" = "REGISTER";
 "passwordDifference" = "Re-password is wrong!";
+"Username" = "Username";
+"Language" = "Language:";
 
 // Forgot password page
-"ForgotPasswordMessage" = "Enter the email address associated with your account. Then check the mailbox";
+"ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";
 "SentEmail" = "Send email";
 "ForgotTitle" = "Forgot password";
 "out_group_message" = "The competition started so can not out group";

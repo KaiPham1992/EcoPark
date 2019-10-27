@@ -61,8 +61,8 @@ class AppTextfiledLogin: UIView {
 //        image.anchor( right: self.leftAnchor, rightConstant: 10, widthConstant: 21, heightConstant: 21)
 //        image.centerYToSuperview(constant: 0)
         image.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 11).isActive = true
-        image.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 15).isActive = true
+        image.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 24).isActive = true
         image.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         tfInput.anchor( left: image.rightAnchor, right: self.rightAnchor, leftConstant: 10, rightConstant: 0)
         tfInput.centerYToView(view: image)

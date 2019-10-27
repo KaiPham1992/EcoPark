@@ -46,6 +46,8 @@ struct LocalizableKey {
     static let ForgotPass = "ForgotPass"
     static let Register = "Register"
     static let NotYetAccount = "NotYetAccount"
+    static let username = "Username"
+    static let language = "Language"
     
     static let invalidLoginEmail = "invalidLoginEmail"
     static let invalidLoginPassword = "invalidLoginPassword"

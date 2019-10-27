@@ -19,7 +19,8 @@
 "MenuHotLine" = "Hotline 1900587";
 "MenuLanguage" = "Ngôn ngữ";
 "MenuNotification" = "Thông báo";
-
+"Username" = "Tên đăng nhập";
+"Language" = "Ngôn ngữ:";
 // Login Page
 
 "LoginEmail" = "Email";
@@ -34,7 +35,7 @@
 "passwordDifference" = "Nhập lại sai mật khẩu";
 
 // Forgot password page
-"ForgotPasswordMessage" = "Nhập địa chỉ email liên kết với tài khoản của bạn.Sau đó kiểm tra hòm thư";
+"ForgotPasswordMessage" = "Vui lòng nhập đúng email trong tài khoản của bạn để nhận lại mật khẩu mới:";
 "SentEmail" = "Gửi email";
 "ForgotTitle" = "Quên mật khẩu";
 "out_group_message" = "Cuộc thi đã bắt đầu không thể rời nhóm.";

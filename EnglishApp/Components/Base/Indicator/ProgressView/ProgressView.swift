@@ -25,7 +25,7 @@ open class ProgressView {
     }()
     
     private var imageLoadingCompetition : UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "img_ong_lam_bai"))
+        let image = UIImageView(image: #imageLiteral(resourceName: "avatarDefautl"))
         image.backgroundColor = .white
         image.contentMode = UIView.ContentMode.scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
