@@ -1,25 +1,6 @@
 PODS:
   - Alamofire (4.9.0)
-  - AppAuth (1.2.0):
-    - AppAuth/Core (= 1.2.0)
-    - AppAuth/ExternalUserAgent (= 1.2.0)
-  - AppAuth/Core (1.2.0)
-  - AppAuth/ExternalUserAgent (1.2.0)
   - DropDown (2.3.13)
-  - FBSDKCoreKit (5.8.0):
-    - FBSDKCoreKit/Basics (= 5.8.0)
-    - FBSDKCoreKit/Core (= 5.8.0)
-  - FBSDKCoreKit/Basics (5.8.0)
-  - FBSDKCoreKit/Core (5.8.0):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.8.0):
-    - FBSDKLoginKit/Login (= 5.8.0)
-  - FBSDKLoginKit/Login (5.8.0):
-    - FBSDKCoreKit (~> 5.0)
-  - FBSDKShareKit (5.8.0):
-    - FBSDKShareKit/Share (= 5.8.0)
-  - FBSDKShareKit/Share (5.8.0):
-    - FBSDKCoreKit (~> 5.0)
   - Firebase/Core (6.9.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.2)
@@ -79,10 +60,6 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (3.5.0):
     - GoogleMaps/Base (= 3.5.0)
-  - GoogleSignIn (5.0.1):
-    - AppAuth (~> 1.2)
-    - GTMAppAuth (~> 1.0)
-    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (6.3.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -101,14 +78,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
-  - GTMAppAuth (1.0.0):
-    - AppAuth/Core (~> 1.0)
-    - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.2.2):
-    - GTMSessionFetcher/Full (= 1.2.2)
-  - GTMSessionFetcher/Core (1.2.2)
-  - GTMSessionFetcher/Full (1.2.2):
-    - GTMSessionFetcher/Core (= 1.2.2)
   - IQKeyboardManagerSwift (6.5.1)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -119,11 +88,6 @@ PODS:
   - ObjectMapper (3.5.1)
   - Popover (1.2.2)
   - Protobuf (3.9.2)
-  - Realm (3.19.0):
-    - Realm/Headers (= 3.19.0)
-  - Realm/Headers (3.19.0)
-  - RealmSwift (3.19.0):
-    - Realm (= 3.19.0)
   - SDWebImage (5.2.1):
     - SDWebImage/Core (= 5.2.1)
   - SDWebImage/Core (5.2.1)
@@ -132,34 +96,25 @@ PODS:
   - Zip (1.1.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - DropDown
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
-  - Firebase/Core
-  - Firebase/Messaging
-  - GoogleMaps
-  - GooglePlaces
-  - GoogleSignIn
-  - IQKeyboardManagerSwift
-  - netfox
-  - ObjectMapper
-  - Popover
-  - RealmSwift
-  - SDWebImage
-  - SwiftyJSON
-  - XLPagerTabStrip
+  - Alamofire (= 4.9.0)
+  - DropDown (= 2.3.13)
+  - Firebase/Core (= 6.9.0)
+  - Firebase/Messaging (= 6.9.0)
+  - GoogleMaps (= 3.5.0)
+  - GooglePlaces (= 3.5.0)
+  - IQKeyboardManagerSwift (= 6.5.1)
+  - netfox (= 1.16.0)
+  - ObjectMapper (= 3.5.1)
+  - Popover (= 1.2.2)
+  - SDWebImage (= 5.2.1)
+  - SwiftyJSON (= 5.0.0)
+  - XLPagerTabStrip (= 9.0.0)
   - Zip (~> 1.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AppAuth
     - DropDown
-    - FBSDKCoreKit
-    - FBSDKLoginKit
-    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -173,18 +128,13 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleMaps
     - GooglePlaces
-    - GoogleSignIn
     - GoogleUtilities
-    - GTMAppAuth
-    - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - nanopb
     - netfox
     - ObjectMapper
     - Popover
     - Protobuf
-    - Realm
-    - RealmSwift
     - SDWebImage
     - SwiftyJSON
     - XLPagerTabStrip
@@ -192,11 +142,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
-  FBSDKLoginKit: 1b0cf04df0370b37404213157b060d6666ede814
-  FBSDKShareKit: abc29e1bb4f9f59f679adf1ae191006d68455f96
   Firebase: 2d750c54cda57d5a6ae31212cfe5cc813c6be7e4
   FirebaseAnalytics: 5d9ccbf46ed25d3ec9304d263f85bddf1e93e2d2
   FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
@@ -210,23 +156,18 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 9f352523e8785a71f6754f51eeff09f49ec19268
   GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
   GooglePlaces: be6f19fe8aa6ff0b5bcccfa1b8805cc977ea1450
-  GoogleSignIn: 3a51b9bb8e48b635fd7f4272cee06ca260345b86
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
-  GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
-  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   netfox: 4590811e5b02e392c72a924c73e000a60ee1f0c7
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Popover: 21e357f86d45c8d9e29a41a4adbca3664d6e511f
   Protobuf: 67fb42ba613def994e61854de2b3164f13790cc4
-  Realm: 995d585bcf699aaff226715886c849a29dd3d07f
-  RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
   SDWebImage: 336f6958a13d5e8347a317cd68a9f6ee9aaaaf03
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: fd0dd75925b14432b7815eba20003eb05c04eb7e
+PODFILE CHECKSUM: 6538cd010500fcf9a6164a54c27b291308a2a2c9
 
 COCOAPODS: 1.8.4

@@ -10,6 +10,24 @@
 		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		2203D561236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
+		2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
+		2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
+		2203D564236558420055E79F /* AppSeachBarRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D560236558420055E79F /* AppSeachBarRight.swift */; };
+		2203D565236558420055E79F /* AppSeachBarRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D560236558420055E79F /* AppSeachBarRight.swift */; };
+		2203D566236558420055E79F /* AppSeachBarRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D560236558420055E79F /* AppSeachBarRight.swift */; };
+		2203D56A23655D5D0055E79F /* HomeFindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D56823655D5D0055E79F /* HomeFindCell.swift */; };
+		2203D56B23655D5D0055E79F /* HomeFindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D56823655D5D0055E79F /* HomeFindCell.swift */; };
+		2203D56C23655D5D0055E79F /* HomeFindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D56823655D5D0055E79F /* HomeFindCell.swift */; };
+		2203D56D23655D5D0055E79F /* HomeFindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D56923655D5D0055E79F /* HomeFindCell.xib */; };
+		2203D56E23655D5D0055E79F /* HomeFindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D56923655D5D0055E79F /* HomeFindCell.xib */; };
+		2203D56F23655D5D0055E79F /* HomeFindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D56923655D5D0055E79F /* HomeFindCell.xib */; };
+		2203D572236585550055E79F /* FindAroundMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D570236585550055E79F /* FindAroundMeCell.swift */; };
+		2203D573236585550055E79F /* FindAroundMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D570236585550055E79F /* FindAroundMeCell.swift */; };
+		2203D574236585550055E79F /* FindAroundMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203D570236585550055E79F /* FindAroundMeCell.swift */; };
+		2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D571236585550055E79F /* FindAroundMeCell.xib */; };
+		2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D571236585550055E79F /* FindAroundMeCell.xib */; };
+		2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D571236585550055E79F /* FindAroundMeCell.xib */; };
 		2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
 		2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
 		2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
@@ -94,18 +112,6 @@
 		2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */; };
 		2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */; };
 		2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */; };
-		2A9A81DD22EC4B6B00345C5F /* RealmDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81DC22EC4B6B00345C5F /* RealmDBManager.swift */; };
-		2A9A81DE22EC4B6B00345C5F /* RealmDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81DC22EC4B6B00345C5F /* RealmDBManager.swift */; };
-		2A9A81DF22EC4B6B00345C5F /* RealmDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81DC22EC4B6B00345C5F /* RealmDBManager.swift */; };
-		2A9A81EA22EC5AA300345C5F /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81E922EC5AA300345C5F /* WordEntity.swift */; };
-		2A9A81EB22EC5AA300345C5F /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81E922EC5AA300345C5F /* WordEntity.swift */; };
-		2A9A81EC22EC5AA300345C5F /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81E922EC5AA300345C5F /* WordEntity.swift */; };
-		2A9A81EE22EC5C6300345C5F /* WordExplainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81ED22EC5C6300345C5F /* WordExplainEntity.swift */; };
-		2A9A81EF22EC5C6300345C5F /* WordExplainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81ED22EC5C6300345C5F /* WordExplainEntity.swift */; };
-		2A9A81F022EC5C6300345C5F /* WordExplainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81ED22EC5C6300345C5F /* WordExplainEntity.swift */; };
-		2A9A81F422EC5FE600345C5F /* SQLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81F322EC5FE600345C5F /* SQLHelper.swift */; };
-		2A9A81F522EC5FE600345C5F /* SQLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81F322EC5FE600345C5F /* SQLHelper.swift */; };
-		2A9A81F622EC5FE600345C5F /* SQLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A81F322EC5FE600345C5F /* SQLHelper.swift */; };
 		2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */; };
 		2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */; };
 		2AA9E36822F9AA310093F5C8 /* FileZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */; };
@@ -803,6 +809,12 @@
 /* Begin PBXFileReference section */
 		17155F03236160FF001B81AE /* AppTextfiledLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfiledLogin.swift; sourceTree = "<group>"; };
 		187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2203D55F236558420055E79F /* AppSeachBarRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppSeachBarRight.xib; sourceTree = "<group>"; };
+		2203D560236558420055E79F /* AppSeachBarRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSeachBarRight.swift; sourceTree = "<group>"; };
+		2203D56823655D5D0055E79F /* HomeFindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindCell.swift; sourceTree = "<group>"; };
+		2203D56923655D5D0055E79F /* HomeFindCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFindCell.xib; sourceTree = "<group>"; };
+		2203D570236585550055E79F /* FindAroundMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAroundMeCell.swift; sourceTree = "<group>"; };
+		2203D571236585550055E79F /* FindAroundMeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindAroundMeCell.xib; sourceTree = "<group>"; };
 		2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
@@ -835,10 +847,6 @@
 		2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSingleLabel.swift; sourceTree = "<group>"; };
 		2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellSingleLabel.xib; sourceTree = "<group>"; };
 		2A7907D12329584B003B2752 /* EnglishApp_Prod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Prod.entitlements; sourceTree = "<group>"; };
-		2A9A81DC22EC4B6B00345C5F /* RealmDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBManager.swift; sourceTree = "<group>"; };
-		2A9A81E922EC5AA300345C5F /* WordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
-		2A9A81ED22EC5C6300345C5F /* WordExplainEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordExplainEntity.swift; sourceTree = "<group>"; };
-		2A9A81F322EC5FE600345C5F /* SQLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelper.swift; sourceTree = "<group>"; };
 		2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileZipManager.swift; sourceTree = "<group>"; };
 		2ADDCB01232F83890087B427 /* TermAndConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionResponse.swift; sourceTree = "<group>"; };
 		2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitedCharacter.swift; sourceTree = "<group>"; };
@@ -1115,6 +1123,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2203D556236558150055E79F /* AppSeachBarRight */ = {
+			isa = PBXGroup;
+			children = (
+				2203D560236558420055E79F /* AppSeachBarRight.swift */,
+				2203D55F236558420055E79F /* AppSeachBarRight.xib */,
+			);
+			path = AppSeachBarRight;
+			sourceTree = "<group>";
+		};
+		2203D56723655D420055E79F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2203D56823655D5D0055E79F /* HomeFindCell.swift */,
+				2203D56923655D5D0055E79F /* HomeFindCell.xib */,
+				2203D570236585550055E79F /* FindAroundMeCell.swift */,
+				2203D571236585550055E79F /* FindAroundMeCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2243174D235ECBF800CA1E13 /* AppDateDropDown */ = {
 			isa = PBXGroup;
 			children = (
@@ -1160,6 +1188,7 @@
 		22F33A9E23645B6F00D136EB /* HomeFind */ = {
 			isa = PBXGroup;
 			children = (
+				2203D56723655D420055E79F /* Cell */,
 				22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */,
 				22F33AA023645B8100D136EB /* HomeFindPresenter.swift */,
 				22F33AA123645B8100D136EB /* HomeFindProtocols.swift */,
@@ -1193,32 +1222,6 @@
 				2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */,
 			);
 			path = CellSingleLabel;
-			sourceTree = "<group>";
-		};
-		2A9A81DB22EC4B5800345C5F /* RealmDB */ = {
-			isa = PBXGroup;
-			children = (
-				2A9A81E822EC5A9100345C5F /* Object */,
-				2A9A81DC22EC4B6B00345C5F /* RealmDBManager.swift */,
-			);
-			path = RealmDB;
-			sourceTree = "<group>";
-		};
-		2A9A81E822EC5A9100345C5F /* Object */ = {
-			isa = PBXGroup;
-			children = (
-				2A9A81E922EC5AA300345C5F /* WordEntity.swift */,
-				2A9A81ED22EC5C6300345C5F /* WordExplainEntity.swift */,
-			);
-			path = Object;
-			sourceTree = "<group>";
-		};
-		2A9A81F222EC5FD600345C5F /* SQLHelper */ = {
-			isa = PBXGroup;
-			children = (
-				2A9A81F322EC5FE600345C5F /* SQLHelper.swift */,
-			);
-			path = SQLHelper;
 			sourceTree = "<group>";
 		};
 		2AA9E36422F9AA230093F5C8 /* FileZipManager */ = {
@@ -1465,8 +1468,6 @@
 				2AA9E36422F9AA230093F5C8 /* FileZipManager */,
 				2A2B015A22F085F800A08EEA /* ListManager */,
 				2A6C5ED022EF466C004B23EF /* CommonCell */,
-				2A9A81F222EC5FD600345C5F /* SQLHelper */,
-				2A9A81DB22EC4B5800345C5F /* RealmDB */,
 				DEECF87C22870BBD00A4678B /* Localizable */,
 				DE2ADE5B22841A42003768CE /* SideMenu */,
 				DE361E012283E60400FA3B0D /* Constants */,
@@ -1529,6 +1530,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				2203D556236558150055E79F /* AppSeachBarRight */,
 				2243174D235ECBF800CA1E13 /* AppDateDropDown */,
 				7629BDE122ACF0A00051B835 /* TextFieldBee */,
 				766D135A228EF05B005E47F0 /* ViewGradient */,
@@ -2249,6 +2251,7 @@
 				22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE361E9C2283E60500FA3B0D /* NotificationContent.xib in Resources */,
 				DE49F83322A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
+				2203D56D23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				DE361E812283E60500FA3B0D /* AppDropDown.xib in Resources */,
 				DEECF8752287041900A4678B /* MenuCell.xib in Resources */,
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
@@ -2265,6 +2268,7 @@
 				7680749D22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE361E792283E60500FA3B0D /* AppSearchBar.xib in Resources */,
 				76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
+				2203D561236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE2ADE7A22841BB9003768CE /* MenuViewController.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
 				22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
@@ -2281,6 +2285,7 @@
 				DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531142287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
 				DE95310E2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
+				2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				DE361E722283E60500FA3B0D /* AppTextField.xib in Resources */,
 				DE89D1CF22A4126C000638B0 /* WebViewController.xib in Resources */,
 			);
@@ -2303,6 +2308,7 @@
 				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE9530442287DF4800E3F688 /* NotificationContent.xib in Resources */,
 				DE49F83422A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
+				2203D56E23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				DE9530452287DF4800E3F688 /* AppDropDown.xib in Resources */,
 				DE9530462287DF4800E3F688 /* MenuCell.xib in Resources */,
 				DE9530472287DF4800E3F688 /* SignUpViewController.xib in Resources */,
@@ -2319,6 +2325,7 @@
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
+				2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE95304B2287DF4800E3F688 /* MenuViewController.xib in Resources */,
 				DE9531122287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
@@ -2335,6 +2342,7 @@
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531152287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
 				DE95310F2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
+				2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				DE9530532287DF4800E3F688 /* AppTextField.xib in Resources */,
 				DE89D1D022A4126C000638B0 /* WebViewController.xib in Resources */,
 			);
@@ -2357,6 +2365,7 @@
 				22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE49F83522A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
 				DE9530F32287DF6400E3F688 /* AppDropDown.xib in Resources */,
+				2203D56F23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				DE9530F42287DF6400E3F688 /* MenuCell.xib in Resources */,
 				DE9530F52287DF6400E3F688 /* SignUpViewController.xib in Resources */,
@@ -2373,6 +2382,7 @@
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
+				2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE9530F92287DF6400E3F688 /* MenuViewController.xib in Resources */,
 				DE9531132287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
@@ -2389,6 +2399,7 @@
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531162287E00A00E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
 				DE9531102287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
+				2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */,
 				DE89D1D122A4126C000638B0 /* WebViewController.xib in Resources */,
 			);
@@ -2608,6 +2619,7 @@
 				DE952F902287D2A700E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
 				DEECF8A022871D1B00A4678B /* ForgotPasswordInteractor.swift in Sources */,
 				DEBD6737228D48DA004B74C8 /* CreateGroupPopUp.swift in Sources */,
+				2203D564236558420055E79F /* AppSeachBarRight.swift in Sources */,
 				DE952F932287D2A700E3F688 /* KActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				DE361DE62283E54C00FA3B0D /* BasePopUpView.swift in Sources */,
 				DE361F3E2283E85000FA3B0D /* LoginSocialParam.swift in Sources */,
@@ -2633,6 +2645,7 @@
 				DE361E672283E60500FA3B0D /* AppImage.swift in Sources */,
 				DE49F82722A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
 				DE95317B228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
+				2203D572236585550055E79F /* FindAroundMeCell.swift in Sources */,
 				DE361EAA2283E6DB00FA3B0D /* CustomTextfield.swift in Sources */,
 				DE49F81E22A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
 				766AE7F722B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
@@ -2653,7 +2666,6 @@
 				7629BDDE22ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				DE952F962287D2A700E3F688 /* KActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				22F33AA823645B8100D136EB /* HomeFindPresenter.swift in Sources */,
-				2A9A81DD22EC4B6B00345C5F /* RealmDBManager.swift in Sources */,
 				DE952F882287D2A700E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
 				DE361E682283E60500FA3B0D /* Strings.swift in Sources */,
 				22F33AAB23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
@@ -2712,7 +2724,6 @@
 				DE952FA02287D2A700E3F688 /* FadeInOutAnimation.swift in Sources */,
 				DE361E9A2283E60500FA3B0D /* StringReachability.swift in Sources */,
 				DE952F842287D2A700E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
-				2A9A81F422EC5FE600345C5F /* SQLHelper.swift in Sources */,
 				2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				DE2ADE7822841BB9003768CE /* MenuProtocols.swift in Sources */,
 				76483BF0229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
@@ -2760,10 +2771,10 @@
 				DE3CC33E2283DD980037DBE4 /* AppDelegate.swift in Sources */,
 				DEECF89C22871D1B00A4678B /* ForgotPasswordPresenter.swift in Sources */,
 				DEECF88522870DA400A4678B /* LocalizableKey.swift in Sources */,
+				2203D56A23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				DE361E6A2283E60500FA3B0D /* AppFont.swift in Sources */,
 				766AE7EA22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DEECF88F22871D0400A4678B /* SignUpPresenter.swift in Sources */,
-				2A9A81EE22EC5C6300345C5F /* WordExplainEntity.swift in Sources */,
 				DE361E822283E60500FA3B0D /* AppDropDown.swift in Sources */,
 				DE952F7D2287D2A700E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAA2293007200D7CECE /* ThanksReportContent.swift in Sources */,
@@ -2798,7 +2809,6 @@
 				DEECF89022871D0400A4678B /* SignUpRouter.swift in Sources */,
 				DE952F9C2287D2A700E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
-				2A9A81EA22EC5AA300345C5F /* WordEntity.swift in Sources */,
 				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FC22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				76CF522422CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
@@ -2830,6 +2840,7 @@
 				DE952FBB2287DF4800E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
 				DE952FBC2287DF4800E3F688 /* ForgotPasswordInteractor.swift in Sources */,
 				DEBD6738228D48DA004B74C8 /* CreateGroupPopUp.swift in Sources */,
+				2203D565236558420055E79F /* AppSeachBarRight.swift in Sources */,
 				DE952FBD2287DF4800E3F688 /* KActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				DE952FBE2287DF4800E3F688 /* BasePopUpView.swift in Sources */,
 				DE952FBF2287DF4800E3F688 /* LoginSocialParam.swift in Sources */,
@@ -2855,6 +2866,7 @@
 				DE952FC92287DF4800E3F688 /* AppImage.swift in Sources */,
 				DE49F82822A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
 				DE95317C228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
+				2203D573236585550055E79F /* FindAroundMeCell.swift in Sources */,
 				DE952FCA2287DF4800E3F688 /* CustomTextfield.swift in Sources */,
 				DE49F81F22A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
 				766AE7F822B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
@@ -2875,7 +2887,6 @@
 				7629BDDF22ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				DE952FD52287DF4800E3F688 /* KActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				22F33AA923645B8100D136EB /* HomeFindPresenter.swift in Sources */,
-				2A9A81DE22EC4B6B00345C5F /* RealmDBManager.swift in Sources */,
 				DE952FD62287DF4800E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
 				DE952FD72287DF4800E3F688 /* Strings.swift in Sources */,
 				22F33AAC23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
@@ -2934,7 +2945,6 @@
 				DE952FFA2287DF4800E3F688 /* FadeInOutAnimation.swift in Sources */,
 				DE952FFB2287DF4800E3F688 /* StringReachability.swift in Sources */,
 				DE952FFC2287DF4800E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
-				2A9A81F522EC5FE600345C5F /* SQLHelper.swift in Sources */,
 				2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				DE952FFD2287DF4800E3F688 /* MenuProtocols.swift in Sources */,
 				76483BF1229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
@@ -2982,10 +2992,10 @@
 				DE9530192287DF4800E3F688 /* AppDelegate.swift in Sources */,
 				DE95301A2287DF4800E3F688 /* ForgotPasswordPresenter.swift in Sources */,
 				DE95301B2287DF4800E3F688 /* LocalizableKey.swift in Sources */,
+				2203D56B23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				DE95301C2287DF4800E3F688 /* AppFont.swift in Sources */,
 				766AE7EB22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DE95301D2287DF4800E3F688 /* SignUpPresenter.swift in Sources */,
-				2A9A81EF22EC5C6300345C5F /* WordExplainEntity.swift in Sources */,
 				DE95301E2287DF4800E3F688 /* AppDropDown.swift in Sources */,
 				DE9530202287DF4800E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAB2293007200D7CECE /* ThanksReportContent.swift in Sources */,
@@ -3020,7 +3030,6 @@
 				DE95303A2287DF4800E3F688 /* SignUpRouter.swift in Sources */,
 				DE95303B2287DF4800E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
-				2A9A81EB22EC5AA300345C5F /* WordEntity.swift in Sources */,
 				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FD22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				76CF522522CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
@@ -3052,6 +3061,7 @@
 				DE9530692287DF6400E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
 				DE95306A2287DF6400E3F688 /* ForgotPasswordInteractor.swift in Sources */,
 				DEBD6739228D48DA004B74C8 /* CreateGroupPopUp.swift in Sources */,
+				2203D566236558420055E79F /* AppSeachBarRight.swift in Sources */,
 				DE95306B2287DF6400E3F688 /* KActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				DE95306C2287DF6400E3F688 /* BasePopUpView.swift in Sources */,
 				DE95306D2287DF6400E3F688 /* LoginSocialParam.swift in Sources */,
@@ -3077,6 +3087,7 @@
 				DE49F7FB22A3D81D00A92C63 /* NotificationListPresenter.swift in Sources */,
 				DE9530772287DF6400E3F688 /* AppImage.swift in Sources */,
 				DE49F82922A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
+				2203D574236585550055E79F /* FindAroundMeCell.swift in Sources */,
 				DE95317D228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				DE9530782287DF6400E3F688 /* CustomTextfield.swift in Sources */,
 				DE49F82022A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
@@ -3084,8 +3095,6 @@
 				22431752235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175D235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				DE9530792287DF6400E3F688 /* BaseTableCell.swift in Sources */,
-				2A9A81F622EC5FE600345C5F /* SQLHelper.swift in Sources */,
-				2A9A81F022EC5C6300345C5F /* WordExplainEntity.swift in Sources */,
 				DE2D679A22F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE95307A2287DF6400E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				DE95307B2287DF6400E3F688 /* UpdateProfileSocial.swift in Sources */,
@@ -3204,6 +3213,7 @@
 				DE9530C82287DF6400E3F688 /* ForgotPasswordPresenter.swift in Sources */,
 				DE9530C92287DF6400E3F688 /* LocalizableKey.swift in Sources */,
 				DE9530CA2287DF6400E3F688 /* AppFont.swift in Sources */,
+				2203D56C23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				766AE7EC22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DE9530CB2287DF6400E3F688 /* SignUpPresenter.swift in Sources */,
 				DE9530CC2287DF6400E3F688 /* AppDropDown.swift in Sources */,
@@ -3211,7 +3221,6 @@
 				DEC62AAC2293007200D7CECE /* ThanksReportContent.swift in Sources */,
 				DE9530CF2287DF6400E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				DE9530D02287DF6400E3F688 /* Login+GoogleSignIn.swift in Sources */,
-				2A9A81DF22EC4B6B00345C5F /* RealmDBManager.swift in Sources */,
 				DE9530D12287DF6400E3F688 /* NotificationAPIService.swift in Sources */,
 				DE9530D22287DF6400E3F688 /* MenuPresenter.swift in Sources */,
 				DE9530D32287DF6400E3F688 /* Bundle+extension.swift in Sources */,
@@ -3242,7 +3251,6 @@
 				DE9530E82287DF6400E3F688 /* SignUpRouter.swift in Sources */,
 				DE9530E92287DF6400E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
-				2A9A81EC22EC5AA300345C5F /* WordEntity.swift in Sources */,
 				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FE22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				76CF522622CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,

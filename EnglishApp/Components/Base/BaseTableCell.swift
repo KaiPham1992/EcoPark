@@ -11,7 +11,7 @@ import UIKit
 class BaseTableCell: UITableViewCell {
     let vLine: UIView = {
         let view = UIView()
-        view.backgroundColor = AppColor.lineNavigationBar
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.1)
         
         return view
     }()

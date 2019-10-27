@@ -22,7 +22,7 @@ class AppTextView: UIView {
     
     lazy var tvInput: UITextView = {
         let tv              = UITextView()
-        tv.font             = AppFont.fontRegular14
+        tv.font             = AppFont.fontRegular15
         tv.delegate         = self
         tv.backgroundColor = .clear
         return tv
@@ -30,7 +30,7 @@ class AppTextView: UIView {
     
     let lbTitle: UILabel = {
         let lb              = UILabel()
-        lb.font             = AppFont.fontRegular14
+        lb.font             = AppFont.fontRegular15
         lb.textColor        = AppColor.black
         lb.numberOfLines    = 0
         
@@ -39,7 +39,7 @@ class AppTextView: UIView {
     
     let lbPlaceHolder: UILabel = {
         let lb              = UILabel()
-        lb.font             = AppFont.fontRegular14
+        lb.font             = AppFont.fontRegular15
         lb.textColor        = AppColor.black.withAlphaComponent(0.5)
         lb.numberOfLines    = 0
         

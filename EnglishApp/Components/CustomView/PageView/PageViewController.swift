@@ -21,7 +21,7 @@ class PageViewController : ButtonBarPagerTabStripViewController{
         self.settings.style.buttonBarBackgroundColor = .white
         self.settings.style.buttonBarItemBackgroundColor = .white
         self.settings.style.selectedBarBackgroundColor = AppColor.yellow
-        self.settings.style.buttonBarItemFont = AppFont.fontRegular14
+        self.settings.style.buttonBarItemFont = AppFont.fontRegular15
         self.settings.style.buttonBarHeight = 48
         self.settings.style.selectedBarHeight = 2
         self.settings.style.buttonBarMinimumLineSpacing = 0

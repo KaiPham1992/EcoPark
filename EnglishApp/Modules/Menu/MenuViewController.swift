@@ -11,36 +11,33 @@
 import UIKit
 
 protocol MenuViewControllerDelegate: class {
-    func controllerSelected(itemSelected: MenuItem)
+    
+//    func openViewController(presentingController: UIViewController)
+    func selected(item: MenuItem)
+//    func presentViewController(presentingController: UIViewController)
+//    func popToRootViewController()
+//    func closeDrawer()
 }
 
 
 class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var tbMenu: UITableView!
-//    @IBOutlet weak var header: HeaderUserView!
-
-	var presenter: MenuPresenterProtocol?
-    weak var delegate: MenuProtocol?
+    var presenter: MenuPresenterProtocol?
     weak var delegateController: MenuViewControllerDelegate?
-    
     var listMenuItem = [MenuItem]() {
         didSet {
             tbMenu.reloadData()
         }
     }
-
-	override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
         listMenuItem = MenuItem.toArray()
-        
-//        setVersion()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        header.user = UserDefaultHelper.shared.loginUserInfo
         
         self.listMenuItem.forEach { item in
             item.isSelected = false
@@ -48,13 +45,6 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         listMenuItem = MenuItem.toArray()
         tbMenu.reloadData()
     }
-    
-//    private func setVersion() {
-//        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-//            lbVersion.text = "Version \(appVersion)"
-//        }
-//    }
-
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
@@ -86,14 +76,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         itemSelected.isSelected = true
-        pushViewController(itemSelected: itemSelected)
+        
+        delegateController?.selected(item: itemSelected)
         
         tbMenu.reloadData()
     }
-    
-    func pushViewController(itemSelected: MenuItem) {
-        delegateController?.controllerSelected(itemSelected: itemSelected)
-    }
-    
 }
 

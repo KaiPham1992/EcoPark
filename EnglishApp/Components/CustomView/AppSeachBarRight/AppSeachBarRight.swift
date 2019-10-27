@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AppSearchBar: BaseViewXib {
+class AppSeachBarRight: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var vContain: UIView!
-    @IBOutlet weak var btnSearch: UIButton!
+    @IBOutlet weak var btnClear: UIButton!
     var actionSearch : ((String) -> ())?
     
     func setTitleAndPlaceHolder(icon: UIImage? = nil, placeHolder: String? = nil) {
@@ -20,26 +20,24 @@ class AppSearchBar: BaseViewXib {
         }
         
         if icon != nil {
-            self.btnSearch.setImage(icon, for: .normal)
+            self.btnClear.setImage(icon, for: .normal)
         }
     }
     
     override func setUpViews() {
         super.setUpViews()
         tfInput.delegate = self
+        
+        tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: UIControl.Event.editingChanged)
     }
     
-    @IBAction func btnSearchTapped() {
-        actionSearch?(tfInput.text ?? "")
+    @IBAction func btnClearTapped() {
+        actionSearch?("")
     }
 }
 
-extension AppSearchBar: UITextFieldDelegate {
-   
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+extension AppSeachBarRight: UITextFieldDelegate {
+    @objc func textFieldDidChanged() {
         actionSearch?(tfInput.text ?? "")
-        textField.resignFirstResponder()
-        return true
     }
 }

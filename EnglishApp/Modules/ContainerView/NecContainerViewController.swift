@@ -8,10 +8,12 @@
 
 import UIKit
 
-class NecContainerViewController : ContainerViewController {
+class NecContainerViewController: ContainerViewController {
     
     var homeVC:  HomeViewController!
     let menuVC = MenuRouter.createModule()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +25,29 @@ class NecContainerViewController : ContainerViewController {
     
      init() {
         super.init(drawerDirection: .left, drawerWidth: 300, menuViewController: menuVC)
-        menuVC.delegate = self
+        menuVC.delegateController = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension NecContainerViewController: MenuViewControllerDelegate {
+    func selected(item: MenuItem) {
+        guard let icon = item.imgIcon else { return }
+        switch icon {
+        case AppImage.imgPrivacy:
+            let webView = WebViewController.initFromNib()
+            self.openViewController(presentingController: webView)
+        case AppImage.imgSecurity:
+            let webView = WebViewController.initFromNib()
+            self.openViewController(presentingController: webView)
+        default:
+            self.openViewController(presentingController: homeVC)
+        }
+        
+    }
+   
+}
+
