@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 import ObjectMapper
-import GoogleSignIn
+//import GoogleSignIn
 
 enum SocialType: String {
     case faceBook = "facebook"
@@ -42,28 +42,28 @@ class LoginSocialParam: BaseParam {
         self.socialId = socialId
     }
     
-    init(user: GIDGoogleUser) {
-        super.init()
-        self.socialId = user.userID
-        self.fullName  = user.profile.name
-        self.email = user.profile.email
-        var image: String?
-        if user.profile.hasImage {
-            image = user.profile.imageURL(withDimension: 480).absoluteString
-        }
-        
-        self.socialImage = image
-        self.socialType = SocialType.gmail.rawValue
-    }
+//    init(user: GIDGoogleUser) {
+//        super.init()
+//        self.socialId = user.userID
+//        self.fullName  = user.profile.name
+//        self.email = user.profile.email
+//        var image: String?
+//        if user.profile.hasImage {
+//            image = user.profile.imageURL(withDimension: 480).absoluteString
+//        }
+//
+//        self.socialImage = image
+//        self.socialType = SocialType.gmail.rawValue
+//    }
     
-    init(user: FacebookEntity) {
-        super.init()
-        self.socialId = user.id
-        self.fullName  = user.name
-        self.email = user.email
-        self.socialImage = user.url
-        self.socialType = SocialType.faceBook.rawValue
-    }
+//    init(user: FacebookEntity) {
+//        super.init()
+//        self.socialId = user.id
+//        self.fullName  = user.name
+//        self.email = user.email
+//        self.socialImage = user.url
+//        self.socialType = SocialType.faceBook.rawValue
+//    }
     
     required init?(map: Map) {
         super.init(map: map)

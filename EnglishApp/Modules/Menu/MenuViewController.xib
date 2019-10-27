@@ -29,9 +29,69 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuF-Xw-xs0">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarDefautl" translatesAutoresizingMaskIntoConstraints="NO" id="VrL-Ll-Ar1">
+                            <rect key="frame" x="145.5" y="24" width="84" height="84"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="84" id="9Hb-BQ-Fnp"/>
+                                <constraint firstAttribute="width" constant="84" id="bCl-M4-YCh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="42"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8H-Tm-EQM">
+                            <rect key="frame" x="16" y="116" width="343" height="22"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng Xuất " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnr-F6-AAG">
+                            <rect key="frame" x="16" y="146" width="81" height="22"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-av-Who">
+                            <rect key="frame" x="16" y="137" width="104" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="JxC-tt-DfR"/>
+                            </constraints>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="5ga-I0-XLC">
+                            <rect key="frame" x="105" y="149.5" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="SjJ-lO-vJy"/>
+                                <constraint firstAttribute="height" constant="15" id="z8x-Hq-DYx"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chủ bãi đỗ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEW-E2-FBW">
+                            <rect key="frame" x="274.5" y="146" width="84.5" height="22"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                            <color key="textColor" red="0.95294117647058818" green="0.84705882352941175" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" red="0.0" green="0.50588235294117645" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ZEW-E2-FBW" secondAttribute="trailing" constant="16" id="2ZM-yW-g0l"/>
+                        <constraint firstItem="ZEW-E2-FBW" firstAttribute="centerY" secondItem="jnr-F6-AAG" secondAttribute="centerY" id="3lo-fB-4Kf"/>
+                        <constraint firstItem="F8H-Tm-EQM" firstAttribute="leading" secondItem="wuF-Xw-xs0" secondAttribute="leading" constant="16" id="4XB-g8-wJe"/>
+                        <constraint firstItem="VrL-Ll-Ar1" firstAttribute="top" secondItem="wuF-Xw-xs0" secondAttribute="top" constant="24" id="8Dv-36-ywN"/>
+                        <constraint firstItem="U9P-av-Who" firstAttribute="leading" secondItem="jnr-F6-AAG" secondAttribute="leading" id="8RP-JA-4GD"/>
+                        <constraint firstItem="jnr-F6-AAG" firstAttribute="leading" secondItem="wuF-Xw-xs0" secondAttribute="leading" constant="16" id="HXE-Jl-nHR"/>
+                        <constraint firstItem="U9P-av-Who" firstAttribute="trailing" secondItem="5ga-I0-XLC" secondAttribute="trailing" id="OdK-EW-hwj"/>
+                        <constraint firstAttribute="bottom" secondItem="jnr-F6-AAG" secondAttribute="bottom" constant="16" id="UNt-VR-DLC"/>
+                        <constraint firstAttribute="trailing" secondItem="F8H-Tm-EQM" secondAttribute="trailing" constant="16" id="XcD-p3-0Pk"/>
+                        <constraint firstItem="5ga-I0-XLC" firstAttribute="leading" secondItem="jnr-F6-AAG" secondAttribute="trailing" constant="8" id="b2D-Ap-TZz"/>
+                        <constraint firstItem="VrL-Ll-Ar1" firstAttribute="centerX" secondItem="wuF-Xw-xs0" secondAttribute="centerX" id="eSs-I2-rlA"/>
+                        <constraint firstItem="5ga-I0-XLC" firstAttribute="centerY" secondItem="jnr-F6-AAG" secondAttribute="centerY" id="fGK-sT-UFV"/>
+                        <constraint firstItem="F8H-Tm-EQM" firstAttribute="top" secondItem="VrL-Ll-Ar1" secondAttribute="bottom" constant="8" id="jyK-l6-1fv"/>
                         <constraint firstAttribute="height" constant="184" id="lTz-ZS-98H"/>
+                        <constraint firstItem="F8H-Tm-EQM" firstAttribute="centerX" secondItem="VrL-Ll-Ar1" secondAttribute="centerX" id="mPP-Z0-KCa"/>
+                        <constraint firstItem="U9P-av-Who" firstAttribute="centerY" secondItem="jnr-F6-AAG" secondAttribute="centerY" id="oEk-OR-lL2"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFC-kM-VDs">
@@ -101,4 +161,8 @@ Hãy đăng ký làm bãi xe</string>
             <point key="canvasLocation" x="109.59999999999999" y="52.623688155922046"/>
         </view>
     </objects>
+    <resources>
+        <image name="avatarDefautl" width="64" height="64"/>
+        <image name="ic_keyboard_arrow_right" width="24" height="24"/>
+    </resources>
 </document>

@@ -10,10 +10,10 @@ import UIKit
 
 struct AppFont {
     static let fontRegular18 = UIFont(name: "OpenSans-Regular", size: 18)!
-    static let fontRegular16 = UIFont(name: "OpenSans-Regular", size: 16)!
-    static let fontRegular14 = UIFont(name: "OpenSans-Regular", size: 14)!
-    static let fontRegular12 = UIFont(name: "OpenSans-Regular", size: 12)!
-    static let fontRegular8 = UIFont(name: "OpenSans-Regular", size: 8)!
+    static let fontRegular17 = UIFont(name: "OpenSans-Regular", size: 17)!
+    static let fontRegular15 = UIFont(name: "OpenSans-Regular", size: 15)!
+    static let fontRegular13 = UIFont(name: "OpenSans-Regular", size: 13)!
+    static let fontRegular9 = UIFont(name: "OpenSans-Regular", size: 9)!
     
     static let fontBold12 = UIFont(name: "OpenSans-Bold", size: 12)!
     static let fontBold14 = UIFont(name: "OpenSans-Bold", size: 14)!

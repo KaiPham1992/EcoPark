@@ -10,9 +10,9 @@
 
 import UIKit
 //import CryptoSwift
-import GoogleSignIn
-import FBSDKLoginKit
-import FBSDKCoreKit
+//import GoogleSignIn
+//import FBSDKLoginKit
+//import FBSDKCoreKit
 import SystemConfiguration
 
 enum LoginType {
@@ -47,8 +47,8 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        vPassword.tfInput.delegate = self
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().presentingViewController = self
+//        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().presentingViewController = self
     }
     
     override func setUpNavigation() {
@@ -99,8 +99,8 @@ class LoginViewController: BaseViewController {
             return
         }
         
-        GIDSignIn.sharedInstance().signOut()
-        GIDSignIn.sharedInstance().signIn()
+//        GIDSignIn.sharedInstance().signOut()
+//        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func btnLoginFacebook() {
@@ -111,7 +111,7 @@ class LoginViewController: BaseViewController {
             return
         }
         
-        self.FBlogin()
+//        self.FBlogin()
     }
 }
 

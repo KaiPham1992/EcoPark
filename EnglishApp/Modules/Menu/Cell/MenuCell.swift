@@ -48,16 +48,17 @@ class MenuItem {
 //        }
         
         return [
-            MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuInfo.showLanguage),
-            MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuTop.showLanguage),
-            MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuQA.showLanguage),
-            MenuItem(imgIcon: AppImage.imgHistory, title: LocalizableKey.MenuLanguage.showLanguage),
-            MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuSaved.showLanguage),
-            MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuHistory.showLanguage),
-            MenuItem(imgIcon: AppImage.imgProfile, title: LocalizableKey.MenuPrivacy.showLanguage),
-            MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuLogout.showLanguage),
-            MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuLogout.showLanguage),
-            MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLogout.showLanguage)
+            MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuHistoryParking.showLanguage),
+            MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuMyInfo.showLanguage),
+            MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),
+            MenuItem(imgIcon: AppImage.imgHistory, title: LocalizableKey.MenuHistory.showLanguage),
+            MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuNotification.showLanguage),
+            MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuWallet.showLanguage),
+            MenuItem(imgIcon: AppImage.imgProfile, title: LocalizableKey.MenuProfile.showLanguage),
+            MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuPolicy.showLanguage),
+            MenuItem(imgIcon: AppImage.imgSecurity, title: LocalizableKey.MenuSecuriry.showLanguage),
+            MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
+            MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
         ]
         
     }
@@ -78,11 +79,11 @@ class MenuCell: BaseTableCell {
             
             
             if isSelected {
-                lbTitle.textColor = AppColor.color255_211_17
-                imgIcon.tintColor = AppColor.color255_211_17
+                lbTitle.textColor = AppColor.color_0_129_255
+                imgIcon.tintColor = AppColor.color_0_129_255
             } else {
-                lbTitle.textColor = AppColor.color117_117_117
-                imgIcon.tintColor = AppColor.color117_117_117
+                lbTitle.textColor = AppColor.color_102_102_102
+                imgIcon.tintColor = AppColor.color_102_102_102
             }
             
         }

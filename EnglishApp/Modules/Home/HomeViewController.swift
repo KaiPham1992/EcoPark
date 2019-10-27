@@ -50,15 +50,14 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     override func setUpNavigation() {
         super.setUpNavigation()
         
-        addButtonToNavigation(image: AppImage.imgMenu, style: .left, action: #selector(btnMenuTapped))
+        addMenu()
         addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: nil)
         setTitleBoldLeftNavigation(title: "EcoParking", action: nil)
     }
     
-    @objc func btnMenuTapped() {
-        if let containerController = navigationController?.parent as? ContainerViewController {
-                   containerController.toggleLeftPanel()
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpNavigation()
     }
     
     override func setUpViews() {

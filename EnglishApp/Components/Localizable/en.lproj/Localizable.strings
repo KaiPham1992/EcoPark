@@ -7,15 +7,19 @@
  */
 
 // Menu Page
-"MenuInfo" = "Profile";
-"MenuTop" = "Leader Board";
-"MenuQA" = "Q&A";
-"MenuLanguage" = "Language";
-"MenuSaved" = "Saved";
-"MenuHistory" = "Test History";
-"MenuPrivacy" = "Policies & Terms";
-"MenuChangePassword" = "Change Password";
-"MenuLogout" = "Logout";
+"MenuHistoryParking" = "Lich sử giao dịch bãi xe";
+"MenuMyInfo" = "Thông tin bãi xe của tôi";
+"MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
+"MenuHistory" = "Lịch sử đỗ xe";
+"MenuNotificaiton" = "Thông báo";
+"MenuWallet" = "Tài khoản ví Eco";
+"MenuProfile" = "Thông tin cá nhân";
+"MenuPolicy" = "Điều khoản dịch vụ";
+"MenuSecuriry" = "Chính sách bảo mật";
+"MenuHotLine" = "Hotline 1900587";
+"MenuLanguage" = "Ngôn ngữ";
+"MenuNotification" = "Thông báo";
+
 
 // Login Page
 

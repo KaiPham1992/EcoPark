@@ -9,15 +9,15 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Firebase
-import FBSDKLoginKit
-import FBSDKCoreKit
-import GoogleSignIn
+//import FBSDKLoginKit
+//import FBSDKCoreKit
+//import GoogleSignIn
 //import Fabric
 //import Crashlytics
 import netfox
 import UserNotifications
-import RealmSwift
-import FBSDKShareKit
+//import RealmSwift
+//import FBSDKShareKit
 import UserNotifications
 
 @UIApplicationMain
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Crashlytics.sharedInstance().debugMode = true
 //        Fabric.sharedSDK().debug = true
         if UserDefaultHelper.shared.appLanguage == nil {
-            LanguageHelper.setAppleLAnguageTo(lang: LanguageType.english)
+            LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
         }
         
         IQKeyboardManager.shared.enable = true
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureGoogle()
         configurePushNotification(application: application)
         
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         //---
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -113,12 +113,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:], sourceApplication: String) -> Bool {
-        let fb = ApplicationDelegate.shared.application(app, open: url, options: options)
-        return fb
-        
-    }
-    
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:], sourceApplication: String) -> Bool {
+//        let fb = ApplicationDelegate.shared.application(app, open: url, options: options)
+//        return fb
+//        
+//    }
+//    
     func applicationDidBecomeActive(_ application: UIApplication) {
 //        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
 //            if settings.authorizationStatus == .authorized {
@@ -144,9 +144,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return ApplicationDelegate.shared.application(app, open: url, options: options)
+//    }
     
     func applicationWillTerminate(_ application: UIApplication) {
 //        LiveData.listDownloading.removeAll()

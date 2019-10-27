@@ -35,9 +35,9 @@ class WebViewController: BaseViewController {
     
     override func setUpViews() {
         super.setUpViews()
-        loadData()
-        webView.navigationDelegate = self
-        webView.scrollView.delegate = self
+//        loadData()
+//        webView.navigationDelegate = self
+//        webView.scrollView.delegate = self
     }
     
     private func loadData() {
@@ -59,8 +59,9 @@ class WebViewController: BaseViewController {
     
     override func setUpNavigation() {
         super.setUpNavigation()
-        addBackToNavigation()
         setTitleNavigation(title: LocalizableKey.privacyAndPolicy.showLanguage)
+        
+        addMenu()
     }
 }
 

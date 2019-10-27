@@ -10,16 +10,32 @@ import Foundation
 
 struct LocalizableKey {
     // Menu
-    static let MenuInfo = "MenuInfo"
-    static let MenuTop = "MenuTop"
-    static let MenuQA = "MenuQA"
-    static let MenuLanguage = "MenuLanguage"
-    static let MenuSaved = "MenuSaved"
+    static let MenuHistoryParking = "MenuHistoryParking"
+    static let MenuMyInfo = "MenuMyInfo"
+    static let MenuFindAround = "MenuFindAround"
     static let MenuHistory = "MenuHistory"
-    static let MenuPrivacy = "MenuPrivacy"
-    static let MenuChangePassword = "MenuChangePassword"
-    static let MenuLogout = "MenuLogout"
+    static let MenuProfile = "MenuProfile"
+    static let MenuPolicy = "MenuPolicy"
+    static let MenuSecuriry = "MenuSecuriry"
+    static let MenuHotLine = "MenuHotLine"
+    static let MenuLanguage = "MenuLanguage"
+    static let MenuNotification = "MenuNotification"
+    static let MenuWallet = "MenuWallet"
     
+    
+    
+    
+//    "MenuHistoryParking" = "Lich sử giao dịch bãi xe";
+//    "MenuMyInfo" = "Thông tin bãi xe của tôi";
+//    "MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
+//    "MenuHistory" = "Lịch sử đỗ xe";
+//    "MenuNotificaiton" = "Thông báo";
+//    "MenuWallet" = "Tài khoản ví Eco";
+//    "MenuProfile" = "Thông tin cá nhân";
+//    "MenuPolicy" = "Điều khoản dịch vụ";
+//    "MenuSecuriry" = "Chính sách bảo mật";
+//    "MenuHotLine" = "Hotline 1900587";
+//    "MenuLanguage" = "Ngôn ngữ";
     // Login Page
     static let LoginEmail = "LoginEmail"
     static let LoginEmailPlaceHolder = "LoginEmailPlaceHolder"

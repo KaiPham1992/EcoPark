@@ -23,7 +23,7 @@ class DrawerViewController: ContainerViewController {
         guard let viewController = viewController else {
             return
         }
-        menuVC.delegate = self
+//        menuVC.delegate = self
         self.openViewController(presentingController: viewController)
     }
     

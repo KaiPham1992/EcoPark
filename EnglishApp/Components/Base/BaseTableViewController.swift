@@ -32,7 +32,7 @@ open class BaseTableViewController: UIViewController {
     let lbNodata: UILabel = {
         let btn = UILabel()
         btn.textAlignment = .center
-        btn.font = AppFont.fontRegular14
+        btn.font = AppFont.fontRegular15
         
         return btn
     }()
@@ -289,7 +289,7 @@ extension BaseTableViewController {
         if count > 0 {
             let lbCount = UILabel()
             lbCount.backgroundColor = .red
-            lbCount.font = AppFont.fontRegular8
+            lbCount.font = AppFont.fontRegular9
             btn.addSubview(lbCount)
             
             lbCount.textAlignment = .center

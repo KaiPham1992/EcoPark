@@ -52,7 +52,7 @@ open class BaseViewController: UIViewController {
     let lbNodata: UILabel = {
         let btn = UILabel()
         btn.textAlignment = .center
-        btn.font = AppFont.fontRegular14
+        btn.font = AppFont.fontRegular15
         
         return btn
     }()
@@ -77,6 +77,16 @@ open class BaseViewController: UIViewController {
                 statusBar.tintColor =  color
             }
             return
+        }
+    }
+    
+    func addMenu() {
+         addButtonToNavigation(image: AppImage.imgMenu, style: .left, action: #selector(btnMenuTapped))
+    }
+    
+    @objc func btnMenuTapped() {
+        if let containerController = navigationController?.parent as? ContainerViewController {
+            containerController.toggleLeftPanel()
         }
     }
     
@@ -208,7 +218,7 @@ extension BaseViewController {
         if count > 0 {
             let lbCount = UILabel()
             lbCount.backgroundColor = .red
-            lbCount.font = AppFont.fontRegular8
+            lbCount.font = AppFont.fontRegular9
             btn.addSubview(lbCount)
             
             lbCount.textAlignment = .center
@@ -440,15 +450,6 @@ extension BaseViewController {
     
     func setWhiteCloseNavigation() {
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "cancel_white"), style: .left, action: #selector(btnCloseTapped))
-    }
-    
-    func addHeaderUser() {
-        //        let header = HeaderUserView()
-        //
-        //        //        header.frame = CGRect(x: 0, y: 0, width: 414, height: 375)
-        //        //         self.navigationItem.titleView = header
-        //        self.navigationController?.navigationBar.addSubview(header)
-        //        header.fillSuperview()
     }
 }
 
