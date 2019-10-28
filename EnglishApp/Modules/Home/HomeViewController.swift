@@ -21,7 +21,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     var presenter: HomePresenterProtocol?
     @IBOutlet weak var vSearch: AppSearchBar!
-    @IBOutlet weak var mapView : GMSMapView!
+    @IBOutlet weak var mapView: GMSMapView!
     var marker:GMSMarker!
     
     var locationManager = CLLocationManager()
@@ -36,6 +36,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         // remove later
         centerMapCoordinate = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
         setUpMap()
+        
+        let parks = ParkingEntity.toArray()
+        drawMarker(parkings: parks)
     }
     
     func setUpMap() {
@@ -45,6 +48,11 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         self.locationManager.startUpdatingLocation()
         mapView.settings.myLocationButton = true
         mapView.delegate = self
+        
+        
+        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
+        
+        self.mapView?.animate(to: camera)
     }
     
     override func setUpNavigation() {
@@ -67,12 +75,16 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     @IBAction func btnFilterTapped() {
         let vc = HomeFindRouter.createModule()
-        
+        vc.delegate = self
         self.push(controller: vc)
     }
     
 }
-
+extension HomeViewController: HomeFindViewControllerDelegate {
+    func didSelectAddress() {
+        
+    }
+}
 
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -84,11 +96,25 @@ extension HomeViewController: CLLocationManagerDelegate {
         self.locationManager.stopUpdatingLocation()
         
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 }
 
 
 //MARK: - delegate map position
 extension HomeViewController: GMSMapViewDelegate {
+    func drawMarker(parkings: [ParkingEntity]) {
+        mapView.clear()
+        parkings.forEach { _project in
+            DispatchQueue.main.async {
+                GoogleMapHelper.shared.drawMarkerProject(parking: _project, mapView: self.mapView)
+            }
+        }
+    }
+    
+    
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         let latitude = mapView.camera.target.latitude
         let longitude = mapView.camera.target.longitude

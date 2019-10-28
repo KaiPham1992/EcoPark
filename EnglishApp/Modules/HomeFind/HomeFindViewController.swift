@@ -10,12 +10,18 @@
 
 import UIKit
 
+protocol HomeFindViewControllerDelegate: class {
+    func didSelectAddress()
+}
+
 class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
 
 	var presenter: HomeFindPresenterProtocol?
     
     @IBOutlet weak var vSearch: AppSeachBarRight!
     @IBOutlet weak var tbFind: UITableView!
+    
+    weak var delegate: HomeFindViewControllerDelegate?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,5 +81,10 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeue(HomeFindCell.self, for: indexPath)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelectAddress()
+        self.pop()
     }
 }

@@ -46,6 +46,21 @@
 		2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
 		2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
 		2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */; };
+		223886FE2366A89100DAC978 /* GoogleMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223886FD2366A89000DAC978 /* GoogleMapHelper.swift */; };
+		223886FF2366A89100DAC978 /* GoogleMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223886FD2366A89000DAC978 /* GoogleMapHelper.swift */; };
+		223887002366A89100DAC978 /* GoogleMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223886FD2366A89000DAC978 /* GoogleMapHelper.swift */; };
+		223887052366A94400DAC978 /* MarkerProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887022366A94400DAC978 /* MarkerProjectView.swift */; };
+		223887062366A94400DAC978 /* MarkerProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887022366A94400DAC978 /* MarkerProjectView.swift */; };
+		223887072366A94400DAC978 /* MarkerProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887022366A94400DAC978 /* MarkerProjectView.swift */; };
+		223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887032366A94400DAC978 /* MarkerProjectView.xib */; };
+		223887092366A94400DAC978 /* MarkerProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887032366A94400DAC978 /* MarkerProjectView.xib */; };
+		2238870A2366A94400DAC978 /* MarkerProjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887032366A94400DAC978 /* MarkerProjectView.xib */; };
+		2238870B2366A94400DAC978 /* ProjectMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887042366A94400DAC978 /* ProjectMarker.swift */; };
+		2238870C2366A94400DAC978 /* ProjectMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887042366A94400DAC978 /* ProjectMarker.swift */; };
+		2238870D2366A94400DAC978 /* ProjectMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887042366A94400DAC978 /* ProjectMarker.swift */; };
+		2238870F2366AACF00DAC978 /* ParkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238870E2366AACF00DAC978 /* ParkingEntity.swift */; };
+		223887102366AACF00DAC978 /* ParkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238870E2366AACF00DAC978 /* ParkingEntity.swift */; };
+		223887112366AACF00DAC978 /* ParkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238870E2366AACF00DAC978 /* ParkingEntity.swift */; };
 		22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
@@ -821,6 +836,11 @@
 		2220A783235EDA3A00E9C0F1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		2220A784235EDA3A00E9C0F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2220A785235EDA3A00E9C0F1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		223886FD2366A89000DAC978 /* GoogleMapHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapHelper.swift; sourceTree = "<group>"; };
+		223887022366A94400DAC978 /* MarkerProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerProjectView.swift; sourceTree = "<group>"; };
+		223887032366A94400DAC978 /* MarkerProjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerProjectView.xib; sourceTree = "<group>"; };
+		223887042366A94400DAC978 /* ProjectMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMarker.swift; sourceTree = "<group>"; };
+		2238870E2366AACF00DAC978 /* ParkingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingEntity.swift; sourceTree = "<group>"; };
 		22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -1141,6 +1161,16 @@
 				2203D571236585550055E79F /* FindAroundMeCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		223887012366A94400DAC978 /* MarkerProject */ = {
+			isa = PBXGroup;
+			children = (
+				223887022366A94400DAC978 /* MarkerProjectView.swift */,
+				223887032366A94400DAC978 /* MarkerProjectView.xib */,
+				223887042366A94400DAC978 /* ProjectMarker.swift */,
+			);
+			path = MarkerProject;
 			sourceTree = "<group>";
 		};
 		2243174D235ECBF800CA1E13 /* AppDateDropDown */ = {
@@ -1530,6 +1560,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				223887012366A94400DAC978 /* MarkerProject */,
 				2203D556236558150055E79F /* AppSeachBarRight */,
 				2243174D235ECBF800CA1E13 /* AppDateDropDown */,
 				7629BDE122ACF0A00051B835 /* TextFieldBee */,
@@ -1604,6 +1635,7 @@
 		DE361E4A2283E60500FA3B0D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				223886FD2366A89000DAC978 /* GoogleMapHelper.swift */,
 				DE361E4B2283E60500FA3B0D /* UserDefaultHelper.swift */,
 				DE361E4C2283E60500FA3B0D /* PopUpHelper.swift */,
 				DE361E4D2283E60500FA3B0D /* AnimationHelper.swift */,
@@ -1684,6 +1716,7 @@
 				DE361EFB2283E84F00FA3B0D /* FaceBookEntity.swift */,
 				DE361EFD2283E84F00FA3B0D /* PhotoEntity.swift */,
 				DE361F542283E8E200FA3B0D /* ParentNotificationEntity.swift */,
+				2238870E2366AACF00DAC978 /* ParkingEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -2270,6 +2303,7 @@
 				76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D561236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE2ADE7A22841BB9003768CE /* MenuViewController.xib in Resources */,
+				223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
 				22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE361E8C2283E60500FA3B0D /* AppCheckBox.xib in Resources */,
@@ -2327,6 +2361,7 @@
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE95304B2287DF4800E3F688 /* MenuViewController.xib in Resources */,
+				223887092366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531122287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
@@ -2384,6 +2419,7 @@
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE9530F92287DF6400E3F688 /* MenuViewController.xib in Resources */,
+				2238870A2366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531132287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
@@ -2610,12 +2646,14 @@
 				DE361DF82283E57900FA3B0D /* UIView+extension.swift in Sources */,
 				DE952F802287D2A700E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				DE952F9E2287D2A700E3F688 /* KActivityIndicatorType.swift in Sources */,
+				2238870B2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE953187228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82122A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE952F952287D2A700E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
+				223887052366A94400DAC978 /* MarkerProjectView.swift in Sources */,
 				DE952F902287D2A700E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
 				DEECF8A022871D1B00A4678B /* ForgotPasswordInteractor.swift in Sources */,
 				DEBD6737228D48DA004B74C8 /* CreateGroupPopUp.swift in Sources */,
@@ -2637,6 +2675,7 @@
 				2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE361F2F2283E85000FA3B0D /* PhoneEntity.swift in Sources */,
 				DE952F912287D2A700E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				223886FE2366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
 				2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				DE49F82422A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE361F272283E85000FA3B0D /* NotificationEntity.swift in Sources */,
@@ -2658,6 +2697,7 @@
 				DE952F872287D2A700E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				DE952F942287D2A700E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
 				DE49F81B22A3DB9C00A92C63 /* NotificationDetailPresenter.swift in Sources */,
+				2238870F2366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE952F992287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				766AE80822B02393002D474E /* ViewFeature.swift in Sources */,
 				DE952F8A2287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
@@ -2831,12 +2871,14 @@
 				DE952FB52287DF4800E3F688 /* UIView+extension.swift in Sources */,
 				DE952FB62287DF4800E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				DE952FB72287DF4800E3F688 /* KActivityIndicatorType.swift in Sources */,
+				2238870C2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE953188228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82222A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE952FB82287DF4800E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
+				223887062366A94400DAC978 /* MarkerProjectView.swift in Sources */,
 				DE952FBB2287DF4800E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
 				DE952FBC2287DF4800E3F688 /* ForgotPasswordInteractor.swift in Sources */,
 				DEBD6738228D48DA004B74C8 /* CreateGroupPopUp.swift in Sources */,
@@ -2858,6 +2900,7 @@
 				2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE952FC62287DF4800E3F688 /* PhoneEntity.swift in Sources */,
 				DE952FC72287DF4800E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				223886FF2366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
 				2292F20923653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				DE49F82522A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE952FC82287DF4800E3F688 /* NotificationEntity.swift in Sources */,
@@ -2879,6 +2922,7 @@
 				DE952FCF2287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				DE952FD12287DF4800E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
 				DE49F81C22A3DB9C00A92C63 /* NotificationDetailPresenter.swift in Sources */,
+				223887102366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE952FD22287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				766AE80922B02393002D474E /* ViewFeature.swift in Sources */,
 				DE952FD32287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
@@ -3052,12 +3096,14 @@
 				DE9530632287DF6400E3F688 /* UIView+extension.swift in Sources */,
 				DE9530642287DF6400E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
+				2238870D2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE9530652287DF6400E3F688 /* KActivityIndicatorType.swift in Sources */,
 				DE953189228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82322A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE9530662287DF6400E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
+				223887072366A94400DAC978 /* MarkerProjectView.swift in Sources */,
 				DE9530692287DF6400E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
 				DE95306A2287DF6400E3F688 /* ForgotPasswordInteractor.swift in Sources */,
 				DEBD6739228D48DA004B74C8 /* CreateGroupPopUp.swift in Sources */,
@@ -3079,6 +3125,7 @@
 				2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE9530732287DF6400E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
 				DE9530742287DF6400E3F688 /* PhoneEntity.swift in Sources */,
+				223887002366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
 				2292F20A23653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				DE9530752287DF6400E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				DE49F82622A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
@@ -3100,6 +3147,7 @@
 				DE95307B2287DF6400E3F688 /* UpdateProfileSocial.swift in Sources */,
 				DE95307C2287DF6400E3F688 /* SideMenuViewController.swift in Sources */,
 				DE95307D2287DF6400E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				223887112366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE95307F2287DF6400E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
 				DE49F81D22A3DB9C00A92C63 /* NotificationDetailPresenter.swift in Sources */,
 				DE9530802287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,

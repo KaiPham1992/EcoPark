@@ -37,6 +37,8 @@ extension NecContainerViewController: MenuViewControllerDelegate {
     func selected(item: MenuItem) {
         guard let icon = item.imgIcon else { return }
         switch icon {
+        case AppImage.imgHistoryParking:
+            self.openViewController(presentingController: homeVC)
         case AppImage.imgPrivacy:
             let webView = WebViewController.initFromNib()
             self.openViewController(presentingController: webView)

@@ -14,9 +14,9 @@ class HomeFindRouter: HomeFindWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule() -> HomeFindViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = HomeFindViewController(nibName: nil, bundle: nil)
+        let view = HomeFindViewController.initFromNib()
         let interactor = HomeFindInteractor()
         let router = HomeFindRouter()
         let presenter = HomeFindPresenter(interface: view, interactor: interactor, router: router)
