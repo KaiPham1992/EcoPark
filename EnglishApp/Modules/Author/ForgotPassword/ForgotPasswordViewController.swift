@@ -15,7 +15,7 @@ class ForgotPasswordViewController: BaseViewController {
 	var presenter: ForgotPasswordPresenterProtocol?
     @IBOutlet weak var btnSendEmail: UIButton!
     @IBOutlet weak var lbMessage: UILabel!
-    @IBOutlet weak var vEmail: AppTextField!
+    @IBOutlet weak var vEmail: AppTextfiledLogin!
     @IBOutlet weak var lbError: UILabel!
 
 	override func viewDidLoad() {
@@ -33,14 +33,16 @@ class ForgotPasswordViewController: BaseViewController {
         super.setTitleUI()
         setColorStatusBar()
         setTitleNavigation(title: LocalizableKey.ForgotTitle.showLanguage)
-        btnSendEmail.setTitle(LocalizableKey.SentEmail.showLanguage.uppercased(), for: .normal)
+        btnSendEmail.setTitle(LocalizableKey.SentEmail.showLanguage, for: .normal)
         lbMessage.text = LocalizableKey.ForgotPasswordMessage.showLanguage
-         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
+        vEmail.setPlaceHolder(placeholder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
+        
+        vEmail.image.isHidden = true
     }
     
     @IBAction func btnSendEmailTapped() {
         if validateInputData() {
-            presenter?.forgotPassword(email: vEmail.getText())
+            presenter?.forgotPassword(email: vEmail.tfInput.text!)
         }
     }
 }

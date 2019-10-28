@@ -33,9 +33,26 @@
 "Register" = "Register";
 "LoginButtonSignUp" = "REGISTER";
 "passwordDifference" = "Re-password is wrong!";
+"Username" = "Username";
+"Language" = "Language:";
+
+//SignUp
+
+"Notice" = "Please complete all information marked *";
+"UsernameSignUp" = "Username (does not contain special characters) *";
+"DisplaynameSignUp" = "Display name *";
+"PasswordSignUp" = "Password (Minimum of 6 characters) *";
+"RePasswordSignUp" = "Retype Password*";
+"EmailSignUp" = "Email *";
+"PhoneNumberSignUp" = "Phone NUmber";
+"Gender" = "Gender";
+"Birthday" = "Birth Day";
+"Capcha" = "Captcha *";
+"Enter" = "Enter";
+"Select" = "Select";
 
 // Forgot password page
-"ForgotPasswordMessage" = "Enter the email address associated with your account. Then check the mailbox";
+"ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";
 "SentEmail" = "Send email";
 "ForgotTitle" = "Forgot password";
 "out_group_message" = "The competition started so can not out group";

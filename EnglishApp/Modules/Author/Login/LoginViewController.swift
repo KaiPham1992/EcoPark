@@ -30,14 +30,15 @@ class LoginViewController: BaseViewController {
         self.dismiss()
     }
     
-    @IBOutlet weak var vEmail: AppTextField!
-    @IBOutlet weak var vPassword: AppTextField!
+    @IBOutlet weak var vUserName: AppTextfiledLogin!
+    @IBOutlet weak var vPassword: AppTextfiledLogin!
     @IBOutlet weak var btnLogin: UIButton!
-    @IBOutlet weak var lbFbGmail: UILabel!
     @IBOutlet weak var lbForgot: UILabel!
     @IBOutlet weak var lbRegister: UILabel!
-    @IBOutlet weak var lbError: UILabel!
-    @IBOutlet weak var heightError: NSLayoutConstraint!
+    @IBOutlet weak var lbLanguage: UILabel!
+    @IBOutlet weak var btnEnglish: UIButton!
+    @IBOutlet weak var btnVietnamese: UIButton!
+    
     var callBackLoginSuccessed : (()->())?
     var loginType = LoginType.normal
     var paramLogin: Any?
@@ -56,29 +57,22 @@ class LoginViewController: BaseViewController {
     }
     
     override func setTitleUI() {
-//        hideNavigation()
-//        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
-//
-//        vPassword.setTitleAndPlaceHolder(title: LocalizableKey.LoginPassword.showLanguage, placeHolder: LocalizableKey.enterPassword.showLanguage)
-//        btnLogin.setTitle(LocalizableKey.LoginButtonLogin.showLanguage.uppercased(), for: .normal)
-//        lbFbGmail.text = LocalizableKey.FBorGmail.showLanguage
-//        lbForgot.text = LocalizableKey.ForgotPass.showLanguage
-//
-//        let attr = NSMutableAttributedString()
-//        let attr1 = LocalizableKey.NotYetAccount.showLanguage.toAttributedString(color: AppColor.color48_48_48, font: AppFont.fontRegular12)
-//        let attr2 = "\(LocalizableKey.Register.showLanguage)".toAttributedString(color: AppColor.color255_211_17, font: AppFont.fontRegular12, isUnderLine: true)
-//        attr.append(attr1)
-//        attr.append(attr2)
-//        lbRegister.attributedText = attr
-//
-//        lbError.text = ""
+
+        vUserName.setPlaceHolder(placeholder: LocalizableKey.username.showLanguage)
+        vUserName.setImage(img: AppImage.iconUsername)
+        vPassword.setPlaceHolder(placeholder: LocalizableKey.LoginPassword.showLanguage)
+        vPassword.setImage(img:  AppImage.iconPadlock)
+        vUserName.backgroundColor = AppColor.color_32_45_55
+        vPassword.backgroundColor = AppColor.color_32_45_55
+        lbLanguage.text = LocalizableKey.language.showLanguage
+        btnEnglish.setTitle(LocalizableKey.english.showLanguage, for: .normal)
+        btnVietnamese.setTitle(LocalizableKey.vietnamese.showLanguage, for: .normal)
     }
     
     @IBAction func btnLoginTapped() {
-        heightError.constant = 0
         dismissKeyBoard()
         if validateInputData() {
-            presenter?.login(email: vEmail.tfInput.text&, password: passwordText)
+            presenter?.login(email: vUserName.tfInput.text&, password: passwordText)
         }
         
     }
@@ -91,44 +85,29 @@ class LoginViewController: BaseViewController {
         self.push(controller: SignUpRouter.createModule())
     }
     
-    @IBAction func btnLoginGmail() {
-        self.view.endEditing(true)
-        if !Utils.isConnectedToInternet() {
-            PopUpHelper.shared.showNoInternet {
-            }
-            return
-        }
+    @IBAction func btnEnglishTapped() {
         
-//        GIDSignIn.sharedInstance().signOut()
-//        GIDSignIn.sharedInstance().signIn()
     }
     
-    @IBAction func btnLoginFacebook() {
-        self.view.endEditing(true)
-        if !Utils.isConnectedToInternet() {
-            PopUpHelper.shared.showNoInternet {
-            }
-            return
-        }
+    @IBAction func btnVietnameseTapped() {
         
-//        self.FBlogin()
     }
 }
 
 extension LoginViewController {
     func validateInputData() -> Bool {
         
-        if self.vEmail.tfInput.text == "" && self.vPassword.tfInput.text == "" {
+        if self.vUserName.tfInput.text == "" && self.vPassword.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
         }
         
-        if self.vEmail.tfInput.text == "" {
+        if self.vUserName.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
         
-        if let email = self.vEmail.tfInput.text, email.isValidEmail() == false {
+        if let email = self.vUserName.tfInput.text, email.isValidEmail() == false {
             hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
             return false
         }
@@ -147,9 +126,7 @@ extension LoginViewController {
     }
     
     func hideError(isHidden: Bool = true, message: String? = nil){
-        lbError.isHidden = isHidden
-        lbError.text = message ?? ""
-        heightError.constant = lbError.isHidden ? 0 : 40
+       
     }
 }
 

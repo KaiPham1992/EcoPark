@@ -421,7 +421,7 @@ extension BaseViewController {
     }
 }
 extension BaseViewController {
-    func addBackToNavigation(icon: UIImage = UIImage(named: "Material_Icons_white_chevron_left")! ) {
+    func addBackToNavigation(icon: UIImage = UIImage(named: "back_black")! ) {
         addButtonImageToNavigation(image: icon, style: .left, action: #selector(btnBackTapped))
     }
     
