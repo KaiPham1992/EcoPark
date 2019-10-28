@@ -61,6 +61,7 @@ class SignUpViewController: BaseViewController {
         vBirthDay.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         btnSignUp.setTitle(LocalizableKey.LoginButtonSignUp.showLanguage, for: .normal)
         
+        vGender.delegateDropDown = self
         
         vPassword.tfInput.isSecureTextEntry = true
         vRePassword.tfInput.isSecureTextEntry = true
@@ -211,4 +212,10 @@ extension SignUpViewController: UITextFieldDelegate {
         }
         return true
     }
+}
+
+extension SignUpViewController: AppTextFieldDropDownDelegate {
+    func didChangedValue(sender: AppDropDown, item: Any) {
+    }
+    
 }
