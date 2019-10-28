@@ -54,6 +54,21 @@ struct LocalizableKey {
     static let emptyLoginEmailPassword = "emptyLoginEmailPassword"
     static let passwordDifference = "passwordDifference"
     
+    // Signup
+    static let notice = "Notice"
+    static let usernameSignUp = "UsernameSignUp"
+    static let displaynameSignUp = "DisplaynameSignUp"
+    static let passwordSignUp = "PasswordSignUp"
+    static let rePasswordSignUp = "RePasswordSignUp"
+    static let emailSignUp = "EmailSignUp"
+    static let phoneNumberSignUp = "PhoneNumberSignUp"
+    static let gender = "Gender"
+    static let birthday = "Birthday"
+    static let capcha = "Capcha"
+    static let enter = "Enter"
+    static let select = "Select"
+    
+    
     // Forgot password Page
     static let ForgotPasswordMessage = "ForgotPasswordMessage"
     static let SentEmail = "SentEmail"

@@ -13,14 +13,19 @@ import UIKit
 class SignUpViewController: BaseViewController {
     
     var presenter: SignUpPresenterProtocol?
+    @IBOutlet weak var vUsername: AppTextField!
     @IBOutlet weak var vDisplayName: AppTextField!
     @IBOutlet weak var vEmail: AppTextField!
     @IBOutlet weak var vPassword: AppTextField!
     @IBOutlet weak var vRePassword: AppTextField!
-    @IBOutlet weak var tfCaptcha: UITextField!
+    @IBOutlet weak var vPhoneNumber: AppTextField!
+    @IBOutlet weak var vCapcha: AppTextField!
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var lbStatus: UILabel!
     @IBOutlet weak var imgCaptcha: UIImageView!
+    @IBOutlet weak var lbNotice: UILabel!
+    @IBOutlet weak var vGender: AppDropDown!
+    @IBOutlet weak var vBirthDay: AppDateDropDown!
     
     @IBOutlet weak var heightError: NSLayoutConstraint!
     
@@ -39,19 +44,29 @@ class SignUpViewController: BaseViewController {
 //        self.hideNavigation()
         self.showNavigation()
         self.setTitleNavigation(title: LocalizableKey.Register.showLanguage)
-        setColorStatusBar(color: AppColor.yellowLogin)
-        vDisplayName.setTitleAndPlaceHolder(title: LocalizableKey.DisplayName.showLanguage, placeHolder: LocalizableKey.enterDisplayName.showLanguage)
-        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.LoginEmail.showLanguage, placeHolder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
+        vUsername.setTitleAndPlaceHolder(title: LocalizableKey.usernameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.emailSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         
-        vPassword.setTitleAndPlaceHolder(title: LocalizableKey.LoginPassword.showLanguage, placeHolder: LocalizableKey.enterPassword.showLanguage)
-        vRePassword.setTitleAndPlaceHolder(title: LocalizableKey.reNewPassword.showLanguage, placeHolder: LocalizableKey.enterRePassword.showLanguage)
+        vPassword.setTitleAndPlaceHolder(title: LocalizableKey.passwordSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vRePassword.setTitleAndPlaceHolder(title: LocalizableKey.rePasswordSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vPhoneNumber.setTitleAndPlaceHolder(title: LocalizableKey.phoneNumberSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vDisplayName.setTitleAndPlaceHolder(title: LocalizableKey.displaynameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vCapcha.setTitleAndPlaceHolder(title: LocalizableKey.capcha.showLanguage, placeHolder: LocalizableKey.enterCaptcha.showLanguage)
+        lbNotice.text = LocalizableKey.notice.showLanguage
+        
+        vGender.backgroundColor = .black
+        vBirthDay.backgroundColor = .black
+        
+        vGender.setTitleAndPlaceHolder(title: LocalizableKey.gender.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
+        vBirthDay.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         btnSignUp.setTitle(LocalizableKey.LoginButtonSignUp.showLanguage, for: .normal)
-//        vPassword.tfInput.isSecureTextEntry = true
-//        vRePassword.tfInput.isSecureTextEntry = true
+        
+        
+        vPassword.tfInput.isSecureTextEntry = true
+        vRePassword.tfInput.isSecureTextEntry = true
         vPassword.tfInput.delegate = self
         vRePassword.tfInput.delegate = self
         
-//        tfCaptcha.placeholder = LocalizableKey.enterCaptcha.showLanguage
     }
     
     @IBAction func btnBackBlackTapped() {
@@ -63,7 +78,7 @@ class SignUpViewController: BaseViewController {
         heightError.constant = 0
         //vPassword.getText()
         if validateInputData() {
-            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: tfCaptcha.text&, displayName: vDisplayName.getText())
+            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vUsername.getText())
             
             presenter?.signUp(param: param)
         }
@@ -77,12 +92,12 @@ class SignUpViewController: BaseViewController {
 
 extension SignUpViewController {
     func validateInputData() -> Bool {
-        if self.vDisplayName.tfInput.text == "" && self.vEmail.tfInput.text == "" && self.vPassword.tfInput.text == "" && self.vRePassword.tfInput.text == "" && self.tfCaptcha.text == "" {
+        if self.vUsername.tfInput.text == "" && self.vEmail.tfInput.text == "" && self.vPassword.tfInput.text == "" && self.vRePassword.tfInput.text == "" && self.vCapcha.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
         }
 
-        if self.vDisplayName.tfInput.text == "" {
+        if self.vUsername.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterDisplayName.showLanguage)
             return false
         }
@@ -118,7 +133,7 @@ extension SignUpViewController {
             return false
         }
 
-        if self.tfCaptcha.text == "" || self.tfCaptcha.text&.contains(" ") || self.tfCaptcha.text&.hasSpecialCharacters()   {
+        if self.vCapcha.tfInput.text == "" || self.vCapcha.tfInput.text&.contains(" ") || self.vCapcha.tfInput.text&.hasSpecialCharacters()   {
             hideError(isHidden: false, message:  LocalizableKey.emptyCapcha.showLanguage)
             return false
         }
