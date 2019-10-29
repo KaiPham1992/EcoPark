@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
                 <outlet property="mapView" destination="JfX-bT-O35" id="ybx-wy-zQi"/>
+                <outlet property="vParkingSort" destination="wI8-QS-W4E" id="ff7-FY-m1i"/>
                 <outlet property="vSearch" destination="uD5-Bf-Mag" id="tNa-sc-E2S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,15 +46,25 @@
                     <rect key="frame" x="0.0" y="53" width="375" height="614"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI8-QS-W4E" customClass="ParkingSortView" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="459" width="375" height="208"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="208" id="NRf-EK-ZKb"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6a4-Dh-U8n" firstAttribute="bottom" secondItem="JfX-bT-O35" secondAttribute="bottom" id="0Fy-Mp-JTZ"/>
                 <constraint firstItem="frR-0y-yRy" firstAttribute="leading" secondItem="uD5-Bf-Mag" secondAttribute="trailing" id="Kc6-4O-ixe"/>
+                <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="wI8-QS-W4E" secondAttribute="trailing" id="LTV-z6-cTc"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="trailing" secondItem="6a4-Dh-U8n" secondAttribute="trailing" constant="-80" id="S5g-sB-LT3"/>
+                <constraint firstItem="wI8-QS-W4E" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" id="U5w-Pk-do5"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" constant="24" id="Umr-bi-QGF"/>
                 <constraint firstItem="JfX-bT-O35" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" id="Vxh-kr-Dpg"/>
                 <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="frR-0y-yRy" secondAttribute="trailing" constant="16" id="Xou-ud-jFx"/>
+                <constraint firstItem="6a4-Dh-U8n" firstAttribute="bottom" secondItem="wI8-QS-W4E" secondAttribute="bottom" id="f94-sE-acT"/>
                 <constraint firstItem="frR-0y-yRy" firstAttribute="top" secondItem="uD5-Bf-Mag" secondAttribute="top" id="quX-9l-FVf"/>
                 <constraint firstItem="frR-0y-yRy" firstAttribute="bottom" secondItem="uD5-Bf-Mag" secondAttribute="bottom" id="ul4-mI-OuE"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="top" secondItem="6a4-Dh-U8n" secondAttribute="top" id="w2J-Sm-rWK"/>

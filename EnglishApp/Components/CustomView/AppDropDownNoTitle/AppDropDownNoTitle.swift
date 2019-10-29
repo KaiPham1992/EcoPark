@@ -7,26 +7,10 @@
 //
 
 
-// Fix me
-class TagEntity {
-    var name: String?
-    
-    init(name: String) {
-        self.name = name
-    }
-}
-
-//
-
 import UIKit
 import DropDown
 
-protocol AppTextFieldDropDownDelegate: class {
-    func didChangedValue(sender: BaseViewXib, item: Any)
-}
-
-class AppDropDown: BaseViewXib {
-    @IBOutlet weak var lbTitle: UILabel!
+class AppDropDownNoTitle: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var vContain: UIView!
     
@@ -47,11 +31,8 @@ class AppDropDown: BaseViewXib {
         }
     }
     
-    func setTitleAndPlaceHolder(title: String? = nil, placeHolder: String? = nil) {
-        if title != nil {
-            self.lbTitle.text = title
-        }
-        
+    func setTitleAndPlaceHolder( placeHolder: String? = nil) {
+      
         if placeHolder != nil {
             self.tfInput.placeholder = placeHolder
             tfInput.placeHolderColor = .black
