@@ -10,6 +10,24 @@
 		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		175C73362367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
+		175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
+		175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
+		175C73392367E4EE009F03F6 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73312367E4EE009F03F6 /* ProfileRouter.swift */; };
+		175C733A2367E4EE009F03F6 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73312367E4EE009F03F6 /* ProfileRouter.swift */; };
+		175C733B2367E4EE009F03F6 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73312367E4EE009F03F6 /* ProfileRouter.swift */; };
+		175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73322367E4EE009F03F6 /* ProfileViewController.swift */; };
+		175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73322367E4EE009F03F6 /* ProfileViewController.swift */; };
+		175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73322367E4EE009F03F6 /* ProfileViewController.swift */; };
+		175C733F2367E4EE009F03F6 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73332367E4EE009F03F6 /* ProfileProtocols.swift */; };
+		175C73402367E4EE009F03F6 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73332367E4EE009F03F6 /* ProfileProtocols.swift */; };
+		175C73412367E4EE009F03F6 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73332367E4EE009F03F6 /* ProfileProtocols.swift */; };
+		175C73422367E4EE009F03F6 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73342367E4EE009F03F6 /* ProfileInteractor.swift */; };
+		175C73432367E4EE009F03F6 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73342367E4EE009F03F6 /* ProfileInteractor.swift */; };
+		175C73442367E4EE009F03F6 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73342367E4EE009F03F6 /* ProfileInteractor.swift */; };
+		175C73452367E4EE009F03F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C73352367E4EE009F03F6 /* ProfileViewController.xib */; };
+		175C73462367E4EE009F03F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C73352367E4EE009F03F6 /* ProfileViewController.xib */; };
+		175C73472367E4EE009F03F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C73352367E4EE009F03F6 /* ProfileViewController.xib */; };
 		2203D561236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
 		2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
 		2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
@@ -823,6 +841,12 @@
 
 /* Begin PBXFileReference section */
 		17155F03236160FF001B81AE /* AppTextfiledLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfiledLogin.swift; sourceTree = "<group>"; };
+		175C73302367E4EE009F03F6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		175C73312367E4EE009F03F6 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		175C73322367E4EE009F03F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		175C73332367E4EE009F03F6 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		175C73342367E4EE009F03F6 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		175C73352367E4EE009F03F6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2203D55F236558420055E79F /* AppSeachBarRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppSeachBarRight.xib; sourceTree = "<group>"; };
 		2203D560236558420055E79F /* AppSeachBarRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSeachBarRight.swift; sourceTree = "<group>"; };
@@ -1143,6 +1167,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		175C732F2367E486009F03F6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				175C73302367E4EE009F03F6 /* ProfilePresenter.swift */,
+				175C73312367E4EE009F03F6 /* ProfileRouter.swift */,
+				175C73322367E4EE009F03F6 /* ProfileViewController.swift */,
+				175C73332367E4EE009F03F6 /* ProfileProtocols.swift */,
+				175C73342367E4EE009F03F6 /* ProfileInteractor.swift */,
+				175C73352367E4EE009F03F6 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2203D556236558150055E79F /* AppSeachBarRight */ = {
 			isa = PBXGroup;
 			children = (
@@ -2058,6 +2095,7 @@
 		DE95311B228808D600E3F688 /* UserManager */ = {
 			isa = PBXGroup;
 			children = (
+				175C732F2367E486009F03F6 /* Profile */,
 				DE953174228846C400E3F688 /* ChangePassword */,
 			);
 			path = UserManager;
@@ -2313,6 +2351,7 @@
 				DE361EA02283E60500FA3B0D /* YesNoContentView.xib in Resources */,
 				22431761235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE3CC3482283DD990037DBE4 /* LaunchScreen.storyboard in Resources */,
+				175C73452367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
 				766AE7F222AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
 				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
@@ -2371,6 +2410,7 @@
 				DE95304F2287DF4800E3F688 /* YesNoContentView.xib in Resources */,
 				22431762235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE9530502287DF4800E3F688 /* LaunchScreen.storyboard in Resources */,
+				175C73462367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
 				766AE7F322AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
 				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
@@ -2429,6 +2469,7 @@
 				DE9530FD2287DF6400E3F688 /* YesNoContentView.xib in Resources */,
 				22431763235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE9530FE2287DF6400E3F688 /* LaunchScreen.storyboard in Resources */,
+				175C73472367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
 				766AE7F422AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
 				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
@@ -2688,10 +2729,12 @@
 				DE361EAA2283E6DB00FA3B0D /* CustomTextfield.swift in Sources */,
 				DE49F81E22A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
 				766AE7F722B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
+				175C73362367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				22431750235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175B235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				DE361DE52283E54C00FA3B0D /* BaseTableCell.swift in Sources */,
 				DE952F7E2287D2A700E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				175C733F2367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
 				DE361F412283E85000FA3B0D /* UpdateProfileSocial.swift in Sources */,
 				DE2ADE5D22841A68003768CE /* SideMenuViewController.swift in Sources */,
 				DE952F872287D2A700E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
@@ -2712,6 +2755,8 @@
 				DEDDEF6522914A980043A62D /* MainTabbar.swift in Sources */,
 				76CF522022CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				DE361F452283E85000FA3B0D /* BaseParam.swift in Sources */,
+				175C73422367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
+				175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -2801,6 +2846,7 @@
 				DE361DF92283E57900FA3B0D /* UIImage+extension.swift in Sources */,
 				7629BDE322ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				DE361DE72283E54C00FA3B0D /* BaseView.swift in Sources */,
+				175C73392367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE361F392283E85000FA3B0D /* APIError.swift in Sources */,
 				DE361F332283E85000FA3B0D /* UserEntity.swift in Sources */,
 				DE361F342283E85000FA3B0D /* FaceBookEntity.swift in Sources */,
@@ -2913,10 +2959,12 @@
 				DE952FCA2287DF4800E3F688 /* CustomTextfield.swift in Sources */,
 				DE49F81F22A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
 				766AE7F822B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
+				175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				22431751235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175C235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				DE952FCB2287DF4800E3F688 /* BaseTableCell.swift in Sources */,
 				DE952FCC2287DF4800E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				175C73402367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
 				DE952FCD2287DF4800E3F688 /* UpdateProfileSocial.swift in Sources */,
 				DE952FCE2287DF4800E3F688 /* SideMenuViewController.swift in Sources */,
 				DE952FCF2287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
@@ -2937,6 +2985,8 @@
 				DEDDEF6622914A980043A62D /* MainTabbar.swift in Sources */,
 				76CF522122CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				DE952FD82287DF4800E3F688 /* BaseParam.swift in Sources */,
+				175C73432367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
+				175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -3026,6 +3076,7 @@
 				DE9530122287DF4800E3F688 /* UIImage+extension.swift in Sources */,
 				7629BDE422ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				DE9530132287DF4800E3F688 /* BaseView.swift in Sources */,
+				175C733A2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE9530142287DF4800E3F688 /* APIError.swift in Sources */,
 				DE9530152287DF4800E3F688 /* UserEntity.swift in Sources */,
 				DE9530162287DF4800E3F688 /* FaceBookEntity.swift in Sources */,
@@ -3138,10 +3189,12 @@
 				DE95317D228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				DE9530782287DF6400E3F688 /* CustomTextfield.swift in Sources */,
 				DE49F82022A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
+				175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				766AE7F922B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
 				22431752235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175D235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				DE9530792287DF6400E3F688 /* BaseTableCell.swift in Sources */,
+				175C73412367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
 				DE2D679A22F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE95307A2287DF6400E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				DE95307B2287DF6400E3F688 /* UpdateProfileSocial.swift in Sources */,
@@ -3162,6 +3215,8 @@
 				DE9530832287DF6400E3F688 /* KActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				DE9530842287DF6400E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
 				DE9530852287DF6400E3F688 /* Strings.swift in Sources */,
+				175C73442367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
+				175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				DE9530862287DF6400E3F688 /* BaseParam.swift in Sources */,
@@ -3251,6 +3306,7 @@
 				7629BDE522ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				DE9530C12287DF6400E3F688 /* BaseView.swift in Sources */,
 				DE9530C22287DF6400E3F688 /* APIError.swift in Sources */,
+				175C733B2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE9530C32287DF6400E3F688 /* UserEntity.swift in Sources */,
 				DE9530C42287DF6400E3F688 /* FaceBookEntity.swift in Sources */,
 				DE9530C52287DF6400E3F688 /* ForgotPasswordViewController.swift in Sources */,

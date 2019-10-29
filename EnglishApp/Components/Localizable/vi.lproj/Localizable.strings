@@ -84,10 +84,10 @@
 "CodeNumber"  = "Mã code";
 "TitleProfile" = "Thông tin cá nhân";
 "EditProfile" = "Sửa thông tin";
-"titleSave" = "LƯU";
+"titleSave" = "LƯU THAY ĐỔI";
 "titleDiamon" = "Kim cương";
 "titleBee" = "Hũ mật ong";
-
+"TitleChangePassword" = "Đổi mật khẩu đăng nhập";
 // Preview profile
 
 "privateInfo" = "Thông tin cá nhân";
@@ -95,8 +95,8 @@
 
 // change passsword
 "currentPassword"  = "Mật khẩu hiện tại";
-"newPassword" = "Mật khẩu mới";
-"reNewPassword" = "Nhập lại mật khẩu";
+"newPassword" = "Mật khẩu mới(tối thiểu 6 kí tự)";
+"reNewPassword" = "Nhập lại mật khẩu mới";
 "changePasssword" = "Đổi mật khẩu";
 "currentPasswordLogin" = "Mật khẩu đăng nhập";
 "changePasswordSuccess" = "Thay đổi password thành công";

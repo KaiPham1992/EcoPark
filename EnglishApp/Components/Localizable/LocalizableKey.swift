@@ -89,6 +89,7 @@ struct LocalizableKey {
     static let titleSave = "titleSave"
     static let titleDiamon = "titleDiamon"
     static let titleBee = "titleBee"
+    static let titleChangePassword = "TitleChangePassword"
     
     // preview profile
     
