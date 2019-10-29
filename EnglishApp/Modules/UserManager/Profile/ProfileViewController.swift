@@ -45,7 +45,7 @@ class ProfileViewController: BaseViewController, ProfileViewProtocol {
     }
     
     @IBAction func btnSaveTapped() {
-        
+        self.push(controller: SignUpPartnerStep1Router.createModule(), animated: true)
     }
     
     @IBAction func btnChangePasswordTapped() {

@@ -116,6 +116,15 @@ struct LocalizableKey {
     static let boxHoney = "boxHoney"
     static let titleHistoryNap = "titleHistoryNap"
     
+    //Sign Up Partner
+    static let parnerInfo = "ParnerInfo"
+    static let partnerName = "PartnerName"
+    static let partnerID = "PartnerID"
+    static let issuedBy = "IssuedBy"
+    static let dayBy = "DayBy"
+    static let partnerEmail = "PartnerEmail"
+    static let partnerImage = "PartnerImage"
+    
     // QA
     
     static let whatQA = "whatQA"

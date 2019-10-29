@@ -28,6 +28,24 @@
 		175C73452367E4EE009F03F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C73352367E4EE009F03F6 /* ProfileViewController.xib */; };
 		175C73462367E4EE009F03F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C73352367E4EE009F03F6 /* ProfileViewController.xib */; };
 		175C73472367E4EE009F03F6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C73352367E4EE009F03F6 /* ProfileViewController.xib */; };
+		175C7351236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734B236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift */; };
+		175C7352236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734B236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift */; };
+		175C7353236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734B236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift */; };
+		175C7354236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734C236836C7009F03F6 /* SignUpPartnerStep1Router.swift */; };
+		175C7355236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734C236836C7009F03F6 /* SignUpPartnerStep1Router.swift */; };
+		175C7356236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734C236836C7009F03F6 /* SignUpPartnerStep1Router.swift */; };
+		175C7357236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734D236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift */; };
+		175C7358236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734D236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift */; };
+		175C7359236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734D236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift */; };
+		175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734E236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift */; };
+		175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734E236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift */; };
+		175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734E236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift */; };
+		175C735D236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift */; };
+		175C735E236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift */; };
+		175C735F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C734F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift */; };
+		175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C7350236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib */; };
+		175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C7350236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib */; };
+		175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C7350236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib */; };
 		2203D561236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
 		2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
 		2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D55F236558420055E79F /* AppSeachBarRight.xib */; };
@@ -847,6 +865,12 @@
 		175C73332367E4EE009F03F6 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		175C73342367E4EE009F03F6 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		175C73352367E4EE009F03F6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		175C734B236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep1Presenter.swift; sourceTree = "<group>"; };
+		175C734C236836C7009F03F6 /* SignUpPartnerStep1Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep1Router.swift; sourceTree = "<group>"; };
+		175C734D236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep1ViewController.swift; sourceTree = "<group>"; };
+		175C734E236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep1Protocols.swift; sourceTree = "<group>"; };
+		175C734F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep1Interactor.swift; sourceTree = "<group>"; };
+		175C7350236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpPartnerStep1ViewController.xib; sourceTree = "<group>"; };
 		187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2203D55F236558420055E79F /* AppSeachBarRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppSeachBarRight.xib; sourceTree = "<group>"; };
 		2203D560236558420055E79F /* AppSeachBarRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSeachBarRight.swift; sourceTree = "<group>"; };
@@ -1180,6 +1204,27 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		175C7349236835FE009F03F6 /* SignUpPartner */ = {
+			isa = PBXGroup;
+			children = (
+				175C734A236836A8009F03F6 /* SignUpPartnerStep1 */,
+			);
+			path = SignUpPartner;
+			sourceTree = "<group>";
+		};
+		175C734A236836A8009F03F6 /* SignUpPartnerStep1 */ = {
+			isa = PBXGroup;
+			children = (
+				175C734B236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift */,
+				175C734C236836C7009F03F6 /* SignUpPartnerStep1Router.swift */,
+				175C734D236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift */,
+				175C734E236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift */,
+				175C734F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift */,
+				175C7350236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib */,
+			);
+			path = SignUpPartnerStep1;
+			sourceTree = "<group>";
+		};
 		2203D556236558150055E79F /* AppSeachBarRight */ = {
 			isa = PBXGroup;
 			children = (
@@ -1492,6 +1537,7 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				175C7349236835FE009F03F6 /* SignUpPartner */,
 				2292F20423653B0300B570E3 /* ContainerView */,
 				22F33A9E23645B6F00D136EB /* HomeFind */,
 				22431764235ED91800CA1E13 /* Home */,
@@ -2355,6 +2401,7 @@
 				766AE7F222AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
 				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
+				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531142287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
 				DE95310E2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
@@ -2414,6 +2461,7 @@
 				766AE7F322AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
 				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
+				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531152287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
 				DE95310F2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
@@ -2473,6 +2521,7 @@
 				766AE7F422AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
 				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
+				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531162287E00A00E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
 				DE9531102287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
@@ -2702,6 +2751,7 @@
 				DE952F932287D2A700E3F688 /* KActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				DE361DE62283E54C00FA3B0D /* BasePopUpView.swift in Sources */,
 				DE361F3E2283E85000FA3B0D /* LoginSocialParam.swift in Sources */,
+				175C735D236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift in Sources */,
 				DE361DD62283E4BD00FA3B0D /* LoginPresenter.swift in Sources */,
 				76E2FEFB228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE361DFF2283E57900FA3B0D /* NSObjectProtocol+Extension.swift in Sources */,
@@ -2759,6 +2809,7 @@
 				175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
+				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
 				76DB93BA228C74B00081A36E /* RatioButton.swift in Sources */,
 				DE361F4A2283E85000FA3B0D /* EndPointType.swift in Sources */,
@@ -2801,6 +2852,7 @@
 				DE952F8D2287D2A700E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE361DFB2283E57900FA3B0D /* String+extension.swift in Sources */,
 				DE952F822287D2A700E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				175C7354236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				2A6C5ED422EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				DE361DD82283E4BD00FA3B0D /* LoginViewController.swift in Sources */,
 				DE952F8E2287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
@@ -2864,6 +2916,7 @@
 				DE361E822283E60500FA3B0D /* AppDropDown.swift in Sources */,
 				DE952F7D2287D2A700E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAA2293007200D7CECE /* ThanksReportContent.swift in Sources */,
+				175C7351236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				DE952F7C2287D2A700E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				DE952FAD2287DD2A00E3F688 /* Login+GoogleSignIn.swift in Sources */,
 				DE361F512283E85000FA3B0D /* NotificationAPIService.swift in Sources */,
@@ -2894,6 +2947,7 @@
 				DEECF89D22871D1B00A4678B /* ForgotPasswordRouter.swift in Sources */,
 				DEECF89022871D0400A4678B /* SignUpRouter.swift in Sources */,
 				DE952F9C2287D2A700E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
+				175C7357236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
 				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FC22B02330002D474E /* UpdateFeatureView.swift in Sources */,
@@ -2932,6 +2986,7 @@
 				DE952FBD2287DF4800E3F688 /* KActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				DE952FBE2287DF4800E3F688 /* BasePopUpView.swift in Sources */,
 				DE952FBF2287DF4800E3F688 /* LoginSocialParam.swift in Sources */,
+				175C735E236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift in Sources */,
 				DE952FC02287DF4800E3F688 /* LoginPresenter.swift in Sources */,
 				76E2FEFC228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE952FC12287DF4800E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
@@ -2989,6 +3044,7 @@
 				175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
+				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
 				76DB93BB228C74B00081A36E /* RatioButton.swift in Sources */,
 				DE952FDB2287DF4800E3F688 /* EndPointType.swift in Sources */,
@@ -3031,6 +3087,7 @@
 				DE952FF32287DF4800E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE952FF42287DF4800E3F688 /* String+extension.swift in Sources */,
 				DE952FF52287DF4800E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				175C7355236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				2A6C5ED522EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				DE952FF62287DF4800E3F688 /* LoginViewController.swift in Sources */,
 				DE952FF72287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
@@ -3094,6 +3151,7 @@
 				DE95301E2287DF4800E3F688 /* AppDropDown.swift in Sources */,
 				DE9530202287DF4800E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAB2293007200D7CECE /* ThanksReportContent.swift in Sources */,
+				175C7352236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				DE9530212287DF4800E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				DE9530222287DF4800E3F688 /* Login+GoogleSignIn.swift in Sources */,
 				DE9530232287DF4800E3F688 /* NotificationAPIService.swift in Sources */,
@@ -3124,6 +3182,7 @@
 				DE9530392287DF4800E3F688 /* ForgotPasswordRouter.swift in Sources */,
 				DE95303A2287DF4800E3F688 /* SignUpRouter.swift in Sources */,
 				DE95303B2287DF4800E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
+				175C7358236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
 				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FD22B02330002D474E /* UpdateFeatureView.swift in Sources */,
@@ -3162,6 +3221,7 @@
 				DE95306B2287DF6400E3F688 /* KActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				DE95306C2287DF6400E3F688 /* BasePopUpView.swift in Sources */,
 				DE95306D2287DF6400E3F688 /* LoginSocialParam.swift in Sources */,
+				175C735F236836C7009F03F6 /* SignUpPartnerStep1Interactor.swift in Sources */,
 				DE95306E2287DF6400E3F688 /* LoginPresenter.swift in Sources */,
 				76E2FEFD228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE95306F2287DF6400E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
@@ -3219,6 +3279,7 @@
 				175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
+				175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				DE9530862287DF6400E3F688 /* BaseParam.swift in Sources */,
 				DE9530872287DF6400E3F688 /* UIColor+extension.swift in Sources */,
 				DE9530882287DF6400E3F688 /* MenuViewController.swift in Sources */,
@@ -3261,6 +3322,7 @@
 				DE95309E2287DF6400E3F688 /* LoginRouter.swift in Sources */,
 				DE95309F2287DF6400E3F688 /* LoginProtocols.swift in Sources */,
 				DE9530A02287DF6400E3F688 /* NotificationPopUp.swift in Sources */,
+				175C7356236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				DE9530A12287DF6400E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE9530A22287DF6400E3F688 /* String+extension.swift in Sources */,
 				DE9530A32287DF6400E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
@@ -3324,6 +3386,7 @@
 				DE9530CE2287DF6400E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAC2293007200D7CECE /* ThanksReportContent.swift in Sources */,
 				DE9530CF2287DF6400E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				175C7353236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				DE9530D02287DF6400E3F688 /* Login+GoogleSignIn.swift in Sources */,
 				DE9530D12287DF6400E3F688 /* NotificationAPIService.swift in Sources */,
 				DE9530D22287DF6400E3F688 /* MenuPresenter.swift in Sources */,
@@ -3354,6 +3417,7 @@
 				DE9530E72287DF6400E3F688 /* ForgotPasswordRouter.swift in Sources */,
 				DE9530E82287DF6400E3F688 /* SignUpRouter.swift in Sources */,
 				DE9530E92287DF6400E3F688 /* KActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
+				175C7359236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
 				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FE22B02330002D474E /* UpdateFeatureView.swift in Sources */,

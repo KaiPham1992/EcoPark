@@ -101,6 +101,16 @@
 "currentPasswordLogin" = "Mật khẩu đăng nhập";
 "changePasswordSuccess" = "Thay đổi password thành công";
 
+//Sign up Partner
+
+"ParnerInfo" = "Thông tin chủ bãi";
+"PartnerName" = "Họ tên chủ bãi *";
+"PartnerID" = "Số chứng minh nhân dân/ CCCD chủ bãi *";
+"IssuedBy" = "Nơi cấp *";
+"DayBy" = "Ngày cấp *";
+"PartnerEmail" = "Email liên hệ";
+"PartnerImage" = "HÌNH ẢNH XÁC THỰC";
+
 // logout
 "popUpLogout" = "Bạn có muốn đăng xuất?";
 "agree" = "Đồng ý";

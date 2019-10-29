@@ -104,6 +104,16 @@
 "currentPasswordLogin" = "Login password";
 "changePasswordSuccess" = "Change password successfully";
 
+//Sign up Partner
+
+"ParnerInfo" = "Partner Information";
+"PartnerName" = "Partner Name *";
+"PartnerID" = "Identity card number / CCCD Partner *";
+"IssuedBy" = "Issue By *";
+"DayBy" = "Day By *";
+"PartnerEmail" = "Partner Email";
+"PartnerImage" = "AUTHENTICIAL PICTURE";
+
 // logout
 "popUpLogout" = "Do you want to logout?";
 "agree" = "YES";
