@@ -9,6 +9,9 @@
 
 import UIKit
 import DropDown
+protocol AppDropDownNoTitleDelegate: class {
+    func didChangedValue(sender: AppDropDownNoTitle, item: Any)
+}
 
 class AppDropDownNoTitle: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
@@ -16,7 +19,7 @@ class AppDropDownNoTitle: BaseViewXib {
     
     let dropDown = DropDown()
     var selectedItem: Any?
-    weak var delegateDropDown: AppTextFieldDropDownDelegate?
+    weak var delegateDropDown: AppDropDownNoTitleDelegate?
     
     var listItem = [Any]() {
         didSet {

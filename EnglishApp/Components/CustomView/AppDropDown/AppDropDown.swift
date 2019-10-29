@@ -22,7 +22,7 @@ import UIKit
 import DropDown
 
 protocol AppTextFieldDropDownDelegate: class {
-    func didChangedValue(sender: BaseViewXib, item: Any)
+    func didChangedValue(sender: AppDropDown, item: Any)
 }
 
 class AppDropDown: BaseViewXib {

@@ -33,7 +33,7 @@ class AppRouter {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
         AppRouter.shared.rootNavigation = nil
-        let vcLogin = LoginRouter.createModule()
+        let vcLogin = ProfileRouter.createModule()
         
         let nc = UINavigationController(rootViewController: vcLogin)
         windowApp.rootViewController = nc

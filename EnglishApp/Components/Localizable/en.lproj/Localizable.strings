@@ -89,6 +89,7 @@
 "titleSave" = "SAVE";
 "titleDiamon" = "Diamond";
 "titleBee" = "Honey";
+"TitleChangePassword" = "Change password login";
 
 // Preview profile
 
@@ -97,11 +98,21 @@
 
 // change passsword
 "currentPassword"  = "Current password";
-"newPassword" = "New password";
-"reNewPassword" = "Re-enter password";
+"newPassword" = "New password (Minimum of 6 characters)";
+"reNewPassword" = "Re-enter new password";
 "changePasssword" = "Change password";
 "currentPasswordLogin" = "Login password";
 "changePasswordSuccess" = "Change password successfully";
+
+//Sign up Partner
+
+"ParnerInfo" = "Partner Information";
+"PartnerName" = "Partner Name *";
+"PartnerID" = "Identity card number / CCCD Partner *";
+"IssuedBy" = "Issue By *";
+"DayBy" = "Day By *";
+"PartnerEmail" = "Partner Email";
+"PartnerImage" = "AUTHENTICIAL PICTURE";
 
 // logout
 "popUpLogout" = "Do you want to logout?";
