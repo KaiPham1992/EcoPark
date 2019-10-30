@@ -104,7 +104,7 @@
 "currentPasswordLogin" = "Login password";
 "changePasswordSuccess" = "Change password successfully";
 
-//Sign up Partner
+//Sign up Partner 1
 
 "ParnerInfo" = "Partner Information";
 "PartnerName" = "Partner Name *";
@@ -113,6 +113,21 @@
 "DayBy" = "Day By *";
 "PartnerEmail" = "Partner Email";
 "PartnerImage" = "AUTHENTICIAL PICTURE";
+
+// Sign Up Partner 2
+"ParkingInfo" = "Parking Info";
+"ParkingName" = "Paarking Name *";
+"ParkingType" = "Parking Type *";
+"ParkingCapacity" = "Parking Capacity *";
+"ParkingAddress" = "Parking Address *";
+"ParkingOpen" = "Open *";
+"ParkingClose" = "Close *";
+"ParkingPrice" = "Service Prices";
+"PriceAHours" = " A Hours *";
+"PriceCombo" = "A Combom (8 Hours) *";
+"ParkingLicense" = "Business License";
+"ParkingTaxCode" = "Tax Code";
+
 
 // logout
 "popUpLogout" = "Do you want to logout?";

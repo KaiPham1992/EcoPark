@@ -101,7 +101,7 @@
 "currentPasswordLogin" = "Mật khẩu đăng nhập";
 "changePasswordSuccess" = "Thay đổi password thành công";
 
-//Sign up Partner
+//Sign up Partner 1
 
 "ParnerInfo" = "Thông tin chủ bãi";
 "PartnerName" = "Họ tên chủ bãi *";
@@ -110,6 +110,20 @@
 "DayBy" = "Ngày cấp *";
 "PartnerEmail" = "Email liên hệ";
 "PartnerImage" = "HÌNH ẢNH XÁC THỰC";
+
+// Sign Up Partner 2
+"ParkingInfo" = "Thông tin BÃI ĐỖ";
+"ParkingName" = "Tên hiển thị bãi xe *";
+"ParkingType" = "Loại bãi *";
+"ParkingCapaciti" = "Sức chứa *";
+"ParkingAddress" = "Địa chỉ bãi xe *";
+"ParkingOpen" = "Mở cửa *";
+"ParkingClose" = "Đóng cửa *";
+"ParkingPrice" = "giá dịch vụ";
+"PriceAHours" = " Đơn giá theo giờ *";
+"PriceCombo" = "Đơn giá theo gói (8 giờ) *";
+"ParkingLicense" = "GIẤY PHÉP KINH DOANH";
+"ParkingTaxCode" = "Mã số thuế";
 
 // logout
 "popUpLogout" = "Bạn có muốn đăng xuất?";

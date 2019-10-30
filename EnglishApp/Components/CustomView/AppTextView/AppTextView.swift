@@ -16,6 +16,7 @@ class AppTextView: UIView {
     let maxTextCount = 250
     let viewContain: UIView = {
         let view = UIView()
+        view.backgroundColor = .black
         view.setBorder(borderWidth: 1, borderColor: AppColor.lineNavigationBar, cornerRadius: 5)
         return view
     }()
@@ -24,14 +25,15 @@ class AppTextView: UIView {
         let tv              = UITextView()
         tv.font             = AppFont.fontRegular15
         tv.delegate         = self
-        tv.backgroundColor = .clear
+        tv.backgroundColor = .white
+        tv.setBorder(borderWidth: 1, borderColor: .white, cornerRadius: 5)
         return tv
     }()
     
     let lbTitle: UILabel = {
         let lb              = UILabel()
-        lb.font             = AppFont.fontRegular15
-        lb.textColor        = AppColor.black
+        lb.font             = AppFont.fontRegular13
+        lb.textColor        = AppColor.color_136_136_136
         lb.numberOfLines    = 0
         
         return lb
@@ -69,7 +71,7 @@ class AppTextView: UIView {
         viewContain.anchor(lbTitle.bottomAnchor, left: lbTitle.leftAnchor, bottom: self.bottomAnchor, right: lbTitle.rightAnchor, topConstant: 4, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
         
         //tfInput
-        tvInput.anchor(viewContain.topAnchor, left: viewContain.leftAnchor, bottom: viewContain.bottomAnchor, right: viewContain.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 20, rightConstant: 16, widthConstant: 0, heightConstant: 0)
+        tvInput.anchor(viewContain.topAnchor, left: viewContain.leftAnchor, bottom: viewContain.bottomAnchor, right: viewContain.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 20, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         tvInput.contentInset = UIEdgeInsets(top: -7, left: 0, bottom: 0, right: 0 )
         
         lbPlaceHolder.anchor(tvInput.topAnchor, left: tvInput.leftAnchor, bottom: nil, right: tvInput.rightAnchor, topConstant: 0, leftConstant: 3, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
