@@ -22,6 +22,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var presenter: HomePresenterProtocol?
     @IBOutlet weak var vSearch: AppSearchBar!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var vParkingSort: ParkingSortView!
     var marker:GMSMarker!
     
     var locationManager = CLLocationManager()
@@ -29,16 +30,18 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     weak var delegate: HomeViewControllerDelegate?
     
+    var listParking = [ParkingEntity]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // remove later
         centerMapCoordinate = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
         setUpMap()
+        vParkingSort.isHidden = true
         
-        let parks = ParkingEntity.toArray()
-        drawMarker(parkings: parks)
+        listParking = ParkingEntity.toArray()
+        drawMarker(parkings: listParking)
     }
     
     func setUpMap() {
@@ -50,7 +53,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         mapView.delegate = self
         
         
-        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
+        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 10)
         
         self.mapView?.animate(to: camera)
     }
@@ -61,11 +64,18 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         addMenu()
         addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: nil)
         setTitleBoldLeftNavigation(title: "EcoParking", action: nil)
+        
+        vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpNavigation()
+    }
+    
+    @objc func showPopUpDetail() {
+        let popUp = ParkingDetailPopUp()
+        popUp.showPopUp(money: 500, completionNo: nil, completionYes: nil)
     }
     
     override func setUpViews() {
@@ -74,9 +84,16 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @IBAction func btnFilterTapped() {
-        let vc = HomeFindRouter.createModule()
-        vc.delegate = self
-        self.push(controller: vc)
+//        let vc = HomeFindRouter.createModule()
+//        vc.delegate = self
+//        self.push(controller: vc)
+        
+        let popUp = HomeFilterPopUp()
+        popUp.showPopUp(completionNo: {
+            print("reset")
+        }) { param in
+            print("Param")
+        }
     }
     
 }
@@ -90,7 +107,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 10.0)
         
         self.mapView?.animate(to: camera)
         self.locationManager.stopUpdatingLocation()
@@ -113,13 +130,33 @@ extension HomeViewController: GMSMapViewDelegate {
             }
         }
     }
+    func mapView(_ mapView: GMSMapView, didTapMyLocation location: CLLocationCoordinate2D) {
+        print("location current")
+    }
     
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        guard let marker = marker as? ProjectMarker else { return true}
+        clearMap()
+        marker.parking?.isSelected = true
+        drawMarker(parkings: listParking)
+        
+        vParkingSort.isHidden = false
+        return true
+    }
+    
+    func clearMap() {
+        self.mapView.clear()
+        listParking.forEach { parking in
+            parking.isSelected = false
+        }
+    }
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        let latitude = mapView.camera.target.latitude
-        let longitude = mapView.camera.target.longitude
-        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        self.placeMarkerOnCenter(centerMapCoordinate:centerMapCoordinate)
+//        let latitude = mapView.camera.target.latitude
+//        let longitude = mapView.camera.target.longitude
+//        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//        self.placeMarkerOnCenter(centerMapCoordinate:centerMapCoordinate)
 //        print(centerMapCoordinate)
     }
     

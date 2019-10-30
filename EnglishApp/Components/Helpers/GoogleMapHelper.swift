@@ -15,14 +15,22 @@ class GoogleMapHelper: NSObject {
         guard let lat = parking.lat, let long = parking.long else { return }
                
         let position = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        print("lat: \(lat), long: \(long)")
         // add new
+//        let marker = ProjectMarker(position: position)
+//        marker.markerProjectView = MarkerProjectView()
+//        marker.markerProjectView?.parking = parking
+//        marker.iconView = marker.markerProjectView
+//        marker.tracksViewChanges = true
+//        marker.map = mapView
         let marker = ProjectMarker(position: position)
-        marker.markerProjectView = MarkerProjectView()
-//        marker.markerProjectVparkingiew?.project = project
-        marker.iconView = marker.markerProjectView
-        marker.tracksViewChanges = true
+        marker.parking = parking
+        marker.title = ""
+        marker.icon = AppImage.imgParking
+        if parking.isSelected {
+            marker.icon = AppImage.imgMarkerSelected
+        }
+        
         marker.map = mapView
     }
-    
-    
 }

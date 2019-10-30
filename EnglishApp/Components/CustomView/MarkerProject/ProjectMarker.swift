@@ -9,5 +9,5 @@
 import GoogleMaps
 
 class ProjectMarker: GMSMarker {
-    var markerProjectView: MarkerProjectView?
+    var parking: ParkingEntity?
 }

@@ -12,6 +12,7 @@ import GoogleMaps
 class ParkingEntity: BaseEntity {
     var lat: Double?
     var long: Double?
+    var isSelected: Bool = false
     
     init(lat: Double, long: Double) {
         super.init()
@@ -30,13 +31,11 @@ class ParkingEntity: BaseEntity {
     
     static func toArray() -> [ParkingEntity] {
         var parks = [ParkingEntity]()
+        parks.append(ParkingEntity(lat:  10.7981483, long: 106.7))
+        parks.append(ParkingEntity(lat:  10.7981483, long: 106.8715733))
+        parks.append(ParkingEntity(lat:  10.9981483, long: 106.6715733))
         parks.append(ParkingEntity(lat:  10.7981483, long: 106.6715733))
-        parks.append(ParkingEntity(lat:  11.7981483, long: 106.9715733))
-        parks.append(ParkingEntity(lat:  12.7981483, long: 105.6715733))
-        parks.append(ParkingEntity(lat:  9.7981483, long: 104.6715733))
-        parks.append(ParkingEntity(lat:  8.7981483, long: 103.6715733))
-        
-        
+                
         return parks
     }
 }

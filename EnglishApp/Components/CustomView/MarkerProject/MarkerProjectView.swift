@@ -10,4 +10,10 @@ import UIKit
 
 class MarkerProjectView: BaseViewXib {
     @IBOutlet weak var imgIcon: UIImageView!
+    
+    var parking: ParkingEntity? {
+        didSet {
+            self.imgIcon.image = AppImage.imgParking
+        }
+    }
 }

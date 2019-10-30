@@ -115,6 +115,27 @@
 		2238870F2366AACF00DAC978 /* ParkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238870E2366AACF00DAC978 /* ParkingEntity.swift */; };
 		223887102366AACF00DAC978 /* ParkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238870E2366AACF00DAC978 /* ParkingEntity.swift */; };
 		223887112366AACF00DAC978 /* ParkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238870E2366AACF00DAC978 /* ParkingEntity.swift */; };
+		223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887132366D99B00DAC978 /* ParkingSortView.swift */; };
+		223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887132366D99B00DAC978 /* ParkingSortView.swift */; };
+		223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887132366D99B00DAC978 /* ParkingSortView.swift */; };
+		223887182366D9A700DAC978 /* ParkingSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887172366D9A700DAC978 /* ParkingSortView.xib */; };
+		223887192366D9A700DAC978 /* ParkingSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887172366D9A700DAC978 /* ParkingSortView.xib */; };
+		2238871A2366D9A700DAC978 /* ParkingSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887172366D9A700DAC978 /* ParkingSortView.xib */; };
+		2238871D2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238871C2366DF8200DAC978 /* HomeFilterPopUpContentView.swift */; };
+		2238871E2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238871C2366DF8200DAC978 /* HomeFilterPopUpContentView.swift */; };
+		2238871F2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238871C2366DF8200DAC978 /* HomeFilterPopUpContentView.swift */; };
+		223887212366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887202366DF9D00DAC978 /* HomeFilterPopUpContentView.xib */; };
+		223887222366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887202366DF9D00DAC978 /* HomeFilterPopUpContentView.xib */; };
+		223887232366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223887202366DF9D00DAC978 /* HomeFilterPopUpContentView.xib */; };
+		223887252366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887242366E23F00DAC978 /* HomeFilterPopUp.swift */; };
+		223887262366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887242366E23F00DAC978 /* HomeFilterPopUp.swift */; };
+		223887272366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887242366E23F00DAC978 /* HomeFilterPopUp.swift */; };
+		2238872A2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887292366E5BF00DAC978 /* ParkingLevelView.swift */; };
+		2238872B2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887292366E5BF00DAC978 /* ParkingLevelView.swift */; };
+		2238872C2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223887292366E5BF00DAC978 /* ParkingLevelView.swift */; };
+		2238872E2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2238872D2366E5DD00DAC978 /* ParkingLevelView.xib */; };
+		2238872F2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2238872D2366E5DD00DAC978 /* ParkingLevelView.xib */; };
+		223887302366E5DD00DAC978 /* ParkingLevelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2238872D2366E5DD00DAC978 /* ParkingLevelView.xib */; };
 		22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
 		22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */; };
@@ -151,6 +172,39 @@
 		2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
 		2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
 		2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
+		22EB900523683B0900F77BC0 /* ParkingDetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900223683B0900F77BC0 /* ParkingDetailContent.swift */; };
+		22EB900623683B0900F77BC0 /* ParkingDetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900223683B0900F77BC0 /* ParkingDetailContent.swift */; };
+		22EB900723683B0900F77BC0 /* ParkingDetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900223683B0900F77BC0 /* ParkingDetailContent.swift */; };
+		22EB900823683B0900F77BC0 /* ParkingDetailContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB900323683B0900F77BC0 /* ParkingDetailContent.xib */; };
+		22EB900923683B0900F77BC0 /* ParkingDetailContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB900323683B0900F77BC0 /* ParkingDetailContent.xib */; };
+		22EB900A23683B0900F77BC0 /* ParkingDetailContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB900323683B0900F77BC0 /* ParkingDetailContent.xib */; };
+		22EB900B23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900423683B0900F77BC0 /* ParkingDetailPopUp.swift */; };
+		22EB900C23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900423683B0900F77BC0 /* ParkingDetailPopUp.swift */; };
+		22EB900D23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900423683B0900F77BC0 /* ParkingDetailPopUp.swift */; };
+		22EB901523684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900F23684B1100F77BC0 /* BookingInfoInteractor.swift */; };
+		22EB901623684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900F23684B1100F77BC0 /* BookingInfoInteractor.swift */; };
+		22EB901723684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB900F23684B1100F77BC0 /* BookingInfoInteractor.swift */; };
+		22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901023684B1100F77BC0 /* BookingInfoPresenter.swift */; };
+		22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901023684B1100F77BC0 /* BookingInfoPresenter.swift */; };
+		22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901023684B1100F77BC0 /* BookingInfoPresenter.swift */; };
+		22EB901B23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901123684B1100F77BC0 /* BookingInfoProtocols.swift */; };
+		22EB901C23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901123684B1100F77BC0 /* BookingInfoProtocols.swift */; };
+		22EB901D23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901123684B1100F77BC0 /* BookingInfoProtocols.swift */; };
+		22EB901E23684B1100F77BC0 /* BookingInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901223684B1100F77BC0 /* BookingInfoRouter.swift */; };
+		22EB901F23684B1100F77BC0 /* BookingInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901223684B1100F77BC0 /* BookingInfoRouter.swift */; };
+		22EB902023684B1100F77BC0 /* BookingInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901223684B1100F77BC0 /* BookingInfoRouter.swift */; };
+		22EB902123684B1100F77BC0 /* BookingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901323684B1100F77BC0 /* BookingInfoViewController.swift */; };
+		22EB902223684B1100F77BC0 /* BookingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901323684B1100F77BC0 /* BookingInfoViewController.swift */; };
+		22EB902323684B1100F77BC0 /* BookingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB901323684B1100F77BC0 /* BookingInfoViewController.swift */; };
+		22EB902423684B1100F77BC0 /* BookingInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB901423684B1100F77BC0 /* BookingInfoViewController.xib */; };
+		22EB902523684B1100F77BC0 /* BookingInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB901423684B1100F77BC0 /* BookingInfoViewController.xib */; };
+		22EB902623684B1100F77BC0 /* BookingInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB901423684B1100F77BC0 /* BookingInfoViewController.xib */; };
+		22EB904223685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB904023685F1D00F77BC0 /* AppDropDownNoTitle.swift */; };
+		22EB904323685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB904023685F1D00F77BC0 /* AppDropDownNoTitle.swift */; };
+		22EB904423685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB904023685F1D00F77BC0 /* AppDropDownNoTitle.swift */; };
+		22EB904523685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB904123685F1D00F77BC0 /* AppDropDownNoTitle.xib */; };
+		22EB904623685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB904123685F1D00F77BC0 /* AppDropDownNoTitle.xib */; };
+		22EB904723685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EB904123685F1D00F77BC0 /* AppDropDownNoTitle.xib */; };
 		22F33AA523645B8100D136EB /* HomeFindInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */; };
 		22F33AA623645B8100D136EB /* HomeFindInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */; };
 		22F33AA723645B8100D136EB /* HomeFindInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */; };
@@ -913,6 +967,13 @@
 		223887032366A94400DAC978 /* MarkerProjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerProjectView.xib; sourceTree = "<group>"; };
 		223887042366A94400DAC978 /* ProjectMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMarker.swift; sourceTree = "<group>"; };
 		2238870E2366AACF00DAC978 /* ParkingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingEntity.swift; sourceTree = "<group>"; };
+		223887132366D99B00DAC978 /* ParkingSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSortView.swift; sourceTree = "<group>"; };
+		223887172366D9A700DAC978 /* ParkingSortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingSortView.xib; sourceTree = "<group>"; };
+		2238871C2366DF8200DAC978 /* HomeFilterPopUpContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterPopUpContentView.swift; sourceTree = "<group>"; };
+		223887202366DF9D00DAC978 /* HomeFilterPopUpContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFilterPopUpContentView.xib; sourceTree = "<group>"; };
+		223887242366E23F00DAC978 /* HomeFilterPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterPopUp.swift; sourceTree = "<group>"; };
+		223887292366E5BF00DAC978 /* ParkingLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLevelView.swift; sourceTree = "<group>"; };
+		2238872D2366E5DD00DAC978 /* ParkingLevelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingLevelView.xib; sourceTree = "<group>"; };
 		22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -925,6 +986,17 @@
 		2292F20523653B0300B570E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2292F20623653B0300B570E3 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		2292F20723653B0300B570E3 /* NecContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecContainerViewController.swift; sourceTree = "<group>"; };
+		22EB900223683B0900F77BC0 /* ParkingDetailContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingDetailContent.swift; sourceTree = "<group>"; };
+		22EB900323683B0900F77BC0 /* ParkingDetailContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkingDetailContent.xib; sourceTree = "<group>"; };
+		22EB900423683B0900F77BC0 /* ParkingDetailPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingDetailPopUp.swift; sourceTree = "<group>"; };
+		22EB900F23684B1100F77BC0 /* BookingInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoInteractor.swift; sourceTree = "<group>"; };
+		22EB901023684B1100F77BC0 /* BookingInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoPresenter.swift; sourceTree = "<group>"; };
+		22EB901123684B1100F77BC0 /* BookingInfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoProtocols.swift; sourceTree = "<group>"; };
+		22EB901223684B1100F77BC0 /* BookingInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoRouter.swift; sourceTree = "<group>"; };
+		22EB901323684B1100F77BC0 /* BookingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoViewController.swift; sourceTree = "<group>"; };
+		22EB901423684B1100F77BC0 /* BookingInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingInfoViewController.xib; sourceTree = "<group>"; };
+		22EB904023685F1D00F77BC0 /* AppDropDownNoTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDropDownNoTitle.swift; sourceTree = "<group>"; };
+		22EB904123685F1D00F77BC0 /* AppDropDownNoTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppDropDownNoTitle.xib; sourceTree = "<group>"; };
 		22F33A9F23645B8100D136EB /* HomeFindInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindInteractor.swift; sourceTree = "<group>"; };
 		22F33AA023645B8100D136EB /* HomeFindPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindPresenter.swift; sourceTree = "<group>"; };
 		22F33AA123645B8100D136EB /* HomeFindProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFindProtocols.swift; sourceTree = "<group>"; };
@@ -1293,6 +1365,34 @@
 			path = MarkerProject;
 			sourceTree = "<group>";
 		};
+		223887122366D8EE00DAC978 /* ParkingSortView */ = {
+			isa = PBXGroup;
+			children = (
+				223887132366D99B00DAC978 /* ParkingSortView.swift */,
+				223887172366D9A700DAC978 /* ParkingSortView.xib */,
+			);
+			path = ParkingSortView;
+			sourceTree = "<group>";
+		};
+		2238871B2366DF6B00DAC978 /* HomeFilterPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				2238871C2366DF8200DAC978 /* HomeFilterPopUpContentView.swift */,
+				223887202366DF9D00DAC978 /* HomeFilterPopUpContentView.xib */,
+				223887242366E23F00DAC978 /* HomeFilterPopUp.swift */,
+			);
+			path = HomeFilterPopUp;
+			sourceTree = "<group>";
+		};
+		223887282366E5AC00DAC978 /* ParkingLevelView */ = {
+			isa = PBXGroup;
+			children = (
+				223887292366E5BF00DAC978 /* ParkingLevelView.swift */,
+				2238872D2366E5DD00DAC978 /* ParkingLevelView.xib */,
+			);
+			path = ParkingLevelView;
+			sourceTree = "<group>";
+		};
 		2243174D235ECBF800CA1E13 /* AppDateDropDown */ = {
 			isa = PBXGroup;
 			children = (
@@ -1333,6 +1433,46 @@
 				2292F20723653B0300B570E3 /* NecContainerViewController.swift */,
 			);
 			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		22EB900023683B0900F77BC0 /* ParkingDetailPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				22EB900123683B0900F77BC0 /* ParkingDetailContent */,
+				22EB900423683B0900F77BC0 /* ParkingDetailPopUp.swift */,
+			);
+			path = ParkingDetailPopUp;
+			sourceTree = "<group>";
+		};
+		22EB900123683B0900F77BC0 /* ParkingDetailContent */ = {
+			isa = PBXGroup;
+			children = (
+				22EB900223683B0900F77BC0 /* ParkingDetailContent.swift */,
+				22EB900323683B0900F77BC0 /* ParkingDetailContent.xib */,
+			);
+			path = ParkingDetailContent;
+			sourceTree = "<group>";
+		};
+		22EB900E23684AFA00F77BC0 /* BookingInfo */ = {
+			isa = PBXGroup;
+			children = (
+				22EB900F23684B1100F77BC0 /* BookingInfoInteractor.swift */,
+				22EB901023684B1100F77BC0 /* BookingInfoPresenter.swift */,
+				22EB901123684B1100F77BC0 /* BookingInfoProtocols.swift */,
+				22EB901223684B1100F77BC0 /* BookingInfoRouter.swift */,
+				22EB901323684B1100F77BC0 /* BookingInfoViewController.swift */,
+				22EB901423684B1100F77BC0 /* BookingInfoViewController.xib */,
+			);
+			path = BookingInfo;
+			sourceTree = "<group>";
+		};
+		22EB903F23685F1D00F77BC0 /* AppDropDownNoTitle */ = {
+			isa = PBXGroup;
+			children = (
+				22EB904023685F1D00F77BC0 /* AppDropDownNoTitle.swift */,
+				22EB904123685F1D00F77BC0 /* AppDropDownNoTitle.xib */,
+			);
+			path = AppDropDownNoTitle;
 			sourceTree = "<group>";
 		};
 		22F33A9E23645B6F00D136EB /* HomeFind */ = {
@@ -1575,6 +1715,7 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				22EB900E23684AFA00F77BC0 /* BookingInfo */,
 				175C7349236835FE009F03F6 /* SignUpPartner */,
 				2292F20423653B0300B570E3 /* ContainerView */,
 				22F33A9E23645B6F00D136EB /* HomeFind */,
@@ -1681,6 +1822,9 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				22EB903F23685F1D00F77BC0 /* AppDropDownNoTitle */,
+				223887282366E5AC00DAC978 /* ParkingLevelView */,
+				223887122366D8EE00DAC978 /* ParkingSortView */,
 				223887012366A94400DAC978 /* MarkerProject */,
 				2203D556236558150055E79F /* AppSeachBarRight */,
 				2243174D235ECBF800CA1E13 /* AppDateDropDown */,
@@ -1772,6 +1916,8 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				22EB900023683B0900F77BC0 /* ParkingDetailPopUp */,
+				2238871B2366DF6B00DAC978 /* HomeFilterPopUp */,
 				22431757235ECFBF00CA1E13 /* PopUpSelectDate */,
 				766AE7F522B022B3002D474E /* UpdateFeaturePopUp */,
 				766AE7E822AFCA7C002D474E /* ConfirmPopUp */,
@@ -2393,15 +2539,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223887212366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */,
 				DEC62AAE2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DEECF88022870D1700A4678B /* Localizable.strings in Resources */,
 				DEECF8A122871D1B00A4678B /* ForgotPasswordViewController.xib in Resources */,
+				22EB900823683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92822C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
 				DE7D14BD228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92222C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				DE49F82A22A3DB9C00A92C63 /* NotificationDetailViewController.xib in Resources */,
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80422B02371002D474E /* ViewFeature.xib in Resources */,
+				22EB904523685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE361E9C2283E60500FA3B0D /* NotificationContent.xib in Resources */,
@@ -2409,6 +2558,7 @@
 				2203D56D23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				DE361E812283E60500FA3B0D /* AppDropDown.xib in Resources */,
 				DEECF8752287041900A4678B /* MenuCell.xib in Resources */,
+				22EB902423684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -2438,11 +2588,13 @@
 				DE3CC3482283DD990037DBE4 /* LaunchScreen.storyboard in Resources */,
 				175C73452367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
 				766AE7F222AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
+				2238872E2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */,
 				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531142287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
+				223887182366D9A700DAC978 /* ParkingSortView.xib in Resources */,
 				DE95310E2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
 				2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				DE361E722283E60500FA3B0D /* AppTextField.xib in Resources */,
@@ -2454,15 +2606,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223887222366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */,
 				DEC62AAF2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DE9530422287DF4800E3F688 /* Localizable.strings in Resources */,
 				DE9530432287DF4800E3F688 /* ForgotPasswordViewController.xib in Resources */,
+				22EB900923683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92922C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
 				DE7D14BE228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92322C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				DE49F82B22A3DB9C00A92C63 /* NotificationDetailViewController.xib in Resources */,
 				22431754235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
+				22EB904623685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE9530442287DF4800E3F688 /* NotificationContent.xib in Resources */,
@@ -2470,6 +2625,7 @@
 				2203D56E23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				DE9530452287DF4800E3F688 /* AppDropDown.xib in Resources */,
 				DE9530462287DF4800E3F688 /* MenuCell.xib in Resources */,
+				22EB902523684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				DE9530472287DF4800E3F688 /* SignUpViewController.xib in Resources */,
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -2499,11 +2655,13 @@
 				DE9530502287DF4800E3F688 /* LaunchScreen.storyboard in Resources */,
 				175C73462367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
 				766AE7F322AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
+				2238872F2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */,
 				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531152287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
+				223887192366D9A700DAC978 /* ParkingSortView.xib in Resources */,
 				DE95310F2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
 				2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				DE9530532287DF4800E3F688 /* AppTextField.xib in Resources */,
@@ -2515,15 +2673,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223887232366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */,
 				DEC62AB02293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DE9530F02287DF6400E3F688 /* Localizable.strings in Resources */,
 				DE9530F12287DF6400E3F688 /* ForgotPasswordViewController.xib in Resources */,
+				22EB900A23683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92A22C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
 				DE7D14BF228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92422C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				DE49F82C22A3DB9C00A92C63 /* NotificationDetailViewController.xib in Resources */,
 				22431755235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
+				22EB904723685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				DE9530F22287DF6400E3F688 /* NotificationContent.xib in Resources */,
 				22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				DE49F83522A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
@@ -2531,6 +2692,7 @@
 				2203D56F23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				DE9530F42287DF6400E3F688 /* MenuCell.xib in Resources */,
+				22EB902623684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				DE9530F52287DF6400E3F688 /* SignUpViewController.xib in Resources */,
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -2560,11 +2722,13 @@
 				DE9530FE2287DF6400E3F688 /* LaunchScreen.storyboard in Resources */,
 				175C73472367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
 				766AE7F422AFCAC5002D474E /* ConfirmPopUpView.xib in Resources */,
+				223887302366E5DD00DAC978 /* ParkingLevelView.xib in Resources */,
 				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
 				DE9531162287E00A00E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
+				2238871A2366D9A700DAC978 /* ParkingSortView.xib in Resources */,
 				DE9531102287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
 				2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */,
@@ -2771,6 +2935,7 @@
 			files = (
 				DE952F812287D2A700E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */,
 				DEECF89122871D0400A4678B /* SignUpViewController.swift in Sources */,
+				22EB904223685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */,
 				DE361DFE2283E57900FA3B0D /* UITextFiled+extension.swift in Sources */,
 				DE49F7FC22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE361F532283E85000FA3B0D /* UserAPIService.swift in Sources */,
@@ -2782,6 +2947,7 @@
 				DE49F82122A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE952F952287D2A700E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
 				223887052366A94400DAC978 /* MarkerProjectView.swift in Sources */,
@@ -2796,6 +2962,7 @@
 				DE361DD62283E4BD00FA3B0D /* LoginPresenter.swift in Sources */,
 				76E2FEFB228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE361DFF2283E57900FA3B0D /* NSObjectProtocol+Extension.swift in Sources */,
+				22EB901523684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
 				2220A78F235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
 				DE952F8B2287D2A700E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
@@ -2804,6 +2971,7 @@
 				DE6FDB0722AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE361E692283E60500FA3B0D /* AppColor.swift in Sources */,
 				DE952F8C2287D2A700E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
+				22EB901E23684B1100F77BC0 /* BookingInfoRouter.swift in Sources */,
 				2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE361F2F2283E85000FA3B0D /* PhoneEntity.swift in Sources */,
 				DE952F912287D2A700E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
@@ -2814,6 +2982,7 @@
 				DE361F272283E85000FA3B0D /* NotificationEntity.swift in Sources */,
 				DE49F80222A3D81D00A92C63 /* NotificationListProtocols.swift in Sources */,
 				DE49F7F922A3D81D00A92C63 /* NotificationListPresenter.swift in Sources */,
+				22EB901B23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE361E672283E60500FA3B0D /* AppImage.swift in Sources */,
 				DE49F82722A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
 				DE95317B228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
@@ -2824,6 +2993,7 @@
 				175C73362367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				22431750235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175B235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
+				22EB900523683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				DE361DE52283E54C00FA3B0D /* BaseTableCell.swift in Sources */,
 				DE952F7E2287D2A700E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				175C733F2367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
@@ -2851,6 +3021,7 @@
 				175C73422367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
 				175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
+				22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
 				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -2907,6 +3078,7 @@
 				DE361E9A2283E60500FA3B0D /* StringReachability.swift in Sources */,
 				DE952F842287D2A700E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
 				2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */,
+				223887252366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				DE2ADE7822841BB9003768CE /* MenuProtocols.swift in Sources */,
 				76483BF0229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
 				DE2ADE5722841756003768CE /* AppDelegate+Push.swift in Sources */,
@@ -2927,12 +3099,14 @@
 				DE361E712283E60500FA3B0D /* AppTextField.swift in Sources */,
 				DE361F4C2283E85000FA3B0D /* NotificationEndPoint.swift in Sources */,
 				DE361E9E2283E60500FA3B0D /* NotificationContent.swift in Sources */,
+				2238871D2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,
 				DE952F892287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				7629BDD622ACD2450051B835 /* ReportSuccessedView.swift in Sources */,
 				766AE7EE22AFCAB4002D474E /* ConfirmPopUpView.swift in Sources */,
 				766D135C228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE361E972283E60500FA3B0D /* PopUpHelper.swift in Sources */,
 				2AF2F82E22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
+				2238872A2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE952F852287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE952FA12287D2A700E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				DE952F9B2287D2A700E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
@@ -2941,6 +3115,7 @@
 				2ADDCB02232F83890087B427 /* TermAndConditionResponse.swift in Sources */,
 				DEECF8742287041900A4678B /* MenuCell.swift in Sources */,
 				DE361DF92283E57900FA3B0D /* UIImage+extension.swift in Sources */,
+				22EB900B23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */,
 				7629BDE322ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				DE361DE72283E54C00FA3B0D /* BaseView.swift in Sources */,
 				175C73392367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
@@ -2997,6 +3172,7 @@
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
 				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FC22B02330002D474E /* UpdateFeatureView.swift in Sources */,
+				22EB902123684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522422CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				DE361E002283E57900FA3B0D /* Button+extension.swift in Sources */,
@@ -3011,6 +3187,7 @@
 			files = (
 				DE952FB12287DF4800E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */,
 				DE952FB22287DF4800E3F688 /* SignUpViewController.swift in Sources */,
+				22EB904323685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */,
 				DE952FB32287DF4800E3F688 /* UITextFiled+extension.swift in Sources */,
 				DE49F7FD22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE952FB42287DF4800E3F688 /* UserAPIService.swift in Sources */,
@@ -3022,6 +3199,7 @@
 				DE49F82222A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE952FB82287DF4800E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
 				223887062366A94400DAC978 /* MarkerProjectView.swift in Sources */,
@@ -3036,6 +3214,7 @@
 				DE952FC02287DF4800E3F688 /* LoginPresenter.swift in Sources */,
 				76E2FEFC228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE952FC12287DF4800E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				22EB901623684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
 				2220A790235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
 				DE952FC22287DF4800E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
@@ -3044,6 +3223,7 @@
 				DE6FDB0822AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE952FC42287DF4800E3F688 /* AppColor.swift in Sources */,
 				DE952FC52287DF4800E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
+				22EB901F23684B1100F77BC0 /* BookingInfoRouter.swift in Sources */,
 				2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE952FC62287DF4800E3F688 /* PhoneEntity.swift in Sources */,
 				DE952FC72287DF4800E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
@@ -3054,6 +3234,7 @@
 				DE952FC82287DF4800E3F688 /* NotificationEntity.swift in Sources */,
 				DE49F80322A3D81D00A92C63 /* NotificationListProtocols.swift in Sources */,
 				DE49F7FA22A3D81D00A92C63 /* NotificationListPresenter.swift in Sources */,
+				22EB901C23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE952FC92287DF4800E3F688 /* AppImage.swift in Sources */,
 				DE49F82822A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
 				DE95317C228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
@@ -3064,6 +3245,7 @@
 				175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				22431751235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175C235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
+				22EB900623683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				DE952FCB2287DF4800E3F688 /* BaseTableCell.swift in Sources */,
 				DE952FCC2287DF4800E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				175C73402367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
@@ -3091,6 +3273,7 @@
 				175C73432367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
 				175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
+				22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
 				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -3147,6 +3330,7 @@
 				DE952FFB2287DF4800E3F688 /* StringReachability.swift in Sources */,
 				DE952FFC2287DF4800E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
 				2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */,
+				223887262366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				DE952FFD2287DF4800E3F688 /* MenuProtocols.swift in Sources */,
 				76483BF1229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
 				DE952FFE2287DF4800E3F688 /* AppDelegate+Push.swift in Sources */,
@@ -3167,12 +3351,14 @@
 				DE9530082287DF4800E3F688 /* AppTextField.swift in Sources */,
 				DE9530092287DF4800E3F688 /* NotificationEndPoint.swift in Sources */,
 				DE95300A2287DF4800E3F688 /* NotificationContent.swift in Sources */,
+				2238871E2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,
 				DE95300B2287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				7629BDD722ACD2450051B835 /* ReportSuccessedView.swift in Sources */,
 				766AE7EF22AFCAB4002D474E /* ConfirmPopUpView.swift in Sources */,
 				766D135D228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE95300C2287DF4800E3F688 /* PopUpHelper.swift in Sources */,
 				2AF2F82F22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
+				2238872B2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE95300D2287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE95300E2287DF4800E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				DE95300F2287DF4800E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
@@ -3181,6 +3367,7 @@
 				2ADDCB03232F83890087B427 /* TermAndConditionResponse.swift in Sources */,
 				DE9530112287DF4800E3F688 /* MenuCell.swift in Sources */,
 				DE9530122287DF4800E3F688 /* UIImage+extension.swift in Sources */,
+				22EB900C23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */,
 				7629BDE422ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				DE9530132287DF4800E3F688 /* BaseView.swift in Sources */,
 				175C733A2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
@@ -3237,6 +3424,7 @@
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
 				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FD22B02330002D474E /* UpdateFeatureView.swift in Sources */,
+				22EB902223684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522522CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				DE95303E2287DF4800E3F688 /* Button+extension.swift in Sources */,
@@ -3251,6 +3439,7 @@
 			files = (
 				DE95305F2287DF6400E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */,
 				DE9530602287DF6400E3F688 /* SignUpViewController.swift in Sources */,
+				22EB904423685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */,
 				DE9530612287DF6400E3F688 /* UITextFiled+extension.swift in Sources */,
 				DE49F7FE22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE9530622287DF6400E3F688 /* UserAPIService.swift in Sources */,
@@ -3262,6 +3451,7 @@
 				DE953189228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82322A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE9530662287DF6400E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
 				223887072366A94400DAC978 /* MarkerProjectView.swift in Sources */,
@@ -3276,6 +3466,7 @@
 				DE95306E2287DF6400E3F688 /* LoginPresenter.swift in Sources */,
 				76E2FEFD228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				DE95306F2287DF6400E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				22EB901723684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
 				2220A791235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
 				DE9530702287DF6400E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
@@ -3284,6 +3475,7 @@
 				DE73CF2022B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
 				DE6FDB0922AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE9530722287DF6400E3F688 /* AppColor.swift in Sources */,
+				22EB902023684B1100F77BC0 /* BookingInfoRouter.swift in Sources */,
 				2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE9530732287DF6400E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
 				DE9530742287DF6400E3F688 /* PhoneEntity.swift in Sources */,
@@ -3294,6 +3486,7 @@
 				DE49F82622A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE9530762287DF6400E3F688 /* NotificationEntity.swift in Sources */,
 				DE49F80422A3D81D00A92C63 /* NotificationListProtocols.swift in Sources */,
+				22EB901D23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE49F7FB22A3D81D00A92C63 /* NotificationListPresenter.swift in Sources */,
 				DE9530772287DF6400E3F688 /* AppImage.swift in Sources */,
 				DE49F82922A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
@@ -3304,6 +3497,7 @@
 				175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				766AE7F922B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
 				22431752235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
+				22EB900723683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				2243175D235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				DE9530792287DF6400E3F688 /* BaseTableCell.swift in Sources */,
 				175C73412367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
@@ -3331,6 +3525,7 @@
 				175C73442367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
 				175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
+				22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				DE9530862287DF6400E3F688 /* BaseParam.swift in Sources */,
@@ -3387,6 +3582,7 @@
 				DE9530A62287DF6400E3F688 /* BaseViewXib.swift in Sources */,
 				DE9530A72287DF6400E3F688 /* KActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				DE9530A82287DF6400E3F688 /* FadeInOutAnimation.swift in Sources */,
+				223887272366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				DE9530A92287DF6400E3F688 /* StringReachability.swift in Sources */,
 				DE9530AA2287DF6400E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
 				DE9530AB2287DF6400E3F688 /* MenuProtocols.swift in Sources */,
@@ -3407,12 +3603,14 @@
 				DE9530B62287DF6400E3F688 /* AppTextField.swift in Sources */,
 				DE9530B72287DF6400E3F688 /* NotificationEndPoint.swift in Sources */,
 				DE9530B82287DF6400E3F688 /* NotificationContent.swift in Sources */,
+				2238871F2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,
 				DE9530B92287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				7629BDD822ACD2450051B835 /* ReportSuccessedView.swift in Sources */,
 				766AE7F022AFCAB4002D474E /* ConfirmPopUpView.swift in Sources */,
 				766D135E228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE9530BA2287DF6400E3F688 /* PopUpHelper.swift in Sources */,
 				2A6C5ED622EF468F004B23EF /* CellSingleLabel.swift in Sources */,
+				2238872C2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE9530BB2287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE9530BC2287DF6400E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				DE9530BD2287DF6400E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
@@ -3421,6 +3619,7 @@
 				DE9530BF2287DF6400E3F688 /* MenuCell.swift in Sources */,
 				DE9530C02287DF6400E3F688 /* UIImage+extension.swift in Sources */,
 				7629BDE522ACF0B60051B835 /* TextFieldBee.swift in Sources */,
+				22EB900D23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */,
 				DE9530C12287DF6400E3F688 /* BaseView.swift in Sources */,
 				DE9530C22287DF6400E3F688 /* APIError.swift in Sources */,
 				175C733B2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
@@ -3477,6 +3676,7 @@
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
 				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				766AE7FE22B02330002D474E /* UpdateFeatureView.swift in Sources */,
+				22EB902323684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522622CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				DE9530EC2287DF6400E3F688 /* Button+extension.swift in Sources */,
