@@ -106,14 +106,16 @@
 
 //Sign up Partner 1
 
-"ParnerInfo" = "Partner Information";
+"PartnerInfo" = "Partner Information";
 "PartnerName" = "Partner Name *";
 "PartnerID" = "Identity card number / CCCD Partner *";
 "IssuedBy" = "Issue By *";
 "DayBy" = "Day By *";
 "PartnerEmail" = "Partner Email";
 "PartnerImage" = "AUTHENTICIAL PICTURE";
-
+"JuridicalInfomation" = "Juridical Infomation";
+"ParkingInfomation" = "Parking Infomation";
+"OtherInfomation" = "Other Infomation";
 // Sign Up Partner 2
 "ParkingInfo" = "Parking Info";
 "ParkingName" = "Paarking Name *";
@@ -128,7 +130,11 @@
 "ParkingLicense" = "Business License";
 "ParkingTaxCode" = "Tax Code";
 
-
+// Sign Up Partner 3
+"UtilityOther" = "Utility Other";
+"parkingImage" = "Parking Image";
+"parkingSubImage" = "Please take a picture of your parking, at least 2 photos and maximum of 4 images *";
+"parkingWaitingSignUp" = "Your request to become a partner is in the process of checking. ECOPARKING will contact you as soon as possible.";
 // logout
 "popUpLogout" = "Do you want to logout?";
 "agree" = "YES";

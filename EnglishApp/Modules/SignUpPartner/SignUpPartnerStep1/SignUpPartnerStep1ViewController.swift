@@ -12,6 +12,7 @@ import UIKit
 
 class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1ViewProtocol {
 
+    @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbPartnerInfo: UILabel!
     @IBOutlet  weak var vPartnerName: AppTextField!
     @IBOutlet weak var vGender: AppDropDown!
@@ -31,7 +32,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     }
 
     private func setupUI() {
-        lbPartnerInfo.text = LocalizableKey.parnerInfo.showLanguage
+        vStep.setStep1()
+        lbPartnerInfo.text = LocalizableKey.partnerInfo.showLanguage
         vPartnerName.setTitleAndPlaceHolder(title: LocalizableKey.partnerName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vGender.setTitleAndPlaceHolder(title: LocalizableKey.gender.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vBirthday.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)

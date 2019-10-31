@@ -51,7 +51,7 @@ class AppRouter {
     func openHome() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
-        let homeVC = BookingInfoRouter.createModule()
+        let homeVC = SignUpPartnerStep3Router.createModule()
         windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }
 }

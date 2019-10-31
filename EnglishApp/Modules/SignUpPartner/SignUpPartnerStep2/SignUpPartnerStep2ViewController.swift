@@ -12,6 +12,7 @@ import UIKit
 
 class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2ViewProtocol {
 
+    @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbParking: UILabel!
     @IBOutlet weak var vParkingName: AppTextField!
     @IBOutlet weak var vParkingType: AppDropDown!
@@ -33,6 +34,7 @@ class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2View
     }
 
     private func setupUI() {
+        vStep.setStep2()
         lbParking.text = LocalizableKey.parkingInfo.showLanguage.uppercased()
         lbPrice.text = LocalizableKey.parkingPrice.showLanguage.uppercased()
         lbLicense.text = LocalizableKey.parkingLicense.showLanguage.uppercased()
