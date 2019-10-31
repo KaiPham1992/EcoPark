@@ -24,6 +24,7 @@
                 <outlet property="vIDNumber" destination="4yt-7c-NS7" id="6Es-hK-i9j"/>
                 <outlet property="vIssuedBy" destination="aVd-be-s7J" id="4lW-nF-gAN"/>
                 <outlet property="vPartnerName" destination="rDb-FO-ww6" id="MMr-dX-ber"/>
+                <outlet property="vStep" destination="6N1-JK-IKi" id="6sO-XP-UCm"/>
                 <outlet property="view" destination="6Ln-Mx-VRn" id="yHq-Fw-IqR"/>
             </connections>
         </placeholder>
@@ -36,67 +37,67 @@
                     <rect key="frame" x="0.0" y="0.0" width="368" height="932"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-Zb-u4C">
-                            <rect key="frame" x="0.0" y="0.0" width="368" height="921"/>
+                            <rect key="frame" x="0.0" y="0.0" width="368" height="911"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-JK-IKi">
-                                    <rect key="frame" x="0.0" y="0.0" width="368" height="100"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-JK-IKi" customClass="PartnerStepView" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="368" height="90"/>
                                     <color key="backgroundColor" red="0.12549019610000001" green="0.1764705882" blue="0.2156862745" alpha="1" colorSpace="deviceRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="100" id="ZIj-YE-QHg"/>
+                                        <constraint firstAttribute="height" constant="90" id="ZIj-YE-QHg"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDb-FO-ww6" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="144.5" width="336" height="70"/>
+                                    <rect key="frame" x="16" y="134.5" width="336" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="53e-yd-0pf"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPt-Cq-Yru" customClass="AppDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="222.5" width="140" height="70"/>
+                                    <rect key="frame" x="16" y="212.5" width="140" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-bR-965" customClass="AppDateDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="172" y="222.5" width="180" height="70"/>
+                                    <rect key="frame" x="172" y="212.5" width="180" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="180" id="reQ-dQ-Tmr"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yt-7c-NS7" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="300.5" width="336" height="70"/>
+                                    <rect key="frame" x="16" y="290.5" width="336" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="Hk4-cs-awP"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-be-s7J" customClass="AppDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="378.5" width="140" height="70"/>
+                                    <rect key="frame" x="16" y="368.5" width="140" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDL-Vz-sEi" customClass="AppDateDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="172" y="378.5" width="180" height="70"/>
+                                    <rect key="frame" x="172" y="368.5" width="180" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="180" id="EKj-Cg-qdS"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4U-Pj-bqq" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="456.5" width="336" height="70"/>
+                                    <rect key="frame" x="16" y="446.5" width="336" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="730-ra-L7z"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-73-Cwb">
-                                    <rect key="frame" x="16" y="563" width="336" height="300"/>
+                                    <rect key="frame" x="16" y="553" width="336" height="300"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="UA3-ji-KCb"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-Xn-wph">
-                                    <rect key="frame" x="16" y="871" width="336" height="50"/>
+                                    <rect key="frame" x="16" y="861" width="336" height="50"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="GEX-TJ-yDe"/>
@@ -107,13 +108,13 @@
                                     </state>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8V-wS-tLU">
-                                    <rect key="frame" x="16" y="534.5" width="40.5" height="20.5"/>
+                                    <rect key="frame" x="16" y="524.5" width="40.5" height="20.5"/>
                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                     <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkO-Sc-Aww">
-                                    <rect key="frame" x="16" y="108" width="40.5" height="20.5"/>
+                                    <rect key="frame" x="16" y="98" width="40.5" height="20.5"/>
                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                     <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>

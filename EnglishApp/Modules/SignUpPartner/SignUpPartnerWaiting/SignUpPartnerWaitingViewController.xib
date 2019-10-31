@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpPartnerWaitingViewController">
+            <connections>
+                <outlet property="lbWaiting" destination="2ls-s0-97G" id="Tub-ft-ow2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="323-Lc-9ww">
+                    <rect key="frame" x="97.5" y="193.5" width="180" height="180"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ls-s0-97G">
+                    <rect key="frame" x="32" y="389.5" width="311" height="23.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_home" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-ie-CeE">
+                    <rect key="frame" x="0.0" y="533" width="375" height="134"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.12549019610000001" green="0.1764705882" blue="0.2156862745" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="yTr-ie-CeE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="801-OR-j1W"/>
+                <constraint firstItem="323-Lc-9ww" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Eua-Kf-HAh"/>
+                <constraint firstItem="323-Lc-9ww" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="Pu1-Xg-qvr"/>
+                <constraint firstItem="2ls-s0-97G" firstAttribute="top" secondItem="323-Lc-9ww" secondAttribute="bottom" constant="16" id="dCP-4p-Xcs"/>
+                <constraint firstItem="2ls-s0-97G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="lhR-Wg-7sc"/>
+                <constraint firstAttribute="bottom" secondItem="yTr-ie-CeE" secondAttribute="bottom" id="nuO-ox-UHv"/>
+                <constraint firstAttribute="trailing" secondItem="2ls-s0-97G" secondAttribute="trailing" constant="32" id="xN4-Lt-6E5"/>
+                <constraint firstAttribute="trailing" secondItem="yTr-ie-CeE" secondAttribute="trailing" id="xOq-4b-OWw"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_home" width="414" height="134"/>
+        <image name="ic_logo" width="180" height="180"/>
+    </resources>
+</document>

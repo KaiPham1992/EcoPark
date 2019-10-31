@@ -47,12 +47,23 @@ struct AppImage {
     static let imgParking = UIImage(named: "ic_parking_3")!
     static let imgMarkerSelected = UIImage(named: "ic_placeholder_map-1")!
     
+
     // Utility
     static let imgRootOn = UIImage(named: "ic_roof_on")!
     static let imgRootOff = UIImage(named: "ic_roof_off")!
     
     static let imgCarwashOn = UIImage(named: "ic_carwash_on")!
     static let imgCarwashOff = UIImage(named: "ic_carwash_off")!
+
+    //SignUp partner
+    static let iconNumber1 = UIImage(named: "ic_step_1_on")
+    static let iconNumber2_on = UIImage(named: "ic_step_2_on")
+    static let iconNumber2_off = UIImage(named: "ic_step_2_off")
+    static let iconNumber3_off = UIImage(named: "ic_step_3_off")
+    static let iconNumber3_on = UIImage(named: "ic_step_3_on")
+    static let iconSpace_on = UIImage(named: "ic_dash_on")
+    static let iconSpace_off = UIImage(named: "ic_dash_off")
+
     
     static let imgRepairOn = UIImage(named: "ic_repair_on")!
     static let imgRepairOff = UIImage(named: "ic_repair_off")!

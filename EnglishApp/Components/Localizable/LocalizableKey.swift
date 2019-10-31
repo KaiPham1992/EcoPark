@@ -116,8 +116,8 @@ struct LocalizableKey {
     static let boxHoney = "boxHoney"
     static let titleHistoryNap = "titleHistoryNap"
     
-    //Sign Up Partner
-    static let parnerInfo = "ParnerInfo"
+    //Sign Up Partner 1
+    static let partnerInfo = "PartnerInfo"
     static let partnerName = "PartnerName"
     static let partnerID = "PartnerID"
     static let issuedBy = "IssuedBy"
@@ -125,6 +125,28 @@ struct LocalizableKey {
     static let partnerEmail = "PartnerEmail"
     static let partnerImage = "PartnerImage"
     
+    static let juridicalInfomation = "JuridicalInfomation"
+    static let parkingInfomation = "ParkingInfomation"
+    static let otherInfomation = "OtherInfomation"
+    //Sign Up Partner 2
+    static let parkingInfo = "ParkingInfo"
+    static let parkingName = "ParkingName"
+    static let parkingType = "ParkingType"
+    static let parkingCapacity = "ParkingCapacity"
+    static let parkingAddress = "ParkingAddress"
+    static let parkingOpen = "ParkingOpen"
+    static let parkingClose = "ParkingClose"
+    static let parkingPrice = "ParkingPrice"
+    static let pirceAHours = "PriceAHours"
+    static let priceCombo   = "PriceCombo"
+    static let parkingLicense = "ParkingLicense"
+    static let parkingTaxCode = "ParkingTaxCode"
+    
+    // Sign Up Partner 3
+    static let utilityOther = "UtilityOther"
+    static let parkingImage = "parkingImage"
+    static let parkingSubImage = "parkingSubImage"
+    static let parkingWaitingSignUp = "parkingWaitingSignUp"
     // QA
     
     static let whatQA = "whatQA"

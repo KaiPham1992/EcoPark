@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 //        checkLogin()
 //        realmConfig()
+
         AppRouter.shared.openHome()
 //        AppRouter.shared.updateRootView()
         
