@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Comfortaa-Regular.ttf">
-            <string>Comfortaa-Regular</string>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -21,15 +22,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmY-XH-2RX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajV-nJ-KTh">
-                        <rect key="frame" x="0.0" y="0.0" width="60" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ohq-a7-um7">
                                 <rect key="frame" x="15" y="7" width="30" height="30"/>
@@ -47,13 +48,33 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsH-BG-iL0">
-                        <rect key="frame" x="65" y="5" width="250" height="33.5"/>
-                        <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                        <rect key="frame" x="65" y="5" width="250" height="34"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếng Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-m2-oTL">
+                        <rect key="frame" x="229.5" y="12" width="74.5" height="20.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQm-Gc-4Xi">
+                        <rect key="frame" x="292" y="16" width="12" height="12"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.039215686274509803" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="NVf-dF-tle"/>
+                            <constraint firstAttribute="width" constant="12" id="eeQ-xL-dTF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="QQm-Gc-4Xi" secondAttribute="trailing" constant="16" id="4S3-cb-DZg"/>
                     <constraint firstItem="zsH-BG-iL0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FdD-An-cZj"/>
                     <constraint firstItem="ajV-nJ-KTh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JQV-k2-KRw"/>
                     <constraint firstItem="ajV-nJ-KTh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MD4-gG-3GP"/>
@@ -63,16 +84,22 @@
                     <constraint firstItem="zsH-BG-iL0" firstAttribute="leading" secondItem="ajV-nJ-KTh" secondAttribute="trailing" constant="5" id="c41-TJ-zXe"/>
                     <constraint firstAttribute="trailing" secondItem="XmY-XH-2RX" secondAttribute="trailing" id="jZx-vP-Fj3"/>
                     <constraint firstAttribute="trailing" secondItem="zsH-BG-iL0" secondAttribute="trailing" constant="5" id="llz-oP-JXP"/>
+                    <constraint firstAttribute="trailing" secondItem="Z60-m2-oTL" secondAttribute="trailing" constant="16" id="mMn-XL-IO0"/>
+                    <constraint firstItem="QQm-Gc-4Xi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="o4e-0m-gkB"/>
                     <constraint firstAttribute="bottom" secondItem="ajV-nJ-KTh" secondAttribute="bottom" id="qIB-21-LHz"/>
+                    <constraint firstItem="Z60-m2-oTL" firstAttribute="centerY" secondItem="zsH-BG-iL0" secondAttribute="centerY" id="uT7-QB-xQx"/>
                     <constraint firstAttribute="bottom" secondItem="zsH-BG-iL0" secondAttribute="bottom" constant="5" id="yZM-Fn-Y18"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgIcon" destination="ohq-a7-um7" id="JFP-LC-CoA"/>
+                <outlet property="lbLanguage" destination="Z60-m2-oTL" id="EMU-sV-De1"/>
                 <outlet property="lbTitle" destination="zsH-BG-iL0" id="RGi-O2-N0E"/>
                 <outlet property="vBackground" destination="XmY-XH-2RX" id="gHb-Tv-3N7"/>
+                <outlet property="vNotification" destination="QQm-Gc-4Xi" id="huw-Pb-6hJ"/>
             </connections>
+            <point key="canvasLocation" x="139" y="88"/>
         </tableViewCell>
     </objects>
 </document>

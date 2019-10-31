@@ -12,6 +12,7 @@ struct AppImage {
     static let imgBack = UIImage(named: "Material_Icons_white_chevron_left")!
     static let imgClose = UIImage(named: "close")!
     static let imgDelete = UIImage(named: "delete")!
+    static let imgPlaceHolderImage = UIImage(named: "")
     
     static let imgUnCheck = UIImage(named: "UnCheck")!
     static let imgCheck = UIImage(named: "Check")!
@@ -46,7 +47,28 @@ struct AppImage {
     static let imgParking = UIImage(named: "ic_parking_3")!
     static let imgMarkerSelected = UIImage(named: "ic_placeholder_map-1")!
     
+    // Utility
+    static let imgRootOn = UIImage(named: "ic_roof_on")!
+    static let imgRootOff = UIImage(named: "ic_roof_off")!
     
+    static let imgCarwashOn = UIImage(named: "ic_carwash_on")!
+    static let imgCarwashOff = UIImage(named: "ic_carwash_off")!
     
+    static let imgRepairOn = UIImage(named: "ic_repair_on")!
+    static let imgRepairOff = UIImage(named: "ic_repair_off")!
     
+    static let imgRentOn = UIImage(named: "ic_rent_on")!
+    static let imgRentOff = UIImage(named: "ic_rent_off")!
+    
+    static let imgSupermarketOn = UIImage(named: "ic_supermarket_on")!
+    static let imgSupermarketOff = UIImage(named: "ic_supermarket_off")!
+    
+    static let imgAtmOn = UIImage(named: "ic_atm_on")!
+    static let imgAtmOff = UIImage(named: "ic_atm_off")!
+    
+    static let imgHotelOn = UIImage(named: "ic_hotel_on")!
+    static let imgHotelOff = UIImage(named: "ic_hotel_off")!
+    
+    static let imgCoffeeOn = UIImage(named: "ic_coffee_on")!
+    static let imgCoffeeOff = UIImage(named: "ic_coffee_off")!
 }

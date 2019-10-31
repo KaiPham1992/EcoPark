@@ -15,6 +15,7 @@ struct AppColor {
     static let color_0_129_255 = UIColor(red: 0/255, green: 129/255, blue: 255/255, alpha: 1)
     
     static let color_32_45_55 = UIColor(red: 32/255, green: 45/255, blue: 55/255, alpha: 1)
+    static let white = UIColor.white
     
     // app cu
     static let yellow = UIColor(hexString: "ffd311")

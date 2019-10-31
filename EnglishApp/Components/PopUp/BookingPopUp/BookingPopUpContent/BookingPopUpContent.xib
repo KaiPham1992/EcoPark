@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingPopUpContent" customModule="EnglishApp_AppStore" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDetail" destination="x0Q-i8-GTY" id="TiM-OF-4Mx"/>
+                <outlet property="btnDirection" destination="wv1-eo-cGt" id="oaN-jS-its"/>
+                <outlet property="lbAddress" destination="KJL-8N-DIi" id="Xr1-bL-8gb"/>
+                <outlet property="lbMessage" destination="7WT-rt-xFm" id="RSP-ZB-9xL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="401"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7f-Gz-9gD">
+                    <rect key="frame" x="0.0" y="44" width="414" height="112"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ bãi đỗ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R5-GG-NvX">
+                            <rect key="frame" x="16" y="8" width="382" height="20"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="220/1 Nguyễn Trọng Tuyển, phường 8, quận Phú Nhuận, Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-8N-DIi">
+                            <rect key="frame" x="16" y="36" width="382" height="68"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
+                            <color key="textColor" red="0.95294117649999999" green="0.84705882349999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="KJL-8N-DIi" firstAttribute="top" secondItem="5R5-GG-NvX" secondAttribute="bottom" constant="8" id="DeV-tt-0aO"/>
+                        <constraint firstItem="5R5-GG-NvX" firstAttribute="leading" secondItem="G7f-Gz-9gD" secondAttribute="leading" constant="16" id="Du4-tK-6er"/>
+                        <constraint firstAttribute="height" constant="112" id="Ph9-33-3WK"/>
+                        <constraint firstItem="KJL-8N-DIi" firstAttribute="leading" secondItem="5R5-GG-NvX" secondAttribute="leading" id="V0K-Yd-VIA"/>
+                        <constraint firstItem="5R5-GG-NvX" firstAttribute="top" secondItem="G7f-Gz-9gD" secondAttribute="top" constant="8" id="c3k-tE-8oC"/>
+                        <constraint firstItem="KJL-8N-DIi" firstAttribute="trailing" secondItem="5R5-GG-NvX" secondAttribute="trailing" id="lCi-a8-Tpj"/>
+                        <constraint firstAttribute="bottom" secondItem="KJL-8N-DIi" secondAttribute="bottom" constant="8" id="sOo-y7-Nia"/>
+                        <constraint firstAttribute="trailing" secondItem="5R5-GG-NvX" secondAttribute="trailing" constant="16" id="uNh-Rz-SxZ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Giữ chỗ có hiệu lực trong vòng 1 giờ kể từ thời gian dự kiến đến. Vui lòng đến đúng giờ!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WT-rt-xFm">
+                    <rect key="frame" x="16" y="164" width="382" height="38.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0Q-i8-GTY">
+                    <rect key="frame" x="16" y="335" width="382" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ec4-9d-Hcc"/>
+                    </constraints>
+                    <state key="normal" title="Xem chi tiết giao dịch">
+                        <color key="titleColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-eo-cGt">
+                    <rect key="frame" x="16" y="277" width="382" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="G19-Kf-Gjm"/>
+                    </constraints>
+                    <state key="normal" title="Nhận chỉ đường đến bãi đỗ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="G7f-Gz-9gD" secondAttribute="trailing" id="6AT-K8-8OK"/>
+                <constraint firstItem="7WT-rt-xFm" firstAttribute="top" secondItem="G7f-Gz-9gD" secondAttribute="bottom" constant="8" id="Cg8-ac-Er4"/>
+                <constraint firstItem="7WT-rt-xFm" firstAttribute="leading" secondItem="KJL-8N-DIi" secondAttribute="leading" id="KcY-LC-iqp"/>
+                <constraint firstItem="7WT-rt-xFm" firstAttribute="trailing" secondItem="KJL-8N-DIi" secondAttribute="trailing" id="KuY-Ei-HkY"/>
+                <constraint firstItem="x0Q-i8-GTY" firstAttribute="top" secondItem="wv1-eo-cGt" secondAttribute="bottom" constant="8" id="aMv-oQ-ytR"/>
+                <constraint firstItem="wv1-eo-cGt" firstAttribute="leading" secondItem="x0Q-i8-GTY" secondAttribute="leading" id="dAP-za-9kd"/>
+                <constraint firstItem="G7f-Gz-9gD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="daN-aR-INg"/>
+                <constraint firstItem="wv1-eo-cGt" firstAttribute="trailing" secondItem="x0Q-i8-GTY" secondAttribute="trailing" id="rIk-u6-CwF"/>
+                <constraint firstItem="x0Q-i8-GTY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="tQ0-qf-39L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x0Q-i8-GTY" secondAttribute="trailing" constant="16" id="vDx-fU-fLq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="x0Q-i8-GTY" secondAttribute="bottom" constant="16" id="vga-Gy-NqY"/>
+                <constraint firstItem="G7f-Gz-9gD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wzZ-Ez-OG5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="244.08482142857142"/>
+        </view>
+    </objects>
+</document>

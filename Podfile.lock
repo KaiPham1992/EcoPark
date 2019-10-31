@@ -79,6 +79,12 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
+  - ImageSlideshow (1.8.1):
+    - ImageSlideshow/Core (= 1.8.1)
+  - ImageSlideshow/Core (1.8.1)
+  - ImageSlideshow/SDWebImage (1.8.1):
+    - ImageSlideshow/Core
+    - SDWebImage (>= 3.7)
   - IQKeyboardManagerSwift (6.5.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -103,6 +109,8 @@ DEPENDENCIES:
   - Firebase/Messaging (= 6.9.0)
   - GoogleMaps (= 3.5.0)
   - GooglePlaces (= 3.5.0)
+  - ImageSlideshow (= 1.8.1)
+  - ImageSlideshow/SDWebImage (= 1.8.1)
   - IQKeyboardManagerSwift (= 6.5.1)
   - netfox (= 1.16.0)
   - ObjectMapper (= 3.5.1)
@@ -130,6 +138,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - GoogleUtilities
+    - ImageSlideshow
     - IQKeyboardManagerSwift
     - nanopb
     - netfox
@@ -158,6 +167,7 @@ SPEC CHECKSUMS:
   GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
   GooglePlaces: be6f19fe8aa6ff0b5bcccfa1b8805cc977ea1450
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  ImageSlideshow: 634865d7d4e96f21e3830a31b51bde768cc94cea
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   netfox: 4590811e5b02e392c72a924c73e000a60ee1f0c7
@@ -169,6 +179,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: b64c976186dca513313e21e05b09b4d3b6b5cc9a
+PODFILE CHECKSUM: 1ff212f0fbffee954437d36dd7a47cc43cd0e41c
 
 COCOAPODS: 1.8.4

@@ -24,5 +24,14 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         addBackToNavigation()
         setTitleNavigation(title: "Đặt giữ chỗ")
     }
+    
+    @IBAction func btnBookingTapped() {
+        let pop = BookingPopUp()
+        pop.showPopUp(address: "Address", message: "10", completionDirection: {
+            print("Direction")
+        }) {
+            print("Detail")
+        }
+    }
 
 }
