@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1110"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE3CC3392283DD980037DBE4"
-               BuildableName = "EnglishApp_Dev.app"
-               BlueprintName = "EnglishApp_Dev"
-               ReferencedContainer = "container:EnglishApp.xcodeproj">
+               BuildableName = "EcoPark Dev.app"
+               BlueprintName = "EcoPark_Dev"
+               ReferencedContainer = "container:EcoPark.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DE3CC3392283DD980037DBE4"
-            BuildableName = "EnglishApp_Dev.app"
-            BlueprintName = "EnglishApp_Dev"
-            ReferencedContainer = "container:EnglishApp.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +45,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE3CC3392283DD980037DBE4"
-            BuildableName = "EnglishApp_Dev.app"
-            BlueprintName = "EnglishApp_Dev"
-            ReferencedContainer = "container:EnglishApp.xcodeproj">
+            BuildableName = "EcoPark Dev.app"
+            BlueprintName = "EcoPark_Dev"
+            ReferencedContainer = "container:EcoPark.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE3CC3392283DD980037DBE4"
-            BuildableName = "EnglishApp_Dev.app"
-            BlueprintName = "EnglishApp_Dev"
-            ReferencedContainer = "container:EnglishApp.xcodeproj">
+            BuildableName = "EcoPark Dev.app"
+            BlueprintName = "EcoPark_Dev"
+            ReferencedContainer = "container:EcoPark.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

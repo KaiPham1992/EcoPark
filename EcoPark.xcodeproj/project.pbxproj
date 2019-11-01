@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CAD4EDBA5D7A5B75055CEBF /* Pods_EcoPark_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC38F393CC708506625D3A9 /* Pods_EcoPark_Dev.framework */; };
 		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
@@ -352,7 +353,6 @@
 		22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
 		22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
 		22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
-		23643E6810F21B2466B06EBA /* Pods_EnglishApp_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759C0A7C02170E0CF342085F /* Pods_EnglishApp_AppStore.framework */; };
 		2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
 		2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
@@ -373,7 +373,6 @@
 		2AF2F82E22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
 		2AF2F82F22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
 		2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
-		55B78D00229745E43B2E20BD /* Pods_EnglishApp_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C147159227EFF5BED8150F93 /* Pods_EnglishApp_Dev.framework */; };
 		7624A6C6231AB570000BA1C6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
 		7624A6C7231AB571000BA1C6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
 		7629BDD122ACCBBA0051B835 /* ReportQuestionPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */; };
@@ -457,7 +456,7 @@
 		76E2FEFB228DC4C20014B1F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E2FEFA228DC4C20014B1F4 /* PageViewController.swift */; };
 		76E2FEFC228DC4C20014B1F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E2FEFA228DC4C20014B1F4 /* PageViewController.swift */; };
 		76E2FEFD228DC4C20014B1F4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E2FEFA228DC4C20014B1F4 /* PageViewController.swift */; };
-		C26E086031F22EB8D8ABBC4B /* Pods_EnglishApp_Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8A2F0B17383302206113F1 /* Pods_EnglishApp_Prod.framework */; };
+		DA63BE7DF88C272622105A95 /* Pods_EcoPark_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE01F61C1A3C4397D3A0EED /* Pods_EcoPark_AppStore.framework */; };
 		DE1F61B9228573950024223F /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F61B8228573950024223F /* AppConstant.swift */; };
 		DE2ADE5622841756003768CE /* AppDelegate+GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE5122841755003768CE /* AppDelegate+GoogleSignIn.swift */; };
 		DE2ADE5722841756003768CE /* AppDelegate+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE5222841755003768CE /* AppDelegate+Push.swift */; };
@@ -974,15 +973,15 @@
 		DE9530FE2287DF6400E3F688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3462283DD990037DBE4 /* LaunchScreen.storyboard */; };
 		DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */; };
 		DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E122283E60500FA3B0D /* AppTextField.xib */; };
-		DE95310E2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist */; };
-		DE95310F2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist */; };
-		DE9531102287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist */; };
-		DE9531112287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310D2287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist */; };
-		DE9531122287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310D2287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist */; };
-		DE9531132287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310D2287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist */; };
-		DE9531142287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3492283DD990037DBE4 /* EnglishApp_Dev-Info.plist */; };
-		DE9531152287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3492283DD990037DBE4 /* EnglishApp_Dev-Info.plist */; };
-		DE9531162287E00A00E3F688 /* EnglishApp_Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3492283DD990037DBE4 /* EnglishApp_Dev-Info.plist */; };
+		DE95310E2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */; };
+		DE95310F2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */; };
+		DE9531102287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */; };
+		DE9531112287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310D2287DFFB00E3F688 /* EcoPark_AppStore-Info.plist */; };
+		DE9531122287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310D2287DFFB00E3F688 /* EcoPark_AppStore-Info.plist */; };
+		DE9531132287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310D2287DFFB00E3F688 /* EcoPark_AppStore-Info.plist */; };
+		DE9531142287E00900E3F688 /* EcoPark_Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3492283DD990037DBE4 /* EcoPark_Dev-Info.plist */; };
+		DE9531152287E00900E3F688 /* EcoPark_Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3492283DD990037DBE4 /* EcoPark_Dev-Info.plist */; };
+		DE9531162287E00A00E3F688 /* EcoPark_Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3492283DD990037DBE4 /* EcoPark_Dev-Info.plist */; };
 		DE953118228807AA00E3F688 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE953117228807AA00E3F688 /* AppRouter.swift */; };
 		DE953119228807AA00E3F688 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE953117228807AA00E3F688 /* AppRouter.swift */; };
 		DE95311A228807AA00E3F688 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE953117228807AA00E3F688 /* AppRouter.swift */; };
@@ -1056,9 +1055,11 @@
 		DEECF89F22871D1B00A4678B /* ForgotPasswordProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECF89922871D1B00A4678B /* ForgotPasswordProtocols.swift */; };
 		DEECF8A022871D1B00A4678B /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECF89A22871D1B00A4678B /* ForgotPasswordInteractor.swift */; };
 		DEECF8A122871D1B00A4678B /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEECF89B22871D1B00A4678B /* ForgotPasswordViewController.xib */; };
+		EDF37C296EFF808FB9FD16E0 /* Pods_EcoPark_Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3467E16B25AF380CB7D8F152 /* Pods_EcoPark_Prod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B8F3F00A0876F901165A5E0 /* Pods-EcoPark_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_AppStore.release.xcconfig"; path = "Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		17155F03236160FF001B81AE /* AppTextfiledLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfiledLogin.swift; sourceTree = "<group>"; };
 		1746D59D236BE33700B2E411 /* AppCollectionPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionPhotoCell.swift; sourceTree = "<group>"; };
 		1746D59F236BE33700B2E411 /* AppPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPhoto.swift; sourceTree = "<group>"; };
@@ -1183,16 +1184,18 @@
 		2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSingleLabel.swift; sourceTree = "<group>"; };
 		2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellSingleLabel.xib; sourceTree = "<group>"; };
 		2A7907D12329584B003B2752 /* EnglishApp_Prod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Prod.entitlements; sourceTree = "<group>"; };
+		2A9EBF0D8621C545CE79F1ED /* Pods-EcoPark_Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Dev.release.xcconfig"; path = "Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev.release.xcconfig"; sourceTree = "<group>"; };
 		2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileZipManager.swift; sourceTree = "<group>"; };
 		2ADDCB01232F83890087B427 /* TermAndConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionResponse.swift; sourceTree = "<group>"; };
 		2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitedCharacter.swift; sourceTree = "<group>"; };
+		2E0BB0C96ECC9939CA68DE66 /* Pods-EcoPark_Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Prod.release.xcconfig"; path = "Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod.release.xcconfig"; sourceTree = "<group>"; };
+		3467E16B25AF380CB7D8F152 /* Pods_EcoPark_Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoPark_Prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3993F5B9B7FE46601249EB80 /* Pods-EnglishApp_Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Dev.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		3B757D3CF68AEA1A27D502BF /* Pods-EnglishApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.release.xcconfig"; sourceTree = "<group>"; };
 		4C6A78A13386B1C2DA9E8046 /* Pods-EnglishApp_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_AppStore.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		5B9797D30EEE2E20FFDA9072 /* Pods-EnglishApp_Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Prod.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod.debug.xcconfig"; sourceTree = "<group>"; };
-		5F8A2F0B17383302206113F1 /* Pods_EnglishApp_Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp_Prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3BBC8020625DB07775B99C /* Pods-EcoPark_Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Prod.debug.xcconfig"; path = "Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		70F0180DFFE303ECA7AF66FA /* Pods-EnglishApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.debug.xcconfig"; sourceTree = "<group>"; };
-		759C0A7C02170E0CF342085F /* Pods_EnglishApp_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportQuestionPopUp.swift; sourceTree = "<group>"; };
 		7629BDD522ACD2450051B835 /* ReportSuccessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSuccessedView.swift; sourceTree = "<group>"; };
 		7629BDD922ACD2580051B835 /* ReportSuccessedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportSuccessedView.xib; sourceTree = "<group>"; };
@@ -1220,8 +1223,11 @@
 		76CF522322CBA5FA00A9D205 /* CreateExerciseParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseParam.swift; sourceTree = "<group>"; };
 		76DB93B9228C74B00081A36E /* RatioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioButton.swift; sourceTree = "<group>"; };
 		76E2FEFA228DC4C20014B1F4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8AE01F61C1A3C4397D3A0EED /* Pods_EcoPark_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoPark_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC38F393CC708506625D3A9 /* Pods_EcoPark_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoPark_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC97794A003811E1D31F823 /* Pods-EcoPark_Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Dev.debug.xcconfig"; path = "Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		BDDAC633881B6524E588BAAA /* Pods-EcoPark_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_AppStore.debug.xcconfig"; path = "Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		C0A1FC571A3446773BF28BA5 /* Pods-EnglishApp_Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Prod.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod.release.xcconfig"; sourceTree = "<group>"; };
-		C147159227EFF5BED8150F93 /* Pods_EnglishApp_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishApp_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F61B8228573950024223F /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		DE2ADE5122841755003768CE /* AppDelegate+GoogleSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+GoogleSignIn.swift"; sourceTree = "<group>"; };
 		DE2ADE5222841755003768CE /* AppDelegate+Push.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Push.swift"; sourceTree = "<group>"; };
@@ -1313,10 +1319,10 @@
 		DE361F232283E85000FA3B0D /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		DE361F242283E85000FA3B0D /* UserAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		DE361F542283E8E200FA3B0D /* ParentNotificationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentNotificationEntity.swift; sourceTree = "<group>"; };
-		DE3CC33A2283DD980037DBE4 /* EnglishApp_Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp_Dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3CC33A2283DD980037DBE4 /* EcoPark Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EcoPark Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3CC33D2283DD980037DBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3CC3472283DD990037DBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE3CC3492283DD990037DBE4 /* EnglishApp_Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EnglishApp_Dev-Info.plist"; sourceTree = "<group>"; };
+		DE3CC3492283DD990037DBE4 /* EcoPark_Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EcoPark_Dev-Info.plist"; sourceTree = "<group>"; };
 		DE49F7F322A3D81D00A92C63 /* NotificationListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListPresenter.swift; sourceTree = "<group>"; };
 		DE49F7F422A3D81D00A92C63 /* NotificationListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListRouter.swift; sourceTree = "<group>"; };
 		DE49F7F522A3D81D00A92C63 /* NotificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewController.swift; sourceTree = "<group>"; };
@@ -1385,9 +1391,9 @@
 		DE952FA42287DD2A00E3F688 /* Login+Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login+Facebook.swift"; sourceTree = "<group>"; };
 		DE952FA82287DD2A00E3F688 /* Login+GoogleSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login+GoogleSignIn.swift"; sourceTree = "<group>"; };
 		DE95305A2287DF4800E3F688 /* OBee English Practice Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OBee English Practice Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE9531082287DF6400E3F688 /* EnglishApp_AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp_AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE95310C2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EnglishApp_Prod-Info.plist"; sourceTree = "<group>"; };
-		DE95310D2287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EnglishApp_AppStore-Info.plist"; sourceTree = "<group>"; };
+		DE9531082287DF6400E3F688 /* EcoPark_AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoPark_AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EcoPark_Prod-Info.plist"; sourceTree = "<group>"; };
+		DE95310D2287DFFB00E3F688 /* EcoPark_AppStore-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EcoPark_AppStore-Info.plist"; sourceTree = "<group>"; };
 		DE953117228807AA00E3F688 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		DE953175228846D400E3F688 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		DE953176228846D400E3F688 /* ChangePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRouter.swift; sourceTree = "<group>"; };
@@ -1434,8 +1440,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B78D00229745E43B2E20BD /* Pods_EnglishApp_Dev.framework in Frameworks */,
 				2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */,
+				0CAD4EDBA5D7A5B75055CEBF /* Pods_EcoPark_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1443,8 +1449,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C26E086031F22EB8D8ABBC4B /* Pods_EnglishApp_Prod.framework in Frameworks */,
 				DE2D679522F9BF050055586B /* StoreKit.framework in Frameworks */,
+				EDF37C296EFF808FB9FD16E0 /* Pods_EcoPark_Prod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1452,7 +1458,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23643E6810F21B2466B06EBA /* Pods_EnglishApp_AppStore.framework in Frameworks */,
+				DA63BE7DF88C272622105A95 /* Pods_EcoPark_AppStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1870,9 +1876,9 @@
 			children = (
 				DE2D679422F9BF050055586B /* StoreKit.framework */,
 				187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */,
-				759C0A7C02170E0CF342085F /* Pods_EnglishApp_AppStore.framework */,
-				C147159227EFF5BED8150F93 /* Pods_EnglishApp_Dev.framework */,
-				5F8A2F0B17383302206113F1 /* Pods_EnglishApp_Prod.framework */,
+				8AE01F61C1A3C4397D3A0EED /* Pods_EcoPark_AppStore.framework */,
+				8EC38F393CC708506625D3A9 /* Pods_EcoPark_Dev.framework */,
+				3467E16B25AF380CB7D8F152 /* Pods_EcoPark_Prod.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1888,6 +1894,12 @@
 				25ECF64E91EE97854783E905 /* Pods-EnglishApp_Dev.release.xcconfig */,
 				5B9797D30EEE2E20FFDA9072 /* Pods-EnglishApp_Prod.debug.xcconfig */,
 				C0A1FC571A3446773BF28BA5 /* Pods-EnglishApp_Prod.release.xcconfig */,
+				BDDAC633881B6524E588BAAA /* Pods-EcoPark_AppStore.debug.xcconfig */,
+				0B8F3F00A0876F901165A5E0 /* Pods-EcoPark_AppStore.release.xcconfig */,
+				AFC97794A003811E1D31F823 /* Pods-EcoPark_Dev.debug.xcconfig */,
+				2A9EBF0D8621C545CE79F1ED /* Pods-EcoPark_Dev.release.xcconfig */,
+				5D3BBC8020625DB07775B99C /* Pods-EcoPark_Prod.debug.xcconfig */,
+				2E0BB0C96ECC9939CA68DE66 /* Pods-EcoPark_Prod.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2438,7 +2450,7 @@
 			children = (
 				2A7907D12329584B003B2752 /* EnglishApp_Prod.entitlements */,
 				2A13591C2311A67100587C0E /* EnglishApp_Dev.entitlements */,
-				DE3CC33C2283DD980037DBE4 /* EnglishApp */,
+				DE3CC33C2283DD980037DBE4 /* EcoPark */,
 				DE3CC33B2283DD980037DBE4 /* Products */,
 				59DD0F1ECE177AA318E5CD57 /* Pods */,
 				2DF10F38001118A94DAFC38F /* Frameworks */,
@@ -2448,14 +2460,14 @@
 		DE3CC33B2283DD980037DBE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE3CC33A2283DD980037DBE4 /* EnglishApp_Dev.app */,
+				DE3CC33A2283DD980037DBE4 /* EcoPark Dev.app */,
 				DE95305A2287DF4800E3F688 /* OBee English Practice Test.app */,
-				DE9531082287DF6400E3F688 /* EnglishApp_AppStore.app */,
+				DE9531082287DF6400E3F688 /* EcoPark_AppStore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE3CC33C2283DD980037DBE4 /* EnglishApp */ = {
+		DE3CC33C2283DD980037DBE4 /* EcoPark */ = {
 			isa = PBXGroup;
 			children = (
 				7680749C22C88A910015A75C /* Assets.xcassets */,
@@ -2467,7 +2479,7 @@
 				DE361D912283E1D700FA3B0D /* Modules */,
 				DE3CC3462283DD990037DBE4 /* LaunchScreen.storyboard */,
 			);
-			path = EnglishApp;
+			path = EcoPark;
 			sourceTree = "<group>";
 		};
 		DE49F7F122A3D7FD00A92C63 /* Notification */ = {
@@ -2658,9 +2670,9 @@
 		DE95310B2287DFAE00E3F688 /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				DE95310D2287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist */,
-				DE95310C2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist */,
-				DE3CC3492283DD990037DBE4 /* EnglishApp_Dev-Info.plist */,
+				DE95310D2287DFFB00E3F688 /* EcoPark_AppStore-Info.plist */,
+				DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */,
+				DE3CC3492283DD990037DBE4 /* EcoPark_Dev-Info.plist */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -2762,9 +2774,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE3CC3392283DD980037DBE4 /* EnglishApp_Dev */ = {
+		DE3CC3392283DD980037DBE4 /* EcoPark_Dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE3CC34C2283DD990037DBE4 /* Build configuration list for PBXNativeTarget "EnglishApp_Dev" */;
+			buildConfigurationList = DE3CC34C2283DD990037DBE4 /* Build configuration list for PBXNativeTarget "EcoPark_Dev" */;
 			buildPhases = (
 				B1BFFD79D7336217D57D509F /* [CP] Check Pods Manifest.lock */,
 				DE3CC3362283DD980037DBE4 /* Sources */,
@@ -2778,14 +2790,14 @@
 			);
 			dependencies = (
 			);
-			name = EnglishApp_Dev;
+			name = EcoPark_Dev;
 			productName = EnglishApp;
-			productReference = DE3CC33A2283DD980037DBE4 /* EnglishApp_Dev.app */;
+			productReference = DE3CC33A2283DD980037DBE4 /* EcoPark Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DE952FAE2287DF4800E3F688 /* EnglishApp_Prod */ = {
+		DE952FAE2287DF4800E3F688 /* EcoPark_Prod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE9530572287DF4800E3F688 /* Build configuration list for PBXNativeTarget "EnglishApp_Prod" */;
+			buildConfigurationList = DE9530572287DF4800E3F688 /* Build configuration list for PBXNativeTarget "EcoPark_Prod" */;
 			buildPhases = (
 				DE952FAF2287DF4800E3F688 /* [CP] Check Pods Manifest.lock */,
 				DE952FB02287DF4800E3F688 /* Sources */,
@@ -2798,14 +2810,14 @@
 			);
 			dependencies = (
 			);
-			name = EnglishApp_Prod;
+			name = EcoPark_Prod;
 			productName = EnglishApp;
 			productReference = DE95305A2287DF4800E3F688 /* OBee English Practice Test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DE95305C2287DF6400E3F688 /* EnglishApp_AppStore */ = {
+		DE95305C2287DF6400E3F688 /* EcoPark_AppStore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE9531052287DF6400E3F688 /* Build configuration list for PBXNativeTarget "EnglishApp_AppStore" */;
+			buildConfigurationList = DE9531052287DF6400E3F688 /* Build configuration list for PBXNativeTarget "EcoPark_AppStore" */;
 			buildPhases = (
 				DE95305D2287DF6400E3F688 /* [CP] Check Pods Manifest.lock */,
 				DE95305E2287DF6400E3F688 /* Sources */,
@@ -2818,9 +2830,9 @@
 			);
 			dependencies = (
 			);
-			name = EnglishApp_AppStore;
+			name = EcoPark_AppStore;
 			productName = EnglishApp;
-			productReference = DE9531082287DF6400E3F688 /* EnglishApp_AppStore.app */;
+			productReference = DE9531082287DF6400E3F688 /* EcoPark_AppStore.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2856,7 +2868,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE3CC3352283DD980037DBE4 /* Build configuration list for PBXProject "EnglishApp" */;
+			buildConfigurationList = DE3CC3352283DD980037DBE4 /* Build configuration list for PBXProject "EcoPark" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2870,9 +2882,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE3CC3392283DD980037DBE4 /* EnglishApp_Dev */,
-				DE952FAE2287DF4800E3F688 /* EnglishApp_Prod */,
-				DE95305C2287DF6400E3F688 /* EnglishApp_AppStore */,
+				DE3CC3392283DD980037DBE4 /* EcoPark_Dev */,
+				DE952FAE2287DF4800E3F688 /* EcoPark_Prod */,
+				DE95305C2287DF6400E3F688 /* EcoPark_AppStore */,
 			);
 		};
 /* End PBXProject section */
@@ -2925,7 +2937,7 @@
 				17FCC5E9236AC9B4003E98D8 /* SignUpPartnerWaitingViewController.xib in Resources */,
 				17FCC5BF236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.xib in Resources */,
 				223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */,
-				DE9531112287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
+				DE9531112287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE361E8C2283E60500FA3B0D /* AppCheckBox.xib in Resources */,
 				DE2ADE5922841756003768CE /* GoogleService-Dev-Info.plist in Resources */,
@@ -2945,10 +2957,10 @@
 				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B31F236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */,
-				DE9531142287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
+				DE9531142287E00900E3F688 /* EcoPark_Dev-Info.plist in Resources */,
 				22B4B325236ABC4C004BD8FB /* PreviewPhotoViewController.xib in Resources */,
 				223887182366D9A700DAC978 /* ParkingSortView.xib in Resources */,
-				DE95310E2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
+				DE95310E2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
 				2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				22BE84CA236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE361E722283E60500FA3B0D /* AppTextField.xib in Resources */,
@@ -3003,7 +3015,7 @@
 				17FCC5EA236AC9B4003E98D8 /* SignUpPartnerWaitingViewController.xib in Resources */,
 				17FCC5C0236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.xib in Resources */,
 				223887092366A94400DAC978 /* MarkerProjectView.xib in Resources */,
-				DE9531122287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
+				DE9531122287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
 				DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info.plist in Resources */,
@@ -3023,10 +3035,10 @@
 				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B320236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
-				DE9531152287E00900E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
+				DE9531152287E00900E3F688 /* EcoPark_Dev-Info.plist in Resources */,
 				22B4B326236ABC4C004BD8FB /* PreviewPhotoViewController.xib in Resources */,
 				223887192366D9A700DAC978 /* ParkingSortView.xib in Resources */,
-				DE95310F2287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
+				DE95310F2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
 				2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				22BE84CB236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE9530532287DF4800E3F688 /* AppTextField.xib in Resources */,
@@ -3081,7 +3093,7 @@
 				17FCC5EB236AC9B4003E98D8 /* SignUpPartnerWaitingViewController.xib in Resources */,
 				17FCC5C1236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.xib in Resources */,
 				2238870A2366A94400DAC978 /* MarkerProjectView.xib in Resources */,
-				DE9531132287DFFB00E3F688 /* EnglishApp_AppStore-Info.plist in Resources */,
+				DE9531132287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
 				DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info.plist in Resources */,
@@ -3101,10 +3113,10 @@
 				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B321236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
-				DE9531162287E00A00E3F688 /* EnglishApp_Dev-Info.plist in Resources */,
+				DE9531162287E00A00E3F688 /* EcoPark_Dev-Info.plist in Resources */,
 				22B4B327236ABC4C004BD8FB /* PreviewPhotoViewController.xib in Resources */,
 				2238871A2366D9A700DAC978 /* ParkingSortView.xib in Resources */,
-				DE9531102287DFFB00E3F688 /* EnglishApp_Prod-Info.plist in Resources */,
+				DE9531102287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
 				2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				22BE84CC236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */,
@@ -3130,7 +3142,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EnglishApp_Dev-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcoPark_Dev-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3171,7 +3183,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EnglishApp_Prod-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcoPark_Prod-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3184,15 +3196,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE9530562287DF4800E3F688 /* [CP] Copy Pods Resources */ = {
@@ -3201,15 +3213,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE95305D2287DF6400E3F688 /* [CP] Check Pods Manifest.lock */ = {
@@ -3227,7 +3239,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EnglishApp_AppStore-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcoPark_AppStore-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3240,15 +3252,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE9531042287DF6400E3F688 /* [CP] Copy Pods Resources */ = {
@@ -3257,15 +3269,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECC81D57BA8A2F47335BA0EE /* [CP] Embed Pods Frameworks */ = {
@@ -3274,15 +3286,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7321019EC4AC75D7A647D72 /* [CP] Copy Pods Resources */ = {
@@ -3291,15 +3303,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4301,7 +4313,7 @@
 		};
 		DE3CC34D2283DD990037DBE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3993F5B9B7FE46601249EB80 /* Pods-EnglishApp_Dev.debug.xcconfig */;
+			baseConfigurationReference = AFC97794A003811E1D31F823 /* Pods-EcoPark_Dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Dev.entitlements;
@@ -4309,14 +4321,14 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = Q3TBY53XUC;
-				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_Dev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.engma.ecopark-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EcoPark Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.engma.ecopark-ios";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEV";
 				SWIFT_VERSION = 5.0;
@@ -4326,7 +4338,7 @@
 		};
 		DE3CC34E2283DD990037DBE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25ECF64E91EE97854783E905 /* Pods-EnglishApp_Dev.release.xcconfig */;
+			baseConfigurationReference = 2A9EBF0D8621C545CE79F1ED /* Pods-EcoPark_Dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Dev.entitlements;
@@ -4334,14 +4346,14 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = Q3TBY53XUC;
-				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_Dev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.engma.ecopark-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EcoPark Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.engma.ecopark-ios";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_VERSION = 5.0;
@@ -4351,7 +4363,7 @@
 		};
 		DE9530582287DF4800E3F688 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9797D30EEE2E20FFDA9072 /* Pods-EnglishApp_Prod.debug.xcconfig */;
+			baseConfigurationReference = 5D3BBC8020625DB07775B99C /* Pods-EcoPark_Prod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
@@ -4359,7 +4371,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
-				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_Prod-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4376,7 +4388,7 @@
 		};
 		DE9530592287DF4800E3F688 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0A1FC571A3446773BF28BA5 /* Pods-EnglishApp_Prod.release.xcconfig */;
+			baseConfigurationReference = 2E0BB0C96ECC9939CA68DE66 /* Pods-EcoPark_Prod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
@@ -4384,7 +4396,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
-				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_Prod-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4401,12 +4413,12 @@
 		};
 		DE9531062287DF6400E3F688 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28D786760AE73B0AF55038DE /* Pods-EnglishApp_AppStore.debug.xcconfig */;
+			baseConfigurationReference = BDDAC633881B6524E588BAAA /* Pods-EcoPark_AppStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Q3TBY53XUC;
-				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_AppStore-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_AppStore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4423,13 +4435,13 @@
 		};
 		DE9531072287DF6400E3F688 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C6A78A13386B1C2DA9E8046 /* Pods-EnglishApp_AppStore.release.xcconfig */;
+			baseConfigurationReference = 0B8F3F00A0876F901165A5E0 /* Pods-EcoPark_AppStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Q3TBY53XUC;
-				INFOPLIST_FILE = "$(SRCROOT)/EnglishApp/SourceFile/Info/EnglishApp_AppStore-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_AppStore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4447,7 +4459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE3CC3352283DD980037DBE4 /* Build configuration list for PBXProject "EnglishApp" */ = {
+		DE3CC3352283DD980037DBE4 /* Build configuration list for PBXProject "EcoPark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE3CC34A2283DD990037DBE4 /* Debug */,
@@ -4456,7 +4468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE3CC34C2283DD990037DBE4 /* Build configuration list for PBXNativeTarget "EnglishApp_Dev" */ = {
+		DE3CC34C2283DD990037DBE4 /* Build configuration list for PBXNativeTarget "EcoPark_Dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE3CC34D2283DD990037DBE4 /* Debug */,
@@ -4465,7 +4477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE9530572287DF4800E3F688 /* Build configuration list for PBXNativeTarget "EnglishApp_Prod" */ = {
+		DE9530572287DF4800E3F688 /* Build configuration list for PBXNativeTarget "EcoPark_Prod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE9530582287DF4800E3F688 /* Debug */,
@@ -4474,7 +4486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE9531052287DF6400E3F688 /* Build configuration list for PBXNativeTarget "EnglishApp_AppStore" */ = {
+		DE9531052287DF6400E3F688 /* Build configuration list for PBXNativeTarget "EcoPark_AppStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE9531062287DF6400E3F688 /* Debug */,
