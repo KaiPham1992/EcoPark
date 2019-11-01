@@ -10,6 +10,9 @@
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpPartnerStep1ViewController">
@@ -91,8 +94,33 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-73-Cwb">
                                     <rect key="frame" x="16" y="553" width="336" height="300"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwL-ev-8TJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1v-q8-j2m">
+                                                    <rect key="frame" x="8" y="8" width="38" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.12549019610000001" green="0.1764705882" blue="0.2156862745" alpha="1" colorSpace="deviceRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="k1v-q8-j2m" firstAttribute="leading" secondItem="jwL-ev-8TJ" secondAttribute="leading" constant="8" id="1cr-FL-7Om"/>
+                                                <constraint firstAttribute="height" constant="80" id="Ia2-CY-vXx"/>
+                                                <constraint firstItem="k1v-q8-j2m" firstAttribute="top" secondItem="jwL-ev-8TJ" secondAttribute="top" constant="8" id="ZDa-bd-VZH"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
+                                        <constraint firstItem="jwL-ev-8TJ" firstAttribute="top" secondItem="RuO-73-Cwb" secondAttribute="top" id="OiR-n6-Fox"/>
                                         <constraint firstAttribute="height" constant="300" id="UA3-ji-KCb"/>
                                     </constraints>
                                 </view>
@@ -127,6 +155,7 @@
                                 <constraint firstItem="aVd-be-s7J" firstAttribute="top" secondItem="4yt-7c-NS7" secondAttribute="bottom" constant="8" id="1xj-Xa-20x"/>
                                 <constraint firstItem="JPt-Cq-Yru" firstAttribute="top" secondItem="rDb-FO-ww6" secondAttribute="bottom" constant="8" id="3It-ih-5bi"/>
                                 <constraint firstItem="6N1-JK-IKi" firstAttribute="leading" secondItem="BJO-Zb-u4C" secondAttribute="leading" id="5Tt-6g-MkU"/>
+                                <constraint firstItem="jwL-ev-8TJ" firstAttribute="leading" secondItem="Y4U-Pj-bqq" secondAttribute="leading" id="6Kh-yR-1zG"/>
                                 <constraint firstItem="RuO-73-Cwb" firstAttribute="leading" secondItem="Y4U-Pj-bqq" secondAttribute="leading" id="7Tc-75-EG8"/>
                                 <constraint firstItem="6N1-JK-IKi" firstAttribute="leading" secondItem="BJO-Zb-u4C" secondAttribute="leading" id="7qg-QZ-BsS"/>
                                 <constraint firstItem="NkO-Sc-Aww" firstAttribute="leading" secondItem="BJO-Zb-u4C" secondAttribute="leading" constant="16" id="80S-q1-GYk"/>
@@ -138,6 +167,7 @@
                                 <constraint firstAttribute="trailing" secondItem="6N1-JK-IKi" secondAttribute="trailing" id="HBJ-TE-KS6"/>
                                 <constraint firstItem="I8V-wS-tLU" firstAttribute="leading" secondItem="Y4U-Pj-bqq" secondAttribute="leading" id="HBL-bu-Lm5"/>
                                 <constraint firstItem="RuO-73-Cwb" firstAttribute="top" secondItem="I8V-wS-tLU" secondAttribute="bottom" constant="8" id="JMg-mR-7ds"/>
+                                <constraint firstItem="jwL-ev-8TJ" firstAttribute="trailing" secondItem="Y4U-Pj-bqq" secondAttribute="trailing" id="KJB-oQ-j12"/>
                                 <constraint firstAttribute="bottom" secondItem="mqJ-Xn-wph" secondAttribute="bottom" id="Nwv-xB-TB1"/>
                                 <constraint firstAttribute="trailing" secondItem="6N1-JK-IKi" secondAttribute="trailing" id="Nwz-MQ-Bvh"/>
                                 <constraint firstItem="JPt-Cq-Yru" firstAttribute="leading" secondItem="rDb-FO-ww6" secondAttribute="leading" id="Nz8-Wo-imJ"/>

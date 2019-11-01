@@ -10,6 +10,15 @@
 		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
+		1746D5A1236BE33700B2E411 /* AppCollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D59D236BE33700B2E411 /* AppCollectionPhotoCell.swift */; };
+		1746D5A2236BE33700B2E411 /* AppCollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D59D236BE33700B2E411 /* AppCollectionPhotoCell.swift */; };
+		1746D5A3236BE33700B2E411 /* AppCollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D59D236BE33700B2E411 /* AppCollectionPhotoCell.swift */; };
+		1746D5A4236BE33700B2E411 /* AppPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D59F236BE33700B2E411 /* AppPhoto.swift */; };
+		1746D5A5236BE33700B2E411 /* AppPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D59F236BE33700B2E411 /* AppPhoto.swift */; };
+		1746D5A6236BE33700B2E411 /* AppPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D59F236BE33700B2E411 /* AppPhoto.swift */; };
+		1746D5A7236BE33700B2E411 /* AppCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D5A0236BE33700B2E411 /* AppCollectionPhoto.swift */; };
+		1746D5A8236BE33700B2E411 /* AppCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D5A0236BE33700B2E411 /* AppCollectionPhoto.swift */; };
+		1746D5A9236BE33700B2E411 /* AppCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746D5A0236BE33700B2E411 /* AppCollectionPhoto.swift */; };
 		175C73362367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
 		175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
 		175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
@@ -1051,6 +1060,9 @@
 
 /* Begin PBXFileReference section */
 		17155F03236160FF001B81AE /* AppTextfiledLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfiledLogin.swift; sourceTree = "<group>"; };
+		1746D59D236BE33700B2E411 /* AppCollectionPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionPhotoCell.swift; sourceTree = "<group>"; };
+		1746D59F236BE33700B2E411 /* AppPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPhoto.swift; sourceTree = "<group>"; };
+		1746D5A0236BE33700B2E411 /* AppCollectionPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionPhoto.swift; sourceTree = "<group>"; };
 		175C73302367E4EE009F03F6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		175C73312367E4EE009F03F6 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		175C73322367E4EE009F03F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -1447,6 +1459,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1746D59B236BE33700B2E411 /* AppCollectionPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				1746D59C236BE33700B2E411 /* Cell */,
+				1746D59E236BE33700B2E411 /* Model */,
+				1746D5A0236BE33700B2E411 /* AppCollectionPhoto.swift */,
+			);
+			path = AppCollectionPhoto;
+			sourceTree = "<group>";
+		};
+		1746D59C236BE33700B2E411 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1746D59D236BE33700B2E411 /* AppCollectionPhotoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1746D59E236BE33700B2E411 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1746D59F236BE33700B2E411 /* AppPhoto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		175C732F2367E486009F03F6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -2121,6 +2159,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				1746D59B236BE33700B2E411 /* AppCollectionPhoto */,
 				22B4B316236ABC4C004BD8FB /* AppImageSlide */,
 				22BE84BB236974AB0056DD51 /* UtilityView */,
 				17FCC60E236AE5C9003E98D8 /* SwitchCustomView */,
@@ -3278,6 +3317,7 @@
 				DE49F7FC22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE361F532283E85000FA3B0D /* UserAPIService.swift in Sources */,
 				DE361DF82283E57900FA3B0D /* UIView+extension.swift in Sources */,
+				1746D5A4236BE33700B2E411 /* AppPhoto.swift in Sources */,
 				DE952F802287D2A700E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				DE952F9E2287D2A700E3F688 /* KActivityIndicatorType.swift in Sources */,
 				2238870B2366A94400DAC978 /* ProjectMarker.swift in Sources */,
@@ -3325,6 +3365,7 @@
 				22EB901B23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE361E672283E60500FA3B0D /* AppImage.swift in Sources */,
 				DE49F82722A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
+				1746D5A7236BE33700B2E411 /* AppCollectionPhoto.swift in Sources */,
 				17FCC5B9236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE95317B228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				2203D572236585550055E79F /* FindAroundMeCell.swift in Sources */,
@@ -3500,6 +3541,7 @@
 				DEC62AAA2293007200D7CECE /* ThanksReportContent.swift in Sources */,
 				175C7351236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				22BE84C7236975630056DD51 /* UtilityViewCell.swift in Sources */,
+				1746D5A1236BE33700B2E411 /* AppCollectionPhotoCell.swift in Sources */,
 				DE952F7C2287D2A700E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				DE952FAD2287DD2A00E3F688 /* Login+GoogleSignIn.swift in Sources */,
 				DE361F512283E85000FA3B0D /* NotificationAPIService.swift in Sources */,
@@ -3559,6 +3601,7 @@
 				DE49F7FD22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE952FB42287DF4800E3F688 /* UserAPIService.swift in Sources */,
 				DE952FB52287DF4800E3F688 /* UIView+extension.swift in Sources */,
+				1746D5A5236BE33700B2E411 /* AppPhoto.swift in Sources */,
 				DE952FB62287DF4800E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				DE952FB72287DF4800E3F688 /* KActivityIndicatorType.swift in Sources */,
 				2238870C2366A94400DAC978 /* ProjectMarker.swift in Sources */,
@@ -3606,6 +3649,7 @@
 				22EB901C23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE952FC92287DF4800E3F688 /* AppImage.swift in Sources */,
 				DE49F82822A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
+				1746D5A8236BE33700B2E411 /* AppCollectionPhoto.swift in Sources */,
 				17FCC5BA236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE95317C228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				2203D573236585550055E79F /* FindAroundMeCell.swift in Sources */,
@@ -3781,6 +3825,7 @@
 				DEC62AAB2293007200D7CECE /* ThanksReportContent.swift in Sources */,
 				175C7352236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				22BE84C8236975630056DD51 /* UtilityViewCell.swift in Sources */,
+				1746D5A2236BE33700B2E411 /* AppCollectionPhotoCell.swift in Sources */,
 				DE9530212287DF4800E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				DE9530222287DF4800E3F688 /* Login+GoogleSignIn.swift in Sources */,
 				DE9530232287DF4800E3F688 /* NotificationAPIService.swift in Sources */,
@@ -3840,6 +3885,7 @@
 				DE49F7FE22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE9530622287DF6400E3F688 /* UserAPIService.swift in Sources */,
 				DE9530632287DF6400E3F688 /* UIView+extension.swift in Sources */,
+				1746D5A6236BE33700B2E411 /* AppPhoto.swift in Sources */,
 				DE9530642287DF6400E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
 				2238870D2366A94400DAC978 /* ProjectMarker.swift in Sources */,
@@ -3887,6 +3933,7 @@
 				22EB901D23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE49F7FB22A3D81D00A92C63 /* NotificationListPresenter.swift in Sources */,
 				DE9530772287DF6400E3F688 /* AppImage.swift in Sources */,
+				1746D5A9236BE33700B2E411 /* AppCollectionPhoto.swift in Sources */,
 				17FCC5BB236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE49F82922A3DB9C00A92C63 /* NotificationDetailInteractor.swift in Sources */,
 				2203D574236585550055E79F /* FindAroundMeCell.swift in Sources */,
@@ -4062,6 +4109,7 @@
 				DE9530CF2287DF6400E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				175C7353236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				22BE84C9236975630056DD51 /* UtilityViewCell.swift in Sources */,
+				1746D5A3236BE33700B2E411 /* AppCollectionPhotoCell.swift in Sources */,
 				DE9530D02287DF6400E3F688 /* Login+GoogleSignIn.swift in Sources */,
 				DE9530D12287DF6400E3F688 /* NotificationAPIService.swift in Sources */,
 				DE9530D22287DF6400E3F688 /* MenuPresenter.swift in Sources */,
