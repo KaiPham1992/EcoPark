@@ -83,6 +83,12 @@
 		1781C7EA236C383E00F053C1 /* OtherInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C2C4BA236C1FDD0020B299 /* OtherInfoCell.swift */; };
 		1781C7EB236C384200F053C1 /* OtherInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C2C4BB236C1FDD0020B299 /* OtherInfoCell.xib */; };
 		1781C7EC236C384400F053C1 /* OtherInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C2C4BB236C1FDD0020B299 /* OtherInfoCell.xib */; };
+		1781C7EF236C5D4800F053C1 /* HeaderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781C7EE236C5D4700F053C1 /* HeaderInfoView.swift */; };
+		1781C7F0236C5D4800F053C1 /* HeaderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781C7EE236C5D4700F053C1 /* HeaderInfoView.swift */; };
+		1781C7F1236C5D4800F053C1 /* HeaderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781C7EE236C5D4700F053C1 /* HeaderInfoView.swift */; };
+		1781C7F3236C5D6000F053C1 /* HeaderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1781C7F2236C5D6000F053C1 /* HeaderInfoView.xib */; };
+		1781C7F4236C5D6000F053C1 /* HeaderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1781C7F2236C5D6000F053C1 /* HeaderInfoView.xib */; };
+		1781C7F5236C5D6000F053C1 /* HeaderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1781C7F2236C5D6000F053C1 /* HeaderInfoView.xib */; };
 		17C2C4BC236C1FDD0020B299 /* OtherInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C2C4BA236C1FDD0020B299 /* OtherInfoCell.swift */; };
 		17C2C4BD236C1FDD0020B299 /* OtherInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C2C4BB236C1FDD0020B299 /* OtherInfoCell.xib */; };
 		17C2C4C1236C26810020B299 /* SlideImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C2C4BF236C26810020B299 /* SlideImageCell.swift */; };
@@ -1102,6 +1108,8 @@
 		1768973223697E62001F7383 /* SignUpPartnerStep2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpPartnerStep2ViewController.xib; sourceTree = "<group>"; };
 		1781C7D9236C381F00F053C1 /* LicenseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseInfoCell.swift; sourceTree = "<group>"; };
 		1781C7DA236C381F00F053C1 /* LicenseInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LicenseInfoCell.xib; sourceTree = "<group>"; };
+		1781C7EE236C5D4700F053C1 /* HeaderInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoView.swift; sourceTree = "<group>"; };
+		1781C7F2236C5D6000F053C1 /* HeaderInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoView.xib; sourceTree = "<group>"; };
 		17C2C4BA236C1FDD0020B299 /* OtherInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherInfoCell.swift; sourceTree = "<group>"; };
 		17C2C4BB236C1FDD0020B299 /* OtherInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherInfoCell.xib; sourceTree = "<group>"; };
 		17C2C4BF236C26810020B299 /* SlideImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImageCell.swift; sourceTree = "<group>"; };
@@ -1552,9 +1560,19 @@
 			path = LicenseInfoCell;
 			sourceTree = "<group>";
 		};
+		1781C7ED236C5D1F00F053C1 /* HeaderInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				1781C7EE236C5D4700F053C1 /* HeaderInfoView.swift */,
+				1781C7F2236C5D6000F053C1 /* HeaderInfoView.xib */,
+			);
+			path = HeaderInfoView;
+			sourceTree = "<group>";
+		};
 		17C2C4B8236C1FB00020B299 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1781C7ED236C5D1F00F053C1 /* HeaderInfoView */,
 				1781C7D8236C37EA00F053C1 /* LicenseInfoCell */,
 				17C2C4C3236C27EB0020B299 /* ParkingInfoCell */,
 				17C2C4BE236C26290020B299 /* SlideImageCell */,
@@ -2979,6 +2997,7 @@
 				22BE84E3236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
+				1781C7F3236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
 				17C2C4BD236C1FDD0020B299 /* OtherInfoCell.xib in Resources */,
 				22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				17FCC5F2236ADAA5003E98D8 /* PartnerStepView.xib in Resources */,
@@ -3062,6 +3081,7 @@
 				DE9530472287DF4800E3F688 /* SignUpViewController.xib in Resources */,
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
+				1781C7F4236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
 				17FCC5F3236ADAA5003E98D8 /* PartnerStepView.xib in Resources */,
 				7629BDDB22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
 				DE49F81222A3D83A00A92C63 /* NotificationCell.xib in Resources */,
@@ -3145,6 +3165,7 @@
 				DE9530F52287DF6400E3F688 /* SignUpViewController.xib in Resources */,
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
+				1781C7F5236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
 				17FCC5F4236ADAA5003E98D8 /* PartnerStepView.xib in Resources */,
 				7629BDDC22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
 				DE49F81322A3D83A00A92C63 /* NotificationCell.xib in Resources */,
@@ -3410,6 +3431,7 @@
 				DE49F82122A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE952F952287D2A700E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				1781C7EF236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -3696,6 +3718,7 @@
 				DE49F82222A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE952FB82287DF4800E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				1781C7F0236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -3982,6 +4005,7 @@
 				DE953189228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82322A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE9530662287DF6400E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				1781C7F1236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,

@@ -10,12 +10,16 @@
 
 import UIKit
 
+
 class ParkingInfoViewController: UIViewController, ParkingInfoViewProtocol {
 
     @IBOutlet weak var tbParkingInfo: UITableView!
     
 	var presenter: ParkingInfoPresenterProtocol?
 
+    var isExplandParkingInfo = true
+    var isExplandLicenseInfo = true
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -47,9 +51,18 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
         case 0:
             return 1
         case 1:
-            return 2
+            if isExplandParkingInfo == true {
+                return 2
+            } else {
+                return 0
+            }
+            
         default:
-            return 1
+            if isExplandLicenseInfo == true {
+                return 1
+            } else {
+                return 0
+            }
         }
     }
     
@@ -84,7 +97,54 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return UITableView.automaticDimension
             }
         default:
-            return 230
+            return 300
         }
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch section {
+        case 0:
+            return nil
+        case 1:
+            let headerView = HeaderInfoView()
+            headerView.setupUI(title: LocalizableKey.parkingInfo.showLanguage.uppercased())
+            headerView.delegate = self
+            headerView.section = section
+            return headerView
+            
+        default:
+            let headerView = HeaderInfoView()
+            headerView.setupUI(title: LocalizableKey.parkingInfo.showLanguage.uppercased())
+            headerView.delegate = self
+            headerView.section = section
+            return headerView
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        } else {
+            return 50
+        }
+    }
+}
+
+extension ParkingInfoViewController: HeaderViewDelegate {
+    func toggleSection(header: HeaderInfoView, section: Int) {
+        if section == 1 {
+            let expland = !isExplandParkingInfo
+            isExplandParkingInfo = expland
+            header.setExpland(expland: expland)
+            let sectionExpland = IndexSet(integer: section)
+            tbParkingInfo.reloadSections(sectionExpland, with: UITableView.RowAnimation.automatic)
+        } else {
+            let expland = !isExplandLicenseInfo
+            isExplandLicenseInfo = expland
+            header.setExpland(expland: expland)
+            let sectionExpland = IndexSet(integer: section)
+            tbParkingInfo.reloadSections(sectionExpland, with: .automatic)
+        }
+    }
+    
 }

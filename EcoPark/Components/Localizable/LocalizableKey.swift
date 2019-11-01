@@ -142,6 +142,12 @@ struct LocalizableKey {
     static let parkingLicense = "ParkingLicense"
     static let parkingTaxCode = "ParkingTaxCode"
     
+    static let hoursPrice = "hoursPrice"
+    static let comboPrice = "comboPrice"
+    static let capacity = "capacity"
+    static let place = "place"
+    static let vndHours = "vndHours"
+    static let vnd8Hours = "vnd8Hours"
     // Sign Up Partner 3
     static let utilityOther = "UtilityOther"
     static let parkingImage = "parkingImage"
