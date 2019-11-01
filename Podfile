@@ -17,19 +17,20 @@ def main_pods
     
     pod 'GoogleMaps', '3.5.0'
     pod 'GooglePlaces', '3.5.0'
+    pod 'ImagePicker', '3.1.0'
 end
 
-target 'EnglishApp_Dev' do
+target 'EcoPark_Dev' do
     use_frameworks!
     main_pods
 end
 
-target 'EnglishApp_Prod' do
+target 'EcoPark_Prod' do
   use_frameworks!
   main_pods
 end
 
-target 'EnglishApp_AppStore' do
+target 'EcoPark_AppStore' do
   use_frameworks!
   main_pods
 end
