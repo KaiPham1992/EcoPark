@@ -394,6 +394,33 @@
 		2AF2F82E22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
 		2AF2F82F22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
 		2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
+		7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
+		7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
+		7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
+		7615D22D236C7EA800781AD3 /* QRScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D225236C7EA800781AD3 /* QRScannerRouter.swift */; };
+		7615D22E236C7EA800781AD3 /* QRScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D225236C7EA800781AD3 /* QRScannerRouter.swift */; };
+		7615D22F236C7EA800781AD3 /* QRScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D225236C7EA800781AD3 /* QRScannerRouter.swift */; };
+		7615D230236C7EA800781AD3 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D226236C7EA800781AD3 /* QRScannerViewController.swift */; };
+		7615D231236C7EA800781AD3 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D226236C7EA800781AD3 /* QRScannerViewController.swift */; };
+		7615D232236C7EA800781AD3 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D226236C7EA800781AD3 /* QRScannerViewController.swift */; };
+		7615D233236C7EA800781AD3 /* QRScannerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D227236C7EA800781AD3 /* QRScannerProtocols.swift */; };
+		7615D234236C7EA800781AD3 /* QRScannerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D227236C7EA800781AD3 /* QRScannerProtocols.swift */; };
+		7615D235236C7EA800781AD3 /* QRScannerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D227236C7EA800781AD3 /* QRScannerProtocols.swift */; };
+		7615D236236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D228236C7EA800781AD3 /* QRScannerInteractor.swift */; };
+		7615D237236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D228236C7EA800781AD3 /* QRScannerInteractor.swift */; };
+		7615D238236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D228236C7EA800781AD3 /* QRScannerInteractor.swift */; };
+		7615D239236C7EA800781AD3 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D229236C7EA800781AD3 /* QRScannerViewController.xib */; };
+		7615D23A236C7EA800781AD3 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D229236C7EA800781AD3 /* QRScannerViewController.xib */; };
+		7615D23B236C7EA800781AD3 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D229236C7EA800781AD3 /* QRScannerViewController.xib */; };
+		7615D23F236C819400781AD3 /* OneButtonPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D23E236C819400781AD3 /* OneButtonPopUp.swift */; };
+		7615D240236C819400781AD3 /* OneButtonPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D23E236C819400781AD3 /* OneButtonPopUp.swift */; };
+		7615D241236C819400781AD3 /* OneButtonPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D23E236C819400781AD3 /* OneButtonPopUp.swift */; };
+		7615D243236C81A500781AD3 /* OneButtonPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D242236C81A500781AD3 /* OneButtonPopUpContent.swift */; };
+		7615D244236C81A500781AD3 /* OneButtonPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D242236C81A500781AD3 /* OneButtonPopUpContent.swift */; };
+		7615D245236C81A500781AD3 /* OneButtonPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D242236C81A500781AD3 /* OneButtonPopUpContent.swift */; };
+		7615D247236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */; };
+		7615D248236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */; };
+		7615D249236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */; };
 		7624A6C6231AB570000BA1C6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
 		7624A6C7231AB571000BA1C6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
 		7629BDD122ACCBBA0051B835 /* ReportQuestionPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */; };
@@ -1224,6 +1251,15 @@
 		5B9797D30EEE2E20FFDA9072 /* Pods-EnglishApp_Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Prod.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		5D3BBC8020625DB07775B99C /* Pods-EcoPark_Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Prod.debug.xcconfig"; path = "Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		70F0180DFFE303ECA7AF66FA /* Pods-EnglishApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPresenter.swift; sourceTree = "<group>"; };
+		7615D225236C7EA800781AD3 /* QRScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerRouter.swift; sourceTree = "<group>"; };
+		7615D226236C7EA800781AD3 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		7615D227236C7EA800781AD3 /* QRScannerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerProtocols.swift; sourceTree = "<group>"; };
+		7615D228236C7EA800781AD3 /* QRScannerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerInteractor.swift; sourceTree = "<group>"; };
+		7615D229236C7EA800781AD3 /* QRScannerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScannerViewController.xib; sourceTree = "<group>"; };
+		7615D23E236C819400781AD3 /* OneButtonPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonPopUp.swift; sourceTree = "<group>"; };
+		7615D242236C81A500781AD3 /* OneButtonPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonPopUpContent.swift; sourceTree = "<group>"; };
+		7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneButtonPopUpContent.xib; sourceTree = "<group>"; };
 		7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportQuestionPopUp.swift; sourceTree = "<group>"; };
 		7629BDD522ACD2450051B835 /* ReportSuccessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSuccessedView.swift; sourceTree = "<group>"; };
 		7629BDD922ACD2580051B835 /* ReportSuccessedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportSuccessedView.xib; sourceTree = "<group>"; };
@@ -1963,6 +1999,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7615D221236C7D9300781AD3 /* HistoryUser */ = {
+			isa = PBXGroup;
+			children = (
+				7615D223236C7E8600781AD3 /* QRScanner */,
+			);
+			path = HistoryUser;
+			sourceTree = "<group>";
+		};
+		7615D223236C7E8600781AD3 /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */,
+				7615D225236C7EA800781AD3 /* QRScannerRouter.swift */,
+				7615D226236C7EA800781AD3 /* QRScannerViewController.swift */,
+				7615D227236C7EA800781AD3 /* QRScannerProtocols.swift */,
+				7615D228236C7EA800781AD3 /* QRScannerInteractor.swift */,
+				7615D229236C7EA800781AD3 /* QRScannerViewController.xib */,
+			);
+			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		7615D23C236C816400781AD3 /* OneButtonPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				7615D23D236C817A00781AD3 /* OneButtonPopUpContent */,
+				7615D23E236C819400781AD3 /* OneButtonPopUp.swift */,
+			);
+			path = OneButtonPopUp;
+			sourceTree = "<group>";
+		};
+		7615D23D236C817A00781AD3 /* OneButtonPopUpContent */ = {
+			isa = PBXGroup;
+			children = (
+				7615D242236C81A500781AD3 /* OneButtonPopUpContent.swift */,
+				7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */,
+			);
+			path = OneButtonPopUpContent;
+			sourceTree = "<group>";
+		};
 		7629BDD422ACD2230051B835 /* ReportSuccessedPopUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -2121,6 +2196,7 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7615D221236C7D9300781AD3 /* HistoryUser */,
 				22BE84CD236978C40056DD51 /* ParkingUserDetail */,
 				17FCC5F5236AE49F003E98D8 /* ParkingInfo */,
 				22EB900E23684AFA00F77BC0 /* BookingInfo */,
@@ -2329,6 +2405,7 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				7615D23C236C816400781AD3 /* OneButtonPopUp */,
 				22BE84AD23692FBF0056DD51 /* BookingPopUp */,
 				22EB900023683B0900F77BC0 /* ParkingDetailPopUp */,
 				2238871B2366DF6B00DAC978 /* HomeFilterPopUp */,
@@ -2989,6 +3066,7 @@
 				DE95318A228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE361E832283E60500FA3B0D /* AppDropDownCell.xib in Resources */,
 				22BE84BD236975030056DD51 /* UtilityView.xib in Resources */,
+				7615D239236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
 				766AE80022B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */,
@@ -3025,6 +3103,7 @@
 				22B4B325236ABC4C004BD8FB /* PreviewPhotoViewController.xib in Resources */,
 				223887182366D9A700DAC978 /* ParkingSortView.xib in Resources */,
 				DE95310E2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
+				7615D247236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */,
 				2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				22BE84CA236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE361E722283E60500FA3B0D /* AppTextField.xib in Resources */,
@@ -3072,6 +3151,7 @@
 				22BE84BE236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80122B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174B235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
+				7615D23A236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
 				22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */,
@@ -3108,6 +3188,7 @@
 				223887192366D9A700DAC978 /* ParkingSortView.xib in Resources */,
 				DE95310F2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
 				2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */,
+				7615D248236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */,
 				22BE84CB236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE9530532287DF4800E3F688 /* AppTextField.xib in Resources */,
 				DE89D1D022A4126C000638B0 /* WebViewController.xib in Resources */,
@@ -3155,6 +3236,7 @@
 				22BE84BF236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80222B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174C235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
+				7615D23B236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
 				22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */,
@@ -3191,6 +3273,7 @@
 				2238871A2366D9A700DAC978 /* ParkingSortView.xib in Resources */,
 				DE9531102287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
 				2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */,
+				7615D249236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */,
 				22BE84CC236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */,
 				DE89D1D122A4126C000638B0 /* WebViewController.xib in Resources */,
@@ -3402,6 +3485,7 @@
 				DE361DFE2283E57900FA3B0D /* UITextFiled+extension.swift in Sources */,
 				DE49F7FC22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE361F532283E85000FA3B0D /* UserAPIService.swift in Sources */,
+				7615D243236C81A500781AD3 /* OneButtonPopUpContent.swift in Sources */,
 				DE361DF82283E57900FA3B0D /* UIView+extension.swift in Sources */,
 				DE952F802287D2A700E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				DE952F9E2287D2A700E3F688 /* KActivityIndicatorType.swift in Sources */,
@@ -3439,6 +3523,7 @@
 				2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE361F2F2283E85000FA3B0D /* PhoneEntity.swift in Sources */,
 				DE952F912287D2A700E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				7615D233236C7EA800781AD3 /* QRScannerProtocols.swift in Sources */,
 				223886FE2366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
 				17FCC608236AE4CF003E98D8 /* ParkingInfoInteractor.swift in Sources */,
 				2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */,
@@ -3475,6 +3560,7 @@
 				2238870F2366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE952F992287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				17C2C4C1236C26810020B299 /* SlideImageCell.swift in Sources */,
+				7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */,
 				766AE80822B02393002D474E /* ViewFeature.swift in Sources */,
 				17FCC5B6236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE952F8A2287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
@@ -3491,6 +3577,7 @@
 				76CF522022CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				22BE84C12369750F0056DD51 /* UtilityView.swift in Sources */,
 				DE361F452283E85000FA3B0D /* BaseParam.swift in Sources */,
+				7615D22D236C7EA800781AD3 /* QRScannerRouter.swift in Sources */,
 				175C73422367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
 				175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D4236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
@@ -3551,6 +3638,7 @@
 				2A6C5ED422EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				17FCC5E6236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
 				DE361DD82283E4BD00FA3B0D /* LoginViewController.swift in Sources */,
+				7615D230236C7EA800781AD3 /* QRScannerViewController.swift in Sources */,
 				22BE84B2236930080056DD51 /* BookingPopUpContent.swift in Sources */,
 				DE952F8E2287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				1768973923697E62001F7383 /* SignUpPartnerStep2ViewController.swift in Sources */,
@@ -3607,6 +3695,7 @@
 				DE361DE72283E54C00FA3B0D /* BaseView.swift in Sources */,
 				175C73392367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE361F392283E85000FA3B0D /* APIError.swift in Sources */,
+				7615D236236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				22BE84B8236930080056DD51 /* BookingPopUp.swift in Sources */,
 				DE361F332283E85000FA3B0D /* UserEntity.swift in Sources */,
 				DE361F342283E85000FA3B0D /* FaceBookEntity.swift in Sources */,
@@ -3674,6 +3763,7 @@
 				DE361E002283E57900FA3B0D /* Button+extension.swift in Sources */,
 				DE49F83722A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
 				DEBD673B228D48EB004B74C8 /* CreateGroupContent.swift in Sources */,
+				7615D23F236C819400781AD3 /* OneButtonPopUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3688,6 +3778,7 @@
 				DE952FB32287DF4800E3F688 /* UITextFiled+extension.swift in Sources */,
 				DE49F7FD22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE952FB42287DF4800E3F688 /* UserAPIService.swift in Sources */,
+				7615D244236C81A500781AD3 /* OneButtonPopUpContent.swift in Sources */,
 				DE952FB52287DF4800E3F688 /* UIView+extension.swift in Sources */,
 				DE952FB62287DF4800E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				DE952FB72287DF4800E3F688 /* KActivityIndicatorType.swift in Sources */,
@@ -3725,6 +3816,7 @@
 				17FCC5BD236AB7A9003E98D8 /* SignUpPartnerStep3Interactor.swift in Sources */,
 				2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				1781C7E6236C383500F053C1 /* SlideImageCell.swift in Sources */,
+				7615D234236C7EA800781AD3 /* QRScannerProtocols.swift in Sources */,
 				DE952FC62287DF4800E3F688 /* PhoneEntity.swift in Sources */,
 				DE952FC72287DF4800E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				223886FF2366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
@@ -3761,6 +3853,7 @@
 				DE49F81C22A3DB9C00A92C63 /* NotificationDetailPresenter.swift in Sources */,
 				223887102366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE952FD22287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */,
 				766AE80922B02393002D474E /* ViewFeature.swift in Sources */,
 				17FCC5B7236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE952FD32287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
@@ -3777,6 +3870,7 @@
 				76CF522122CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				22BE84C22369750F0056DD51 /* UtilityView.swift in Sources */,
 				DE952FD82287DF4800E3F688 /* BaseParam.swift in Sources */,
+				7615D22E236C7EA800781AD3 /* QRScannerRouter.swift in Sources */,
 				175C73432367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
 				175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D5236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
@@ -3837,6 +3931,7 @@
 				2A6C5ED522EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				17FCC5E7236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
 				DE952FF62287DF4800E3F688 /* LoginViewController.swift in Sources */,
+				7615D231236C7EA800781AD3 /* QRScannerViewController.swift in Sources */,
 				22BE84B3236930080056DD51 /* BookingPopUpContent.swift in Sources */,
 				DE952FF72287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				1768973A23697E62001F7383 /* SignUpPartnerStep2ViewController.swift in Sources */,
@@ -3893,6 +3988,7 @@
 				175C733A2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE9530142287DF4800E3F688 /* APIError.swift in Sources */,
 				22BE84B9236930080056DD51 /* BookingPopUp.swift in Sources */,
+				7615D237236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				DE9530152287DF4800E3F688 /* UserEntity.swift in Sources */,
 				DE9530162287DF4800E3F688 /* FaceBookEntity.swift in Sources */,
 				DE9530172287DF4800E3F688 /* ForgotPasswordViewController.swift in Sources */,
@@ -3960,6 +4056,7 @@
 				DE95303E2287DF4800E3F688 /* Button+extension.swift in Sources */,
 				DE49F83822A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
 				DEBD673C228D48EB004B74C8 /* CreateGroupContent.swift in Sources */,
+				7615D240236C819400781AD3 /* OneButtonPopUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3974,6 +4071,7 @@
 				DE9530612287DF6400E3F688 /* UITextFiled+extension.swift in Sources */,
 				DE49F7FE22A3D81D00A92C63 /* NotificationListRouter.swift in Sources */,
 				DE9530622287DF6400E3F688 /* UserAPIService.swift in Sources */,
+				7615D245236C81A500781AD3 /* OneButtonPopUpContent.swift in Sources */,
 				DE9530632287DF6400E3F688 /* UIView+extension.swift in Sources */,
 				DE9530642287DF6400E3F688 /* KActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
@@ -4011,6 +4109,7 @@
 				17FCC5BE236AB7A9003E98D8 /* SignUpPartnerStep3Interactor.swift in Sources */,
 				2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				1781C7E5236C383500F053C1 /* SlideImageCell.swift in Sources */,
+				7615D235236C7EA800781AD3 /* QRScannerProtocols.swift in Sources */,
 				DE9530732287DF6400E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
 				DE9530742287DF6400E3F688 /* PhoneEntity.swift in Sources */,
 				223887002366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
@@ -4047,6 +4146,7 @@
 				DE95307D2287DF6400E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				223887112366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE95307F2287DF6400E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
+				7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */,
 				DE49F81D22A3DB9C00A92C63 /* NotificationDetailPresenter.swift in Sources */,
 				17FCC5B8236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE9530802287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
@@ -4063,6 +4163,7 @@
 				DE9530842287DF6400E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
 				22BE84C32369750F0056DD51 /* UtilityView.swift in Sources */,
 				DE9530852287DF6400E3F688 /* Strings.swift in Sources */,
+				7615D22F236C7EA800781AD3 /* QRScannerRouter.swift in Sources */,
 				175C73442367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
 				175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D6236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
@@ -4123,6 +4224,7 @@
 				DE9530A12287DF6400E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				17FCC5E8236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
 				DE9530A22287DF6400E3F688 /* String+extension.swift in Sources */,
+				7615D232236C7EA800781AD3 /* QRScannerViewController.swift in Sources */,
 				22BE84B4236930080056DD51 /* BookingPopUpContent.swift in Sources */,
 				DE9530A32287DF6400E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				1768973B23697E62001F7383 /* SignUpPartnerStep2ViewController.swift in Sources */,
@@ -4179,6 +4281,7 @@
 				175C733B2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE9530C32287DF6400E3F688 /* UserEntity.swift in Sources */,
 				22BE84BA236930080056DD51 /* BookingPopUp.swift in Sources */,
+				7615D238236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				DE9530C42287DF6400E3F688 /* FaceBookEntity.swift in Sources */,
 				DE9530C52287DF6400E3F688 /* ForgotPasswordViewController.swift in Sources */,
 				DE953186228846D400E3F688 /* ChangePasswordProtocols.swift in Sources */,
@@ -4246,6 +4349,7 @@
 				DE9530EC2287DF6400E3F688 /* Button+extension.swift in Sources */,
 				DE49F83922A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
 				DEBD673D228D48EB004B74C8 /* CreateGroupContent.swift in Sources */,
+				7615D241236C819400781AD3 /* OneButtonPopUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

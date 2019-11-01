@@ -6,9 +6,10 @@
 //  Copyright © 2019 edward. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PopUpHelper {
+    
     static let shared = PopUpHelper()
     
     
@@ -58,11 +59,6 @@ class PopUpHelper {
         
         popUp.showPopUp(message: LocalizableKey.popUpLogout.showLanguage, completionNo: completionNo, completionYes: completionYes)
     }
-    
-//    func showNotification(message: String, completionYes: CompletionClosure?) {
-//        let popUp = NotificationPopUp()
-//        popUp.showPopUp(message: message, completion: completionYes)
-//    }
     
     func showCreateGroup(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
         let popUp = CreateGroupPopUp()
@@ -178,4 +174,30 @@ class PopUpHelper {
         popUp.showPopUp(message: LocalizableKey.notAllowGifPhoto.showLanguage, completion: completionYes)
     }
     
+    
+    // MARK: EcoParking
+    func showInvalidQR(width: CGFloat = 350, height: CGFloat, completion: CompletionClosure?){
+        let popUp = OneButtonPopUp()
+                
+        let title = "Không hợp lệ"
+        
+        let blueAttr = [ NSAttributedString.Key.foregroundColor: UIColor.blue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize),]
+        let blackAttr = [ NSAttributedString.Key.foregroundColor: UIColor.black ]
+        
+        let string = "ECOPARKING"
+        let attrString = NSAttributedString(string: string, attributes: blueAttr)
+        
+        
+        let content1 = NSAttributedString(string: "Mã QR này không thuộc hệ thống ", attributes: blackAttr)
+        let content2 = NSAttributedString(string: ".\nVui lòng đảm bảo bạn đã quét đúng thông tin!", attributes: blackAttr)
+        
+        let content = NSMutableAttributedString()
+        content.append(content1)
+        content.append(attrString)
+        content.append(content2)
+        
+        let buttonTitle = "Thử lại"
+        
+        popUp.showPopUp(titlePopUp: title, contentPopUpAtributedString: content, buttonTitle: buttonTitle, width: width, height: height, completion: completion)
+    }
 }

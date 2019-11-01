@@ -15,6 +15,7 @@ enum StyleNavigation {
 
 open class BaseViewController: UIViewController {
     
+    let popUpwidth = UIScreen.main.bounds.width - 30
     let mainBackgroundColor = UIColor.black
     let mainNavigationBarColor = UIColor.black
     
