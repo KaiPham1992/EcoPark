@@ -33,7 +33,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-ZS-D27">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="835"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-pd-txg" customClass="AppImageSlide" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-pd-txg" customClass="AppImageSlide" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="8" width="343" height="193"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -54,9 +54,9 @@
                                             <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZx-ZX-zrS">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZx-ZX-zrS" customClass="AppRatingView" customModule="EcoPark_AppStore" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="33" width="343" height="20"/>
-                                            <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="sUM-TO-nwh"/>
                                             </constraints>
@@ -183,7 +183,7 @@
                                         <constraint firstAttribute="height" constant="40" id="zLo-xa-izs"/>
                                     </constraints>
                                 </stackView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJR-tm-05A" customClass="UtilityView" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJR-tm-05A" customClass="UtilityView" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="555" width="343" height="130"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

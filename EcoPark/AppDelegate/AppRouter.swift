@@ -52,9 +52,10 @@ class AppRouter {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
 
-//        let homeVC = ParkingUserDetailRouter.createModule()
+        let homeVC = ParkingUserDetailRouter.createModule()
 
-        let homeVC = ParkingInfoRouter.createModule()
+
+//        let homeVC = HomeRouter.createModule()
 
         windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }

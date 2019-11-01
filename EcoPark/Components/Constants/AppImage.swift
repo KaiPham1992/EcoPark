@@ -16,7 +16,6 @@ struct AppImage {
     
     static let imgUnCheck = UIImage(named: "UnCheck")!
     static let imgCheck = UIImage(named: "Check")!
-    
     static let imgMenu = UIImage(named: "ic_menu")!
     static let imgAddImage = UIImage(named: "ic_add_image- 1")!
     // Menu
@@ -83,4 +82,8 @@ struct AppImage {
     
     static let imgCoffeeOn = UIImage(named: "ic_coffee_on")!
     static let imgCoffeeOff = UIImage(named: "ic_coffee_off")!
+    
+    static let imgStarFilled = UIImage(named: "ic_star_filled")!
+    static let imgStarHalf = UIImage(named: "ic_star_half")!
+    static let imgStarEmpty = UIImage(named: "ic_star_outline")!
 }
