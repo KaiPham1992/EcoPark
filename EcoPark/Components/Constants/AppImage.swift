@@ -16,8 +16,8 @@ struct AppImage {
     
     static let imgUnCheck = UIImage(named: "UnCheck")!
     static let imgCheck = UIImage(named: "Check")!
-    
     static let imgMenu = UIImage(named: "ic_menu")!
+    
     // Menu
         static let imgHistoryParking  = UIImage(named: "ic_historyparking_on")!.withRenderingMode(.alwaysTemplate)
         static let imgMyParking = UIImage(named: "ic_myparking_off")!.withRenderingMode(.alwaysTemplate)
@@ -82,4 +82,8 @@ struct AppImage {
     
     static let imgCoffeeOn = UIImage(named: "ic_coffee_on")!
     static let imgCoffeeOff = UIImage(named: "ic_coffee_off")!
+    
+    static let imgStarFilled = UIImage(named: "ic_star_filled")!
+    static let imgStarHalf = UIImage(named: "ic_star_half")!
+    static let imgStarEmpty = UIImage(named: "ic_star_outline")!
 }

@@ -2,14 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Obee Dev</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -77,6 +73,10 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
+	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Obee muốn truy cập hình ảnh để lấy ảnh thay avatar</string>

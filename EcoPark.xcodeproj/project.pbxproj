@@ -242,6 +242,12 @@
 		2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
 		2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
 		2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20723653B0300B570E3 /* NecContainerViewController.swift */; };
+		22AE2208236C1A6100148E2C /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE2206236C1A6000148E2C /* AppRatingView.swift */; };
+		22AE2209236C1A6100148E2C /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE2206236C1A6000148E2C /* AppRatingView.swift */; };
+		22AE220A236C1A6100148E2C /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE2206236C1A6000148E2C /* AppRatingView.swift */; };
+		22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
+		22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
+		22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
 		22B4B31C236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
 		22B4B31D236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
 		22B4B31E236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
@@ -1130,6 +1136,8 @@
 		2292F20523653B0300B570E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2292F20623653B0300B570E3 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		2292F20723653B0300B570E3 /* NecContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecContainerViewController.swift; sourceTree = "<group>"; };
+		22AE2206236C1A6000148E2C /* AppRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
+		22AE2207236C1A6100148E2C /* AppRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppRatingView.xib; sourceTree = "<group>"; };
 		22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppImageSlide.swift; sourceTree = "<group>"; };
 		22B4B318236ABC4C004BD8FB /* AppImageSlide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppImageSlide.xib; sourceTree = "<group>"; };
 		22B4B31A236ABC4C004BD8FB /* PreviewPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPhotoViewController.swift; sourceTree = "<group>"; };
@@ -1307,7 +1315,7 @@
 		DE361F232283E85000FA3B0D /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		DE361F242283E85000FA3B0D /* UserAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		DE361F542283E8E200FA3B0D /* ParentNotificationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentNotificationEntity.swift; sourceTree = "<group>"; };
-		DE3CC33A2283DD980037DBE4 /* EcoPark Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EcoPark Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3CC33A2283DD980037DBE4 /* Eco Park Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco Park Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3CC33D2283DD980037DBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3CC3472283DD990037DBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE3CC3492283DD990037DBE4 /* EcoPark_Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EcoPark_Dev-Info.plist"; sourceTree = "<group>"; };
@@ -1667,6 +1675,15 @@
 				2292F20723653B0300B570E3 /* NecContainerViewController.swift */,
 			);
 			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		22AE2205236C1A6000148E2C /* AppRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				22AE2206236C1A6000148E2C /* AppRatingView.swift */,
+				22AE2207236C1A6100148E2C /* AppRatingView.xib */,
+			);
+			path = AppRatingView;
 			sourceTree = "<group>";
 		};
 		22B4B316236ABC4C004BD8FB /* AppImageSlide */ = {
@@ -2133,6 +2150,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				22AE2205236C1A6000148E2C /* AppRatingView */,
 				22B4B316236ABC4C004BD8FB /* AppImageSlide */,
 				22BE84BB236974AB0056DD51 /* UtilityView */,
 				17FCC60E236AE5C9003E98D8 /* SwitchCustomView */,
@@ -2421,7 +2439,7 @@
 		DE3CC33B2283DD980037DBE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE3CC33A2283DD980037DBE4 /* EcoPark Dev.app */,
+				DE3CC33A2283DD980037DBE4 /* Eco Park Dev.app */,
 				DE95305A2287DF4800E3F688 /* OBee English Practice Test.app */,
 				DE9531082287DF6400E3F688 /* EcoPark_AppStore.app */,
 			);
@@ -2753,7 +2771,7 @@
 			);
 			name = EcoPark_Dev;
 			productName = EnglishApp;
-			productReference = DE3CC33A2283DD980037DBE4 /* EcoPark Dev.app */;
+			productReference = DE3CC33A2283DD980037DBE4 /* Eco Park Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DE952FAE2287DF4800E3F688 /* EcoPark_Prod */ = {
@@ -2890,6 +2908,7 @@
 				22BE84BD236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80022B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
+				22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749D22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE361E792283E60500FA3B0D /* AppSearchBar.xib in Resources */,
 				76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
@@ -2968,6 +2987,7 @@
 				22BE84BE236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80122B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174B235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
+				22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
@@ -3046,6 +3066,7 @@
 				22BE84BF236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80222B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174C235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
+				22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
@@ -3517,6 +3538,7 @@
 				DE361F512283E85000FA3B0D /* NotificationAPIService.swift in Sources */,
 				DE2ADE7522841BB9003768CE /* MenuPresenter.swift in Sources */,
 				DEECF87B22870B3D00A4678B /* Bundle+extension.swift in Sources */,
+				22AE2208236C1A6100148E2C /* AppRatingView.swift in Sources */,
 				DEECF87922870AEB00A4678B /* LanguageHelper.swift in Sources */,
 				DE952F922287D2A700E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				DE361F3D2283E85000FA3B0D /* NetworkRequest.swift in Sources */,
@@ -3798,6 +3820,7 @@
 				DE9530232287DF4800E3F688 /* NotificationAPIService.swift in Sources */,
 				DE9530242287DF4800E3F688 /* MenuPresenter.swift in Sources */,
 				DE9530252287DF4800E3F688 /* Bundle+extension.swift in Sources */,
+				22AE2209236C1A6100148E2C /* AppRatingView.swift in Sources */,
 				DE9530262287DF4800E3F688 /* LanguageHelper.swift in Sources */,
 				DE9530272287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				DE9530282287DF4800E3F688 /* NetworkRequest.swift in Sources */,
@@ -4079,6 +4102,7 @@
 				DE9530D22287DF6400E3F688 /* MenuPresenter.swift in Sources */,
 				DE9530D32287DF6400E3F688 /* Bundle+extension.swift in Sources */,
 				DE9530D42287DF6400E3F688 /* LanguageHelper.swift in Sources */,
+				22AE220A236C1A6100148E2C /* AppRatingView.swift in Sources */,
 				DE9530D52287DF6400E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				DE9530D62287DF6400E3F688 /* NetworkRequest.swift in Sources */,
 				768074B022C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
@@ -4280,7 +4304,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.engma.ecopark-ios";
-				PRODUCT_NAME = "EcoPark Dev";
+				PRODUCT_NAME = "Eco Park Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.engma.ecopark-ios";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEV";
 				SWIFT_VERSION = 5.0;
@@ -4305,7 +4329,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.engma.ecopark-ios";
-				PRODUCT_NAME = "EcoPark Dev";
+				PRODUCT_NAME = "Eco Park Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.engma.ecopark-ios";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_VERSION = 5.0;
