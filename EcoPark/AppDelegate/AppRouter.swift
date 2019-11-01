@@ -54,7 +54,7 @@ class AppRouter {
 
 //        let homeVC = ParkingUserDetailRouter.createModule()
 
-        let homeVC = HomeRouter.createModule()
+        let homeVC = ParkingInfoRouter.createModule()
 
         windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }

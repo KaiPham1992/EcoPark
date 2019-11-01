@@ -12,10 +12,79 @@ import UIKit
 
 class ParkingInfoViewController: UIViewController, ParkingInfoViewProtocol {
 
+    @IBOutlet weak var tbParkingInfo: UITableView!
+    
 	var presenter: ParkingInfoPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
     }
 
+}
+
+extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func configTableView() {
+        tbParkingInfo.dataSource = self
+        tbParkingInfo.delegate = self
+        
+        tbParkingInfo.registerXibFile(OtherInfoCell.self)
+        tbParkingInfo.registerXibFile(SlideImageCell.self)
+        tbParkingInfo.registerXibFile(ParkingInfoCell.self)
+        tbParkingInfo.registerXibFile(LicenseInfoCell.self)
+        
+        tbParkingInfo.estimatedRowHeight = 200
+        tbParkingInfo.rowHeight = UITableView.automaticDimension
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 2
+        default:
+            return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
+            let otherInfoCell = tableView.dequeueTableCell(OtherInfoCell.self)
+            return otherInfoCell
+        case 1:
+            if indexPath.row == 0 {
+                let slideImageCell = tableView.dequeueTableCell(SlideImageCell.self)
+                return slideImageCell
+            } else {
+                let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
+                return parkingInfoCell
+            }
+        default:
+            let licenseInfoCell = tableView.dequeueTableCell(LicenseInfoCell.self)
+            
+            return licenseInfoCell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 100
+        case 1:
+            if indexPath.row == 0 {
+                return 215
+            } else {
+                return UITableView.automaticDimension
+            }
+        default:
+            return 230
+        }
+    }
 }

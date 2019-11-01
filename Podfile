@@ -17,6 +17,7 @@ def main_pods
     
     pod 'GoogleMaps', '3.5.0'
     pod 'GooglePlaces', '3.5.0'
+    pod 'ImagePicker', '3.1.0'
 end
 
 target 'EcoPark_Dev' do

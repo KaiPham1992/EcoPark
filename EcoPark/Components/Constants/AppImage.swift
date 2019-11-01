@@ -18,6 +18,7 @@ struct AppImage {
     static let imgCheck = UIImage(named: "Check")!
     
     static let imgMenu = UIImage(named: "ic_menu")!
+    static let imgAddImage = UIImage(named: "ic_add_image- 1")!
     // Menu
         static let imgHistoryParking  = UIImage(named: "ic_historyparking_on")!.withRenderingMode(.alwaysTemplate)
         static let imgMyParking = UIImage(named: "ic_myparking_off")!.withRenderingMode(.alwaysTemplate)
