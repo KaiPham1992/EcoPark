@@ -28,6 +28,8 @@ class RatingPopUp: BasePopUpView {
     
     func showPopUp(width: CGFloat, height: CGFloat, completionCancel: CompletionClosure?, completionSend: CompletionAny?) {
         
+        self.completionNo = completionCancel
+        self.completionRate = completionSend
         super.showPopUp(width: width, height: height)
     }
     
