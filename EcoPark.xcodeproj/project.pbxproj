@@ -456,6 +456,15 @@
 		76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */; };
 		76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */; };
 		76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */; };
+		76662853236D888300019B4E /* PaymentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662852236D888300019B4E /* PaymentPopUp.swift */; };
+		76662854236D888300019B4E /* PaymentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662852236D888300019B4E /* PaymentPopUp.swift */; };
+		76662855236D888300019B4E /* PaymentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662852236D888300019B4E /* PaymentPopUp.swift */; };
+		76662857236D889300019B4E /* PaymentPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662856236D889300019B4E /* PaymentPopUpContent.swift */; };
+		76662858236D889300019B4E /* PaymentPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662856236D889300019B4E /* PaymentPopUpContent.swift */; };
+		76662859236D889300019B4E /* PaymentPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662856236D889300019B4E /* PaymentPopUpContent.swift */; };
+		7666285B236D88A100019B4E /* PaymentPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7666285A236D88A100019B4E /* PaymentPopUpContent.xib */; };
+		7666285C236D88A100019B4E /* PaymentPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7666285A236D88A100019B4E /* PaymentPopUpContent.xib */; };
+		7666285D236D88A100019B4E /* PaymentPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7666285A236D88A100019B4E /* PaymentPopUpContent.xib */; };
 		7666FC6E236D262D00BD813E /* TwoButtonPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7666FC6D236D262D00BD813E /* TwoButtonPopUp.swift */; };
 		7666FC6F236D262D00BD813E /* TwoButtonPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7666FC6D236D262D00BD813E /* TwoButtonPopUp.swift */; };
 		7666FC70236D262D00BD813E /* TwoButtonPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7666FC6D236D262D00BD813E /* TwoButtonPopUp.swift */; };
@@ -1298,6 +1307,9 @@
 		76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountPopUp.swift; sourceTree = "<group>"; };
 		76483BEF229EE3C90079F9A1 /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAccountView.xib; sourceTree = "<group>"; };
+		76662852236D888300019B4E /* PaymentPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPopUp.swift; sourceTree = "<group>"; };
+		76662856236D889300019B4E /* PaymentPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPopUpContent.swift; sourceTree = "<group>"; };
+		7666285A236D88A100019B4E /* PaymentPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentPopUpContent.xib; sourceTree = "<group>"; };
 		7666FC6D236D262D00BD813E /* TwoButtonPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonPopUp.swift; sourceTree = "<group>"; };
 		7666FC71236D263900BD813E /* TwoButtonPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonPopUpContent.swift; sourceTree = "<group>"; };
 		7666FC75236D264600BD813E /* TwoButtonPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoButtonPopUpContent.xib; sourceTree = "<group>"; };
@@ -2121,6 +2133,24 @@
 			path = UpdateAccountPopUp;
 			sourceTree = "<group>";
 		};
+		76662850236D882000019B4E /* PaymentPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				76662851236D887600019B4E /* PaymentPopUpContent */,
+				76662852236D888300019B4E /* PaymentPopUp.swift */,
+			);
+			path = PaymentPopUp;
+			sourceTree = "<group>";
+		};
+		76662851236D887600019B4E /* PaymentPopUpContent */ = {
+			isa = PBXGroup;
+			children = (
+				76662856236D889300019B4E /* PaymentPopUpContent.swift */,
+				7666285A236D88A100019B4E /* PaymentPopUpContent.xib */,
+			);
+			path = PaymentPopUpContent;
+			sourceTree = "<group>";
+		};
 		7666FC6B236D260000BD813E /* TwoButtonPopUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -2495,6 +2525,7 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				76662850236D882000019B4E /* PaymentPopUp */,
 				7666FC79236D311000BD813E /* RatingPopUp */,
 				762E32E1236D1A1B00FF4F3E /* CheckInPopUp */,
 				7615D23C236C816400781AD3 /* OneButtonPopUp */,
@@ -3176,6 +3207,7 @@
 				223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
+				7666285B236D88A100019B4E /* PaymentPopUpContent.xib in Resources */,
 				DE361E8C2283E60500FA3B0D /* AppCheckBox.xib in Resources */,
 				DE2ADE5922841756003768CE /* GoogleService-Dev-Info.plist in Resources */,
 				DE361DDB2283E4BD00FA3B0D /* LoginViewController.xib in Resources */,
@@ -3264,6 +3296,7 @@
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
 				DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info.plist in Resources */,
+				7666285C236D88A100019B4E /* PaymentPopUpContent.xib in Resources */,
 				DE95304E2287DF4800E3F688 /* LoginViewController.xib in Resources */,
 				76BD143C22ACC75500A48635 /* ReportQuestionView.xib in Resources */,
 				DE95304F2287DF4800E3F688 /* YesNoContentView.xib in Resources */,
@@ -3352,6 +3385,7 @@
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
 				DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info.plist in Resources */,
+				7666285D236D88A100019B4E /* PaymentPopUpContent.xib in Resources */,
 				DE9530FC2287DF6400E3F688 /* LoginViewController.xib in Resources */,
 				76BD143D22ACC75500A48635 /* ReportQuestionView.xib in Resources */,
 				DE9530FD2287DF6400E3F688 /* YesNoContentView.xib in Resources */,
@@ -3595,6 +3629,7 @@
 				DE953187228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82122A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
+				76662857236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE952F952287D2A700E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
@@ -3686,6 +3721,7 @@
 				175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D4236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
+				76662853236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
 				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
@@ -3894,6 +3930,7 @@
 				DE953188228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82222A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
+				76662858236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE952FB82287DF4800E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
@@ -3985,6 +4022,7 @@
 				175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D5236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
+				76662854236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
 				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
@@ -4193,6 +4231,7 @@
 				DE9530652287DF6400E3F688 /* KActivityIndicatorType.swift in Sources */,
 				DE953189228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82322A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
+				76662859236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE9530662287DF6400E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
@@ -4284,6 +4323,7 @@
 				175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D6236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
+				76662855236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,

@@ -237,4 +237,11 @@ class PopUpHelper {
         let popUp = RatingPopUp()
         popUp.showPopUp(width: width, height: height, completionCancel: completionCancel, completionSend: completionSend)
     }
+    
+    // MARK: Payment
+    func showPayment(ecoMoney: Int, cashMoney: Int, needToPay: Int, width: CGFloat, height: CGFloat = 220, completionPay: CompletionClosure?) {
+        
+        let popUp = PaymentPopUp()
+        popUp.showPopUp(ecoMoney: ecoMoney, cashMoney: cashMoney, needToPay: needToPay, width: width, height: height, completionPay: completionPay)
+    }
 }
