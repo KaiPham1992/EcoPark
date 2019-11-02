@@ -34,7 +34,7 @@ class OneButtonPopUp: BasePopUpView {
         super.showPopUp(width: width, height: height)
     }
     
-    func showPopUp(titlePopUp: String, contentPopUpNormal: String, buttonTitle: String, width: CGFloat, height: CGFloat,  completion: CompletionClosure?){
+    func showPopUp(titlePopUp: String, contentPopUpNormal: String, buttonTitle: String, width: CGFloat, height: CGFloat,  completion: CompletionClosure?) {
         
         viewPopUp.lbTitlePopUp.text = titlePopUp.uppercased()
         viewPopUp.lbContentPopUp.text = contentPopUpNormal
@@ -44,7 +44,7 @@ class OneButtonPopUp: BasePopUpView {
         super.showPopUp(width: width, height: height)
     }
     
-    @objc func btnPopUpTapped(){
+    @objc func btnPopUpTapped() {
         hidePopUp()
         completionYes?()
     }

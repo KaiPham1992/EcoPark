@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoButtonPopUpContent" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <connections>
+                <outlet property="btnNo" destination="uC5-Io-aoB" id="q2v-0h-VNJ"/>
+                <outlet property="btnYes" destination="G94-C2-I0I" id="82G-VT-7Gp"/>
+                <outlet property="lbContentPopUp" destination="QsR-K3-nwZ" id="h2D-tP-8K0"/>
+                <outlet property="lbTitlePopUp" destination="Tcn-6q-ag2" id="mCN-ZS-34O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POPUP TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcn-6q-ag2">
+                    <rect key="frame" x="16" y="20" width="382" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="kya-U8-ocV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-Io-aoB">
+                    <rect key="frame" x="20" y="231" width="165.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="P2I-NA-WFi"/>
+                        <constraint firstAttribute="height" constant="40" id="uNh-KJ-BKD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="No"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G94-C2-I0I">
+                    <rect key="frame" x="228.5" y="231" width="165.5" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="KYg-8K-Sbe"/>
+                        <constraint firstAttribute="height" constant="40" id="dAf-ml-Uyl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Yes">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.50588235294117645" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popup content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsR-K3-nwZ">
+                    <rect key="frame" x="16" y="61" width="382" height="154"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="G94-C2-I0I" secondAttribute="trailing" constant="20" id="5A2-Ek-rvc"/>
+                <constraint firstItem="QsR-K3-nwZ" firstAttribute="top" secondItem="Tcn-6q-ag2" secondAttribute="bottom" constant="16" id="6q9-15-ksv"/>
+                <constraint firstAttribute="bottom" secondItem="G94-C2-I0I" secondAttribute="bottom" constant="20" id="BUu-ZG-wQr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uC5-Io-aoB" secondAttribute="bottom" constant="20" id="Gny-Ne-lh6"/>
+                <constraint firstItem="QsR-K3-nwZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="IPZ-yA-q6P"/>
+                <constraint firstAttribute="trailing" secondItem="QsR-K3-nwZ" secondAttribute="trailing" constant="16" id="PxB-0u-rEz"/>
+                <constraint firstItem="uC5-Io-aoB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="2/5" id="VPZ-Pc-sbb"/>
+                <constraint firstAttribute="trailing" secondItem="Tcn-6q-ag2" secondAttribute="trailing" constant="16" id="W6C-kq-dik"/>
+                <constraint firstItem="uC5-Io-aoB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="adl-B3-wC0"/>
+                <constraint firstItem="uC5-Io-aoB" firstAttribute="top" secondItem="QsR-K3-nwZ" secondAttribute="bottom" constant="16" id="hhi-VE-gLL"/>
+                <constraint firstItem="Tcn-6q-ag2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="naW-cf-JoF"/>
+                <constraint firstItem="G94-C2-I0I" firstAttribute="width" secondItem="uC5-Io-aoB" secondAttribute="width" id="wqS-I1-abt"/>
+                <constraint firstItem="Tcn-6q-ag2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="zBC-Wz-tpG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-114.17410714285714"/>
+        </view>
+    </objects>
+</document>

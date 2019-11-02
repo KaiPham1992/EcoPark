@@ -16,6 +16,12 @@ class QRScannerViewController: BaseViewController, QRScannerViewProtocol {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {
+            //
+        }) { (rating) in
+            print(rating)
+        }
     }
     
     override func setUpNavigation() {

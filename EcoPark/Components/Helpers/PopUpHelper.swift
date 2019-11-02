@@ -175,8 +175,10 @@ class PopUpHelper {
     }
     
     
-    // MARK: EcoParking
-    func showInvalidQR(width: CGFloat = 350, height: CGFloat, completion: CompletionClosure?){
+    // ---------------- EcoParking ------------------
+    
+    // MARK: Invalid QR
+    func showInvalidQR(width: CGFloat = 350, height: CGFloat, completion: CompletionClosure?) {
         let popUp = OneButtonPopUp()
                 
         let title = "Không hợp lệ"
@@ -199,5 +201,40 @@ class PopUpHelper {
         let buttonTitle = "Thử lại"
         
         popUp.showPopUp(titlePopUp: title, contentPopUpAtributedString: content, buttonTitle: buttonTitle, width: width, height: height, completion: completion)
+    }
+    
+    // MARK: Check in
+    func showCheckIn(name: String, address: String, time: String, width: CGFloat, height: CGFloat, completionYes: CompletionClosure?, completionNo: CompletionClosure? ) {
+        
+        let popUp = CheckInPopUp()
+        popUp.showPopUp(name: name, address: address, time: time, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+    }
+    
+    // MARK: Cancel reservation
+    func showCancelReservation(width: CGFloat, height: CGFloat = 215 , completionYes: CompletionClosure?, completionNo: CompletionClosure?) {
+        
+        let popUp = TwoButtonPopUp()
+        popUp.showPopUp(titlePopUp: "HUỶ GIỮ CHỖ", contentPopUpNormal: "Bạn có chắc muốn huỷ giữ chỗ, chi phí đã thanh toán sẽ không được hoàn lại", btnTitleNo: "Quay lại", btnTitleYes: "Đồng ý", width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+    }
+    
+    // MARK: Extend reservation
+    func showExtendReservation(width: CGFloat, height: CGFloat = 215, completionYes: CompletionClosure?, completionNo: CompletionClosure?) {
+        
+        let popUp = TwoButtonPopUp()
+        popUp.showPopUp(titlePopUp: "GIA HẠN GIỮ CHỖ", contentPopUpNormal: "Gia hạn giữ chỗ sẽ có giá trị trong vòng 60 phút. \nVui lòng thanh toán thêm phí giữ chỗ", btnTitleNo: "Quay lại", btnTitleYes: "Thanh toán ví", width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+    }
+    
+    // MARK: No reservation
+    func showNoReservation(width: CGFloat, height: CGFloat = 215, completionYes: CompletionClosure?, completionNo: CompletionClosure? ) {
+        
+        let popUp = TwoButtonPopUp()
+        popUp.showPopUp(titlePopUp: "CHƯA CÓ ĐẶT CHỖ", contentPopUpNormal: "Bạn chưa đặt chỗ trước tại bãi đỗ này. Bạn có muốn bắt đầu giữ xe không?", btnTitleNo: "Không, cảm ơn", btnTitleYes: "Tiếp tục", width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+    }
+    
+    // MARK: Rating
+    func showRating(width: CGFloat, height: CGFloat = 320, completionCancel: CompletionClosure?, completionSend: CompletionAny? ) {
+        
+        let popUp = RatingPopUp()
+        popUp.showPopUp(width: width, height: height, completionCancel: completionCancel, completionSend: completionSend)
     }
 }
