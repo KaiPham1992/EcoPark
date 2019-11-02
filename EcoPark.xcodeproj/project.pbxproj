@@ -400,6 +400,24 @@
 		2AF2F82E22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
 		2AF2F82F22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
 		2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */; };
+		7609FBC7236D9F530029E003 /* CheckOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC1236D9F530029E003 /* CheckOutPresenter.swift */; };
+		7609FBC8236D9F530029E003 /* CheckOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC1236D9F530029E003 /* CheckOutPresenter.swift */; };
+		7609FBC9236D9F530029E003 /* CheckOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC1236D9F530029E003 /* CheckOutPresenter.swift */; };
+		7609FBCA236D9F530029E003 /* CheckOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC2236D9F530029E003 /* CheckOutRouter.swift */; };
+		7609FBCB236D9F530029E003 /* CheckOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC2236D9F530029E003 /* CheckOutRouter.swift */; };
+		7609FBCC236D9F530029E003 /* CheckOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC2236D9F530029E003 /* CheckOutRouter.swift */; };
+		7609FBCD236D9F530029E003 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC3236D9F530029E003 /* CheckOutViewController.swift */; };
+		7609FBCE236D9F530029E003 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC3236D9F530029E003 /* CheckOutViewController.swift */; };
+		7609FBCF236D9F530029E003 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC3236D9F530029E003 /* CheckOutViewController.swift */; };
+		7609FBD0236D9F530029E003 /* CheckOutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC4236D9F530029E003 /* CheckOutProtocols.swift */; };
+		7609FBD1236D9F530029E003 /* CheckOutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC4236D9F530029E003 /* CheckOutProtocols.swift */; };
+		7609FBD2236D9F530029E003 /* CheckOutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC4236D9F530029E003 /* CheckOutProtocols.swift */; };
+		7609FBD3236D9F530029E003 /* CheckOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC5236D9F530029E003 /* CheckOutInteractor.swift */; };
+		7609FBD4236D9F530029E003 /* CheckOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC5236D9F530029E003 /* CheckOutInteractor.swift */; };
+		7609FBD5236D9F530029E003 /* CheckOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609FBC5236D9F530029E003 /* CheckOutInteractor.swift */; };
+		7609FBD6236D9F530029E003 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7609FBC6236D9F530029E003 /* CheckOutViewController.xib */; };
+		7609FBD7236D9F530029E003 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7609FBC6236D9F530029E003 /* CheckOutViewController.xib */; };
+		7609FBD8236D9F530029E003 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7609FBC6236D9F530029E003 /* CheckOutViewController.xib */; };
 		7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
@@ -1295,6 +1313,12 @@
 		5B9797D30EEE2E20FFDA9072 /* Pods-EnglishApp_Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Prod.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Prod/Pods-EnglishApp_Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		5D3BBC8020625DB07775B99C /* Pods-EcoPark_Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Prod.debug.xcconfig"; path = "Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		70F0180DFFE303ECA7AF66FA /* Pods-EnglishApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7609FBC1236D9F530029E003 /* CheckOutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutPresenter.swift; sourceTree = "<group>"; };
+		7609FBC2236D9F530029E003 /* CheckOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutRouter.swift; sourceTree = "<group>"; };
+		7609FBC3236D9F530029E003 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
+		7609FBC4236D9F530029E003 /* CheckOutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutProtocols.swift; sourceTree = "<group>"; };
+		7609FBC5236D9F530029E003 /* CheckOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutInteractor.swift; sourceTree = "<group>"; };
+		7609FBC6236D9F530029E003 /* CheckOutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutViewController.xib; sourceTree = "<group>"; };
 		7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPresenter.swift; sourceTree = "<group>"; };
 		7615D225236C7EA800781AD3 /* QRScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerRouter.swift; sourceTree = "<group>"; };
 		7615D226236C7EA800781AD3 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
@@ -2065,9 +2089,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7609FBC0236D9F330029E003 /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				7609FBC1236D9F530029E003 /* CheckOutPresenter.swift */,
+				7609FBC2236D9F530029E003 /* CheckOutRouter.swift */,
+				7609FBC3236D9F530029E003 /* CheckOutViewController.swift */,
+				7609FBC4236D9F530029E003 /* CheckOutProtocols.swift */,
+				7609FBC5236D9F530029E003 /* CheckOutInteractor.swift */,
+				7609FBC6236D9F530029E003 /* CheckOutViewController.xib */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
 		7615D221236C7D9300781AD3 /* HistoryUser */ = {
 			isa = PBXGroup;
 			children = (
+				7609FBC0236D9F330029E003 /* CheckOut */,
 				7615D223236C7E8600781AD3 /* QRScanner */,
 			);
 			path = HistoryUser;
@@ -3216,6 +3254,7 @@
 				7680749D22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE361E792283E60500FA3B0D /* AppSearchBar.xib in Resources */,
 				76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
+				7609FBD6236D9F530029E003 /* CheckOutViewController.xib in Resources */,
 				2203D561236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				DE2ADE7A22841BB9003768CE /* MenuViewController.xib in Resources */,
 				17C2C4C2236C26810020B299 /* SlideImageCell.xib in Resources */,
@@ -3306,6 +3345,7 @@
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				1781C7E7236C383900F053C1 /* SlideImageCell.xib in Resources */,
+				7609FBD7236D9F530029E003 /* CheckOutViewController.xib in Resources */,
 				DE95304B2287DF4800E3F688 /* MenuViewController.xib in Resources */,
 				17FCC5EA236AC9B4003E98D8 /* SignUpPartnerWaitingViewController.xib in Resources */,
 				17FCC5C0236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.xib in Resources */,
@@ -3396,6 +3436,7 @@
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */,
 				1781C7E8236C383900F053C1 /* SlideImageCell.xib in Resources */,
+				7609FBD8236D9F530029E003 /* CheckOutViewController.xib in Resources */,
 				DE9530F92287DF6400E3F688 /* MenuViewController.xib in Resources */,
 				17FCC5EB236AC9B4003E98D8 /* SignUpPartnerWaitingViewController.xib in Resources */,
 				17FCC5C1236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.xib in Resources */,
@@ -3823,7 +3864,9 @@
 				DE952F8F2287D2A700E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				762E32EC236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */,
+				7609FBD3236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
 				DE361F4B2283E85000FA3B0D /* UserEndPoint.swift in Sources */,
+				7609FBD0236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A792235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				DE49F7FF22A3D81D00A92C63 /* NotificationListViewController.swift in Sources */,
 				228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */,
@@ -3896,6 +3939,7 @@
 				DE952F9A2287D2A700E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				DE361DFA2283E57900FA3B0D /* UIViewController+extension.swift in Sources */,
 				DE89D1CC22A4126C000638B0 /* WebViewController.swift in Sources */,
+				7609FBCA236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE361E7A2283E60500FA3B0D /* AppSearchBar.swift in Sources */,
 				DE952F972287D2A700E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				DEECF89222871D0400A4678B /* SignUpProtocols.swift in Sources */,
@@ -3920,9 +3964,11 @@
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
 				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DD236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
+				7609FBCD236D9F530029E003 /* CheckOutViewController.swift in Sources */,
 				766AE7FC22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				22EB902123684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522422CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
+				7609FBC7236D9F530029E003 /* CheckOutPresenter.swift in Sources */,
 				17FCC5FC236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
 				76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				7666FC72236D263900BD813E /* TwoButtonPopUpContent.swift in Sources */,
@@ -4125,7 +4171,9 @@
 				DE9530022287DF4800E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				762E32ED236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */,
+				7609FBD4236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
 				DE9530032287DF4800E3F688 /* UserEndPoint.swift in Sources */,
+				7609FBD1236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A793235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				DE49F80022A3D81D00A92C63 /* NotificationListViewController.swift in Sources */,
 				228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */,
@@ -4198,6 +4246,7 @@
 				DE95302B2287DF4800E3F688 /* UIViewController+extension.swift in Sources */,
 				DE89D1CD22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE95302C2287DF4800E3F688 /* AppSearchBar.swift in Sources */,
+				7609FBCB236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE95302D2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				DE95302E2287DF4800E3F688 /* SignUpProtocols.swift in Sources */,
 				DE9530302287DF4800E3F688 /* MapperData.swift in Sources */,
@@ -4222,9 +4271,11 @@
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
 				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DE236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
+				7609FBCE236D9F530029E003 /* CheckOutViewController.swift in Sources */,
 				766AE7FD22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				22EB902223684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522522CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
+				7609FBC8236D9F530029E003 /* CheckOutPresenter.swift in Sources */,
 				17FCC5FD236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
 				76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				7666FC73236D263900BD813E /* TwoButtonPopUpContent.swift in Sources */,
@@ -4427,7 +4478,9 @@
 				DE9530AE2287DF6400E3F688 /* BaseViewController.swift in Sources */,
 				DE9530AF2287DF6400E3F688 /* PostRecordParam.swift in Sources */,
 				762E32EE236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */,
+				7609FBD5236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
 				DE9530B02287DF6400E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				7609FBD2236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A794235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				DE9530B12287DF6400E3F688 /* UserEndPoint.swift in Sources */,
 				DE49F80122A3D81D00A92C63 /* NotificationListViewController.swift in Sources */,
@@ -4500,6 +4553,7 @@
 				DE89D1CE22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE9530DA2287DF6400E3F688 /* AppSearchBar.swift in Sources */,
 				DE9530DB2287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				7609FBCC236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE9530DC2287DF6400E3F688 /* SignUpProtocols.swift in Sources */,
 				7624A6C7231AB571000BA1C6 /* BaseTableViewController.swift in Sources */,
 				DE9530DE2287DF6400E3F688 /* MapperData.swift in Sources */,
@@ -4524,9 +4578,11 @@
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
 				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DF236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
+				7609FBCF236D9F530029E003 /* CheckOutViewController.swift in Sources */,
 				766AE7FE22B02330002D474E /* UpdateFeatureView.swift in Sources */,
 				22EB902323684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522622CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
+				7609FBC9236D9F530029E003 /* CheckOutPresenter.swift in Sources */,
 				17FCC5FE236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
 				76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				7666FC74236D263900BD813E /* TwoButtonPopUpContent.swift in Sources */,
