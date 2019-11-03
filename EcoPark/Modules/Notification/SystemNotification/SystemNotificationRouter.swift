@@ -1,5 +1,5 @@
 //
-//  NotificationDetailRouter.swift
+//  SystemNotificationRouter.swift
 //  EcoPark
 //
 //  Created Henry on 11/3/19.
@@ -10,16 +10,16 @@
 
 import UIKit
 
-class NotificationDetailRouter: NotificationDetailWireframeProtocol {
+class SystemNotificationRouter: SystemNotificationWireframeProtocol {
 
     weak var viewController: UIViewController?
 
     static func createModule() -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = NotificationDetailViewController(nibName: nil, bundle: nil)
-        let interactor = NotificationDetailInteractor()
-        let router = NotificationDetailRouter()
-        let presenter = NotificationDetailPresenter(interface: view, interactor: interactor, router: router)
+        let view = SystemNotificationViewController(nibName: nil, bundle: nil)
+        let interactor = SystemNotificationInteractor()
+        let router = SystemNotificationRouter()
+        let presenter = SystemNotificationPresenter(interface: view, interactor: interactor, router: router)
 
         view.presenter = presenter
         interactor.presenter = presenter
