@@ -18,34 +18,22 @@ class PageViewController : ButtonBarPagerTabStripViewController{
     }
     
     func setupPage(){
-        self.settings.style.buttonBarBackgroundColor = .white
-        self.settings.style.buttonBarItemBackgroundColor = .white
-        self.settings.style.selectedBarBackgroundColor = AppColor.yellow
+        self.settings.style.buttonBarBackgroundColor = .black
+        self.settings.style.buttonBarItemBackgroundColor = .black
+        self.settings.style.selectedBarBackgroundColor = AppColor.color_0_129_255
         self.settings.style.buttonBarItemFont = AppFont.fontRegular15
         self.settings.style.buttonBarHeight = 48
-        self.settings.style.selectedBarHeight = 2
+        self.settings.style.selectedBarHeight = 5
         self.settings.style.buttonBarMinimumLineSpacing = 0
-        self.settings.style.buttonBarItemTitleColor = .white
+        self.settings.style.buttonBarItemTitleColor = AppColor.color_0_129_255
         self.settings.style.buttonBarItemsShouldFillAvailableWidth = true
         self.settings.style.buttonBarLeftContentInset = 0
         self.settings.style.buttonBarRightContentInset = 0
         changeCurrentIndexProgressive = {(_ oldCell: ButtonBarViewCell?, _ newCell: ButtonBarViewCell?, _ progressPercentage: CGFloat, _ changeCurrentIndex: Bool, _ animated: Bool) -> Void in
             guard changeCurrentIndex == true else {return}
-            oldCell?.label.textColor  = AppColor.gray999999
-            newCell?.label.textColor = AppColor.yellow
+            oldCell?.label.textColor  = AppColor.color_102_102_102
+            newCell?.label.textColor = AppColor.color_0_129_255
         }
-    }
-    
-//    func gotoIndex(index: Int) {
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.02) {
-//            if index < self.viewControllers.count {
-//                self.moveToViewController(at: index)
-//            }
-//        }
-//    }
-    
-    func addBackToNavigation(icon: UIImage = UIImage(named: "Material_Icons_white_chevron_left")! ) {
-        addButtonImageToNavigation(image: icon, style: .left, action: #selector(btnBackTapped))
     }
     
     @objc func btnBackTapped() {
@@ -74,7 +62,7 @@ class PageViewController : ButtonBarPagerTabStripViewController{
         }
     }
     
-    func setNavigationColor(color: UIColor = AppColor.yellow) {
+    func setNavigationColor(color: UIColor = UIColor.black) {
         self.navigationController?.navigationBar.barTintColor = color
     }
     
