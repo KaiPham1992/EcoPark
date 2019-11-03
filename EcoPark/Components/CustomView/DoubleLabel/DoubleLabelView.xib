@@ -12,7 +12,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTime" destination="0fB-cr-XUY" id="GTT-K7-NsA"/>
+                <outlet property="lblTitle" destination="6KI-wY-ut8" id="4iE-hG-BtY"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
