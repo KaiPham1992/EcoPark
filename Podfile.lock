@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.0)
+  - Cosmos (20.0.1)
   - DropDown (2.3.13)
   - Firebase/Core (6.9.0):
     - Firebase/CoreOnly
@@ -104,6 +105,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.9.0)
+  - Cosmos (~> 20.0)
   - DropDown (= 2.3.13)
   - Firebase/Core (= 6.9.0)
   - Firebase/Messaging (= 6.9.0)
@@ -124,6 +126,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - DropDown
     - Firebase
     - FirebaseAnalytics
@@ -154,6 +157,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Firebase: 2d750c54cda57d5a6ae31212cfe5cc813c6be7e4
   FirebaseAnalytics: 5d9ccbf46ed25d3ec9304d263f85bddf1e93e2d2
@@ -182,6 +186,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: fb831c55f528b22ff885fa5d9c0c7a7fe69ecbb1
+PODFILE CHECKSUM: fd8f0dcc34a2de49d6f9afcbf8ccf58c61c85ad6
 
 COCOAPODS: 1.8.4

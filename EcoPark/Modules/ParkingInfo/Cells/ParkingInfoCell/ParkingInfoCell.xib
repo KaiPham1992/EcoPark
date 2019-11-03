@@ -54,7 +54,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-5A-Ac2">
                                 <rect key="frame" x="0.0" y="354" width="335" height="130"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="UoQ-BV-TpA"/>
                                 </constraints>
@@ -66,7 +66,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uAf-ZI-mih" firstAttribute="top" secondItem="uJi-zT-wUT" secondAttribute="bottom" constant="8" id="1ja-Qp-0h1"/>
                             <constraint firstItem="uAf-ZI-mih" firstAttribute="trailing" secondItem="uJi-zT-wUT" secondAttribute="trailing" id="3lg-IC-KMi"/>
@@ -91,6 +91,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="YA3-9x-ir6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Jfp-wQ-qcU"/>
                     <constraint firstAttribute="trailing" secondItem="YA3-9x-ir6" secondAttribute="trailing" constant="16" id="QpZ-yf-pIo"/>

@@ -118,16 +118,21 @@
 "ParkingInfo" = "Thông tin BÃI ĐỖ";
 "ParkingName" = "Tên hiển thị bãi xe *";
 "ParkingType" = "Loại bãi *";
-"ParkingCapaciti" = "Sức chứa *";
+"ParkingCapacity" = "Sức chứa *";
 "ParkingAddress" = "Địa chỉ bãi xe *";
 "ParkingOpen" = "Mở cửa *";
 "ParkingClose" = "Đóng cửa *";
 "ParkingPrice" = "giá dịch vụ";
 "PriceAHours" = " Đơn giá theo giờ *";
 "PriceCombo" = "Đơn giá theo gói (8 giờ) *";
-"ParkingLicense" = "GIẤY PHÉP KINH DOANH";
+"ParkingLicense" = "Giấy phép kinh doanh";
 "ParkingTaxCode" = "Mã số thuế";
-
+"hoursPrice" = "Giá theo giờ";
+"comboPrice" = "Giá theo gói";
+"capacity" = "Sức chứa";
+"place" = "Chỗ";
+"vndHours" = "VND/ giờ";
+"vnd8Hours" = "VND/ 8 giờ";
 // Sign Up parner 3
 "UtilityOther" = "Tiện ích khác";
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";

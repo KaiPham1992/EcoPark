@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckInPopUpContent" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCancle" destination="fsD-W3-juq" id="Uzq-Jf-5eP"/>
+                <outlet property="btnCheckIn" destination="hGM-cJ-ve3" id="45z-Mz-7tC"/>
+                <outlet property="lbAddress" destination="VYt-pI-34g" id="Gzh-lt-ba4"/>
+                <outlet property="lbName" destination="Khe-7j-Nta" id="WMd-DH-sjY"/>
+                <outlet property="lbTime" destination="Qxx-D6-bo5" id="k76-Lm-Tel"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-Ki-KJa">
+                    <rect key="frame" x="16" y="64" width="382" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="1jR-DE-p0T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khe-7j-Nta">
+                    <rect key="frame" x="16" y="109" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYt-pI-34g">
+                    <rect key="frame" x="16" y="149.5" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.50588235294117645" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã dự kiến đến bãi lúc " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv4-6z-hy1">
+                    <rect key="frame" x="16" y="190" width="156" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="3t9-BB-rKL"/>
+                        <constraint firstAttribute="width" constant="156" id="Bgx-bZ-dGt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxx-D6-bo5">
+                    <rect key="frame" x="188" y="190" width="210" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsD-W3-juq">
+                    <rect key="frame" x="16" y="319" width="165.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="i9u-ro-1Qf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Huỷ"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGM-cJ-ve3">
+                    <rect key="frame" x="232.5" y="319" width="165.5" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8fK-8J-DPB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Check in">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Khe-7j-Nta" firstAttribute="top" secondItem="1tz-Ki-KJa" secondAttribute="bottom" constant="20" id="2jl-pJ-JQF"/>
+                <constraint firstItem="fsD-W3-juq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lv4-6z-hy1" secondAttribute="bottom" constant="16" id="3hU-mP-8qs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1tz-Ki-KJa" secondAttribute="trailing" constant="16" id="6sr-Py-gTx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Khe-7j-Nta" secondAttribute="trailing" constant="16" id="Aiu-En-V1o"/>
+                <constraint firstItem="fsD-W3-juq" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="2/5" id="ENS-QO-RPp"/>
+                <constraint firstItem="lv4-6z-hy1" firstAttribute="top" secondItem="VYt-pI-34g" secondAttribute="bottom" constant="20" id="Ksp-v9-J5b"/>
+                <constraint firstItem="1tz-Ki-KJa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="LpO-ej-FL5"/>
+                <constraint firstItem="Khe-7j-Nta" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Mxl-3R-Ojw"/>
+                <constraint firstItem="hGM-cJ-ve3" firstAttribute="width" secondItem="fsD-W3-juq" secondAttribute="width" id="S5Q-hG-Qug"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fsD-W3-juq" secondAttribute="bottom" constant="20" id="VSP-aB-Ihq"/>
+                <constraint firstItem="Qxx-D6-bo5" firstAttribute="leading" secondItem="lv4-6z-hy1" secondAttribute="trailing" constant="16" id="Vpa-vB-7uC"/>
+                <constraint firstItem="fsD-W3-juq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YBP-HA-jlk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hGM-cJ-ve3" secondAttribute="trailing" constant="16" id="a6M-vY-ADT"/>
+                <constraint firstItem="1tz-Ki-KJa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="cUV-Cg-990"/>
+                <constraint firstItem="VYt-pI-34g" firstAttribute="top" secondItem="Khe-7j-Nta" secondAttribute="bottom" constant="20" id="hmH-bs-mtK"/>
+                <constraint firstItem="lv4-6z-hy1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ifS-3q-yde"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VYt-pI-34g" secondAttribute="trailing" constant="16" id="lwB-Y2-tHm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hGM-cJ-ve3" secondAttribute="bottom" constant="20" id="t6D-wi-Njf"/>
+                <constraint firstItem="VYt-pI-34g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uFm-ak-jYY"/>
+                <constraint firstItem="Qxx-D6-bo5" firstAttribute="top" secondItem="lv4-6z-hy1" secondAttribute="top" id="veA-SR-pyo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qxx-D6-bo5" secondAttribute="trailing" constant="16" id="wgZ-Jp-J6X"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-84.709821428571431"/>
+        </view>
+    </objects>
+</document>

@@ -129,7 +129,12 @@
 "PriceCombo" = "A Combom (8 Hours) *";
 "ParkingLicense" = "Business License";
 "ParkingTaxCode" = "Tax Code";
-
+"hoursPrice" = "Price by the hour";
+"comboPrice" = "Price by combo";
+"capacity" = "Capacity";
+"place" = "Place";
+"vndHours" = "VND/ hours";
+"vnd8Hours" = "VND/ 8 hour";
 // Sign Up Partner 3
 "UtilityOther" = "Utility Other";
 "parkingImage" = "Parking Image";

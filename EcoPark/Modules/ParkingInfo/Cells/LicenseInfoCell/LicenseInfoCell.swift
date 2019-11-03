@@ -10,9 +10,16 @@ import UIKit
 
 class LicenseInfoCell: UITableViewCell {
 
+    @IBOutlet weak var vLicense: AppTextField!
+    @IBOutlet weak var lbLicense: UILabel!
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        vLicense.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: "")
+        lbLicense.text = LocalizableKey.parkingLicense.showLanguage
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
