@@ -434,6 +434,36 @@
 		2A07B985236E863D004FE7CE /* DoubleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B984236E863D004FE7CE /* DoubleLabelView.swift */; };
 		2A07B986236E863D004FE7CE /* DoubleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B984236E863D004FE7CE /* DoubleLabelView.swift */; };
 		2A07B987236E863D004FE7CE /* DoubleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B984236E863D004FE7CE /* DoubleLabelView.swift */; };
+		2A07B98F236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B989236E9935004FE7CE /* DetailParkingPresenter.swift */; };
+		2A07B990236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B989236E9935004FE7CE /* DetailParkingPresenter.swift */; };
+		2A07B991236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B989236E9935004FE7CE /* DetailParkingPresenter.swift */; };
+		2A07B992236E9935004FE7CE /* DetailParkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98A236E9935004FE7CE /* DetailParkingRouter.swift */; };
+		2A07B993236E9935004FE7CE /* DetailParkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98A236E9935004FE7CE /* DetailParkingRouter.swift */; };
+		2A07B994236E9935004FE7CE /* DetailParkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98A236E9935004FE7CE /* DetailParkingRouter.swift */; };
+		2A07B995236E9935004FE7CE /* DetailParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98B236E9935004FE7CE /* DetailParkingViewController.swift */; };
+		2A07B996236E9935004FE7CE /* DetailParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98B236E9935004FE7CE /* DetailParkingViewController.swift */; };
+		2A07B997236E9935004FE7CE /* DetailParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98B236E9935004FE7CE /* DetailParkingViewController.swift */; };
+		2A07B998236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98C236E9935004FE7CE /* DetailParkingProtocols.swift */; };
+		2A07B999236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98C236E9935004FE7CE /* DetailParkingProtocols.swift */; };
+		2A07B99A236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98C236E9935004FE7CE /* DetailParkingProtocols.swift */; };
+		2A07B99B236E9935004FE7CE /* DetailParkingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98D236E9935004FE7CE /* DetailParkingInteractor.swift */; };
+		2A07B99C236E9935004FE7CE /* DetailParkingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98D236E9935004FE7CE /* DetailParkingInteractor.swift */; };
+		2A07B99D236E9935004FE7CE /* DetailParkingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B98D236E9935004FE7CE /* DetailParkingInteractor.swift */; };
+		2A07B99E236E9935004FE7CE /* DetailParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B98E236E9935004FE7CE /* DetailParkingViewController.xib */; };
+		2A07B99F236E9935004FE7CE /* DetailParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B98E236E9935004FE7CE /* DetailParkingViewController.xib */; };
+		2A07B9A0236E9935004FE7CE /* DetailParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B98E236E9935004FE7CE /* DetailParkingViewController.xib */; };
+		2A07B9A3236E9BB1004FE7CE /* ImageLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B9A2236E9BB1004FE7CE /* ImageLabelView.xib */; };
+		2A07B9A4236E9BB1004FE7CE /* ImageLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B9A2236E9BB1004FE7CE /* ImageLabelView.xib */; };
+		2A07B9A5236E9BB1004FE7CE /* ImageLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B9A2236E9BB1004FE7CE /* ImageLabelView.xib */; };
+		2A07B9A7236E9BC0004FE7CE /* ImageLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9A6236E9BC0004FE7CE /* ImageLabelView.swift */; };
+		2A07B9A8236E9BC0004FE7CE /* ImageLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9A6236E9BC0004FE7CE /* ImageLabelView.swift */; };
+		2A07B9A9236E9BC0004FE7CE /* ImageLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9A6236E9BC0004FE7CE /* ImageLabelView.swift */; };
+		2A07B9AC236E9E65004FE7CE /* TimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B9AB236E9E65004FE7CE /* TimeView.xib */; };
+		2A07B9AD236E9E65004FE7CE /* TimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B9AB236E9E65004FE7CE /* TimeView.xib */; };
+		2A07B9AE236E9E65004FE7CE /* TimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B9AB236E9E65004FE7CE /* TimeView.xib */; };
+		2A07B9B0236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
+		2A07B9B1236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
+		2A07B9B2236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
 		2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
 		2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
@@ -1388,6 +1418,16 @@
 		2A07B978236E840A004FE7CE /* DoingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoingCell.xib; sourceTree = "<group>"; };
 		2A07B980236E8632004FE7CE /* DoubleLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoubleLabelView.xib; sourceTree = "<group>"; };
 		2A07B984236E863D004FE7CE /* DoubleLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLabelView.swift; sourceTree = "<group>"; };
+		2A07B989236E9935004FE7CE /* DetailParkingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailParkingPresenter.swift; sourceTree = "<group>"; };
+		2A07B98A236E9935004FE7CE /* DetailParkingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailParkingRouter.swift; sourceTree = "<group>"; };
+		2A07B98B236E9935004FE7CE /* DetailParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailParkingViewController.swift; sourceTree = "<group>"; };
+		2A07B98C236E9935004FE7CE /* DetailParkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailParkingProtocols.swift; sourceTree = "<group>"; };
+		2A07B98D236E9935004FE7CE /* DetailParkingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailParkingInteractor.swift; sourceTree = "<group>"; };
+		2A07B98E236E9935004FE7CE /* DetailParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailParkingViewController.xib; sourceTree = "<group>"; };
+		2A07B9A2236E9BB1004FE7CE /* ImageLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLabelView.xib; sourceTree = "<group>"; };
+		2A07B9A6236E9BC0004FE7CE /* ImageLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelView.swift; sourceTree = "<group>"; };
+		2A07B9AB236E9E65004FE7CE /* TimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeView.xib; sourceTree = "<group>"; };
+		2A07B9AF236E9E74004FE7CE /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		2A13591C2311A67100587C0E /* EnglishApp_Dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Dev.entitlements; sourceTree = "<group>"; };
 		2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManagerVC.swift; sourceTree = "<group>"; };
 		2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -2177,6 +2217,37 @@
 			path = DoubleLabel;
 			sourceTree = "<group>";
 		};
+		2A07B988236E98B8004FE7CE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2A07B989236E9935004FE7CE /* DetailParkingPresenter.swift */,
+				2A07B98A236E9935004FE7CE /* DetailParkingRouter.swift */,
+				2A07B98B236E9935004FE7CE /* DetailParkingViewController.swift */,
+				2A07B98C236E9935004FE7CE /* DetailParkingProtocols.swift */,
+				2A07B98D236E9935004FE7CE /* DetailParkingInteractor.swift */,
+				2A07B98E236E9935004FE7CE /* DetailParkingViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2A07B9A1236E9BA3004FE7CE /* ImageLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2A07B9A2236E9BB1004FE7CE /* ImageLabelView.xib */,
+				2A07B9A6236E9BC0004FE7CE /* ImageLabelView.swift */,
+			);
+			path = ImageLabel;
+			sourceTree = "<group>";
+		};
+		2A07B9AA236E9E52004FE7CE /* TimeView */ = {
+			isa = PBXGroup;
+			children = (
+				2A07B9AB236E9E65004FE7CE /* TimeView.xib */,
+				2A07B9AF236E9E74004FE7CE /* TimeView.swift */,
+			);
+			path = TimeView;
+			sourceTree = "<group>";
+		};
 		2A2B015A22F085F800A08EEA /* ListManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -2207,6 +2278,7 @@
 		2A4567C3236C6F5500A23FB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A07B988236E98B8004FE7CE /* Detail */,
 				2A4567C5236C6F7500A23FB0 /* History */,
 			);
 			path = Controller;
@@ -2686,6 +2758,8 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				2A07B9AA236E9E52004FE7CE /* TimeView */,
+				2A07B9A1236E9BA3004FE7CE /* ImageLabel */,
 				2A07B97F236E8613004FE7CE /* DoubleLabel */,
 				22AE2205236C1A6000148E2C /* AppRatingView */,
 				22B4B316236ABC4C004BD8FB /* AppImageSlide */,
@@ -3419,6 +3493,7 @@
 				DEC62AAE2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DEECF88022870D1700A4678B /* Localizable.strings in Resources */,
 				17FFE277236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
+				2A07B9AC236E9E65004FE7CE /* TimeView.xib in Resources */,
 				DEECF8A122871D1B00A4678B /* ForgotPasswordViewController.xib in Resources */,
 				2A456817236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				17C2C4C7236C28040020B299 /* ParkingInfoCell.xib in Resources */,
@@ -3428,6 +3503,7 @@
 				DEC7F92222C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				DE49F82A22A3DB9C00A92C63 /* NotificationDetailViewController.xib in Resources */,
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
+				2A07B99E236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				766AE80422B02371002D474E /* ViewFeature.xib in Resources */,
 				22EB904523685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */,
@@ -3471,6 +3547,7 @@
 				7666FC76236D264600BD813E /* TwoButtonPopUpContent.xib in Resources */,
 				17FCC5BF236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.xib in Resources */,
 				7666FC80236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				2A07B9A3236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				22431747235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
@@ -3516,6 +3593,7 @@
 				DEC62AAF2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DE9530422287DF4800E3F688 /* Localizable.strings in Resources */,
 				17FFE278236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
+				2A07B9AD236E9E65004FE7CE /* TimeView.xib in Resources */,
 				DE9530432287DF4800E3F688 /* ForgotPasswordViewController.xib in Resources */,
 				2A456818236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				22EB900923683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
@@ -3525,6 +3603,7 @@
 				DE49F82B22A3DB9C00A92C63 /* NotificationDetailViewController.xib in Resources */,
 				22431754235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
+				2A07B99F236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				22EB904623685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
@@ -3568,6 +3647,7 @@
 				7666FC77236D264600BD813E /* TwoButtonPopUpContent.xib in Resources */,
 				DE9531122287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				7666FC81236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				2A07B9A4236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
 				DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info.plist in Resources */,
@@ -3613,6 +3693,7 @@
 				DEC62AB02293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DE9530F02287DF6400E3F688 /* Localizable.strings in Resources */,
 				17FFE279236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
+				2A07B9AE236E9E65004FE7CE /* TimeView.xib in Resources */,
 				DE9530F12287DF6400E3F688 /* ForgotPasswordViewController.xib in Resources */,
 				2A456819236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				22EB900A23683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
@@ -3622,6 +3703,7 @@
 				DE49F82C22A3DB9C00A92C63 /* NotificationDetailViewController.xib in Resources */,
 				22431755235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
+				2A07B9A0236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				22EB904723685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				DE9530F22287DF6400E3F688 /* NotificationContent.xib in Resources */,
 				22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */,
@@ -3665,6 +3747,7 @@
 				7666FC78236D264600BD813E /* TwoButtonPopUpContent.xib in Resources */,
 				DE9531132287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
 				7666FC82236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				2A07B9A5236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
 				DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info.plist in Resources */,
@@ -3913,6 +3996,7 @@
 				2238870B2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE953187228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82122A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
+				2A07B98F236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */,
 				DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				76662857236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE952F952287D2A700E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
@@ -3954,6 +4038,7 @@
 				17FCC608236AE4CF003E98D8 /* ParkingInfoInteractor.swift in Sources */,
 				2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				1717E0EC236D452B00E07734 /* HistoryPartnerHoldingProtocols.swift in Sources */,
+				2A07B9A7236E9BC0004FE7CE /* ImageLabelView.swift in Sources */,
 				1768973623697E62001F7383 /* SignUpPartnerStep2Router.swift in Sources */,
 				DE49F82422A3DB9C00A92C63 /* NotificationDetailProtocols.swift in Sources */,
 				DE361F272283E85000FA3B0D /* NotificationEntity.swift in Sources */,
@@ -3974,6 +4059,7 @@
 				7666FC7C236D312E00BD813E /* RatingPopUpContent.swift in Sources */,
 				22431750235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175B235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
+				2A07B995236E9935004FE7CE /* DetailParkingViewController.swift in Sources */,
 				22EB900523683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				DE361DE52283E54C00FA3B0D /* BaseTableCell.swift in Sources */,
 				DE952F7E2287D2A700E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
@@ -4009,6 +4095,7 @@
 				DE361F452283E85000FA3B0D /* BaseParam.swift in Sources */,
 				7615D22D236C7EA800781AD3 /* QRScannerRouter.swift in Sources */,
 				175C73422367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
+				2A07B9B0236E9E74004FE7CE /* TimeView.swift in Sources */,
 				175C733C2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D4236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
@@ -4019,6 +4106,7 @@
 				17FCC5DA236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
 				76DB93BA228C74B00081A36E /* RatioButton.swift in Sources */,
+				2A07B99B236E9935004FE7CE /* DetailParkingInteractor.swift in Sources */,
 				DE361F4A2283E85000FA3B0D /* EndPointType.swift in Sources */,
 				1768973323697E62001F7383 /* SignUpPartnerStep2Presenter.swift in Sources */,
 				DEDDEF6922914B8D0043A62D /* UIDevice+extension.swift in Sources */,
@@ -4068,6 +4156,7 @@
 				DE952F8D2287D2A700E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE361DFB2283E57900FA3B0D /* String+extension.swift in Sources */,
 				DE952F822287D2A700E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				2A07B998236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7354236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				2A6C5ED422EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				17FCC5E6236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
@@ -4138,6 +4227,7 @@
 				DE361F392283E85000FA3B0D /* APIError.swift in Sources */,
 				7615D236236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				22BE84B8236930080056DD51 /* BookingPopUp.swift in Sources */,
+				2A07B992236E9935004FE7CE /* DetailParkingRouter.swift in Sources */,
 				DE361F332283E85000FA3B0D /* UserEntity.swift in Sources */,
 				DE361F342283E85000FA3B0D /* FaceBookEntity.swift in Sources */,
 				1717E0FF236D98DB00E07734 /* HistoryPartnerBookingRouter.swift in Sources */,
@@ -4239,6 +4329,7 @@
 				2238870C2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE953188228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				DE49F82222A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
+				2A07B990236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */,
 				DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				76662858236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE952FB82287DF4800E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
@@ -4280,6 +4371,7 @@
 				DE952FC72287DF4800E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				223886FF2366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
 				1717E0ED236D452B00E07734 /* HistoryPartnerHoldingProtocols.swift in Sources */,
+				2A07B9A8236E9BC0004FE7CE /* ImageLabelView.swift in Sources */,
 				17FCC609236AE4CF003E98D8 /* ParkingInfoInteractor.swift in Sources */,
 				2292F20923653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				1768973723697E62001F7383 /* SignUpPartnerStep2Router.swift in Sources */,
@@ -4300,6 +4392,7 @@
 				7666FC7D236D312E00BD813E /* RatingPopUpContent.swift in Sources */,
 				175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				22431751235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
+				2A07B996236E9935004FE7CE /* DetailParkingViewController.swift in Sources */,
 				2243175C235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				22EB900623683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				DE952FCB2287DF4800E3F688 /* BaseTableCell.swift in Sources */,
@@ -4335,6 +4428,7 @@
 				DE952FD82287DF4800E3F688 /* BaseParam.swift in Sources */,
 				7615D22E236C7EA800781AD3 /* QRScannerRouter.swift in Sources */,
 				175C73432367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
+				2A07B9B1236E9E74004FE7CE /* TimeView.swift in Sources */,
 				175C733D2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D5236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
@@ -4345,6 +4439,7 @@
 				17FCC5DB236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
 				76DB93BB228C74B00081A36E /* RatioButton.swift in Sources */,
+				2A07B99C236E9935004FE7CE /* DetailParkingInteractor.swift in Sources */,
 				DE952FDB2287DF4800E3F688 /* EndPointType.swift in Sources */,
 				1768973423697E62001F7383 /* SignUpPartnerStep2Presenter.swift in Sources */,
 				DEDDEF6A22914B8D0043A62D /* UIDevice+extension.swift in Sources */,
@@ -4394,6 +4489,7 @@
 				DE952FF32287DF4800E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE952FF42287DF4800E3F688 /* String+extension.swift in Sources */,
 				DE952FF52287DF4800E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				2A07B999236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7355236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				2A6C5ED522EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				17FCC5E7236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
@@ -4464,6 +4560,7 @@
 				22BE84B9236930080056DD51 /* BookingPopUp.swift in Sources */,
 				7615D237236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				DE9530152287DF4800E3F688 /* UserEntity.swift in Sources */,
+				2A07B993236E9935004FE7CE /* DetailParkingRouter.swift in Sources */,
 				DE9530162287DF4800E3F688 /* FaceBookEntity.swift in Sources */,
 				DE9530172287DF4800E3F688 /* ForgotPasswordViewController.swift in Sources */,
 				1717E100236D98DB00E07734 /* HistoryPartnerBookingRouter.swift in Sources */,
@@ -4565,6 +4662,7 @@
 				2238870D2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE9530652287DF6400E3F688 /* KActivityIndicatorType.swift in Sources */,
 				DE953189228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
+				2A07B991236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */,
 				DE49F82322A3DB9C00A92C63 /* NotificationDetailViewController.swift in Sources */,
 				76662859236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE9530662287DF6400E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
@@ -4606,6 +4704,7 @@
 				DE9530742287DF6400E3F688 /* PhoneEntity.swift in Sources */,
 				223887002366A89100DAC978 /* GoogleMapHelper.swift in Sources */,
 				1717E0EE236D452B00E07734 /* HistoryPartnerHoldingProtocols.swift in Sources */,
+				2A07B9A9236E9BC0004FE7CE /* ImageLabelView.swift in Sources */,
 				17FCC60A236AE4CF003E98D8 /* ParkingInfoInteractor.swift in Sources */,
 				2292F20A23653B0400B570E3 /* ContainerViewController.swift in Sources */,
 				1768973823697E62001F7383 /* SignUpPartnerStep2Router.swift in Sources */,
@@ -4626,6 +4725,7 @@
 				7666FC7E236D312E00BD813E /* RatingPopUpContent.swift in Sources */,
 				175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				766AE7F922B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
+				2A07B997236E9935004FE7CE /* DetailParkingViewController.swift in Sources */,
 				22431752235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				22EB900723683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				2243175D235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
@@ -4661,6 +4761,7 @@
 				DE9530852287DF6400E3F688 /* Strings.swift in Sources */,
 				7615D22F236C7EA800781AD3 /* QRScannerRouter.swift in Sources */,
 				175C73442367E4EE009F03F6 /* ProfileInteractor.swift in Sources */,
+				2A07B9B2236E9E74004FE7CE /* TimeView.swift in Sources */,
 				175C733E2367E4EE009F03F6 /* ProfileViewController.swift in Sources */,
 				22BE84D6236978DD0056DD51 /* ParkingUserDetailInteractor.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
@@ -4671,6 +4772,7 @@
 				17FCC5DC236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				DE9530862287DF6400E3F688 /* BaseParam.swift in Sources */,
 				DE9530872287DF6400E3F688 /* UIColor+extension.swift in Sources */,
+				2A07B99D236E9935004FE7CE /* DetailParkingInteractor.swift in Sources */,
 				DE9530882287DF6400E3F688 /* MenuViewController.swift in Sources */,
 				1768973523697E62001F7383 /* SignUpPartnerStep2Presenter.swift in Sources */,
 				768074AC22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -4720,6 +4822,7 @@
 				DE95309E2287DF6400E3F688 /* LoginRouter.swift in Sources */,
 				DE95309F2287DF6400E3F688 /* LoginProtocols.swift in Sources */,
 				DE9530A02287DF6400E3F688 /* NotificationPopUp.swift in Sources */,
+				2A07B99A236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7356236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				DE9530A12287DF6400E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				17FCC5E8236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
@@ -4790,6 +4893,7 @@
 				22BE84BA236930080056DD51 /* BookingPopUp.swift in Sources */,
 				7615D238236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				DE9530C42287DF6400E3F688 /* FaceBookEntity.swift in Sources */,
+				2A07B994236E9935004FE7CE /* DetailParkingRouter.swift in Sources */,
 				DE9530C52287DF6400E3F688 /* ForgotPasswordViewController.swift in Sources */,
 				DE953186228846D400E3F688 /* ChangePasswordProtocols.swift in Sources */,
 				1717E101236D98DB00E07734 /* HistoryPartnerBookingRouter.swift in Sources */,

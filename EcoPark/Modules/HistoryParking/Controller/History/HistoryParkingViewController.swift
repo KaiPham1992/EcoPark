@@ -38,6 +38,18 @@ class HistoryParkingViewController: ListManagerVC, HistoryParkingViewProtocol {
         let cell = self.tableView.dequeue(DoingCell.self, for: indexPath)
         return cell
     }
+    
+    override func didSelectTableView(item: Any, indexPath: IndexPath) {
+        var vc : UIViewController
+        if indexPath.row == 0 {
+            vc = DetailParkingRouter.createModule(type: TypeDetailParking.checkin)
+        } else if indexPath.row == 1 {
+            vc = DetailParkingRouter.createModule(type: TypeDetailParking.checkout)
+        } else {
+            vc = DetailParkingRouter.createModule(type: TypeDetailParking.complete)
+        }
+        self.push(controller: vc, animated: true)
+    }
 }
 
 extension HistoryParkingViewController: IndicatorInfoProvider {

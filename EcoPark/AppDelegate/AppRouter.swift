@@ -52,7 +52,7 @@ class AppRouter {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
 
-        let homeVC = HistoryPartnerBookingRouter.createModule()
+        let homeVC = PageHistoryParkingController()
 
 
 //        let homeVC = HomeRouter.createModule()
