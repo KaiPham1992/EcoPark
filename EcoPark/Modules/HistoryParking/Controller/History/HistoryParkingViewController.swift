@@ -9,13 +9,40 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class HistoryParkingViewController: UIViewController, HistoryParkingViewProtocol {
+enum TypeHistoryParking {
+    case doing
+    case history
+}
+
+class HistoryParkingViewController: ListManagerVC, HistoryParkingViewProtocol {
 
 	var presenter: HistoryParkingPresenterProtocol?
-
-	override func viewDidLoad() {
-        super.viewDidLoad()
+    var type: TypeHistoryParking = .doing
+    
+    override func setUpViews() {
+        super.setUpViews()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.initLoadData(data: Array(repeating: 1, count: 10))
+        }
+        self.view.backgroundColor = .clear
     }
 
+    override func registerTableView() {
+        super.registerTableView()
+        self.tableView.registerXibFile(DoingCell.self)
+    }
+    
+    override func cellForRowListManager(item: Any, _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeue(DoingCell.self, for: indexPath)
+        return cell
+    }
 }
+
+extension HistoryParkingViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return self.type == .doing ? IndicatorInfo(title: "Doing") : IndicatorInfo(title: "History")
+    }
+}
+

@@ -15,6 +15,6 @@ class PageHistoryParkingController : PageViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [DoingRouter.createModule(), HistoryParkingRouter.createModule()]
+        return [HistoryParkingRouter.createModule(type: TypeHistoryParking.doing), HistoryParkingRouter.createModule(type: TypeHistoryParking.history)]
     }
 }

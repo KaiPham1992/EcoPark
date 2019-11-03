@@ -18,14 +18,14 @@ class PageViewController : ButtonBarPagerTabStripViewController{
     }
     
     func setupPage(){
-        self.settings.style.buttonBarBackgroundColor = .white
-        self.settings.style.buttonBarItemBackgroundColor = .white
-        self.settings.style.selectedBarBackgroundColor = AppColor.yellow
+        self.settings.style.buttonBarBackgroundColor = .black
+        self.settings.style.buttonBarItemBackgroundColor = .black
+        self.settings.style.selectedBarBackgroundColor = AppColor.color_0_129_255
         self.settings.style.buttonBarItemFont = AppFont.fontRegular15
         self.settings.style.buttonBarHeight = 48
         self.settings.style.selectedBarHeight = 5
         self.settings.style.buttonBarMinimumLineSpacing = 0
-        self.settings.style.buttonBarItemTitleColor = .white
+        self.settings.style.buttonBarItemTitleColor = AppColor.color_0_129_255
         self.settings.style.buttonBarItemsShouldFillAvailableWidth = true
         self.settings.style.buttonBarLeftContentInset = 0
         self.settings.style.buttonBarRightContentInset = 0
@@ -62,7 +62,7 @@ class PageViewController : ButtonBarPagerTabStripViewController{
         }
     }
     
-    func setNavigationColor(color: UIColor = AppColor.yellow) {
+    func setNavigationColor(color: UIColor = UIColor.black) {
         self.navigationController?.navigationBar.barTintColor = color
     }
     

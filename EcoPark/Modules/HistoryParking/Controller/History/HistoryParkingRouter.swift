@@ -27,4 +27,18 @@ class HistoryParkingRouter: HistoryParkingWireframeProtocol {
 
         return view
     }
+    
+    static func createModule(type: TypeHistoryParking) -> UIViewController {
+        // Change to get view from storyboard if not using progammatic UI
+        let view = HistoryParkingViewController(nibName: nil, bundle: nil)
+        let interactor = HistoryParkingInteractor()
+        let router = HistoryParkingRouter()
+        let presenter = HistoryParkingPresenter(interface: view, interactor: interactor, router: router)
+        view.type = type
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+
+        return view
+    }
 }
