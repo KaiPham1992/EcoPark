@@ -10,6 +10,16 @@ import UIKit
 
 class TimeParkingCell: UITableViewCell {
 
+    @IBOutlet weak var lbTimeBarking: UILabel!
+    @IBOutlet weak var lbBooking: UILabel!
+    @IBOutlet weak var lbExpect: UILabel!
+    @IBOutlet weak var lbCheckIn: UILabel!
+    @IBOutlet weak var lbCheckOut: UILabel!
+    @IBOutlet weak var lbBookingTime: UILabel!
+    @IBOutlet weak var lbExpectTime: UILabel!
+    @IBOutlet weak var lbCheckInTime: UILabel!
+    @IBOutlet weak var lbCheckOutTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +31,6 @@ class TimeParkingCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    private func setupUI() {
+    }
 }

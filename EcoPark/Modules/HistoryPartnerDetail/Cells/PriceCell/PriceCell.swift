@@ -10,6 +10,14 @@ import UIKit
 
 class PriceCell: UITableViewCell {
 
+    @IBOutlet weak var lbPriceAHours: UILabel!
+    @IBOutlet weak var lbPriceACombo: UILabel!
+    @IBOutlet weak var lbTimeHolding: UILabel!
+    @IBOutlet weak var lbPriceParking: UILabel!
+    @IBOutlet weak var lbPriceAHoursPrice: UILabel!
+    @IBOutlet weak var lbPriceComboPrice: UILabel!
+    @IBOutlet weak var lbHoldingTime: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

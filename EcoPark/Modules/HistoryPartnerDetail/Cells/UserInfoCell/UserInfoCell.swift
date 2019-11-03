@@ -10,6 +10,14 @@ import UIKit
 
 class UserInfoCell: UITableViewCell {
 
+    @IBOutlet weak var lbUserInfo: UILabel!
+    @IBOutlet weak var imgAvatar: UIImageView!
+    @IBOutlet weak var lbUserName: UILabel!
+    @IBOutlet weak var lbCarType: UILabel!
+    @IBOutlet weak var lbType: UILabel!
+    @IBOutlet weak var lbCarNumber: UILabel!
+    @IBOutlet weak var lbNumber: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

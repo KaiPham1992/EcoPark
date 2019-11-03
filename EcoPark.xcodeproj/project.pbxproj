@@ -47,6 +47,24 @@
 		1717E10B236D98DB00E07734 /* HistoryPartnerBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1717E0FB236D98DB00E07734 /* HistoryPartnerBookingViewController.xib */; };
 		1717E10C236D98DB00E07734 /* HistoryPartnerBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1717E0FB236D98DB00E07734 /* HistoryPartnerBookingViewController.xib */; };
 		1717E10D236D98DB00E07734 /* HistoryPartnerBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1717E0FB236D98DB00E07734 /* HistoryPartnerBookingViewController.xib */; };
+		172D0971236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096B236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift */; };
+		172D0972236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096B236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift */; };
+		172D0973236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096B236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift */; };
+		172D0974236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096C236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift */; };
+		172D0975236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096C236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift */; };
+		172D0976236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096C236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift */; };
+		172D0977236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096D236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift */; };
+		172D0978236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096D236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift */; };
+		172D0979236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096D236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift */; };
+		172D097A236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096E236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift */; };
+		172D097B236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096E236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift */; };
+		172D097C236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096E236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift */; };
+		172D097D236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift */; };
+		172D097E236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift */; };
+		172D097F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D096F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift */; };
+		172D0980236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */; };
+		172D0981236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */; };
+		172D0982236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */; };
 		17352288236EB1EA004C889B /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17352286236EB1EA004C889B /* PriceCell.swift */; };
 		17352289236EB1EA004C889B /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17352286236EB1EA004C889B /* PriceCell.swift */; };
 		1735228A236EB1EA004C889B /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17352286236EB1EA004C889B /* PriceCell.swift */; };
@@ -1292,6 +1310,12 @@
 		1717E0F9236D98DB00E07734 /* HistoryPartnerBookingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerBookingProtocols.swift; sourceTree = "<group>"; };
 		1717E0FA236D98DB00E07734 /* HistoryPartnerBookingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerBookingInteractor.swift; sourceTree = "<group>"; };
 		1717E0FB236D98DB00E07734 /* HistoryPartnerBookingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerBookingViewController.xib; sourceTree = "<group>"; };
+		172D096B236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckinPresenter.swift; sourceTree = "<group>"; };
+		172D096C236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckinRouter.swift; sourceTree = "<group>"; };
+		172D096D236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckinViewController.swift; sourceTree = "<group>"; };
+		172D096E236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckinProtocols.swift; sourceTree = "<group>"; };
+		172D096F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckinInteractor.swift; sourceTree = "<group>"; };
+		172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerDetailCheckinViewController.xib; sourceTree = "<group>"; };
 		17352286236EB1EA004C889B /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		17352287236EB1EA004C889B /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
 		175C73302367E4EE009F03F6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -1873,6 +1897,12 @@
 		17BAF892236EAB420066BD29 /* HistoryPartnerDetailCheckin */ = {
 			isa = PBXGroup;
 			children = (
+				172D096B236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift */,
+				172D096C236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift */,
+				172D096D236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift */,
+				172D096E236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift */,
+				172D096F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift */,
+				172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */,
 			);
 			path = HistoryPartnerDetailCheckin;
 			sourceTree = "<group>";
@@ -3576,6 +3606,7 @@
 				7615D239236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
 				766AE80022B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
+				172D0980236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */,
 				22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749D22C88A910015A75C /* Assets.xcassets in Resources */,
 				DE361E792283E60500FA3B0D /* AppSearchBar.xib in Resources */,
@@ -3677,6 +3708,7 @@
 				7615D23A236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
 				22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
+				172D0981236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */,
 				DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D562236558420055E79F /* AppSeachBarRight.xib in Resources */,
@@ -3778,6 +3810,7 @@
 				7615D23B236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
 				22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
+				172D0982236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */,
 				DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
 				2203D563236558420055E79F /* AppSeachBarRight.xib in Resources */,
@@ -4046,6 +4079,7 @@
 				76662857236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE952F952287D2A700E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				1781C7EF236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
+				172D097D236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -4162,6 +4196,7 @@
 				17FCC610236AE5F7003E98D8 /* CustomSwitch.swift in Sources */,
 				DEECF89F22871D1B00A4678B /* ForgotPasswordProtocols.swift in Sources */,
 				DE361F3B2283E85000FA3B0D /* Network.swift in Sources */,
+				172D0974236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
 				2243175E235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				22F33AA523645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				DE361F402283E85000FA3B0D /* UpdateProfileParam.swift in Sources */,
@@ -4254,6 +4289,7 @@
 				766AE7EE22AFCAB4002D474E /* ConfirmPopUpView.swift in Sources */,
 				766D135C228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE361E972283E60500FA3B0D /* PopUpHelper.swift in Sources */,
+				172D0971236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */,
 				2AF2F82E22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
 				2238872A2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE952F852287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
@@ -4284,6 +4320,7 @@
 				17FCC5B3236AB7A9003E98D8 /* SignUpPartnerStep3Router.swift in Sources */,
 				DE361E842283E60500FA3B0D /* AppDropDownCell.swift in Sources */,
 				DE3CC33E2283DD980037DBE4 /* AppDelegate.swift in Sources */,
+				172D0977236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift in Sources */,
 				DEECF89C22871D1B00A4678B /* ForgotPasswordPresenter.swift in Sources */,
 				2A07B979236E840A004FE7CE /* DoingCell.swift in Sources */,
 				DEECF88522870DA400A4678B /* LocalizableKey.swift in Sources */,
@@ -4311,6 +4348,7 @@
 				DE361F3D2283E85000FA3B0D /* NetworkRequest.swift in Sources */,
 				768074AE22C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
 				DE361E8D2283E60500FA3B0D /* AppCheckBox.swift in Sources */,
+				172D097A236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */,
 				DE952F9A2287D2A700E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				DE361DFA2283E57900FA3B0D /* UIViewController+extension.swift in Sources */,
 				DE89D1CC22A4126C000638B0 /* WebViewController.swift in Sources */,
@@ -4380,6 +4418,7 @@
 				76662858236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE952FB82287DF4800E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				1781C7F0236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
+				172D097E236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -4496,6 +4535,7 @@
 				17FCC611236AE5F7003E98D8 /* CustomSwitch.swift in Sources */,
 				DE952FDF2287DF4800E3F688 /* ForgotPasswordProtocols.swift in Sources */,
 				DE952FE12287DF4800E3F688 /* Network.swift in Sources */,
+				172D0975236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
 				2243175F235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				22F33AA623645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				DE952FE22287DF4800E3F688 /* UpdateProfileParam.swift in Sources */,
@@ -4588,6 +4628,7 @@
 				766D135D228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE95300C2287DF4800E3F688 /* PopUpHelper.swift in Sources */,
 				2AF2F82F22E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
+				172D0972236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */,
 				2238872B2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE95300D2287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE95300E2287DF4800E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
@@ -4618,6 +4659,7 @@
 				DE9530182287DF4800E3F688 /* AppDropDownCell.swift in Sources */,
 				DE9530192287DF4800E3F688 /* AppDelegate.swift in Sources */,
 				DE95301A2287DF4800E3F688 /* ForgotPasswordPresenter.swift in Sources */,
+				172D0978236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift in Sources */,
 				DE95301B2287DF4800E3F688 /* LocalizableKey.swift in Sources */,
 				2A07B97A236E840A004FE7CE /* DoingCell.swift in Sources */,
 				2203D56B23655D5D0055E79F /* HomeFindCell.swift in Sources */,
@@ -4645,6 +4687,7 @@
 				768074AF22C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
 				DE9530292287DF4800E3F688 /* AppCheckBox.swift in Sources */,
 				DE95302A2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				172D097B236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */,
 				DE95302B2287DF4800E3F688 /* UIViewController+extension.swift in Sources */,
 				DE89D1CD22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE95302C2287DF4800E3F688 /* AppSearchBar.swift in Sources */,
@@ -4714,6 +4757,7 @@
 				76662859236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
 				DE9530662287DF6400E3F688 /* KActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				1781C7F1236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
+				172D097F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -4830,6 +4874,7 @@
 				17FCC612236AE5F7003E98D8 /* CustomSwitch.swift in Sources */,
 				DE95308B2287DF6400E3F688 /* AppDelegate+GoogleSignIn.swift in Sources */,
 				7629BDD322ACCBBA0051B835 /* ReportQuestionPopUp.swift in Sources */,
+				172D0976236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
 				22F33AA723645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				22431760235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				DE95308C2287DF6400E3F688 /* PhotoEntity.swift in Sources */,
@@ -4922,6 +4967,7 @@
 				766D135E228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE9530BA2287DF6400E3F688 /* PopUpHelper.swift in Sources */,
 				2A6C5ED622EF468F004B23EF /* CellSingleLabel.swift in Sources */,
+				172D0973236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */,
 				2238872C2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE9530BB2287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE9530BC2287DF6400E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
@@ -4952,6 +4998,7 @@
 				DE9530C72287DF6400E3F688 /* AppDelegate.swift in Sources */,
 				DE9530C82287DF6400E3F688 /* ForgotPasswordPresenter.swift in Sources */,
 				DE9530C92287DF6400E3F688 /* LocalizableKey.swift in Sources */,
+				172D0979236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.swift in Sources */,
 				DE9530CA2287DF6400E3F688 /* AppFont.swift in Sources */,
 				2A07B97B236E840A004FE7CE /* DoingCell.swift in Sources */,
 				2203D56C23655D5D0055E79F /* HomeFindCell.swift in Sources */,
@@ -4979,6 +5026,7 @@
 				DE9530D72287DF6400E3F688 /* AppCheckBox.swift in Sources */,
 				DE9530D82287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				DE9530D92287DF6400E3F688 /* UIViewController+extension.swift in Sources */,
+				172D097C236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */,
 				DE89D1CE22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE9530DA2287DF6400E3F688 /* AppSearchBar.swift in Sources */,
 				DE9530DB2287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,

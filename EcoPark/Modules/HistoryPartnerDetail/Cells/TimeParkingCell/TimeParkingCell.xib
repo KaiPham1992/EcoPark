@@ -22,90 +22,108 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="264"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian đỗ xe" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-wb-xp2">
-                        <rect key="frame" x="16" y="10" width="92.5" height="18"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                        <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79b-10-Cd8">
-                        <rect key="frame" x="50" y="38" width="250" height="70"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXD-8G-rLF">
+                        <rect key="frame" x="0.0" y="2" width="350" height="260"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian đỗ xe" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-wb-xp2">
+                                <rect key="frame" x="16" y="8" width="92.5" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79b-10-Cd8">
+                                <rect key="frame" x="50" y="36" width="250" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="jA2-NZ-GXf"/>
+                                    <constraint firstAttribute="height" constant="70" id="ucp-BB-Bn4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đặt lúc" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNP-i0-WL3">
+                                <rect key="frame" x="16" y="114" width="42.5" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dự kiến" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-MF-H7L">
+                                <rect key="frame" x="16" y="140" width="47" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs6-H6-p5F">
+                                <rect key="frame" x="16" y="166" width="51.5" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-91-On2">
+                                <rect key="frame" x="16" y="192" width="60.5" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 - 05/05/2019" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDi-u4-tVi">
+                                <rect key="frame" x="203" y="113" width="131" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:45 - 05/05/2019" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIA-hO-AXE">
+                                <rect key="frame" x="203" y="139" width="131" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktN-WZ-Gtt">
+                                <rect key="frame" x="329" y="165" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyB-2h-hw1">
+                                <rect key="frame" x="329" y="191" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="250" id="jA2-NZ-GXf"/>
-                            <constraint firstAttribute="height" constant="70" id="ucp-BB-Bn4"/>
+                            <constraint firstItem="g3Q-wb-xp2" firstAttribute="top" secondItem="HXD-8G-rLF" secondAttribute="top" constant="8" id="1pb-4j-YXg"/>
+                            <constraint firstItem="79b-10-Cd8" firstAttribute="top" secondItem="g3Q-wb-xp2" secondAttribute="bottom" constant="10" id="AYr-xS-Vdb"/>
+                            <constraint firstItem="g3Q-wb-xp2" firstAttribute="leading" secondItem="HXD-8G-rLF" secondAttribute="leading" constant="16" id="Cya-Kd-l76"/>
+                            <constraint firstItem="M8R-91-On2" firstAttribute="leading" secondItem="Vs6-H6-p5F" secondAttribute="leading" id="EzN-Mg-HRL"/>
+                            <constraint firstItem="pNP-i0-WL3" firstAttribute="leading" secondItem="HXD-8G-rLF" secondAttribute="leading" constant="16" id="Ht1-X4-zIU"/>
+                            <constraint firstItem="WIA-hO-AXE" firstAttribute="trailing" secondItem="QDi-u4-tVi" secondAttribute="trailing" id="KOP-Jp-Kgc"/>
+                            <constraint firstItem="Vs6-H6-p5F" firstAttribute="top" secondItem="mhW-MF-H7L" secondAttribute="bottom" constant="8" id="WiL-9p-n0D"/>
+                            <constraint firstItem="Vs6-H6-p5F" firstAttribute="leading" secondItem="mhW-MF-H7L" secondAttribute="leading" id="Yb3-j8-tk4"/>
+                            <constraint firstItem="WIA-hO-AXE" firstAttribute="centerY" secondItem="mhW-MF-H7L" secondAttribute="centerY" id="aLu-jk-bRa"/>
+                            <constraint firstItem="pNP-i0-WL3" firstAttribute="top" secondItem="79b-10-Cd8" secondAttribute="bottom" constant="8" id="bWG-VZ-OZn"/>
+                            <constraint firstItem="FyB-2h-hw1" firstAttribute="trailing" secondItem="ktN-WZ-Gtt" secondAttribute="trailing" id="eJa-2m-XY3"/>
+                            <constraint firstItem="Vs6-H6-p5F" firstAttribute="centerY" secondItem="ktN-WZ-Gtt" secondAttribute="centerY" id="eVc-1w-iDN"/>
+                            <constraint firstItem="79b-10-Cd8" firstAttribute="centerX" secondItem="HXD-8G-rLF" secondAttribute="centerX" id="fV7-VA-guL"/>
+                            <constraint firstItem="QDi-u4-tVi" firstAttribute="centerY" secondItem="pNP-i0-WL3" secondAttribute="centerY" id="fWW-KK-28j"/>
+                            <constraint firstItem="ktN-WZ-Gtt" firstAttribute="trailing" secondItem="WIA-hO-AXE" secondAttribute="trailing" id="oaL-fC-V3M"/>
+                            <constraint firstAttribute="trailing" secondItem="QDi-u4-tVi" secondAttribute="trailing" constant="16" id="pOd-cv-Umx"/>
+                            <constraint firstItem="mhW-MF-H7L" firstAttribute="top" secondItem="pNP-i0-WL3" secondAttribute="bottom" constant="8" id="sN6-EI-Lff"/>
+                            <constraint firstItem="mhW-MF-H7L" firstAttribute="leading" secondItem="pNP-i0-WL3" secondAttribute="leading" id="sfy-nG-5IV"/>
+                            <constraint firstItem="M8R-91-On2" firstAttribute="centerY" secondItem="FyB-2h-hw1" secondAttribute="centerY" id="t9D-za-vkS"/>
+                            <constraint firstItem="M8R-91-On2" firstAttribute="top" secondItem="Vs6-H6-p5F" secondAttribute="bottom" constant="8" id="y56-iP-09j"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đặt lúc" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNP-i0-WL3">
-                        <rect key="frame" x="16" y="116" width="42.5" height="18"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                        <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dự kiến" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-MF-H7L">
-                        <rect key="frame" x="16" y="142" width="47" height="18"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                        <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs6-H6-p5F">
-                        <rect key="frame" x="16" y="168" width="51.5" height="18"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                        <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-91-On2">
-                        <rect key="frame" x="16" y="194" width="60.5" height="18"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                        <color key="textColor" red="0.66274999999999995" green="0.66274999999999995" blue="0.66274999999999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 - 05/05/2019" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDi-u4-tVi">
-                        <rect key="frame" x="203" y="115" width="131" height="20.5"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                        <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:45 - 05/05/2019" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIA-hO-AXE">
-                        <rect key="frame" x="203" y="143.5" width="131" height="20.5"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                        <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktN-WZ-Gtt">
-                        <rect key="frame" x="329" y="172" width="5" height="20.5"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                        <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyB-2h-hw1">
-                        <rect key="frame" x="329" y="200.5" width="5" height="20.5"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                        <color key="textColor" red="0.0" green="0.50588" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="M8R-91-On2" firstAttribute="top" secondItem="Vs6-H6-p5F" secondAttribute="bottom" constant="8" id="8j8-6w-gGq"/>
-                    <constraint firstItem="Vs6-H6-p5F" firstAttribute="top" secondItem="mhW-MF-H7L" secondAttribute="bottom" constant="8" id="AwB-Lu-tUS"/>
-                    <constraint firstItem="M8R-91-On2" firstAttribute="leading" secondItem="Vs6-H6-p5F" secondAttribute="leading" id="BNP-Or-IpN"/>
-                    <constraint firstItem="pNP-i0-WL3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CN8-Pd-5HU"/>
-                    <constraint firstItem="ktN-WZ-Gtt" firstAttribute="trailing" secondItem="WIA-hO-AXE" secondAttribute="trailing" id="DaG-DO-Wvy"/>
-                    <constraint firstItem="WIA-hO-AXE" firstAttribute="top" secondItem="QDi-u4-tVi" secondAttribute="bottom" constant="8" id="JOU-dU-Jfn"/>
-                    <constraint firstItem="FyB-2h-hw1" firstAttribute="trailing" secondItem="ktN-WZ-Gtt" secondAttribute="trailing" id="L2u-Wl-lva"/>
-                    <constraint firstItem="pNP-i0-WL3" firstAttribute="top" secondItem="79b-10-Cd8" secondAttribute="bottom" constant="8" id="OTY-uL-lEA"/>
-                    <constraint firstItem="g3Q-wb-xp2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Tij-Ho-h3J"/>
-                    <constraint firstItem="79b-10-Cd8" firstAttribute="top" secondItem="g3Q-wb-xp2" secondAttribute="bottom" constant="10" id="WYV-gS-Uil"/>
-                    <constraint firstItem="Vs6-H6-p5F" firstAttribute="leading" secondItem="mhW-MF-H7L" secondAttribute="leading" id="Xc1-Uc-aNr"/>
-                    <constraint firstItem="FyB-2h-hw1" firstAttribute="top" secondItem="ktN-WZ-Gtt" secondAttribute="bottom" constant="8" id="YYz-fB-gTB"/>
-                    <constraint firstAttribute="trailing" secondItem="QDi-u4-tVi" secondAttribute="trailing" constant="16" id="fJG-VX-MBP"/>
-                    <constraint firstItem="WIA-hO-AXE" firstAttribute="trailing" secondItem="QDi-u4-tVi" secondAttribute="trailing" id="h8E-JE-77k"/>
-                    <constraint firstItem="79b-10-Cd8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="iAI-kr-Kil"/>
-                    <constraint firstItem="g3Q-wb-xp2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sDL-1o-Njq"/>
-                    <constraint firstItem="ktN-WZ-Gtt" firstAttribute="top" secondItem="WIA-hO-AXE" secondAttribute="bottom" constant="8" id="saj-yS-4m7"/>
-                    <constraint firstItem="mhW-MF-H7L" firstAttribute="top" secondItem="pNP-i0-WL3" secondAttribute="bottom" constant="8" id="uY1-QZ-zTY"/>
-                    <constraint firstItem="mhW-MF-H7L" firstAttribute="leading" secondItem="pNP-i0-WL3" secondAttribute="leading" id="uoC-G1-3hj"/>
-                    <constraint firstItem="QDi-u4-tVi" firstAttribute="centerY" secondItem="pNP-i0-WL3" secondAttribute="centerY" id="vsU-QV-hN5"/>
+                    <constraint firstAttribute="bottom" secondItem="HXD-8G-rLF" secondAttribute="bottom" constant="2" id="5Z9-Cl-YUc"/>
+                    <constraint firstItem="HXD-8G-rLF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5ex-D6-1Mu"/>
+                    <constraint firstItem="HXD-8G-rLF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="dhU-bX-3M9"/>
+                    <constraint firstAttribute="trailing" secondItem="HXD-8G-rLF" secondAttribute="trailing" id="zfm-KY-2dx"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -113,7 +131,19 @@
                     </userDefinedRuntimeAttribute>
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lbBooking" destination="pNP-i0-WL3" id="3VZ-hr-s2i"/>
+                <outlet property="lbBookingTime" destination="QDi-u4-tVi" id="T5x-U6-BKB"/>
+                <outlet property="lbCheckIn" destination="Vs6-H6-p5F" id="1ed-EE-DV1"/>
+                <outlet property="lbCheckInTime" destination="ktN-WZ-Gtt" id="gh4-lN-8L1"/>
+                <outlet property="lbCheckOut" destination="M8R-91-On2" id="ksV-WF-aQP"/>
+                <outlet property="lbCheckOutTime" destination="FyB-2h-hw1" id="3WH-0C-dw6"/>
+                <outlet property="lbExpect" destination="mhW-MF-H7L" id="ayF-t8-ncV"/>
+                <outlet property="lbExpectTime" destination="WIA-hO-AXE" id="1J3-EZ-xNx"/>
+                <outlet property="lbTimeBarking" destination="g3Q-wb-xp2" id="JiF-2z-5KH"/>
+            </connections>
             <point key="canvasLocation" x="153.62318840579712" y="187.5"/>
         </tableViewCell>
     </objects>
