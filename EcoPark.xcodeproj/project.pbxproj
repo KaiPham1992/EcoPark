@@ -374,11 +374,62 @@
 		22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
 		22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
 		22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F33AA423645B8100D136EB /* HomeFindViewController.xib */; };
+		2A07B979236E840A004FE7CE /* DoingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B977236E840A004FE7CE /* DoingCell.swift */; };
+		2A07B97A236E840A004FE7CE /* DoingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B977236E840A004FE7CE /* DoingCell.swift */; };
+		2A07B97B236E840A004FE7CE /* DoingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B977236E840A004FE7CE /* DoingCell.swift */; };
+		2A07B97C236E840A004FE7CE /* DoingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B978236E840A004FE7CE /* DoingCell.xib */; };
+		2A07B97D236E840A004FE7CE /* DoingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B978236E840A004FE7CE /* DoingCell.xib */; };
+		2A07B97E236E840A004FE7CE /* DoingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B978236E840A004FE7CE /* DoingCell.xib */; };
+		2A07B981236E8632004FE7CE /* DoubleLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B980236E8632004FE7CE /* DoubleLabelView.xib */; };
+		2A07B982236E8632004FE7CE /* DoubleLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B980236E8632004FE7CE /* DoubleLabelView.xib */; };
+		2A07B983236E8632004FE7CE /* DoubleLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A07B980236E8632004FE7CE /* DoubleLabelView.xib */; };
+		2A07B985236E863D004FE7CE /* DoubleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B984236E863D004FE7CE /* DoubleLabelView.swift */; };
+		2A07B986236E863D004FE7CE /* DoubleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B984236E863D004FE7CE /* DoubleLabelView.swift */; };
+		2A07B987236E863D004FE7CE /* DoubleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B984236E863D004FE7CE /* DoubleLabelView.swift */; };
 		2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
 		2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
 		2A2B015F22F0861E00A08EEA /* ListManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */; };
 		2A36B8A0231A4AE100E9696F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
+		2A4567E4236C6FC700A23FB0 /* DoingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567DE236C6FC700A23FB0 /* DoingPresenter.swift */; };
+		2A4567E5236C6FC700A23FB0 /* DoingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567DE236C6FC700A23FB0 /* DoingPresenter.swift */; };
+		2A4567E6236C6FC700A23FB0 /* DoingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567DE236C6FC700A23FB0 /* DoingPresenter.swift */; };
+		2A4567E7236C6FC700A23FB0 /* DoingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567DF236C6FC700A23FB0 /* DoingRouter.swift */; };
+		2A4567E8236C6FC700A23FB0 /* DoingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567DF236C6FC700A23FB0 /* DoingRouter.swift */; };
+		2A4567E9236C6FC700A23FB0 /* DoingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567DF236C6FC700A23FB0 /* DoingRouter.swift */; };
+		2A4567EA236C6FC700A23FB0 /* DoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E0236C6FC700A23FB0 /* DoingViewController.swift */; };
+		2A4567EB236C6FC700A23FB0 /* DoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E0236C6FC700A23FB0 /* DoingViewController.swift */; };
+		2A4567EC236C6FC700A23FB0 /* DoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E0236C6FC700A23FB0 /* DoingViewController.swift */; };
+		2A4567ED236C6FC700A23FB0 /* DoingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E1236C6FC700A23FB0 /* DoingProtocols.swift */; };
+		2A4567EE236C6FC700A23FB0 /* DoingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E1236C6FC700A23FB0 /* DoingProtocols.swift */; };
+		2A4567EF236C6FC700A23FB0 /* DoingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E1236C6FC700A23FB0 /* DoingProtocols.swift */; };
+		2A4567F0236C6FC700A23FB0 /* DoingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E2236C6FC700A23FB0 /* DoingInteractor.swift */; };
+		2A4567F1236C6FC700A23FB0 /* DoingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E2236C6FC700A23FB0 /* DoingInteractor.swift */; };
+		2A4567F2236C6FC700A23FB0 /* DoingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4567E2236C6FC700A23FB0 /* DoingInteractor.swift */; };
+		2A4567F3236C6FC700A23FB0 /* DoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4567E3236C6FC700A23FB0 /* DoingViewController.xib */; };
+		2A4567F4236C6FC700A23FB0 /* DoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4567E3236C6FC700A23FB0 /* DoingViewController.xib */; };
+		2A4567F5236C6FC700A23FB0 /* DoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4567E3236C6FC700A23FB0 /* DoingViewController.xib */; };
+		2A456808236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456802236C81D800A23FB0 /* HistoryParkingPresenter.swift */; };
+		2A456809236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456802236C81D800A23FB0 /* HistoryParkingPresenter.swift */; };
+		2A45680A236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456802236C81D800A23FB0 /* HistoryParkingPresenter.swift */; };
+		2A45680B236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456803236C81D800A23FB0 /* HistoryParkingRouter.swift */; };
+		2A45680C236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456803236C81D800A23FB0 /* HistoryParkingRouter.swift */; };
+		2A45680D236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456803236C81D800A23FB0 /* HistoryParkingRouter.swift */; };
+		2A45680E236C81D800A23FB0 /* HistoryParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456804236C81D800A23FB0 /* HistoryParkingViewController.swift */; };
+		2A45680F236C81D800A23FB0 /* HistoryParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456804236C81D800A23FB0 /* HistoryParkingViewController.swift */; };
+		2A456810236C81D800A23FB0 /* HistoryParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456804236C81D800A23FB0 /* HistoryParkingViewController.swift */; };
+		2A456811236C81D800A23FB0 /* HistoryParkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456805236C81D800A23FB0 /* HistoryParkingProtocols.swift */; };
+		2A456812236C81D800A23FB0 /* HistoryParkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456805236C81D800A23FB0 /* HistoryParkingProtocols.swift */; };
+		2A456813236C81D800A23FB0 /* HistoryParkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456805236C81D800A23FB0 /* HistoryParkingProtocols.swift */; };
+		2A456814236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456806236C81D800A23FB0 /* HistoryParkingInteractor.swift */; };
+		2A456815236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456806236C81D800A23FB0 /* HistoryParkingInteractor.swift */; };
+		2A456816236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A456806236C81D800A23FB0 /* HistoryParkingInteractor.swift */; };
+		2A456817236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A456807236C81D800A23FB0 /* HistoryParkingViewController.xib */; };
+		2A456818236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A456807236C81D800A23FB0 /* HistoryParkingViewController.xib */; };
+		2A456819236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A456807236C81D800A23FB0 /* HistoryParkingViewController.xib */; };
+		2A45681B236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */; };
+		2A45681C236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */; };
+		2A45681D236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */; };
 		2A6C5ED422EF468F004B23EF /* CellSingleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */; };
 		2A6C5ED522EF468F004B23EF /* CellSingleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */; };
 		2A6C5ED622EF468F004B23EF /* CellSingleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */; };
@@ -1206,9 +1257,26 @@
 		22F33AA423645B8100D136EB /* HomeFindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFindViewController.xib; sourceTree = "<group>"; };
 		25ECF64E91EE97854783E905 /* Pods-EnglishApp_Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_Dev.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp_Dev/Pods-EnglishApp_Dev.release.xcconfig"; sourceTree = "<group>"; };
 		28D786760AE73B0AF55038DE /* Pods-EnglishApp_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp_AppStore.debug.xcconfig"; path = "Target Support Files/Pods-EnglishApp_AppStore/Pods-EnglishApp_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		2A07B977236E840A004FE7CE /* DoingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingCell.swift; sourceTree = "<group>"; };
+		2A07B978236E840A004FE7CE /* DoingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoingCell.xib; sourceTree = "<group>"; };
+		2A07B980236E8632004FE7CE /* DoubleLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoubleLabelView.xib; sourceTree = "<group>"; };
+		2A07B984236E863D004FE7CE /* DoubleLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLabelView.swift; sourceTree = "<group>"; };
 		2A13591C2311A67100587C0E /* EnglishApp_Dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Dev.entitlements; sourceTree = "<group>"; };
 		2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListManagerVC.swift; sourceTree = "<group>"; };
 		2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		2A4567DE236C6FC700A23FB0 /* DoingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingPresenter.swift; sourceTree = "<group>"; };
+		2A4567DF236C6FC700A23FB0 /* DoingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingRouter.swift; sourceTree = "<group>"; };
+		2A4567E0236C6FC700A23FB0 /* DoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingViewController.swift; sourceTree = "<group>"; };
+		2A4567E1236C6FC700A23FB0 /* DoingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingProtocols.swift; sourceTree = "<group>"; };
+		2A4567E2236C6FC700A23FB0 /* DoingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingInteractor.swift; sourceTree = "<group>"; };
+		2A4567E3236C6FC700A23FB0 /* DoingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoingViewController.xib; sourceTree = "<group>"; };
+		2A456802236C81D800A23FB0 /* HistoryParkingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryParkingPresenter.swift; sourceTree = "<group>"; };
+		2A456803236C81D800A23FB0 /* HistoryParkingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryParkingRouter.swift; sourceTree = "<group>"; };
+		2A456804236C81D800A23FB0 /* HistoryParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryParkingViewController.swift; sourceTree = "<group>"; };
+		2A456805236C81D800A23FB0 /* HistoryParkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryParkingProtocols.swift; sourceTree = "<group>"; };
+		2A456806236C81D800A23FB0 /* HistoryParkingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryParkingInteractor.swift; sourceTree = "<group>"; };
+		2A456807236C81D800A23FB0 /* HistoryParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryParkingViewController.xib; sourceTree = "<group>"; };
+		2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHistoryParkingController.swift; sourceTree = "<group>"; };
 		2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSingleLabel.swift; sourceTree = "<group>"; };
 		2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellSingleLabel.xib; sourceTree = "<group>"; };
 		2A7907D12329584B003B2752 /* EnglishApp_Prod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Prod.entitlements; sourceTree = "<group>"; };
@@ -1889,12 +1957,75 @@
 			path = HomeFind;
 			sourceTree = "<group>";
 		};
+		2A07B97F236E8613004FE7CE /* DoubleLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2A07B980236E8632004FE7CE /* DoubleLabelView.xib */,
+				2A07B984236E863D004FE7CE /* DoubleLabelView.swift */,
+			);
+			path = DoubleLabel;
+			sourceTree = "<group>";
+		};
 		2A2B015A22F085F800A08EEA /* ListManager */ = {
 			isa = PBXGroup;
 			children = (
 				2A2B015B22F0861E00A08EEA /* ListManagerVC.swift */,
 			);
 			path = ListManager;
+			sourceTree = "<group>";
+		};
+		2A4567B5236C6E9F00A23FB0 /* HistoryParking */ = {
+			isa = PBXGroup;
+			children = (
+				2A4567C3236C6F5500A23FB0 /* Controller */,
+				2A4567C2236C6F5000A23FB0 /* Cell */,
+				2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */,
+			);
+			path = HistoryParking;
+			sourceTree = "<group>";
+		};
+		2A4567C2236C6F5000A23FB0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2A07B977236E840A004FE7CE /* DoingCell.swift */,
+				2A07B978236E840A004FE7CE /* DoingCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2A4567C3236C6F5500A23FB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A4567C5236C6F7500A23FB0 /* History */,
+				2A4567C4236C6F6000A23FB0 /* Doing */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A4567C4236C6F6000A23FB0 /* Doing */ = {
+			isa = PBXGroup;
+			children = (
+				2A4567DE236C6FC700A23FB0 /* DoingPresenter.swift */,
+				2A4567DF236C6FC700A23FB0 /* DoingRouter.swift */,
+				2A4567E0236C6FC700A23FB0 /* DoingViewController.swift */,
+				2A4567E1236C6FC700A23FB0 /* DoingProtocols.swift */,
+				2A4567E2236C6FC700A23FB0 /* DoingInteractor.swift */,
+				2A4567E3236C6FC700A23FB0 /* DoingViewController.xib */,
+			);
+			path = Doing;
+			sourceTree = "<group>";
+		};
+		2A4567C5236C6F7500A23FB0 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2A456802236C81D800A23FB0 /* HistoryParkingPresenter.swift */,
+				2A456803236C81D800A23FB0 /* HistoryParkingRouter.swift */,
+				2A456804236C81D800A23FB0 /* HistoryParkingViewController.swift */,
+				2A456805236C81D800A23FB0 /* HistoryParkingProtocols.swift */,
+				2A456806236C81D800A23FB0 /* HistoryParkingInteractor.swift */,
+				2A456807236C81D800A23FB0 /* HistoryParkingViewController.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		2A6C5ED022EF466C004B23EF /* CommonCell */ = {
@@ -2121,6 +2252,7 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2A4567B5236C6E9F00A23FB0 /* HistoryParking */,
 				22BE84CD236978C40056DD51 /* ParkingUserDetail */,
 				17FCC5F5236AE49F003E98D8 /* ParkingInfo */,
 				22EB900E23684AFA00F77BC0 /* BookingInfo */,
@@ -2230,6 +2362,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				2A07B97F236E8613004FE7CE /* DoubleLabel */,
 				22AE2205236C1A6000148E2C /* AppRatingView */,
 				22B4B316236ABC4C004BD8FB /* AppImageSlide */,
 				22BE84BB236974AB0056DD51 /* UtilityView */,
@@ -2957,6 +3090,7 @@
 				DEC62AAE2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DEECF88022870D1700A4678B /* Localizable.strings in Resources */,
 				DEECF8A122871D1B00A4678B /* ForgotPasswordViewController.xib in Resources */,
+				2A456817236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				17C2C4C7236C28040020B299 /* ParkingInfoCell.xib in Resources */,
 				22EB900823683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92822C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
@@ -2975,8 +3109,10 @@
 				DE361E812283E60500FA3B0D /* AppDropDown.xib in Resources */,
 				DEECF8752287041900A4678B /* MenuCell.xib in Resources */,
 				1781C7DE236C381F00F053C1 /* LicenseInfoCell.xib in Resources */,
+				2A07B97C236E840A004FE7CE /* DoingCell.xib in Resources */,
 				22EB902423684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				22BE84E3236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
+				2A07B981236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				17C2C4BD236C1FDD0020B299 /* OtherInfoCell.xib in Resources */,
@@ -3008,6 +3144,7 @@
 				DE361DDB2283E4BD00FA3B0D /* LoginViewController.xib in Resources */,
 				76BD143B22ACC75500A48635 /* ReportQuestionView.xib in Resources */,
 				DE361EA02283E60500FA3B0D /* YesNoContentView.xib in Resources */,
+				2A4567F3236C6FC700A23FB0 /* DoingViewController.xib in Resources */,
 				1768974223697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */,
 				17FCC5D0236ABDEF003E98D8 /* UtilityCell.xib in Resources */,
 				22431761235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
@@ -3040,6 +3177,7 @@
 				DEC62AAF2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DE9530422287DF4800E3F688 /* Localizable.strings in Resources */,
 				DE9530432287DF4800E3F688 /* ForgotPasswordViewController.xib in Resources */,
+				2A456818236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				22EB900923683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92922C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
 				DE7D14BE228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
@@ -3052,13 +3190,16 @@
 				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				17FCC60C236AE4CF003E98D8 /* ParkingInfoViewController.xib in Resources */,
 				DE9530442287DF4800E3F688 /* NotificationContent.xib in Resources */,
+				2A4567F4236C6FC700A23FB0 /* DoingViewController.xib in Resources */,
 				DE49F83422A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
 				2203D56E23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				DE9530452287DF4800E3F688 /* AppDropDown.xib in Resources */,
 				DE9530462287DF4800E3F688 /* MenuCell.xib in Resources */,
 				22EB902523684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
+				2A07B97D236E840A004FE7CE /* DoingCell.xib in Resources */,
 				1781C7EB236C384200F053C1 /* OtherInfoCell.xib in Resources */,
 				22BE84E4236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
+				2A07B982236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DE9530472287DF4800E3F688 /* SignUpViewController.xib in Resources */,
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -3123,6 +3264,7 @@
 				DEC62AB02293007F00D7CECE /* ThanksReportContent.xib in Resources */,
 				DE9530F02287DF6400E3F688 /* Localizable.strings in Resources */,
 				DE9530F12287DF6400E3F688 /* ForgotPasswordViewController.xib in Resources */,
+				2A456819236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				22EB900A23683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92A22C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
 				DE7D14BF228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
@@ -3135,13 +3277,16 @@
 				22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				17FCC60D236AE4CF003E98D8 /* ParkingInfoViewController.xib in Resources */,
 				DE49F83522A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
+				2A4567F5236C6FC700A23FB0 /* DoingViewController.xib in Resources */,
 				DE9530F32287DF6400E3F688 /* AppDropDown.xib in Resources */,
 				2203D56F23655D5D0055E79F /* HomeFindCell.xib in Resources */,
 				2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				DE9530F42287DF6400E3F688 /* MenuCell.xib in Resources */,
 				22EB902623684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
+				2A07B97E236E840A004FE7CE /* DoingCell.xib in Resources */,
 				1781C7EC236C384400F053C1 /* OtherInfoCell.xib in Resources */,
 				22BE84E5236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
+				2A07B983236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DE9530F52287DF6400E3F688 /* SignUpViewController.xib in Resources */,
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -3435,6 +3580,7 @@
 				DE361E692283E60500FA3B0D /* AppColor.swift in Sources */,
 				DE952F8C2287D2A700E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
 				22EB901E23684B1100F77BC0 /* BookingInfoRouter.swift in Sources */,
+				2A45681B236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */,
 				17FCC5BC236AB7A9003E98D8 /* SignUpPartnerStep3Interactor.swift in Sources */,
 				2292F20E23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
 				DE361F2F2283E85000FA3B0D /* PhoneEntity.swift in Sources */,
@@ -3465,6 +3611,7 @@
 				DE361DE52283E54C00FA3B0D /* BaseTableCell.swift in Sources */,
 				DE952F7E2287D2A700E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				175C733F2367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
+				2A4567EA236C6FC700A23FB0 /* DoingViewController.swift in Sources */,
 				1768973F23697E62001F7383 /* SignUpPartnerStep2Interactor.swift in Sources */,
 				DE361F412283E85000FA3B0D /* UpdateProfileSocial.swift in Sources */,
 				DE2ADE5D22841A68003768CE /* SideMenuViewController.swift in Sources */,
@@ -3477,6 +3624,7 @@
 				17C2C4C1236C26810020B299 /* SlideImageCell.swift in Sources */,
 				766AE80822B02393002D474E /* ViewFeature.swift in Sources */,
 				17FCC5B6236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
+				2A4567F0236C6FC700A23FB0 /* DoingInteractor.swift in Sources */,
 				DE952F8A2287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				DE95317E228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
 				DE2C07F822857FF100BAE311 /* BaseTabStripViewController.swift in Sources */,
@@ -3534,6 +3682,7 @@
 				DE952F862287D2A700E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				2A36B8A0231A4AE100E9696F /* BaseTableViewController.swift in Sources */,
 				DE49F82F22A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
+				2A4567E4236C6FC700A23FB0 /* DoingPresenter.swift in Sources */,
 				DE953118228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE361F552283E8E200FA3B0D /* ParentNotificationEntity.swift in Sources */,
 				DE361DD72283E4BD00FA3B0D /* LoginRouter.swift in Sources */,
@@ -3562,8 +3711,11 @@
 				2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				223887252366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				DE2ADE7822841BB9003768CE /* MenuProtocols.swift in Sources */,
+				2A456808236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */,
 				17FCC5EE236ADA98003E98D8 /* PartnerStepView.swift in Sources */,
 				76483BF0229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
+				2A07B985236E863D004FE7CE /* DoubleLabelView.swift in Sources */,
+				2A45680E236C81D800A23FB0 /* HistoryParkingViewController.swift in Sources */,
 				DE2ADE5722841756003768CE /* AppDelegate+Push.swift in Sources */,
 				DEECF8772287075B00A4678B /* UITable+extension.swift in Sources */,
 				DE361DE32283E54C00FA3B0D /* BaseViewController.swift in Sources */,
@@ -3585,6 +3737,7 @@
 				DE361E712283E60500FA3B0D /* AppTextField.swift in Sources */,
 				DE361F4C2283E85000FA3B0D /* NotificationEndPoint.swift in Sources */,
 				DE361E9E2283E60500FA3B0D /* NotificationContent.swift in Sources */,
+				2A4567E7236C6FC700A23FB0 /* DoingRouter.swift in Sources */,
 				2238871D2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,
 				DE952F892287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				7629BDD622ACD2450051B835 /* ReportSuccessedView.swift in Sources */,
@@ -3618,9 +3771,11 @@
 				DE361E842283E60500FA3B0D /* AppDropDownCell.swift in Sources */,
 				DE3CC33E2283DD980037DBE4 /* AppDelegate.swift in Sources */,
 				DEECF89C22871D1B00A4678B /* ForgotPasswordPresenter.swift in Sources */,
+				2A07B979236E840A004FE7CE /* DoingCell.swift in Sources */,
 				DEECF88522870DA400A4678B /* LocalizableKey.swift in Sources */,
 				2203D56A23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				DE361E6A2283E60500FA3B0D /* AppFont.swift in Sources */,
+				2A456814236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
 				766AE7EA22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DEECF88F22871D0400A4678B /* SignUpPresenter.swift in Sources */,
 				DE361E822283E60500FA3B0D /* AppDropDown.swift in Sources */,
@@ -3641,8 +3796,10 @@
 				768074AE22C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
 				DE361E8D2283E60500FA3B0D /* AppCheckBox.swift in Sources */,
 				DE952F9A2287D2A700E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				2A4567ED236C6FC700A23FB0 /* DoingProtocols.swift in Sources */,
 				DE361DFA2283E57900FA3B0D /* UIViewController+extension.swift in Sources */,
 				DE89D1CC22A4126C000638B0 /* WebViewController.swift in Sources */,
+				2A45680B236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				DE361E7A2283E60500FA3B0D /* AppSearchBar.swift in Sources */,
 				DE952F972287D2A700E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				DEECF89222871D0400A4678B /* SignUpProtocols.swift in Sources */,
@@ -3670,6 +3827,7 @@
 				22EB902123684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522422CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				17FCC5FC236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
+				2A456811236C81D800A23FB0 /* HistoryParkingProtocols.swift in Sources */,
 				76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				DE361E002283E57900FA3B0D /* Button+extension.swift in Sources */,
 				DE49F83722A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
@@ -3721,6 +3879,7 @@
 				DE6FDB0822AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE952FC42287DF4800E3F688 /* AppColor.swift in Sources */,
 				DE952FC52287DF4800E3F688 /* KActivityIndicatorAnimationBlank.swift in Sources */,
+				2A45681C236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */,
 				22EB901F23684B1100F77BC0 /* BookingInfoRouter.swift in Sources */,
 				17FCC5BD236AB7A9003E98D8 /* SignUpPartnerStep3Interactor.swift in Sources */,
 				2292F20F23653B0400B570E3 /* NecContainerViewController.swift in Sources */,
@@ -3745,6 +3904,7 @@
 				DE49F81F22A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
 				17FCC606236AE4CF003E98D8 /* ParkingInfoProtocols.swift in Sources */,
 				766AE7F822B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
+				2A4567E5236C6FC700A23FB0 /* DoingPresenter.swift in Sources */,
 				175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				22431751235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
 				2243175C235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
@@ -3804,6 +3964,7 @@
 				DE952FE32287DF4800E3F688 /* BaseResponse.swift in Sources */,
 				DE952FE42287DF4800E3F688 /* LoginInteractor.swift in Sources */,
 				DE952FE52287DF4800E3F688 /* SignUpInteractor.swift in Sources */,
+				2A4567F1236C6FC700A23FB0 /* DoingInteractor.swift in Sources */,
 				DEC62AA72293006100D7CECE /* ThanksReportPopUp.swift in Sources */,
 				DE952FE62287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				DE952FE72287DF4800E3F688 /* RecordParam.swift in Sources */,
@@ -3812,6 +3973,7 @@
 				DE89D1F022A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FEA2287DF4800E3F688 /* Login+Facebook.swift in Sources */,
 				22BE84DB236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				2A4567EB236C6FC700A23FB0 /* DoingViewController.swift in Sources */,
 				DE952FEB2287DF4800E3F688 /* MenuRouter.swift in Sources */,
 				DE952FEC2287DF4800E3F688 /* KActivityIndicatorView.swift in Sources */,
 				17FCC600236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -3848,8 +4010,11 @@
 				2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				223887262366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				DE952FFD2287DF4800E3F688 /* MenuProtocols.swift in Sources */,
+				2A456809236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */,
 				17FCC5EF236ADA98003E98D8 /* PartnerStepView.swift in Sources */,
 				76483BF1229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
+				2A07B986236E863D004FE7CE /* DoubleLabelView.swift in Sources */,
+				2A45680F236C81D800A23FB0 /* HistoryParkingViewController.swift in Sources */,
 				DE952FFE2287DF4800E3F688 /* AppDelegate+Push.swift in Sources */,
 				DE952FFF2287DF4800E3F688 /* UITable+extension.swift in Sources */,
 				DE9530002287DF4800E3F688 /* BaseViewController.swift in Sources */,
@@ -3866,6 +4031,7 @@
 				22BE84E1236978DD0056DD51 /* ParkingUserDetailViewController.swift in Sources */,
 				DE9530062287DF4800E3F688 /* AppConstant.swift in Sources */,
 				DE49F80F22A3D83A00A92C63 /* NotificationCell.swift in Sources */,
+				2A4567EE236C6FC700A23FB0 /* DoingProtocols.swift in Sources */,
 				DE9530072287DF4800E3F688 /* KActivityIndicatorShape.swift in Sources */,
 				DE9530082287DF4800E3F688 /* AppTextField.swift in Sources */,
 				DE9530092287DF4800E3F688 /* NotificationEndPoint.swift in Sources */,
@@ -3904,9 +4070,11 @@
 				DE9530192287DF4800E3F688 /* AppDelegate.swift in Sources */,
 				DE95301A2287DF4800E3F688 /* ForgotPasswordPresenter.swift in Sources */,
 				DE95301B2287DF4800E3F688 /* LocalizableKey.swift in Sources */,
+				2A07B97A236E840A004FE7CE /* DoingCell.swift in Sources */,
 				2203D56B23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				DE95301C2287DF4800E3F688 /* AppFont.swift in Sources */,
 				766AE7EB22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
+				2A456815236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
 				DE95301D2287DF4800E3F688 /* SignUpPresenter.swift in Sources */,
 				DE95301E2287DF4800E3F688 /* AppDropDown.swift in Sources */,
 				DE9530202287DF4800E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
@@ -3923,12 +4091,14 @@
 				1781C7E9236C383E00F053C1 /* OtherInfoCell.swift in Sources */,
 				DE9530272287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				DE9530282287DF4800E3F688 /* NetworkRequest.swift in Sources */,
+				2A4567E8236C6FC700A23FB0 /* DoingRouter.swift in Sources */,
 				768074AF22C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
 				DE9530292287DF4800E3F688 /* AppCheckBox.swift in Sources */,
 				DE95302A2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				DE95302B2287DF4800E3F688 /* UIViewController+extension.swift in Sources */,
 				DE89D1CD22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE95302C2287DF4800E3F688 /* AppSearchBar.swift in Sources */,
+				2A45680C236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				DE95302D2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				DE95302E2287DF4800E3F688 /* SignUpProtocols.swift in Sources */,
 				DE9530302287DF4800E3F688 /* MapperData.swift in Sources */,
@@ -3956,6 +4126,7 @@
 				22EB902223684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522522CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				17FCC5FD236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
+				2A456812236C81D800A23FB0 /* HistoryParkingProtocols.swift in Sources */,
 				76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				DE95303E2287DF4800E3F688 /* Button+extension.swift in Sources */,
 				DE49F83822A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
@@ -4007,6 +4178,7 @@
 				DE73CF2022B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
 				DE6FDB0922AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE9530722287DF6400E3F688 /* AppColor.swift in Sources */,
+				2A45681D236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */,
 				22EB902023684B1100F77BC0 /* BookingInfoRouter.swift in Sources */,
 				17FCC5BE236AB7A9003E98D8 /* SignUpPartnerStep3Interactor.swift in Sources */,
 				2292F21023653B0400B570E3 /* NecContainerViewController.swift in Sources */,
@@ -4031,6 +4203,7 @@
 				DE9530782287DF6400E3F688 /* CustomTextfield.swift in Sources */,
 				17FCC607236AE4CF003E98D8 /* ParkingInfoProtocols.swift in Sources */,
 				DE49F82022A3DB9C00A92C63 /* NotificationDetailRouter.swift in Sources */,
+				2A4567E6236C6FC700A23FB0 /* DoingPresenter.swift in Sources */,
 				175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */,
 				766AE7F922B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
 				22431752235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
@@ -4090,6 +4263,7 @@
 				DE95308D2287DF6400E3F688 /* ForgotPasswordProtocols.swift in Sources */,
 				DE95308F2287DF6400E3F688 /* Network.swift in Sources */,
 				DE9530902287DF6400E3F688 /* UpdateProfileParam.swift in Sources */,
+				2A4567F2236C6FC700A23FB0 /* DoingInteractor.swift in Sources */,
 				DE9530912287DF6400E3F688 /* BaseResponse.swift in Sources */,
 				DE9530922287DF6400E3F688 /* LoginInteractor.swift in Sources */,
 				DE9530932287DF6400E3F688 /* SignUpInteractor.swift in Sources */,
@@ -4098,6 +4272,7 @@
 				2AA9E36822F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				DE9530952287DF6400E3F688 /* RecordParam.swift in Sources */,
 				22BE84DC236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				2A4567EC236C6FC700A23FB0 /* DoingViewController.swift in Sources */,
 				DE9530962287DF6400E3F688 /* Utils.swift in Sources */,
 				2220A78B235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */,
 				17FCC601236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -4134,8 +4309,11 @@
 				DE9530A82287DF6400E3F688 /* FadeInOutAnimation.swift in Sources */,
 				223887272366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				DE9530A92287DF6400E3F688 /* StringReachability.swift in Sources */,
+				2A45680A236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */,
 				17FCC5F0236ADA98003E98D8 /* PartnerStepView.swift in Sources */,
 				DE9530AA2287DF6400E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
+				2A07B987236E863D004FE7CE /* DoubleLabelView.swift in Sources */,
+				2A456810236C81D800A23FB0 /* HistoryParkingViewController.swift in Sources */,
 				DE9530AB2287DF6400E3F688 /* MenuProtocols.swift in Sources */,
 				76483BF2229EE3C90079F9A1 /* UpdateAccountView.swift in Sources */,
 				DE9530AC2287DF6400E3F688 /* AppDelegate+Push.swift in Sources */,
@@ -4152,6 +4330,7 @@
 				22BE84E2236978DD0056DD51 /* ParkingUserDetailViewController.swift in Sources */,
 				DE9530B42287DF6400E3F688 /* AppConstant.swift in Sources */,
 				DE49F81022A3D83A00A92C63 /* NotificationCell.swift in Sources */,
+				2A4567EF236C6FC700A23FB0 /* DoingProtocols.swift in Sources */,
 				DE9530B52287DF6400E3F688 /* KActivityIndicatorShape.swift in Sources */,
 				DE9530B62287DF6400E3F688 /* AppTextField.swift in Sources */,
 				DE9530B72287DF6400E3F688 /* NotificationEndPoint.swift in Sources */,
@@ -4190,9 +4369,11 @@
 				DE9530C82287DF6400E3F688 /* ForgotPasswordPresenter.swift in Sources */,
 				DE9530C92287DF6400E3F688 /* LocalizableKey.swift in Sources */,
 				DE9530CA2287DF6400E3F688 /* AppFont.swift in Sources */,
+				2A07B97B236E840A004FE7CE /* DoingCell.swift in Sources */,
 				2203D56C23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				766AE7EC22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DE9530CB2287DF6400E3F688 /* SignUpPresenter.swift in Sources */,
+				2A456816236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
 				DE9530CC2287DF6400E3F688 /* AppDropDown.swift in Sources */,
 				DE9530CE2287DF6400E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAC2293007200D7CECE /* ThanksReportContent.swift in Sources */,
@@ -4209,12 +4390,14 @@
 				1781C7EA236C383E00F053C1 /* OtherInfoCell.swift in Sources */,
 				DE9530D62287DF6400E3F688 /* NetworkRequest.swift in Sources */,
 				768074B022C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
+				2A4567E9236C6FC700A23FB0 /* DoingRouter.swift in Sources */,
 				DE9530D72287DF6400E3F688 /* AppCheckBox.swift in Sources */,
 				DE9530D82287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				DE9530D92287DF6400E3F688 /* UIViewController+extension.swift in Sources */,
 				DE89D1CE22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE9530DA2287DF6400E3F688 /* AppSearchBar.swift in Sources */,
 				DE9530DB2287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				2A45680D236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				DE9530DC2287DF6400E3F688 /* SignUpProtocols.swift in Sources */,
 				7624A6C7231AB571000BA1C6 /* BaseTableViewController.swift in Sources */,
 				DE9530DE2287DF6400E3F688 /* MapperData.swift in Sources */,
@@ -4242,6 +4425,7 @@
 				22EB902323684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522622CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
 				17FCC5FE236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
+				2A456813236C81D800A23FB0 /* HistoryParkingProtocols.swift in Sources */,
 				76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */,
 				DE9530EC2287DF6400E3F688 /* Button+extension.swift in Sources */,
 				DE49F83922A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
