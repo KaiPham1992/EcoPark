@@ -33,10 +33,76 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79b-10-Cd8">
                                 <rect key="frame" x="50" y="36" width="250" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="lbZ-TW-nPO">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yo3-eB-aNR" customClass="TimeView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="bpr-1B-iLh"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhX-CM-Zyw">
+                                                <rect key="frame" x="78" y="0.0" width="6" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-0J-sz7">
+                                                        <rect key="frame" x="-0.5" y="16.5" width="7.5" height="37"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="27"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="6" id="L39-Bc-m3I"/>
+                                                    <constraint firstItem="dfT-0J-sz7" firstAttribute="centerY" secondItem="WhX-CM-Zyw" secondAttribute="centerY" id="LkK-dL-HC1"/>
+                                                    <constraint firstItem="dfT-0J-sz7" firstAttribute="centerX" secondItem="WhX-CM-Zyw" secondAttribute="centerX" id="kN4-TE-QVi"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGK-C6-NI6" customClass="TimeView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                                <rect key="frame" x="97" y="0.0" width="65" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="XHA-5J-wUI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rA5-aR-LrL">
+                                                <rect key="frame" x="175" y="0.0" width="6" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kq-r8-R7n">
+                                                        <rect key="frame" x="-0.5" y="16.5" width="7.5" height="37"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="27"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="6" id="4uT-eX-zVu"/>
+                                                    <constraint firstItem="7kq-r8-R7n" firstAttribute="centerY" secondItem="rA5-aR-LrL" secondAttribute="centerY" id="b7C-qI-RJo"/>
+                                                    <constraint firstItem="7kq-r8-R7n" firstAttribute="centerX" secondItem="rA5-aR-LrL" secondAttribute="centerX" id="t7R-aX-xWM"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ckj-Cv-GP6" customClass="TimeView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                                <rect key="frame" x="185" y="0.0" width="65" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="5HT-S8-T9D"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lbZ-TW-nPO" secondAttribute="bottom" id="DuM-oJ-53L"/>
                                     <constraint firstAttribute="width" constant="250" id="jA2-NZ-GXf"/>
+                                    <constraint firstItem="lbZ-TW-nPO" firstAttribute="leading" secondItem="79b-10-Cd8" secondAttribute="leading" id="nqQ-uO-Na9"/>
+                                    <constraint firstAttribute="trailing" secondItem="lbZ-TW-nPO" secondAttribute="trailing" id="sxn-Yt-lUb"/>
                                     <constraint firstAttribute="height" constant="70" id="ucp-BB-Bn4"/>
+                                    <constraint firstItem="lbZ-TW-nPO" firstAttribute="top" secondItem="79b-10-Cd8" secondAttribute="top" id="vjx-kf-X1q"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đặt lúc" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNP-i0-WL3">

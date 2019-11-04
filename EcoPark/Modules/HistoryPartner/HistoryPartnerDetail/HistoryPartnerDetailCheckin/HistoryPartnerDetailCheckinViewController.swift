@@ -1,5 +1,5 @@
 //
-//  HistoryPartnerDetailBookingViewController.swift
+//  HistoryPartnerDetailCheckinViewController.swift
 //  EcoPark
 //
 //  Created Tu DV on 11/3/19.
@@ -10,30 +10,33 @@
 
 import UIKit
 
-class HistoryPartnerDetailBookingViewController: UIViewController, HistoryPartnerDetailBookingViewProtocol {
+class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPartnerDetailCheckinViewProtocol {
 
     @IBOutlet weak var lbID: UILabel!
     @IBOutlet weak var lbStatus: UILabel!
-    @IBOutlet weak var tbHoldingDetail: UITableView!
+    @IBOutlet weak var tbCheckInDetail: UITableView!
     
-	var presenter: HistoryPartnerDetailBookingPresenterProtocol?
+	var presenter: HistoryPartnerDetailCheckinPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         configTableView()
     }
+
 }
 
-extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITableViewDelegate {
+extension HistoryPartnerDetailCheckinViewController: UITableViewDataSource, UITableViewDelegate {
     
     func configTableView() {
-        tbHoldingDetail.dataSource = self
-        tbHoldingDetail.delegate = self
+        tbCheckInDetail.dataSource = self
+        tbCheckInDetail.delegate = self
         
-        tbHoldingDetail.registerXibFile(TimeParkingCell.self)
-        tbHoldingDetail.registerXibFile(UserInfoCell.self)
-        tbHoldingDetail.registerXibFile(PriceCell.self)
+        tbCheckInDetail.registerXibFile(TimeParkingCell.self)
+        tbCheckInDetail.registerXibFile(UserInfoCell.self)
+        tbCheckInDetail.registerXibFile(PriceCell.self)
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

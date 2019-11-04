@@ -185,6 +185,27 @@
 		17C2C4C2236C26810020B299 /* SlideImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C2C4C0236C26810020B299 /* SlideImageCell.xib */; };
 		17C2C4C6236C28040020B299 /* ParkingInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C2C4C4236C28040020B299 /* ParkingInfoCell.swift */; };
 		17C2C4C7236C28040020B299 /* ParkingInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C2C4C5236C28040020B299 /* ParkingInfoCell.xib */; };
+		17C7FB69236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB68236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift */; };
+		17C7FB6A236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB68236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift */; };
+		17C7FB6B236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB68236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift */; };
+		17C7FB73236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6D236FF89900ACE95D /* HistoryPartnerPresenter.swift */; };
+		17C7FB74236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6D236FF89900ACE95D /* HistoryPartnerPresenter.swift */; };
+		17C7FB75236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6D236FF89900ACE95D /* HistoryPartnerPresenter.swift */; };
+		17C7FB76236FF89900ACE95D /* HistoryPartnerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6E236FF89900ACE95D /* HistoryPartnerRouter.swift */; };
+		17C7FB77236FF89900ACE95D /* HistoryPartnerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6E236FF89900ACE95D /* HistoryPartnerRouter.swift */; };
+		17C7FB78236FF89900ACE95D /* HistoryPartnerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6E236FF89900ACE95D /* HistoryPartnerRouter.swift */; };
+		17C7FB79236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6F236FF89900ACE95D /* HistoryPartnerViewController.swift */; };
+		17C7FB7A236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6F236FF89900ACE95D /* HistoryPartnerViewController.swift */; };
+		17C7FB7B236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB6F236FF89900ACE95D /* HistoryPartnerViewController.swift */; };
+		17C7FB7C236FF89900ACE95D /* HistoryPartnerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB70236FF89900ACE95D /* HistoryPartnerProtocols.swift */; };
+		17C7FB7D236FF89900ACE95D /* HistoryPartnerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB70236FF89900ACE95D /* HistoryPartnerProtocols.swift */; };
+		17C7FB7E236FF89900ACE95D /* HistoryPartnerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB70236FF89900ACE95D /* HistoryPartnerProtocols.swift */; };
+		17C7FB7F236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB71236FF89900ACE95D /* HistoryPartnerInteractor.swift */; };
+		17C7FB80236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB71236FF89900ACE95D /* HistoryPartnerInteractor.swift */; };
+		17C7FB81236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB71236FF89900ACE95D /* HistoryPartnerInteractor.swift */; };
+		17C7FB82236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */; };
+		17C7FB83236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */; };
+		17C7FB84236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */; };
 		17FCC5B0236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */; };
 		17FCC5B1236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */; };
 		17FCC5B2236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */; };
@@ -1407,6 +1428,13 @@
 		17C2C4C0236C26810020B299 /* SlideImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideImageCell.xib; sourceTree = "<group>"; };
 		17C2C4C4236C28040020B299 /* ParkingInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingInfoCell.swift; sourceTree = "<group>"; };
 		17C2C4C5236C28040020B299 /* ParkingInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingInfoCell.xib; sourceTree = "<group>"; };
+		17C7FB68236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHistoryPartnerViewControler.swift; sourceTree = "<group>"; };
+		17C7FB6D236FF89900ACE95D /* HistoryPartnerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerPresenter.swift; sourceTree = "<group>"; };
+		17C7FB6E236FF89900ACE95D /* HistoryPartnerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerRouter.swift; sourceTree = "<group>"; };
+		17C7FB6F236FF89900ACE95D /* HistoryPartnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerViewController.swift; sourceTree = "<group>"; };
+		17C7FB70236FF89900ACE95D /* HistoryPartnerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerProtocols.swift; sourceTree = "<group>"; };
+		17C7FB71236FF89900ACE95D /* HistoryPartnerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerInteractor.swift; sourceTree = "<group>"; };
+		17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerViewController.xib; sourceTree = "<group>"; };
 		17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep3Presenter.swift; sourceTree = "<group>"; };
 		17FCC5AB236AB7A9003E98D8 /* SignUpPartnerStep3Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep3Router.swift; sourceTree = "<group>"; };
 		17FCC5AC236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep3ViewController.swift; sourceTree = "<group>"; };
@@ -2042,6 +2070,19 @@
 			path = ParkingInfoCell;
 			sourceTree = "<group>";
 		};
+		17C7FB6C236FF86000ACE95D /* HistoryPartner */ = {
+			isa = PBXGroup;
+			children = (
+				17C7FB6D236FF89900ACE95D /* HistoryPartnerPresenter.swift */,
+				17C7FB6E236FF89900ACE95D /* HistoryPartnerRouter.swift */,
+				17C7FB6F236FF89900ACE95D /* HistoryPartnerViewController.swift */,
+				17C7FB70236FF89900ACE95D /* HistoryPartnerProtocols.swift */,
+				17C7FB71236FF89900ACE95D /* HistoryPartnerInteractor.swift */,
+				17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */,
+			);
+			path = HistoryPartner;
+			sourceTree = "<group>";
+		};
 		17FCC5A9236AB788003E98D8 /* SignUpPartnerStep3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2112,9 +2153,12 @@
 		17FFE257236D396400E740B3 /* HistoryPartner */ = {
 			isa = PBXGroup;
 			children = (
-				17FFE271236D3B9A00E740B3 /* Cells */,
+				17C7FB68236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift */,
+				17C7FB6C236FF86000ACE95D /* HistoryPartner */,
 				1717E0F5236D98A600E07734 /* HistoryPartnerBooking */,
 				17FFE258236D39FA00E740B3 /* HistoryPartnerHolding */,
+				17FFE271236D3B9A00E740B3 /* Cells */,
+				17BAF890236EAAE60066BD29 /* HistoryPartnerDetail */,
 			);
 			path = HistoryPartner;
 			sourceTree = "<group>";
@@ -2875,7 +2919,6 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				17BAF890236EAAE60066BD29 /* HistoryPartnerDetail */,
 				2A4567B5236C6E9F00A23FB0 /* HistoryParking */,
 				17FFE257236D396400E740B3 /* HistoryPartner */,
 				7615D221236C7D9300781AD3 /* HistoryUser */,
@@ -3698,6 +3741,7 @@
 				DEC7F92822C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
 				DE7D14BD228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92222C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
+				17C7FB82236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
 				76FBA1E5236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				2A07B99E236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
@@ -3804,6 +3848,7 @@
 				DE7D14BE228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92322C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				22431754235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
+				17C7FB83236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
 				76FBA1E6236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
 				2A07B99F236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
@@ -3910,6 +3955,7 @@
 				DE7D14BF228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92422C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				22431755235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
+				17C7FB84236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
 				76FBA1E7236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
 				2A07B9A0236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
@@ -4236,6 +4282,7 @@
 				76E2FEFB228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				76FBA1D9236EE08B00DD92D2 /* NotificationDetailRouter.swift in Sources */,
 				DE361DFF2283E57900FA3B0D /* NSObjectProtocol+Extension.swift in Sources */,
+				17C7FB79236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */,
 				22EB901523684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
 				2220A78F235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
@@ -4292,6 +4339,7 @@
 				1717E108236D98DB00E07734 /* HistoryPartnerBookingInteractor.swift in Sources */,
 				7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */,
 				766AE80822B02393002D474E /* ViewFeature.swift in Sources */,
+				17C7FB73236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */,
 				17FCC5B6236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE952F8A2287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				DE95317E228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
@@ -4369,6 +4417,7 @@
 				22F33AAE23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				22BE84DD236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B0236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				17C7FB69236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				DE361DD92283E4BD00FA3B0D /* LoginProtocols.swift in Sources */,
 				2220A78C235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				2292F20B23653B0400B570E3 /* DrawerViewController.swift in Sources */,
@@ -4393,6 +4442,7 @@
 				DE952F842287D2A700E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
 				2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				223887252366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
+				17C7FB7F236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */,
 				DE2ADE7822841BB9003768CE /* MenuProtocols.swift in Sources */,
 				2A456808236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */,
 				17FCC5EE236ADA98003E98D8 /* PartnerStepView.swift in Sources */,
@@ -4451,6 +4501,7 @@
 				DE361F392283E85000FA3B0D /* APIError.swift in Sources */,
 				7615D236236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				22BE84B8236930080056DD51 /* BookingPopUp.swift in Sources */,
+				17C7FB7C236FF89900ACE95D /* HistoryPartnerProtocols.swift in Sources */,
 				2A07B992236E9935004FE7CE /* DetailParkingRouter.swift in Sources */,
 				DE361F332283E85000FA3B0D /* UserEntity.swift in Sources */,
 				DE361F342283E85000FA3B0D /* FaceBookEntity.swift in Sources */,
@@ -4487,6 +4538,7 @@
 				76682F4A236EB74500F49482 /* SystemNotificationProtocols.swift in Sources */,
 				DEECF87B22870B3D00A4678B /* Bundle+extension.swift in Sources */,
 				76682F29236EB72C00F49482 /* MyNotificationPresenter.swift in Sources */,
+				17C7FB76236FF89900ACE95D /* HistoryPartnerRouter.swift in Sources */,
 				17C2C4BC236C1FDD0020B299 /* OtherInfoCell.swift in Sources */,
 				22AE2208236C1A6100148E2C /* AppRatingView.swift in Sources */,
 				DEECF87922870AEB00A4678B /* LanguageHelper.swift in Sources */,
@@ -4588,6 +4640,7 @@
 				76E2FEFC228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				76FBA1DA236EE08B00DD92D2 /* NotificationDetailRouter.swift in Sources */,
 				DE952FC12287DF4800E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				17C7FB7A236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */,
 				22EB901623684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
 				2220A790235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
@@ -4644,6 +4697,7 @@
 				1717E109236D98DB00E07734 /* HistoryPartnerBookingInteractor.swift in Sources */,
 				7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */,
 				766AE80922B02393002D474E /* ViewFeature.swift in Sources */,
+				17C7FB74236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */,
 				17FCC5B7236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE952FD32287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				DE95317F228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
@@ -4721,6 +4775,7 @@
 				22F33AAF23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				22BE84DE236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B1236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				17C7FB6A236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				DE952FF12287DF4800E3F688 /* LoginProtocols.swift in Sources */,
 				2220A78D235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				2292F20C23653B0400B570E3 /* DrawerViewController.swift in Sources */,
@@ -4745,6 +4800,7 @@
 				DE952FFC2287DF4800E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
 				2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				223887262366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
+				17C7FB80236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */,
 				DE952FFD2287DF4800E3F688 /* MenuProtocols.swift in Sources */,
 				2A456809236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */,
 				17FCC5EF236ADA98003E98D8 /* PartnerStepView.swift in Sources */,
@@ -4803,6 +4859,7 @@
 				22BE84B9236930080056DD51 /* BookingPopUp.swift in Sources */,
 				7615D237236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				DE9530152287DF4800E3F688 /* UserEntity.swift in Sources */,
+				17C7FB7D236FF89900ACE95D /* HistoryPartnerProtocols.swift in Sources */,
 				2A07B993236E9935004FE7CE /* DetailParkingRouter.swift in Sources */,
 				DE9530162287DF4800E3F688 /* FaceBookEntity.swift in Sources */,
 				DE9530172287DF4800E3F688 /* ForgotPasswordViewController.swift in Sources */,
@@ -4839,6 +4896,7 @@
 				76682F4B236EB74500F49482 /* SystemNotificationProtocols.swift in Sources */,
 				22AE2209236C1A6100148E2C /* AppRatingView.swift in Sources */,
 				76682F2A236EB72C00F49482 /* MyNotificationPresenter.swift in Sources */,
+				17C7FB77236FF89900ACE95D /* HistoryPartnerRouter.swift in Sources */,
 				DE9530262287DF4800E3F688 /* LanguageHelper.swift in Sources */,
 				1781C7E9236C383E00F053C1 /* OtherInfoCell.swift in Sources */,
 				DE9530272287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
@@ -4940,6 +4998,7 @@
 				76E2FEFD228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				76FBA1DB236EE08B00DD92D2 /* NotificationDetailRouter.swift in Sources */,
 				DE95306F2287DF6400E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				17C7FB7B236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */,
 				22EB901723684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
 				2220A791235EDA3A00E9C0F1 /* HomeRouter.swift in Sources */,
@@ -4996,6 +5055,7 @@
 				DE95307F2287DF6400E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
 				1717E10A236D98DB00E07734 /* HistoryPartnerBookingInteractor.swift in Sources */,
 				7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */,
+				17C7FB75236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */,
 				17FCC5B8236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE9530802287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				766AE80A22B02393002D474E /* ViewFeature.swift in Sources */,
@@ -5073,6 +5133,7 @@
 				DE49F83122A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
 				22BE84DF236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B2236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				17C7FB6B236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				2220A78E235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				2292F20D23653B0400B570E3 /* DrawerViewController.swift in Sources */,
 				DE95311A228807AA00E3F688 /* AppRouter.swift in Sources */,
@@ -5097,6 +5158,7 @@
 				DE9530A72287DF6400E3F688 /* KActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				DE9530A82287DF6400E3F688 /* FadeInOutAnimation.swift in Sources */,
 				223887272366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
+				17C7FB81236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */,
 				DE9530A92287DF6400E3F688 /* StringReachability.swift in Sources */,
 				2A45680A236C81D800A23FB0 /* HistoryParkingPresenter.swift in Sources */,
 				17FCC5F0236ADA98003E98D8 /* PartnerStepView.swift in Sources */,
@@ -5155,6 +5217,7 @@
 				22BE84BA236930080056DD51 /* BookingPopUp.swift in Sources */,
 				7615D238236C7EA800781AD3 /* QRScannerInteractor.swift in Sources */,
 				DE9530C42287DF6400E3F688 /* FaceBookEntity.swift in Sources */,
+				17C7FB7E236FF89900ACE95D /* HistoryPartnerProtocols.swift in Sources */,
 				2A07B994236E9935004FE7CE /* DetailParkingRouter.swift in Sources */,
 				DE9530C52287DF6400E3F688 /* ForgotPasswordViewController.swift in Sources */,
 				DE953186228846D400E3F688 /* ChangePasswordProtocols.swift in Sources */,
@@ -5191,6 +5254,7 @@
 				76682F4C236EB74500F49482 /* SystemNotificationProtocols.swift in Sources */,
 				22AE220A236C1A6100148E2C /* AppRatingView.swift in Sources */,
 				76682F2B236EB72C00F49482 /* MyNotificationPresenter.swift in Sources */,
+				17C7FB78236FF89900ACE95D /* HistoryPartnerRouter.swift in Sources */,
 				DE9530D52287DF6400E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				1781C7EA236C383E00F053C1 /* OtherInfoCell.swift in Sources */,
 				DE9530D62287DF6400E3F688 /* NetworkRequest.swift in Sources */,
