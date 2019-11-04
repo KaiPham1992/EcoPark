@@ -10,4 +10,5 @@ import UIKit
 
 class ParkingSortView: BaseViewXib {
     @IBOutlet weak var btnOver: UIButton!
+    @IBOutlet weak var btnBooking: UIButton!
 }

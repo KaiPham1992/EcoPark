@@ -45,6 +45,12 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         case AppImage.imgSecurity:
             let webView = WebViewController.initFromNib()
             self.openViewController(presentingController: webView)
+        case AppImage.imgProfile:
+            let profile = ProfileRouter.createModule()
+            self.openViewController(presentingController: profile)
+        case AppImage.imgWallet:
+            let wallet = WalletRouter.createModule()
+            self.openViewController(presentingController: wallet)
         default:
             self.openViewController(presentingController: homeVC)
         }

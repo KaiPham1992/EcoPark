@@ -13,6 +13,7 @@ class AppSearchBar: BaseViewXib {
     @IBOutlet weak var vContain: UIView!
     @IBOutlet weak var btnSearch: UIButton!
     var actionSearch : ((String) -> ())?
+    var tapToTextField: CompletionClosure?
     
     func setTitleAndPlaceHolder(icon: UIImage? = nil, placeHolder: String? = nil) {
         if placeHolder != nil {
@@ -27,6 +28,12 @@ class AppSearchBar: BaseViewXib {
     override func setUpViews() {
         super.setUpViews()
         tfInput.delegate = self
+        
+        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.touchDown)
+    }
+    
+    @objc func textFieldTapped() {
+        tapToTextField?()
     }
     
     @IBAction func btnSearchTapped() {

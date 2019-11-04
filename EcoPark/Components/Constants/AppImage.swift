@@ -86,4 +86,8 @@ struct AppImage {
     static let imgStarFilled = UIImage(named: "ic_star_filled")!
     static let imgStarHalf = UIImage(named: "ic_star_half")!
     static let imgStarEmpty = UIImage(named: "ic_star_outline")!
+    
+    static let imgWallet = UIImage(named: "ic_star_outline")!
+    
+    
 }
