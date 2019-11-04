@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpPartnerStep1ViewController">
             <connections>
                 <outlet property="btnNext" destination="mqJ-Xn-wph" id="2iF-UT-qb0"/>
+                <outlet property="heightPhoto" destination="P6p-Tb-EaO" id="G1L-LY-dmI"/>
                 <outlet property="lbImage" destination="I8V-wS-tLU" id="Etc-8Z-8i7"/>
                 <outlet property="lbPartnerInfo" destination="NkO-Sc-Aww" id="eD4-nY-F3u"/>
                 <outlet property="vBirthday" destination="h9f-bR-965" id="eqJ-e3-pk9"/>
@@ -27,6 +28,7 @@
                 <outlet property="vIDNumber" destination="4yt-7c-NS7" id="6Es-hK-i9j"/>
                 <outlet property="vIssuedBy" destination="aVd-be-s7J" id="4lW-nF-gAN"/>
                 <outlet property="vPartnerName" destination="rDb-FO-ww6" id="MMr-dX-ber"/>
+                <outlet property="vPhoto" destination="tiF-xk-Df9" id="h0S-yt-JQh"/>
                 <outlet property="vStep" destination="6N1-JK-IKi" id="6sO-XP-UCm"/>
                 <outlet property="view" destination="6Ln-Mx-VRn" id="yHq-Fw-IqR"/>
             </connections>
@@ -40,52 +42,52 @@
                     <rect key="frame" x="0.0" y="0.0" width="368" height="932"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-Zb-u4C">
-                            <rect key="frame" x="0.0" y="0.0" width="368" height="911"/>
+                            <rect key="frame" x="0.0" y="0.0" width="368" height="891"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-JK-IKi" customClass="PartnerStepView" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-JK-IKi" customClass="PartnerStepView" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="368" height="90"/>
                                     <color key="backgroundColor" red="0.12549019610000001" green="0.1764705882" blue="0.2156862745" alpha="1" colorSpace="deviceRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="90" id="ZIj-YE-QHg"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDb-FO-ww6" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDb-FO-ww6" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="134.5" width="336" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="53e-yd-0pf"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPt-Cq-Yru" customClass="AppDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPt-Cq-Yru" customClass="AppDropDown" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="212.5" width="140" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-bR-965" customClass="AppDateDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-bR-965" customClass="AppDateDropDown" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="172" y="212.5" width="180" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="180" id="reQ-dQ-Tmr"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yt-7c-NS7" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yt-7c-NS7" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="290.5" width="336" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="Hk4-cs-awP"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-be-s7J" customClass="AppDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-be-s7J" customClass="AppDropDown" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="368.5" width="140" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDL-Vz-sEi" customClass="AppDateDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDL-Vz-sEi" customClass="AppDateDropDown" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="172" y="368.5" width="180" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="180" id="EKj-Cg-qdS"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4U-Pj-bqq" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4U-Pj-bqq" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="446.5" width="336" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -93,7 +95,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-73-Cwb">
-                                    <rect key="frame" x="16" y="553" width="336" height="300"/>
+                                    <rect key="frame" x="16" y="553" width="336" height="280"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwL-ev-8TJ">
                                             <rect key="frame" x="0.0" y="0.0" width="336" height="80"/>
@@ -117,15 +119,25 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-xk-Df9" customClass="AppCollectionPhoto" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="90" width="336" height="180"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="180" id="P6p-Tb-EaO"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="tiF-xk-Df9" firstAttribute="top" secondItem="jwL-ev-8TJ" secondAttribute="bottom" constant="10" id="3mO-fC-Nzi"/>
                                         <constraint firstItem="jwL-ev-8TJ" firstAttribute="top" secondItem="RuO-73-Cwb" secondAttribute="top" id="OiR-n6-Fox"/>
-                                        <constraint firstAttribute="height" constant="300" id="UA3-ji-KCb"/>
+                                        <constraint firstAttribute="height" constant="280" id="UA3-ji-KCb"/>
+                                        <constraint firstItem="tiF-xk-Df9" firstAttribute="leading" secondItem="RuO-73-Cwb" secondAttribute="leading" id="X3R-Dg-sa7"/>
+                                        <constraint firstAttribute="trailing" secondItem="tiF-xk-Df9" secondAttribute="trailing" id="fm3-nb-DsL"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-Xn-wph">
-                                    <rect key="frame" x="16" y="861" width="336" height="50"/>
+                                    <rect key="frame" x="16" y="841" width="336" height="50"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="GEX-TJ-yDe"/>

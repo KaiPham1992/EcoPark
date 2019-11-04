@@ -206,6 +206,18 @@
 		17C7FB82236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */; };
 		17C7FB83236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */; };
 		17C7FB84236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */; };
+		17C7FB8B23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8723700A1800ACE95D /* AppCollectionPhotoCell.swift */; };
+		17C7FB8C23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8723700A1800ACE95D /* AppCollectionPhotoCell.swift */; };
+		17C7FB8D23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8723700A1800ACE95D /* AppCollectionPhotoCell.swift */; };
+		17C7FB8E23700A1800ACE95D /* AppPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8923700A1800ACE95D /* AppPhoto.swift */; };
+		17C7FB8F23700A1800ACE95D /* AppPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8923700A1800ACE95D /* AppPhoto.swift */; };
+		17C7FB9023700A1800ACE95D /* AppPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8923700A1800ACE95D /* AppPhoto.swift */; };
+		17C7FB9123700A1800ACE95D /* AppCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8A23700A1800ACE95D /* AppCollectionPhoto.swift */; };
+		17C7FB9223700A1800ACE95D /* AppCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8A23700A1800ACE95D /* AppCollectionPhoto.swift */; };
+		17C7FB9323700A1800ACE95D /* AppCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB8A23700A1800ACE95D /* AppCollectionPhoto.swift */; };
+		17C7FB9523700A7600ACE95D /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB9423700A7600ACE95D /* BaseCollectionCell.swift */; };
+		17C7FB9623700A7600ACE95D /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB9423700A7600ACE95D /* BaseCollectionCell.swift */; };
+		17C7FB9723700A7600ACE95D /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7FB9423700A7600ACE95D /* BaseCollectionCell.swift */; };
 		17FCC5B0236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */; };
 		17FCC5B1236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */; };
 		17FCC5B2236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */; };
@@ -1435,6 +1447,10 @@
 		17C7FB70236FF89900ACE95D /* HistoryPartnerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerProtocols.swift; sourceTree = "<group>"; };
 		17C7FB71236FF89900ACE95D /* HistoryPartnerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerInteractor.swift; sourceTree = "<group>"; };
 		17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerViewController.xib; sourceTree = "<group>"; };
+		17C7FB8723700A1800ACE95D /* AppCollectionPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionPhotoCell.swift; sourceTree = "<group>"; };
+		17C7FB8923700A1800ACE95D /* AppPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPhoto.swift; sourceTree = "<group>"; };
+		17C7FB8A23700A1800ACE95D /* AppCollectionPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionPhoto.swift; sourceTree = "<group>"; };
+		17C7FB9423700A7600ACE95D /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		17FCC5AA236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep3Presenter.swift; sourceTree = "<group>"; };
 		17FCC5AB236AB7A9003E98D8 /* SignUpPartnerStep3Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep3Router.swift; sourceTree = "<group>"; };
 		17FCC5AC236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep3ViewController.swift; sourceTree = "<group>"; };
@@ -2081,6 +2097,32 @@
 				17C7FB72236FF89900ACE95D /* HistoryPartnerViewController.xib */,
 			);
 			path = HistoryPartner;
+			sourceTree = "<group>";
+		};
+		17C7FB8523700A1700ACE95D /* AppCollectionPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				17C7FB8623700A1800ACE95D /* Cell */,
+				17C7FB8823700A1800ACE95D /* Model */,
+				17C7FB8A23700A1800ACE95D /* AppCollectionPhoto.swift */,
+			);
+			path = AppCollectionPhoto;
+			sourceTree = "<group>";
+		};
+		17C7FB8623700A1800ACE95D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				17C7FB8723700A1800ACE95D /* AppCollectionPhotoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		17C7FB8823700A1800ACE95D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17C7FB8923700A1800ACE95D /* AppPhoto.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		17FCC5A9236AB788003E98D8 /* SignUpPartnerStep3 */ = {
@@ -2992,6 +3034,7 @@
 				DE361DE22283E54C00FA3B0D /* BaseView.swift */,
 				DE2C07F722857FF000BAE311 /* BaseTabStripViewController.swift */,
 				2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */,
+				17C7FB9423700A7600ACE95D /* BaseCollectionCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -3031,6 +3074,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				17C7FB8523700A1700ACE95D /* AppCollectionPhoto */,
 				2A07B9AA236E9E52004FE7CE /* TimeView */,
 				2A07B9A1236E9BA3004FE7CE /* ImageLabel */,
 				2A07B97F236E8613004FE7CE /* DoubleLabel */,
@@ -4311,6 +4355,7 @@
 				22EB901B23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE361E672283E60500FA3B0D /* AppImage.swift in Sources */,
 				17C2C4C6236C28040020B299 /* ParkingInfoCell.swift in Sources */,
+				17C7FB9123700A1800ACE95D /* AppCollectionPhoto.swift in Sources */,
 				17FCC5B9236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE95317B228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				2203D572236585550055E79F /* FindAroundMeCell.swift in Sources */,
@@ -4385,6 +4430,7 @@
 				DEECF89F22871D1B00A4678B /* ForgotPasswordProtocols.swift in Sources */,
 				DE361F3B2283E85000FA3B0D /* Network.swift in Sources */,
 				172D0974236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
+				17C7FB8B23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */,
 				2243175E235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				22F33AA523645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				DE361F402283E85000FA3B0D /* UpdateProfileParam.swift in Sources */,
@@ -4461,6 +4507,7 @@
 				7609FBD3236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
 				76FBA1E2236EE08B00DD92D2 /* NotificationDetailInteractor.swift in Sources */,
 				DE361F4B2283E85000FA3B0D /* UserEndPoint.swift in Sources */,
+				17C7FB9523700A7600ACE95D /* BaseCollectionCell.swift in Sources */,
 				7609FBD0236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A792235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				76FBA1DC236EE08B00DD92D2 /* NotificationDetailViewController.swift in Sources */,
@@ -4487,6 +4534,7 @@
 				DE952F852287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				17FFE274236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
 				DE952FA12287D2A700E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
+				17C7FB8E23700A1800ACE95D /* AppPhoto.swift in Sources */,
 				DE952F9B2287D2A700E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
 				DE361E962283E60500FA3B0D /* UserDefaultHelper.swift in Sources */,
 				DE89D1EC22A41B44000638B0 /* LevelUpPopUp.swift in Sources */,
@@ -4669,6 +4717,7 @@
 				1768973723697E62001F7383 /* SignUpPartnerStep2Router.swift in Sources */,
 				DE952FC82287DF4800E3F688 /* NotificationEntity.swift in Sources */,
 				22EB901C23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
+				17C7FB9223700A1800ACE95D /* AppCollectionPhoto.swift in Sources */,
 				DE952FC92287DF4800E3F688 /* AppImage.swift in Sources */,
 				17FCC5BA236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE95317C228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
@@ -4743,6 +4792,7 @@
 				DE952FDF2287DF4800E3F688 /* ForgotPasswordProtocols.swift in Sources */,
 				DE952FE12287DF4800E3F688 /* Network.swift in Sources */,
 				172D0975236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
+				17C7FB8C23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */,
 				2243175F235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				22F33AA623645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				DE952FE22287DF4800E3F688 /* UpdateProfileParam.swift in Sources */,
@@ -4819,6 +4869,7 @@
 				7609FBD4236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
 				76FBA1E3236EE08B00DD92D2 /* NotificationDetailInteractor.swift in Sources */,
 				DE9530032287DF4800E3F688 /* UserEndPoint.swift in Sources */,
+				17C7FB9623700A7600ACE95D /* BaseCollectionCell.swift in Sources */,
 				7609FBD1236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A793235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				76FBA1DD236EE08B00DD92D2 /* NotificationDetailViewController.swift in Sources */,
@@ -4845,6 +4896,7 @@
 				DE95300E2287DF4800E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17FFE275236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
 				DE95300F2287DF4800E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
+				17C7FB8F23700A1800ACE95D /* AppPhoto.swift in Sources */,
 				DE9530102287DF4800E3F688 /* UserDefaultHelper.swift in Sources */,
 				DE89D1ED22A41B44000638B0 /* LevelUpPopUp.swift in Sources */,
 				22B4B31D236ABC4C004BD8FB /* AppImageSlide.swift in Sources */,
@@ -5027,6 +5079,7 @@
 				1768973823697E62001F7383 /* SignUpPartnerStep2Router.swift in Sources */,
 				DE9530752287DF6400E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				DE9530762287DF6400E3F688 /* NotificationEntity.swift in Sources */,
+				17C7FB9323700A1800ACE95D /* AppCollectionPhoto.swift in Sources */,
 				22EB901D23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE9530772287DF6400E3F688 /* AppImage.swift in Sources */,
 				17FCC5BB236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
@@ -5101,6 +5154,7 @@
 				DE95308B2287DF6400E3F688 /* AppDelegate+GoogleSignIn.swift in Sources */,
 				7629BDD322ACCBBA0051B835 /* ReportQuestionPopUp.swift in Sources */,
 				172D0976236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
+				17C7FB8D23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */,
 				22F33AA723645B8100D136EB /* HomeFindInteractor.swift in Sources */,
 				22431760235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				DE95308C2287DF6400E3F688 /* PhotoEntity.swift in Sources */,
@@ -5177,6 +5231,7 @@
 				7609FBD5236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
 				76FBA1E4236EE08B00DD92D2 /* NotificationDetailInteractor.swift in Sources */,
 				DE9530B02287DF6400E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				17C7FB9723700A7600ACE95D /* BaseCollectionCell.swift in Sources */,
 				7609FBD2236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A794235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				76FBA1DE236EE08B00DD92D2 /* NotificationDetailViewController.swift in Sources */,
@@ -5203,6 +5258,7 @@
 				DE9530BC2287DF6400E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17FFE276236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
 				DE9530BD2287DF6400E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
+				17C7FB9023700A1800ACE95D /* AppPhoto.swift in Sources */,
 				DE9530BE2287DF6400E3F688 /* UserDefaultHelper.swift in Sources */,
 				DE89D1EE22A41B44000638B0 /* LevelUpPopUp.swift in Sources */,
 				22B4B31E236ABC4C004BD8FB /* AppImageSlide.swift in Sources */,

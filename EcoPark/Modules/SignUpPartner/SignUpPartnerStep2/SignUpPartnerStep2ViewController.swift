@@ -25,6 +25,9 @@ class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2View
     @IBOutlet weak var vPriceCombo: AppTextField!
     @IBOutlet weak var lbLicense: UILabel!
     @IBOutlet weak var vTaxCode: AppTextField!
+    @IBOutlet weak var vPhoto: AppCollectionPhoto!
+    @IBOutlet weak var heightPhoto: NSLayoutConstraint!
+
     
 	var presenter: SignUpPartnerStep2PresenterProtocol?
 
@@ -49,5 +52,18 @@ class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2View
         vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.pirceAHours.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vTaxCode.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        
+        vPhoto.configCollectionImageView(delegate: self, controller: self, isSingleSelected: false)
+        vPhoto.limit = 2
+    }
+}
+
+extension SignUpPartnerStep2ViewController: AppCollectionPhotoDelegate {
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat) {
+        heightPhoto.constant = height
+    }
+    
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
+        
     }
 }
