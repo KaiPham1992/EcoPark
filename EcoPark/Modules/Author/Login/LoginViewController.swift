@@ -73,7 +73,7 @@ class LoginViewController: BaseViewController {
     @IBAction func btnLoginTapped() {
         dismissKeyBoard()
         if validateInputData() {
-            presenter?.login(username: vUserName.tfInput.text&, password: passwordText)
+            presenter?.login(username: vUserName.tfInput.text&, password: passwordText.sha256())
         }
         
     }

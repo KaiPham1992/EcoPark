@@ -130,8 +130,8 @@
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="tiF-xk-Df9" firstAttribute="top" secondItem="jwL-ev-8TJ" secondAttribute="bottom" constant="10" id="3mO-fC-Nzi"/>
+                                        <constraint firstAttribute="bottom" secondItem="tiF-xk-Df9" secondAttribute="bottom" constant="10" id="Dzo-LZ-pwd"/>
                                         <constraint firstItem="jwL-ev-8TJ" firstAttribute="top" secondItem="RuO-73-Cwb" secondAttribute="top" id="OiR-n6-Fox"/>
-                                        <constraint firstAttribute="height" constant="280" id="UA3-ji-KCb"/>
                                         <constraint firstItem="tiF-xk-Df9" firstAttribute="leading" secondItem="RuO-73-Cwb" secondAttribute="leading" id="X3R-Dg-sa7"/>
                                         <constraint firstAttribute="trailing" secondItem="tiF-xk-Df9" secondAttribute="trailing" id="fm3-nb-DsL"/>
                                     </constraints>
