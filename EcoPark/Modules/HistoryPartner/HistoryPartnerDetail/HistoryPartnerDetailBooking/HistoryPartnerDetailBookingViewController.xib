@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerDetailBookingViewController">
+            <connections>
+                <outlet property="lbID" destination="Vrq-5N-5Ub" id="6KA-IH-PV8"/>
+                <outlet property="lbStatus" destination="HJq-cx-1hC" id="faS-Eo-2C7"/>
+                <outlet property="tbHoldingDetail" destination="J1Q-UP-cFV" id="H3r-Xm-ji4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-UP-cFV">
+                    <rect key="frame" x="16" y="37.5" width="343" height="629.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EC19050512345" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrq-5N-5Ub">
+                    <rect key="frame" x="16" y="10" width="113" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <color key="textColor" red="0.62353000000000003" green="0.62353000000000003" blue="0.62353000000000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang giữ chỗ" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJq-cx-1hC">
+                    <rect key="frame" x="268" y="10" width="91" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.56862999999999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="J1Q-UP-cFV" secondAttribute="bottom" id="0yU-U1-U9w"/>
+                <constraint firstItem="J1Q-UP-cFV" firstAttribute="top" secondItem="Vrq-5N-5Ub" secondAttribute="bottom" constant="10" id="7Am-ri-Kgo"/>
+                <constraint firstItem="J1Q-UP-cFV" firstAttribute="trailing" secondItem="HJq-cx-1hC" secondAttribute="trailing" id="HDc-4b-af3"/>
+                <constraint firstItem="J1Q-UP-cFV" firstAttribute="leading" secondItem="Vrq-5N-5Ub" secondAttribute="leading" id="MN0-M1-60v"/>
+                <constraint firstAttribute="trailing" secondItem="HJq-cx-1hC" secondAttribute="trailing" constant="16" id="Y1q-bI-Fv3"/>
+                <constraint firstItem="Vrq-5N-5Ub" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="roS-gU-Ipg"/>
+                <constraint firstItem="HJq-cx-1hC" firstAttribute="centerY" secondItem="Vrq-5N-5Ub" secondAttribute="centerY" id="u0F-Pd-l5r"/>
+                <constraint firstItem="Vrq-5N-5Ub" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="vj2-Sh-JeK"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
+        </view>
+    </objects>
+</document>

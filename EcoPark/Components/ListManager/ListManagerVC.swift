@@ -34,6 +34,7 @@ class ListManagerVC: BaseViewController {
     
     override func setUpViews() {
         self.view.addSubview(tableView)
+        tableView.backgroundColor = .clear
         isShowProgressView = true
         tableView.fillSuperview()
         setupViewListManager()

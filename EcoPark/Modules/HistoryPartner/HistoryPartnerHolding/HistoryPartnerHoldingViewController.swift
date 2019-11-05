@@ -9,8 +9,9 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class HistoryPartnerHoldingViewController: UIViewController, HistoryPartnerHoldingViewProtocol {
+class HistoryPartnerHoldingViewController: BaseViewController, HistoryPartnerHoldingViewProtocol {
 
     @IBOutlet weak var tbPartnerHolding: UITableView!
     
@@ -42,4 +43,13 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule())
+    }
+}
+
+extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Đang giữ(0/0)")
+    }
 }

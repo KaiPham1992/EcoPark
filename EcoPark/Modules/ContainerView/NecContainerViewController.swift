@@ -51,6 +51,9 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         case AppImage.imgWallet:
             let wallet = WalletRouter.createModule()
             self.openViewController(presentingController: wallet)
+        case AppImage.imgNotification:
+            let vc = NotificationViewController()
+            self.openViewController(presentingController: vc)
         default:
             self.openViewController(presentingController: homeVC)
         }

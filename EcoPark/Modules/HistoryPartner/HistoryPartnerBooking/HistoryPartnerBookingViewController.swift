@@ -9,8 +9,9 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class HistoryPartnerBookingViewController: UIViewController, HistoryPartnerBookingViewProtocol {
+class HistoryPartnerBookingViewController: BaseViewController, HistoryPartnerBookingViewProtocol {
 
     @IBOutlet weak var tbBooking: UITableView!
     
@@ -42,4 +43,13 @@ extension HistoryPartnerBookingViewController: UITableViewDataSource, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.push(controller: HistoryPartnerDetailBookingRouter.createModule())
+    }
+}
+
+extension HistoryPartnerBookingViewController: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Đã đặt chỗ (0)")
+    }
 }

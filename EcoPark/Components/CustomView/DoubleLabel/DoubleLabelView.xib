@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTime" destination="0fB-cr-XUY" id="GTT-K7-NsA"/>
+                <outlet property="lblTitle" destination="6KI-wY-ut8" id="4iE-hG-BtY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Đặt lúc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KI-wY-ut8">
+                    <rect key="frame" x="0.0" y="37" width="283" height="18"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                    <color key="textColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00 - 05/05/2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fB-cr-XUY">
+                    <rect key="frame" x="283" y="36" width="131" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.15686274509803921" green="0.19607843137254902" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6KI-wY-ut8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HU4-kM-ZJ1"/>
+                <constraint firstItem="0fB-cr-XUY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O5k-vA-oCf"/>
+                <constraint firstItem="6KI-wY-ut8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SZ7-9f-llw"/>
+                <constraint firstAttribute="trailing" secondItem="0fB-cr-XUY" secondAttribute="trailing" id="gkU-9y-8tZ"/>
+                <constraint firstItem="0fB-cr-XUY" firstAttribute="leading" secondItem="6KI-wY-ut8" secondAttribute="trailing" id="zXz-5o-QKo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="387.72321428571428"/>
+        </view>
+    </objects>
+</document>

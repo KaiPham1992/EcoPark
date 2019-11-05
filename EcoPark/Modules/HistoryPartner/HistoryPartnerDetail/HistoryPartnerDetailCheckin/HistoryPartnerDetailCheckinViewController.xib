@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerDetailCheckinViewController">
+            <connections>
+                <outlet property="lbID" destination="vhH-N5-j0h" id="YvJ-12-Byd"/>
+                <outlet property="lbStatus" destination="zNP-9h-Izd" id="ZwS-fb-g6U"/>
+                <outlet property="tbCheckInDetail" destination="zPh-Eg-kMv" id="s83-cn-SZ6"/>
+                <outlet property="view" destination="WJg-TG-CZQ" id="JA4-MU-Q7Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="WJg-TG-CZQ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-Eg-kMv">
+                    <rect key="frame" x="16" y="37.5" width="343" height="629.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EC19050512345" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhH-N5-j0h">
+                    <rect key="frame" x="16" y="10" width="113" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <color key="textColor" red="0.62353000000000003" green="0.62353000000000003" blue="0.62353000000000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNP-9h-Izd">
+                    <rect key="frame" x="296" y="9" width="63" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Đã check in">
+                            <attributes>
+                                <color key="NSColor" red="0.050979999999999998" green="0.76863000000000004" blue="0.26667000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <font key="NSFont" metaFont="user"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="20" maximumLineHeight="20" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zPh-Eg-kMv" firstAttribute="trailing" secondItem="zNP-9h-Izd" secondAttribute="trailing" id="2CJ-T1-69R"/>
+                <constraint firstAttribute="bottom" secondItem="zPh-Eg-kMv" secondAttribute="bottom" id="Hci-Zz-ExH"/>
+                <constraint firstItem="vhH-N5-j0h" firstAttribute="leading" secondItem="WJg-TG-CZQ" secondAttribute="leading" constant="16" id="WcR-p8-ibh"/>
+                <constraint firstItem="zNP-9h-Izd" firstAttribute="centerY" secondItem="vhH-N5-j0h" secondAttribute="centerY" id="X6y-CQ-FXo"/>
+                <constraint firstItem="zPh-Eg-kMv" firstAttribute="leading" secondItem="vhH-N5-j0h" secondAttribute="leading" id="ZGh-g0-gGm"/>
+                <constraint firstAttribute="trailing" secondItem="zNP-9h-Izd" secondAttribute="trailing" constant="16" id="ZkH-DH-SCA"/>
+                <constraint firstItem="zPh-Eg-kMv" firstAttribute="top" secondItem="vhH-N5-j0h" secondAttribute="bottom" constant="10" id="cpV-Xt-4Pg"/>
+                <constraint firstItem="vhH-N5-j0h" firstAttribute="top" secondItem="WJg-TG-CZQ" secondAttribute="top" constant="10" id="ygT-m8-EbA"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
+        </view>
+    </objects>
+</document>

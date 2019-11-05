@@ -23,6 +23,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     @IBOutlet weak var vEmail: AppTextField!
     @IBOutlet weak var lbImage: UILabel!
     @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var vPhoto: AppCollectionPhoto!
+    @IBOutlet weak var heightPhoto: NSLayoutConstraint!
     
 	var presenter: SignUpPartnerStep1PresenterProtocol?
 
@@ -42,6 +44,19 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         vDateBy.setTitleAndPlaceHolder(title: LocalizableKey.dayBy.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         lbImage.text = LocalizableKey.partnerImage.showLanguage
+        
+        vPhoto.configCollectionImageView(delegate: self, controller: self, isSingleSelected: false)
+        vPhoto.limit = 2
     }
     
+}
+
+extension SignUpPartnerStep1ViewController: AppCollectionPhotoDelegate {
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat) {
+        heightPhoto.constant = height
+    }
+    
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
+        
+    }
 }
