@@ -415,7 +415,6 @@
 		229A7A46236EB39E007A7C62 /* WalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A7A38236EB39E007A7C62 /* WalletRouter.swift */; };
 		229A7A47236EB39E007A7C62 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A7A39236EB39E007A7C62 /* WalletViewController.swift */; };
 		229A7A48236EB39E007A7C62 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A7A39236EB39E007A7C62 /* WalletViewController.swift */; };
-		229A7A49236EB39E007A7C62 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A7A39236EB39E007A7C62 /* WalletViewController.swift */; };
 		229A7A4A236EB39E007A7C62 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A7A3A236EB39E007A7C62 /* WalletViewController.xib */; };
 		229A7A4B236EB39E007A7C62 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A7A3A236EB39E007A7C62 /* WalletViewController.xib */; };
 		229A7A4C236EB39E007A7C62 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A7A3A236EB39E007A7C62 /* WalletViewController.xib */; };
@@ -628,6 +627,22 @@
 		7609FBD6236D9F530029E003 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7609FBC6236D9F530029E003 /* CheckOutViewController.xib */; };
 		7609FBD7236D9F530029E003 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7609FBC6236D9F530029E003 /* CheckOutViewController.xib */; };
 		7609FBD8236D9F530029E003 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7609FBC6236D9F530029E003 /* CheckOutViewController.xib */; };
+		760B926A2371AE0000C281D6 /* FromToDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92692371AE0000C281D6 /* FromToDatePicker.swift */; };
+		760B926B2371AE0000C281D6 /* FromToDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92692371AE0000C281D6 /* FromToDatePicker.swift */; };
+		760B926C2371AE0000C281D6 /* FromToDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92692371AE0000C281D6 /* FromToDatePicker.swift */; };
+		760B926E2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B926D2371AE0D00C281D6 /* FromToDatePicker.xib */; };
+		760B926F2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B926D2371AE0D00C281D6 /* FromToDatePicker.xib */; };
+		760B92702371AE0D00C281D6 /* FromToDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B926D2371AE0D00C281D6 /* FromToDatePicker.xib */; };
+		760B92732371B33000C281D6 /* ChooseDatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92722371B33000C281D6 /* ChooseDatePopUp.swift */; };
+		760B92742371B33000C281D6 /* ChooseDatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92722371B33000C281D6 /* ChooseDatePopUp.swift */; };
+		760B92752371B33000C281D6 /* ChooseDatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92722371B33000C281D6 /* ChooseDatePopUp.swift */; };
+		760B92762371B6ED00C281D6 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A7A39236EB39E007A7C62 /* WalletViewController.swift */; };
+		760B92792371C04300C281D6 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92782371C04300C281D6 /* WalletCell.swift */; };
+		760B927A2371C04300C281D6 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92782371C04300C281D6 /* WalletCell.swift */; };
+		760B927B2371C04300C281D6 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B92782371C04300C281D6 /* WalletCell.swift */; };
+		760B927D2371C04E00C281D6 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B927C2371C04E00C281D6 /* WalletCell.xib */; };
+		760B927E2371C04E00C281D6 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B927C2371C04E00C281D6 /* WalletCell.xib */; };
+		760B927F2371C04E00C281D6 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B927C2371C04E00C281D6 /* WalletCell.xib */; };
 		7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
@@ -655,6 +670,24 @@
 		7615D247236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */; };
 		7615D248236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */; };
 		7615D249236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */; };
+		761A47412371CE3100CD9A23 /* RechargeWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473B2371CE3100CD9A23 /* RechargeWalletPresenter.swift */; };
+		761A47422371CE3100CD9A23 /* RechargeWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473B2371CE3100CD9A23 /* RechargeWalletPresenter.swift */; };
+		761A47432371CE3100CD9A23 /* RechargeWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473B2371CE3100CD9A23 /* RechargeWalletPresenter.swift */; };
+		761A47442371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473C2371CE3100CD9A23 /* RechargeWalletRouter.swift */; };
+		761A47452371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473C2371CE3100CD9A23 /* RechargeWalletRouter.swift */; };
+		761A47462371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473C2371CE3100CD9A23 /* RechargeWalletRouter.swift */; };
+		761A47472371CE3100CD9A23 /* RechargeWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473D2371CE3100CD9A23 /* RechargeWalletViewController.swift */; };
+		761A47482371CE3100CD9A23 /* RechargeWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473D2371CE3100CD9A23 /* RechargeWalletViewController.swift */; };
+		761A47492371CE3100CD9A23 /* RechargeWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473D2371CE3100CD9A23 /* RechargeWalletViewController.swift */; };
+		761A474A2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473E2371CE3100CD9A23 /* RechargeWalletProtocols.swift */; };
+		761A474B2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473E2371CE3100CD9A23 /* RechargeWalletProtocols.swift */; };
+		761A474C2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473E2371CE3100CD9A23 /* RechargeWalletProtocols.swift */; };
+		761A474D2371CE3100CD9A23 /* RechargeWalletInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473F2371CE3100CD9A23 /* RechargeWalletInteractor.swift */; };
+		761A474E2371CE3100CD9A23 /* RechargeWalletInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473F2371CE3100CD9A23 /* RechargeWalletInteractor.swift */; };
+		761A474F2371CE3100CD9A23 /* RechargeWalletInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A473F2371CE3100CD9A23 /* RechargeWalletInteractor.swift */; };
+		761A47502371CE3100CD9A23 /* RechargeWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761A47402371CE3100CD9A23 /* RechargeWalletViewController.xib */; };
+		761A47512371CE3100CD9A23 /* RechargeWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761A47402371CE3100CD9A23 /* RechargeWalletViewController.xib */; };
+		761A47522371CE3100CD9A23 /* RechargeWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761A47402371CE3100CD9A23 /* RechargeWalletViewController.xib */; };
 		7624A6C6231AB570000BA1C6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
 		7624A6C7231AB571000BA1C6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36B89F231A4AE100E9696F /* BaseTableViewController.swift */; };
 		7629BDD122ACCBBA0051B835 /* ReportQuestionPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */; };
@@ -1647,6 +1680,11 @@
 		7609FBC4236D9F530029E003 /* CheckOutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutProtocols.swift; sourceTree = "<group>"; };
 		7609FBC5236D9F530029E003 /* CheckOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutInteractor.swift; sourceTree = "<group>"; };
 		7609FBC6236D9F530029E003 /* CheckOutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutViewController.xib; sourceTree = "<group>"; };
+		760B92692371AE0000C281D6 /* FromToDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromToDatePicker.swift; sourceTree = "<group>"; };
+		760B926D2371AE0D00C281D6 /* FromToDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FromToDatePicker.xib; sourceTree = "<group>"; };
+		760B92722371B33000C281D6 /* ChooseDatePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDatePopUp.swift; sourceTree = "<group>"; };
+		760B92782371C04300C281D6 /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
+		760B927C2371C04E00C281D6 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
 		7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPresenter.swift; sourceTree = "<group>"; };
 		7615D225236C7EA800781AD3 /* QRScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerRouter.swift; sourceTree = "<group>"; };
 		7615D226236C7EA800781AD3 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
@@ -1656,6 +1694,12 @@
 		7615D23E236C819400781AD3 /* OneButtonPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonPopUp.swift; sourceTree = "<group>"; };
 		7615D242236C81A500781AD3 /* OneButtonPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonPopUpContent.swift; sourceTree = "<group>"; };
 		7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneButtonPopUpContent.xib; sourceTree = "<group>"; };
+		761A473B2371CE3100CD9A23 /* RechargeWalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeWalletPresenter.swift; sourceTree = "<group>"; };
+		761A473C2371CE3100CD9A23 /* RechargeWalletRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeWalletRouter.swift; sourceTree = "<group>"; };
+		761A473D2371CE3100CD9A23 /* RechargeWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeWalletViewController.swift; sourceTree = "<group>"; };
+		761A473E2371CE3100CD9A23 /* RechargeWalletProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeWalletProtocols.swift; sourceTree = "<group>"; };
+		761A473F2371CE3100CD9A23 /* RechargeWalletInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeWalletInteractor.swift; sourceTree = "<group>"; };
+		761A47402371CE3100CD9A23 /* RechargeWalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeWalletViewController.xib; sourceTree = "<group>"; };
 		7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportQuestionPopUp.swift; sourceTree = "<group>"; };
 		7629BDD522ACD2450051B835 /* ReportSuccessedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSuccessedView.swift; sourceTree = "<group>"; };
 		7629BDD922ACD2580051B835 /* ReportSuccessedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportSuccessedView.xib; sourceTree = "<group>"; };
@@ -2396,17 +2440,14 @@
 			path = ContainerView;
 			sourceTree = "<group>";
 		};
-		229A7A34236EB38B007A7C62 /* Wallet */ = {
+		229A7A34236EB38B007A7C62 /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
-				229A7A35236EB39E007A7C62 /* WalletInteractor.swift */,
-				229A7A36236EB39E007A7C62 /* WalletPresenter.swift */,
-				229A7A37236EB39E007A7C62 /* WalletProtocols.swift */,
-				229A7A38236EB39E007A7C62 /* WalletRouter.swift */,
-				229A7A39236EB39E007A7C62 /* WalletViewController.swift */,
-				229A7A3A236EB39E007A7C62 /* WalletViewController.xib */,
+				761A473A2371CDF000CD9A23 /* RechargeWallet */,
+				761A47392371CDB600CD9A23 /* Wallet */,
+				760B92772371C02800C281D6 /* Cell */,
 			);
-			path = Wallet;
+			path = MyWallet;
 			sourceTree = "<group>";
 		};
 		22AE2205236C1A6000148E2C /* AppRatingView */ = {
@@ -2709,6 +2750,40 @@
 			path = CheckOut;
 			sourceTree = "<group>";
 		};
+		760B92682371AD8400C281D6 /* FromToDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				760B92692371AE0000C281D6 /* FromToDatePicker.swift */,
+				760B926D2371AE0D00C281D6 /* FromToDatePicker.xib */,
+			);
+			path = FromToDatePicker;
+			sourceTree = "<group>";
+		};
+		760B92712371B30600C281D6 /* ChooseDatePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				760B92722371B33000C281D6 /* ChooseDatePopUp.swift */,
+			);
+			path = ChooseDatePopUp;
+			sourceTree = "<group>";
+		};
+		760B92772371C02800C281D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				760B92802371C7A800C281D6 /* WalletCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		760B92802371C7A800C281D6 /* WalletCell */ = {
+			isa = PBXGroup;
+			children = (
+				760B92782371C04300C281D6 /* WalletCell.swift */,
+				760B927C2371C04E00C281D6 /* WalletCell.xib */,
+			);
+			path = WalletCell;
+			sourceTree = "<group>";
+		};
 		7615D221236C7D9300781AD3 /* HistoryUser */ = {
 			isa = PBXGroup;
 			children = (
@@ -2747,6 +2822,32 @@
 				7615D246236C81B300781AD3 /* OneButtonPopUpContent.xib */,
 			);
 			path = OneButtonPopUpContent;
+			sourceTree = "<group>";
+		};
+		761A47392371CDB600CD9A23 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				229A7A35236EB39E007A7C62 /* WalletInteractor.swift */,
+				229A7A36236EB39E007A7C62 /* WalletPresenter.swift */,
+				229A7A37236EB39E007A7C62 /* WalletProtocols.swift */,
+				229A7A38236EB39E007A7C62 /* WalletRouter.swift */,
+				229A7A39236EB39E007A7C62 /* WalletViewController.swift */,
+				229A7A3A236EB39E007A7C62 /* WalletViewController.xib */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		761A473A2371CDF000CD9A23 /* RechargeWallet */ = {
+			isa = PBXGroup;
+			children = (
+				761A473B2371CE3100CD9A23 /* RechargeWalletPresenter.swift */,
+				761A473C2371CE3100CD9A23 /* RechargeWalletRouter.swift */,
+				761A473D2371CE3100CD9A23 /* RechargeWalletViewController.swift */,
+				761A473E2371CE3100CD9A23 /* RechargeWalletProtocols.swift */,
+				761A473F2371CE3100CD9A23 /* RechargeWalletInteractor.swift */,
+				761A47402371CE3100CD9A23 /* RechargeWalletViewController.xib */,
+			);
+			path = RechargeWallet;
 			sourceTree = "<group>";
 		};
 		7629BDD422ACD2230051B835 /* ReportSuccessedPopUp */ = {
@@ -3066,8 +3167,7 @@
 		DE361D912283E1D700FA3B0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-
-				229A7A34236EB38B007A7C62 /* Wallet */,
+				229A7A34236EB38B007A7C62 /* MyWallet */,
 				2A4567B5236C6E9F00A23FB0 /* HistoryParking */,
 				17FFE257236D396400E740B3 /* HistoryPartner */,
 				7615D221236C7D9300781AD3 /* HistoryUser */,
@@ -3181,6 +3281,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				760B92682371AD8400C281D6 /* FromToDatePicker */,
 				17C7FB8523700A1700ACE95D /* AppCollectionPhoto */,
 				2A07B9AA236E9E52004FE7CE /* TimeView */,
 				2A07B9A1236E9BA3004FE7CE /* ImageLabel */,
@@ -3284,6 +3385,7 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				760B92712371B30600C281D6 /* ChooseDatePopUp */,
 				76EF7E15237070330038486A /* PartnerCheckOutPopUp */,
 				76662850236D882000019B4E /* PaymentPopUp */,
 				7666FC79236D311000BD813E /* RatingPopUp */,
@@ -3897,6 +3999,7 @@
 				76FBA1E5236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				2A07B99E236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
+				760B926E2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				766AE80422B02371002D474E /* ViewFeature.xib in Resources */,
 				22EB904523685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */,
@@ -3923,6 +4026,7 @@
 				17FCC5F2236ADAA5003E98D8 /* PartnerStepView.xib in Resources */,
 				7629BDDA22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
 				DE89D1F222A41B44000638B0 /* LevelUpContent.xib in Resources */,
+				760B927D2371C04E00C281D6 /* WalletCell.xib in Resources */,
 				DE95318A228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE361E832283E60500FA3B0D /* AppDropDownCell.xib in Resources */,
 				22BE84BD236975030056DD51 /* UtilityView.xib in Resources */,
@@ -3979,6 +4083,7 @@
 				DE95310E2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */,
 				762E32E8236D1A8A00FF4F3E /* CheckInPopUpContent.xib in Resources */,
 				7615D247236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */,
+				761A47502371CE3100CD9A23 /* RechargeWalletViewController.xib in Resources */,
 				2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				22BE84CA236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE361E722283E60500FA3B0D /* AppTextField.xib in Resources */,
@@ -4007,6 +4112,7 @@
 				76FBA1E6236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
 				2A07B99F236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
+				760B926F2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				22EB904623685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
@@ -4033,6 +4139,7 @@
 				DE89D1F322A41B44000638B0 /* LevelUpContent.xib in Resources */,
 				DE95318B228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE9530492287DF4800E3F688 /* AppDropDownCell.xib in Resources */,
+				760B927E2371C04E00C281D6 /* WalletCell.xib in Resources */,
 				22BE84BE236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80122B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174B235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
@@ -4089,6 +4196,7 @@
 				2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				762E32E9236D1A8A00FF4F3E /* CheckInPopUpContent.xib in Resources */,
 				7615D248236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */,
+				761A47512371CE3100CD9A23 /* RechargeWalletViewController.xib in Resources */,
 				22BE84CB236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE9530532287DF4800E3F688 /* AppTextField.xib in Resources */,
 				DE89D1D022A4126C000638B0 /* WebViewController.xib in Resources */,
@@ -4117,6 +4225,7 @@
 				76FBA1E7236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
 				2A07B9A0236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
+				760B92702371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				22EB904723685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
 				DE9530F22287DF6400E3F688 /* NotificationContent.xib in Resources */,
 				22F33AB623645B8100D136EB /* HomeFindViewController.xib in Resources */,
@@ -4143,6 +4252,7 @@
 				DE89D1F422A41B44000638B0 /* LevelUpContent.xib in Resources */,
 				DE95318C228846D400E3F688 /* ChangePasswordViewController.xib in Resources */,
 				DE9530F72287DF6400E3F688 /* AppDropDownCell.xib in Resources */,
+				760B927F2371C04E00C281D6 /* WalletCell.xib in Resources */,
 				22BE84BF236975030056DD51 /* UtilityView.xib in Resources */,
 				766AE80222B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174C235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
@@ -4199,6 +4309,7 @@
 				2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */,
 				762E32EA236D1A8A00FF4F3E /* CheckInPopUpContent.xib in Resources */,
 				7615D249236C81B300781AD3 /* OneButtonPopUpContent.xib in Resources */,
+				761A47522371CE3100CD9A23 /* RechargeWalletViewController.xib in Resources */,
 				22BE84CC236975630056DD51 /* UtilityViewCell.xib in Resources */,
 				DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */,
 				DE89D1D122A4126C000638B0 /* WebViewController.xib in Resources */,
@@ -4408,6 +4519,7 @@
 				DE952F812287D2A700E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */,
 				17FCC5E3236AC9B4003E98D8 /* SignUpPartnerWaitingProtocols.swift in Sources */,
 				76EF7E20237070960038486A /* PartnerCheckOutPopUp.swift in Sources */,
+				760B926A2371AE0000C281D6 /* FromToDatePicker.swift in Sources */,
 				DEECF89122871D0400A4678B /* SignUpViewController.swift in Sources */,
 				17BAF8A5236EAB650066BD29 /* HistoryPartnerDetailBookingInteractor.swift in Sources */,
 				22EB904223685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */,
@@ -4427,6 +4539,7 @@
 				172D097D236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
+				761A47442371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
 				223887052366A94400DAC978 /* MarkerProjectView.swift in Sources */,
 				DE952F902287D2A700E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
@@ -4445,6 +4558,7 @@
 				76E2FEFB228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				76FBA1D9236EE08B00DD92D2 /* NotificationDetailRouter.swift in Sources */,
 				DE361DFF2283E57900FA3B0D /* NSObjectProtocol+Extension.swift in Sources */,
+				761A47472371CE3100CD9A23 /* RechargeWalletViewController.swift in Sources */,
 				17C7FB79236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */,
 				22EB901523684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
@@ -4516,6 +4630,7 @@
 				76682F35236EB72C00F49482 /* MyNotificationInteractor.swift in Sources */,
 				22F33AA823645B8100D136EB /* HomeFindPresenter.swift in Sources */,
 				DE952F882287D2A700E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
+				761A47412371CE3100CD9A23 /* RechargeWalletPresenter.swift in Sources */,
 				DE361E682283E60500FA3B0D /* Strings.swift in Sources */,
 				22F33AAB23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
 				DEDDEF6522914A980043A62D /* MainTabbar.swift in Sources */,
@@ -4565,6 +4680,7 @@
 				DE361F442283E85000FA3B0D /* RecordParam.swift in Sources */,
 				1717E0EF236D452B00E07734 /* HistoryPartnerHoldingInteractor.swift in Sources */,
 				DE361E992283E60500FA3B0D /* Utils.swift in Sources */,
+				761A474A2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */,
 				DE361F3F2283E85000FA3B0D /* SignUpParam.swift in Sources */,
 				DE89D1EF22A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FA92287DD2A00E3F688 /* Login+Facebook.swift in Sources */,
@@ -4625,6 +4741,7 @@
 				DE361DE32283E54C00FA3B0D /* BaseViewController.swift in Sources */,
 				17FCC602236AE4CF003E98D8 /* ParkingInfoViewController.swift in Sources */,
 				DE361F432283E85000FA3B0D /* PostRecordParam.swift in Sources */,
+				760B92792371C04300C281D6 /* WalletCell.swift in Sources */,
 				DE952F8F2287D2A700E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				76682F4D236EB74500F49482 /* SystemNotificationInteractor.swift in Sources */,
@@ -4726,6 +4843,7 @@
 				76EF7E0C23706FC50038486A /* HistoryPartnerQRScannerProtocols.swift in Sources */,
 				DE361DFA2283E57900FA3B0D /* UIViewController+extension.swift in Sources */,
 				DE89D1CC22A4126C000638B0 /* WebViewController.swift in Sources */,
+				760B92732371B33000C281D6 /* ChooseDatePopUp.swift in Sources */,
 				2A45680B236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				7609FBCA236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE361E7A2283E60500FA3B0D /* AppSearchBar.swift in Sources */,
@@ -4769,6 +4887,7 @@
 				DE361E002283E57900FA3B0D /* Button+extension.swift in Sources */,
 				DE49F83722A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
 				DEBD673B228D48EB004B74C8 /* CreateGroupContent.swift in Sources */,
+				761A474D2371CE3100CD9A23 /* RechargeWalletInteractor.swift in Sources */,
 				76682F47236EB74500F49482 /* SystemNotificationViewController.swift in Sources */,
 				7615D23F236C819400781AD3 /* OneButtonPopUp.swift in Sources */,
 			);
@@ -4782,6 +4901,7 @@
 				DE952FB12287DF4800E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */,
 				17FCC5E4236AC9B4003E98D8 /* SignUpPartnerWaitingProtocols.swift in Sources */,
 				76EF7E21237070960038486A /* PartnerCheckOutPopUp.swift in Sources */,
+				760B926B2371AE0000C281D6 /* FromToDatePicker.swift in Sources */,
 				DE952FB22287DF4800E3F688 /* SignUpViewController.swift in Sources */,
 				17BAF8A6236EAB650066BD29 /* HistoryPartnerDetailBookingInteractor.swift in Sources */,
 				22EB904323685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */,
@@ -4801,6 +4921,7 @@
 				172D097E236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
+				761A47452371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
 				223887062366A94400DAC978 /* MarkerProjectView.swift in Sources */,
 				DE952FBB2287DF4800E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
@@ -4819,6 +4940,7 @@
 				76E2FEFC228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				76FBA1DA236EE08B00DD92D2 /* NotificationDetailRouter.swift in Sources */,
 				DE952FC12287DF4800E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				761A47482371CE3100CD9A23 /* RechargeWalletViewController.swift in Sources */,
 				17C7FB7A236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */,
 				22EB901623684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
@@ -4890,6 +5012,7 @@
 				76682F36236EB72C00F49482 /* MyNotificationInteractor.swift in Sources */,
 				22F33AA923645B8100D136EB /* HomeFindPresenter.swift in Sources */,
 				DE952FD62287DF4800E3F688 /* KActivityIndicatorAnimationBallPulse.swift in Sources */,
+				761A47422371CE3100CD9A23 /* RechargeWalletPresenter.swift in Sources */,
 				DE952FD72287DF4800E3F688 /* Strings.swift in Sources */,
 				22F33AAC23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
 				DEDDEF6622914A980043A62D /* MainTabbar.swift in Sources */,
@@ -4939,6 +5062,7 @@
 				DE952FE72287DF4800E3F688 /* RecordParam.swift in Sources */,
 				1717E0F0236D452B00E07734 /* HistoryPartnerHoldingInteractor.swift in Sources */,
 				DE952FE82287DF4800E3F688 /* Utils.swift in Sources */,
+				761A474B2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */,
 				DE952FE92287DF4800E3F688 /* SignUpParam.swift in Sources */,
 				DE89D1F022A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FEA2287DF4800E3F688 /* Login+Facebook.swift in Sources */,
@@ -4999,6 +5123,7 @@
 				DE9530002287DF4800E3F688 /* BaseViewController.swift in Sources */,
 				17FCC603236AE4CF003E98D8 /* ParkingInfoViewController.swift in Sources */,
 				DE9530012287DF4800E3F688 /* PostRecordParam.swift in Sources */,
+				760B927A2371C04300C281D6 /* WalletCell.swift in Sources */,
 				DE9530022287DF4800E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				76682F4E236EB74500F49482 /* SystemNotificationInteractor.swift in Sources */,
@@ -5100,6 +5225,7 @@
 				76EF7E0D23706FC50038486A /* HistoryPartnerQRScannerProtocols.swift in Sources */,
 				DE89D1CD22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE95302C2287DF4800E3F688 /* AppSearchBar.swift in Sources */,
+				760B92742371B33000C281D6 /* ChooseDatePopUp.swift in Sources */,
 				2A45680C236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				7609FBCB236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE95302D2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
@@ -5143,6 +5269,7 @@
 				DE95303E2287DF4800E3F688 /* Button+extension.swift in Sources */,
 				DE49F83822A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
 				DEBD673C228D48EB004B74C8 /* CreateGroupContent.swift in Sources */,
+				761A474E2371CE3100CD9A23 /* RechargeWalletInteractor.swift in Sources */,
 				76682F48236EB74500F49482 /* SystemNotificationViewController.swift in Sources */,
 				7615D240236C819400781AD3 /* OneButtonPopUp.swift in Sources */,
 			);
@@ -5156,6 +5283,7 @@
 				DE95305F2287DF6400E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */,
 				17FCC5E5236AC9B4003E98D8 /* SignUpPartnerWaitingProtocols.swift in Sources */,
 				76EF7E22237070960038486A /* PartnerCheckOutPopUp.swift in Sources */,
+				760B926C2371AE0000C281D6 /* FromToDatePicker.swift in Sources */,
 				DE9530602287DF6400E3F688 /* SignUpViewController.swift in Sources */,
 				17BAF8A7236EAB650066BD29 /* HistoryPartnerDetailBookingInteractor.swift in Sources */,
 				22EB904423685F1D00F77BC0 /* AppDropDownNoTitle.swift in Sources */,
@@ -5175,6 +5303,7 @@
 				172D097F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
+				761A47462371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
 				223887072366A94400DAC978 /* MarkerProjectView.swift in Sources */,
 				DE9530692287DF6400E3F688 /* KActivityIndicatorAnimationLineScale.swift in Sources */,
@@ -5193,6 +5322,7 @@
 				76E2FEFD228DC4C20014B1F4 /* PageViewController.swift in Sources */,
 				76FBA1DB236EE08B00DD92D2 /* NotificationDetailRouter.swift in Sources */,
 				DE95306F2287DF6400E3F688 /* NSObjectProtocol+Extension.swift in Sources */,
+				761A47492371CE3100CD9A23 /* RechargeWalletViewController.swift in Sources */,
 				17C7FB7B236FF89900ACE95D /* HistoryPartnerViewController.swift in Sources */,
 				22EB901723684B1100F77BC0 /* BookingInfoInteractor.swift in Sources */,
 				2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */,
@@ -5228,6 +5358,7 @@
 				DE9530772287DF6400E3F688 /* AppImage.swift in Sources */,
 				17FCC5BB236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				2203D574236585550055E79F /* FindAroundMeCell.swift in Sources */,
+				760B92762371B6ED00C281D6 /* WalletViewController.swift in Sources */,
 				DE95317D228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				DE9530782287DF6400E3F688 /* CustomTextfield.swift in Sources */,
 				17FCC607236AE4CF003E98D8 /* ParkingInfoProtocols.swift in Sources */,
@@ -5263,6 +5394,7 @@
 				DE953180228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
 				76682F37236EB72C00F49482 /* MyNotificationInteractor.swift in Sources */,
 				228071FA235C11D70076D5CC /* RestoreParam.swift in Sources */,
+				761A47432371CE3100CD9A23 /* RechargeWalletPresenter.swift in Sources */,
 				DE9530822287DF6400E3F688 /* BaseTabStripViewController.swift in Sources */,
 				22F33AAD23645B8100D136EB /* HomeFindProtocols.swift in Sources */,
 				7629BDE022ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
@@ -5312,6 +5444,7 @@
 				DE9530922287DF6400E3F688 /* LoginInteractor.swift in Sources */,
 				DE9530932287DF6400E3F688 /* SignUpInteractor.swift in Sources */,
 				1717E0F1236D452B00E07734 /* HistoryPartnerHoldingInteractor.swift in Sources */,
+				761A474C2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */,
 				DEC62AA82293006100D7CECE /* ThanksReportPopUp.swift in Sources */,
 				DE9530942287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				2AA9E36822F9AA310093F5C8 /* FileZipManager.swift in Sources */,
@@ -5372,6 +5505,7 @@
 				229A7A43236EB39E007A7C62 /* WalletProtocols.swift in Sources */,
 				DE9530AC2287DF6400E3F688 /* AppDelegate+Push.swift in Sources */,
 				17FCC604236AE4CF003E98D8 /* ParkingInfoViewController.swift in Sources */,
+				760B927B2371C04300C281D6 /* WalletCell.swift in Sources */,
 				DE9530AD2287DF6400E3F688 /* UITable+extension.swift in Sources */,
 				DE9530AE2287DF6400E3F688 /* BaseViewController.swift in Sources */,
 				DE9530AF2287DF6400E3F688 /* PostRecordParam.swift in Sources */,
@@ -5398,7 +5532,6 @@
 				DE9530B92287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				7629BDD822ACD2450051B835 /* ReportSuccessedView.swift in Sources */,
 				766AE7F022AFCAB4002D474E /* ConfirmPopUpView.swift in Sources */,
-				229A7A49236EB39E007A7C62 /* WalletViewController.swift in Sources */,
 				766D135E228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE9530BA2287DF6400E3F688 /* PopUpHelper.swift in Sources */,
 				2A6C5ED622EF468F004B23EF /* CellSingleLabel.swift in Sources */,
@@ -5474,6 +5607,7 @@
 				76EF7E0E23706FC50038486A /* HistoryPartnerQRScannerProtocols.swift in Sources */,
 				DE9530DA2287DF6400E3F688 /* AppSearchBar.swift in Sources */,
 				DE9530DB2287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				760B92752371B33000C281D6 /* ChooseDatePopUp.swift in Sources */,
 				2A45680D236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				7609FBCC236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE9530DC2287DF6400E3F688 /* SignUpProtocols.swift in Sources */,
@@ -5517,6 +5651,7 @@
 				DE9530EC2287DF6400E3F688 /* Button+extension.swift in Sources */,
 				DE49F83922A3E23A00A92C63 /* RewardPopUp.swift in Sources */,
 				DEBD673D228D48EB004B74C8 /* CreateGroupContent.swift in Sources */,
+				761A474F2371CE3100CD9A23 /* RechargeWalletInteractor.swift in Sources */,
 				76682F49236EB74500F49482 /* SystemNotificationViewController.swift in Sources */,
 				7615D241236C819400781AD3 /* OneButtonPopUp.swift in Sources */,
 			);

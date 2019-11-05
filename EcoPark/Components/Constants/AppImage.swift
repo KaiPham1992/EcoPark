@@ -96,4 +96,7 @@ struct AppImage {
     static let imgNotificationOn = UIImage(named: "ic_notification_on")!
     static let imgNotificationOff = UIImage(named: "ic_notifications_off")!
 
+    // MARK: Wallet
+    static let imgUp = UIImage(named: "ic_up")!
+    static let imgDown = UIImage(named: "ic_downward")!
 }

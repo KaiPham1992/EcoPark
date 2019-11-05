@@ -50,4 +50,11 @@ class AppRouter {
 
         windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }
+    
+    func test() {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
+        
+            let vc = WalletRouter.createModule()
+            windowApp.rootViewController = UINavigationController(rootViewController: vc)
+        }
 }
