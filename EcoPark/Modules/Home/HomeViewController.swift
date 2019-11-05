@@ -12,7 +12,6 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-
 protocol HomeViewControllerDelegate: class {
     func showLefMenuTapped()
 }
@@ -62,10 +61,15 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.setUpNavigation()
         
         addMenu()
-        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: nil)
+        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
         setTitleBoldLeftNavigation(title: "EcoParking", action: nil)
         
         vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
+        vParkingSort.btnBooking.addTarget(self, action: #selector(btnBookingTapped), for: UIControl.Event.touchUpInside)
+    }
+    @objc func btnCheckIn() {
+        let checkIn = QRScannerRouter.createModule()
+        self.push(controller: checkIn)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,19 +85,25 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: "Nhập điểm đến")
+        vSearch.tapToTextField = {
+            let vc = HomeFindRouter.createModule()
+            vc.delegate = self
+            self.push(controller: vc)
+        }
     }
     
     @IBAction func btnFilterTapped() {
-//        let vc = HomeFindRouter.createModule()
-//        vc.delegate = self
-//        self.push(controller: vc)
-        
         let popUp = HomeFilterPopUp()
         popUp.showPopUp(completionNo: {
             print("reset")
         }) { param in
             print("Param")
         }
+    }
+    
+    @objc func btnBookingTapped() {
+        let bookingInfo = BookingInfoRouter.createModule()
+        self.push(controller: bookingInfo)
     }
     
 }
@@ -130,6 +140,7 @@ extension HomeViewController: GMSMapViewDelegate {
             }
         }
     }
+    
     func mapView(_ mapView: GMSMapView, didTapMyLocation location: CLLocationCoordinate2D) {
         print("location current")
     }

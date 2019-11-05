@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-Bf-Mag" customClass="AppSearchBar" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-Bf-Mag" customClass="AppSearchBar" customModule="EcoPark_AppStore" customModuleProvider="target">
                     <rect key="frame" x="24" y="0.0" width="271" height="45"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -46,7 +46,7 @@
                     <rect key="frame" x="0.0" y="53" width="375" height="614"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI8-QS-W4E" customClass="ParkingSortView" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI8-QS-W4E" customClass="ParkingSortView" customModule="EcoPark_AppStore" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="459" width="375" height="208"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>

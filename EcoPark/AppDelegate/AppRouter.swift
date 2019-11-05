@@ -14,16 +14,7 @@ class AppRouter {
     static let shared = AppRouter()
     
     var rootNavigation: UINavigationController?
-    
-//    func updateRootView() {
-//        if !UserDefaultHelper.shared.userToken&.isEmpty  {
-//            openHome()
-//        } else {
-//            openLogin()
-//        }
-//    }
-
-    
+   
     func pushTo(viewController: UIViewController) {
         viewController.hidesBottomBarWhenPushed = true
         rootNavigation?.pushViewController(viewController, animated: true)
@@ -39,7 +30,7 @@ class AppRouter {
         windowApp.rootViewController = nc
     }
     
-    func openTest() {
+    func openHomeView() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
 //        let vcLogin = HomeRouter.createModule()
@@ -51,10 +42,11 @@ class AppRouter {
     func openHome() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
-        let homeVC = LoginRouter.createModule()
+//        let homeVC = LoginRouter.createModule()
 
 
-//        let homeVC = HomeRouter.createModule()
+
+        let homeVC = SignUpRouter.createModule()
 
         windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }

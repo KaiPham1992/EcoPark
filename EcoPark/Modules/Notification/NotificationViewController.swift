@@ -20,7 +20,9 @@ class NotificationViewController: PageViewController {
     }
     
     @objc func openMenu() {
-        
+        if let containerController = navigationController?.parent as? ContainerViewController {
+                   containerController.toggleLeftPanel()
+               }
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
