@@ -68,6 +68,7 @@ class SignUpViewController: BaseViewController {
         vPassword.tfInput.delegate = self
         vRePassword.tfInput.delegate = self
         
+        vGender.dropDown.dataSource = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage]
     }
     
     @IBAction func btnBackBlackTapped() {
@@ -79,7 +80,7 @@ class SignUpViewController: BaseViewController {
         heightError.constant = 0
         //vPassword.getText()
         if validateInputData() {
-            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vUsername.getText())
+            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: "female")
             
             presenter?.signUp(param: param)
         }
@@ -216,6 +217,6 @@ extension SignUpViewController: UITextFieldDelegate {
 
 extension SignUpViewController: AppTextFieldDropDownDelegate {
     func didChangedValue(sender: AppDropDown, item: Any) {
+        print(sender, item)
     }
-    
 }

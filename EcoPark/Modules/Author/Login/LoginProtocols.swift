@@ -20,7 +20,7 @@ protocol LoginPresenterProtocol: class {
 
     var interactor: LoginInteractorInputProtocol? { get set }
     
-    func login(email: String, password: String)
+    func login(username: String, password: String)
     func loginSocial(param: LoginSocialParam)
 }
 
@@ -37,7 +37,7 @@ protocol LoginInteractorInputProtocol: class {
     var presenter: LoginInteractorOutputProtocol?  { get set }
 
     /* Presenter -> Interactor */
-    func login(email: String, password: String)
+    func login(username: String, password: String)
     func loginSocial(param: LoginSocialParam)
 }
 

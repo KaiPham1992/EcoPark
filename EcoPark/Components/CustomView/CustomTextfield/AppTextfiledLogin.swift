@@ -49,7 +49,7 @@ class AppTextfiledLogin: UIView {
         //-- add line
         
         //font style
-        tfInput.textColor = .black
+        tfInput.textColor = .white
         tfInput.placeHolderColor = UIColor.white.withAlphaComponent(0.5)
         addSubview(image)
         addSubview(tfInput)

@@ -14,9 +14,9 @@ class LoginInteractor: LoginInteractorInputProtocol {
 
     weak var presenter: LoginInteractorOutputProtocol?
     
-    func login(email: String, password: String) {
+    func login(username: String, password: String) {
         ProgressView.shared.show()
-        Provider.shared.userAPIService.login(email: email, password: password.sha256(), success: { (user) in
+        Provider.shared.userAPIService.login(username: username, password: password.sha256(), success: { (user) in
             //save user
             ProgressView.shared.hide()
             
