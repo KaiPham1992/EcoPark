@@ -9,11 +9,12 @@
 import UIKit
 
 class AppRatingView: BaseViewXib {
-    var number: CGFloat = 1.5
+    var number: Double = 1.5
+    
     @IBOutlet weak var vStackView: UIStackView!
     
     @IBAction func btnActionTapped(sender: UIButton) {
-        number = CGFloat(sender.tag)
+        number = Double(sender.tag)
         setStar(number: number)
     }
     
@@ -21,7 +22,7 @@ class AppRatingView: BaseViewXib {
         setStar(number: number)
     }
     
-    func setStar(number: CGFloat) {
+    func setStar(number: Double) {
         self.number = number
         
         let intNumber = Int(number)
@@ -31,7 +32,7 @@ class AppRatingView: BaseViewXib {
                 if btn.tag <= intNumber {
                     btn.setImage(AppImage.imgStarFilled, for: .normal)
                 } else {
-                    if number - CGFloat(intNumber) > 0 {
+                    if number - Double(intNumber) > 0 {
                         if intNumber == index {
                              btn.setImage(AppImage.imgStarHalf, for: .normal)
                         } else {

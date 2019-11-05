@@ -537,3 +537,36 @@ extension String {
         return hexString
     }
 }
+
+
+extension String {
+    func addComma() -> String? {
+        if self.isEmpty == false{
+            let formater = NumberFormatter()
+            formater.groupingSeparator = ","
+            formater.numberStyle = .decimal
+            if let num = formater.number(from: self){
+                return formater.string(from: num)
+            }
+            else{
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    func getSubString(fromCharacter: String) -> String?{
+        if let range = self.range(of: fromCharacter) {
+            let subText = self[range.upperBound...]
+            return String(subText)
+        }
+        return nil
+    }
+    
+    static func safeString(_ string: String?, defaultString: String = "") -> String {
+        if let str = string {
+            return str
+        }
+        return defaultString
+    }
+}

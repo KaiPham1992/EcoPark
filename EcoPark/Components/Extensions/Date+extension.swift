@@ -282,6 +282,19 @@ extension Date {
             return nil
         }
     }
+    
+    public init?(hhmmss: String) {
+        // https://github.com/justinmakaila/NSDate-ISO-8601/blob/master/NSDateISO8601.swift
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = "HH:mm:ss"
+        if let date = dateFormatter.date(from: hhmmss) {
+            self = date
+        } else {
+            return nil
+        }
+    }
 }
 
 class AppTimestampTransform: TransformType {
@@ -320,6 +333,31 @@ open class yyyyMMddHHmmssTransform: TransformType {
     open func transformFromJSON(_ value: Any?) -> Date? {
         if let timeStr = value as? String {
             let date = Date(yyyyMMddHHmmss: timeStr)
+            return date
+        }
+        
+        return nil
+    }
+    
+    open func transformToJSON(_ value: Date?) -> Double? {
+        if let date = value {
+            return Double(date.timeIntervalSince1970)
+        }
+        return nil
+    }
+}
+
+
+
+open class TimeTramsform: TransformType {
+    public typealias Object = Date
+    public typealias JSON = Double
+    
+    public init() {}
+    
+    open func transformFromJSON(_ value: Any?) -> Date? {
+        if let timeStr = value as? String {
+            let date = Date(hhmmss: timeStr)
             return date
         }
         

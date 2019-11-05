@@ -25,7 +25,7 @@ extension CGFloat {
     func toInt() -> Int {
         let intValue = Int(self)
         let mod = self - CGFloat(intValue)
-
+        
         if mod > 0.5 {
             return intValue + 1
         } else {
@@ -35,12 +35,12 @@ extension CGFloat {
 }
 
 public extension Double {
-
+    
     /// Returns a random floating point number between 0.0 and 1.0, inclusive.
     public static var random: Double {
         return Double(arc4random()) / 0xFFFFFFFF
     }
-
+    
     /// Random double between 0 and n-1.
     ///
     /// - Parameter n:  Interval max
@@ -48,7 +48,7 @@ public extension Double {
     public static func random(min: Double, max: Double) -> Double {
         return Double.random * (max - min) + min
     }
-
+    
 }
 
 
@@ -124,5 +124,23 @@ class StringToDoubleTransform: TransformType {
             return intValue.description
         }
         return nil
+    }
+}
+
+extension Double {
+    func roundedOneDemical() -> String {
+        return String(format: "%.1f", self)
+    }
+    
+    var toCurrency: String {
+        let price = self as NSNumber
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "vi_vn")
+        
+        guard let currency = formatter.string(from: price) else { return ""}
+        return currency.replacingOccurrences(of: ".", with: ",").replacingOccurrences(of: "₫", with: "VND").trim()
+        
+        print(currency.replacingOccurrences(of: ".", with: ","))
     }
 }

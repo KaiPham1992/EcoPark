@@ -45,6 +45,10 @@ enum UserEndPoint {
     case getGPSPosition(lat: String, long: String)
     case getRecently(offset: Int, limit: Int)
     case getPackage(offset: Int)
+    
+    // Eco park
+    
+    case getParking(address: String)
 }
 
 extension UserEndPoint: EndPointType {
@@ -102,6 +106,8 @@ extension UserEndPoint: EndPointType {
             return "_api/home/get_recent_activity_list"
         case .getPackage:
             return "_api/product/get_list_user_inventory"
+        case .getParking:
+            return "_api/user/home"
         }
         
     }
@@ -110,7 +116,7 @@ extension UserEndPoint: EndPointType {
         
         switch self {
             
-        case .login, .fogotPassword, .checkLogin, .logout, .loginGmail, .loginFacebook, .verifyPhone, .getPointHistory, .getListFavorite, .addFavorite, .addFavoriteStaff, .signUp, .uploadAvatar, .postRating, .getFavourite, .getHistoryBuy, .removeFavourite, .getHistoryCoin, .getRecordByFavoriteUser, .getGPSPosition, .getRecently, .getPackage:
+        case .login, .fogotPassword, .checkLogin, .logout, .loginGmail, .loginFacebook, .verifyPhone, .getPointHistory, .getListFavorite, .addFavorite, .addFavoriteStaff, .signUp, .uploadAvatar, .postRating, .getFavourite, .getHistoryBuy, .removeFavourite, .getHistoryCoin, .getRecordByFavoriteUser, .getGPSPosition, .getRecently, .getPackage, .getParking:
             return .post
         case .getCaptcha, .getIntroduceList, .getProfileUser:
             return .get
@@ -215,6 +221,8 @@ extension UserEndPoint: EndPointType {
         case .getPackage(let offset):
             return ["offset": offset,
                     "limit": limit]
+        case .getParking(let address):
+            return ["address": address]
         }
     }
     

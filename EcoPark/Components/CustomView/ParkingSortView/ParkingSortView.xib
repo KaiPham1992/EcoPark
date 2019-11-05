@@ -20,6 +20,14 @@
             <connections>
                 <outlet property="btnBooking" destination="lnl-bi-CQw" id="IQF-Rz-G7k"/>
                 <outlet property="btnOver" destination="ajB-iX-apv" id="ozZ-W9-8lI"/>
+                <outlet property="imgIcon" destination="NAg-oM-ccR" id="rgn-0U-joe"/>
+                <outlet property="lbConfigure" destination="LGI-L7-hpe" id="8jk-pr-dVN"/>
+                <outlet property="lbMaximum" destination="QU8-6O-G5O" id="dyI-KQ-SIq"/>
+                <outlet property="lbName" destination="0fy-RK-m8j" id="7ds-Rf-P2K"/>
+                <outlet property="lbPackagePrice" destination="rgY-uA-LNJ" id="dft-ML-sdH"/>
+                <outlet property="lbPrice" destination="ghJ-by-az1" id="gHV-DS-YwJ"/>
+                <outlet property="lbTime" destination="qaa-Z7-9Lh" id="VBW-hg-ifA"/>
+                <outlet property="vRating" destination="dvN-8j-aJs" id="0ga-rF-NNy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

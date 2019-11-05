@@ -39,8 +39,16 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setUpMap()
         vParkingSort.isHidden = true
         
-        listParking = ParkingEntity.toArray()
-        drawMarker(parkings: listParking)
+        getParking()
+    }
+    
+    func getParking() {
+        Provider.shared.userAPIService.getParking(address: "chung cư 8x plus", success: { parking in
+            self.listParking = parking
+            self.drawMarker(parkings: self.listParking)
+        }) { error in
+            
+        }
     }
     
     func setUpMap() {
@@ -151,7 +159,7 @@ extension HomeViewController: GMSMapViewDelegate {
         clearMap()
         marker.parking?.isSelected = true
         drawMarker(parkings: listParking)
-        
+        vParkingSort.parking = marker.parking
         vParkingSort.isHidden = false
         return true
     }
@@ -184,6 +192,8 @@ extension HomeViewController: GMSMapViewDelegate {
 //
 //        guard let distance = self.distance else { return }
 //        presenter?.getCountRecord(long: long, lat: lat, radius: Int(distance.value&))
+        
+        
     }
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
