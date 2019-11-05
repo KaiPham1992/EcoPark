@@ -28,7 +28,7 @@ class AppCollectionPhoto: UIView {
         cv.showsHorizontalScrollIndicator = false
         cv.isPagingEnabled = true
         cv.isScrollEnabled = true
-        layout.scrollDirection = .horizontal
+//        layout.scrollDirection = .horizontal
         return cv
         
     }()

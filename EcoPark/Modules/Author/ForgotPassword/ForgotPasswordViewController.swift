@@ -15,7 +15,7 @@ class ForgotPasswordViewController: BaseViewController {
 	var presenter: ForgotPasswordPresenterProtocol?
     @IBOutlet weak var btnSendEmail: UIButton!
     @IBOutlet weak var lbMessage: UILabel!
-    @IBOutlet weak var vEmail: AppTextfiledLogin!
+    @IBOutlet weak var vEmail: UITextField!
     @IBOutlet weak var lbError: UILabel!
 
 	override func viewDidLoad() {
@@ -35,26 +35,24 @@ class ForgotPasswordViewController: BaseViewController {
         setTitleNavigation(title: LocalizableKey.ForgotTitle.showLanguage)
         btnSendEmail.setTitle(LocalizableKey.SentEmail.showLanguage, for: .normal)
         lbMessage.text = LocalizableKey.ForgotPasswordMessage.showLanguage
-        vEmail.setPlaceHolder(placeholder: LocalizableKey.LoginEmailPlaceHolder.showLanguage)
-        
-        vEmail.image.isHidden = true
+        vEmail.placeholder = LocalizableKey.LoginEmailPlaceHolder.showLanguage
     }
     
     @IBAction func btnSendEmailTapped() {
         if validateInputData() {
-            presenter?.forgotPassword(email: vEmail.tfInput.text!)
+            presenter?.forgotPassword(email: vEmail.text!)
         }
     }
 }
 
 extension ForgotPasswordViewController {
     func validateInputData() -> Bool {
-        if self.vEmail.tfInput.text == "" {
+        if self.vEmail.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
         
-        if let email = self.vEmail.tfInput.text, email.isValidEmail() == false {
+        if let email = self.vEmail.text, email.isValidEmail() == false {
             hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
             return false
         }
