@@ -48,7 +48,8 @@
 "Capcha" = "Captcha *";
 "Enter" = "Nhập";
 "Select" = "Chọn";
-
+"male" = "Nam";
+"female" = "Nữ";
 // Forgot password page
 "ForgotPasswordMessage" = "Vui lòng nhập đúng email trong tài khoản của bạn để nhận lại mật khẩu mới:";
 "SentEmail" = "Gửi email";

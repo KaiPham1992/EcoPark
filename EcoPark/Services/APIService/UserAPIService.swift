@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol UserAPIServiceProtocol {
-    func login(email: String, password: String, success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure)
+    func login(username: String, password: String, success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure)
     func forgotPassword(email: String, success: @escaping SuccessHandler<BaseResponse>.object, failure: @escaping RequestFailure)
     func checkLogin(success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure)
     func getCaptcha(success: @escaping SuccessHandler<BaseResponse>.object, failure: @escaping RequestFailure)
@@ -43,8 +43,8 @@ class UserAPIService: UserAPIServiceProtocol {
         self.network = network
     }
     
-    func login(email: String, password: String, success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure) {
-        let endPoint = UserEndPoint.login(email: email, password: password)
+    func login(username: String, password: String, success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = UserEndPoint.login(username: username, password: password)
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
     func forgotPassword(email: String, success: @escaping SuccessHandler<BaseResponse>.object, failure: @escaping RequestFailure) {

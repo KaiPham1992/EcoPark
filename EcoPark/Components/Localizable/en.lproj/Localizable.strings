@@ -50,6 +50,8 @@
 "Capcha" = "Captcha *";
 "Enter" = "Enter";
 "Select" = "Select";
+"male" = "Male";
+"female" = "Female";
 
 // Forgot password page
 "ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";

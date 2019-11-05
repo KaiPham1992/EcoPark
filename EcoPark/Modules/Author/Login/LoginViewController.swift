@@ -64,6 +64,7 @@ class LoginViewController: BaseViewController {
         vPassword.setImage(img:  AppImage.iconPadlock)
         vUserName.backgroundColor = AppColor.color_32_45_55
         vPassword.backgroundColor = AppColor.color_32_45_55
+        vPassword.tfInput.isSecureTextEntry = true
         lbLanguage.text = LocalizableKey.language.showLanguage
         btnEnglish.setTitle(LocalizableKey.english.showLanguage, for: .normal)
         btnVietnamese.setTitle(LocalizableKey.vietnamese.showLanguage, for: .normal)
@@ -72,7 +73,7 @@ class LoginViewController: BaseViewController {
     @IBAction func btnLoginTapped() {
         dismissKeyBoard()
         if validateInputData() {
-            presenter?.login(email: vUserName.tfInput.text&, password: passwordText)
+            presenter?.login(username: vUserName.tfInput.text&, password: passwordText)
         }
         
     }
@@ -107,10 +108,10 @@ extension LoginViewController {
             return false
         }
         
-        if let email = self.vUserName.tfInput.text, email.isValidEmail() == false {
-            hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
-            return false
-        }
+//        if let email = self.vUserName.tfInput.text, email.isValidEmail() == false {
+//            hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
+//            return false
+//        }
         if self.vPassword.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterPassword.showLanguage)
             return false

@@ -17,8 +17,8 @@ import UIKit
 let BASE_URL = "http://chuyenanh.vn/"
 let BASE_URL_IMAGE = "http://chuyenanh.vn/"
 #else
-let BASE_URL = "http://demo7.engma.com.vn/"
-let BASE_URL_IMAGE = "http://demo7.engma.com.vn/"
+let BASE_URL = "http://demo1.engma.com.vn/"
+let BASE_URL_IMAGE = "http://demo1.engma.com.vn/"
 #endif
 let emailDefault = "default@chuyenanh.vn"
 let passwordDefault = "123456"

@@ -67,7 +67,8 @@ struct LocalizableKey {
     static let capcha = "Capcha"
     static let enter = "Enter"
     static let select = "Select"
-    
+    static let male = "male"
+    static let female = "female"
     
     // Forgot password Page
     static let ForgotPasswordMessage = "ForgotPasswordMessage"

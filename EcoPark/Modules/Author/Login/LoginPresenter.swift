@@ -22,8 +22,8 @@ class LoginPresenter: LoginPresenterProtocol {
         self.router = router
     }
     
-    func login(email: String, password: String) {
-        interactor?.login(email: email, password: password)
+    func login(username: String, password: String) {
+        interactor?.login(username: username, password: password)
     }
     
     func loginSocial(param: LoginSocialParam) {

@@ -10,7 +10,7 @@ import Alamofire
 import ObjectMapper
 
 enum UserEndPoint {
-    case login(email: String, password: String)
+    case login(username: String, password: String)
     case fogotPassword(email: String)
     case checkLogin
     case getCaptcha
@@ -122,7 +122,7 @@ extension UserEndPoint: EndPointType {
     var parameters: JSONDictionary {
         switch self {
         case .login(let email, let password):
-            var param = ["email": email,
+            var param = ["username": email,
                          "password": password] as [String: Any]
             param = BaseParam.addDeviceParams(inputParams: param)
             return param
