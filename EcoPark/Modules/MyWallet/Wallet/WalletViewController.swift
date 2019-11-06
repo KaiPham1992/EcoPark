@@ -48,6 +48,11 @@ class WalletViewController: BaseViewController, WalletViewProtocol {
         lbWalletMoney.attributedText = attr
     }
     
+    @IBAction func btnRechargeTapped() {
+        let vc = RechargeWalletRouter.createModule()
+        self.push(controller: vc)
+    }
+    
 }
 extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
     

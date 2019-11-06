@@ -54,7 +54,7 @@ class AppRouter {
     func test() {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         
-            let vc = RechargeWalletRouter.createModule()
+            let vc = WalletRouter.createModule()
             windowApp.rootViewController = UINavigationController(rootViewController: vc)
     }
 }
