@@ -61,7 +61,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         mapView.delegate = self
         
         
-        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 10)
+        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
         
         self.mapView?.animate(to: camera)
     }
@@ -129,7 +129,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 10.0)
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
         
         self.mapView?.animate(to: camera)
         self.locationManager.stopUpdatingLocation()
