@@ -13,6 +13,7 @@ import UIKit
 class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
 
 	var presenter: BookingInfoPresenterProtocol?
+    var parking: ParkingEntity?
 
 	override func viewDidLoad() {
         super.viewDidLoad()

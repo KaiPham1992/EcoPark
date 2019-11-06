@@ -14,13 +14,14 @@ class ParkingUserDetailRouter: ParkingUserDetailWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(parking: ParkingEntity?) -> ParkingUserDetailViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = ParkingUserDetailViewController(nibName: nil, bundle: nil)
+        let view = ParkingUserDetailViewController.initFromNib()
         let interactor = ParkingUserDetailInteractor()
         let router = ParkingUserDetailRouter()
         let presenter = ParkingUserDetailPresenter(interface: view, interactor: interactor, router: router)
 
+        view.parking = parking
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

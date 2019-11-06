@@ -14,9 +14,9 @@ class BookingInfoRouter: BookingInfoWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(parking: ParkingEntity?) -> BookingInfoViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = BookingInfoViewController(nibName: nil, bundle: nil)
+        let view = BookingInfoViewController.initFromNib()
         let interactor = BookingInfoInteractor()
         let router = BookingInfoRouter()
         let presenter = BookingInfoPresenter(interface: view, interactor: interactor, router: router)
@@ -24,6 +24,8 @@ class BookingInfoRouter: BookingInfoWireframeProtocol {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        
+        view.parking = parking
 
         return view
     }

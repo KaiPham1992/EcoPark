@@ -30,6 +30,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     weak var delegate: HomeViewControllerDelegate?
     
     var listParking = [ParkingEntity]()
+    var parkingSelected: ParkingEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +88,10 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     @objc func showPopUpDetail() {
         let popUp = ParkingDetailPopUp()
-        popUp.showPopUp(money: 500, completionNo: nil, completionYes: nil)
+        popUp.showPopUp(money: 500, completionNo: nil, completionYes: {
+            let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
+            self.push(controller: vc)
+        })
     }
     
     override func setUpViews() {
@@ -110,7 +114,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @objc func btnBookingTapped() {
-        let bookingInfo = BookingInfoRouter.createModule()
+        let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
         self.push(controller: bookingInfo)
     }
     
@@ -160,6 +164,7 @@ extension HomeViewController: GMSMapViewDelegate {
         marker.parking?.isSelected = true
         drawMarker(parkings: listParking)
         vParkingSort.parking = marker.parking
+        parkingSelected = marker.parking
         vParkingSort.isHidden = false
         return true
     }

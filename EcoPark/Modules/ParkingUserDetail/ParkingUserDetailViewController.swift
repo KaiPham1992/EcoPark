@@ -14,6 +14,8 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
 
 	var presenter: ParkingUserDetailPresenterProtocol?
     @IBOutlet weak var vAppImageSlide: AppImageSlide!
+    
+    var parking: ParkingEntity?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +33,10 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         
         addBackToNavigation()
         setTitleNavigation(title: "Chi tiết bãi giữ xe")
+    }
+    
+    @IBAction func btnBookingTapped() {
+        let vc = BookingInfoRouter.createModule(parking: self.parking)
+        self.push(controller: vc)
     }
 }
