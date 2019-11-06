@@ -825,6 +825,15 @@
 		766D135C228EF078005E47F0 /* ViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D135B228EF078005E47F0 /* ViewGradient.swift */; };
 		766D135D228EF078005E47F0 /* ViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D135B228EF078005E47F0 /* ViewGradient.swift */; };
 		766D135E228EF078005E47F0 /* ViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766D135B228EF078005E47F0 /* ViewGradient.swift */; };
+		766FBDB8237313CE007A935D /* ParkingInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */; };
+		766FBDB9237313CE007A935D /* ParkingInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */; };
+		766FBDBA237313CE007A935D /* ParkingInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */; };
+		766FBDBC23731897007A935D /* ParkingEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBB23731897007A935D /* ParkingEndPoint.swift */; };
+		766FBDBD23731897007A935D /* ParkingEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBB23731897007A935D /* ParkingEndPoint.swift */; };
+		766FBDBE23731897007A935D /* ParkingEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBB23731897007A935D /* ParkingEndPoint.swift */; };
+		766FBDC02373198D007A935D /* ParkingAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBF2373198D007A935D /* ParkingAPIService.swift */; };
+		766FBDC12373198D007A935D /* ParkingAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBF2373198D007A935D /* ParkingAPIService.swift */; };
+		766FBDC22373198E007A935D /* ParkingAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBF2373198D007A935D /* ParkingAPIService.swift */; };
 		7680749D22C88A910015A75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7680749C22C88A910015A75C /* Assets.xcassets */; };
 		7680749E22C88A910015A75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7680749C22C88A910015A75C /* Assets.xcassets */; };
 		7680749F22C88A910015A75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7680749C22C88A910015A75C /* Assets.xcassets */; };
@@ -1748,6 +1757,9 @@
 		766AE80322B02371002D474E /* ViewFeature.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewFeature.xib; sourceTree = "<group>"; };
 		766AE80722B02393002D474E /* ViewFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFeature.swift; sourceTree = "<group>"; };
 		766D135B228EF078005E47F0 /* ViewGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGradient.swift; sourceTree = "<group>"; };
+		766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingInfoEntity.swift; sourceTree = "<group>"; };
+		766FBDBB23731897007A935D /* ParkingEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingEndPoint.swift; sourceTree = "<group>"; };
+		766FBDBF2373198D007A935D /* ParkingAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAPIService.swift; sourceTree = "<group>"; };
 		7680749C22C88A910015A75C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		768074A022C90E5D0015A75C /* QuestionChoiceResultParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionChoiceResultParam.swift; sourceTree = "<group>"; };
 		768074A922C910390015A75C /* QuestionSubmitParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSubmitParam.swift; sourceTree = "<group>"; };
@@ -3466,6 +3478,7 @@
 				DE361F542283E8E200FA3B0D /* ParentNotificationEntity.swift */,
 				2238870E2366AACF00DAC978 /* ParkingEntity.swift */,
 				22D5EAAA237185C9001B811E /* File.swift */,
+				766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -3541,6 +3554,7 @@
 				DE361F152283E85000FA3B0D /* CommonEndPoint.swift */,
 				DE361F1A2283E85000FA3B0D /* UserEndPoint.swift */,
 				DE361F1B2283E85000FA3B0D /* NotificationEndPoint.swift */,
+				766FBDBB23731897007A935D /* ParkingEndPoint.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -3560,6 +3574,7 @@
 				DE361F1D2283E85000FA3B0D /* CommonAPIService.swift */,
 				DE361F212283E85000FA3B0D /* NotificationAPIService.swift */,
 				DE361F242283E85000FA3B0D /* UserAPIService.swift */,
+				766FBDBF2373198D007A935D /* ParkingAPIService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -4613,11 +4628,13 @@
 				175C733F2367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
 				1768973F23697E62001F7383 /* SignUpPartnerStep2Interactor.swift in Sources */,
 				DE361F412283E85000FA3B0D /* UpdateProfileSocial.swift in Sources */,
+				766FBDC02373198D007A935D /* ParkingAPIService.swift in Sources */,
 				DE2ADE5D22841A68003768CE /* SideMenuViewController.swift in Sources */,
 				22B4B322236ABC4C004BD8FB /* PreviewPhotoViewController.swift in Sources */,
 				1717E102236D98DB00E07734 /* HistoryPartnerBookingViewController.swift in Sources */,
 				DE952F872287D2A700E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				DE952F942287D2A700E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
+				766FBDB8237313CE007A935D /* ParkingInfoEntity.swift in Sources */,
 				2238870F2366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE952F992287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				17C2C4C1236C26810020B299 /* SlideImageCell.swift in Sources */,
@@ -4750,6 +4767,7 @@
 				760B92792371C04300C281D6 /* WalletCell.swift in Sources */,
 				DE952F8F2287D2A700E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
+				766FBDBC23731897007A935D /* ParkingEndPoint.swift in Sources */,
 				76682F4D236EB74500F49482 /* SystemNotificationInteractor.swift in Sources */,
 				762E32EC236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */,
 				7609FBD3236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
@@ -4996,11 +5014,13 @@
 				DE952FCC2287DF4800E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				175C73402367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
 				1768974023697E62001F7383 /* SignUpPartnerStep2Interactor.swift in Sources */,
+				766FBDC12373198D007A935D /* ParkingAPIService.swift in Sources */,
 				DE952FCD2287DF4800E3F688 /* UpdateProfileSocial.swift in Sources */,
 				DE952FCE2287DF4800E3F688 /* SideMenuViewController.swift in Sources */,
 				1717E103236D98DB00E07734 /* HistoryPartnerBookingViewController.swift in Sources */,
 				22B4B323236ABC4C004BD8FB /* PreviewPhotoViewController.swift in Sources */,
 				DE952FCF2287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				766FBDB9237313CE007A935D /* ParkingInfoEntity.swift in Sources */,
 				DE952FD12287DF4800E3F688 /* KActivityIndicatorAnimationBallBeat.swift in Sources */,
 				223887102366AACF00DAC978 /* ParkingEntity.swift in Sources */,
 				DE952FD22287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
@@ -5133,6 +5153,7 @@
 				760B927A2371C04300C281D6 /* WalletCell.swift in Sources */,
 				DE9530022287DF4800E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
+				766FBDBD23731897007A935D /* ParkingEndPoint.swift in Sources */,
 				76682F4E236EB74500F49482 /* SystemNotificationInteractor.swift in Sources */,
 				762E32ED236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */,
 				7609FBD4236D9F530029E003 /* CheckOutInteractor.swift in Sources */,
@@ -5379,11 +5400,13 @@
 				229A7A3D236EB39E007A7C62 /* WalletInteractor.swift in Sources */,
 				DE9530792287DF6400E3F688 /* BaseTableCell.swift in Sources */,
 				175C73412367E4EE009F03F6 /* ProfileProtocols.swift in Sources */,
+				766FBDC22373198E007A935D /* ParkingAPIService.swift in Sources */,
 				1768974123697E62001F7383 /* SignUpPartnerStep2Interactor.swift in Sources */,
 				DE2D679A22F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				DE95307A2287DF6400E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				1717E104236D98DB00E07734 /* HistoryPartnerBookingViewController.swift in Sources */,
 				22B4B324236ABC4C004BD8FB /* PreviewPhotoViewController.swift in Sources */,
+				766FBDBA237313CE007A935D /* ParkingInfoEntity.swift in Sources */,
 				DE95307B2287DF6400E3F688 /* UpdateProfileSocial.swift in Sources */,
 				DE95307C2287DF6400E3F688 /* SideMenuViewController.swift in Sources */,
 				DE95307D2287DF6400E3F688 /* KActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
@@ -5516,6 +5539,7 @@
 				760B927B2371C04300C281D6 /* WalletCell.swift in Sources */,
 				DE9530AD2287DF6400E3F688 /* UITable+extension.swift in Sources */,
 				DE9530AE2287DF6400E3F688 /* BaseViewController.swift in Sources */,
+				766FBDBE23731897007A935D /* ParkingEndPoint.swift in Sources */,
 				DE9530AF2287DF6400E3F688 /* PostRecordParam.swift in Sources */,
 				76682F4F236EB74500F49482 /* SystemNotificationInteractor.swift in Sources */,
 				762E32EE236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */,

@@ -19,8 +19,10 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getParkingDetail()
     }
-
+        
     override func setUpViews() {
         super.setUpViews()
         
@@ -32,11 +34,27 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         super.setUpNavigation()
         
         addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết bãi giữ xe")
+        setTitleNavigation(title: "Chi tiết bãi xe")
     }
     
     @IBAction func btnBookingTapped() {
         let vc = BookingInfoRouter.createModule(parking: self.parking)
         self.push(controller: vc)
     }
+    
+    // Mark: Get error
+    func didGetError(error: APIError) {
+        printError(message: error.message)
+    }
+    
+    // Mark: Get Park Info
+    func getParkingDetail() {
+        if let id = parking?.parking_id {
+            self.presenter?.getParkingInfo(id: id)
+        }
+    }
+    func didGetInfo(info: ParkingInfoEntity) {
+        
+    }
 }
+

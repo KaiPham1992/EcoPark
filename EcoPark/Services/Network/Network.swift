@@ -38,11 +38,13 @@ struct APINetwork: APINetworkProtocol {
             let json = JSON(data)
             
             if json.description == "null" {
-                print("\n**************ERROR*****************")
+                print("\n⛔⛔⛔⛔⛔⛔ ERROR ⛔⛔⛔⛔⛔⛔")
                 print(String(data: data, encoding: .utf8))
+                print("⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔⛔")
             } else {
-                print("\n**************SUCCESS*****************")
+                print("\n✅✅✅✅✅✅✅ SUCCESS ✅✅✅✅✅✅✅")
                 print(json)
+                print("✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅")
             }
             
             

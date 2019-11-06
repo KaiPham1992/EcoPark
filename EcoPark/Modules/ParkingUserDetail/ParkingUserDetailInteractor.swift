@@ -13,4 +13,14 @@ import UIKit
 class ParkingUserDetailInteractor: ParkingUserDetailInteractorInputProtocol {
 
     weak var presenter: ParkingUserDetailInteractorOutputProtocol?
+    
+    func getParkingInfo(id: String) {
+        Provider.shared.parkingAPIService.getParkingInfo(id: id, success: { (info) in
+            guard let info = info else { return }
+            self.presenter?.didGetInfo(info: info)
+        }) { (error) in
+            guard let error = error else { return }
+            self.presenter?.didGetError(error: error)
+        }
+    }
 }

@@ -21,5 +21,20 @@ class ParkingUserDetailPresenter: ParkingUserDetailPresenterProtocol, ParkingUse
         self.interactor = interactor
         self.router = router
     }
+    
+    // MARK: Get Park Info
+    func getParkingInfo(id: String) {
+        self.interactor?.getParkingInfo(id: id)
+    }
+    func didGetInfo(info: ParkingInfoEntity) {
+        self.view?.didGetInfo(info: info)
+    }
+    
+    // MARK: Get Error
+    func didGetError(error: APIError) {
+        self.view?.didGetError(error: error)
+    }
+    
+    
 
 }
