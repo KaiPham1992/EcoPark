@@ -56,5 +56,5 @@ class AppRouter {
         
             let vc = RechargeWalletRouter.createModule()
             windowApp.rootViewController = UINavigationController(rootViewController: vc)
-        }
+    }
 }
