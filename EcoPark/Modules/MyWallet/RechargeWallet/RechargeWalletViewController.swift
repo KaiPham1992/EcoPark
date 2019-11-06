@@ -13,7 +13,11 @@ import UIKit
 class RechargeWalletViewController: BaseViewController, RechargeWalletViewProtocol {
 
 	var presenter: RechargeWalletPresenterProtocol?
-
+    var isATM : Bool = true
+    
+    @IBOutlet weak var checkBoxATMCard: AppCheckBox!
+    @IBOutlet weak var checkBoxCreditCard: AppCheckBox!
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,7 +32,20 @@ class RechargeWalletViewController: BaseViewController, RechargeWalletViewProtoc
     override func setUpViews() {
         super.setUpViews()
         
-        
+        checkBoxATMCard.setTitle(title: "Thẻ ATM nội địa / Internet banking", isCheck: true)
+        checkBoxATMCard.delegate = self
+        checkBoxCreditCard.setTitle(title: "Thẻ tín dụng / Thẻ ghi nợ", isCheck: false)
+        checkBoxCreditCard.delegate = self
     }
+    
 
+}
+
+extension RechargeWalletViewController: AppCheckBoxDelegate {
+    func changedStatus(isCheck: Bool) {
+        self.isATM = !isATM
+        checkBoxATMCard.setStatus(isCheck: isATM)
+        checkBoxCreditCard.setStatus(isCheck: !isATM)
+        print("isATM = \(isATM)")
+    }
 }

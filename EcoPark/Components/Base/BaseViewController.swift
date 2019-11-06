@@ -47,7 +47,7 @@ open class BaseViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         setUpViews()
         setUpNavigation()
-        print(self.nibName)
+        print("➡️ \(self.nibName&) ⬅️")
     }
     
     let lbNodata: UILabel = {
@@ -169,6 +169,14 @@ open class BaseViewController: UIViewController {
         if !Utils.isConnectedToInternet() {
             PopUpHelper.shared.showNoInternet {
             }
+        }
+    }
+    
+    func printError(message: String?) {
+        if let _message = message {
+            print("⛔⛔ \(_message) ⛔⛔")
+        } else {
+            print("⛔⛔ has an error ⛔⛔")
         }
     }
     

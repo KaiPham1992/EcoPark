@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
         </array>
@@ -14,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargeWalletViewController">
             <connections>
+                <outlet property="checkBoxATMCard" destination="aVw-v6-ow6" id="wrN-OI-8or"/>
+                <outlet property="checkBoxCreditCard" destination="twb-e0-a12" id="qfV-KP-LYx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -106,13 +111,44 @@
                         <constraint firstAttribute="height" constant="170" id="GCD-V7-BLg"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-jL-c5t" userLabel="Line">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="kPl-D9-1es"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-zv-b9t">
+                    <rect key="frame" x="20" y="450" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="R71-T5-CfI"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="f3H-Ut-ABj"/>
+                        <constraint firstAttribute="height" constant="40" id="re0-bV-gIv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Xác nhận nạp tiền">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Rfg-Vw-jQa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="1LT-Jt-xKZ"/>
+                <constraint firstItem="L2a-jL-c5t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1ZR-Ly-gfa"/>
+                <constraint firstItem="L2a-jL-c5t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1az-eW-fHQ"/>
+                <constraint firstItem="nO5-zv-b9t" firstAttribute="top" secondItem="VA3-NS-978" secondAttribute="bottom" constant="20" id="DO4-pc-Ynd"/>
                 <constraint firstItem="Rfg-Vw-jQa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Ikh-w5-hTq"/>
+                <constraint firstAttribute="trailing" secondItem="L2a-jL-c5t" secondAttribute="trailing" id="QsY-Ok-yOE"/>
+                <constraint firstAttribute="trailing" secondItem="nO5-zv-b9t" secondAttribute="trailing" constant="20" id="Uc2-Ia-6Od"/>
                 <constraint firstAttribute="trailing" secondItem="VA3-NS-978" secondAttribute="trailing" constant="20" id="YyS-HD-e97"/>
                 <constraint firstItem="VA3-NS-978" firstAttribute="top" secondItem="Rfg-Vw-jQa" secondAttribute="bottom" constant="40" id="d96-HO-OMO"/>
+                <constraint firstItem="nO5-zv-b9t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dsP-cI-gOG"/>
                 <constraint firstItem="VA3-NS-978" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="psf-eW-d68"/>
                 <constraint firstItem="Rfg-Vw-jQa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rKc-xl-JjS"/>
                 <constraint firstAttribute="trailing" secondItem="Rfg-Vw-jQa" secondAttribute="trailing" constant="20" id="x6r-qZ-WK3"/>
