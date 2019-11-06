@@ -18,6 +18,7 @@ protocol HomeFindWireframeProtocol: class {
 protocol HomeFindPresenterProtocol: class {
 
     var interactor: HomeFindInteractorInputProtocol? { get set }
+    func searchPlaceByString(text: String)
 }
 
 //MARK: Interactor -

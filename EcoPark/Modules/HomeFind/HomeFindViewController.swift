@@ -39,6 +39,8 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
            
         }
         configureTable()
+        
+        self.presenter?.searchPlaceByString(text: "hang  ")
     }
     
     override func setUpNavigation() {

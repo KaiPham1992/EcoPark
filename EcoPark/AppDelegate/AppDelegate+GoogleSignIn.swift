@@ -11,19 +11,21 @@ import GoogleMaps
 import GooglePlaces
 import Firebase
 
+#if PROD
+    let googleApiKey = "AIzaSyBagkVuIHgxWBeASzVpzimH0GoiqoIenNw"
+#else
+    let googleApiKey = "AIzaSyBagkVuIHgxWBeASzVpzimH0GoiqoIenNw"
+#endif
+
 extension AppDelegate {
-    
-    
     
     func configureGoogle() {
         #if PROD
-        GMSServices.provideAPIKey("AIzaSyBagkVuIHgxWBeASzVpzimH0GoiqoIenNw")
-        GMSPlacesClient.provideAPIKey("AIzaSyBagkVuIHgxWBeASzVpzimH0GoiqoIenNw")
-//        GIDSignIn.sharedInstance().clientID = "925930271420-g38602u84281v4htrbc2um3o7i70jbi8.apps.googleusercontent.com"
+        GMSServices.provideAPIKey(googleApiKey)
+        GMSPlacesClient.provideAPIKey(googleApiKey)
         #else
-        GMSServices.provideAPIKey("AIzaSyBagkVuIHgxWBeASzVpzimH0GoiqoIenNw")
-        GMSPlacesClient.provideAPIKey("AIzaSyBagkVuIHgxWBeASzVpzimH0GoiqoIenNw")
-//        GIDSignIn.sharedInstance().clientID = "925930271420-g38602u84281v4htrbc2um3o7i70jbi8.apps.googleusercontent.com"
+        GMSServices.provideAPIKey(googleApiKey)
+        GMSPlacesClient.provideAPIKey(googleApiKey)
         #endif
         configureFirebase()
     }
