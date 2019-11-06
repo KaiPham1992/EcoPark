@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargeWalletViewController">
             <connections>
@@ -17,7 +21,107 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VA3-NS-978">
+                    <rect key="frame" x="20" y="230" width="335" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-jL-6jM">
+                            <rect key="frame" x="0.0" y="99.5" width="335" height="1"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="KPK-NB-gOY"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập số tiền cần nạp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp0-Ue-vVr">
+                            <rect key="frame" x="103.5" y="8" width="128.5" height="18"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bill" translatesAutoresizingMaskIntoConstraints="NO" id="GQE-xU-RCi">
+                            <rect key="frame" x="68.5" y="2" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="QWc-Qt-Y2v"/>
+                                <constraint firstAttribute="width" constant="30" id="ypD-kg-kZs"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-u0-4DF">
+                            <rect key="frame" x="118" y="46" width="99" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <color key="textColor" red="0.74901960779999999" green="0.65490196079999996" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-JW-6Db">
+                            <rect key="frame" x="289.5" y="47.5" width="35.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVw-v6-ow6" customClass="AppCheckBox" customModule="EcoPark_AppStore" customModuleProvider="target">
+                            <rect key="frame" x="20" y="120.5" width="295" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Ehh-fe-cge"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twb-e0-a12" customClass="AppCheckBox" customModule="EcoPark_AppStore" customModuleProvider="target">
+                            <rect key="frame" x="20" y="150.5" width="295" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="7FQ-fY-EXG"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="iXw-NI-25d"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="WUm-JW-6Db" secondAttribute="trailing" constant="10" id="15p-Ku-46E"/>
+                        <constraint firstItem="sp0-Ue-vVr" firstAttribute="leading" secondItem="GQE-xU-RCi" secondAttribute="trailing" constant="5" id="4fJ-tC-JAb"/>
+                        <constraint firstAttribute="trailing" secondItem="wMU-jL-6jM" secondAttribute="trailing" id="8sR-z7-113"/>
+                        <constraint firstItem="sp0-Ue-vVr" firstAttribute="centerX" secondItem="VA3-NS-978" secondAttribute="centerX" id="AYX-bE-QvH"/>
+                        <constraint firstItem="wMU-jL-6jM" firstAttribute="leading" secondItem="VA3-NS-978" secondAttribute="leading" id="D0T-EZ-LdN"/>
+                        <constraint firstItem="aVw-v6-ow6" firstAttribute="top" secondItem="wMU-jL-6jM" secondAttribute="bottom" constant="20" id="EXz-e2-245"/>
+                        <constraint firstAttribute="trailing" secondItem="aVw-v6-ow6" secondAttribute="trailing" constant="20" id="InC-Ab-7dS"/>
+                        <constraint firstItem="wMU-jL-6jM" firstAttribute="centerY" secondItem="VA3-NS-978" secondAttribute="centerY" id="J2V-5c-RUz"/>
+                        <constraint firstAttribute="height" constant="200" id="LEo-Dz-Ygp"/>
+                        <constraint firstItem="aVw-v6-ow6" firstAttribute="leading" secondItem="VA3-NS-978" secondAttribute="leading" constant="20" id="VX6-fK-AJR"/>
+                        <constraint firstItem="twb-e0-a12" firstAttribute="top" secondItem="aVw-v6-ow6" secondAttribute="bottom" constant="10" id="ZJS-Lh-xNC"/>
+                        <constraint firstItem="sp0-Ue-vVr" firstAttribute="top" secondItem="VA3-NS-978" secondAttribute="top" constant="8" id="cCE-XW-h9N"/>
+                        <constraint firstItem="WUm-JW-6Db" firstAttribute="centerY" secondItem="0Mg-u0-4DF" secondAttribute="centerY" id="elc-7X-8dQ"/>
+                        <constraint firstAttribute="trailing" secondItem="twb-e0-a12" secondAttribute="trailing" constant="20" id="l3K-6s-Pmw"/>
+                        <constraint firstItem="twb-e0-a12" firstAttribute="leading" secondItem="VA3-NS-978" secondAttribute="leading" constant="20" id="pf0-Le-3ZW"/>
+                        <constraint firstItem="0Mg-u0-4DF" firstAttribute="centerX" secondItem="VA3-NS-978" secondAttribute="centerX" id="uTu-Jh-nxv"/>
+                        <constraint firstItem="GQE-xU-RCi" firstAttribute="centerY" secondItem="sp0-Ue-vVr" secondAttribute="centerY" id="yM6-2r-YRQ"/>
+                        <constraint firstItem="0Mg-u0-4DF" firstAttribute="top" secondItem="sp0-Ue-vVr" secondAttribute="bottom" constant="20" id="ySS-ou-0tp"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer_2" translatesAutoresizingMaskIntoConstraints="NO" id="Rfg-Vw-jQa">
+                    <rect key="frame" x="20" y="20" width="335" height="170"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="GCD-V7-BLg"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Rfg-Vw-jQa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="1LT-Jt-xKZ"/>
+                <constraint firstItem="Rfg-Vw-jQa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Ikh-w5-hTq"/>
+                <constraint firstAttribute="trailing" secondItem="VA3-NS-978" secondAttribute="trailing" constant="20" id="YyS-HD-e97"/>
+                <constraint firstItem="VA3-NS-978" firstAttribute="top" secondItem="Rfg-Vw-jQa" secondAttribute="bottom" constant="40" id="d96-HO-OMO"/>
+                <constraint firstItem="VA3-NS-978" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="psf-eW-d68"/>
+                <constraint firstItem="Rfg-Vw-jQa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rKc-xl-JjS"/>
+                <constraint firstAttribute="trailing" secondItem="Rfg-Vw-jQa" secondAttribute="trailing" constant="20" id="x6r-qZ-WK3"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="151.57421289355324"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_bill" width="30" height="30"/>
+        <image name="layer_2" width="316" height="185"/>
+    </resources>
 </document>

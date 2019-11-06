@@ -24,5 +24,11 @@ class RechargeWalletViewController: BaseViewController, RechargeWalletViewProtoc
         addBackToNavigation()
         setTitleNavigation(title: "Nạp tiền")
     }
+    
+    override func setUpViews() {
+        super.setUpViews()
+        
+        
+    }
 
 }
