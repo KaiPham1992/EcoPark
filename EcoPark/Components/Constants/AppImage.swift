@@ -14,8 +14,8 @@ struct AppImage {
     static let imgDelete = UIImage(named: "delete")!
     static let imgPlaceHolderImage = UIImage(named: "")
     
-    static let imgUnCheck = UIImage(named: "UnCheck")!
-    static let imgCheck = UIImage(named: "Check")!
+    static let imgUnCheck = UIImage(named: "ic_radio_button_off")!
+    static let imgCheck = UIImage(named: "ic_radio_button_on")!
     static let imgMenu = UIImage(named: "ic_menu")!
     static let imgAddImage = UIImage(named: "ic_add_image- 1")!
     // Menu
@@ -96,4 +96,7 @@ struct AppImage {
     static let imgNotificationOn = UIImage(named: "ic_notification_on")!
     static let imgNotificationOff = UIImage(named: "ic_notifications_off")!
 
+    // MARK: Wallet
+    static let imgUp = UIImage(named: "ic_up")!
+    static let imgDown = UIImage(named: "ic_downward")!
 }

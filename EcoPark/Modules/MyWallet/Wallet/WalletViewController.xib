@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletViewController">
             <connections>
+                <outlet property="fromToDatePicker" destination="gUc-ce-Gsp" id="gaO-sD-YkG"/>
+                <outlet property="lbWalletMoney" destination="jsN-NW-J1J" id="BNT-S7-ksK"/>
+                <outlet property="tbWallet" destination="2Wl-Ik-RCA" id="8qw-Kd-DMQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -77,21 +80,29 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-ce-Gsp">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-ce-Gsp" customClass="FromToDatePicker" customModule="EcoPark_AppStore" customModuleProvider="target">
                     <rect key="frame" x="16" y="58" width="343" height="40"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="I45-l1-C3Q"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Wl-Ik-RCA">
+                    <rect key="frame" x="16" y="114" width="343" height="553"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="bsZ-tA-J0a" firstAttribute="top" secondItem="f4Y-gO-Khk" secondAttribute="top" id="0p7-iu-XfI"/>
                 <constraint firstItem="gUc-ce-Gsp" firstAttribute="trailing" secondItem="bsZ-tA-J0a" secondAttribute="trailing" id="3E7-zk-drR"/>
+                <constraint firstItem="f4Y-gO-Khk" firstAttribute="bottom" secondItem="2Wl-Ik-RCA" secondAttribute="bottom" id="Anp-eF-npx"/>
                 <constraint firstItem="bsZ-tA-J0a" firstAttribute="leading" secondItem="f4Y-gO-Khk" secondAttribute="leading" constant="16" id="FYO-02-cCO"/>
+                <constraint firstItem="f4Y-gO-Khk" firstAttribute="trailing" secondItem="2Wl-Ik-RCA" secondAttribute="trailing" constant="16" id="Hf8-TP-fnP"/>
                 <constraint firstItem="gUc-ce-Gsp" firstAttribute="leading" secondItem="bsZ-tA-J0a" secondAttribute="leading" id="Q42-Ng-DSJ"/>
                 <constraint firstItem="gUc-ce-Gsp" firstAttribute="top" secondItem="bsZ-tA-J0a" secondAttribute="bottom" constant="8" id="sA4-0I-b8C"/>
+                <constraint firstItem="2Wl-Ik-RCA" firstAttribute="top" secondItem="gUc-ce-Gsp" secondAttribute="bottom" constant="16" id="scj-DL-UEg"/>
+                <constraint firstItem="2Wl-Ik-RCA" firstAttribute="leading" secondItem="f4Y-gO-Khk" secondAttribute="leading" constant="16" id="xZC-Z0-aTU"/>
                 <constraint firstItem="f4Y-gO-Khk" firstAttribute="trailing" secondItem="bsZ-tA-J0a" secondAttribute="trailing" constant="16" id="zUY-Eb-uuX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="f4Y-gO-Khk"/>
