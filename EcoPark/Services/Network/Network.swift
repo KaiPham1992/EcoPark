@@ -29,10 +29,33 @@ struct APINetwork: APINetworkProtocol {
     }
     
     func requestData(endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure) {
-        print("\(BASE_URL)\(endPoint.path)")
-        print(endPoint.parameters)
-        print(endPoint.headers)
+        print("✳️ URL: \(BASE_URL)\(endPoint.path)")
+        print("✳️ Param: \(endPoint.parameters)")
+        print("✳️ Header: \(endPoint.headers)")
         
+        /** Mock data - Remove me later */
+        if endPoint.path == "_api/parking/get_parking_info" {
+            if let path = Bundle.main.path(forResource: "test", ofType: "json") {
+                do {
+                      let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                      let json = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                    if let json = json as? Dictionary<String, AnyObject> {
+                        print(json)
+                        guard let result = Mapper<BaseResponse>().map(JSONObject: json) else {
+                            failure(APPError.canNotParseData)
+                            return
+                        }
+                        
+                        self.handleResponse(response: result, success: success, failure: failure)
+                    }
+                    
+                  } catch {
+                       // handle error
+                  }
+            }
+            return
+        }
+        /** End mock data*/
         
         request.requestData(endPoint: endPoint, success: { data in
             let json = JSON(data)
