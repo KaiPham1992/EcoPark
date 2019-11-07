@@ -61,7 +61,7 @@ class ParkingInfoEntity: BaseEntity {
         self.time_end <- (map["time_end"], TimeTramsform())
         self.lat <- (map["lat"], StringToDoubleTransform())
         self.long <- (map["long"], StringToDoubleTransform())
-        self.rating <- map["rating"]
+        self.rating <- (map["rating"], StringToDoubleTransform())
         self.account_id <- map["account_id"]
         self.parking_type <- map["parking_type"]
         self.fullname <- map["fullname"]
