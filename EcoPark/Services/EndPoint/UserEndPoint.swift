@@ -127,8 +127,8 @@ extension UserEndPoint: EndPointType {
     
     var parameters: JSONDictionary {
         switch self {
-        case .login(let email, let password):
-            var param = ["username": email,
+        case .login(let username, let password):
+            var param = ["username": username,
                          "password": password] as [String: Any]
             param = BaseParam.addDeviceParams(inputParams: param)
             return param
