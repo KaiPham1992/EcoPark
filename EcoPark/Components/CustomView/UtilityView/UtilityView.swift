@@ -20,8 +20,10 @@ class UtilityView: BaseViewXib {
     override func setUpViews() {
         super.setUpViews()
         configureCollection()
-        
-        utilyties = UtilityModel.toArray()
+    }
+    
+    func setMaterial(listMaterial: [UtilityModelType]) {
+        self.utilyties = UtilityModel.setMaterial(listMaterilType: listMaterial)
     }
 }
 
@@ -54,10 +56,10 @@ extension UtilityView: UICollectionViewDataSource, UICollectionViewDelegateFlowL
         return CGSize(width: width, height: 60)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = self.utilyties[indexPath.item]
-        item.isSelected = !item.isSelected
-        
-        self.cvUtility.reloadData()
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let item = self.utilyties[indexPath.item]
+//        item.isSelected = !item.isSelected
+//
+//        self.cvUtility.reloadData()
+//    }
 }

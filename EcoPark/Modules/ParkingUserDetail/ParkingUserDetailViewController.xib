@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingUserDetailViewController">
             <connections>
+                <outlet property="btnBookNow" destination="OHe-77-7Gl" id="VmB-js-JOL"/>
+                <outlet property="btnContac" destination="0Rf-sk-2Yp" id="Fql-Nd-InW"/>
+                <outlet property="btnDirect" destination="J3A-Od-TgY" id="wrj-3Q-dHQ"/>
+                <outlet property="cltMaterial" destination="mJR-tm-05A" id="3e0-1E-tnr"/>
+                <outlet property="lbAddress" destination="2XD-E2-DFO" id="wbE-Xm-3Sx"/>
+                <outlet property="lbEmptyPlace" destination="0yO-f5-8tV" id="wZY-AY-BqP"/>
+                <outlet property="lbName" destination="R5p-gI-NW6" id="3VH-3U-u5t"/>
+                <outlet property="lbPriceEightHour" destination="kMS-Sn-Kzv" id="YHd-wP-ETs"/>
+                <outlet property="lbPriceOneHour" destination="ElM-57-Qvt" id="Ifd-J7-VuO"/>
+                <outlet property="lbTime" destination="IvK-gY-tnO" id="XUI-7H-QLS"/>
+                <outlet property="lbTitleEmptyPlace" destination="5Jf-LJ-fSf" id="9dc-tx-JwL"/>
+                <outlet property="lbTitlePriceEightHour" destination="LFE-IJ-dma" id="YxX-Rs-6ix"/>
+                <outlet property="lbTitlePriceOneHour" destination="LtB-79-S6G" id="ZIw-LR-Mn0"/>
+                <outlet property="lbTitleTime" destination="7Xm-4W-jIf" id="yvN-pE-xfH"/>
+                <outlet property="lbTitleType" destination="hMN-b9-5ML" id="yqJ-18-gD3"/>
+                <outlet property="lbType" destination="T8N-NS-S8g" id="CKh-y9-RcI"/>
+                <outlet property="ratingBar" destination="UZx-ZX-zrS" id="H5V-m3-sx0"/>
                 <outlet property="vAppImageSlide" destination="JX7-pd-txg" id="J0w-9K-nkY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -173,10 +190,16 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rf-sk-2Yp">
                                             <rect key="frame" x="0.0" y="0.0" width="171.5" height="40"/>
                                             <state key="normal" title=" Liên hệ tôi" image="ic_call"/>
+                                            <connections>
+                                                <action selector="btnContactTapped" destination="-1" eventType="touchUpInside" id="GU4-fs-dQE"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3A-Od-TgY">
                                             <rect key="frame" x="171.5" y="0.0" width="171.5" height="40"/>
                                             <state key="normal" title="Chỉ đường" image="ic_direction"/>
+                                            <connections>
+                                                <action selector="btnDirectTapped" destination="-1" eventType="touchUpInside" id="Obe-tX-bHi"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -240,6 +263,13 @@
                         <action selector="btnBookingTapped" destination="-1" eventType="touchUpInside" id="Oas-tZ-oeh"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4r-PL-kE9" userLabel="Line">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rRd-e7-ELW"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -248,7 +278,10 @@
                 <constraint firstItem="HCA-XM-vBI" firstAttribute="leading" secondItem="gtD-rg-Wip" secondAttribute="leading" id="LMe-jc-VF6"/>
                 <constraint firstItem="gtD-rg-Wip" firstAttribute="trailing" secondItem="HCA-XM-vBI" secondAttribute="trailing" id="NRR-C1-Cvj"/>
                 <constraint firstItem="HCA-XM-vBI" firstAttribute="top" secondItem="gtD-rg-Wip" secondAttribute="top" id="PkE-kN-fhc"/>
+                <constraint firstItem="F4r-PL-kE9" firstAttribute="top" secondItem="gtD-rg-Wip" secondAttribute="top" id="ebj-FI-BpM"/>
+                <constraint firstItem="F4r-PL-kE9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fbf-j7-Twa"/>
                 <constraint firstItem="gtD-rg-Wip" firstAttribute="bottom" secondItem="HCA-XM-vBI" secondAttribute="bottom" id="gk7-JS-Amt"/>
+                <constraint firstAttribute="trailing" secondItem="F4r-PL-kE9" secondAttribute="trailing" id="iO1-pa-ccB"/>
                 <constraint firstItem="gtD-rg-Wip" firstAttribute="trailing" secondItem="OHe-77-7Gl" secondAttribute="trailing" constant="16" id="mnE-og-zB3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

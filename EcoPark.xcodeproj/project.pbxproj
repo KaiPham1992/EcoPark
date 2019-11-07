@@ -834,6 +834,9 @@
 		766FBDC02373198D007A935D /* ParkingAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBF2373198D007A935D /* ParkingAPIService.swift */; };
 		766FBDC12373198D007A935D /* ParkingAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBF2373198D007A935D /* ParkingAPIService.swift */; };
 		766FBDC22373198E007A935D /* ParkingAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBDBF2373198D007A935D /* ParkingAPIService.swift */; };
+		766FBDC423732986007A935D /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 766FBDC323732986007A935D /* test.json */; };
+		766FBDC523732986007A935D /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 766FBDC323732986007A935D /* test.json */; };
+		766FBDC623732986007A935D /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 766FBDC323732986007A935D /* test.json */; };
 		7680749D22C88A910015A75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7680749C22C88A910015A75C /* Assets.xcassets */; };
 		7680749E22C88A910015A75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7680749C22C88A910015A75C /* Assets.xcassets */; };
 		7680749F22C88A910015A75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7680749C22C88A910015A75C /* Assets.xcassets */; };
@@ -1760,6 +1763,7 @@
 		766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingInfoEntity.swift; sourceTree = "<group>"; };
 		766FBDBB23731897007A935D /* ParkingEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingEndPoint.swift; sourceTree = "<group>"; };
 		766FBDBF2373198D007A935D /* ParkingAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAPIService.swift; sourceTree = "<group>"; };
+		766FBDC323732986007A935D /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		7680749C22C88A910015A75C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		768074A022C90E5D0015A75C /* QuestionChoiceResultParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionChoiceResultParam.swift; sourceTree = "<group>"; };
 		768074A922C910390015A75C /* QuestionSubmitParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSubmitParam.swift; sourceTree = "<group>"; };
@@ -3620,6 +3624,7 @@
 				DE361DDC2283E52A00FA3B0D /* Components */,
 				DE361D912283E1D700FA3B0D /* Modules */,
 				DE3CC3462283DD990037DBE4 /* LaunchScreen.storyboard */,
+				766FBDC323732986007A935D /* test.json */,
 			);
 			path = EcoPark;
 			sourceTree = "<group>";
@@ -4018,6 +4023,7 @@
 				17C7FB82236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
 				76FBA1E5236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
+				766FBDC423732986007A935D /* test.json in Resources */,
 				2A07B99E236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				760B926E2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				766AE80422B02371002D474E /* ViewFeature.xib in Resources */,
@@ -4131,6 +4137,7 @@
 				17C7FB83236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
 				76FBA1E6236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
+				766FBDC523732986007A935D /* test.json in Resources */,
 				2A07B99F236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				760B926F2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				22EB904623685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
@@ -4244,6 +4251,7 @@
 				17C7FB84236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
 				76FBA1E7236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
+				766FBDC623732986007A935D /* test.json in Resources */,
 				2A07B9A0236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				760B92702371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				22EB904723685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,

@@ -47,6 +47,60 @@ class UtilityModel {
         
         return array
     }
+    
+    static func setMaterial(listMaterilType: [UtilityModelType]) -> [UtilityModel] {
+        var array = [UtilityModel]()
+        
+        if listMaterilType.contains(.roof) {
+            array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff, isSelected: true))
+        } else {
+            array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff, isSelected: true))
+        }
+        
+        if listMaterilType.contains(.washing) {
+            array.append(UtilityModel(type: .washing, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff, isSelected: true))
+        } else {
+            array.append(UtilityModel(type: .washing, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff, isSelected: false))
+        }
+        
+        if listMaterilType.contains(.repair) {
+            array.append(UtilityModel(type: .repair, iconOn: AppImage.imgRepairOn, iconOff: AppImage.imgRepairOff, isSelected: true))
+        } else {
+            array.append(UtilityModel(type: .repair, iconOn: AppImage.imgRepairOn, iconOff: AppImage.imgRepairOff, isSelected: false))
+        }
+        
+        if listMaterilType.contains(.rent) {
+            array.append(UtilityModel(type: .rent, iconOn: AppImage.imgRentOn, iconOff: AppImage.imgRentOff, isSelected: true))
+        } else {
+            array.append(UtilityModel(type: .rent, iconOn: AppImage.imgRentOn, iconOff: AppImage.imgRentOff, isSelected: false))
+        }
+        
+        if listMaterilType.contains(.superMarket) {
+            array.append(UtilityModel(type: .superMarket, iconOn: AppImage.imgSupermarketOn, iconOff: AppImage.imgSupermarketOff, isSelected: true))
+        } else {
+            array.append(UtilityModel(type: .superMarket, iconOn: AppImage.imgSupermarketOn, iconOff: AppImage.imgSupermarketOff, isSelected: false))
+        }
+        
+        if listMaterilType.contains(.atm) {
+            array.append(UtilityModel(type: .atm, iconOn: AppImage.imgAtmOn, iconOff: AppImage.imgAtmOff, isSelected: false))
+        } else {
+            array.append(UtilityModel(type: .atm, iconOn: AppImage.imgAtmOn, iconOff: AppImage.imgAtmOff, isSelected: false))
+        }
+        
+        if listMaterilType.contains(.hotel) {
+            array.append(UtilityModel(type: .hotel, iconOn: AppImage.imgHotelOn, iconOff: AppImage.imgHotelOff, isSelected: false))
+        } else {
+            array.append(UtilityModel(type: .hotel, iconOn: AppImage.imgHotelOn, iconOff: AppImage.imgHotelOff, isSelected: false))
+        }
+        
+        if listMaterilType.contains(.coffee) {
+            array.append(UtilityModel(type: .coffee, iconOn: AppImage.imgCoffeeOn, iconOff: AppImage.imgCoffeeOff, isSelected: false))
+        } else {
+            array.append(UtilityModel(type: .coffee, iconOn: AppImage.imgCoffeeOn, iconOff: AppImage.imgCoffeeOff, isSelected: false))
+        }
+    
+        return array
+    }
 }
 
 class UtilityViewCell: UICollectionViewCell {
