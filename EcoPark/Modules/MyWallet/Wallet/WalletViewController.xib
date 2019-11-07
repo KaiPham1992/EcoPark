@@ -55,6 +55,9 @@
                             <state key="normal" title="NẠP TIỀN">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="btnRechargeTapped" destination="-1" eventType="touchUpInside" id="jX0-97-i1Y"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>

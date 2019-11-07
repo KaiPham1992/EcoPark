@@ -38,6 +38,11 @@ class ParkingEntity: BaseEntity {
         self.long = long
     }
     
+    init(id: String) {
+        super.init()
+        self.parking_id = id
+    }
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         self.account_id <- map["account_id"]

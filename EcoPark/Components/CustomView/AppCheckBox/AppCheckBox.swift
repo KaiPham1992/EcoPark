@@ -8,7 +8,7 @@
 
 import UIKit
 protocol AppCheckBoxDelegate: class {
-    func changedSataus(isCheck: Bool)
+    func changedStatus(isCheck: Bool)
 }
 
 class AppCheckBox: BaseViewXib {
@@ -32,11 +32,16 @@ class AppCheckBox: BaseViewXib {
     
     @IBAction func btnActionTapped() {
         self.isCheck = !isCheck
-        delegate?.changedSataus(isCheck: isCheck)
+        delegate?.changedStatus(isCheck: isCheck)
     }
     
-    func setTitle(title: String, isCheck: Bool = false) {
+    func setTitle(title: String, isCheck: Bool = false, textColor: UIColor = UIColor.black) {
         self.isCheck = isCheck
         self.lbTitle.text = title
+        self.lbTitle.textColor = textColor
+    }
+    
+    func setStatus(isCheck: Bool) {
+        self.isCheck = isCheck
     }
 }

@@ -28,4 +28,8 @@ class Provider {
     var notificationAPIService: NotificationAPIServiceProtocol {
         return NotificationAPIService(network: networkManager)
     }
+    
+    var parkingAPIService: ParkingAPIServiceProtocol {
+        return ParkingAPIService(network: networkManager)
+    }
 }
