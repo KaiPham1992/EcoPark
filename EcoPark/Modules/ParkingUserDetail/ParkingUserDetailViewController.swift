@@ -12,9 +12,26 @@ import UIKit
 
 class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailViewProtocol {
 
-	var presenter: ParkingUserDetailPresenterProtocol?
     @IBOutlet weak var vAppImageSlide: AppImageSlide!
+    @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var ratingBar: AppRatingView!
+    @IBOutlet weak var lbTitleTime: UILabel!
+    @IBOutlet weak var lbTime: UILabel!
+    @IBOutlet weak var lbTitleType: UILabel!
+    @IBOutlet weak var lbType: UILabel!
+    @IBOutlet weak var lbTitleEmptyPlace: UILabel!
+    @IBOutlet weak var lbEmptyPlace: UILabel!
+    @IBOutlet weak var lbTitlePriceOneHour: UILabel!
+    @IBOutlet weak var lbPriceOneHour: UILabel!
+    @IBOutlet weak var lbTitlePriceEightHour: UILabel!
+    @IBOutlet weak var lbPriceEightHour: UILabel!
+    @IBOutlet weak var lbAddress: UILabel!
+    @IBOutlet weak var btnContac: UIButton!
+    @IBOutlet weak var btnDirect: UIButton!
+    @IBOutlet weak var cltMaterial: UtilityView!
+    @IBOutlet weak var btnBookNow: UIButton!
     
+	var presenter: ParkingUserDetailPresenterProtocol?
     var parking: ParkingEntity?
 
 	override func viewDidLoad() {
@@ -26,8 +43,11 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     override func setUpViews() {
         super.setUpViews()
         
-        vAppImageSlide.listItem = ["https://tranhtuong24h.com/profiles/tranhtuong24hcom/uploads/attach/post/images/phong-canh-chau-au-04.jpg", "https://tranhtuong24h.com/profiles/tranhtuong24hcom/uploads/attach/post/images/phong-canh-chau-au-04.jpg", "https://tranhtuong24h.com/profiles/tranhtuong24hcom/uploads/attach/post/images/phong-canh-chau-au-04.jpg"]
-        
+        lbTitleTime.text = "Thời gian hoạt động"
+        lbTitleType.text = "Loại bãi đỗ"
+        lbTitleEmptyPlace.text = "Chỗ trống"
+        lbTitlePriceOneHour.text = "Phí gửi xe theo giờ"
+        lbTitlePriceEightHour.text = "Phí gửi xe theo gói 8 giờ"
     }
     
     override func setUpNavigation() {
@@ -42,19 +62,50 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         self.push(controller: vc)
     }
     
-    // Mark: Get error
+    @IBAction func btnContactTapped() {
+        // Code here
+    }
+    
+    @IBAction func btnDirectTapped() {
+        // Code here
+    }
+    
+    func displayData(info: ParkingInfoEntity) {
+        if let listImage = info.img?.map({ $0.imageURL }){
+            vAppImageSlide.listItem = listImage as [Any]
+        }
+        lbName.text = info.name&
+        ratingBar.setStar(number: info.rating ?? 0)
+        if let timeStart = info.time_start?.toString(dateFormat: .HHmm),
+            let timeEnd = info.time_end?.toString(dateFormat: .HHmm) {
+            lbTime.text = timeStart + " - " + timeEnd
+        }
+        lbType.text = info.parking_type
+        lbEmptyPlace.text = "xxx"
+        if let price = info.price {
+            lbPriceOneHour.text = price.toCurrency
+        }
+        if let packagePrice = info.package_price {
+            lbPriceEightHour.text = packagePrice.toCurrency
+        }
+        
+        lbAddress.text = info.address
+        cltMaterial.setMaterial(listMaterial: [.roof, .repair, .rent, .atm])
+    }
+    
+    // MARK: Get error
     func didGetError(error: APIError) {
         printError(message: error.message)
     }
     
-    // Mark: Get Park Info
+    // MARK: Get Park Info
     func getParkingDetail() {
         if let id = parking?.parking_id {
             self.presenter?.getParkingInfo(id: id)
         }
     }
     func didGetInfo(info: ParkingInfoEntity) {
-        
+        displayData(info: info)
     }
 }
 

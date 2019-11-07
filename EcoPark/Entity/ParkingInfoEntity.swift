@@ -39,8 +39,8 @@ class ParkingInfoEntity: BaseEntity {
     var email: String?
     var gender: String?
     var birthday: Date?
-    var material: MaterialEntity?
-    var img: ImgEntity?
+    var material: [MaterialEntity]?
+    var img: [ImgEntity]?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -50,23 +50,23 @@ class ParkingInfoEntity: BaseEntity {
         self.name <- map["name"]
         self.type_id <- map["type_id"]
         self.address <- map["address"]
-        self.price <- map["price"]
-        self.package_price <- map["package_price"]
+        self.price <- (map["price"], StringToDoubleTransform())
+        self.package_price <- (map["package_price"], StringToDoubleTransform())
         self.package_number <- map["package_number"]
         self.number_place <- map["number_place"]
         self.ordinal <- map["ordinal"]
         self.is_active <- map["is_active"]
-        self.create_time <- map["create_time"]
-        self.time_start <- map["time_start"]
-        self.time_end <- map["time_end"]
-        self.lat <- map["lat"]
-        self.long <- map["long"]
+        self.create_time <- (map["create_time"], TimeTramsform())
+        self.time_start <- (map["time_start"], TimeTramsform())
+        self.time_end <- (map["time_end"], TimeTramsform())
+        self.lat <- (map["lat"], StringToDoubleTransform())
+        self.long <- (map["long"], StringToDoubleTransform())
         self.rating <- map["rating"]
         self.account_id <- map["account_id"]
         self.parking_type <- map["parking_type"]
         self.fullname <- map["fullname"]
         self.identity_number <- map["identity_number"]
-        self.issued_date <- map["issued_date"]
+        self.issued_date <- (map["issued_date"], TimeTramsform())
         self.issued_by <- map["issued_by"]
         self.cmnd_img_before_src <- map["cmnd_img_before_src"]
         self.cmnd_img_after_src <- map["cmnd_img_after_src"]
@@ -74,7 +74,7 @@ class ParkingInfoEntity: BaseEntity {
         self.gpkd_img_before_src <- map["gpkd_img_before_src"]
         self.email <- map["email"]
         self.gender <- map["gender"]
-        self.birthday <- map["birthday"]
+        self.birthday <- (map["birthday"], TimeTramsform())
         self.material <- map["material"]
         self.img <- map["img"]
     }
@@ -111,5 +111,12 @@ class ImgEntity: BaseEntity {
         self.id <- map["_id"]
         self.parking_id <- map["parking_id"]
         self.img_src <- map["img_src"]
+    }
+    
+    var imageURL: String? {
+        if let urlString = self.img_src {
+            return BASE_URL_IMAGE + urlString
+        }
+        return ""
     }
 }
