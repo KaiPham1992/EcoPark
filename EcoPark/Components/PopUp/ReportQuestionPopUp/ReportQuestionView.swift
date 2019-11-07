@@ -32,9 +32,9 @@ class ReportQuestionView: BaseViewXib{
     
     override func setUpViews() {
         super.setUpViews()
-        tfEnterContent.placeholder = LocalizableKey.enter_content.showLanguage
-        lblDescription.attributedText = NSAttributedString(string: LocalizableKey.description.showLanguage)
-        btnCancel.setTitle(LocalizableKey.cancel_upper.showLanguage, for: .normal)
+//        tfEnterContent.placeholder = LocalizableKey.enter_content.showLanguage
+//        lblDescription.attributedText = NSAttributedString(string: LocalizableKey.description.showLanguage)
+//        btnCancel.setTitle(LocalizableKey.cancel_upper.showLanguage, for: .normal)
         btnReport.setTitle(LocalizableKey.report.showLanguage.uppercased(), for: .normal)
         lblTitle.attributedText = NSAttributedString(string: LocalizableKey.report.showLanguage)
     }

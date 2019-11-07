@@ -43,6 +43,7 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     override func setUpViews() {
         super.setUpViews()
         
+        ratingBar.isUserInteractionEnabled = false
         lbTitleTime.text = "Thời gian hoạt động"
         lbTitleType.text = "Loại bãi đỗ"
         lbTitleEmptyPlace.text = "Chỗ trống"

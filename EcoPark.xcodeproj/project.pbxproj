@@ -726,6 +726,21 @@
 		76483BF4229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */; };
 		76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */; };
 		76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */; };
+		7656E4FA23741E0E00428F61 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E4F923741E0E00428F61 /* DatePicker.swift */; };
+		7656E4FB23741E0E00428F61 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E4F923741E0E00428F61 /* DatePicker.swift */; };
+		7656E4FC23741E0E00428F61 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E4F923741E0E00428F61 /* DatePicker.swift */; };
+		7656E4FE23741E1D00428F61 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7656E4FD23741E1D00428F61 /* DatePicker.xib */; };
+		7656E4FF23741E1D00428F61 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7656E4FD23741E1D00428F61 /* DatePicker.xib */; };
+		7656E50023741E1D00428F61 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7656E4FD23741E1D00428F61 /* DatePicker.xib */; };
+		7656E5032374608900428F61 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E5022374608900428F61 /* TimePicker.swift */; };
+		7656E5042374608900428F61 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E5022374608900428F61 /* TimePicker.swift */; };
+		7656E5052374608900428F61 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E5022374608900428F61 /* TimePicker.swift */; };
+		7656E5072374609D00428F61 /* TimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7656E5062374609D00428F61 /* TimePicker.xib */; };
+		7656E5082374609D00428F61 /* TimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7656E5062374609D00428F61 /* TimePicker.xib */; };
+		7656E5092374609D00428F61 /* TimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7656E5062374609D00428F61 /* TimePicker.xib */; };
+		7656E50C237462D800428F61 /* ChooseTimePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E50B237462D800428F61 /* ChooseTimePopUp.swift */; };
+		7656E50D237462D800428F61 /* ChooseTimePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E50B237462D800428F61 /* ChooseTimePopUp.swift */; };
+		7656E50E237462D800428F61 /* ChooseTimePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656E50B237462D800428F61 /* ChooseTimePopUp.swift */; };
 		76662853236D888300019B4E /* PaymentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662852236D888300019B4E /* PaymentPopUp.swift */; };
 		76662854236D888300019B4E /* PaymentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662852236D888300019B4E /* PaymentPopUp.swift */; };
 		76662855236D888300019B4E /* PaymentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76662852236D888300019B4E /* PaymentPopUp.swift */; };
@@ -1727,6 +1742,11 @@
 		76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountPopUp.swift; sourceTree = "<group>"; };
 		76483BEF229EE3C90079F9A1 /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAccountView.xib; sourceTree = "<group>"; };
+		7656E4F923741E0E00428F61 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		7656E4FD23741E1D00428F61 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
+		7656E5022374608900428F61 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		7656E5062374609D00428F61 /* TimePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePicker.xib; sourceTree = "<group>"; };
+		7656E50B237462D800428F61 /* ChooseTimePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTimePopUp.swift; sourceTree = "<group>"; };
 		76662852236D888300019B4E /* PaymentPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPopUp.swift; sourceTree = "<group>"; };
 		76662856236D889300019B4E /* PaymentPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPopUpContent.swift; sourceTree = "<group>"; };
 		7666285A236D88A100019B4E /* PaymentPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentPopUpContent.xib; sourceTree = "<group>"; };
@@ -2917,6 +2937,32 @@
 			path = UpdateAccountPopUp;
 			sourceTree = "<group>";
 		};
+		7656E4F823741DEA00428F61 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				7656E4F923741E0E00428F61 /* DatePicker.swift */,
+				7656E4FD23741E1D00428F61 /* DatePicker.xib */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		7656E5012374605F00428F61 /* TimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				7656E5022374608900428F61 /* TimePicker.swift */,
+				7656E5062374609D00428F61 /* TimePicker.xib */,
+			);
+			path = TimePicker;
+			sourceTree = "<group>";
+		};
+		7656E50A237462C100428F61 /* ChooseTimePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				7656E50B237462D800428F61 /* ChooseTimePopUp.swift */,
+			);
+			path = ChooseTimePopUp;
+			sourceTree = "<group>";
+		};
 		76662850236D882000019B4E /* PaymentPopUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -3301,6 +3347,8 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				7656E5012374605F00428F61 /* TimePicker */,
+				7656E4F823741DEA00428F61 /* DatePicker */,
 				760B92682371AD8400C281D6 /* FromToDatePicker */,
 				17C7FB8523700A1700ACE95D /* AppCollectionPhoto */,
 				2A07B9AA236E9E52004FE7CE /* TimeView */,
@@ -3405,6 +3453,7 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				7656E50A237462C100428F61 /* ChooseTimePopUp */,
 				760B92712371B30600C281D6 /* ChooseDatePopUp */,
 				76EF7E15237070330038486A /* PartnerCheckOutPopUp */,
 				76662850236D882000019B4E /* PaymentPopUp */,
@@ -4088,6 +4137,7 @@
 				76BD143B22ACC75500A48635 /* ReportQuestionView.xib in Resources */,
 				DE361EA02283E60500FA3B0D /* YesNoContentView.xib in Resources */,
 				1768974223697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */,
+				7656E5072374609D00428F61 /* TimePicker.xib in Resources */,
 				17FCC5D0236ABDEF003E98D8 /* UtilityCell.xib in Resources */,
 				22431761235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE3CC3482283DD990037DBE4 /* LaunchScreen.storyboard in Resources */,
@@ -4099,6 +4149,7 @@
 				1717E0F2236D452B00E07734 /* HistoryPartnerHoldingViewController.xib in Resources */,
 				2238872E2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */,
 				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
+				7656E4FE23741E1D00428F61 /* DatePicker.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B31F236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
@@ -4202,6 +4253,7 @@
 				1768974323697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */,
 				1781C7DF236C381F00F053C1 /* LicenseInfoCell.xib in Resources */,
 				17FCC5D1236ABDEF003E98D8 /* UtilityCell.xib in Resources */,
+				7656E5082374609D00428F61 /* TimePicker.xib in Resources */,
 				22431762235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE9530502287DF4800E3F688 /* LaunchScreen.storyboard in Resources */,
 				175C73462367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
@@ -4213,6 +4265,7 @@
 				1717E0F3236D452B00E07734 /* HistoryPartnerHoldingViewController.xib in Resources */,
 				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
+				7656E4FF23741E1D00428F61 /* DatePicker.xib in Resources */,
 				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B320236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
@@ -4316,6 +4369,7 @@
 				1768974423697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */,
 				1781C7E0236C381F00F053C1 /* LicenseInfoCell.xib in Resources */,
 				17FCC5D2236ABDEF003E98D8 /* UtilityCell.xib in Resources */,
+				7656E5092374609D00428F61 /* TimePicker.xib in Resources */,
 				22431763235ECFBF00CA1E13 /* PopUpSelectDateContent.xib in Resources */,
 				DE9530FE2287DF6400E3F688 /* LaunchScreen.storyboard in Resources */,
 				175C73472367E4EE009F03F6 /* ProfileViewController.xib in Resources */,
@@ -4327,6 +4381,7 @@
 				1717E0F4236D452B00E07734 /* HistoryPartnerHoldingViewController.xib in Resources */,
 				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
+				7656E50023741E1D00428F61 /* DatePicker.xib in Resources */,
 				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B321236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
@@ -4653,6 +4708,7 @@
 				17FCC5B6236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE952F8A2287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				DE95317E228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
+				7656E50C237462D800428F61 /* ChooseTimePopUp.swift in Sources */,
 				DE2C07F822857FF100BAE311 /* BaseTabStripViewController.swift in Sources */,
 				7629BDDE22ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				76682F44236EB74500F49482 /* SystemNotificationRouter.swift in Sources */,
@@ -4722,6 +4778,7 @@
 				DE952F862287D2A700E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				2A36B8A0231A4AE100E9696F /* BaseTableViewController.swift in Sources */,
 				DE49F82F22A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
+				7656E4FA23741E0E00428F61 /* DatePicker.swift in Sources */,
 				1717E0E3236D452B00E07734 /* HistoryPartnerHoldingPresenter.swift in Sources */,
 				DE953118228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE361F552283E8E200FA3B0D /* ParentNotificationEntity.swift in Sources */,
@@ -4773,6 +4830,7 @@
 				17FCC602236AE4CF003E98D8 /* ParkingInfoViewController.swift in Sources */,
 				DE361F432283E85000FA3B0D /* PostRecordParam.swift in Sources */,
 				760B92792371C04300C281D6 /* WalletCell.swift in Sources */,
+				7656E5032374608900428F61 /* TimePicker.swift in Sources */,
 				DE952F8F2287D2A700E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015D22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				766FBDBC23731897007A935D /* ParkingEndPoint.swift in Sources */,
@@ -5039,6 +5097,7 @@
 				17FCC5B7236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE952FD32287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				DE95317F228846D400E3F688 /* ChangePasswordRouter.swift in Sources */,
+				7656E50D237462D800428F61 /* ChooseTimePopUp.swift in Sources */,
 				DE952FD42287DF4800E3F688 /* BaseTabStripViewController.swift in Sources */,
 				7629BDDF22ACD3B90051B835 /* ReportSuccessedPopUp.swift in Sources */,
 				76682F45236EB74500F49482 /* SystemNotificationRouter.swift in Sources */,
@@ -5108,6 +5167,7 @@
 				DE952FED2287DF4800E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				7624A6C6231AB570000BA1C6 /* BaseTableViewController.swift in Sources */,
 				DE49F83022A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
+				7656E4FB23741E0E00428F61 /* DatePicker.swift in Sources */,
 				1717E0E4236D452B00E07734 /* HistoryPartnerHoldingPresenter.swift in Sources */,
 				DE953119228807AA00E3F688 /* AppRouter.swift in Sources */,
 				DE952FEF2287DF4800E3F688 /* ParentNotificationEntity.swift in Sources */,
@@ -5159,6 +5219,7 @@
 				17FCC603236AE4CF003E98D8 /* ParkingInfoViewController.swift in Sources */,
 				DE9530012287DF4800E3F688 /* PostRecordParam.swift in Sources */,
 				760B927A2371C04300C281D6 /* WalletCell.swift in Sources */,
+				7656E5042374608900428F61 /* TimePicker.swift in Sources */,
 				DE9530022287DF4800E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				2A2B015E22F0861E00A08EEA /* ListManagerVC.swift in Sources */,
 				766FBDBD23731897007A935D /* ParkingEndPoint.swift in Sources */,
@@ -5425,6 +5486,7 @@
 				17C7FB75236FF89900ACE95D /* HistoryPartnerPresenter.swift in Sources */,
 				17FCC5B8236AB7A9003E98D8 /* SignUpPartnerStep3ViewController.swift in Sources */,
 				DE9530802287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				7656E50E237462D800428F61 /* ChooseTimePopUp.swift in Sources */,
 				766AE80A22B02393002D474E /* ViewFeature.swift in Sources */,
 				DE9530812287DF6400E3F688 /* KActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				22F33AAA23645B8100D136EB /* HomeFindPresenter.swift in Sources */,
@@ -5494,6 +5556,7 @@
 				DE9530972287DF6400E3F688 /* SignUpParam.swift in Sources */,
 				DE89D1F122A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE9530982287DF6400E3F688 /* Login+Facebook.swift in Sources */,
+				7656E4FC23741E0E00428F61 /* DatePicker.swift in Sources */,
 				DE9530992287DF6400E3F688 /* MenuRouter.swift in Sources */,
 				DE95309A2287DF6400E3F688 /* KActivityIndicatorView.swift in Sources */,
 				1717E0E5236D452B00E07734 /* HistoryPartnerHoldingPresenter.swift in Sources */,
@@ -5545,6 +5608,7 @@
 				DE9530AC2287DF6400E3F688 /* AppDelegate+Push.swift in Sources */,
 				17FCC604236AE4CF003E98D8 /* ParkingInfoViewController.swift in Sources */,
 				760B927B2371C04300C281D6 /* WalletCell.swift in Sources */,
+				7656E5052374608900428F61 /* TimePicker.swift in Sources */,
 				DE9530AD2287DF6400E3F688 /* UITable+extension.swift in Sources */,
 				DE9530AE2287DF6400E3F688 /* BaseViewController.swift in Sources */,
 				766FBDBE23731897007A935D /* ParkingEndPoint.swift in Sources */,

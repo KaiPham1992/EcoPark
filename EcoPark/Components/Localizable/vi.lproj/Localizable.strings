@@ -50,6 +50,7 @@
 "Select" = "Chọn";
 "male" = "Nam";
 "female" = "Nữ";
+
 // Forgot password page
 "ForgotPasswordMessage" = "Vui lòng nhập đúng email trong tài khoản của bạn để nhận lại mật khẩu mới:";
 "SentEmail" = "Gửi email";
@@ -94,7 +95,7 @@
 "privateInfo" = "Thông tin cá nhân";
 "privateHistory" = "Lịch sử cá nhân";
 
-// change passsword
+// Change passsword
 "currentPassword"  = "Mật khẩu hiện tại";
 "newPassword" = "Mật khẩu mới(tối thiểu 6 kí tự)";
 "reNewPassword" = "Nhập lại mật khẩu mới";
@@ -134,339 +135,344 @@
 "place" = "Chỗ";
 "vndHours" = "VND/ giờ";
 "vnd8Hours" = "VND/ 8 giờ";
+
 // Sign Up parner 3
 "UtilityOther" = "Tiện ích khác";
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";
 "parkingSubImage" = "Vui lòng chụp ảnh bãi đỗ của bạn, tối thiểu là 2 ảnh và tối đa là 4 ảnh *";
 "parkingWaitingSignUp" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ECOPARKING sẽ liên hệ với bạn trong thời gian sớm nhất.";
 
+
+
+
+ // ------------------- English App ---------------- //
 // logout
-"popUpLogout" = "Bạn có muốn đăng xuất?";
-"agree" = "Đồng ý";
-"cancel" = "Huỷ";
-
-//QA
-
-"whatQA" = "Bạn Đang Thắc Mắc Điều Gì?";
-"enterQA" = "Nhập câu hỏi của bạn";
-"messageQA" = "50 hũ mật ong cho một lần đặt câu hỏi";
-"qAOlder" = "Câu hỏi bạn đã từng đặt";
-"titleQA" = "Hỏi đáp";
-"notEnoughHoney" = "Bạn không đủ mật ong";
-"deductFiveHoney" = "Bạn bị trừ 50 hũ mật ong cho một lần đặt câu hỏi";
-"pleaseEnterQA" = "Vui lòng nhập câu hỏi của bạn";
-"pleaseEnter255Digit" = "Vui lòng nhập câu hỏi trong 255 ký tự";
-
-// Competition
-"titleCompetition" = "Thi đấu";
-"conditionCompetition" = "Điều kiện: ";
-"timeStart" = "Thời gian bắt đầu: ";
-"countTeam" = "Số đội: ";
-"selectTeamJoin" = "Chọn nhóm tham gia";
-"joinTeam" = "Tham gia";
-"team" = " đội";
-"member" = "Thành viên";
-"competition" = "Cuộc thi";
-
-// Detail team
-"startAfter" = "Bắt đầu sau";
-"explainConpetition" = "Giải thích về cuộc thi";
-"leaveTeam" = "Rời nhóm";
-"createGroup" = "Tạo nhóm";
-"nameGroup" = "Tên nhóm";
-"enterNameGroup" = "Nhập tên nhóm";
-"leaveTeamPopUp" = "Bạn có muốn rời nhóm?";
-"verifyButton" = "Xác nhận";
-
-// Daily mission
-"messageDailyMission" = "Hoàn thành nhiệm vụ hàng ngày nhận ngay 1 kim cương và x điểm level";
-"dailyMissionTitle" = "Nhiệm vụ hàng ngày";
-"startMission" = "Bắt đầu";
-"doneInputTest" = "Chúc mừng bạn đã hoàn thành bài trắc nghiệm đầu vào, Obee tặng bạn 500 kim cương.";
-
-
-//add dictionary
-"search" = "Tra cứu";
-"dictionaty" = "Từ điển";
-"vietnamese_to_english" = "Việt - Anh";
-"english_to_english" = "Anh - Anh";
-"english_to_vietnamese" = "Anh - Việt";
-"japanese_to_vietnamese" = "Nhật - Việt";
-"addDictionary" = "Thêm từ điển";
-
-//saved
-
-"saved" = "Đã lưu";
-"grammar" = "Ngữ pháp";
-"vocabulary" = "Từ vựng";
-"note" = "Ghi chú";
-"write_note" = "Viết ghi chú";
-"please_enter_note" = "Vui lòng nhập ghi chú của bạn";
-"cofirm_delete" = "Bạn có chắc chắn muốn xoá những mục này?";
-//theory
-
-"phrasal_verbs" = "Phrasal Verbs";
-"grammar_upper" = "Grammar";
-"phonetics" = "Phonetics";
-"lesson" = "Bài học";
-"recipe" = "Công thức";
-
-"idiams" = "Idiams";
-"word_usage" = "Word usage";
-"word_form" = "Word form";
-
-// Home
-"homeDictionary" = "Từ điển";
-"homeStore" = "Thành viên";
-"homeMission" = "Nhiệm vụ";
-"homeFindWork" = "Tìm bài tập";
-"actionRecently" = "HOẠT ĐỘNG GẦN ĐÂY";
-
-"tabbarHome" = "Trang chủ";
-"tabbarProgram" = "Lý thuyết";
-"tabbarHomeWork" = "Bài tập";
-"tabbarCompetition" = "Thi đấu";
-
-// report pop up
+//"popUpLogout" = "Bạn có muốn đăng xuất?";
+//"agree" = "Đồng ý";
+//"cancel" = "Huỷ";
+//
+////QA
+//
+//"whatQA" = "Bạn Đang Thắc Mắc Điều Gì?";
+//"enterQA" = "Nhập câu hỏi của bạn";
+//"messageQA" = "50 hũ mật ong cho một lần đặt câu hỏi";
+//"qAOlder" = "Câu hỏi bạn đã từng đặt";
+//"titleQA" = "Hỏi đáp";
+//"notEnoughHoney" = "Bạn không đủ mật ong";
+//"deductFiveHoney" = "Bạn bị trừ 50 hũ mật ong cho một lần đặt câu hỏi";
+//"pleaseEnterQA" = "Vui lòng nhập câu hỏi của bạn";
+//"pleaseEnter255Digit" = "Vui lòng nhập câu hỏi trong 255 ký tự";
+//
+//// Competition
+//"titleCompetition" = "Thi đấu";
+//"conditionCompetition" = "Điều kiện: ";
+//"timeStart" = "Thời gian bắt đầu: ";
+//"countTeam" = "Số đội: ";
+//"selectTeamJoin" = "Chọn nhóm tham gia";
+//"joinTeam" = "Tham gia";
+//"team" = " đội";
+//"member" = "Thành viên";
+//"competition" = "Cuộc thi";
+//
+//// Detail team
+//"startAfter" = "Bắt đầu sau";
+//"explainConpetition" = "Giải thích về cuộc thi";
+//"leaveTeam" = "Rời nhóm";
+//"createGroup" = "Tạo nhóm";
+//"nameGroup" = "Tên nhóm";
+//"enterNameGroup" = "Nhập tên nhóm";
+//"leaveTeamPopUp" = "Bạn có muốn rời nhóm?";
+//"verifyButton" = "Xác nhận";
+//
+//// Daily mission
+//"messageDailyMission" = "Hoàn thành nhiệm vụ hàng ngày nhận ngay 1 kim cương và x điểm level";
+//"dailyMissionTitle" = "Nhiệm vụ hàng ngày";
+//"startMission" = "Bắt đầu";
+//"doneInputTest" = "Chúc mừng bạn đã hoàn thành bài trắc nghiệm đầu vào, Obee tặng bạn 500 kim cương.";
+//
+//
+////add dictionary
+//"search" = "Tra cứu";
+//"dictionaty" = "Từ điển";
+//"vietnamese_to_english" = "Việt - Anh";
+//"english_to_english" = "Anh - Anh";
+//"english_to_vietnamese" = "Anh - Việt";
+//"japanese_to_vietnamese" = "Nhật - Việt";
+//"addDictionary" = "Thêm từ điển";
+//
+////saved
+//
+//"saved" = "Đã lưu";
+//"grammar" = "Ngữ pháp";
+//"vocabulary" = "Từ vựng";
+//"note" = "Ghi chú";
+//"write_note" = "Viết ghi chú";
+//"please_enter_note" = "Vui lòng nhập ghi chú của bạn";
+//"cofirm_delete" = "Bạn có chắc chắn muốn xoá những mục này?";
+////theory
+//
+//"phrasal_verbs" = "Phrasal Verbs";
+//"grammar_upper" = "Grammar";
+//"phonetics" = "Phonetics";
+//"lesson" = "Bài học";
+//"recipe" = "Công thức";
+//
+//"idiams" = "Idiams";
+//"word_usage" = "Word usage";
+//"word_form" = "Word form";
+//
+//// Home
+//"homeDictionary" = "Từ điển";
+//"homeStore" = "Thành viên";
+//"homeMission" = "Nhiệm vụ";
+//"homeFindWork" = "Tìm bài tập";
+//"actionRecently" = "HOẠT ĐỘNG GẦN ĐÂY";
+//
+//"tabbarHome" = "Trang chủ";
+//"tabbarProgram" = "Lý thuyết";
+//"tabbarHomeWork" = "Bài tập";
+//"tabbarCompetition" = "Thi đấu";
+//
+//// report pop up
 "reportTitlePopUp" = "Báo cáo";
-"reportMessagePopUp" = "Cảm ơn bạn đã báo cáo cho chúng tôi về trường hợp này. Chúng tôi sẽ xem xét và chỉnh sửa lại sớm nhất.";
+"reportMessagePopUp" = "Cảm ơn bạn đã báo cáo cho chúng tôi về trường hợp này. Chúng tôi sẽ xem xét và //chỉnh sửa lại sớm nhất.";
 "reportButtonPopUp" = "Hoàn thành";
-
-"notEnoughBee" = "Bạn không đủ mật ong.";
-"addBee" = "Thêm mật ong";
-"ADDBEE" = "THÊM MẬT ONG";
-"notEnoughDiamon" = "Bạn không đủ kim cương.";
-"addDiamon" = "Thêm kim cương";
-"popleaveHomeWork" = "Bạn có muốn thoát khỏi bài tập đang làm?";
-
-
-// store
-"studyPack" = "Gói nâng cấp";
-"beePack" = "Gói mật ong";
-"titleMember" = "Thông tin thành viên";
-"enterCode" = "Nhập mã Code";
-"send" = "GỬI";
-"detail" = "Chi tiết";
-"upgrade" = "NÂNG CẤP";
+//
+//"notEnoughBee" = "Bạn không đủ mật ong.";
+//"addBee" = "Thêm mật ong";
+//"ADDBEE" = "THÊM MẬT ONG";
+//"notEnoughDiamon" = "Bạn không đủ kim cương.";
+//"addDiamon" = "Thêm kim cương";
+//"popleaveHomeWork" = "Bạn có muốn thoát khỏi bài tập đang làm?";
+//
+//
+//// store
+//"studyPack" = "Gói nâng cấp";
+//"beePack" = "Gói mật ong";
+//"titleMember" = "Thông tin thành viên";
+//"enterCode" = "Nhập mã Code";
+//"send" = "GỬI";
+//"detail" = "Chi tiết";
+//"upgrade" = "NÂNG CẤP";
 "pleaseEnterCode" = "Vui lòng nhập mã code";
-"notFoundCode" = "Mã code không tồn tại";
-"exchangeGiftTitle" = "Bạn có muốn đổi quà này không?";
-"exchangeGiftSucess" = "Bạn đã đổi quà thành công.";
-"redeemSuccess" = "Bạn đã đổi quà thành công.";
-"upgradeSuccess" = "Bạn đã nâng cấp gói thành công.";
-"upgradeBeePack" = "Bạn có muốn mua gói mật ong này?";
-"exchangeTitle" = "Đổi Quà";
-"notEnoughDiamondText" = "Bạn không đủ kim cương.";
-"notEnoughHoneyText" = "Bạn không đủ mật ong.";
-"usedCode" = "Mã code đã được sử dụng";
-"totalHoney" = "Tổng số mật ong: ";
-"restorePurchase" = "Khôi phục mua hàng";
-
-//comment
-"comment" = "Bình luận";
-
-//exercise
-"exercise" = "Bài tập";
-"practice" = "Luyện tập";
-"create_exercise" ="Bài tập tự tạo";
-"level_exercise" ="Bài tập theo cấp";
-"assign_exercise" = "Bài tập được giao";
-"name_exercise" = "Tên bài tập";
-"enter_name_exercise" = "Nhập tên bài tập";
-"choice_exercise" = "Chọn bài tập";
-"exercise_level" = "Cấp độ bài tập";
-"history_exercise" = "Lịch sử bài tập";
-"history_test" = "Lịch sử kiểm tra";
-"do_exercise" = "Làm bài tập";
-"preposition" = "Preposition";
-"rewriting" = "Rewriting";
-"verb_form" = "Verb Form";
-"listening" = "Listening";
-"phrasal_verb" = "Phrasal Verb";
-"cloze_test" = "Cloze Test";
-"try_hard" = "Luyện tập";
-"task_every_date" = "Nhiệm vụ hàng ngày";
-"time_end" = "Kết thúc";
-"see_more" = "Xem thêm";
-"sentence" = "Câu";
-"next" = "Tiếp tục";
-"do_entrance" = "Trắc nghiệm đầu vào";
-
-//result
-"result_team" = "Kết quả đội";
-"rank" = "Hạng";
-"result" = "Kết quả";
-"sum_point" = "Tổng điểm:";
-"time_do_exercise" = "Tổng thời gian làm bài:";
-"back_gome" = "Về trang chủ";
-"result_competion" = "Kết quả cuộc thi";
-"result_group" = "Kết quả đội";
-"see_explain" = "Xem giải thích";
-"respond_question" = "BÁO CÁO CÂU HỎI";
-"explain_solution" = "Giải thích đáp án";
-"individual" = "Cá nhân";
-"action" = "Thi đấu";
-"point" = "điểm";
-"not_correct" = "Chưa đạt";
-"see_result"= "Xem kết quả";
-"explain_question" = "Giải thích câu hỏi";
-"confirm_back_result" = "Bạn có muốn thoát khỏi bài tập đang xem?";
-"related_lesson" = "Ngữ pháp liên quan";
-
-//popup
+//"notFoundCode" = "Mã code không tồn tại";
+//"exchangeGiftTitle" = "Bạn có muốn đổi quà này không?";
+//"exchangeGiftSucess" = "Bạn đã đổi quà thành công.";
+//"redeemSuccess" = "Bạn đã đổi quà thành công.";
+//"upgradeSuccess" = "Bạn đã nâng cấp gói thành công.";
+//"upgradeBeePack" = "Bạn có muốn mua gói mật ong này?";
+//"exchangeTitle" = "Đổi Quà";
+//"notEnoughDiamondText" = "Bạn không đủ kim cương.";
+//"notEnoughHoneyText" = "Bạn không đủ mật ong.";
+//"usedCode" = "Mã code đã được sử dụng";
+//"totalHoney" = "Tổng số mật ong: ";
+//"restorePurchase" = "Khôi phục mua hàng";
+//
+////comment
+//"comment" = "Bình luận";
+//
+////exercise
+//"exercise" = "Bài tập";
+//"practice" = "Luyện tập";
+//"create_exercise" ="Bài tập tự tạo";
+//"level_exercise" ="Bài tập theo cấp";
+//"assign_exercise" = "Bài tập được giao";
+//"name_exercise" = "Tên bài tập";
+//"enter_name_exercise" = "Nhập tên bài tập";
+//"choice_exercise" = "Chọn bài tập";
+//"exercise_level" = "Cấp độ bài tập";
+//"history_exercise" = "Lịch sử bài tập";
+//"history_test" = "Lịch sử kiểm tra";
+//"do_exercise" = "Làm bài tập";
+//"preposition" = "Preposition";
+//"rewriting" = "Rewriting";
+//"verb_form" = "Verb Form";
+//"listening" = "Listening";
+//"phrasal_verb" = "Phrasal Verb";
+//"cloze_test" = "Cloze Test";
+//"try_hard" = "Luyện tập";
+//"task_every_date" = "Nhiệm vụ hàng ngày";
+//"time_end" = "Kết thúc";
+//"see_more" = "Xem thêm";
+//"sentence" = "Câu";
+//"next" = "Tiếp tục";
+//"do_entrance" = "Trắc nghiệm đầu vào";
+//
+////result
+//"result_team" = "Kết quả đội";
+//"rank" = "Hạng";
+//"result" = "Kết quả";
+//"sum_point" = "Tổng điểm:";
+//"time_do_exercise" = "Tổng thời gian làm bài:";
+//"back_gome" = "Về trang chủ";
+//"result_competion" = "Kết quả cuộc thi";
+//"result_group" = "Kết quả đội";
+//"see_explain" = "Xem giải thích";
+//"respond_question" = "BÁO CÁO CÂU HỎI";
+//"explain_solution" = "Giải thích đáp án";
+//"individual" = "Cá nhân";
+//"action" = "Thi đấu";
+//"point" = "điểm";
+//"not_correct" = "Chưa đạt";
+//"see_result"= "Xem kết quả";
+//"explain_question" = "Giải thích câu hỏi";
+//"confirm_back_result" = "Bạn có muốn thoát khỏi bài tập đang xem?";
+//"related_lesson" = "Ngữ pháp liên quan";
+//
+////popup
 "confirm" = "XÁC NHẬN";
-"update_account" = "Nâng cấp tài khoản thành công";
-"diamond" = "Kim cương";
-"money" = " tiền";
+//"update_account" = "Nâng cấp tài khoản thành công";
+//"diamond" = "Kim cương";
+//"money" = " tiền";
 "report" = "Báo cáo";
-"description" = "Mô tả";
-"enter_content" = "Nhập nội dung";
-"cancel_upper" = "HUỶ";
-"complete_upper" = "HOÀN THÀNH";
-"update" = "Nâng cấp";
-
-//month
-"January" = "Tháng Một";
-"February" = "Tháng Hai";
-"March" = "Tháng Ba";
-"April" = "Tháng Tư";
-"May" = "Tháng Năm";
-"June" = "Tháng Sáu";
-"July" = "Tháng Bảy";
-"August" = "Tháng Tám";
-"September" = "Tháng Chín";
-"October"= "Tháng Mười";
-"November" = "Tháng Mười Một";
-"December" = "Tháng Mười Hai";
-"YEAR" = "NĂM";
-
-//week
-"Su" = "CN";
-"Mo" = "T2";
-"Tu" = "T3";
-"We" = "T4";
-"Th" = "T5";
-"Fr"= "T6";
-"Sa" = "T7";
-
-//hour
-
-
-
-//"money_money" = "Tiền";
-
-
-// Notificaiton
-"titleNotification" = "Thông báo";
-"titleNotificationDetail" = "Chi tiết thông báo";
-
-// upgrade
-"requireUpGrade" = "Nâng cấp để sử dụng tính năng này";
-"btnUpGrade" = "Nâng cấp";
-"levelUp" = "Lên cấp";
-"changeLanguage" = "Đổi ngôn ngữ";
-"bxh" = "Bảng xếp hạng";
-"point_level" = "Điểm level";
-
-//lesson
-
-"simple_present" = "Thì hiện tại đơn";
-"present_perfect" = "Thì hiện tại hoàn thành";
-"present_countinous" = "Thì hiện tại tiếp diễn";
-"past_simple" = "Thì quá khứ đơn";
-"theory" = "Lý thuyết";
-
-"messagePackage" = "Các gói nâng cấp phù hợp với bạn";
-"find" = "Tìm kiếm";
-"findExcersise" = "Tìm bài tập...";
+//"description" = "Mô tả";
+//"enter_content" = "Nhập nội dung";
+//"cancel_upper" = "HUỶ";
+//"complete_upper" = "HOÀN THÀNH";
+//"update" = "Nâng cấp";
+//
+////month
+//"January" = "Tháng Một";
+//"February" = "Tháng Hai";
+//"March" = "Tháng Ba";
+//"April" = "Tháng Tư";
+//"May" = "Tháng Năm";
+//"June" = "Tháng Sáu";
+//"July" = "Tháng Bảy";
+//"August" = "Tháng Tám";
+//"September" = "Tháng Chín";
+//"October"= "Tháng Mười";
+//"November" = "Tháng Mười Một";
+//"December" = "Tháng Mười Hai";
+//"YEAR" = "NĂM";
+//
+////week
+//"Su" = "CN";
+//"Mo" = "T2";
+//"Tu" = "T3";
+//"We" = "T4";
+//"Th" = "T5";
+//"Fr"= "T6";
+//"Sa" = "T7";
+//
+////hour
+//
+//
+//
+////"money_money" = "Tiền";
+//
+//
+//// Notificaiton
+//"titleNotification" = "Thông báo";
+//"titleNotificationDetail" = "Chi tiết thông báo";
+//
+//// upgrade
+//"requireUpGrade" = "Nâng cấp để sử dụng tính năng này";
+//"btnUpGrade" = "Nâng cấp";
+//"levelUp" = "Lên cấp";
+//"changeLanguage" = "Đổi ngôn ngữ";
+//"bxh" = "Bảng xếp hạng";
+//"point_level" = "Điểm level";
+//
+////lesson
+//
+//"simple_present" = "Thì hiện tại đơn";
+//"present_perfect" = "Thì hiện tại hoàn thành";
+//"present_countinous" = "Thì hiện tại tiếp diễn";
+//"past_simple" = "Thì quá khứ đơn";
+//"theory" = "Lý thuyết";
+//
+//"messagePackage" = "Các gói nâng cấp phù hợp với bạn";
+//"find" = "Tìm kiếm";
+//"findExcersise" = "Tìm bài tập...";
 "PrivacyAndPolicy" = "Chính sách & điều khoản";
-
-
-// ERROR
-
-"WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
-"USER_IS_EXISTED" = "Email đã tồn tại";
-"EMAIL_IS_EXISTED" = "Email đã tồn tại";
-"INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại email hoặc mật khẩu";
-"changePassswordSuccess" = "Đổi mật khẩu thành công";
-"INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
-"editProfileSuccess" = "Chỉnh sửa thông tin thành công";
+//
+//
+//// ERROR
+//
+//"WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
+//"USER_IS_EXISTED" = "Email đã tồn tại";
+//"EMAIL_IS_EXISTED" = "Email đã tồn tại";
+//"INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại email hoặc mật khẩu";
+//"changePassswordSuccess" = "Đổi mật khẩu thành công";
+//"INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
+//"editProfileSuccess" = "Chỉnh sửa thông tin thành công";
 "USER_IS_NOT_EXISTED" = "Email không tồn tại trong hệ thống";
-"SENT_NEW_PASSWORD" = "Mật khẩu mới được gửi về email";
+//"SENT_NEW_PASSWORD" = "Mật khẩu mới được gửi về email";
 "pleaseEnterCurrentPassword" = "Vui lòng nhập mật khẩu hiện tại";
 "pleaseEnterNewPassword" = "Vui lòng nhập mật khẩu mới";
-
+//
 "enterPassword" = "Nhập mật khẩu";
 "enterRePassword" = "Nhập lại mật khẩu";
 "enterCaptcha" = "Nhập captcha";
-"signUpSuccess" = "Đăng ký thành công";
-"boxHoney" = "hũ";
-"titleHistoryNap" = "Lịch sử nạp";
-"boxHoneyTitle" = "hũ mật ong";
+//"signUpSuccess" = "Đăng ký thành công";
+//"boxHoney" = "hũ";
+//"titleHistoryNap" = "Lịch sử nạp";
+//"boxHoneyTitle" = "hũ mật ong";
 "lbNoData" = "Không có dữ liệu";
-
-
-
-// BHX
-"all" = "Tất cả";
-"quater" = "Quý";
-"BRONZE" = "Đồng";
-"SILVER" = "Bạc";
-"GOLD" = "Vàng";
-"PLATINUM" = "Bạch kim";
-"MASTER" = "Master";
-"TOAA" = "TOAA";
-"TheOneAboveAll" = "The one above all";
-"ALL" = "Tất cả";
-
-// Pop up
-"getError" = "Đã xảy ra lỗi.";
-"noResultFound" = "Không có kết quả tìm kiếm.";
-"feeFind" = "Tìm kiếm mất 5 hũ mật ong hoặc 50 kim cương.";
-"done" = "Xong";
-
-//add after
-"rank_of_competition" = "Thứ hạng cuộc thi";
-
-//time
-"min" = "phút";
-
-//setting
-"setting" = "Cài đặt";
-"start" = "Bắt đầu";
-"vocabularyDetail" = "Chi tiết từ vựng";
-"you_dont_joined_competition" = "Bạn không tham gia cuộc thi này.";
-"deadline" = "Hạn hoàn thành";
-
-// pop up choose photo
+//
+//
+//
+//// BHX
+//"all" = "Tất cả";
+//"quater" = "Quý";
+//"BRONZE" = "Đồng";
+//"SILVER" = "Bạc";
+//"GOLD" = "Vàng";
+//"PLATINUM" = "Bạch kim";
+//"MASTER" = "Master";
+//"TOAA" = "TOAA";
+//"TheOneAboveAll" = "The one above all";
+//"ALL" = "Tất cả";
+//
+//// Pop up
+//"getError" = "Đã xảy ra lỗi.";
+//"noResultFound" = "Không có kết quả tìm kiếm.";
+//"feeFind" = "Tìm kiếm mất 5 hũ mật ong hoặc 50 kim cương.";
+//"done" = "Xong";
+//
+////add after
+//"rank_of_competition" = "Thứ hạng cuộc thi";
+//
+////time
+//"min" = "phút";
+//
+////setting
+//"setting" = "Cài đặt";
+//"start" = "Bắt đầu";
+//"vocabularyDetail" = "Chi tiết từ vựng";
+//"you_dont_joined_competition" = "Bạn không tham gia cuộc thi này.";
+//"deadline" = "Hạn hoàn thành";
+//
+//// pop up choose photo
 "camera" = "Chụp ảnh";
 "library" = "Thư viện";
 "notAllowGifPhoto" = "Không thể chọn ảnh GIF";
-"join_team" = "Vào nhóm";
-
-
-"fight_is_doing_result" = "Cuộc thi đang diễn ra không thể xem kết quả.";
-"suggestion_one_choice" = "Chỉ được chọn 1 lần.";
-"the_dally_misson_tested" = "Bạn đã làm bài tập nhiệm vụ hằng ngày của hôm nay.";
-"not_qualify" = "Chưa Đạt";
-"time" = "Thời gian";
-"competition_end" = "Đã quá giờ thi.";
-"no_team_joined" = "Không có đội nào tham gia cuộc thi này.";
-"run_background" = "Qúa trình có thể mất nhiều thời gian bạn có muốn công việc chạy ngầm?";
-"error_create_group" = "TÀI KHOẢN NÀY ĐÃ TẠO VÀ THAM GIA NHÓM";
-"cannot_join_group" = "Bạn đã có nhóm không thể tạo và tham gia nhóm khác.";
-"user_joined_team" = "TÀI KHOẢN NÀY ĐÃ THAM GIA NHÓM";
-"competition_doing" = "Cuộc thi đang diễn ra";
-"enter_name_group" = "Vui lòng nhập tên nhóm.";
-"minus_dianmod" = "Bạn bị trừ 1 kim cương nếu sử dụng gợi ý đáp án.";
-
-"less_than_100" = "Vui lòng nhập tổng số câu hỏi không vượt quá 100.";
-"equal_100" = "Vui lòng nhập đủ 100 câu.";
-"no_find_result" = "Không tìm thấy kết quả";
-"userPackage" = "Gói nâng cấp đã mua";
-"dateExpire" = "Ngày hết hạn: ";
-"update_package_recieved" = "Gói nâng cấp nhận được";
-"user_not_login" = "Bạn chưa đăng nhập";
-
-"restore_fail" = "Khôi phục thất bại, vui lòng liên hệ +84909172353";
-"restore_success" = "Khôi phục thành công";
+//"join_team" = "Vào nhóm";
+//
+//
+//"fight_is_doing_result" = "Cuộc thi đang diễn ra không thể xem kết quả.";
+//"suggestion_one_choice" = "Chỉ được chọn 1 lần.";
+//"the_dally_misson_tested" = "Bạn đã làm bài tập nhiệm vụ hằng ngày của hôm nay.";
+//"not_qualify" = "Chưa Đạt";
+//"time" = "Thời gian";
+//"competition_end" = "Đã quá giờ thi.";
+//"no_team_joined" = "Không có đội nào tham gia cuộc thi này.";
+//"run_background" = "Qúa trình có thể mất nhiều thời gian bạn có muốn công việc chạy ngầm?";
+//"error_create_group" = "TÀI KHOẢN NÀY ĐÃ TẠO VÀ THAM GIA NHÓM";
+//"cannot_join_group" = "Bạn đã có nhóm không thể tạo và tham gia nhóm khác.";
+//"user_joined_team" = "TÀI KHOẢN NÀY ĐÃ THAM GIA NHÓM";
+//"competition_doing" = "Cuộc thi đang diễn ra";
+//"enter_name_group" = "Vui lòng nhập tên nhóm.";
+//"minus_dianmod" = "Bạn bị trừ 1 kim cương nếu sử dụng gợi ý đáp án.";
+//
+//"less_than_100" = "Vui lòng nhập tổng số câu hỏi không vượt quá 100.";
+//"equal_100" = "Vui lòng nhập đủ 100 câu.";
+//"no_find_result" = "Không tìm thấy kết quả";
+//"userPackage" = "Gói nâng cấp đã mua";
+//"dateExpire" = "Ngày hết hạn: ";
+//"update_package_recieved" = "Gói nâng cấp nhận được";
+//"user_not_login" = "Bạn chưa đăng nhập";
+//
+//"restore_fail" = "Khôi phục thất bại, vui lòng liên hệ +84909172353";
+//"restore_success" = "Khôi phục thành công";
