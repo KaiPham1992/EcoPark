@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE952FAE2287DF4800E3F688"
-               BuildableName = "OBee English Practice Test.app"
+               BuildableName = "Eco Parking.app"
                BlueprintName = "EcoPark_Prod"
                ReferencedContainer = "container:EcoPark.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE952FAE2287DF4800E3F688"
-            BuildableName = "OBee English Practice Test.app"
+            BuildableName = "Eco Parking.app"
             BlueprintName = "EcoPark_Prod"
             ReferencedContainer = "container:EcoPark.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE952FAE2287DF4800E3F688"
-            BuildableName = "OBee English Practice Test.app"
+            BuildableName = "Eco Parking.app"
             BlueprintName = "EcoPark_Prod"
             ReferencedContainer = "container:EcoPark.xcodeproj">
          </BuildableReference>
