@@ -652,6 +652,9 @@
 		760D15EA2375B11C00062FC7 /* testBooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 760D15E92375B11C00062FC7 /* testBooking.json */; };
 		760D15EB2375B11C00062FC7 /* testBooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 760D15E92375B11C00062FC7 /* testBooking.json */; };
 		760D15EC2375B11C00062FC7 /* testBooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 760D15E92375B11C00062FC7 /* testBooking.json */; };
+		760D15EE2375BBE600062FC7 /* BookingDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */; };
+		760D15EF2375BBE600062FC7 /* BookingDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */; };
+		760D15F02375BBE600062FC7 /* BookingDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */; };
 		7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
@@ -1727,6 +1730,7 @@
 		760B927C2371C04E00C281D6 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
 		760D15E52375AA3500062FC7 /* BookingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingEntity.swift; sourceTree = "<group>"; };
 		760D15E92375B11C00062FC7 /* testBooking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testBooking.json; sourceTree = "<group>"; };
+		760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailEntity.swift; sourceTree = "<group>"; };
 		7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPresenter.swift; sourceTree = "<group>"; };
 		7615D225236C7EA800781AD3 /* QRScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerRouter.swift; sourceTree = "<group>"; };
 		7615D226236C7EA800781AD3 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
@@ -3546,6 +3550,7 @@
 				766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */,
 				762C489D237518A40001EB27 /* VehicleTypeEntity.swift */,
 				760D15E52375AA3500062FC7 /* BookingEntity.swift */,
+				760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -4632,6 +4637,7 @@
 				DE952F9E2287D2A700E3F688 /* KActivityIndicatorType.swift in Sources */,
 				2238870B2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE953187228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
+				760D15EE2375BBE600062FC7 /* BookingDetailEntity.swift in Sources */,
 				2A07B98F236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */,
 				DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				76662857236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
@@ -5023,6 +5029,7 @@
 				DE952FB72287DF4800E3F688 /* KActivityIndicatorType.swift in Sources */,
 				2238870C2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE953188228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
+				760D15EF2375BBE600062FC7 /* BookingDetailEntity.swift in Sources */,
 				2A07B990236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */,
 				DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */,
 				76662858236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
@@ -5414,6 +5421,7 @@
 				2AF2F83022E9A5B900603444 /* TextFieldLimitedCharacter.swift in Sources */,
 				2238870D2366A94400DAC978 /* ProjectMarker.swift in Sources */,
 				DE9530652287DF6400E3F688 /* KActivityIndicatorType.swift in Sources */,
+				760D15F02375BBE600062FC7 /* BookingDetailEntity.swift in Sources */,
 				DE953189228846D400E3F688 /* ChangePasswordInteractor.swift in Sources */,
 				2A07B991236E9935004FE7CE /* DetailParkingPresenter.swift in Sources */,
 				76662859236D889300019B4E /* PaymentPopUpContent.swift in Sources */,
