@@ -10,6 +10,7 @@ import Alamofire
 
 enum ParkingEndPoint {
     case getParkingInfo(id: String)
+    case getListVehicle
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -18,7 +19,10 @@ extension ParkingEndPoint: EndPointType {
         switch self {
         case .getParkingInfo:
             return "_api/parking/get_parking_info"
+        case .getListVehicle:
+            return "_api/parking/get_list_vehicle"
         }
+        
     }
     
     var httpMethod: HTTPMethod {
@@ -29,6 +33,8 @@ extension ParkingEndPoint: EndPointType {
         switch self {
         case .getParkingInfo(let id):
             return ["parking_id": id]
+        case .getListVehicle:
+            return [:]
         }
     }
     

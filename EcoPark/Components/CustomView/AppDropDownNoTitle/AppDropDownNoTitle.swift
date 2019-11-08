@@ -27,18 +27,21 @@ class AppDropDownNoTitle: BaseViewXib {
             if let tag = listItem as? [TagEntity] {
                 dropDown.dataSource = tag.map {$0.name&}
             }
-            
+            if let tag = listItem as? [VehicleTypeEntity] {
+                dropDown.dataSource = tag.map {$0.name&.replacingOccurrences(of: "Xe", with: "")}
+            }
 //            if let tag = listItem as? [NationalEntity] {
 //                dropDown.dataSource = tag.map {$0.name&}
 //            }
         }
     }
     
-    func setTitleAndPlaceHolder( placeHolder: String? = nil) {
+    func setPlaceHolder( placeHolder: String? = nil) {
       
         if placeHolder != nil {
             self.tfInput.placeholder = placeHolder
-            tfInput.placeHolderColor = .black
+            self.tfInput.text?.removeAll()
+//            tfInput.placeHolderColor = .black
         }
     }
     

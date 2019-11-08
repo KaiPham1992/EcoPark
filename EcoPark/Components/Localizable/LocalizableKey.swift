@@ -151,13 +151,29 @@ struct LocalizableKey {
     static let vndHours = "vndHours"
     static let vnd8Hours = "vnd8Hours"
     
+    
     // Sign Up Partner 3
     static let utilityOther = "UtilityOther"
     static let parkingImage = "parkingImage"
     static let parkingSubImage = "parkingSubImage"
     static let parkingWaitingSignUp = "parkingWaitingSignUp"
 
-    
+    // MARK: BookingInfoViewController
+    static let titleBookingInfo = "titleBookingInfo"
+    static let keepPlace = "keepPlace"
+    static let parkingTime = "parkingTime"
+    static let maxCapacity = "maxCapacity"
+    static let parkingFee = "parkingFee"
+    static let parkingFeeCombo = "parkingFeeCombo"
+    static let bookingInfo = "bookingInfo"
+    static let feeKeepPlace = "feeKeepPlace"
+    static let payToKeepPlace = "payToKeepPlace"
+    static let date = "date"
+    static let timeToCome = "timeToCome"
+    static let vehiclePlate = "vehiclePlate"
+    static let vehicleType = "vehicleType"
+    static let eachHours = "eachHours";
+    static let eachPackage = "eachPackage";
     
     
     

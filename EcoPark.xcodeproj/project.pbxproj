@@ -708,6 +708,9 @@
 		7629BDE322ACF0B60051B835 /* TextFieldBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629BDE222ACF0B60051B835 /* TextFieldBee.swift */; };
 		7629BDE422ACF0B60051B835 /* TextFieldBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629BDE222ACF0B60051B835 /* TextFieldBee.swift */; };
 		7629BDE522ACF0B60051B835 /* TextFieldBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629BDE222ACF0B60051B835 /* TextFieldBee.swift */; };
+		762C489E237518A40001EB27 /* VehicleTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C489D237518A40001EB27 /* VehicleTypeEntity.swift */; };
+		762C489F237518A40001EB27 /* VehicleTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C489D237518A40001EB27 /* VehicleTypeEntity.swift */; };
+		762C48A0237518A40001EB27 /* VehicleTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C489D237518A40001EB27 /* VehicleTypeEntity.swift */; };
 		762E32E4236D1A7D00FF4F3E /* CheckInPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E32E3236D1A7D00FF4F3E /* CheckInPopUpContent.swift */; };
 		762E32E5236D1A7D00FF4F3E /* CheckInPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E32E3236D1A7D00FF4F3E /* CheckInPopUpContent.swift */; };
 		762E32E6236D1A7D00FF4F3E /* CheckInPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E32E3236D1A7D00FF4F3E /* CheckInPopUpContent.swift */; };
@@ -1736,6 +1739,7 @@
 		7629BDD922ACD2580051B835 /* ReportSuccessedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportSuccessedView.xib; sourceTree = "<group>"; };
 		7629BDDD22ACD3B90051B835 /* ReportSuccessedPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSuccessedPopUp.swift; sourceTree = "<group>"; };
 		7629BDE222ACF0B60051B835 /* TextFieldBee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBee.swift; sourceTree = "<group>"; };
+		762C489D237518A40001EB27 /* VehicleTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeEntity.swift; sourceTree = "<group>"; };
 		762E32E3236D1A7D00FF4F3E /* CheckInPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUpContent.swift; sourceTree = "<group>"; };
 		762E32E7236D1A8A00FF4F3E /* CheckInPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInPopUpContent.xib; sourceTree = "<group>"; };
 		762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUp.swift; sourceTree = "<group>"; };
@@ -3532,6 +3536,7 @@
 				2238870E2366AACF00DAC978 /* ParkingEntity.swift */,
 				22D5EAAA237185C9001B811E /* File.swift */,
 				766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */,
+				762C489D237518A40001EB27 /* VehicleTypeEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -4907,6 +4912,7 @@
 				1717E0E9236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
 				DEECF88F22871D0400A4678B /* SignUpPresenter.swift in Sources */,
 				DE361E822283E60500FA3B0D /* AppDropDown.swift in Sources */,
+				762C489E237518A40001EB27 /* VehicleTypeEntity.swift in Sources */,
 				DE952F7D2287D2A700E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAA2293007200D7CECE /* ThanksReportContent.swift in Sources */,
 				175C7351236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
@@ -5296,6 +5302,7 @@
 				1717E0EA236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
 				DE95301E2287DF4800E3F688 /* AppDropDown.swift in Sources */,
 				DE9530202287DF4800E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
+				762C489F237518A40001EB27 /* VehicleTypeEntity.swift in Sources */,
 				DEC62AAB2293007200D7CECE /* ThanksReportContent.swift in Sources */,
 				175C7352236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				22BE84C8236975630056DD51 /* UtilityViewCell.swift in Sources */,
@@ -5685,6 +5692,7 @@
 				1717E0EB236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
 				DE9530CE2287DF6400E3F688 /* KActivityIndicatorAnimationOrbit.swift in Sources */,
 				DEC62AAC2293007200D7CECE /* ThanksReportContent.swift in Sources */,
+				762C48A0237518A40001EB27 /* VehicleTypeEntity.swift in Sources */,
 				DE9530CF2287DF6400E3F688 /* KActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				175C7353236836C7009F03F6 /* SignUpPartnerStep1Presenter.swift in Sources */,
 				22BE84C9236975630056DD51 /* UtilityViewCell.swift in Sources */,

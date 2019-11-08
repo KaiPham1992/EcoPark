@@ -18,7 +18,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingInfoViewController">
             <connections>
+                <outlet property="btnBook" destination="woj-s4-nVu" id="cdz-mm-siO"/>
                 <outlet property="datePicker" destination="XJ7-R8-kuc" id="OVK-Ko-hOg"/>
+                <outlet property="dropDownType" destination="qaV-y7-lUA" id="iQc-p7-9mY"/>
+                <outlet property="lbCapacity" destination="lNX-ay-83f" id="ewv-vB-LMf"/>
+                <outlet property="lbName" destination="56H-5D-bW2" id="mlf-bM-AUH"/>
+                <outlet property="lbPlate" destination="lQP-KC-WqD" id="VJc-Zj-4a9"/>
+                <outlet property="lbPriceEightHour" destination="Ybt-xf-ZD0" id="Hdn-Qk-5i3"/>
+                <outlet property="lbPriceOneHour" destination="Ort-UR-3gZ" id="EDH-23-FTB"/>
+                <outlet property="lbPriceToHoldPlace" destination="vAB-LG-clP" id="FnO-SR-Bou"/>
+                <outlet property="lbTime" destination="82Y-HG-G98" id="rn0-qw-TB2"/>
+                <outlet property="lbTitle" destination="vyO-gy-aDJ" id="P9Y-gI-sdR"/>
+                <outlet property="lbTitleBookingInfo" destination="Aym-a2-wp4" id="3PE-Vt-aX5"/>
+                <outlet property="lbTitleDate" destination="DKi-Qt-cHQ" id="UsP-PC-HKW"/>
+                <outlet property="lbTitleEight" destination="N3h-Rc-zyJ" id="jW2-Uo-s2G"/>
+                <outlet property="lbTitleOne" destination="gBH-sc-UVp" id="asL-2Y-clS"/>
+                <outlet property="lbTitlePlate" destination="Ln7-bA-GS5" id="9Mp-vg-acj"/>
+                <outlet property="lbTitlePriceHoldPlace" destination="daj-ec-CCR" id="v2N-2V-aEE"/>
+                <outlet property="lbTitleTime" destination="boW-FJ-7Te" id="Dwr-DL-Y3v"/>
+                <outlet property="lbTitleType" destination="eBL-FE-zON" id="HEG-zX-0UE"/>
+                <outlet property="lbType" destination="ljM-za-q4V" id="fm4-58-Yyb"/>
+                <outlet property="ratingBar" destination="uXe-LJ-eny" id="WBH-Vm-DKY"/>
                 <outlet property="timePicker" destination="iXQ-Zh-fYZ" id="h70-9l-pYB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
