@@ -159,7 +159,7 @@ extension SignUpViewController: SignUpViewProtocol {
     
     func signUpSuccess(user: UserEntity?) {
         PopUpHelper.shared.showSignUpSuccess {
-            AppRouter.shared.openHome()
+            AppRouter.shared.openHomeView()
         }
     }
     

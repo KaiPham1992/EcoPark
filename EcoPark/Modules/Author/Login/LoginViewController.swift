@@ -53,6 +53,7 @@ class LoginViewController: BaseViewController {
     }
     
     override func setUpNavigation() {
+        super.setUpNavigation()
         
     }
     

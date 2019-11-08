@@ -36,6 +36,7 @@ class TwoButtonPopUp: BasePopUpView {
         self.completionNo = completionNo
         
         super.showPopUp(width: width, height: height)
+        
     }
     
     @objc func btnNoTapped() {

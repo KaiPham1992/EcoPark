@@ -52,12 +52,8 @@ class PopUpHelper {
     
     
     func showLogout(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
-        let popUp = YesNoPopUp()
-        
-    popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.confirm.showLanguage.uppercased(), for: .normal)
-    popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
-        
-        popUp.showPopUp(message: LocalizableKey.popUpLogout.showLanguage, completionNo: completionNo, completionYes: completionYes)
+        let popUp = TwoButtonPopUp()
+        popUp.showPopUp(titlePopUp: "ĐĂNG XUẤT", contentPopUpNormal: "Bạn có muốn đăng xuất khỏi tài khoản này", btnTitleNo: "Quay lại", btnTitleYes: "Đăng Xuất", width: 350, height: 200, completionYes: completionYes, completionNo: completionNo)
     }
     
     func showCreateGroup(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
