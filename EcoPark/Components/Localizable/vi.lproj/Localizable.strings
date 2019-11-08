@@ -143,6 +143,16 @@
 "parkingSubImage" = "Vui lòng chụp ảnh bãi đỗ của bạn, tối thiểu là 2 ảnh và tối đa là 4 ảnh *";
 "parkingWaitingSignUp" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ECOPARKING sẽ liên hệ với bạn trong thời gian sớm nhất.";
 
+// MARK:
+"titleParkDetail" = "Chi tiết bãi xe";
+"titleType" = "Loại bãi đỗ";
+"titlePlace" = "Chỗ trống";
+"titlePriceOne" = "Phí gửi xe theo giờ";
+"titlePriceEight" = "Phí gửi xe theo gói 8 giờ";
+"titleContactMe" = "Liên hệ tôi";
+"titleDirection" = "Chỉ đường";
+"titleButtonKeepPlace" = "Đặt giữ chỗ ngay";
+
 // MARK: BookingInfoViewController
 "titleBookingInfo" = "Đặt giữ chỗ";
 "keepPlace" = "Đặt giữ chỗ tại bãi";

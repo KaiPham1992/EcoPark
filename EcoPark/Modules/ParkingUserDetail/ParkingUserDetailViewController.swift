@@ -26,7 +26,7 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     @IBOutlet weak var lbTitlePriceEightHour: UILabel!
     @IBOutlet weak var lbPriceEightHour: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
-    @IBOutlet weak var btnContac: UIButton!
+    @IBOutlet weak var btnContact: UIButton!
     @IBOutlet weak var btnDirect: UIButton!
     @IBOutlet weak var cltMaterial: UtilityView!
     @IBOutlet weak var btnBookNow: UIButton!
@@ -44,18 +44,21 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         super.setUpViews()
         
         ratingBar.isUserInteractionEnabled = false
-        lbTitleTime.text = "Thời gian hoạt động"
-        lbTitleType.text = "Loại bãi đỗ"
-        lbTitleEmptyPlace.text = "Chỗ trống"
-        lbTitlePriceOneHour.text = "Phí gửi xe theo giờ"
-        lbTitlePriceEightHour.text = "Phí gửi xe theo gói 8 giờ"
+        lbTitleTime.text = LocalizableKey.parkingTime.showLanguage
+        lbTitleType.text = LocalizableKey.titleType.showLanguage
+        lbTitleEmptyPlace.text = LocalizableKey.titlePlace.showLanguage
+        lbTitlePriceOneHour.text = LocalizableKey.titlePriceOne.showLanguage
+        lbTitlePriceEightHour.text = LocalizableKey.titlePriceEight.showLanguage
+        
+        btnContact.setTitle(LocalizableKey.titleContactMe.showLanguage, for: .normal)
+        btnDirect.setTitle(LocalizableKey.titleDirection.showLanguage, for: .normal)
     }
     
     override func setUpNavigation() {
         super.setUpNavigation()
         
         addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết bãi xe")
+        setTitleNavigation(title: LocalizableKey.titleParkDetail.showLanguage)
     }
     
     @IBAction func btnBookingTapped() {

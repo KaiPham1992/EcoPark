@@ -646,6 +646,12 @@
 		760B927D2371C04E00C281D6 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B927C2371C04E00C281D6 /* WalletCell.xib */; };
 		760B927E2371C04E00C281D6 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B927C2371C04E00C281D6 /* WalletCell.xib */; };
 		760B927F2371C04E00C281D6 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760B927C2371C04E00C281D6 /* WalletCell.xib */; };
+		760D15E62375AA3500062FC7 /* BookingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D15E52375AA3500062FC7 /* BookingEntity.swift */; };
+		760D15E72375AA3500062FC7 /* BookingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D15E52375AA3500062FC7 /* BookingEntity.swift */; };
+		760D15E82375AA3500062FC7 /* BookingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D15E52375AA3500062FC7 /* BookingEntity.swift */; };
+		760D15EA2375B11C00062FC7 /* testBooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 760D15E92375B11C00062FC7 /* testBooking.json */; };
+		760D15EB2375B11C00062FC7 /* testBooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 760D15E92375B11C00062FC7 /* testBooking.json */; };
+		760D15EC2375B11C00062FC7 /* testBooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 760D15E92375B11C00062FC7 /* testBooking.json */; };
 		7615D22A236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22B236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
 		7615D22C236C7EA800781AD3 /* QRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */; };
@@ -1719,6 +1725,8 @@
 		760B92722371B33000C281D6 /* ChooseDatePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDatePopUp.swift; sourceTree = "<group>"; };
 		760B92782371C04300C281D6 /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
 		760B927C2371C04E00C281D6 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
+		760D15E52375AA3500062FC7 /* BookingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingEntity.swift; sourceTree = "<group>"; };
+		760D15E92375B11C00062FC7 /* testBooking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testBooking.json; sourceTree = "<group>"; };
 		7615D224236C7EA800781AD3 /* QRScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPresenter.swift; sourceTree = "<group>"; };
 		7615D225236C7EA800781AD3 /* QRScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerRouter.swift; sourceTree = "<group>"; };
 		7615D226236C7EA800781AD3 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
@@ -3537,6 +3545,7 @@
 				22D5EAAA237185C9001B811E /* File.swift */,
 				766FBDB7237313CE007A935D /* ParkingInfoEntity.swift */,
 				762C489D237518A40001EB27 /* VehicleTypeEntity.swift */,
+				760D15E52375AA3500062FC7 /* BookingEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -3679,6 +3688,7 @@
 				DE361D912283E1D700FA3B0D /* Modules */,
 				DE3CC3462283DD990037DBE4 /* LaunchScreen.storyboard */,
 				766FBDC323732986007A935D /* test.json */,
+				760D15E92375B11C00062FC7 /* testBooking.json */,
 			);
 			path = EcoPark;
 			sourceTree = "<group>";
@@ -4075,6 +4085,7 @@
 				DE7D14BD228EA2B500713084 /* TitleNavigationBar.xib in Resources */,
 				DEC7F92222C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				17C7FB82236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
+				760D15EA2375B11C00062FC7 /* testBooking.json in Resources */,
 				76FBA1E5236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				22431753235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				766FBDC423732986007A935D /* test.json in Resources */,
@@ -4191,6 +4202,7 @@
 				DEC7F92322C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				22431754235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				17C7FB83236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
+				760D15EB2375B11C00062FC7 /* testBooking.json in Resources */,
 				76FBA1E6236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80522B02371002D474E /* ViewFeature.xib in Resources */,
 				766FBDC523732986007A935D /* test.json in Resources */,
@@ -4307,6 +4319,7 @@
 				DEC7F92422C4EDAA0096D3D1 /* Comfortaa-Regular.ttf in Resources */,
 				22431755235ECBF900CA1E13 /* AppDateDropDown.xib in Resources */,
 				17C7FB84236FF89900ACE95D /* HistoryPartnerViewController.xib in Resources */,
+				760D15EC2375B11C00062FC7 /* testBooking.json in Resources */,
 				76FBA1E7236EE08B00DD92D2 /* NotificationDetailViewController.xib in Resources */,
 				766AE80622B02371002D474E /* ViewFeature.xib in Resources */,
 				766FBDC623732986007A935D /* test.json in Resources */,
@@ -4783,6 +4796,7 @@
 				DE952F862287D2A700E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				2A36B8A0231A4AE100E9696F /* BaseTableViewController.swift in Sources */,
 				DE49F82F22A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
+				760D15E62375AA3500062FC7 /* BookingEntity.swift in Sources */,
 				7656E4FA23741E0E00428F61 /* DatePicker.swift in Sources */,
 				1717E0E3236D452B00E07734 /* HistoryPartnerHoldingPresenter.swift in Sources */,
 				DE953118228807AA00E3F688 /* AppRouter.swift in Sources */,
@@ -5173,6 +5187,7 @@
 				DE952FED2287DF4800E3F688 /* KActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				7624A6C6231AB570000BA1C6 /* BaseTableViewController.swift in Sources */,
 				DE49F83022A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
+				760D15E72375AA3500062FC7 /* BookingEntity.swift in Sources */,
 				7656E4FB23741E0E00428F61 /* DatePicker.swift in Sources */,
 				1717E0E4236D452B00E07734 /* HistoryPartnerHoldingPresenter.swift in Sources */,
 				DE953119228807AA00E3F688 /* AppRouter.swift in Sources */,
@@ -5563,6 +5578,7 @@
 				DE9530972287DF6400E3F688 /* SignUpParam.swift in Sources */,
 				DE89D1F122A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE9530982287DF6400E3F688 /* Login+Facebook.swift in Sources */,
+				760D15E82375AA3500062FC7 /* BookingEntity.swift in Sources */,
 				7656E4FC23741E0E00428F61 /* DatePicker.swift in Sources */,
 				DE9530992287DF6400E3F688 /* MenuRouter.swift in Sources */,
 				DE95309A2287DF6400E3F688 /* KActivityIndicatorView.swift in Sources */,

@@ -119,9 +119,15 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     // MARK: Book reservation
     func booking() {
+        guard let parkId = parking?.parking_id,
+            let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id else { return }
         
+        let time = datePicker.date& + " " + timePicker.time&
+        let plate = "59F2-123.45"
+        let moneyPaid = "1000"
+        presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid)
     }
-    func didBooking() {
+    func didBooking(info: BookingEntity) {
         let pop = BookingPopUp()
         pop.showPopUp(address: "Address", message: "10", completionDirection: {
             print("Direction")

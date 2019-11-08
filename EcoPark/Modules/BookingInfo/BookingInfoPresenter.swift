@@ -38,6 +38,14 @@ class BookingInfoPresenter: BookingInfoPresenterProtocol, BookingInfoInteractorO
         self.view?.didGetInfo(info: info)
     }
     
+    // MARK: Book reservation
+    func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String) {
+        self.interactor?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid)
+    }
+    func didBooking(info: BookingEntity) {
+        self.view?.didBooking(info: info)
+    }
+    
     // MARK: Get Error
     func didGetError(error: APIError) {
         self.view?.didGetError(error: error)

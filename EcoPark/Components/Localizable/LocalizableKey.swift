@@ -158,6 +158,16 @@ struct LocalizableKey {
     static let parkingSubImage = "parkingSubImage"
     static let parkingWaitingSignUp = "parkingWaitingSignUp"
 
+    // MARK: ParkingUserDetailViewController
+    static let titleParkDetail = "titleParkDetail"
+    static let titleType = "titleType"
+    static let titlePlace = "titlePlace"
+    static let titlePriceOne = "titlePriceOne"
+    static let titlePriceEight = "titlePriceEight"
+    static let titleContactMe = "titleContactMe"
+    static let titleDirection = "titleDirection"
+    static let titleButtonKeepPlace = "titleButtonKeepPlace"
+    
     // MARK: BookingInfoViewController
     static let titleBookingInfo = "titleBookingInfo"
     static let keepPlace = "keepPlace"

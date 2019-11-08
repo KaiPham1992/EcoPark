@@ -30,7 +30,7 @@ protocol BookingInfoInteractorOutputProtocol: class {
     func didGetError(error: APIError)
     func didGetInfo(info: ParkingInfoEntity)
     func didGetVehicleType(listVehicle: [VehicleTypeEntity])
-    func didBooking()
+    func didBooking(info: BookingEntity)
 }
 
 protocol BookingInfoInteractorInputProtocol: class {
@@ -52,5 +52,5 @@ protocol BookingInfoViewProtocol: class {
     func didGetError(error: APIError)
     func didGetInfo(info: ParkingInfoEntity)
     func didGetVehicleType(listVehicle: [VehicleTypeEntity])
-    func didBooking()
+    func didBooking(info: BookingEntity)
 }
