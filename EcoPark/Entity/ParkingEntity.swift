@@ -32,6 +32,7 @@ class ParkingEntity: BaseEntity {
     var img_parking: ImageParkingEntity?
     var config_price: Double? = 1000
     var total_rating: String?
+    var parking_type_name: String?
     
     var url: URL? {
         guard let strImage = img_parking?.imgParking else { return nil }
@@ -71,6 +72,7 @@ class ParkingEntity: BaseEntity {
         self.distance <- map["distance"]
         self.img_parking <- map["img_parking"]
         self.total_rating <- map["total_rating"]
+        self.parking_type_name <- map["parking_type_name"]
     }
     
     required init?(map: Map) {

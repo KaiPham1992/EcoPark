@@ -20,12 +20,13 @@ class ParkingSortView: BaseViewXib {
     @IBOutlet weak var lbMaximum: UILabel!
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var lbConfigure: UILabel!
+    @IBOutlet weak var lbTypeName: UILabel!
     
     var parking: ParkingEntity? {
         didSet {
             guard let parking = parking else { return }
             lbName.text = parking.parking_name
-            
+            lbTypeName.text = parking.parking_type_name
            
             if let price = parking.price {
                 lbPrice.text = price.toCurrency + "/ giờ"
@@ -38,8 +39,6 @@ class ParkingSortView: BaseViewXib {
             if let rating = parking.rating {
                  vRating.setStar(number: rating)
             }
-            
-            
             
             lbConfigure.text = parking.config_price?.toCurrency
             
@@ -57,8 +56,7 @@ class ParkingSortView: BaseViewXib {
             
             lbTime.attributedText = attr
             
-            
-            imgIcon.sd_setImage(with: parking.url, completed: nil)
+            imgIcon.sd_setImage(with: parking.url, placeholderImage: AppImage.imgPlaceHolder)
             vRating.lbNumberRating.text = parking.total_rating
         }
     }
