@@ -12,6 +12,7 @@ class AppRatingView: BaseViewXib {
     var number: Double = 1.5
     
     @IBOutlet weak var vStackView: UIStackView!
+    @IBOutlet weak var lbNumberRating: UILabel!
     
     @IBAction func btnActionTapped(sender: UIButton) {
         number = Double(sender.tag)
@@ -41,9 +42,6 @@ class AppRatingView: BaseViewXib {
                     } else {
                         btn.setImage(AppImage.imgStarEmpty, for: .normal)
                     }
-                    
-                    
-                   
                 }
             }
         }

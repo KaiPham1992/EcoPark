@@ -29,8 +29,14 @@ class ParkingEntity: BaseEntity {
     var phone: String?
     var parking_name: String?
     var distance: String?
-    var img_parking: String?
+    var img_parking: ImageParkingEntity?
     var config_price: Double? = 1000
+    var total_rating: String?
+    
+    var url: URL? {
+        guard let strImage = img_parking?.imgParking else { return nil }
+        return URL(string: "\(BASE_URL_IMAGE)\(strImage)")
+    }
     
     init(lat: Double, long: Double) {
         super.init()
@@ -64,6 +70,7 @@ class ParkingEntity: BaseEntity {
         self.parking_name <- map["parking_name"]
         self.distance <- map["distance"]
         self.img_parking <- map["img_parking"]
+        self.total_rating <- map["total_rating"]
     }
     
     required init?(map: Map) {
@@ -84,5 +91,14 @@ class ParkingEntity: BaseEntity {
         parks.append(ParkingEntity(lat:  10.7981483, long: 106.6715733))
                 
         return parks
+    }
+}
+
+class ImageParkingEntity: BaseEntity {
+    var imgParking: String?
+    
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+        self.imgParking <- map["img_parking"]
     }
 }

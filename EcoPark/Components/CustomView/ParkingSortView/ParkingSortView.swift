@@ -28,7 +28,7 @@ class ParkingSortView: BaseViewXib {
             
            
             if let price = parking.price {
-                lbPrice.text = price& + "/ giờ"
+                lbPrice.text = price.toCurrency + "/ giờ"
             }
             
             if let packagePrice = parking.package_price, let packageNumber = parking.package_number {
@@ -38,6 +38,8 @@ class ParkingSortView: BaseViewXib {
             if let rating = parking.rating {
                  vRating.setStar(number: rating)
             }
+            
+            
             
             lbConfigure.text = parking.config_price?.toCurrency
             
@@ -54,7 +56,10 @@ class ParkingSortView: BaseViewXib {
             }
             
             lbTime.attributedText = attr
-           
+            
+            
+            imgIcon.sd_setImage(with: parking.url, completed: nil)
+            vRating.lbNumberRating.text = parking.total_rating
         }
     }
 }
