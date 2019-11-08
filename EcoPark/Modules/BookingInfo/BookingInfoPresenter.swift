@@ -21,5 +21,34 @@ class BookingInfoPresenter: BookingInfoPresenterProtocol, BookingInfoInteractorO
         self.interactor = interactor
         self.router = router
     }
+    
+    // MARK: Get vehicel type
+    func getVehicleType() {
+        self.interactor?.getVehicleType()
+    }
+    func didGetVehicleType(listVehicle: [VehicleTypeEntity]) {
+        self.view?.didGetVehicleType(listVehicle: listVehicle)
+    }
+    
+    // MARK: Get Park Info
+    func getParkingInfo(id: String) {
+        self.interactor?.getParkingInfo(id: id)
+    }
+    func didGetInfo(info: ParkingInfoEntity) {
+        self.view?.didGetInfo(info: info)
+    }
+    
+    // MARK: Book reservation
+    func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String) {
+        self.interactor?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid)
+    }
+    func didBooking(info: BookingEntity) {
+        self.view?.didBooking(info: info)
+    }
+    
+    // MARK: Get Error
+    func didGetError(error: APIError) {
+        self.view?.didGetError(error: error)
+    }
 
 }

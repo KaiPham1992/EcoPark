@@ -55,6 +55,27 @@ struct APINetwork: APINetworkProtocol {
             }
             return
         }
+        if endPoint.path == "_api/order/get_booking" {
+            if let path = Bundle.main.path(forResource: "testBooking", ofType: "json") {
+                do {
+                      let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                      let json = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                    if let json = json as? Dictionary<String, AnyObject> {
+                        print(json)
+                        guard let result = Mapper<BaseResponse>().map(JSONObject: json) else {
+                            failure(APPError.canNotParseData)
+                            return
+                        }
+                        
+                        self.handleResponse(response: result, success: success, failure: failure)
+                    }
+                    
+                  } catch {
+                       // handle error
+                  }
+            }
+            return
+        }
         /** End mock data*/
         
         request.requestData(endPoint: endPoint, success: { data in

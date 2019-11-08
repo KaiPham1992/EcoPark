@@ -18,8 +18,8 @@ class LevelUpContent: BaseViewXib {
     override func setUpViews() {
         super.setUpViews()
         
-        lbTitle.text = LocalizableKey.levelUp.showLanguage
-        lbPackage.text = LocalizableKey.messagePackage.showLanguage.uppercased()
-        btnYes.setTitle(LocalizableKey.confirm.showLanguage.uppercased(), for: .normal)
+//        lbTitle.text = LocalizableKey.levelUp.showLanguage
+//        lbPackage.text = LocalizableKey.messagePackage.showLanguage.uppercased()
+//        btnYes.setTitle(LocalizableKey.confirm.showLanguage.uppercased(), for: .normal)
     }
 }

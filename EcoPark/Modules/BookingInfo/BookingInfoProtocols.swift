@@ -18,12 +18,19 @@ protocol BookingInfoWireframeProtocol: class {
 protocol BookingInfoPresenterProtocol: class {
 
     var interactor: BookingInfoInteractorInputProtocol? { get set }
+    func getParkingInfo(id: String)
+    func getVehicleType()
+    func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String)
 }
 
 //MARK: Interactor -
 protocol BookingInfoInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
+    func didGetError(error: APIError)
+    func didGetInfo(info: ParkingInfoEntity)
+    func didGetVehicleType(listVehicle: [VehicleTypeEntity])
+    func didBooking(info: BookingEntity)
 }
 
 protocol BookingInfoInteractorInputProtocol: class {
@@ -31,6 +38,9 @@ protocol BookingInfoInteractorInputProtocol: class {
     var presenter: BookingInfoInteractorOutputProtocol?  { get set }
 
     /* Presenter -> Interactor */
+    func getParkingInfo(id: String)
+    func getVehicleType()
+    func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String)
 }
 
 //MARK: View -
@@ -39,4 +49,8 @@ protocol BookingInfoViewProtocol: class {
     var presenter: BookingInfoPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didGetError(error: APIError)
+    func didGetInfo(info: ParkingInfoEntity)
+    func didGetVehicleType(listVehicle: [VehicleTypeEntity])
+    func didBooking(info: BookingEntity)
 }

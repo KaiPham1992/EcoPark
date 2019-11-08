@@ -1,0 +1,20 @@
+{
+    "status": 200,
+    "message": "OK",
+    "data": {
+        "_id": "15",
+        "account_id": "3",
+        "code": "EC1573222416418",
+        "vehicle_id": "5",
+        "license_plates": "59F2-123.45",
+        "intend_checkin_time": "2019-12-01 15:56:00",
+        "status": "reservation",
+        "parking_id": "2",
+        "is_active": "1",
+        "create_time": "2019-11-08 21:13:36",
+        "update_time": "2019-11-08 21:13:36",
+        "create_time_mi": "1573222416418",
+        "intend_checkout_time": "2019-12-01 16:56:00",
+        "money_paid": "1000.00"
+    }
+}

@@ -18,6 +18,6 @@ class CreateGroupContent: BaseViewXib {
     
     override func setUpViews() {
         super.setUpViews()
-        lblError.text = LocalizableKey.enter_name_group.showLanguage
+//        lblError.text = LocalizableKey.enter_name_group.showLanguage
     }
 }

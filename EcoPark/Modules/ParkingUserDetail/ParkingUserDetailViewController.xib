@@ -19,7 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingUserDetailViewController">
             <connections>
                 <outlet property="btnBookNow" destination="OHe-77-7Gl" id="VmB-js-JOL"/>
-                <outlet property="btnContac" destination="0Rf-sk-2Yp" id="Fql-Nd-InW"/>
+                <outlet property="btnContact" destination="0Rf-sk-2Yp" id="ogD-Xm-YkX"/>
                 <outlet property="btnDirect" destination="J3A-Od-TgY" id="wrj-3Q-dHQ"/>
                 <outlet property="cltMaterial" destination="mJR-tm-05A" id="3e0-1E-tnr"/>
                 <outlet property="lbAddress" destination="2XD-E2-DFO" id="wbE-Xm-3Sx"/>

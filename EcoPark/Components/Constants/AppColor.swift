@@ -13,7 +13,7 @@ struct AppColor {
     // MARK: Eco Parking
     static let color_228_237_249 = UIColor(red: 228/255, green: 237/255, blue: 249/255, alpha: 1)
     static let color_102_102_102 = UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1)
-    static let color_13_96_68 = UIColor(red: 13/255, green: 96/255, blue: 68/255, alpha: 1)
+    static let color_13_196_68 = UIColor(red: 13/255, green: 196/255, blue: 68/255, alpha: 1)
     static let color_0_129_255 = UIColor(red: 0/255, green: 129/255, blue: 255/255, alpha: 1)
     static let color_32_45_55 = UIColor(red: 32/255, green: 45/255, blue: 55/255, alpha: 1)
     static let white = UIColor.white

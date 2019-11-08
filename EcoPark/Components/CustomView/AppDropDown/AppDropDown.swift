@@ -40,6 +40,9 @@ class AppDropDown: BaseViewXib {
             if let tag = listItem as? [TagEntity] {
                 dropDown.dataSource = tag.map {$0.name&}
             }
+            if let tag = listItem as? [VehicleTypeEntity] {
+                dropDown.dataSource = tag.map {$0.name&}
+            }
             
 //            if let tag = listItem as? [NationalEntity] {
 //                dropDown.dataSource = tag.map {$0.name&}

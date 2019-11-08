@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingInfoViewController">
             <connections>
+                <outlet property="btnBook" destination="woj-s4-nVu" id="cdz-mm-siO"/>
+                <outlet property="datePicker" destination="XJ7-R8-kuc" id="OVK-Ko-hOg"/>
+                <outlet property="dropDownType" destination="qaV-y7-lUA" id="iQc-p7-9mY"/>
+                <outlet property="lbCapacity" destination="lNX-ay-83f" id="ewv-vB-LMf"/>
+                <outlet property="lbName" destination="56H-5D-bW2" id="mlf-bM-AUH"/>
+                <outlet property="lbPlate" destination="lQP-KC-WqD" id="VJc-Zj-4a9"/>
+                <outlet property="lbPriceEightHour" destination="Ybt-xf-ZD0" id="Hdn-Qk-5i3"/>
+                <outlet property="lbPriceOneHour" destination="Ort-UR-3gZ" id="EDH-23-FTB"/>
+                <outlet property="lbPriceToHoldPlace" destination="vAB-LG-clP" id="FnO-SR-Bou"/>
+                <outlet property="lbTime" destination="82Y-HG-G98" id="rn0-qw-TB2"/>
+                <outlet property="lbTitle" destination="vyO-gy-aDJ" id="P9Y-gI-sdR"/>
+                <outlet property="lbTitleBookingInfo" destination="Aym-a2-wp4" id="3PE-Vt-aX5"/>
+                <outlet property="lbTitleDate" destination="DKi-Qt-cHQ" id="UsP-PC-HKW"/>
+                <outlet property="lbTitleEight" destination="N3h-Rc-zyJ" id="jW2-Uo-s2G"/>
+                <outlet property="lbTitleOne" destination="gBH-sc-UVp" id="asL-2Y-clS"/>
+                <outlet property="lbTitlePlate" destination="Ln7-bA-GS5" id="9Mp-vg-acj"/>
+                <outlet property="lbTitlePriceHoldPlace" destination="daj-ec-CCR" id="v2N-2V-aEE"/>
+                <outlet property="lbTitleTime" destination="boW-FJ-7Te" id="Dwr-DL-Y3v"/>
+                <outlet property="lbTitleType" destination="eBL-FE-zON" id="HEG-zX-0UE"/>
+                <outlet property="lbType" destination="ljM-za-q4V" id="fm4-58-Yyb"/>
+                <outlet property="ratingBar" destination="uXe-LJ-eny" id="WBH-Vm-DKY"/>
+                <outlet property="timePicker" destination="iXQ-Zh-fYZ" id="h70-9l-pYB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,9 +79,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXe-LJ-eny">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXe-LJ-eny" customClass="AppRatingView" customModule="EcoPark_AppStore" customModuleProvider="target">
                                             <rect key="frame" x="110" y="32.666666666666671" width="264" height="20"/>
-                                            <color key="backgroundColor" red="0.32156862749999998" green="0.94117647059999998" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Bfv-Mp-NOt"/>
                                             </constraints>
@@ -164,8 +185,8 @@
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXQ-Zh-fYZ" customClass="AppDropDownNoTitle" customModule="EnglishApp_AppStore" customModuleProvider="target">
-                                            <rect key="frame" x="222" y="52" width="144" height="50"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXQ-Zh-fYZ" customClass="TimePicker" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                            <rect key="frame" x="222" y="48" width="144" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="rPR-ir-veh"/>
@@ -180,7 +201,7 @@
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJ7-R8-kuc" customClass="AppDropDownNoTitle" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJ7-R8-kuc" customClass="DatePicker" customModule="EcoPark_AppStore" customModuleProvider="target">
                                             <rect key="frame" x="8" y="48" width="198" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
@@ -205,46 +226,56 @@
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-y7-lUA" customClass="AppDropDownNoTitle" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-y7-lUA" customClass="AppDropDownNoTitle" customModule="EcoPark_AppStore" customModuleProvider="target">
                                             <rect key="frame" x="222" y="150" width="144" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="PNd-Mc-UhX"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZ4-Lf-4lR" customClass="AppDropDownNoTitle" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59F2-123.45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQP-KC-WqD">
                                             <rect key="frame" x="8" y="150" width="198" height="50"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="fb8-6N-tpb"/>
-                                            </constraints>
-                                        </view>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="boW-FJ-7Te" firstAttribute="top" secondItem="mbG-iD-eqT" secondAttribute="top" constant="4" id="66s-en-icw"/>
-                                        <constraint firstItem="qaV-y7-lUA" firstAttribute="height" secondItem="zZ4-Lf-4lR" secondAttribute="height" id="9Ym-P0-hen"/>
                                         <constraint firstItem="DKi-Qt-cHQ" firstAttribute="top" secondItem="mbG-iD-eqT" secondAttribute="top" constant="4" id="AMF-wC-Un3"/>
                                         <constraint firstItem="eBL-FE-zON" firstAttribute="leading" secondItem="iXQ-Zh-fYZ" secondAttribute="leading" id="E2k-oF-cyI"/>
-                                        <constraint firstItem="zZ4-Lf-4lR" firstAttribute="leading" secondItem="Ln7-bA-GS5" secondAttribute="leading" id="HGu-je-OwW"/>
                                         <constraint firstItem="boW-FJ-7Te" firstAttribute="leading" secondItem="DKi-Qt-cHQ" secondAttribute="trailing" constant="16" id="IYM-Eh-e4T"/>
+                                        <constraint firstItem="qaV-y7-lUA" firstAttribute="top" secondItem="lQP-KC-WqD" secondAttribute="top" id="Iy3-1R-4Ie"/>
                                         <constraint firstItem="Ln7-bA-GS5" firstAttribute="trailing" secondItem="XJ7-R8-kuc" secondAttribute="trailing" id="JHR-cF-OWB"/>
+                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="width" secondItem="XJ7-R8-kuc" secondAttribute="width" id="LjU-ip-b0h"/>
                                         <constraint firstItem="XJ7-R8-kuc" firstAttribute="trailing" secondItem="DKi-Qt-cHQ" secondAttribute="trailing" id="MVC-pW-EjV"/>
                                         <constraint firstItem="XJ7-R8-kuc" firstAttribute="top" secondItem="DKi-Qt-cHQ" secondAttribute="bottom" constant="4" id="N1S-Dh-lXL"/>
                                         <constraint firstItem="Ln7-bA-GS5" firstAttribute="leading" secondItem="XJ7-R8-kuc" secondAttribute="leading" id="QVT-Jp-cmn"/>
                                         <constraint firstItem="eBL-FE-zON" firstAttribute="top" secondItem="Ln7-bA-GS5" secondAttribute="top" id="QzZ-Tx-ycz"/>
-                                        <constraint firstItem="iXQ-Zh-fYZ" firstAttribute="top" secondItem="boW-FJ-7Te" secondAttribute="bottom" constant="8" id="RVw-Ph-4c6"/>
                                         <constraint firstItem="iXQ-Zh-fYZ" firstAttribute="leading" secondItem="boW-FJ-7Te" secondAttribute="leading" id="RXa-Po-GTg"/>
+                                        <constraint firstItem="iXQ-Zh-fYZ" firstAttribute="top" secondItem="XJ7-R8-kuc" secondAttribute="top" id="Rcc-1b-kYk"/>
                                         <constraint firstItem="qaV-y7-lUA" firstAttribute="trailing" secondItem="eBL-FE-zON" secondAttribute="trailing" id="Rwi-qr-rSH"/>
                                         <constraint firstAttribute="height" constant="210" id="UgG-4e-Ks8"/>
                                         <constraint firstItem="XJ7-R8-kuc" firstAttribute="leading" secondItem="DKi-Qt-cHQ" secondAttribute="leading" id="Wri-0p-hzh"/>
+                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="leading" secondItem="XJ7-R8-kuc" secondAttribute="leading" id="YgY-Yc-TpD"/>
                                         <constraint firstItem="iXQ-Zh-fYZ" firstAttribute="trailing" secondItem="boW-FJ-7Te" secondAttribute="trailing" id="drd-PB-7xu"/>
                                         <constraint firstItem="qaV-y7-lUA" firstAttribute="leading" secondItem="eBL-FE-zON" secondAttribute="leading" id="g3g-Aj-6i0"/>
+                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="top" secondItem="Ln7-bA-GS5" secondAttribute="bottom" constant="4" id="hc2-dZ-AxQ"/>
                                         <constraint firstItem="DKi-Qt-cHQ" firstAttribute="leading" secondItem="mbG-iD-eqT" secondAttribute="leading" constant="8" id="kiU-hl-MNk"/>
-                                        <constraint firstItem="qaV-y7-lUA" firstAttribute="top" secondItem="zZ4-Lf-4lR" secondAttribute="top" id="n3Q-pW-RFR"/>
+                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="height" secondItem="XJ7-R8-kuc" secondAttribute="height" id="lKl-Va-keE"/>
                                         <constraint firstItem="Ln7-bA-GS5" firstAttribute="top" secondItem="XJ7-R8-kuc" secondAttribute="bottom" constant="8" id="sU1-Lk-U5h"/>
-                                        <constraint firstItem="zZ4-Lf-4lR" firstAttribute="top" secondItem="Ln7-bA-GS5" secondAttribute="bottom" constant="4" id="thC-Wu-Pez"/>
-                                        <constraint firstItem="zZ4-Lf-4lR" firstAttribute="trailing" secondItem="Ln7-bA-GS5" secondAttribute="trailing" id="uC7-lH-TVj"/>
                                         <constraint firstAttribute="trailing" secondItem="boW-FJ-7Te" secondAttribute="trailing" constant="16" id="uca-N7-9hA"/>
                                         <constraint firstItem="eBL-FE-zON" firstAttribute="trailing" secondItem="iXQ-Zh-fYZ" secondAttribute="trailing" id="zy3-1x-xwt"/>
                                     </constraints>
@@ -337,6 +368,13 @@
                         <constraint firstAttribute="bottom" secondItem="wxZ-j9-6Rc" secondAttribute="bottom" id="yAc-vI-KVt"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkv-8b-WI6">
+                    <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Qpe-Hm-2hs"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -344,6 +382,9 @@
                 <constraint firstItem="BzC-p1-Sna" firstAttribute="bottom" secondItem="UjE-Mb-2gS" secondAttribute="bottom" id="Tam-xY-1O5"/>
                 <constraint firstItem="BzC-p1-Sna" firstAttribute="top" secondItem="UjE-Mb-2gS" secondAttribute="top" id="TzV-CK-r85"/>
                 <constraint firstItem="BzC-p1-Sna" firstAttribute="trailing" secondItem="UjE-Mb-2gS" secondAttribute="trailing" id="eWw-JL-oxg"/>
+                <constraint firstItem="UjE-Mb-2gS" firstAttribute="trailing" secondItem="Mkv-8b-WI6" secondAttribute="trailing" id="ocl-JZ-tv1"/>
+                <constraint firstItem="Mkv-8b-WI6" firstAttribute="leading" secondItem="UjE-Mb-2gS" secondAttribute="leading" id="sah-Oq-7gi"/>
+                <constraint firstItem="Mkv-8b-WI6" firstAttribute="top" secondItem="UjE-Mb-2gS" secondAttribute="top" id="ygA-mM-aAN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="UjE-Mb-2gS"/>
             <point key="canvasLocation" x="136.23188405797103" y="139.28571428571428"/>
