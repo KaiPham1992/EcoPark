@@ -25,10 +25,9 @@ class HomeFindPresenter: HomeFindPresenterProtocol, HomeFindInteractorOutputProt
     }
     
     func searchPlaceByString(text: String) {
-        let url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?sessiontoken=\(UUID().uuidString)"
+        let url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?key=\(googleApiKey)"
         let params: Parameters = ["input":text,
-                                  "type": "",
-                                  "key": "AIzaSyAxnvkGofJm2NZ7Ku-ycI-4n81ffNg5hc8"]
+                                  "type": ""]
         //            print(section)
         
         Alamofire.request(url, method: .get, parameters: params).responseJSON { response in

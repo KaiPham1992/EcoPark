@@ -34,6 +34,14 @@ class NecContainerViewController: ContainerViewController {
 }
 
 extension NecContainerViewController: MenuViewControllerDelegate {
+    func loginTapped() {
+        let vc = LoginRouter.createModule()
+        vc.callBackLoginSuccessed = {
+            self.menuVC.viewWillAppear(true)
+        }
+        self.present(controller: UINavigationController(rootViewController: vc))
+    }
+    
     func selected(item: MenuItem) {
         guard let icon = item.imgIcon else { return }
         switch icon {

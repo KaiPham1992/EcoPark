@@ -26,11 +26,13 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var lbNotice: UILabel!
     @IBOutlet weak var vGender: AppDropDown!
     @IBOutlet weak var vBirthDay: AppDateDropDown!
+    @IBOutlet weak var lbTermAndPolicy: UILabel!
     
     @IBOutlet weak var heightError: NSLayoutConstraint!
     
     var passwordText: String = ""
     var rePasswordText: String = ""
+    var genderSelect: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +70,32 @@ class SignUpViewController: BaseViewController {
         vPassword.tfInput.delegate = self
         vRePassword.tfInput.delegate = self
         
-        vGender.dropDown.dataSource = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage]
+        vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
+        setTextTermAndPolicy()
+    }
+    
+    private func setTextTermAndPolicy() {
+        let attr1 = LocalizableKey.termAndPolicyText1.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
+        
+        let attr2 = LocalizableKey.termAndPolicyText2.showLanguage.toAttributedString(color: AppColor.color_82_240_249, font: AppFont.fontRegular15, isUnderLine: true)
+        
+        let attr3 = LocalizableKey.termAndPolicyText3.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
+        
+        let attr4 = LocalizableKey.termAndPolicyText4.showLanguage.toAttributedString(color: AppColor.color_82_240_249, font: AppFont.fontRegular15, isUnderLine: true)
+        
+        let attr5 = LocalizableKey.termAndPolicyText5.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
+        
+        let attr6 = LocalizableKey.termAndPolicyText6.showLanguage.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
+        
+        let attr = NSMutableAttributedString()
+        attr.append(attr1)
+        attr.append(attr2)
+        attr.append(attr3)
+        attr.append(attr4)
+        attr.append(attr5)
+        attr.append(attr6)
+        
+        lbTermAndPolicy.attributedText = attr
     }
     
     @IBAction func btnBackBlackTapped() {
@@ -80,7 +107,7 @@ class SignUpViewController: BaseViewController {
         heightError.constant = 0
         //vPassword.getText()
         if validateInputData() {
-            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: "female")
+            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: genderSelect)
             
             presenter?.signUp(param: param)
         }
@@ -159,7 +186,7 @@ extension SignUpViewController: SignUpViewProtocol {
     
     func signUpSuccess(user: UserEntity?) {
         PopUpHelper.shared.showSignUpSuccess {
-            AppRouter.shared.openHome()
+            AppRouter.shared.openHomeView()
         }
     }
     
@@ -217,6 +244,6 @@ extension SignUpViewController: UITextFieldDelegate {
 
 extension SignUpViewController: AppTextFieldDropDownDelegate {
     func didChangedValue(sender: AppDropDown, item: Any) {
-        print(sender, item)
+        self.genderSelect = item as! String
     }
 }

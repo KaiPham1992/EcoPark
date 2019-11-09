@@ -383,12 +383,14 @@ extension BaseViewController {
     
     func setTitleBoldLeftNavigation(title: String, action: Selector? = nil ) {
         showNavigation()
-        let vTitle = TitleNavigationBar()
-        vTitle.lbTitle.text = title
-        vTitle.lbTitle.font = AppFont.fontBold17
-        vTitle.lbTitle.textAlignment = .left
-        vTitle.frame = CGRect(x: 0, y: 0, width: 375, height: 44)
-        self.navigationItem.titleView = vTitle
+        let lbTitle = UILabel()
+        lbTitle.text = title
+        lbTitle.font = AppFont.fontBold17
+        lbTitle.textColor = AppColor.color_0_129_255
+        lbTitle.textAlignment = .left
+//        lbTitle.backgroundColor = .red
+        lbTitle.frame = CGRect(x: 0, y: 0, width: 500, height: 44)
+        self.navigationItem.titleView = lbTitle
         
     }
     

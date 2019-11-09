@@ -12,11 +12,12 @@ import UIKit
 
 protocol MenuViewControllerDelegate: class {
     
-//    func openViewController(presentingController: UIViewController)
+    //    func openViewController(presentingController: UIViewController)
     func selected(item: MenuItem)
-//    func presentViewController(presentingController: UIViewController)
-//    func popToRootViewController()
-//    func closeDrawer()
+    func loginTapped()
+    //    func presentViewController(presentingController: UIViewController)
+    //    func popToRootViewController()
+    //    func closeDrawer()
 }
 
 
@@ -24,6 +25,14 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var tbMenu: UITableView!
     var presenter: MenuPresenterProtocol?
     weak var delegateController: MenuViewControllerDelegate?
+    @IBOutlet weak var lbLogin: UILabel!
+    @IBOutlet weak var lbDisplayname: UILabel!
+    @IBOutlet weak var lbOwner: UILabel!
+    @IBOutlet weak var vRegisterOwner: UIView!
+    @IBOutlet weak var imgAvatar: UIImageView!
+    
+    var itemSelected: MenuItem?
+    
     var listMenuItem = [MenuItem]() {
         didSet {
             tbMenu.reloadData()
@@ -32,8 +41,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTable()
         listMenuItem = MenuItem.toArray()
+        configureTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +52,55 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             item.isSelected = false
         }
         listMenuItem = MenuItem.toArray()
+        for item in listMenuItem {
+            if item.title == self.itemSelected?.title {
+                item.isSelected = true
+            }
+        }
         tbMenu.reloadData()
+        setUserName()
+    }
+    
+    func setUserName() {
+        if UserDefaultHelper.shared.loginUserInfo == nil {
+            // not login
+            lbLogin.text = "Đăng Nhập"
+            lbDisplayname.isHidden = true
+            lbOwner.isHidden = true
+            vRegisterOwner.isHidden = true
+            imgAvatar.image = AppImage.iconUsername
+        } else {
+            // LoggedIn user
+            lbLogin.text = "Đăng Xuất"
+            lbDisplayname.isHidden = false
+            lbOwner.isHidden = true
+            vRegisterOwner.isHidden = false
+            imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
+            lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
+            // LoggedIn owner
+        }
+    }
+    
+    @IBAction func btnLoginLogoutTapped() {
+        // need login
+        if UserDefaultHelper.shared.loginUserInfo == nil {
+            delegateController?.loginTapped()
+        } else {
+            
+            PopUpHelper.shared.showLogout(completionNo: {
+                
+            }) {
+                ProgressView.shared.showProgressOnWindow()
+                Provider.shared.userAPIService.logout(success: { _ in
+                    ProgressView.shared.hide()
+                    UserDefaultHelper.shared.clearUser()
+                    AppRouter.shared.openHomeView()
+                    
+                }) { _ in
+                    ProgressView.shared.hide()
+                }
+            }
+        }
     }
 }
 
@@ -66,7 +123,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 45
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -76,6 +133,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         itemSelected.isSelected = true
+        self.itemSelected = itemSelected
         
         delegateController?.selected(item: itemSelected)
         
