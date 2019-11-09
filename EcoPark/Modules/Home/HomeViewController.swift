@@ -71,7 +71,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         
         addMenu()
         addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
-        setTitleBoldLeftNavigation(title: "EcoParking", action: nil)
+        setTitleBoldLeftNavigation(title: "ECOPARKING", action: nil)
         
         vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
         vParkingSort.btnBooking.addTarget(self, action: #selector(btnBookingTapped), for: UIControl.Event.touchUpInside)
@@ -130,7 +130,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         
 //        let location = locations.last
 //        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
-//        
+//
 //        self.mapView?.animate(to: camera)
 //        self.locationManager.stopUpdatingLocation()
         

@@ -29,6 +29,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var lbDisplayname: UILabel!
     @IBOutlet weak var lbOwner: UILabel!
     @IBOutlet weak var vRegisterOwner: UIView!
+    @IBOutlet weak var imgAvatar: UIImageView!
     
     var listMenuItem = [MenuItem]() {
         didSet {
@@ -60,13 +61,14 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             lbDisplayname.isHidden = true
             lbOwner.isHidden = true
             vRegisterOwner.isHidden = true
+            imgAvatar.image = AppImage.iconUsername
         } else {
             // LoggedIn user
             lbLogin.text = "Đăng Xuất"
             lbDisplayname.isHidden = false
             lbOwner.isHidden = true
             vRegisterOwner.isHidden = false
-            
+            imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
             // LoggedIn owner
         }
@@ -114,7 +116,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 45
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
