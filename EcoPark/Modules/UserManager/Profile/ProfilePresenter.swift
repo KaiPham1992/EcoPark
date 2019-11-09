@@ -38,4 +38,14 @@ class ProfilePresenter: ProfilePresenterProtocol, ProfileInteractorOutputProtoco
         })
     }
 
+    func updateProfile(param: UpdateProfileParam) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.userAPIService.updateProfile(param: param, success: { (user) in
+            guard let _user = user else { return }
+            ProgressView.shared.hide()
+            self.view?.didUpdateProfile(user: _user)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }
