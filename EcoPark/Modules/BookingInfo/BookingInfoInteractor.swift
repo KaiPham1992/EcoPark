@@ -13,4 +13,37 @@ import UIKit
 class BookingInfoInteractor: BookingInfoInteractorInputProtocol {
 
     weak var presenter: BookingInfoInteractorOutputProtocol?
+    
+    // MARK: Get Park Info
+    func getParkingInfo(id: String) {
+        Provider.shared.parkingAPIService.getParkingInfo(id: id, success: { (info) in
+            guard let info = info else { return }
+            self.presenter?.didGetInfo(info: info)
+        }) { (error) in
+            guard let error = error else { return }
+            self.presenter?.didGetError(error: error)
+        }
+    }
+    
+    // MARK: Get vehicel type
+    func getVehicleType() {
+        Provider.shared.parkingAPIService.getListVehicle(success: { (list) in
+            self.presenter?.didGetVehicleType(listVehicle: list)
+        }) { (error) in
+            guard let error = error else { return }
+            self.presenter?.didGetError(error: error)
+        }
+    }
+    
+    // MARK: Book reservation
+    
+    func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String) {
+        Provider.shared.parkingAPIService.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid, success: { (booking) in
+            guard let info = booking else { return }
+            self.presenter?.didBooking(info: info)
+        }) { (error) in
+            guard let error = error else { return }
+            self.presenter?.didGetError(error: error)
+        }
+    }
 }

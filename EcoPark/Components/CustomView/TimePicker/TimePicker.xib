@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimePicker" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <connections>
+                <outlet property="tfTime" destination="GZv-sO-ITh" id="T50-rC-YVf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdX-WQ-rPa">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="19:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZv-sO-ITh">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-ed-RIe">
+                            <rect key="frame" x="382" y="92" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="HDv-R5-3JU"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="NDJ-QP-76R"/>
+                                <constraint firstAttribute="width" constant="16" id="SVw-9N-BNR"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="ToC-eI-Rjr"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocL-J2-ZeJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="pickerTapped" destination="-1" eventType="touchUpInside" id="tw0-9q-8iW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="GZv-sO-ITh" firstAttribute="height" secondItem="YdX-WQ-rPa" secondAttribute="height" id="2AD-kU-vHt"/>
+                        <constraint firstItem="2Au-ed-RIe" firstAttribute="centerY" secondItem="GZv-sO-ITh" secondAttribute="centerY" id="769-w9-JAd"/>
+                        <constraint firstItem="GZv-sO-ITh" firstAttribute="centerX" secondItem="YdX-WQ-rPa" secondAttribute="centerX" id="ILt-E9-2EU"/>
+                        <constraint firstItem="GZv-sO-ITh" firstAttribute="centerY" secondItem="YdX-WQ-rPa" secondAttribute="centerY" id="PTs-8I-79g"/>
+                        <constraint firstAttribute="trailing" secondItem="2Au-ed-RIe" secondAttribute="trailing" constant="16" id="QQF-Yq-kdI"/>
+                        <constraint firstAttribute="bottom" secondItem="ocL-J2-ZeJ" secondAttribute="bottom" id="dIQ-T3-NhE"/>
+                        <constraint firstItem="GZv-sO-ITh" firstAttribute="width" secondItem="YdX-WQ-rPa" secondAttribute="width" id="lPr-nT-pCz"/>
+                        <constraint firstItem="ocL-J2-ZeJ" firstAttribute="leading" secondItem="YdX-WQ-rPa" secondAttribute="leading" id="xoz-wz-5s0"/>
+                        <constraint firstItem="ocL-J2-ZeJ" firstAttribute="top" secondItem="YdX-WQ-rPa" secondAttribute="top" id="xpI-x6-QKh"/>
+                        <constraint firstAttribute="trailing" secondItem="ocL-J2-ZeJ" secondAttribute="trailing" id="ypB-gR-6FY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YdX-WQ-rPa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="41l-g9-JHv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YdX-WQ-rPa" secondAttribute="trailing" id="a3B-7g-cli"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YdX-WQ-rPa" secondAttribute="bottom" id="ob0-26-Jmg"/>
+                <constraint firstItem="YdX-WQ-rPa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tdc-H6-ctM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="332.14285714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_dropdown" width="15" height="9.5"/>
+    </resources>
+</document>

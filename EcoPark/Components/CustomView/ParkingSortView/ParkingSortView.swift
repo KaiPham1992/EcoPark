@@ -50,7 +50,7 @@ class ParkingSortView: BaseViewXib {
             
             if let timeStart = parking.time_start?.toString(dateFormat: AppDateFormat.HHmm),
                 let timeEnd = parking.time_end?.toString(dateFormat: AppDateFormat.HHmm) {
-                let attr2 = "\(timeStart) - \(timeEnd)".toAttributedString(color: AppColor.color_13_96_68, font: AppFont.fontRegular15, isUnderLine: false)
+                let attr2 = "\(timeStart) - \(timeEnd)".toAttributedString(color: AppColor.color_13_196_68, font: AppFont.fontRegular15, isUnderLine: false)
                 attr.append(attr2)
             }
             

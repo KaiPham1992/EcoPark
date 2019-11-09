@@ -31,7 +31,7 @@ class CreateGroupPopUp: BasePopUpView {
         
         vYesNoContentView.lbTitle.text = titlePopUp
         vYesNoContentView.tfInput.setTitleAndPlaceHolder(title: titleInput, placeHolder: placeHolderInput)
-        vYesNoContentView.lblError.text = LocalizableKey.enter_name_group.showLanguage
+//        vYesNoContentView.lblError.text = LocalizableKey.enter_name_group.showLanguage
         vYesNoContentView.btnNo.setTitle(titleNo, for: .normal)
         vYesNoContentView.btnYes.setTitle(titleYes, for: .normal)
         

@@ -38,7 +38,7 @@ class AppRouter {
     func test() {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         
-            let vc = WalletRouter.createModule()
+            let vc = ParkingUserDetailRouter.createModule(parking: ParkingEntity(id: "2"))
             windowApp.rootViewController = UINavigationController(rootViewController: vc)
     }
 }

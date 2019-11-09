@@ -56,63 +56,63 @@ class PopUpHelper {
         popUp.showPopUp(titlePopUp: "ĐĂNG XUẤT", contentPopUpNormal: "Bạn có muốn đăng xuất khỏi tài khoản này", btnTitleNo: "Quay lại", btnTitleYes: "Đăng Xuất", width: 350, height: 200, completionYes: completionYes, completionNo: completionNo)
     }
     
-    func showCreateGroup(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
-        let popUp = CreateGroupPopUp()
-        popUp.showPopUp(titlePopUp: LocalizableKey.createGroup.showLanguage,
-                        titleInput: LocalizableKey.nameGroup.showLanguage,
-                        placeHolderInput: LocalizableKey.enterNameGroup.showLanguage,
-                        titleNo: LocalizableKey.cancel.showLanguage.uppercased(),
-                        titleYes: LocalizableKey.createGroup.showLanguage.uppercased(),
-                        completionNo: completionNo,
-                        completionYes: completionYes)
-    }
-    
-    func showLeaveGroup(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
-        let popUp = YesNoPopUp()
-        popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.verifyButton.showLanguage.uppercased(), for: .normal)
-        popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
-        
-        popUp.showPopUp(message: LocalizableKey.leaveTeamPopUp.showLanguage, completionNo: completionYes, completionYes: completionNo)
-    }
-    
-    func showReport(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
-        let popUp = CreateGroupPopUp()
-        popUp.showPopUp(titlePopUp: LocalizableKey.createGroup.showLanguage,
-                        titleInput: LocalizableKey.nameGroup.showLanguage,
-                        placeHolderInput: LocalizableKey.enterNameGroup.showLanguage,
-                        titleNo: LocalizableKey.cancel.showLanguage.uppercased(),
-                        titleYes: LocalizableKey.createGroup.showLanguage.uppercased(),
-                        completionNo: completionNo,
-                        completionYes: completionYes)
-    }
+//    func showCreateGroup(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
+//        let popUp = CreateGroupPopUp()
+//        popUp.showPopUp(titlePopUp: LocalizableKey.createGroup.showLanguage,
+//                        titleInput: LocalizableKey.nameGroup.showLanguage,
+//                        placeHolderInput: LocalizableKey.enterNameGroup.showLanguage,
+//                        titleNo: LocalizableKey.cancel.showLanguage.uppercased(),
+//                        titleYes: LocalizableKey.createGroup.showLanguage.uppercased(),
+//                        completionNo: completionNo,
+//                        completionYes: completionYes)
+//    }
+//
+//    func showLeaveGroup(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
+//        let popUp = YesNoPopUp()
+//        popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.verifyButton.showLanguage.uppercased(), for: .normal)
+//        popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
+//
+//        popUp.showPopUp(message: LocalizableKey.leaveTeamPopUp.showLanguage, completionNo: completionYes, completionYes: completionNo)
+//    }
+//
+//    func showReport(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
+//        let popUp = CreateGroupPopUp()
+//        popUp.showPopUp(titlePopUp: LocalizableKey.createGroup.showLanguage,
+//                        titleInput: LocalizableKey.nameGroup.showLanguage,
+//                        placeHolderInput: LocalizableKey.enterNameGroup.showLanguage,
+//                        titleNo: LocalizableKey.cancel.showLanguage.uppercased(),
+//                        titleYes: LocalizableKey.createGroup.showLanguage.uppercased(),
+//                        completionNo: completionNo,
+//                        completionYes: completionYes)
+//    }
     
     func showThanks(completionYes: CompletionClosure?) {
         let popUp = ThanksReportPopUp()
         popUp.showPopUp(completionYes: completionYes)
     }
     
-    func showNotEnoughtBee(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
-        let popUp = YesNoPopUp()
-        popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
-        popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.addBee.showLanguage.uppercased(), for: .normal)
-        
-        popUp.showPopUp(message: LocalizableKey.notEnoughBee.showLanguage, completionNo: completionNo, completionYes: completionYes)
-    }
-    
-    func showNotEnoughtDiamon(completionYes: CompletionClosure?) {
-        let popUp = NotificationPopUp()
-        popUp.setButtonTitle(title: LocalizableKey.cancel.showLanguage.uppercased())
-        
-        popUp.showPopUp(message: LocalizableKey.notEnoughDiamon.showLanguage, completion: completionYes)
-    }
-    
-    func showLeaveHomeWork(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
-        let popUp = YesNoPopUp()
-        popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.verifyButton.showLanguage.uppercased(), for: .normal)
-        popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
-        
-        popUp.showPopUp(message: LocalizableKey.popleaveHomeWork.showLanguage, completionNo: completionYes, completionYes: completionNo)
-    }
+//    func showNotEnoughtBee(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
+//        let popUp = YesNoPopUp()
+//        popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
+//        popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.addBee.showLanguage.uppercased(), for: .normal)
+//
+//        popUp.showPopUp(message: LocalizableKey.notEnoughBee.showLanguage, completionNo: completionNo, completionYes: completionYes)
+//    }
+//
+//    func showNotEnoughtDiamon(completionYes: CompletionClosure?) {
+//        let popUp = NotificationPopUp()
+//        popUp.setButtonTitle(title: LocalizableKey.cancel.showLanguage.uppercased())
+//
+//        popUp.showPopUp(message: LocalizableKey.notEnoughDiamon.showLanguage, completion: completionYes)
+//    }
+//
+//    func showLeaveHomeWork(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
+//        let popUp = YesNoPopUp()
+//        popUp.vYesNoContentView.btnNo.setTitle(LocalizableKey.verifyButton.showLanguage.uppercased(), for: .normal)
+//        popUp.vYesNoContentView.btnYes.setTitle(LocalizableKey.cancel.showLanguage.uppercased(), for: .normal)
+//
+//        popUp.showPopUp(message: LocalizableKey.popleaveHomeWork.showLanguage, completionNo: completionYes, completionYes: completionNo)
+//    }
     
     func showReward(diamond: Int, completionYes: CompletionClosure?) {
         let popUp = RewardPopUp()
@@ -171,7 +171,7 @@ class PopUpHelper {
     }
     
     
-    // ---------------- EcoParking ------------------
+    // ---------------- EcoParking ------------------ //
     
     // MARK: Invalid QR
     func showInvalidQR(width: CGFloat = 350, height: CGFloat, completion: CompletionClosure?) {

@@ -12,7 +12,7 @@ import UIKit
 class UpdateAccountPopup: BasePopUpView {
     let view : UpdateAccountView = {
         let view = UpdateAccountView()
-        view.lblTitle.text = LocalizableKey.update_account.showLanguage
+//        view.lblTitle.text = LocalizableKey.update_account.showLanguage
         view.btnConfirm.setTitle(LocalizableKey.confirm.showLanguage, for: .normal)
         return view
     }()

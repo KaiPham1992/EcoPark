@@ -13,6 +13,7 @@ class AppRatingView: BaseViewXib {
     
     @IBOutlet weak var vStackView: UIStackView!
     @IBOutlet weak var lbNumberRating: UILabel!
+
     
     @IBAction func btnActionTapped(sender: UIButton) {
         number = Double(sender.tag)
@@ -21,6 +22,10 @@ class AppRatingView: BaseViewXib {
     
     override func setUpViews() {
         setStar(number: number)
+    }
+    
+    func setTitle(number: Int) {
+        self.lbNumberRating.text = "(\(number.description))"
     }
     
     func setStar(number: Double) {

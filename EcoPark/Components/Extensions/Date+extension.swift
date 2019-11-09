@@ -326,22 +326,20 @@ class AppTimestampTransform: TransformType {
 
 open class yyyyMMddHHmmssTransform: TransformType {
     public typealias Object = Date
-    public typealias JSON = Double
+    public typealias JSON = String
     
     public init() {}
     
     open func transformFromJSON(_ value: Any?) -> Date? {
-        if let timeStr = value as? String {
-            let date = Date(yyyyMMddHHmmss: timeStr)
-            return date
+        if let _value = value as? String{
+            return Date(gtFormat: _value, gfFormat: AppDateFormat.yyyyMMddHHmmss)
         }
-        
         return nil
     }
     
-    open func transformToJSON(_ value: Date?) -> Double? {
-        if let date = value {
-            return Double(date.timeIntervalSince1970)
+    open func transformToJSON(_ value: Date?) -> String? {
+        if let _value = value {
+            return _value.toString(dateFormat: AppDateFormat.ddMMyyyyHHmmm)
         }
         return nil
     }
