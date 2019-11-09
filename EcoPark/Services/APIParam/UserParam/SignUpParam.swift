@@ -14,9 +14,10 @@ class SignUpParam: BaseParam {
     var rePassword        : String?
     var captcha         : String?
     var fullName         : String?
-    var username    : String?
-    var phone : String?
-    var gender: String?
+    var username        : String?
+    var phone           : String?
+    var gender          : String?
+    var birthDay        : String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -29,6 +30,7 @@ class SignUpParam: BaseParam {
         self.username        <- map["username"]
         self.phone          <- map["phone"]
         self.gender         <- map["gender"]
+        self.birthDay       <- map["birthday"]
     }
     
     init(email      : String?,
@@ -37,7 +39,8 @@ class SignUpParam: BaseParam {
          displayName: String?,
          username   : String?,
          phone      : String?,
-         gender     : String?) {
+         gender     : String?,
+         birthDay   : String?) {
         super.init()
         self.email          = email
         self.password       = password

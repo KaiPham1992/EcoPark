@@ -98,16 +98,12 @@ class SignUpViewController: BaseViewController {
         lbTermAndPolicy.attributedText = attr
     }
     
-    @IBAction func btnBackBlackTapped() {
-        self.pop()
-    }
-    
     @IBAction func btnSignUpTapped() {
         dismissKeyBoard()
         heightError.constant = 0
         //vPassword.getText()
         if validateInputData() {
-            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: genderSelect)
+            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: genderSelect, birthDay: vBirthDay.tfInput.text)
             
             presenter?.signUp(param: param)
         }

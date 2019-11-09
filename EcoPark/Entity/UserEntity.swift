@@ -48,6 +48,9 @@ class UserEntity: BaseEntity  {
     var level: String?
     var isLeader: Int?
     var attachImg: String?
+    var phone: String?
+    var birthDay: String?
+    var gender: String?
     
     override func mapping(map: Map) {
         self.isLeader <- map["is_leader"]
@@ -89,6 +92,9 @@ class UserEntity: BaseEntity  {
         self.amountRank <- (map["amount_rank"],StringToIntTransform())
         self.level <- map["level"]
         self.attachImg <- map["attach_img_src"]
+        self.phone <- map["phone"]
+        self.birthDay <- map["birthday"]
+        self.gender <- map["gender"]
     }
     
     var urlAvatar:  URL? {

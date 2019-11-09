@@ -29,6 +29,7 @@ class ProfileViewController: BaseViewController, ProfileViewProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        getDataUser()
     }
 
     private func setupUI() {
@@ -46,8 +47,17 @@ class ProfileViewController: BaseViewController, ProfileViewProtocol {
         btnChangePassword.setTitle(LocalizableKey.titleChangePassword.showLanguage, for: .normal)
     }
     
+    private func getDataUser() {
+        vUsername.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.displayName
+        vDisplayname.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.fullName
+        vPhoneNumber.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.phone
+        vEmail.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.email
+        vGender.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.gender
+        vBirthDay.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.birthDay
+    }
+    
     @IBAction func btnSaveTapped() {
-        self.push(controller: SignUpPartnerStep1Router.createModule(), animated: true)
+        
     }
     
     @IBAction func btnChangePasswordTapped() {
