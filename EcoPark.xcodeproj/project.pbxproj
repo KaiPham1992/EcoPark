@@ -597,15 +597,6 @@
 		2A45681B236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */; };
 		2A45681C236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */; };
 		2A45681D236C820400A23FB0 /* PageHistoryParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */; };
-		2A6C5ED422EF468F004B23EF /* CellSingleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */; };
-		2A6C5ED522EF468F004B23EF /* CellSingleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */; };
-		2A6C5ED622EF468F004B23EF /* CellSingleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */; };
-		2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */; };
-		2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */; };
-		2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */; };
-		2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */; };
-		2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */; };
-		2AA9E36822F9AA310093F5C8 /* FileZipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */; };
 		2ADDCB02232F83890087B427 /* TermAndConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADDCB01232F83890087B427 /* TermAndConditionResponse.swift */; };
 		2ADDCB03232F83890087B427 /* TermAndConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADDCB01232F83890087B427 /* TermAndConditionResponse.swift */; };
 		2ADDCB04232F83890087B427 /* TermAndConditionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADDCB01232F83890087B427 /* TermAndConditionResponse.swift */; };
@@ -1699,11 +1690,8 @@
 		2A456806236C81D800A23FB0 /* HistoryParkingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryParkingInteractor.swift; sourceTree = "<group>"; };
 		2A456807236C81D800A23FB0 /* HistoryParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryParkingViewController.xib; sourceTree = "<group>"; };
 		2A45681A236C820400A23FB0 /* PageHistoryParkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHistoryParkingController.swift; sourceTree = "<group>"; };
-		2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSingleLabel.swift; sourceTree = "<group>"; };
-		2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellSingleLabel.xib; sourceTree = "<group>"; };
 		2A7907D12329584B003B2752 /* EnglishApp_Prod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnglishApp_Prod.entitlements; sourceTree = "<group>"; };
 		2A9EBF0D8621C545CE79F1ED /* Pods-EcoPark_Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Dev.release.xcconfig"; path = "Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev.release.xcconfig"; sourceTree = "<group>"; };
-		2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileZipManager.swift; sourceTree = "<group>"; };
 		2ADDCB01232F83890087B427 /* TermAndConditionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionResponse.swift; sourceTree = "<group>"; };
 		2AF2F82D22E9A5B900603444 /* TextFieldLimitedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitedCharacter.swift; sourceTree = "<group>"; };
 		2E0BB0C96ECC9939CA68DE66 /* Pods-EcoPark_Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_Prod.release.xcconfig"; path = "Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod.release.xcconfig"; sourceTree = "<group>"; };
@@ -2723,31 +2711,6 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		2A6C5ED022EF466C004B23EF /* CommonCell */ = {
-			isa = PBXGroup;
-			children = (
-				2A6C5ED122EF4671004B23EF /* CellSingleLabel */,
-			);
-			path = CommonCell;
-			sourceTree = "<group>";
-		};
-		2A6C5ED122EF4671004B23EF /* CellSingleLabel */ = {
-			isa = PBXGroup;
-			children = (
-				2A6C5ED222EF468F004B23EF /* CellSingleLabel.swift */,
-				2A6C5ED322EF468F004B23EF /* CellSingleLabel.xib */,
-			);
-			path = CellSingleLabel;
-			sourceTree = "<group>";
-		};
-		2AA9E36422F9AA230093F5C8 /* FileZipManager */ = {
-			isa = PBXGroup;
-			children = (
-				2AA9E36522F9AA310093F5C8 /* FileZipManager.swift */,
-			);
-			path = FileZipManager;
-			sourceTree = "<group>";
-		};
 		2ADDCB00232F83710087B427 /* TermAndCondition */ = {
 			isa = PBXGroup;
 			children = (
@@ -3293,9 +3256,7 @@
 		DE361DDC2283E52A00FA3B0D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2AA9E36422F9AA230093F5C8 /* FileZipManager */,
 				2A2B015A22F085F800A08EEA /* ListManager */,
-				2A6C5ED022EF466C004B23EF /* CommonCell */,
 				DEECF87C22870BBD00A4678B /* Localizable */,
 				DE2ADE5B22841A42003768CE /* SideMenu */,
 				DE361E012283E60400FA3B0D /* Constants */,
@@ -4093,7 +4054,6 @@
 				760B926E2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				766AE80422B02371002D474E /* ViewFeature.xib in Resources */,
 				22EB904523685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
-				2A6C5ED722EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				17BAF8A8236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.xib in Resources */,
 				22F33AB423645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				17FCC60B236AE4CF003E98D8 /* ParkingInfoViewController.xib in Resources */,
@@ -4209,7 +4169,6 @@
 				2A07B99F236E9935004FE7CE /* DetailParkingViewController.xib in Resources */,
 				760B926F2371AE0D00C281D6 /* FromToDatePicker.xib in Resources */,
 				22EB904623685F1D00F77BC0 /* AppDropDownNoTitle.xib in Resources */,
-				2A6C5ED822EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				22F33AB523645B8100D136EB /* HomeFindViewController.xib in Resources */,
 				17BAF8A9236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.xib in Resources */,
 				17FCC60C236AE4CF003E98D8 /* ParkingInfoViewController.xib in Resources */,
@@ -4333,7 +4292,6 @@
 				DE49F83522A3E10A00A92C63 /* RewardPopUpContent.xib in Resources */,
 				DE9530F32287DF6400E3F688 /* AppDropDown.xib in Resources */,
 				2203D56F23655D5D0055E79F /* HomeFindCell.xib in Resources */,
-				2A6C5ED922EF468F004B23EF /* CellSingleLabel.xib in Resources */,
 				DE9530F42287DF6400E3F688 /* MenuCell.xib in Resources */,
 				22EB902623684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				2A07B97E236E840A004FE7CE /* DoingCell.xib in Resources */,
@@ -4818,7 +4776,6 @@
 				DE952F822287D2A700E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				2A07B998236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7354236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
-				2A6C5ED422EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				17FCC5E6236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
 				76EF7E0323706FC50038486A /* HistoryPartnerQRScannerPresenter.swift in Sources */,
 				DE361DD82283E4BD00FA3B0D /* LoginViewController.swift in Sources */,
@@ -4832,7 +4789,6 @@
 				DE952FA02287D2A700E3F688 /* FadeInOutAnimation.swift in Sources */,
 				DE361E9A2283E60500FA3B0D /* StringReachability.swift in Sources */,
 				DE952F842287D2A700E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
-				2AA9E36622F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				223887252366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				17C7FB7F236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */,
 				DE2ADE7822841BB9003768CE /* MenuProtocols.swift in Sources */,
@@ -5209,7 +5165,6 @@
 				DE952FF52287DF4800E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				2A07B999236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7355236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
-				2A6C5ED522EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				17FCC5E7236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
 				76EF7E0423706FC50038486A /* HistoryPartnerQRScannerPresenter.swift in Sources */,
 				DE952FF62287DF4800E3F688 /* LoginViewController.swift in Sources */,
@@ -5223,7 +5178,6 @@
 				DE952FFA2287DF4800E3F688 /* FadeInOutAnimation.swift in Sources */,
 				DE952FFB2287DF4800E3F688 /* StringReachability.swift in Sources */,
 				DE952FFC2287DF4800E3F688 /* KActivityIndicatorAnimationBallScale.swift in Sources */,
-				2AA9E36722F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				223887262366E23F00DAC978 /* HomeFilterPopUp.swift in Sources */,
 				17C7FB80236FF89900ACE95D /* HistoryPartnerInteractor.swift in Sources */,
 				DE952FFD2287DF4800E3F688 /* MenuProtocols.swift in Sources */,
@@ -5569,7 +5523,6 @@
 				761A474C2371CE3100CD9A23 /* RechargeWalletProtocols.swift in Sources */,
 				DEC62AA82293006100D7CECE /* ThanksReportPopUp.swift in Sources */,
 				DE9530942287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
-				2AA9E36822F9AA310093F5C8 /* FileZipManager.swift in Sources */,
 				DE9530952287DF6400E3F688 /* RecordParam.swift in Sources */,
 				22BE84DC236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
 				DE9530962287DF6400E3F688 /* Utils.swift in Sources */,
@@ -5661,7 +5614,6 @@
 				766AE7F022AFCAB4002D474E /* ConfirmPopUpView.swift in Sources */,
 				766D135E228EF078005E47F0 /* ViewGradient.swift in Sources */,
 				DE9530BA2287DF6400E3F688 /* PopUpHelper.swift in Sources */,
-				2A6C5ED622EF468F004B23EF /* CellSingleLabel.swift in Sources */,
 				172D0973236EBA080000F0BC /* HistoryPartnerDetailCheckinPresenter.swift in Sources */,
 				2238872C2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE9530BB2287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
