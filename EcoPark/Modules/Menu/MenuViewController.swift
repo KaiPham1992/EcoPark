@@ -38,8 +38,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTable()
         listMenuItem = MenuItem.toArray()
+        configureTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +68,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             vRegisterOwner.isHidden = false
             
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
-             // LoggedIn owner
+            // LoggedIn owner
         }
     }
     
@@ -79,14 +79,14 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         } else {
             
             PopUpHelper.shared.showLogout(completionNo: {
-               
+                
             }) {
                 ProgressView.shared.showProgressOnWindow()
                 Provider.shared.userAPIService.logout(success: { _ in
                     ProgressView.shared.hide()
                     UserDefaultHelper.shared.clearUser()
                     AppRouter.shared.openHomeView()
-                
+                    
                 }) { _ in
                     ProgressView.shared.hide()
                 }

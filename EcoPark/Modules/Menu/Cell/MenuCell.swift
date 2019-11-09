@@ -21,22 +21,34 @@ class MenuItem {
     
     class func toArray() -> [MenuItem] {
         
-//
+        if UserDefaultHelper.shared.loginUserInfo == nil {
+            return [
+                MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),
+                MenuItem(imgIcon: AppImage.imgWallet, title: LocalizableKey.MenuWallet.showLanguage),                    MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuPolicy.showLanguage),
+                MenuItem(imgIcon: AppImage.imgSecurity, title: LocalizableKey.MenuSecuriry.showLanguage),
+                MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
+                MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
+            ]
+        } else {
+            return [
+                //            MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuHistoryParking.showLanguage),
+                //            MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuMyInfo.showLanguage),
+                MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),
+                MenuItem(imgIcon: AppImage.imgHistory, title: LocalizableKey.MenuHistory.showLanguage),
+                MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuNotification.showLanguage),
+                MenuItem(imgIcon: AppImage.imgWallet, title: LocalizableKey.MenuWallet.showLanguage),
+                MenuItem(imgIcon: AppImage.imgProfile, title: LocalizableKey.MenuProfile.showLanguage),
+                MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuPolicy.showLanguage),
+                MenuItem(imgIcon: AppImage.imgSecurity, title: LocalizableKey.MenuSecuriry.showLanguage),
+                MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
+                MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
+            ]
+        }
         
-        //for user
-        return [
-//            MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuHistoryParking.showLanguage),
-//            MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuMyInfo.showLanguage),
-            MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),
-            MenuItem(imgIcon: AppImage.imgHistory, title: LocalizableKey.MenuHistory.showLanguage),
-            MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuNotification.showLanguage),
-            MenuItem(imgIcon: AppImage.imgWallet, title: LocalizableKey.MenuWallet.showLanguage),
-            MenuItem(imgIcon: AppImage.imgProfile, title: LocalizableKey.MenuProfile.showLanguage),
-            MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuPolicy.showLanguage),
-            MenuItem(imgIcon: AppImage.imgSecurity, title: LocalizableKey.MenuSecuriry.showLanguage),
-            MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
-            MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
-        ]
+        // Not login
+        
+        
+        
         
     }
 }
@@ -72,7 +84,7 @@ class MenuCell: BaseTableCell {
             
         }
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

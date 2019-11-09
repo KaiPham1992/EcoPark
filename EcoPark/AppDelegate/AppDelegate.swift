@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
         }
         
-        DropDown.startListeningToKeyboard()
+//        DropDown.startListeningToKeyboard()
         
         IQKeyboardManager.shared.enable = true
         
