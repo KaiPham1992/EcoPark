@@ -36,7 +36,7 @@ class AppRouter {
 //        let vcLogin = HomeRouter.createModule()
 
 //        let nc = UINavigationController(rootViewController: vcLogin)
-        windowApp.rootViewController = NecContainerViewController()
+        windowApp.rootViewController = UINavigationController(rootViewController: DetailTransactionCustomerRouter.createModule()) 
     }
     
     func openHome() {

@@ -34,16 +34,26 @@ class ListManagerVC: BaseViewController {
     
     override func setUpViews() {
         self.view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
         isShowProgressView = true
+        //add constraint -> to remove constraint
         tableView.fillSuperview()
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
         setupViewListManager()
         registerTableView()
         if isAddPullToFresh {
             addPullToRefresh()
         }
         callAPI()
-
+    }
+    
+    func setLeadingAndTraling16pt() {
+        tableView.removeFromSuperview()
+        self.view.addSubview(tableView)
+        tableView.fillVerticalSuperview()
+        tableView.fillHorizontalSuperview(constant: 16)
     }
     
     func setupViewListManager(){
