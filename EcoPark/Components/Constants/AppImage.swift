@@ -31,7 +31,7 @@ struct AppImage {
         static let imgCall = UIImage(named: "ic_call_off")!.withRenderingMode(.alwaysTemplate)
         static let imgLanguage = UIImage(named: "ic_news_off")!.withRenderingMode(.alwaysTemplate)
     
-    
+    static let imgWallet = UIImage(named: "ic_star_outline")!.withRenderingMode(.alwaysTemplate)
     static let iconFilter = UIImage(named: "ic_filter")!
     
     
@@ -87,10 +87,6 @@ struct AppImage {
     static let imgStarFilled = UIImage(named: "ic_star_filled")!
     static let imgStarHalf = UIImage(named: "ic_star_half")!
     static let imgStarEmpty = UIImage(named: "ic_star_outline")!
-    
-
-    static let imgWallet = UIImage(named: "ic_star_outline")!
-    
     
 
     // MARK: Notification

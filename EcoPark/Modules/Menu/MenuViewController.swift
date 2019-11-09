@@ -31,6 +31,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var vRegisterOwner: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
     
+    var itemSelected: MenuItem?
+    
     var listMenuItem = [MenuItem]() {
         didSet {
             tbMenu.reloadData()
@@ -50,6 +52,11 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             item.isSelected = false
         }
         listMenuItem = MenuItem.toArray()
+        for item in listMenuItem {
+            if item.title == self.itemSelected?.title {
+                item.isSelected = true
+            }
+        }
         tbMenu.reloadData()
         setUserName()
     }
@@ -126,6 +133,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         itemSelected.isSelected = true
+        self.itemSelected = itemSelected
         
         delegateController?.selected(item: itemSelected)
         
