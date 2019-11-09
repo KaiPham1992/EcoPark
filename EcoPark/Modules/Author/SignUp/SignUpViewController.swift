@@ -68,7 +68,7 @@ class SignUpViewController: BaseViewController {
         vPassword.tfInput.delegate = self
         vRePassword.tfInput.delegate = self
         
-        vGender.dropDown.dataSource = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage]
+        vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
     }
     
     @IBAction func btnBackBlackTapped() {

@@ -36,6 +36,9 @@ class NecContainerViewController: ContainerViewController {
 extension NecContainerViewController: MenuViewControllerDelegate {
     func loginTapped() {
         let vc = LoginRouter.createModule()
+        vc.callBackLoginSuccessed = {
+            self.menuVC.viewWillAppear(true)
+        }
         self.present(controller: UINavigationController(rootViewController: vc))
     }
     

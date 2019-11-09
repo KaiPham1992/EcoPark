@@ -53,7 +53,7 @@ class PopUpHelper {
     
     func showLogout(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
         let popUp = TwoButtonPopUp()
-        popUp.showPopUp(titlePopUp: "ĐĂNG XUẤT", contentPopUpNormal: "Bạn có muốn đăng xuất khỏi tài khoản này", btnTitleNo: "Quay lại", btnTitleYes: "Đăng Xuất", width: 350, height: 200, completionYes: completionYes, completionNo: completionNo)
+        popUp.showPopUp(titlePopUp: "ĐĂNG XUẤT", contentPopUpNormal: "Bạn có muốn đăng xuất khỏi tài khoản này?", btnTitleNo: "Quay lại", btnTitleYes: "Đăng Xuất", width: 350, height: 200, completionYes: completionYes, completionNo: completionNo)
     }
     
 //    func showCreateGroup(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {

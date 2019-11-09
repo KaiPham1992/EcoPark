@@ -21,7 +21,6 @@ enum LoginType {
     case normal
 }
 
-
 class LoginViewController: BaseViewController {
     
     var presenter: LoginPresenterProtocol?

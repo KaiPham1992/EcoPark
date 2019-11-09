@@ -106,7 +106,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.9.0)
   - Cosmos (~> 20.0)
-  - DropDown (= 2.3.13)
+  - DropDown
   - Firebase/Core (= 6.9.0)
   - Firebase/Messaging (= 6.9.0)
   - GoogleMaps (= 3.5.0)
@@ -186,6 +186,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: fd8f0dcc34a2de49d6f9afcbf8ccf58c61c85ad6
+PODFILE CHECKSUM: b25aae7c04063d224c789aa5c54be8ed1a8fc2d6
 
 COCOAPODS: 1.8.4

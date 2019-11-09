@@ -9,16 +9,10 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Firebase
-//import FBSDKLoginKit
-//import FBSDKCoreKit
-//import GoogleSignIn
-//import Fabric
-//import Crashlytics
 import netfox
 import UserNotifications
-//import RealmSwift
-//import FBSDKShareKit
 import UserNotifications
+import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaultHelper.shared.appLanguage == nil {
             LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
         }
+        
+        DropDown.startListeningToKeyboard()
         
         IQKeyboardManager.shared.enable = true
         

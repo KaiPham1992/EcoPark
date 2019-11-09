@@ -44,9 +44,9 @@ class AppDropDown: BaseViewXib {
                 dropDown.dataSource = tag.map {$0.name&}
             }
             
-//            if let tag = listItem as? [NationalEntity] {
-//                dropDown.dataSource = tag.map {$0.name&}
-//            }
+            if let tags = listItem as? [String] {
+                dropDown.dataSource = tags
+            }
         }
     }
     
@@ -63,23 +63,26 @@ class AppDropDown: BaseViewXib {
     
     override func setUpViews() {
         super.setUpViews()
+        setUpDropDown()
         
     }
     
     @IBAction func btnActionTapped() {
+        dropDown.anchorView = vContain
         dropDown.width = vContain.frame.width
         dropDown.show()
     }
     
     func setUpDropDown() {
-        dropDown.anchorView = tfInput
+        dropDown.anchorView = vContain
         dropDown.backgroundColor = .white
         dropDown.width = vContain.frame.width
+        dropDown.direction = .any
         
         dropDown.cellNib = UINib(nibName: "AppDropDownCell", bundle:  nil)
         dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
-                        guard let cell = cell as? AppDropDownCell else { return }
-            
+            guard let cell = cell as? AppDropDownCell else { return }
+
             cell.lbContent.text = item
             return
         }

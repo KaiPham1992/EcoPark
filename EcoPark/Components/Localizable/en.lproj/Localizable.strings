@@ -52,6 +52,7 @@
 "Select" = "Select";
 "male" = "Male";
 "female" = "Female";
+"other" = "Other";
 
 // Forgot password page
 "ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";

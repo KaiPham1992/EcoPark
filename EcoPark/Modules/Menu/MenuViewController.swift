@@ -82,7 +82,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
                
             }) {
                 ProgressView.shared.showProgressOnWindow()
-               Provider.shared.userAPIService.logout(success: { _ in
+                Provider.shared.userAPIService.logout(success: { _ in
                     ProgressView.shared.hide()
                     UserDefaultHelper.shared.clearUser()
                     AppRouter.shared.openHomeView()
