@@ -70,6 +70,12 @@ struct LocalizableKey {
     static let male = "male"
     static let female = "female"
     static let other = "other"
+    static let termAndPolicyText1 = "termAndPolicyText1"
+    static let termAndPolicyText2 = "termAndPolicyText2"
+    static let termAndPolicyText3 = "termAndPolicyText3"
+    static let termAndPolicyText4 = "termAndPolicyText4"
+    static let termAndPolicyText5 = "termAndPolicyText5"
+    static let termAndPolicyText6 = "termAndPolicyText6"
     
     // Forgot password Page
     static let ForgotPasswordMessage = "ForgotPasswordMessage"
@@ -211,7 +217,7 @@ struct LocalizableKey {
     static let library = "library"
     static let notAllowGifPhoto = "notAllowGifPhoto"
     static let USER_IS_NOT_EXISTED = "USER_IS_NOT_EXISTED"
-    
+    static let INVALID_USERNAME_OR_PASSWORD = "INVALID_USERNAME_OR_PASSWORD"
 //    // Report
 //    static let description = "description"
 //    static let enterContent = "enterContent"
