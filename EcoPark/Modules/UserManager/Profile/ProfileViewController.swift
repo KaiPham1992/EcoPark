@@ -53,4 +53,16 @@ class ProfileViewController: BaseViewController, ProfileViewProtocol {
     @IBAction func btnChangePasswordTapped() {
         self.push(controller: ChangePasswordRouter.createModule(), animated: true)
     }
+    
+    @IBAction func btnAvatarTapped() {
+        SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
+            guard let _iamge = image else { return }
+            self.imgAvatar.image = _iamge
+            self.presenter?.updateAvatar(image: _iamge)
+        }
+    }
+    
+    func didUpdateAvatar() {
+        
+    }
 }
