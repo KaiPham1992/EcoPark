@@ -54,6 +54,9 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         case AppImage.imgNotification:
             let vc = NotificationViewController()
             self.openViewController(presentingController: vc)
+        case AppImage.imgHistory:
+            let vc = PageHistoryParkingController()
+            self.openViewController(presentingController: vc)
         default:
             self.openViewController(presentingController: homeVC)
         }
