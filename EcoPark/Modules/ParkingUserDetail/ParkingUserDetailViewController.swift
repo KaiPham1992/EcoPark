@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailViewProtocol {
 
@@ -71,7 +72,8 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     }
     
     @IBAction func btnDirectTapped() {
-        // Code here
+        guard let lat = parking?.lat, let long = parking?.long else { return }
+        openGoogleMapForPlace(lat: lat, long: long)
     }
     
     func displayData(info: ParkingInfoEntity) {
@@ -110,6 +112,41 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     }
     func didGetInfo(info: ParkingInfoEntity) {
         displayData(info: info)
+    }
+}
+
+// MARK: Direct to location
+extension ParkingUserDetailViewController {
+    
+    func openAppleMapForPlace(lat: Double, long: Double) {
+        let latitude: CLLocationDegrees =  lat
+        let longitude: CLLocationDegrees =  long
+
+        let regionDistance: CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = self.parking?.parking_name
+        mapItem.openInMaps(launchOptions: options)
+
+    }
+    
+    func openGoogleMapForPlace(lat: Double, long: Double) {
+        let lat = lat
+        let long = long
+
+        let customURL = "comgooglemaps://"
+        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
+        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
+            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
+        } else {
+            openAppleMapForPlace(lat: lat, long: long)
+        }
     }
 }
 

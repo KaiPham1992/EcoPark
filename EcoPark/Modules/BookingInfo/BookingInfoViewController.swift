@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import MapKit
 
 class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
@@ -128,10 +129,11 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid)
     }
     func didBooking(info: BookingEntity) {
-        let address = "address"
+        guard let address = parking?.address else { return }
         let pop = BookingPopUp()
-        pop.showPopUp(address: address , message: "1", completionDirection: {
-            print("Direction")
+        pop.showPopUp(address: address, message: "1", completionDirection: {
+            guard let lat = self.parking?.lat, let long = self.parking?.long else { return }
+            self.openGoogleMapForPlace(lat: lat, long: long)
         }) {
             guard let bookingId = info.id else { return }
             self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
@@ -157,5 +159,37 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     func didGetInfo(info: ParkingInfoEntity) {
         displayData(info: info)
     }
+}
 
+extension BookingInfoViewController {
+    func openAppleMapForPlace(lat: Double, long: Double) {
+        let latitude: CLLocationDegrees =  lat
+        let longitude: CLLocationDegrees =  long
+
+        let regionDistance: CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = self.parking?.parking_name
+        mapItem.openInMaps(launchOptions: options)
+
+    }
+    
+    func openGoogleMapForPlace(lat: Double, long: Double) {
+        let lat = lat
+        let long = long
+
+        let customURL = "comgooglemaps://"
+        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
+        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
+            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
+        } else {
+            openAppleMapForPlace(lat: lat, long: long)
+        }
+    }
 }
