@@ -59,8 +59,8 @@ class ParkingEntity: BaseEntity {
         self.lat <- (map["lat"], StringToDoubleTransform())
         self.long <- (map["long"], StringToDoubleTransform())
         self.number_place <- map["number_place"]
-        self.time_start <- (map["time_start"], TimeTramsform())
-        self.time_end <- (map["time_end"], TimeTramsform())
+        self.time_start <- (map["time_start"], AppTimestampTransform())
+        self.time_end <- (map["time_end"], AppTimestampTransform())
         self.package_price <- (map["package_price"], StringToDoubleTransform())
         self.package_number <- (map["package_number"], StringToDoubleTransform())
         self.config_price <- (map["config_price"], StringToDoubleTransform())
