@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -53,12 +53,27 @@
                         <constraint firstAttribute="height" constant="208" id="NRf-EK-ZKb"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vs-uw-GYo">
+                    <rect key="frame" x="293" y="69" width="66" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="TDf-hH-1oX"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="VQo-tC-nwV"/>
+                        <constraint firstAttribute="height" constant="66" id="e4q-a6-B6L"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="pIC-WZ-dvi"/>
+                    </constraints>
+                    <state key="normal" image="ic_mygps"/>
+                    <connections>
+                        <action selector="setMyLocation" destination="-1" eventType="touchUpInside" id="IKJ-Ta-BuS"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6a4-Dh-U8n" firstAttribute="bottom" secondItem="JfX-bT-O35" secondAttribute="bottom" id="0Fy-Mp-JTZ"/>
+                <constraint firstItem="8vs-uw-GYo" firstAttribute="top" secondItem="uD5-Bf-Mag" secondAttribute="bottom" constant="24" id="8wN-zT-4at"/>
                 <constraint firstItem="frR-0y-yRy" firstAttribute="leading" secondItem="uD5-Bf-Mag" secondAttribute="trailing" id="Kc6-4O-ixe"/>
                 <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="wI8-QS-W4E" secondAttribute="trailing" id="LTV-z6-cTc"/>
+                <constraint firstItem="6a4-Dh-U8n" firstAttribute="trailing" secondItem="8vs-uw-GYo" secondAttribute="trailing" constant="16" id="OnH-YF-osx"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="trailing" secondItem="6a4-Dh-U8n" secondAttribute="trailing" constant="-80" id="S5g-sB-LT3"/>
                 <constraint firstItem="wI8-QS-W4E" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" id="U5w-Pk-do5"/>
                 <constraint firstItem="uD5-Bf-Mag" firstAttribute="leading" secondItem="6a4-Dh-U8n" secondAttribute="leading" constant="24" id="Umr-bi-QGF"/>
@@ -77,5 +92,6 @@
     </objects>
     <resources>
         <image name="ic_filter" width="24" height="24"/>
+        <image name="ic_mygps" width="66" height="66"/>
     </resources>
 </document>

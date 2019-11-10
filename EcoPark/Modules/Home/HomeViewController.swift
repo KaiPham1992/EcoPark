@@ -57,12 +57,16 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         //Location Manager code to fetch current location
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
-        mapView.settings.myLocationButton = true
+        mapView.settings.myLocationButton = false
         mapView.delegate = self
         
         
         let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
-        
+        self.mapView?.animate(to: camera)
+    }
+    
+    @IBAction func setMyLocation() {
+        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
         self.mapView?.animate(to: camera)
     }
     
@@ -76,6 +80,11 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
         vParkingSort.btnBooking.addTarget(self, action: #selector(btnBookingTapped), for: UIControl.Event.touchUpInside)
     }
+    
+    @objc func btnMyLocationTapped() {
+        setMyLocation()
+    }
+    
     @objc func btnCheckIn() {
         let checkIn = QRScannerRouter.createModule()
         self.push(controller: checkIn)
@@ -128,11 +137,12 @@ extension HomeViewController: HomeFindViewControllerDelegate {
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-//        let location = locations.last
+        let location = locations.last
+        self.centerMapCoordinate = location?.coordinate
 //        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
 //
 //        self.mapView?.animate(to: camera)
-//        self.locationManager.stopUpdatingLocation()
+        self.locationManager.stopUpdatingLocation()
         
     }
     
@@ -177,32 +187,32 @@ extension HomeViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-//        let latitude = mapView.camera.target.latitude
-//        let longitude = mapView.camera.target.longitude
-//        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//        self.placeMarkerOnCenter(centerMapCoordinate:centerMapCoordinate)
-//        print(centerMapCoordinate)
+        //        let latitude = mapView.camera.target.latitude
+        //        let longitude = mapView.camera.target.longitude
+        //        centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        //        self.placeMarkerOnCenter(centerMapCoordinate:centerMapCoordinate)
+        //        print(centerMapCoordinate)
     }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-//        print(mapView.camera.target)
-//        print(position.target)
-//        let long = CGFloat(position.target.longitude)
-//        let lat = CGFloat(position.target.latitude)
-//        if isTextfieldDelegate {
-//            isTextfieldDelegate = false
-//        } else {
-//            getAddressFromLocation(pdblLatitude: lat, withLongitude: long)
-//        }
-//
-//        guard let distance = self.distance else { return }
-//        presenter?.getCountRecord(long: long, lat: lat, radius: Int(distance.value&))
+        //        print(mapView.camera.target)
+        //        print(position.target)
+        //        let long = CGFloat(position.target.longitude)
+        //        let lat = CGFloat(position.target.latitude)
+        //        if isTextfieldDelegate {
+        //            isTextfieldDelegate = false
+        //        } else {
+        //            getAddressFromLocation(pdblLatitude: lat, withLongitude: long)
+        //        }
+        //
+        //        guard let distance = self.distance else { return }
+        //        presenter?.getCountRecord(long: long, lat: lat, radius: Int(distance.value&))
         
         
     }
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-//        vTitleMarker.isHidden = true
+        //        vTitleMarker.isHidden = true
     }
     
     func placeMarkerOnCenter(centerMapCoordinate:CLLocationCoordinate2D) {
@@ -215,50 +225,50 @@ extension HomeViewController: GMSMapViewDelegate {
     }
     
     
-//    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
-//        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-//        let lat: Double = Double("\(pdblLatitude)")!
-//        //21.228124
-//        let lon: Double = Double("\(pdblLongitude)")!
-//        //72.833770
-//        let ceo: CLGeocoder = CLGeocoder()
-//        center.latitude = lat
-//        center.longitude = lon
-//
-//        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
-//
-//        var addressString : String = ""
-//        ceo.reverseGeocodeLocation(loc, completionHandler:
-//            {(placemarks, error) in
-//                if (error != nil)
-//                {
-//                    print("reverse geodcode fail: \(error!.localizedDescription)")
-//                }
-//
-//                guard let pm = placemarks  else { return }
-//
-//                if pm.count > 0 {
-//                    let pm = placemarks![0]
-//                    if pm.thoroughfare != nil {
-//                        addressString = addressString + pm.thoroughfare! + ", "
-//                    }
-//
-//                    if pm.subLocality != nil {
-//                        addressString = addressString + pm.subLocality! + ", "
-//                    }
-//
-//                    if pm.locality != nil {
-//                        addressString = addressString + pm.locality! + ", "
-//                    }
-//                    if pm.country != nil {
-//                        addressString = addressString + pm.country! + ", "
-//                    }
-//                    if pm.postalCode != nil {
-//                        addressString = addressString + pm.postalCode! + " "
-//                    }
-//                    print(addressString)
-////                    self.tfAddress.text = addressString
-//                }
-//        })
-//    }
+    //    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
+    //        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+    //        let lat: Double = Double("\(pdblLatitude)")!
+    //        //21.228124
+    //        let lon: Double = Double("\(pdblLongitude)")!
+    //        //72.833770
+    //        let ceo: CLGeocoder = CLGeocoder()
+    //        center.latitude = lat
+    //        center.longitude = lon
+    //
+    //        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+    //
+    //        var addressString : String = ""
+    //        ceo.reverseGeocodeLocation(loc, completionHandler:
+    //            {(placemarks, error) in
+    //                if (error != nil)
+    //                {
+    //                    print("reverse geodcode fail: \(error!.localizedDescription)")
+    //                }
+    //
+    //                guard let pm = placemarks  else { return }
+    //
+    //                if pm.count > 0 {
+    //                    let pm = placemarks![0]
+    //                    if pm.thoroughfare != nil {
+    //                        addressString = addressString + pm.thoroughfare! + ", "
+    //                    }
+    //
+    //                    if pm.subLocality != nil {
+    //                        addressString = addressString + pm.subLocality! + ", "
+    //                    }
+    //
+    //                    if pm.locality != nil {
+    //                        addressString = addressString + pm.locality! + ", "
+    //                    }
+    //                    if pm.country != nil {
+    //                        addressString = addressString + pm.country! + ", "
+    //                    }
+    //                    if pm.postalCode != nil {
+    //                        addressString = addressString + pm.postalCode! + " "
+    //                    }
+    //                    print(addressString)
+    ////                    self.tfAddress.text = addressString
+    //                }
+    //        })
+    //    }
 }

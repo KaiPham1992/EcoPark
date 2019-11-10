@@ -25,7 +25,7 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var btnChangePassword: UIButton!
     @IBOutlet weak var lbError: UILabel!
-    
+    @IBOutlet weak var lbVersion: UILabel!
 	var presenter: ProfilePresenterProtocol?
 
     var genderSelect: String = ""
@@ -37,6 +37,7 @@ class ProfileViewController: BaseViewController {
 
     private func setupUI() {
         addMenu()
+        setTitleNavigation(title: LocalizableKey.MenuProfile.showLanguage)
         imgAvatar.setBorder(borderWidth: 0, borderColor: .clear, cornerRadius: imgAvatar.frame.width / 2)
         vUsername.setTitleAndPlaceHolder(title: LocalizableKey.username.showLanguage, placeHolder: "")
         vDisplayname.setTitleAndPlaceHolder(title: LocalizableKey.displaynameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -52,7 +53,9 @@ class ProfileViewController: BaseViewController {
         vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
         vGender.delegateDropDown = self
         
-        
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+
+        lbVersion.text = "Version \(appVersion ?? "0")"
     }
     
     private func getDataUser() {
@@ -61,9 +64,18 @@ class ProfileViewController: BaseViewController {
         vDisplayname.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.fullName
         vPhoneNumber.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.phone
         vEmail.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.email
-        vGender.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.gender
+//        vGender.tfInput.text =  UserDefaultHelper.shared.loginUserInfo?.gender
         vBirthDay.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYY)
         imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
+        if UserDefaultHelper.shared.loginUserInfo?.gender == "female" {
+            vGender.tfInput.text = LocalizableKey.female.showLanguage
+        }
+        else if UserDefaultHelper.shared.loginUserInfo?.gender == "male" {
+            vGender.tfInput.text = LocalizableKey.male.showLanguage
+        }
+        else if UserDefaultHelper.shared.loginUserInfo?.gender == "other" {
+            vGender.tfInput.text = LocalizableKey.other.showLanguage
+        }
 //        checkHideShowSaveButton()
         
     }
@@ -79,6 +91,7 @@ class ProfileViewController: BaseViewController {
             else if self.vGender.tfInput.text == "Khác" {
                 genderSelect = "other"
             }
+            
             let param = UpdateProfileParam(username: vUsername.getText(), fullname: vDisplayname.getText(), email: vEmail.getText(), phone: vPhoneNumber.getText(), gender: genderSelect, birthDay: vBirthDay.tfInput.text)
             
             self.presenter?.updateProfile(param: param)

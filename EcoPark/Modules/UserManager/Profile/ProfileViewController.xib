@@ -23,6 +23,7 @@
                 <outlet property="lbBoss" destination="2HY-8E-nf7" id="ZmV-w5-gTp"/>
                 <outlet property="lbError" destination="ri1-8Z-6gj" id="JEG-fp-4td"/>
                 <outlet property="lbName" destination="jwb-K4-1c7" id="gY1-YX-fKP"/>
+                <outlet property="lbVersion" destination="8aC-co-Lzd" id="L6f-1A-4h7"/>
                 <outlet property="vBirthDay" destination="pJZ-2K-RJb" id="gGf-E9-HKL"/>
                 <outlet property="vDisplayname" destination="dz7-Hc-hFv" id="bvf-i9-t0a"/>
                 <outlet property="vEmail" destination="x2q-Zj-y0e" id="Pi6-TH-wrq"/>
@@ -152,7 +153,7 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="p1g-Bp-XSK">
                                     <rect key="frame" x="17" y="536" width="341" height="50"/>
-                                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="uJl-Ep-V5L"/>
                                     </constraints>

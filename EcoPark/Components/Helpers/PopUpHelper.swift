@@ -140,8 +140,8 @@ class PopUpHelper {
     }
     
     func showEditProfile(completionYes: CompletionClosure?) {
-        let popUp = UpdateAccountPopup()
-        popUp.showPopup(message: LocalizableKey.editProfileSuccess.showLanguage, confirm: completionYes)
+        let popUp = OneButtonPopUp()
+        popUp.showPopUp(titlePopUp: "Thông Báo", contentPopUpNormal: "Chỉnh sửa thông tin thành công", buttonTitle: "OK", width: 375, height: 200, completion: completionYes)
     }
     
     func showNoInternet(completionYes: CompletionClosure?) {

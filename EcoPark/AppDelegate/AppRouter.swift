@@ -41,4 +41,11 @@ class AppRouter {
         let vc = DetailParkingRouter.createModule(type: .checkin, bookingId: "13")
             windowApp.rootViewController = UINavigationController(rootViewController: vc)
     }
+    
+    func openLoading() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
+        
+            let vc = LoadingRouter.createModule()
+            windowApp.rootViewController = vc
+    }
 }
