@@ -2698,6 +2698,7 @@
 		2A07B988236E98B8004FE7CE /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				76C058B52377DC05000733C7 /* Cell */,
 				2A07B989236E9935004FE7CE /* DetailParkingPresenter.swift */,
 				2A07B98A236E9935004FE7CE /* DetailParkingRouter.swift */,
 				2A07B98B236E9935004FE7CE /* DetailParkingViewController.swift */,
@@ -3206,6 +3207,13 @@
 				7629BDD022ACCBBA0051B835 /* ReportQuestionPopUp.swift */,
 			);
 			path = ReportQuestionPopUp;
+			sourceTree = "<group>";
+		};
+		76C058B52377DC05000733C7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		76DB93B8228C74950081A36E /* RatioButton */ = {

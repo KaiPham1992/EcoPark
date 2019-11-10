@@ -2,91 +2,32 @@
     "status": 200,
     "message": "OK",
     "data": {
-        "_id": "2",
-        "code_tax": "8100331546",
-        "name": "Bãi xe Engma",
-        "type_id": "4",
-        "address": "220/1 Nguyễn Trọng Tuyển, phường 8, quận Phú Nhuận, TPHCM",
-        "price": "40000.00",
-        "package_price": "300000.00",
-        "package_number": "8",
-        "number_place": "100",
-        "ordinal": "1",
+        "_id": "13",
+        "account_id": "3",
+        "code": "EC1573185103432",
+        "vehicle_id": "5",
+        "license_plates": "59F2-123.45",
+        "intend_checkin_time": "2019-12-01 15:56:00",
+        "status": "reservation",
+        "parking_id": "2",
         "is_active": "1",
-        "create_time": "2019-10-30 15:15:52",
-        "time_start": "07:00:00",
-        "time_end": "23:59:00",
-        "lat": "10.798143",
-        "long": "106.673762",
-        "rating": "4",
-        "account_id": "1",
-        "parking_type": "Bãi xe đặc biệt",
-        "fullname": "eco_parking",
-        "identity_number": "215234456",
-        "issued_date": "1970-01-01",
-        "issued_by": "CA Tỉnh Hải Phòng",
-        "cmnd_img_before_src": "public/upload/boss/user_1_cmnd_before.jpg",
-        "cmnd_img_after_src": "public/upload/boss/user_1_cmnd_after.jpg",
-        "gpkd_img_after_src": "public/upload/boss/user_1_gpkd_after.jpg",
-        "gpkd_img_before_src": "public/upload/boss/user_1_gpkd_before.jpg",
-        "email": "tuanphat21021996@gmail.com",
-        "gender": "male",
-        "birthday": "1985-05-10",
-        "material": [
-            {
-                "_id": "1",
-                "name": "Mái che",
-                "plain_name": "mai che",
-                "is_active": "1",
-                "icon": "public/upload/material/with_roof.png",
-                "unset_icon": "public/upload/material/with_roof.png"
-            },
-            {
-                "_id": "2",
-                "name": "Sửa xe",
-                "plain_name": "sua xe",
-                "is_active": "1",
-                "icon": "public/upload/material/fix_car.png",
-                "unset_icon": "public/upload/material/fix_car.png"
-            },
-            {
-                "_id": "3",
-                "name": "Cho thuê xe",
-                "plain_name": "cho thue xe",
-                "is_active": "1",
-                "icon": "public/upload/material/rent_car.png",
-                "unset_icon": "public/upload/material/rent_car.png"
-            },
-            {
-                "_id": "4",
-                "name": "ATM",
-                "plain_name": "atm",
-                "is_active": "1",
-                "icon": "public/upload/material/atm.png",
-                "unset_icon": "public/upload/material/atm.png"
-            }
-        ],
-        "img": [
-            {
-                "_id": "1",
-                "parking_id": "2",
-                "img_src": "public/upload/parking/parking_1_img_src_1.jpg"
-            },
-            {
-                "_id": "2",
-                "parking_id": "2",
-                "img_src": "public/upload/parking/parking_1_img_src_2.jpg"
-            },
-            {
-                "_id": "3",
-                "parking_id": "2",
-                "img_src": "public/upload/parking/parking_1_img_src_3.jpg"
-            },
-            {
-                "_id": "4",
-                "parking_id": "2",
-                "img_src": "public/upload/parking/parking_1_img_src_4.jpg"
-            }
-        ]
+        "create_time": "2019-11-08 10:51:43",
+        "update_time": "2019-11-08 10:51:43",
+        "create_time_mi": "1573185103432",
+        "intend_checkout_time": "2019-12-01 16:56:00",
+        "money_paid": "1000.00",
+        "parking_details": {
+            "name": "Bãi xe Engma",
+            "address": "220/1 Nguyễn Trọng Tuyển, phường 8, quận Phú Nhuận, TPHCM",
+            "time_start": "07:00:00",
+            "time_end": "23:59:00",
+            "lat": "10.798143",
+            "long": "106.673762",
+            "phone": "098218477464",
+            "price": "40000.00",
+            "package_price": "300000.00",
+            "package_number": "8"
+        },
+        "current_server_time": 1573360854246
     }
 }

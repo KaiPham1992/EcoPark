@@ -34,7 +34,7 @@ struct APINetwork: APINetworkProtocol {
         print("✳️ Header: \(endPoint.headers)")
         
         /** Mock data - Remove me later */
-        if endPoint.path == "_api/parking/get_parking_info" {
+        if endPoint.path == "_api/order/get_booking_detail" {
             if let path = Bundle.main.path(forResource: "test", ofType: "json") {
                 do {
                       let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)

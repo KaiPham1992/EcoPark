@@ -128,11 +128,13 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid)
     }
     func didBooking(info: BookingEntity) {
+        let address = "address"
         let pop = BookingPopUp()
-        pop.showPopUp(address: "Address", message: "10", completionDirection: {
+        pop.showPopUp(address: address , message: "1", completionDirection: {
             print("Direction")
         }) {
-            print("Detail")
+            guard let bookingId = info.id else { return }
+            self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
         }
     }
     
