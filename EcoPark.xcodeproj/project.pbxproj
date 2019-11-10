@@ -783,6 +783,9 @@
 		762EAB2623784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		762EAB2723784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		762EAB2823784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
+		762EAB2A237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
+		762EAB2B237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
+		762EAB2C237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
 		76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
@@ -1827,6 +1830,7 @@
 		762E32E7236D1A8A00FF4F3E /* CheckInPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInPopUpContent.xib; sourceTree = "<group>"; };
 		762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUp.swift; sourceTree = "<group>"; };
 		762EAB2523784EE80079A31F /* WalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEntity.swift; sourceTree = "<group>"; };
+		762EAB29237852E20079A31F /* HistoryWalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWalletEntity.swift; sourceTree = "<group>"; };
 		76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountPopUp.swift; sourceTree = "<group>"; };
 		76483BEF229EE3C90079F9A1 /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAccountView.xib; sourceTree = "<group>"; };
@@ -3665,6 +3669,7 @@
 				760D15E52375AA3500062FC7 /* BookingEntity.swift */,
 				760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */,
 				762EAB2523784EE80079A31F /* WalletEntity.swift */,
+				762EAB29237852E20079A31F /* HistoryWalletEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -4893,6 +4898,7 @@
 				76662853236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
+				762EAB2A237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DA236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -5298,6 +5304,7 @@
 				76662854236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
+				762EAB2B237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DB236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -5703,6 +5710,7 @@
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
 				76662855236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
+				762EAB2C237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DC236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,

@@ -35,6 +35,8 @@ protocol UserAPIServiceProtocol {
     func getParking(address: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure)
     
     func getWallet(success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure)
+    
+    func getWalletHistory(success: @escaping SuccessHandler<HistoryWalletEntity>.array, failure: @escaping RequestFailure)
   
 }
 
@@ -125,6 +127,11 @@ class UserAPIService: UserAPIServiceProtocol {
     func getWallet(success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure) {
         let endPoint = UserEndPoint.getWallet
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
+    }
+    
+    func getWalletHistory(success: @escaping SuccessHandler<HistoryWalletEntity>.array, failure: @escaping RequestFailure) {
+        let endPoint = UserEndPoint.getWalletHistory
+        network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
     }
     
     

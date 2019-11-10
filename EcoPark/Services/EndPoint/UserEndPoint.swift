@@ -50,6 +50,7 @@ enum UserEndPoint {
     
     case getParking(address: String)
     case getWallet
+    case getWalletHistory
 }
 
 extension UserEndPoint: EndPointType {
@@ -113,7 +114,8 @@ extension UserEndPoint: EndPointType {
             return "_api/user/home"
         case .getWallet:
             return "_api/user/get_user_wallet"
-
+        case .getWalletHistory:
+            return "_api/user/get_list_history_wallet"
         }
         
     }

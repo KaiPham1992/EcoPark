@@ -17,9 +17,17 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var lbWalletMoney: UILabel!
     
 	var presenter: WalletPresenterProtocol?
-
+    var listWalletHistory : [HistoryWalletEntity] = [] {
+        didSet {
+            tbWallet.reloadData()
+        }
+    }
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getWallet()
+        getWalletHistory()
     }
     
     override func setUpNavigation() {
@@ -36,6 +44,8 @@ class WalletViewController: BaseViewController {
         tbWallet.backgroundColor = .clear
         setWalletMoney(money: 182000)
     }
+    
+    
     
     func setWalletMoney(money: Int) {
         let money = money.description.formatNumber(type: ",")
@@ -56,13 +66,34 @@ class WalletViewController: BaseViewController {
 }
 
 extension WalletViewController: WalletViewProtocol {
+    // MARK: Get wallet
+    func getWallet() {
+        presenter?.getWallet()
+    }
+    
     func didGetWallet(wallet: WalletEntity) {
         setWalletMoney(money: wallet.wallet ?? 0)
     }
     
+    // MARK: Get wallet history
+    func getWalletHistory() {
+        presenter?.getWalletHistory()
+    }
+    
+    func didGetWalletHistory(listLog: [HistoryWalletEntity]) {
+        if listLog.count == 0 {
+            showNoData()
+        }
+        self.listWalletHistory = listLog
+    }
+    
+    // MARK: Did get error
     func didGetError(error: APIError) {
+        showNoData()
         printError(message: error.message)
     }
+    
+    
 }
 
 extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
@@ -76,12 +107,23 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return listWalletHistory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(WalletCell.self)
-        cell.displayData(isPlus: true, dateTime: "03/05/2019", price: 1000000, content: "Thanh toán phí đỗ xe EC19050512345. Cám ơn bạn đã sử dụng dịch vụ của EcoParking.")
+        let item = listWalletHistory[indexPath.row]
+        if let price = item.price,
+            let time = item.create_time_mi?.toString(dateFormat: .hhmmddmmyyy),
+            let content = item.content,
+            let status = item.status {
+            var isPlus = true
+            if status.contains("minus") {
+                isPlus = false
+            }
+            cell.displayData(isPlus: isPlus, dateTime: time, price: Int(price), content: content)
+        }
+        
         return cell
     }
 

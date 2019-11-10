@@ -23,4 +23,15 @@ class WalletInteractor: WalletInteractorInputProtocol {
             self.presenter?.didGetError(error: error)
         }
     }
+    
+    func getWalletHistory() {
+        Provider.shared.userAPIService.getWalletHistory(success: { (list) in
+            self.presenter?.didGetWalletHistory(listLog: list)
+        }) { (error) in
+            guard let error = error else { return }
+            self.presenter?.didGetError(error: error)
+        }
+    }
+    
+    
 }

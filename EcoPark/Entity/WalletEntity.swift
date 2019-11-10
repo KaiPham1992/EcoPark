@@ -13,6 +13,6 @@ class WalletEntity: BaseEntity {
     override func mapping(map: Map) {
         super.mapping(map: map)
     
-        self.wallet <- map["wallet"]
+        self.wallet <- (map["wallet"], StringToIntTransform())
     }
 }

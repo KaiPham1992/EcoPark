@@ -22,6 +22,16 @@ class WalletPresenter: WalletPresenterProtocol, WalletInteractorOutputProtocol {
         self.router = router
     }
     
+    // MARK: Get wallet history
+    func getWalletHistory() {
+        self.interactor?.getWalletHistory()
+    }
+    
+    func didGetWalletHistory(listLog: [HistoryWalletEntity]) {
+        self.view?.didGetWalletHistory(listLog: listLog)
+    }
+    
+    // MARK: Get wallet
     func getWallet() {
         self.interactor?.getWallet()
     }

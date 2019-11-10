@@ -45,9 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        checkLogin()
 //        realmConfig()
 
-//        AppRouter.shared.openHomeView()
+        AppRouter.shared.openHomeView()
 //        AppRouter.shared.updateRootView()
-        AppRouter.shared.openLoading()
+//        AppRouter.shared.openLoading()
 
        
         //--
