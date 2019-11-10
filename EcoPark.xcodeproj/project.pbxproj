@@ -125,6 +125,24 @@
 		1768974223697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1768973223697E62001F7383 /* SignUpPartnerStep2ViewController.xib */; };
 		1768974323697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1768973223697E62001F7383 /* SignUpPartnerStep2ViewController.xib */; };
 		1768974423697E62001F7383 /* SignUpPartnerStep2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1768973223697E62001F7383 /* SignUpPartnerStep2ViewController.xib */; };
+		17819B8C237815D400506BF6 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B86237815D400506BF6 /* LoadingPresenter.swift */; };
+		17819B8D237815D400506BF6 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B86237815D400506BF6 /* LoadingPresenter.swift */; };
+		17819B8E237815D400506BF6 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B86237815D400506BF6 /* LoadingPresenter.swift */; };
+		17819B8F237815D400506BF6 /* LoadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B87237815D400506BF6 /* LoadingRouter.swift */; };
+		17819B90237815D400506BF6 /* LoadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B87237815D400506BF6 /* LoadingRouter.swift */; };
+		17819B91237815D400506BF6 /* LoadingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B87237815D400506BF6 /* LoadingRouter.swift */; };
+		17819B92237815D400506BF6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B88237815D400506BF6 /* LoadingViewController.swift */; };
+		17819B93237815D400506BF6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B88237815D400506BF6 /* LoadingViewController.swift */; };
+		17819B94237815D400506BF6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B88237815D400506BF6 /* LoadingViewController.swift */; };
+		17819B95237815D400506BF6 /* LoadingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B89237815D400506BF6 /* LoadingProtocols.swift */; };
+		17819B96237815D400506BF6 /* LoadingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B89237815D400506BF6 /* LoadingProtocols.swift */; };
+		17819B97237815D400506BF6 /* LoadingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B89237815D400506BF6 /* LoadingProtocols.swift */; };
+		17819B98237815D400506BF6 /* LoadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B8A237815D400506BF6 /* LoadingInteractor.swift */; };
+		17819B99237815D400506BF6 /* LoadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B8A237815D400506BF6 /* LoadingInteractor.swift */; };
+		17819B9A237815D400506BF6 /* LoadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17819B8A237815D400506BF6 /* LoadingInteractor.swift */; };
+		17819B9B237815D400506BF6 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17819B8B237815D400506BF6 /* LoadingViewController.xib */; };
+		17819B9C237815D400506BF6 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17819B8B237815D400506BF6 /* LoadingViewController.xib */; };
+		17819B9D237815D400506BF6 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17819B8B237815D400506BF6 /* LoadingViewController.xib */; };
 		1781C7DB236C381F00F053C1 /* LicenseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781C7D9236C381F00F053C1 /* LicenseInfoCell.swift */; };
 		1781C7DC236C381F00F053C1 /* LicenseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781C7D9236C381F00F053C1 /* LicenseInfoCell.swift */; };
 		1781C7DD236C381F00F053C1 /* LicenseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781C7D9236C381F00F053C1 /* LicenseInfoCell.swift */; };
@@ -1570,6 +1588,12 @@
 		1768973023697E62001F7383 /* SignUpPartnerStep2Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep2Protocols.swift; sourceTree = "<group>"; };
 		1768973123697E62001F7383 /* SignUpPartnerStep2Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPartnerStep2Interactor.swift; sourceTree = "<group>"; };
 		1768973223697E62001F7383 /* SignUpPartnerStep2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpPartnerStep2ViewController.xib; sourceTree = "<group>"; };
+		17819B86237815D400506BF6 /* LoadingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresenter.swift; sourceTree = "<group>"; };
+		17819B87237815D400506BF6 /* LoadingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRouter.swift; sourceTree = "<group>"; };
+		17819B88237815D400506BF6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		17819B89237815D400506BF6 /* LoadingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProtocols.swift; sourceTree = "<group>"; };
+		17819B8A237815D400506BF6 /* LoadingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingInteractor.swift; sourceTree = "<group>"; };
+		17819B8B237815D400506BF6 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		1781C7D9236C381F00F053C1 /* LicenseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseInfoCell.swift; sourceTree = "<group>"; };
 		1781C7DA236C381F00F053C1 /* LicenseInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LicenseInfoCell.xib; sourceTree = "<group>"; };
 		1781C7EE236C5D4700F053C1 /* HeaderInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoView.swift; sourceTree = "<group>"; };
@@ -2163,6 +2187,19 @@
 				1768973223697E62001F7383 /* SignUpPartnerStep2ViewController.xib */,
 			);
 			path = SignUpPartnerStep2;
+			sourceTree = "<group>";
+		};
+		17819B85237815B700506BF6 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				17819B86237815D400506BF6 /* LoadingPresenter.swift */,
+				17819B87237815D400506BF6 /* LoadingRouter.swift */,
+				17819B88237815D400506BF6 /* LoadingViewController.swift */,
+				17819B89237815D400506BF6 /* LoadingProtocols.swift */,
+				17819B8A237815D400506BF6 /* LoadingInteractor.swift */,
+				17819B8B237815D400506BF6 /* LoadingViewController.xib */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		1781C7D8236C37EA00F053C1 /* LicenseInfoCell */ = {
@@ -3342,6 +3379,7 @@
 		DE361DCE2283E48200FA3B0D /* Author */ = {
 			isa = PBXGroup;
 			children = (
+				17819B85237815B700506BF6 /* Loading */,
 				DEECF89522871D0C00A4678B /* ForgotPassword */,
 				DEECF88822871CA100A4678B /* SignUp */,
 				DE361DCF2283E4B200FA3B0D /* Login */,
@@ -4181,6 +4219,7 @@
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				1781C7F3236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
+				17819B9B237815D400506BF6 /* LoadingViewController.xib in Resources */,
 				17C2C4BD236C1FDD0020B299 /* OtherInfoCell.xib in Resources */,
 				76EF7E1C237070880038486A /* PartnerCheckOutPopUpContent.xib in Resources */,
 				22431744235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -4302,6 +4341,7 @@
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				1781C7F4236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
+				17819B9C237815D400506BF6 /* LoadingViewController.xib in Resources */,
 				17FCC5F3236ADAA5003E98D8 /* PartnerStepView.xib in Resources */,
 				76EF7E1D237070880038486A /* PartnerCheckOutPopUpContent.xib in Resources */,
 				7629BDDB22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
@@ -4423,6 +4463,7 @@
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				1781C7F5236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
+				17819B9D237815D400506BF6 /* LoadingViewController.xib in Resources */,
 				17FCC5F4236ADAA5003E98D8 /* PartnerStepView.xib in Resources */,
 				76EF7E1E237070880038486A /* PartnerCheckOutPopUpContent.xib in Resources */,
 				7629BDDC22ACD2580051B835 /* ReportSuccessedView.xib in Resources */,
@@ -4982,6 +5023,7 @@
 				DEECF8742287041900A4678B /* MenuCell.swift in Sources */,
 				DE361DF92283E57900FA3B0D /* UIImage+extension.swift in Sources */,
 				22EB900B23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */,
+				17819B95237815D400506BF6 /* LoadingProtocols.swift in Sources */,
 				7629BDE322ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				DE361DE72283E54C00FA3B0D /* BaseView.swift in Sources */,
 				175C73392367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
@@ -5036,6 +5078,7 @@
 				DEECF87922870AEB00A4678B /* LanguageHelper.swift in Sources */,
 				DE952F922287D2A700E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				DE361F3D2283E85000FA3B0D /* NetworkRequest.swift in Sources */,
+				17819B92237815D400506BF6 /* LoadingViewController.swift in Sources */,
 				768074AE22C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
 				DE361E8D2283E60500FA3B0D /* AppCheckBox.swift in Sources */,
 				172D097A236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */,
@@ -5044,6 +5087,7 @@
 				DE361DFA2283E57900FA3B0D /* UIViewController+extension.swift in Sources */,
 				DE89D1CC22A4126C000638B0 /* WebViewController.swift in Sources */,
 				760B92732371B33000C281D6 /* ChooseDatePopUp.swift in Sources */,
+				17819B98237815D400506BF6 /* LoadingInteractor.swift in Sources */,
 				2A45680B236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				7609FBCA236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE361E7A2283E60500FA3B0D /* AppSearchBar.swift in Sources */,
@@ -5054,10 +5098,12 @@
 				DE361F4D2283E85000FA3B0D /* CommonAPIService.swift in Sources */,
 				1768973C23697E62001F7383 /* SignUpPartnerStep2Protocols.swift in Sources */,
 				7666FC84236D314100BD813E /* RatingPopUp.swift in Sources */,
+				17819B8F237815D400506BF6 /* LoadingRouter.swift in Sources */,
 				DE361F522283E85000FA3B0D /* Provider.swift in Sources */,
 				DE361F292283E85000FA3B0D /* BaseEntity.swift in Sources */,
 				DE953181228846D400E3F688 /* ChangePasswordViewController.swift in Sources */,
 				DE952F832287D2A700E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				17819B8C237815D400506BF6 /* LoadingPresenter.swift in Sources */,
 				17BAF89F236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.swift in Sources */,
 				76682F2F236EB72C00F49482 /* MyNotificationViewController.swift in Sources */,
 				DE361E9F2283E60500FA3B0D /* YesNoContentView.swift in Sources */,
@@ -5380,6 +5426,7 @@
 				DE9530122287DF4800E3F688 /* UIImage+extension.swift in Sources */,
 				22EB900C23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */,
 				7629BDE422ACF0B60051B835 /* TextFieldBee.swift in Sources */,
+				17819B96237815D400506BF6 /* LoadingProtocols.swift in Sources */,
 				DE9530132287DF4800E3F688 /* BaseView.swift in Sources */,
 				175C733A2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE9530142287DF4800E3F688 /* APIError.swift in Sources */,
@@ -5434,6 +5481,7 @@
 				DE9530272287DF4800E3F688 /* KActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				DE9530282287DF4800E3F688 /* NetworkRequest.swift in Sources */,
 				768074AF22C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
+				17819B93237815D400506BF6 /* LoadingViewController.swift in Sources */,
 				DE9530292287DF4800E3F688 /* AppCheckBox.swift in Sources */,
 				DE95302A2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				172D097B236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */,
@@ -5442,6 +5490,7 @@
 				DE89D1CD22A4126C000638B0 /* WebViewController.swift in Sources */,
 				DE95302C2287DF4800E3F688 /* AppSearchBar.swift in Sources */,
 				760B92742371B33000C281D6 /* ChooseDatePopUp.swift in Sources */,
+				17819B99237815D400506BF6 /* LoadingInteractor.swift in Sources */,
 				2A45680C236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				7609FBCB236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE95302D2287DF4800E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
@@ -5452,10 +5501,12 @@
 				1768973D23697E62001F7383 /* SignUpPartnerStep2Protocols.swift in Sources */,
 				DE9530332287DF4800E3F688 /* Provider.swift in Sources */,
 				7666FC85236D314100BD813E /* RatingPopUp.swift in Sources */,
+				17819B90237815D400506BF6 /* LoadingRouter.swift in Sources */,
 				DE9530342287DF4800E3F688 /* BaseEntity.swift in Sources */,
 				DE953182228846D400E3F688 /* ChangePasswordViewController.swift in Sources */,
 				DE9530352287DF4800E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				DE9530362287DF4800E3F688 /* YesNoContentView.swift in Sources */,
+				17819B8D237815D400506BF6 /* LoadingPresenter.swift in Sources */,
 				17BAF8A0236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.swift in Sources */,
 				76682F30236EB72C00F49482 /* MyNotificationViewController.swift in Sources */,
 				DE9530372287DF4800E3F688 /* AppTextView.swift in Sources */,
@@ -5778,6 +5829,7 @@
 				7629BDE522ACF0B60051B835 /* TextFieldBee.swift in Sources */,
 				22EB900D23683B0900F77BC0 /* ParkingDetailPopUp.swift in Sources */,
 				DE9530C12287DF6400E3F688 /* BaseView.swift in Sources */,
+				17819B97237815D400506BF6 /* LoadingProtocols.swift in Sources */,
 				DE9530C22287DF6400E3F688 /* APIError.swift in Sources */,
 				175C733B2367E4EE009F03F6 /* ProfileRouter.swift in Sources */,
 				DE9530C32287DF6400E3F688 /* UserEntity.swift in Sources */,
@@ -5832,6 +5884,7 @@
 				DE9530D62287DF6400E3F688 /* NetworkRequest.swift in Sources */,
 				768074B022C910E80015A75C /* SubmitExerciseParam.swift in Sources */,
 				DE9530D72287DF6400E3F688 /* AppCheckBox.swift in Sources */,
+				17819B94237815D400506BF6 /* LoadingViewController.swift in Sources */,
 				DE9530D82287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				DE9530D92287DF6400E3F688 /* UIViewController+extension.swift in Sources */,
 				172D097C236EBA080000F0BC /* HistoryPartnerDetailCheckinProtocols.swift in Sources */,
@@ -5840,6 +5893,7 @@
 				DE9530DA2287DF6400E3F688 /* AppSearchBar.swift in Sources */,
 				DE9530DB2287DF6400E3F688 /* KActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				760B92752371B33000C281D6 /* ChooseDatePopUp.swift in Sources */,
+				17819B9A237815D400506BF6 /* LoadingInteractor.swift in Sources */,
 				2A45680D236C81D800A23FB0 /* HistoryParkingRouter.swift in Sources */,
 				7609FBCC236D9F530029E003 /* CheckOutRouter.swift in Sources */,
 				DE9530DC2287DF6400E3F688 /* SignUpProtocols.swift in Sources */,
@@ -5850,10 +5904,12 @@
 				1768973E23697E62001F7383 /* SignUpPartnerStep2Protocols.swift in Sources */,
 				DE9530E12287DF6400E3F688 /* Provider.swift in Sources */,
 				7666FC86236D314100BD813E /* RatingPopUp.swift in Sources */,
+				17819B91237815D400506BF6 /* LoadingRouter.swift in Sources */,
 				DE9530E22287DF6400E3F688 /* BaseEntity.swift in Sources */,
 				DE953183228846D400E3F688 /* ChangePasswordViewController.swift in Sources */,
 				DE9530E32287DF6400E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				DE9530E42287DF6400E3F688 /* YesNoContentView.swift in Sources */,
+				17819B8E237815D400506BF6 /* LoadingPresenter.swift in Sources */,
 				17BAF8A1236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.swift in Sources */,
 				76682F31236EB72C00F49482 /* MyNotificationViewController.swift in Sources */,
 				DE9530E52287DF6400E3F688 /* AppTextView.swift in Sources */,
