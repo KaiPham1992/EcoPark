@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        AppRouter.shared.openHomeView()
 //        AppRouter.shared.updateRootView()
-        AppRouter.shared.openLoading()
+        AppRouter.shared.openHomeView()
 
        
         //--
