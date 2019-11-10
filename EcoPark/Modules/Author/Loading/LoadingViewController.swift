@@ -10,7 +10,7 @@
 
 import UIKit
 
-class LoadingViewController: UIViewController, LoadingViewProtocol {
+class LoadingViewController: BaseViewController, LoadingViewProtocol {
 
     @IBOutlet weak var lbNext: UILabel!
     
@@ -19,6 +19,11 @@ class LoadingViewController: UIViewController, LoadingViewProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideNavigation()
     }
 
     private func setupUI() {
