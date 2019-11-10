@@ -28,16 +28,18 @@ class BookingPopUp: BasePopUpView {
     
     func showPopUp(address: String, message: String, completionDirection: CompletionClosure?, completionDetail: CompletionClosure?) {
         
-        let attr1 = "Giữ chỗ có hiệu lực trong vòng ".toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr1 = LocalizableKey.bookingPopUpAttr1.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
         
-        let attr2 = "\(message) giờ kể từ thời gian dự kiến  ".description.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
+        let attr2 = "\(message) \(LocalizableKey.bookingPopUpAttr2.showLanguage)".description.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
         
-        let attr3 = " vui lòng đến đúng giờ".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr3 = LocalizableKey.bookingPopUpAttr3.showLanguage.toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
         
         let attr = NSMutableAttributedString()
         attr.append(attr1)
         attr.append(attr2)
         attr.append(attr3)
+        
+        vYesNoContentView.lbAddress.text = address
         
         vYesNoContentView.lbMessage.attributedText = attr
         

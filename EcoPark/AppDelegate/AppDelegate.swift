@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        AppRouter.shared.openHomeView()
 //        AppRouter.shared.updateRootView()
         AppRouter.shared.openLoading()
+
        
         //--
 //        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (didAllow, err) in

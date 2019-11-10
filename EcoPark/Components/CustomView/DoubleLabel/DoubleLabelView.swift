@@ -32,6 +32,10 @@ class DoubleLabelView : BaseViewXib {
         lblTitle.text = title
     }
     
+    func setValueText(text: String) {
+        lblTime.text = text
+    }
+    
     func setupViewUnit(title: String, value: String = "0", unit: String = "VND") {
         let attribute = NSMutableAttributedString()
         let attr1 = NSAttributedString(string: value, attributes: [NSAttributedString.Key.font : AppFont.fontRegular15, NSAttributedString.Key.foregroundColor: UIColor.black])

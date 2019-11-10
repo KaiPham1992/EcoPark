@@ -21,5 +21,17 @@ class DetailParkingPresenter: DetailParkingPresenterProtocol, DetailParkingInter
         self.interactor = interactor
         self.router = router
     }
+    
+    func getBookingDetail(id: String) {
+        self.interactor?.getBookingDetail(id: id)
+    }
+    
+    func didGetBookingDetail(info: BookingDetailEntity) {
+        self.view?.didGetBookingDetail(info: info)
+    }
+    
+    func didGetError(error: APIError) {
+        self.view?.didGetError(error: error)
+    }
 
 }
