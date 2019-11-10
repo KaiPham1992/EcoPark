@@ -49,7 +49,7 @@ class UserEntity: BaseEntity  {
     var isLeader: Int?
     var attachImg: String?
     var phone: String?
-    var birthDay: String?
+    var birthDay: Date?
     var gender: String?
     
     override func mapping(map: Map) {
@@ -93,7 +93,7 @@ class UserEntity: BaseEntity  {
         self.level <- map["level"]
         self.attachImg <- map["attach_img_src"]
         self.phone <- map["phone"]
-        self.birthDay <- map["birthday"]
+        self.birthDay <- (map["birthday"], AppTimestampTransform())
         self.gender <- map["gender"]
     }
     

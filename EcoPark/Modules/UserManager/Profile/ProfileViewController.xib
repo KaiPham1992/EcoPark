@@ -160,6 +160,11 @@
                                     <state key="normal" title="LƯU THAY ĐỔI">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="btnSaveTapped" destination="-1" eventType="touchUpInside" id="8hU-4g-60u"/>
                                     </connections>

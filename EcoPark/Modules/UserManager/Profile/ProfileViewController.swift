@@ -62,14 +62,23 @@ class ProfileViewController: BaseViewController {
         vPhoneNumber.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.phone
         vEmail.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.email
         vGender.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.gender
-        vBirthDay.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.birthDay
+        vBirthDay.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYY)
         imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
-        checkHideShowSaveButton()
+//        checkHideShowSaveButton()
         
     }
     
     @IBAction func btnSaveTapped() {
         if validateInputData() {
+            if self.vGender.tfInput.text == "Nữ" {
+                genderSelect = "female"
+            }
+            else if self.vGender.tfInput.text == "Nam" {
+                genderSelect = "male"
+            }
+            else if self.vGender.tfInput.text == "Khác" {
+                genderSelect = "other"
+            }
             let param = UpdateProfileParam(username: vUsername.getText(), fullname: vDisplayname.getText(), email: vEmail.getText(), phone: vPhoneNumber.getText(), gender: genderSelect, birthDay: vBirthDay.tfInput.text)
             
             self.presenter?.updateProfile(param: param)
@@ -102,21 +111,21 @@ extension ProfileViewController:  ProfileViewProtocol {
     }
 }
 
-extension ProfileViewController {
-    func textFieldDidBeginEditing() {
-        vDisplayname.textFieldDidChange = {
-           self.checkHideShowSaveButton()
-        }
-        
-        vPhoneNumber.textFieldDidChange = {
-            self.checkHideShowSaveButton()
-        }
-        
-        vEmail.textFieldDidChange = {
-            self.checkHideShowSaveButton()
-        }
-    }
-}
+//extension ProfileViewController {
+//    func textFieldDidBeginEditing() {
+//        vDisplayname.textFieldDidChange = {
+//           self.checkHideShowSaveButton()
+//        }
+//
+//        vPhoneNumber.textFieldDidChange = {
+//            self.checkHideShowSaveButton()
+//        }
+//
+//        vEmail.textFieldDidChange = {
+//            self.checkHideShowSaveButton()
+//        }
+//    }
+//}
 
 extension ProfileViewController {
     func validateInputData() -> Bool {
@@ -149,46 +158,46 @@ extension ProfileViewController {
         lbError.text = message
     }
     
-    func isEnabledSaveButton(isEnabled: Bool = true) {
-
-        
-        self.btnSave.isEnabled = isEnabled
-        if isEnabled {
-            self.btnSave.backgroundColor = AppColor.color_0_129_255
-        } else {
-            self.btnSave.backgroundColor = AppColor.gray999999
-        }
-    }
-    
-    func checkHideShowSaveButton(){
-    
-    var isEnabled = false
-        
-    if let user = UserDefaultHelper.shared.loginUserInfo {
-        if  self.vDisplayname.tfInput.text != user.fullName
-        {
-            isEnabled = true
-        }
-        
-        if  vGender.tfInput.text != user.gender {
-            isEnabled = true
-        }
-        
-        
-        if self.vPhoneNumber.tfInput.text != user.phone
-        {
-            isEnabled = true
-        }
-        if vUsername.tfInput.text != user.displayName {
-            isEnabled = true
-        }
-        
-//        if vBirthDay.tfInput.text != user.birthDay {
+//    func isEnabledSaveButton(isEnabled: Bool = true) {
+//
+//
+//        self.btnSave.isEnabled = isEnabled
+//        if isEnabled {
+//            self.btnSave.backgroundColor = AppColor.color_0_129_255
+//        } else {
+//            self.btnSave.backgroundColor = AppColor.gray999999
+//        }
+//    }
+//
+//    func checkHideShowSaveButton(){
+//
+//    var isEnabled = false
+//
+//    if let user = UserDefaultHelper.shared.loginUserInfo {
+//        if  self.vDisplayname.tfInput.text != user.fullName
+//        {
 //            isEnabled = true
 //        }
-    }
-        self.isEnabledSaveButton(isEnabled: isEnabled)
-    }
+//
+//        if  vGender.tfInput.text != user.gender {
+//            isEnabled = true
+//        }
+//
+//
+//        if self.vPhoneNumber.tfInput.text != user.phone
+//        {
+//            isEnabled = true
+//        }
+//        if vUsername.tfInput.text != user.displayName {
+//            isEnabled = true
+//        }
+//
+////        if vBirthDay.tfInput.text != user.birthDay {
+////            isEnabled = true
+////        }
+//    }
+//        self.isEnabledSaveButton(isEnabled: isEnabled)
+//    }
 }
 
 extension ProfileViewController: AppTextFieldDropDownDelegate {
