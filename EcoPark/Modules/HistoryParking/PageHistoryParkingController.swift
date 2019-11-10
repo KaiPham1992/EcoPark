@@ -18,7 +18,9 @@ class PageHistoryParkingController : PageViewController {
     }
     
     @objc func openMenu(){
-        
+        if let containerController = navigationController?.parent as? ContainerViewController {
+            containerController.toggleLeftPanel()
+        }
     }
     
     @objc func checkQrCode() {
