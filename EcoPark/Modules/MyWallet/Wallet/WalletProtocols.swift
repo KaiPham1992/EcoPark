@@ -18,12 +18,16 @@ protocol WalletWireframeProtocol: class {
 protocol WalletPresenterProtocol: class {
 
     var interactor: WalletInteractorInputProtocol? { get set }
+    func getWallet()
+    func didGetWallet(wallet: WalletEntity)
 }
 
 //MARK: Interactor -
 protocol WalletInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
+    func didGetWallet(wallet: WalletEntity)
+    func didGetError(error: APIError)
 }
 
 protocol WalletInteractorInputProtocol: class {
@@ -31,6 +35,7 @@ protocol WalletInteractorInputProtocol: class {
     var presenter: WalletInteractorOutputProtocol?  { get set }
 
     /* Presenter -> Interactor */
+    func getWallet()
 }
 
 //MARK: View -
@@ -39,4 +44,6 @@ protocol WalletViewProtocol: class {
     var presenter: WalletPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didGetError(error: APIError)
+    func didGetWallet(wallet: WalletEntity)
 }

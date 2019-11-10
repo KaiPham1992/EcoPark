@@ -762,6 +762,9 @@
 		762E32EC236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */; };
 		762E32ED236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */; };
 		762E32EE236D1A9600FF4F3E /* CheckInPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */; };
+		762EAB2623784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
+		762EAB2723784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
+		762EAB2823784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
@@ -1799,6 +1802,7 @@
 		762E32E3236D1A7D00FF4F3E /* CheckInPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUpContent.swift; sourceTree = "<group>"; };
 		762E32E7236D1A8A00FF4F3E /* CheckInPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInPopUpContent.xib; sourceTree = "<group>"; };
 		762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUp.swift; sourceTree = "<group>"; };
+		762EAB2523784EE80079A31F /* WalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEntity.swift; sourceTree = "<group>"; };
 		76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountPopUp.swift; sourceTree = "<group>"; };
 		76483BEF229EE3C90079F9A1 /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAccountView.xib; sourceTree = "<group>"; };
@@ -3622,6 +3626,7 @@
 				762C489D237518A40001EB27 /* VehicleTypeEntity.swift */,
 				760D15E52375AA3500062FC7 /* BookingEntity.swift */,
 				760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */,
+				762EAB2523784EE80079A31F /* WalletEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -4953,6 +4958,7 @@
 				17C7FB9523700A7600ACE95D /* BaseCollectionCell.swift in Sources */,
 				7609FBD0236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A792235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
+				762EAB2623784EE80079A31F /* WalletEntity.swift in Sources */,
 				76FBA1DC236EE08B00DD92D2 /* NotificationDetailViewController.swift in Sources */,
 				17BAF89C236EAB650066BD29 /* HistoryPartnerDetailBookingRouter.swift in Sources */,
 				228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */,
@@ -5352,6 +5358,7 @@
 				17C7FB9623700A7600ACE95D /* BaseCollectionCell.swift in Sources */,
 				7609FBD1236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A793235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
+				762EAB2723784EE80079A31F /* WalletEntity.swift in Sources */,
 				76FBA1DD236EE08B00DD92D2 /* NotificationDetailViewController.swift in Sources */,
 				17BAF89D236EAB650066BD29 /* HistoryPartnerDetailBookingRouter.swift in Sources */,
 				228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */,
@@ -5751,6 +5758,7 @@
 				76FBA1E4236EE08B00DD92D2 /* NotificationDetailInteractor.swift in Sources */,
 				DE9530B02287DF6400E3F688 /* KActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				17C7FB9723700A7600ACE95D /* BaseCollectionCell.swift in Sources */,
+				762EAB2823784EE80079A31F /* WalletEntity.swift in Sources */,
 				7609FBD2236D9F530029E003 /* CheckOutProtocols.swift in Sources */,
 				2220A794235EDA3A00E9C0F1 /* HomeViewController.swift in Sources */,
 				76FBA1DE236EE08B00DD92D2 /* NotificationDetailViewController.swift in Sources */,

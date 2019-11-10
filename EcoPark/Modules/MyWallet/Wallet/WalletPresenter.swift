@@ -21,5 +21,17 @@ class WalletPresenter: WalletPresenterProtocol, WalletInteractorOutputProtocol {
         self.interactor = interactor
         self.router = router
     }
+    
+    func getWallet() {
+        self.interactor?.getWallet()
+    }
+    
+    func didGetWallet(wallet: WalletEntity) {
+        self.view?.didGetWallet(wallet: wallet)
+    }
+    
+    func didGetError(error: APIError) {
+        self.view?.didGetError(error: error)
+    }
 
 }

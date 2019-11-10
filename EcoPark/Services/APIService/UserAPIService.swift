@@ -31,7 +31,10 @@ protocol UserAPIServiceProtocol {
     func uploadAvatar(image: UIImage, success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure)
     
     func getProfileUser(success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure)
+    
     func getParking(address: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure)
+    
+    func getWallet(success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure)
   
 }
 
@@ -117,6 +120,11 @@ class UserAPIService: UserAPIServiceProtocol {
     func getParking(address: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure) {
         let endPoint = UserEndPoint.getParking(address: address)
         network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
+    }
+    
+    func getWallet(success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = UserEndPoint.getWallet
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
     
     

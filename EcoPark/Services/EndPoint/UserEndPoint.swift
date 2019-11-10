@@ -49,6 +49,7 @@ enum UserEndPoint {
     // Eco park
     
     case getParking(address: String)
+    case getWallet
 }
 
 extension UserEndPoint: EndPointType {
@@ -106,8 +107,13 @@ extension UserEndPoint: EndPointType {
             return "_api/home/get_recent_activity_list"
         case .getPackage:
             return "_api/product/get_list_user_inventory"
+            
+        // MARK: EcoPark
         case .getParking:
             return "_api/user/home"
+        case .getWallet:
+            return "_api/user/get_user_wallet"
+
         }
         
     }
@@ -122,6 +128,8 @@ extension UserEndPoint: EndPointType {
             return .get
         case .changePassword, .updateProfileSocial, .updateProfile:
             return .put
+        default:
+            return .post
         }
     }
     
@@ -223,6 +231,8 @@ extension UserEndPoint: EndPointType {
                     "limit": limit]
         case .getParking(let address):
             return ["address": address]
+        default:
+            return [:]
         }
     }
     

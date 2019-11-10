@@ -13,4 +13,14 @@ import UIKit
 class WalletInteractor: WalletInteractorInputProtocol {
 
     weak var presenter: WalletInteractorOutputProtocol?
+    
+    func getWallet() {
+        Provider.shared.userAPIService.getWallet(success: { (wallet) in
+            guard let wallet = wallet else { return }
+            self.presenter?.didGetWallet(wallet: wallet)
+        }) { (error) in
+            guard let error = error else { return }
+            self.presenter?.didGetError(error: error)
+        }
+    }
 }

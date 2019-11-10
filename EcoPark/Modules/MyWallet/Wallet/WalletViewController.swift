@@ -10,7 +10,7 @@
 
 import UIKit
 
-class WalletViewController: BaseViewController, WalletViewProtocol {
+class WalletViewController: BaseViewController {
 
     @IBOutlet weak var fromToDatePicker: FromToDatePicker!
     @IBOutlet weak var tbWallet: UITableView!
@@ -54,6 +54,17 @@ class WalletViewController: BaseViewController, WalletViewProtocol {
     }
     
 }
+
+extension WalletViewController: WalletViewProtocol {
+    func didGetWallet(wallet: WalletEntity) {
+        setWalletMoney(money: wallet.wallet ?? 0)
+    }
+    
+    func didGetError(error: APIError) {
+        printError(message: error.message)
+    }
+}
+
 extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
     
     func configTableView() {
