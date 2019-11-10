@@ -141,6 +141,6 @@ extension Double {
         guard let currency = formatter.string(from: price) else { return ""}
         return currency.replacingOccurrences(of: ".", with: ",").replacingOccurrences(of: "₫", with: "VND").trim()
         
-        print(currency.replacingOccurrences(of: ".", with: ","))
+//        print(currency.replacingOccurrences(of: ".", with: ","))
     }
 }
