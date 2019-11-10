@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Comfortaa-Regular.ttf">
-            <string>Comfortaa-Regular</string>
-        </array>
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
@@ -26,6 +23,7 @@
                 <outlet property="imgCaptcha" destination="K6B-hg-kcZ" id="H4F-Y9-NL3"/>
                 <outlet property="lbNotice" destination="I4n-HV-OaU" id="E25-xi-Avo"/>
                 <outlet property="lbStatus" destination="n6Y-yr-aQe" id="dnM-VF-6Dw"/>
+                <outlet property="lbTermAndPolicy" destination="UJk-nd-zA2" id="50Y-NT-aBr"/>
                 <outlet property="vBirthDay" destination="2BA-BD-z7h" id="g95-nc-uO9"/>
                 <outlet property="vCapcha" destination="a0l-EU-V8D" id="iok-XZ-XXH"/>
                 <outlet property="vDisplayName" destination="XCE-zH-rvb" id="3xf-ZW-puC"/>
@@ -47,7 +45,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="933"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7q-Dn-8Fk">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="865.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="858"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng điền đầy đủ các thông tin đánh dấu *" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4n-HV-OaU">
                                     <rect key="frame" x="16" y="16" width="318.5" height="20.5"/>
@@ -55,41 +53,41 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-UZ-22x" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-UZ-22x" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="52.5" width="343" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCE-zH-rvb" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCE-zH-rvb" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="130.5" width="343" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="Ncw-PW-xnP"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-U8-4sm" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-U8-4sm" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="208.5" width="343" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7y-yN-fNm" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7y-yN-fNm" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="286.5" width="343" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnZ-aK-jo3" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnZ-aK-jo3" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="364.5" width="343" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLc-ou-mbB" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLc-ou-mbB" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="442.5" width="343" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAK-94-boy" customClass="AppDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAK-94-boy" customClass="AppDropDown" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="17" y="520.5" width="145" height="70"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="Y3t-3l-qal"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BA-BD-z7h" customClass="AppDateDropDown" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BA-BD-z7h" customClass="AppDateDropDown" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="178" y="520.5" width="180" height="70"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
@@ -118,7 +116,7 @@
                                         <action selector="btnReloadCaptcha" destination="-1" eventType="touchUpInside" id="MKz-nQ-anx"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-EU-V8D" customClass="AppTextField" customModule="EnglishApp_AppStore" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-EU-V8D" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="17" y="674.5" width="342" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
@@ -134,7 +132,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" id="lQh-Lo-Jbd"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="13"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -148,10 +146,21 @@
                                     <state key="normal" title="Đăng ký">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="btnSignUpTapped" destination="-1" eventType="touchUpInside" id="Clo-eE-kcK"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-nd-zA2">
+                                    <rect key="frame" x="17" y="822.5" width="341" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -161,7 +170,6 @@
                                 <constraint firstItem="XCE-zH-rvb" firstAttribute="top" secondItem="fmk-UZ-22x" secondAttribute="bottom" constant="8" id="4K0-iZ-tsl"/>
                                 <constraint firstItem="UnZ-aK-jo3" firstAttribute="trailing" secondItem="j7y-yN-fNm" secondAttribute="trailing" id="4XY-i5-12o"/>
                                 <constraint firstItem="2BA-BD-z7h" firstAttribute="leading" secondItem="PAK-94-boy" secondAttribute="trailing" constant="16" id="5pn-vv-dco"/>
-                                <constraint firstAttribute="bottom" secondItem="a74-Eu-grb" secondAttribute="bottom" constant="50" id="63C-I7-XTl"/>
                                 <constraint firstAttribute="trailing" secondItem="XCE-zH-rvb" secondAttribute="trailing" constant="16" id="76s-65-uVz"/>
                                 <constraint firstItem="uLc-ou-mbB" firstAttribute="height" secondItem="UnZ-aK-jo3" secondAttribute="height" id="8WZ-GY-6iU"/>
                                 <constraint firstItem="j7y-yN-fNm" firstAttribute="height" secondItem="9bV-U8-4sm" secondAttribute="height" id="8kG-CU-gj4"/>
@@ -180,6 +188,7 @@
                                 <constraint firstItem="a74-Eu-grb" firstAttribute="trailing" secondItem="1UO-Kq-BR0" secondAttribute="trailing" id="NAp-na-ZPY"/>
                                 <constraint firstItem="RcA-fJ-FiS" firstAttribute="centerY" secondItem="K6B-hg-kcZ" secondAttribute="centerY" id="O5M-dX-mzA"/>
                                 <constraint firstItem="UnZ-aK-jo3" firstAttribute="height" secondItem="j7y-yN-fNm" secondAttribute="height" id="PEq-G8-GJZ"/>
+                                <constraint firstAttribute="trailing" secondItem="UJk-nd-zA2" secondAttribute="trailing" constant="17" id="PPB-DT-zBA"/>
                                 <constraint firstItem="I4n-HV-OaU" firstAttribute="leading" secondItem="w7q-Dn-8Fk" secondAttribute="leading" constant="16" id="QAv-KC-fMN"/>
                                 <constraint firstItem="9bV-U8-4sm" firstAttribute="top" secondItem="XCE-zH-rvb" secondAttribute="bottom" constant="8" id="RGv-JY-NgH"/>
                                 <constraint firstItem="PAK-94-boy" firstAttribute="top" secondItem="uLc-ou-mbB" secondAttribute="bottom" constant="8" id="Tbv-nU-PB0"/>
@@ -190,6 +199,7 @@
                                 <constraint firstItem="9bV-U8-4sm" firstAttribute="leading" secondItem="XCE-zH-rvb" secondAttribute="leading" id="ZFX-iR-bDp"/>
                                 <constraint firstItem="2BA-BD-z7h" firstAttribute="height" secondItem="PAK-94-boy" secondAttribute="height" id="ZWI-ol-Rdy"/>
                                 <constraint firstItem="fmk-UZ-22x" firstAttribute="leading" secondItem="XCE-zH-rvb" secondAttribute="leading" id="ZiT-GB-HNn"/>
+                                <constraint firstAttribute="bottom" secondItem="UJk-nd-zA2" secondAttribute="bottom" constant="15" id="a1r-vw-BFu"/>
                                 <constraint firstAttribute="trailing" secondItem="2BA-BD-z7h" secondAttribute="trailing" constant="17" id="aq7-aH-edl"/>
                                 <constraint firstItem="cfu-4j-0Pt" firstAttribute="centerX" secondItem="RcA-fJ-FiS" secondAttribute="centerX" id="b7Z-MM-Kfm"/>
                                 <constraint firstItem="j7y-yN-fNm" firstAttribute="trailing" secondItem="9bV-U8-4sm" secondAttribute="trailing" id="ckw-zH-qBN"/>
@@ -197,6 +207,7 @@
                                 <constraint firstItem="XCE-zH-rvb" firstAttribute="leading" secondItem="w7q-Dn-8Fk" secondAttribute="leading" constant="16" id="ehx-Zx-K6x"/>
                                 <constraint firstItem="UnZ-aK-jo3" firstAttribute="top" secondItem="j7y-yN-fNm" secondAttribute="bottom" constant="8" id="fL6-ZW-WcI"/>
                                 <constraint firstItem="PAK-94-boy" firstAttribute="leading" secondItem="w7q-Dn-8Fk" secondAttribute="leading" constant="17" id="gc5-VL-1hg"/>
+                                <constraint firstItem="UJk-nd-zA2" firstAttribute="top" secondItem="a74-Eu-grb" secondAttribute="bottom" constant="7" id="gnU-Am-r71"/>
                                 <constraint firstItem="n6Y-yr-aQe" firstAttribute="top" secondItem="1UO-Kq-BR0" secondAttribute="top" constant="10" id="hhN-EG-6oU"/>
                                 <constraint firstItem="I4n-HV-OaU" firstAttribute="top" secondItem="w7q-Dn-8Fk" secondAttribute="top" constant="16" id="ikz-dN-kTj"/>
                                 <constraint firstItem="2BA-BD-z7h" firstAttribute="top" secondItem="PAK-94-boy" secondAttribute="top" id="kHk-cy-JII"/>
@@ -204,6 +215,7 @@
                                 <constraint firstItem="a0l-EU-V8D" firstAttribute="trailing" secondItem="uLc-ou-mbB" secondAttribute="trailing" id="nev-YW-NEZ"/>
                                 <constraint firstItem="cfu-4j-0Pt" firstAttribute="centerY" secondItem="RcA-fJ-FiS" secondAttribute="centerY" id="psV-h6-1ku"/>
                                 <constraint firstItem="1UO-Kq-BR0" firstAttribute="trailing" secondItem="a0l-EU-V8D" secondAttribute="trailing" id="qEh-OV-N8t"/>
+                                <constraint firstItem="UJk-nd-zA2" firstAttribute="leading" secondItem="a74-Eu-grb" secondAttribute="leading" id="tcQ-5e-Q7v"/>
                                 <constraint firstItem="uLc-ou-mbB" firstAttribute="trailing" secondItem="UnZ-aK-jo3" secondAttribute="trailing" id="uvi-Fe-RYw"/>
                                 <constraint firstItem="a0l-EU-V8D" firstAttribute="leading" secondItem="K6B-hg-kcZ" secondAttribute="leading" id="wEg-fA-3xU"/>
                                 <constraint firstItem="n6Y-yr-aQe" firstAttribute="leading" secondItem="1UO-Kq-BR0" secondAttribute="leading" id="zTg-K0-KNd"/>

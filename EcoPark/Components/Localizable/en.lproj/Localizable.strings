@@ -52,6 +52,14 @@
 "Select" = "Select";
 "male" = "Male";
 "female" = "Female";
+"other" = "Other";
+
+"termAndPolicyText1" = "By choosing to subscribe, you have read and agreed ";
+"termAndPolicyText2" = "Terms of use ";
+"termAndPolicyText3" = "and ";
+"termAndPolicyText4" = "Information security policy ";
+"termAndPolicyText5" = "of ";
+"termAndPolicyText6" = "ECOPARKING.";
 
 // Forgot password page
 "ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";

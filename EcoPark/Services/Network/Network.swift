@@ -108,6 +108,10 @@ struct APINetwork: APINetworkProtocol {
     func uploadAvatar(image: UIImage, endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure) {
         print(endPoint.parameters)
         
+        print("✳️ URL: \(BASE_URL)\(endPoint.path)")
+        print("✳️ Param: \(endPoint.parameters)")
+        print("✳️ Header: \(endPoint.headers)")
+        
         request.uploadAvatar(image: image, endPoint: endPoint, success: { data in
             let json = JSON(data)
             print(json)

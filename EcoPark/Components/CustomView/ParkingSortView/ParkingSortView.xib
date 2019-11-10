@@ -27,6 +27,7 @@
                 <outlet property="lbPackagePrice" destination="rgY-uA-LNJ" id="dft-ML-sdH"/>
                 <outlet property="lbPrice" destination="ghJ-by-az1" id="gHV-DS-YwJ"/>
                 <outlet property="lbTime" destination="qaa-Z7-9Lh" id="VBW-hg-ifA"/>
+                <outlet property="lbTypeName" destination="TVI-OG-Gc7" id="MTG-R5-gAT"/>
                 <outlet property="vRating" destination="dvN-8j-aJs" id="0ga-rF-NNy"/>
             </connections>
         </placeholder>

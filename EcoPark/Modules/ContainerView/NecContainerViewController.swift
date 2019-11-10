@@ -34,6 +34,14 @@ class NecContainerViewController: ContainerViewController {
 }
 
 extension NecContainerViewController: MenuViewControllerDelegate {
+    func loginTapped() {
+        let vc = LoginRouter.createModule()
+        vc.callBackLoginSuccessed = {
+            self.menuVC.viewWillAppear(true)
+        }
+        self.present(controller: UINavigationController(rootViewController: vc))
+    }
+    
     func selected(item: MenuItem) {
         guard let icon = item.imgIcon else { return }
         switch icon {
@@ -53,6 +61,9 @@ extension NecContainerViewController: MenuViewControllerDelegate {
             self.openViewController(presentingController: wallet)
         case AppImage.imgNotification:
             let vc = NotificationViewController()
+            self.openViewController(presentingController: vc)
+        case AppImage.imgHistory:
+            let vc = PageHistoryParkingController()
             self.openViewController(presentingController: vc)
         default:
             self.openViewController(presentingController: homeVC)

@@ -288,6 +288,7 @@ open class ContainerViewController: UIViewController, UIGestureRecognizerDelegat
     // MARK: - Public Method
     /**************************************************************************/
     public func toggleLeftPanel() {
+        self.menuViewController?.viewWillAppear(true)
         let toggleState: DrawerState = _containerView.isHidden ? .opened : .closed
         setDrawerState(toggleState)
     }

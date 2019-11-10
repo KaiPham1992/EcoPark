@@ -13,6 +13,7 @@ struct AppImage {
     static let imgClose = UIImage(named: "close")!
     static let imgDelete = UIImage(named: "delete")!
     static let imgPlaceHolderImage = UIImage(named: "")
+    static let imgClear = UIImage(named: "ic_clear")!
     
     static let imgUnCheck = UIImage(named: "ic_radio_button_off")!
     static let imgCheck = UIImage(named: "ic_radio_button_on")!
@@ -30,7 +31,7 @@ struct AppImage {
         static let imgCall = UIImage(named: "ic_call_off")!.withRenderingMode(.alwaysTemplate)
         static let imgLanguage = UIImage(named: "ic_news_off")!.withRenderingMode(.alwaysTemplate)
     
-    
+    static let imgWallet = UIImage(named: "ic_star_outline")!.withRenderingMode(.alwaysTemplate)
     static let iconFilter = UIImage(named: "ic_filter")!
     
     
@@ -42,7 +43,7 @@ struct AppImage {
     static let imgPlaceHolder = UIImage(named: "placeHolderImage")!
 
     //Login
-    static let iconUsername = UIImage(named: "ic_person")
+    static let iconUsername = UIImage(named: "avatarDefautl")
     static let iconPadlock = UIImage(named: "ic_padlock")
     static let imgParking = UIImage(named: "ic_parking_3")!
     static let imgMarkerSelected = UIImage(named: "ic_placeholder_map-1")!
@@ -86,10 +87,6 @@ struct AppImage {
     static let imgStarFilled = UIImage(named: "ic_star_filled")!
     static let imgStarHalf = UIImage(named: "ic_star_half")!
     static let imgStarEmpty = UIImage(named: "ic_star_outline")!
-    
-
-    static let imgWallet = UIImage(named: "ic_star_outline")!
-    
     
 
     // MARK: Notification

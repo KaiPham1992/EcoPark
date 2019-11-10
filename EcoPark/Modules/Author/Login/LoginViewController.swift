@@ -21,12 +21,11 @@ enum LoginType {
     case normal
 }
 
-
 class LoginViewController: BaseViewController {
     
     var presenter: LoginPresenterProtocol?
     
-    @IBAction func backView(_ sender: Any) {
+    @objc func backView(_ sender: Any) {
         self.dismiss()
     }
     
@@ -38,6 +37,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var lbLanguage: UILabel!
     @IBOutlet weak var btnEnglish: UIButton!
     @IBOutlet weak var btnVietnamese: UIButton!
+    @IBOutlet weak var lbError: UILabel!
     
     var callBackLoginSuccessed : (()->())?
     var loginType = LoginType.normal
@@ -53,7 +53,8 @@ class LoginViewController: BaseViewController {
     }
     
     override func setUpNavigation() {
-        
+        super.setUpNavigation()
+        self.addButtonToNavigation(image: AppImage.imgClear, style: .left, action: #selector(backView))
     }
     
     override func setTitleUI() {
@@ -88,11 +89,13 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func btnEnglishTapped() {
-        
+        btnEnglish.backgroundColor = AppColor.color_0_129_255
+        btnVietnamese.backgroundColor = AppColor.gray999999
     }
     
     @IBAction func btnVietnameseTapped() {
-        
+        btnEnglish.backgroundColor = AppColor.gray999999
+        btnVietnamese.backgroundColor = AppColor.color_0_129_255
     }
 }
 
@@ -128,22 +131,26 @@ extension LoginViewController {
     }
     
     func hideError(isHidden: Bool = true, message: String? = nil){
-       
+        lbError.isHidden = isHidden
+        lbError.text = message ?? ""
     }
 }
 
 
 extension LoginViewController: LoginViewProtocol {
     func didLogin(user: UserEntity?) {
+        
         self.callBackLoginSuccessed?()
         self.dismiss()
 //        AppRouter.shared.openHome()
+        guard let _user = user else { return }
+        UserDefaultHelper.shared.saveUser(user: _user)
     }
     
     func didError(error: APIError?) {
         guard let message = error?.message else { return }
         UserDefaultHelper.shared.clearUser()
-        hideError(isHidden: false, message:  message.showLanguage)
+        hideError(isHidden: false, message:  LocalizableKey.INVALID_USERNAME_OR_PASSWORD.showLanguage)
     }
 }
 

@@ -10,21 +10,31 @@ import ObjectMapper
 
 class UpdateProfileParam: BaseParam {
     
-    var nationalId        : Int?
-    var fullName        : String?
-    
+    var username        : String?
+    var fullname        : String?
+    var email       : String?
+    var phone       : String?
+    var gender      : String?
+    var birthday    : String?
     override func mapping(map: Map) {
         super.mapping(map: map)
         
-        self.nationalId          <- map["nation_id"]
-        self.fullName      <- map["fullname"]
+        self.username        <- map["username"]
+        self.fullname        <- map["fullname"]
+        self.email       <- map["email"]
+        self.phone       <- map["phone"]
+        self.gender      <- map["gender"]
+        self.birthday    <- map["birthday"]
     }
     
-     init(nationalId: Int?, fullName: String?) {
+    init(username: String?, fullname: String?, email: String?, phone: String?, gender: String?, birthDay: String?) {
         super.init()
-        self.nationalId       = nationalId
-        self.fullName       = fullName
-        
+        self.fullname    = fullname
+        self.username    = username
+        self.email       = email
+        self.phone       = phone
+        self.gender      = gender
+        self.birthday    = birthDay
     }
     
     required init?(map: Map) {

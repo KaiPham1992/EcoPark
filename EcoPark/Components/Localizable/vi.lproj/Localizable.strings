@@ -50,6 +50,14 @@
 "Select" = "Chọn";
 "male" = "Nam";
 "female" = "Nữ";
+"other" = "Khác";
+
+"termAndPolicyText1" = "Bằng cách chọn đăng ký, bạn đã đọc và đồng ý với ";
+"termAndPolicyText2" = "Điều khoản sử dụng ";
+"termAndPolicyText3" = "và ";
+"termAndPolicyText4" = "Chính sách bảo mật thông tin ";
+"termAndPolicyText5" = "của ";
+"termAndPolicyText6" = "ECOPARKING.";
 
 // Forgot password page
 "ForgotPasswordMessage" = "Vui lòng nhập đúng email trong tài khoản của bạn để nhận lại mật khẩu mới:";
@@ -416,22 +424,22 @@
 //
 //// ERROR
 //
-//"WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
-//"USER_IS_EXISTED" = "Email đã tồn tại";
-//"EMAIL_IS_EXISTED" = "Email đã tồn tại";
-//"INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại email hoặc mật khẩu";
-//"changePassswordSuccess" = "Đổi mật khẩu thành công";
-//"INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
-//"editProfileSuccess" = "Chỉnh sửa thông tin thành công";
+"WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
+"USER_IS_EXISTED" = "Email đã tồn tại";
+"EMAIL_IS_EXISTED" = "Email đã tồn tại";
+"INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại email hoặc mật khẩu";
+"changePassswordSuccess" = "Đổi mật khẩu thành công";
+"INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
+"editProfileSuccess" = "Chỉnh sửa thông tin thành công";
 "USER_IS_NOT_EXISTED" = "Email không tồn tại trong hệ thống";
-//"SENT_NEW_PASSWORD" = "Mật khẩu mới được gửi về email";
+"SENT_NEW_PASSWORD" = "Mật khẩu mới được gửi về email";
 "pleaseEnterCurrentPassword" = "Vui lòng nhập mật khẩu hiện tại";
 "pleaseEnterNewPassword" = "Vui lòng nhập mật khẩu mới";
 //
 "enterPassword" = "Nhập mật khẩu";
 "enterRePassword" = "Nhập lại mật khẩu";
 "enterCaptcha" = "Nhập captcha";
-//"signUpSuccess" = "Đăng ký thành công";
+"signUpSuccess" = "Đăng ký thành công";
 //"boxHoney" = "hũ";
 //"titleHistoryNap" = "Lịch sử nạp";
 //"boxHoneyTitle" = "hũ mật ong";

@@ -21,5 +21,31 @@ class ProfilePresenter: ProfilePresenterProtocol, ProfileInteractorOutputProtoco
         self.interactor = interactor
         self.router = router
     }
+    
+    func updateAvatar(image: UIImage) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.userAPIService.uploadAvatar(image: image, success: { _user in
+            guard let user = UserDefaultHelper.shared.loginUserInfo else {return }
+            ProgressView.shared.hide()
+            
+            user.imgSrc = _user?.imgSrc
+            user.imgCropSrc = _user?.imgCropSrc
+            UserDefaultHelper.shared.loginUserInfo = user
+            self.view?.didUpdateAvatar()
+        }, failure: { error in
+            ProgressView.shared.hide()
+//            self.presenter?.didErrorUpdateProfile(error: error)
+        })
+    }
 
+    func updateProfile(param: UpdateProfileParam) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.userAPIService.updateProfile(param: param, success: { (user) in
+            guard let _user = user else { return }
+            ProgressView.shared.hide()
+            self.view?.didUpdateProfile(user: _user)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

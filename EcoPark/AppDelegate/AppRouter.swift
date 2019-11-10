@@ -32,23 +32,7 @@ class AppRouter {
     
     func openHomeView() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
-        //---
-//        let vcLogin = HomeRouter.createModule()
-
-//        let nc = UINavigationController(rootViewController: vcLogin)
         windowApp.rootViewController = NecContainerViewController()
-    }
-    
-    func openHome() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
-        //---
-//        let homeVC = LoginRouter.createModule()
-
-
-
-        let homeVC = SignUpRouter.createModule()
-
-        windowApp.rootViewController = UINavigationController(rootViewController: homeVC)
     }
     
     func test() {

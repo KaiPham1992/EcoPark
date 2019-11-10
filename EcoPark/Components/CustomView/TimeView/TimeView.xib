@@ -52,7 +52,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="1cn-rM-BZu" firstAttribute="centerX" secondItem="nwL-Qo-vRB" secondAttribute="centerX" id="Djr-b7-Bqs"/>
                         <constraint firstAttribute="height" constant="45" id="hZw-CE-XVW"/>
@@ -88,7 +88,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="27" id="4kI-6r-Ttm"/>
                         <constraint firstItem="veW-GJ-Xys" firstAttribute="centerY" secondItem="nyZ-Do-3rn" secondAttribute="centerY" id="dee-gk-62M"/>
