@@ -13,6 +13,9 @@ class AppTextField: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var vLine: UIView!
     
+    var textFieldDidBeginEditing : (() -> Void)?
+    var textFieldDidChange : (() -> Void)?
+    
     func setTitleAndPlaceHolder(title: String? = nil, placeHolder: String? = nil) {
         if title != nil {
             self.lbTitle.text = title
@@ -30,5 +33,19 @@ class AppTextField: BaseViewXib {
     
     override func setUpViews() {
         super.setUpViews()
+        self.tfInput.delegate = self
+    }
+}
+
+extension AppTextField: UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if let complete = self.textFieldDidBeginEditing {
+            complete()
+        }
+    }
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let complete = self.textFieldDidChange {
+            complete()
+        }
     }
 }

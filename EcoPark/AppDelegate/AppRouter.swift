@@ -38,7 +38,7 @@ class AppRouter {
     func test() {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         
-            let vc = ParkingUserDetailRouter.createModule(parking: ParkingEntity(id: "2"))
+        let vc = DetailParkingRouter.createModule(type: .checkin, bookingId: "13")
             windowApp.rootViewController = UINavigationController(rootViewController: vc)
     }
 }

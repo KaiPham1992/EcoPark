@@ -189,10 +189,16 @@ struct LocalizableKey {
     static let timeToCome = "timeToCome"
     static let vehiclePlate = "vehiclePlate"
     static let vehicleType = "vehicleType"
-    static let eachHours = "eachHours";
-    static let eachPackage = "eachPackage";
+    static let eachHours = "eachHours"
+    static let eachPackage = "eachPackage"
     
-    
+    // MARK: BookingPopUp
+    static let bookingPopUpTitle = "bookingPopUpTitle"
+    static let bookingPopUpAttr1 = "bookingPopUpAttr1"
+    static let bookingPopUpAttr2 = "bookingPopUpAttr2"
+    static let bookingPopUpAttr3 = "bookingPopUpAttr3"
+    static let bookingPopUpDirect = "bookingPopUpDirect"
+    static let bookingPopUpDetail = "bookingPopUpDetail"
     
     // --------------- English App ----------------- //
     static let privacyAndPolicy = "PrivacyAndPolicy"

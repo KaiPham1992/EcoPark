@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="228" id="KGk-i7-Jjw" customClass="PriceAddMoneyCell" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DI5-4I-J9N">
+                        <rect key="frame" x="0.0" y="8" width="320" height="220"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mmq-SM-jbS">
+                                <rect key="frame" x="16" y="0.0" width="288" height="210"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLh-rP-LKl" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3Yz-PQ-BmQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd2-HB-GWD" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="30" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="zDj-KG-KUb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="291-ac-3sU" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="R7j-fN-Y7B"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATY-4v-B6h" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NCd-kz-UK8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3n-96-RdV" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Su9-rY-HLW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUX-Cc-vhN" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9t2-lY-jhA"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlP-5r-FtM" customClass="DoubleLabelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="288" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="u6b-2H-hJi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mmq-SM-jbS" firstAttribute="leading" secondItem="DI5-4I-J9N" secondAttribute="leading" constant="16" id="8mF-BA-hRZ"/>
+                            <constraint firstItem="Mmq-SM-jbS" firstAttribute="top" secondItem="DI5-4I-J9N" secondAttribute="top" id="L86-1C-G2O"/>
+                            <constraint firstAttribute="bottom" secondItem="Mmq-SM-jbS" secondAttribute="bottom" constant="10" id="VwN-28-D5C"/>
+                            <constraint firstAttribute="trailing" secondItem="Mmq-SM-jbS" secondAttribute="trailing" constant="16" id="WQI-ld-ilp"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="DI5-4I-J9N" secondAttribute="bottom" id="34z-gF-aYW"/>
+                    <constraint firstItem="DI5-4I-J9N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Ag-wk-jez"/>
+                    <constraint firstItem="DI5-4I-J9N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="n2L-m4-nkJ"/>
+                    <constraint firstAttribute="trailing" secondItem="DI5-4I-J9N" secondAttribute="trailing" id="vdw-fy-RsT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="DLVAddForMoney" destination="rlP-5r-FtM" id="j0i-l2-zfR"/>
+                <outlet property="DLVAddForWallet" destination="xUX-Cc-vhN" id="AeP-yy-G3s"/>
+                <outlet property="DLVBillFor8Hour" destination="gd2-HB-GWD" id="Pv5-Ij-xmY"/>
+                <outlet property="DLVBillForHour" destination="hLh-rP-LKl" id="nkN-jd-fsH"/>
+                <outlet property="DLVMoneyPayment" destination="ATY-4v-B6h" id="m7I-M4-E7u"/>
+                <outlet property="DLVNumberParking" destination="291-ac-3sU" id="Um9-sN-vRn"/>
+                <outlet property="DLVPriceParking" destination="O3n-96-RdV" id="pbM-G9-mV3"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="180.13392857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

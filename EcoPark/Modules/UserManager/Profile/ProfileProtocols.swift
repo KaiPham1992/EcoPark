@@ -19,6 +19,7 @@ protocol ProfilePresenterProtocol: class {
 
     var interactor: ProfileInteractorInputProtocol? { get set }
     func updateAvatar(image: UIImage)
+    func updateProfile(param: UpdateProfileParam)
 }
 
 //MARK: Interactor -
@@ -43,4 +44,5 @@ protocol ProfileViewProtocol: class {
 
     /* Presenter -> ViewController */
      func didUpdateAvatar()
+    func didUpdateProfile(user: UserEntity)
 }

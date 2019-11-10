@@ -151,7 +151,7 @@
 "parkingSubImage" = "Vui lòng chụp ảnh bãi đỗ của bạn, tối thiểu là 2 ảnh và tối đa là 4 ảnh *";
 "parkingWaitingSignUp" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ECOPARKING sẽ liên hệ với bạn trong thời gian sớm nhất.";
 
-// MARK:
+// MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Chi tiết bãi xe";
 "titleType" = "Loại bãi đỗ";
 "titlePlace" = "Chỗ trống";
@@ -178,6 +178,13 @@
 "eachHours" = "/ giờ";
 "eachPackage" = "/ gói";
 
+// MARK: BookingPopUp
+"bookingPopUpTitle" = "Địa chỉ bãi đỗ";
+"bookingPopUpAttr1" = "Giữ chỗ có hiệu lực trong vòng ";
+"bookingPopUpAttr2" = "giờ kể từ thời gian dự kiến ";
+"bookingPopUpAttr3" = " vui lòng đến đúng giờ";
+"bookingPopUpDirect" = "Nhận chỉ đường đến bãi đỗ";
+"bookingPopUpDetail" = "Xem chi tiết giao dịch";
 
  // ------------------- English App ---------------- //
 // logout
@@ -424,22 +431,22 @@
 //
 //// ERROR
 //
-//"WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
-//"USER_IS_EXISTED" = "Email đã tồn tại";
-//"EMAIL_IS_EXISTED" = "Email đã tồn tại";
+"WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
+"USER_IS_EXISTED" = "Email đã tồn tại";
+"EMAIL_IS_EXISTED" = "Email đã tồn tại";
 "INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại email hoặc mật khẩu";
-//"changePassswordSuccess" = "Đổi mật khẩu thành công";
-//"INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
-//"editProfileSuccess" = "Chỉnh sửa thông tin thành công";
+"changePassswordSuccess" = "Đổi mật khẩu thành công";
+"INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
+"editProfileSuccess" = "Chỉnh sửa thông tin thành công";
 "USER_IS_NOT_EXISTED" = "Email không tồn tại trong hệ thống";
-//"SENT_NEW_PASSWORD" = "Mật khẩu mới được gửi về email";
+"SENT_NEW_PASSWORD" = "Mật khẩu mới được gửi về email";
 "pleaseEnterCurrentPassword" = "Vui lòng nhập mật khẩu hiện tại";
 "pleaseEnterNewPassword" = "Vui lòng nhập mật khẩu mới";
 //
 "enterPassword" = "Nhập mật khẩu";
 "enterRePassword" = "Nhập lại mật khẩu";
 "enterCaptcha" = "Nhập captcha";
-//"signUpSuccess" = "Đăng ký thành công";
+"signUpSuccess" = "Đăng ký thành công";
 //"boxHoney" = "hũ";
 //"titleHistoryNap" = "Lịch sử nạp";
 //"boxHoneyTitle" = "hũ mật ong";

@@ -139,9 +139,12 @@ extension LoginViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func didLogin(user: UserEntity?) {
+        
         self.callBackLoginSuccessed?()
         self.dismiss()
 //        AppRouter.shared.openHome()
+        guard let _user = user else { return }
+        UserDefaultHelper.shared.saveUser(user: _user)
     }
     
     func didError(error: APIError?) {

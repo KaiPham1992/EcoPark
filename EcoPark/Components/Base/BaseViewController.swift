@@ -58,6 +58,12 @@ open class BaseViewController: UIViewController {
         return btn
     }()
     
+    let line: UIView = {
+        let line = UIView()
+        line.backgroundColor = UIColor.darkGray
+        return line
+    }()
+    
     func setUpViews() {}
     func setTitleUI() {}
     
@@ -65,6 +71,14 @@ open class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
         setTitleUI()
         checkInternet()
+    }
+    
+    func addTopLine() {
+        self.view.addSubview(line)
+        line.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        line.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
+        line.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
+        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
     override open var preferredStatusBarStyle: UIStatusBarStyle {

@@ -45,9 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        checkLogin()
 //        realmConfig()
 
-//        AppRouter.shared.openHomeView()
-//        AppRouter.shared.updateRootView()
         AppRouter.shared.openHomeView()
+//        AppRouter.shared.updateRootView()
+//        AppRouter.shared.test()
        
         //--
 //        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (didAllow, err) in
