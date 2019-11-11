@@ -19,7 +19,7 @@
 "MenuHotLine" = "Hotline 1900587";
 "MenuLanguage" = "Ngôn ngữ";
 "MenuNotification" = "Thông báo";
-
+"MenuSignUpPartner" = "Register as a partner";
 
 // Login Page
 
@@ -126,6 +126,12 @@
 "JuridicalInfomation" = "Juridical Infomation";
 "ParkingInfomation" = "Parking Infomation";
 "OtherInfomation" = "Other Infomation";
+"photoNotice1" = "Please take a picture ";
+"photoNotice2" = "clear, no blur, no flickering. ";
+"photoNotice3" = "The information you provide will be strictly confidential according to the company policy.";
+"frontPhoto" = "Front photo of ID card *";
+"backsidePhoto" = "Backside photo of ID card *";
+
 // Sign Up Partner 2
 "ParkingInfo" = "Parking Info";
 "ParkingName" = "Paarking Name *";

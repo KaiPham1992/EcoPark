@@ -21,7 +21,7 @@ struct LocalizableKey {
     static let MenuLanguage = "MenuLanguage"
     static let MenuNotification = "MenuNotification"
     static let MenuWallet = "MenuWallet"
-    
+    static let MenuSignUpPartner = "MenuSignUpPartner"
     
     
     
@@ -136,6 +136,11 @@ struct LocalizableKey {
     static let juridicalInfomation = "JuridicalInfomation"
     static let parkingInfomation = "ParkingInfomation"
     static let otherInfomation = "OtherInfomation"
+    static let photoNotice1 = "photoNotice1"
+    static let photoNotice2 = "photoNotice2"
+    static let photoNotice3 = "photoNotice3"
+    static let frontPhoto = "frontPhoto"
+    static let backsidePhoto = "backsidePhoto"
     
     //Sign Up Partner 2
     static let parkingInfo = "ParkingInfo"
@@ -330,7 +335,7 @@ struct LocalizableKey {
 //    static let time_end = "time_end"
 //    static let see_more = "see_more"
 //    static let sentence = "sentence"
-//    static let next = "next"
+    static let next = "next"
 //    static let do_entrance = "do_entrance"
 //
     

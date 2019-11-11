@@ -21,6 +21,7 @@
 "MenuNotification" = "Thông báo";
 "Username" = "Tên đăng nhập";
 "Language" = "Ngôn ngữ:";
+"MenuSignUpPartner" = "Đăng ký làm đối tác";
 // Login Page
 
 "LoginEmail" = "Email";
@@ -123,6 +124,11 @@
 "JuridicalInfomation" = "Thông tin pháp lý";
 "ParkingInfomation" = "Thông tin bãi xe";
 "OtherInfomation" = "Thông tin khác";
+"photoNotice1" = "Vui lòng chụp ảnh ";
+"photoNotice2" = "rõ nét, không mờ, không loá sáng. ";
+"photoNotice3" = "Các thông tin bạn cung cấp sẽ được bảo mật tuyệt đối theo chính sách của công ty.";
+"frontPhoto" = "Ảnh mặt trước CMND *";
+"backsidePhoto" = "Ảnh mặt sau CMND *";
 
 // Sign Up Partner 2
 "ParkingInfo" = "Thông tin BÃI ĐỖ";
@@ -336,7 +342,7 @@
 //"time_end" = "Kết thúc";
 //"see_more" = "Xem thêm";
 //"sentence" = "Câu";
-//"next" = "Tiếp tục";
+"next" = "Tiếp tục";
 //"do_entrance" = "Trắc nghiệm đầu vào";
 //
 ////result

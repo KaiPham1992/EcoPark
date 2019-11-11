@@ -23,8 +23,14 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     @IBOutlet weak var vEmail: AppTextField!
     @IBOutlet weak var lbImage: UILabel!
     @IBOutlet weak var btnNext: UIButton!
-    @IBOutlet weak var vPhoto: AppCollectionPhoto!
-    @IBOutlet weak var heightPhoto: NSLayoutConstraint!
+    @IBOutlet weak var lbPhotoNotice: UILabel!
+    @IBOutlet weak var lbFrontPhoto: UILabel!
+    @IBOutlet weak var lbBacksidePhoto: UILabel!
+    @IBOutlet weak var imgFrontPhoto: UIImageView!
+    @IBOutlet weak var imgBacksidePhoto: UIImageView!
+    @IBOutlet weak var btnDeletePhotoFront: UIButton!
+    @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
+    
     
 	var presenter: SignUpPartnerStep1PresenterProtocol?
 
@@ -34,6 +40,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     }
 
     private func setupUI() {
+        addMenu()
+        setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
         vStep.setStep1()
         lbPartnerInfo.text = LocalizableKey.partnerInfo.showLanguage
         vPartnerName.setTitleAndPlaceHolder(title: LocalizableKey.partnerName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -45,18 +53,52 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         lbImage.text = LocalizableKey.partnerImage.showLanguage
         
-        vPhoto.configCollectionImageView(delegate: self, controller: self, isSingleSelected: false)
-        vPhoto.limit = 2
+        let attr1 = LocalizableKey.photoNotice1.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr2 = LocalizableKey.photoNotice2.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontBold15, isUnderLine: false)
+        let attr3 = LocalizableKey.photoNotice3.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
+        
+        let attr = NSMutableAttributedString()
+        
+        attr.append(attr1)
+        attr.append(attr2)
+        attr.append(attr3)
+        
+        lbPhotoNotice.attributedText = attr
+        
+        lbFrontPhoto.text = LocalizableKey.frontPhoto.showLanguage
+        lbBacksidePhoto.text = LocalizableKey.backsidePhoto.showLanguage
+        btnNext.setTitle(LocalizableKey.next.showLanguage, for: .normal)
+        btnDeletePhotoFront.isHidden = true
+        btnDeletePhotoBacksite.isHidden = true
+        
+        vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
+    }
+    
+    @IBAction func btnPhotoFrontTapped() {
+        SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
+            guard let _iamge = image else { return }
+            self.imgFrontPhoto.image = _iamge
+            self.btnDeletePhotoFront.isHidden = false
+        }
+    }
+    
+    @IBAction func btnPhotoBacksideTapped() {
+        SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
+            guard let _iamge = image else { return }
+            self.imgBacksidePhoto.image = _iamge
+            self.btnDeletePhotoBacksite.isHidden = false
+        }
+    }
+    
+    @IBAction func btnDeleteFrontTapped() {
+        imgFrontPhoto.image = AppImage.imgAddImage
+        self.btnDeletePhotoFront.isHidden = true
+    }
+    
+    @IBAction func btnDeleteBacksideTapped() {
+        imgBacksidePhoto.image = AppImage.imgAddImage
+        self.btnDeletePhotoBacksite.isHidden = true
     }
     
 }
 
-extension SignUpPartnerStep1ViewController: AppCollectionPhotoDelegate {
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat) {
-        heightPhoto.constant = height
-    }
-    
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
-        
-    }
-}
