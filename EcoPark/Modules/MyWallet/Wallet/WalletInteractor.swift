@@ -24,10 +24,15 @@ class WalletInteractor: WalletInteractorInputProtocol {
         }
     }
     
-    func getWalletHistory() {
-        Provider.shared.userAPIService.getWalletHistory(success: { (list) in
+    func getWalletHistory(offset: Int, showLoading: Bool) {
+        if showLoading {
+            ProgressView.shared.show()
+        }
+        Provider.shared.userAPIService.getWalletHistory(offset: offset, limit: 10, success: { (list) in
+            ProgressView.shared.hide()
             self.presenter?.didGetWalletHistory(listLog: list)
         }) { (error) in
+            ProgressView.shared.hide()
             guard let error = error else { return }
             self.presenter?.didGetError(error: error)
         }

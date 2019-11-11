@@ -16,8 +16,9 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var tbWallet: UITableView!
     @IBOutlet weak var lbWalletMoney: UILabel!
     
+    let refreshControl = UIRefreshControl()
 	var presenter: WalletPresenterProtocol?
-    var listWalletHistory : [HistoryWalletEntity] = [] {
+    var listWalletHistory : [HistoryWalletEntity] = [HistoryWalletEntity]() {
         didSet {
             tbWallet.reloadData()
         }
@@ -28,6 +29,7 @@ class WalletViewController: BaseViewController {
         
         getWallet()
         getWalletHistory()
+        addPullToRefresh()
     }
     
     override func setUpNavigation() {
@@ -35,6 +37,7 @@ class WalletViewController: BaseViewController {
         
         addMenu()
         setTitleNavigation(title: "Ví Tiền")
+
     }
     
     override func setUpViews() {
@@ -42,10 +45,10 @@ class WalletViewController: BaseViewController {
         configTableView()
         
         tbWallet.backgroundColor = .clear
-        setWalletMoney(money: 182000)
+        fromToDatePicker.setTitleAndPlaceHolder(fromTitle: "Từ", toTitle: "Đến")
+        fromToDatePicker.fieldFrom.placeHolderColor = AppColor.color_0_129_255
+        fromToDatePicker.fieldTo.placeHolderColor = AppColor.color_0_129_255
     }
-    
-    
     
     func setWalletMoney(money: Int) {
         let money = money.description.formatNumber(type: ",")
@@ -63,6 +66,22 @@ class WalletViewController: BaseViewController {
         self.push(controller: vc)
     }
     
+    private func addPullToRefresh(){
+        refreshControl.tintColor = UIColor.white
+        if #available(iOS 10.0, *) {
+            self.tbWallet.refreshControl = refreshControl
+        } else {
+            self.tbWallet.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+    }
+    
+    @objc func pullToRefresh(){
+        presenter?.listWalletHistory.removeAll()
+        getWalletHistory(showLoading: false)
+        refreshControl.endRefreshing()
+    }
+    
 }
 
 extension WalletViewController: WalletViewProtocol {
@@ -76,14 +95,11 @@ extension WalletViewController: WalletViewProtocol {
     }
     
     // MARK: Get wallet history
-    func getWalletHistory() {
-        presenter?.getWalletHistory()
+    func getWalletHistory(showLoading: Bool = true) {
+        presenter?.getWalletHistory(showLoading: showLoading)
     }
     
     func didGetWalletHistory(listLog: [HistoryWalletEntity]) {
-        if listLog.count == 0 {
-            showNoData()
-        }
         self.listWalletHistory = listLog
     }
     
@@ -125,6 +141,22 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == listWalletHistory.count - 2 {
+            if presenter?.canLoadMore == true {
+                getWalletHistory(showLoading: false)
+                // Loading icon
+                let spiner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
+                spiner.startAnimating()
+                spiner.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44)
+                self.tbWallet.tableFooterView = spiner
+                self.tbWallet.tableFooterView?.isHidden = false
+            } else {
+                self.tbWallet.tableFooterView?.isHidden = true
+            }
+        }
     }
 
 }
