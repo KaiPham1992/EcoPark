@@ -26,6 +26,8 @@ class FromToDatePicker: BaseViewXib {
     func setTitleAndPlaceHolder(fromTitle: String, toTitle: String, fromPlaceHolder: String = "dd/mm/yyyy", toPlaceHolder: String = "dd/mm/yyyy") {
         lbFrom.text = fromTitle
         lbTo.text = toTitle
+        fieldFrom.text?.removeAll()
+        fieldTo.text?.removeAll()
         fieldFrom.placeholder = fromPlaceHolder
         fieldTo.placeholder = toPlaceHolder
     }
@@ -38,6 +40,9 @@ class FromToDatePicker: BaseViewXib {
         
         self.fieldTo.textColor = AppColor.color_0_129_255
         self.fieldFrom.textColor = AppColor.color_0_129_255
+        
+        self.fieldTo.placeHolderColor = AppColor.color_0_129_255
+        self.fieldFrom.placeHolderColor = AppColor.color_0_129_255
         
         self.fieldTo.backgroundColor = .clear
         self.fieldFrom.backgroundColor = .clear

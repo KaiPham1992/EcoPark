@@ -18,7 +18,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletViewController">
             <connections>
+                <outlet property="btnRecharge" destination="XaW-nR-bph" id="dcm-oZ-2yI"/>
                 <outlet property="fromToDatePicker" destination="gUc-ce-Gsp" id="gaO-sD-YkG"/>
+                <outlet property="lbBalance" destination="SSp-GP-BS4" id="hyi-Dh-rBC"/>
                 <outlet property="lbWalletMoney" destination="jsN-NW-J1J" id="BNT-S7-ksK"/>
                 <outlet property="tbWallet" destination="2Wl-Ik-RCA" id="8qw-Kd-DMQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

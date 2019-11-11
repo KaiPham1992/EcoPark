@@ -50,7 +50,7 @@ enum UserEndPoint {
     
     case getParking(address: String)
     case getWallet
-    case getWalletHistory
+    case getWalletHistory(offset: Int, limit: Int)
 }
 
 extension UserEndPoint: EndPointType {
@@ -233,6 +233,9 @@ extension UserEndPoint: EndPointType {
                     "limit": limit]
         case .getParking(let address):
             return ["address": address]
+            
+        case .getWalletHistory(let offset, let limit):
+            return ["offset": offset, "limit": limit]
         default:
             return [:]
         }
