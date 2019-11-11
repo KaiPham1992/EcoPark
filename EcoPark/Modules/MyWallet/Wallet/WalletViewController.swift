@@ -16,6 +16,9 @@ class WalletViewController: BaseViewController {
     @IBOutlet weak var tbWallet: UITableView!
     @IBOutlet weak var lbWalletMoney: UILabel!
     
+    @IBOutlet weak var lbBalance: UILabel!
+    @IBOutlet weak var btnRecharge: UIButton!
+    
     let refreshControl = UIRefreshControl()
 	var presenter: WalletPresenterProtocol?
     var listWalletHistory : [HistoryWalletEntity] = [HistoryWalletEntity]() {
@@ -36,7 +39,7 @@ class WalletViewController: BaseViewController {
         super.setUpNavigation()
         
         addMenu()
-        setTitleNavigation(title: "Ví Tiền")
+        setTitleNavigation(title: LocalizableKey.titleWallet.showLanguage)
 
     }
     
@@ -45,9 +48,12 @@ class WalletViewController: BaseViewController {
         configTableView()
         
         tbWallet.backgroundColor = .clear
-        fromToDatePicker.setTitleAndPlaceHolder(fromTitle: "Từ", toTitle: "Đến")
+        fromToDatePicker.setTitleAndPlaceHolder(fromTitle: LocalizableKey.from.showLanguage, toTitle: LocalizableKey.to.showLanguage)
         fromToDatePicker.fieldFrom.placeHolderColor = AppColor.color_0_129_255
         fromToDatePicker.fieldTo.placeHolderColor = AppColor.color_0_129_255
+        
+        lbBalance.text = LocalizableKey.titleBalance.showLanguage
+        btnRecharge.setTitle(LocalizableKey.titleRecharge.showLanguage.uppercased(), for: .normal)
     }
     
     func setWalletMoney(money: Int) {

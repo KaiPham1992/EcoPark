@@ -186,7 +186,17 @@
 "bookingPopUpDirect" = "Nhận chỉ đường đến bãi đỗ";
 "bookingPopUpDetail" = "Xem chi tiết giao dịch";
 
- // ------------------- English App ---------------- //
+// MARK: Wallet
+"titleWallet" = "Ví tiền";
+"titleBalance" = "Số dư ví ECO";
+"titleRecharge" = "Nạp tiền";
+
+// MARK: FromTo datetime picker
+"from" = "Từ";
+"to" = "Đến";
+
+
+// ------------------- English App ---------------- //
 // logout
 //"popUpLogout" = "Bạn có muốn đăng xuất?";
 //"agree" = "Đồng ý";

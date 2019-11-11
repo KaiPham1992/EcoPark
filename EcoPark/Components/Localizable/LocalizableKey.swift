@@ -200,6 +200,15 @@ struct LocalizableKey {
     static let bookingPopUpDirect = "bookingPopUpDirect"
     static let bookingPopUpDetail = "bookingPopUpDetail"
     
+    // MARK: Wallet
+    static let titleWallet = "titleWallet"
+    static let titleBalance = "titleBalance"
+    static let titleRecharge = "titleRecharge"
+    
+    // MARK: FromTo datetime picker
+    static let from = "from"
+    static let to = "to"
+    
     // --------------- English App ----------------- //
     static let privacyAndPolicy = "PrivacyAndPolicy"
     static let pleaseEnterEmail = "pleaseEnterEmail"
