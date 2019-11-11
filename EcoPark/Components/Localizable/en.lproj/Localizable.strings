@@ -151,6 +151,9 @@
 "place" = "Place";
 "vndHours" = "VND/ hours";
 "vnd8Hours" = "VND/ 8 hour";
+"photoFront" = "Photo front of license";
+"photoBackside" = "Photo backside of license";
+
 // Sign Up Partner 3
 "UtilityOther" = "Utility Other";
 "parkingImage" = "Parking Image";

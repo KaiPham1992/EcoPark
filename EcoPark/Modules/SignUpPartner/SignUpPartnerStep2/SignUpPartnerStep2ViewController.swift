@@ -10,7 +10,7 @@
 
 import UIKit
 
-class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2ViewProtocol {
+class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2ViewProtocol {
 
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbParking: UILabel!
@@ -25,10 +25,13 @@ class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2View
     @IBOutlet weak var vPriceCombo: AppTextField!
     @IBOutlet weak var lbLicense: UILabel!
     @IBOutlet weak var vTaxCode: AppTextField!
-    @IBOutlet weak var vPhoto: AppCollectionPhoto!
-    @IBOutlet weak var heightPhoto: NSLayoutConstraint!
-
-    
+    @IBOutlet weak var lbFrontPhoto: UILabel!
+    @IBOutlet weak var lbBacksidePhoto: UILabel!
+    @IBOutlet weak var imgFrontPhoto: UIImageView!
+    @IBOutlet weak var imgBacksidePhoto: UIImageView!
+    @IBOutlet weak var btnDeletePhotoFront: UIButton!
+    @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
+    @IBOutlet weak var btnNext: UIButton!
 	var presenter: SignUpPartnerStep2PresenterProtocol?
 
 	override func viewDidLoad() {
@@ -37,6 +40,8 @@ class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2View
     }
 
     private func setupUI() {
+        setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
+        addBackToNavigation()
         vStep.setStep2()
         lbParking.text = LocalizableKey.parkingInfo.showLanguage.uppercased()
         lbPrice.text = LocalizableKey.parkingPrice.showLanguage.uppercased()
@@ -53,17 +58,40 @@ class SignUpPartnerStep2ViewController: UIViewController, SignUpPartnerStep2View
         vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vTaxCode.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         
-        vPhoto.configCollectionImageView(delegate: self, controller: self, isSingleSelected: false)
-        vPhoto.limit = 2
-    }
-}
-
-extension SignUpPartnerStep2ViewController: AppCollectionPhotoDelegate {
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat) {
-        heightPhoto.constant = height
+        lbFrontPhoto.text = LocalizableKey.photoFront.showLanguage
+        lbBacksidePhoto.text = LocalizableKey.photoBackside.showLanguage
+        btnNext.setTitle(LocalizableKey.next.showLanguage, for: .normal)
+        btnDeletePhotoFront.isHidden = true
+        btnDeletePhotoBacksite.isHidden = true
     }
     
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
-        
+    @IBAction func btnPhotoFrontTapped() {
+        SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
+            guard let _iamge = image else { return }
+            self.imgFrontPhoto.image = _iamge
+            self.btnDeletePhotoFront.isHidden = false
+        }
+    }
+    
+    @IBAction func btnPhotoBacksideTapped() {
+        SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
+            guard let _iamge = image else { return }
+            self.imgBacksidePhoto.image = _iamge
+            self.btnDeletePhotoBacksite.isHidden = false
+        }
+    }
+    
+    @IBAction func btnDeleteFrontTapped() {
+        imgFrontPhoto.image = AppImage.imgAddImage
+        self.btnDeletePhotoFront.isHidden = true
+    }
+    
+    @IBAction func btnDeleteBacksideTapped() {
+        imgBacksidePhoto.image = AppImage.imgAddImage
+        self.btnDeletePhotoBacksite.isHidden = true
+    }
+    
+    @IBAction func btnNextTapped() {
+        self.push(controller: SignUpPartnerStep3Router.createModule())
     }
 }

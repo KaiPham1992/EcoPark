@@ -257,6 +257,9 @@
                                             <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnNextTapped" destination="-1" eventType="touchUpInside" id="jze-Xh-Iqg"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8V-wS-tLU">
                                     <rect key="frame" x="16" y="524.5" width="40.5" height="20.5"/>

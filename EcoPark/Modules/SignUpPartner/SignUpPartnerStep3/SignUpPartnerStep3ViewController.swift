@@ -10,7 +10,7 @@
 
 import UIKit
 
-class SignUpPartnerStep3ViewController: UIViewController, SignUpPartnerStep3ViewProtocol {
+class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3ViewProtocol {
 
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbUtility: UILabel!

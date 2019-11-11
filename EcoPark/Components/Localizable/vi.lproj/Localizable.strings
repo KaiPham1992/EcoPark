@@ -150,7 +150,8 @@
 "vndHours" = "VND/ giờ";
 "vnd8Hours" = "VND/ 8 giờ";
 
-
+"photoFront" = "Ảnh mặt trước giấy phép";
+"photoBackside" = "Ảnh mặt sau giấy phép";
 // Sign Up parner 3
 "UtilityOther" = "Tiện ích khác";
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";

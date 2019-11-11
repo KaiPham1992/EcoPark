@@ -163,6 +163,8 @@ struct LocalizableKey {
     static let vndHours = "vndHours"
     static let vnd8Hours = "vnd8Hours"
     
+    static let photoFront = "photoFront"
+    static let photoBackside = "photoBackside"
     
     // Sign Up Partner 3
     static let utilityOther = "UtilityOther"

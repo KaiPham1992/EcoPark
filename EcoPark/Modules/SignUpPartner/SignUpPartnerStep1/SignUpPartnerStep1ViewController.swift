@@ -100,5 +100,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         self.btnDeletePhotoBacksite.isHidden = true
     }
     
+    @IBAction func btnNextTapped() {
+        self.push(controller: SignUpPartnerStep2Router.createModule())
+    }
 }
 
