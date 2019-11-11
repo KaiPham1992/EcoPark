@@ -14,6 +14,7 @@ struct AppImage {
     static let imgDelete = UIImage(named: "delete")!
     static let imgPlaceHolderImage = UIImage(named: "")
     static let imgClear = UIImage(named: "ic_clear")!
+    static let imgDelete_1 = UIImage(named: "ic_delete")!
     
     static let imgUnCheck = UIImage(named: "ic_radio_button_off")!
     static let imgCheck = UIImage(named: "ic_radio_button_on")!

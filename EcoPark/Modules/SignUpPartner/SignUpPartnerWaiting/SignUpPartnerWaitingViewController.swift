@@ -10,7 +10,7 @@
 
 import UIKit
 
-class SignUpPartnerWaitingViewController: UIViewController, SignUpPartnerWaitingViewProtocol {
+class SignUpPartnerWaitingViewController: BaseViewController, SignUpPartnerWaitingViewProtocol {
 
     @IBOutlet weak var lbWaiting: UILabel!
     
@@ -18,7 +18,8 @@ class SignUpPartnerWaitingViewController: UIViewController, SignUpPartnerWaiting
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
+        addMenu()
         lbWaiting.text = LocalizableKey.parkingWaitingSignUp.showLanguage
     }
 

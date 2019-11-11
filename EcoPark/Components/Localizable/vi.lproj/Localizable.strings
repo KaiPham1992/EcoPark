@@ -157,6 +157,13 @@
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";
 "parkingSubImage" = "Vui lòng chụp ảnh bãi đỗ của bạn, tối thiểu là 2 ảnh và tối đa là 4 ảnh *";
 "parkingWaitingSignUp" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ECOPARKING sẽ liên hệ với bạn trong thời gian sớm nhất.";
+"DoneSignUp" = "Hoàn tất đăng kí";
+"termAndPolicySignUp1" = "Bằng việc bấm ";
+"termAndPolicySignUp2" = ", bạn đồng ý với ";
+"termAndPolicySignUp3" = "Điều khoản ";
+"termAndPolicySignUp4" = "chính sách dịch vụ ";
+"termAndPolicySignUp5" = "chính sách bảo mật ";
+"termAndPolicySignUp6" = "của chúng tôi.";
 
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Chi tiết bãi xe";

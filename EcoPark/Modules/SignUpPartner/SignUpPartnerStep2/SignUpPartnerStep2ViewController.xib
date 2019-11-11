@@ -49,7 +49,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="396" height="1057"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyF-zc-lIn">
-                            <rect key="frame" x="0.0" y="0.0" width="396" height="1143.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="1159.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcG-ry-X3Z" customClass="PartnerStepView" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="396" height="90"/>
@@ -239,7 +239,7 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-Gt-N1N">
-                                    <rect key="frame" x="16" y="1073.5" width="364" height="50"/>
+                                    <rect key="frame" x="16" y="1089.5" width="364" height="50"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="TH8-8P-Fp7"/>
@@ -299,7 +299,7 @@
                                 <constraint firstItem="pcG-ry-X3Z" firstAttribute="top" secondItem="jyF-zc-lIn" secondAttribute="top" id="ehh-gd-yRU"/>
                                 <constraint firstItem="pcG-ry-X3Z" firstAttribute="leading" secondItem="jyF-zc-lIn" secondAttribute="leading" id="gRE-gT-nyb"/>
                                 <constraint firstItem="Plh-Kf-LGK" firstAttribute="trailing" secondItem="ItG-Ag-ITs" secondAttribute="trailing" id="hxO-e1-9Xi"/>
-                                <constraint firstItem="RQS-Gt-N1N" firstAttribute="top" secondItem="riA-2L-X9D" secondAttribute="bottom" constant="8" id="la1-0b-tuf"/>
+                                <constraint firstItem="RQS-Gt-N1N" firstAttribute="top" secondItem="riA-2L-X9D" secondAttribute="bottom" constant="24" id="la1-0b-tuf"/>
                                 <constraint firstItem="Plh-Kf-LGK" firstAttribute="top" secondItem="ItG-Ag-ITs" secondAttribute="bottom" constant="8" id="lqa-go-E6s"/>
                                 <constraint firstItem="riA-2L-X9D" firstAttribute="width" secondItem="jyF-zc-lIn" secondAttribute="width" multiplier="1/2" constant="-16" id="mrk-xn-cg9"/>
                                 <constraint firstAttribute="trailing" secondItem="RQS-Gt-N1N" secondAttribute="trailing" constant="16" id="nIU-cq-l6x"/>
