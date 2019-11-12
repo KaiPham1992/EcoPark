@@ -21,7 +21,7 @@ struct LocalizableKey {
     static let MenuLanguage = "MenuLanguage"
     static let MenuNotification = "MenuNotification"
     static let MenuWallet = "MenuWallet"
-    
+    static let MenuSignUpPartner = "MenuSignUpPartner"
     
     
     
@@ -136,6 +136,11 @@ struct LocalizableKey {
     static let juridicalInfomation = "JuridicalInfomation"
     static let parkingInfomation = "ParkingInfomation"
     static let otherInfomation = "OtherInfomation"
+    static let photoNotice1 = "photoNotice1"
+    static let photoNotice2 = "photoNotice2"
+    static let photoNotice3 = "photoNotice3"
+    static let frontPhoto = "frontPhoto"
+    static let backsidePhoto = "backsidePhoto"
     
     //Sign Up Partner 2
     static let parkingInfo = "ParkingInfo"
@@ -158,13 +163,22 @@ struct LocalizableKey {
     static let vndHours = "vndHours"
     static let vnd8Hours = "vnd8Hours"
     
+    static let photoFront = "photoFront"
+    static let photoBackside = "photoBackside"
     
     // Sign Up Partner 3
     static let utilityOther = "UtilityOther"
     static let parkingImage = "parkingImage"
     static let parkingSubImage = "parkingSubImage"
     static let parkingWaitingSignUp = "parkingWaitingSignUp"
-
+    static let DoneSignUp = "DoneSignUp"
+    static let termAndPolicySignUp1 = "termAndPolicySignUp1"
+    static let termAndPolicySignUp2 = "termAndPolicySignUp2"
+    static let termAndPolicySignUp3 = "termAndPolicySignUp3"
+    static let termAndPolicySignUp4 = "termAndPolicySignUp4"
+    static let termAndPolicySignUp5 = "termAndPolicySignUp5"
+    static let termAndPolicySignUp6 = "termAndPolicySignUp6"
+    
     // MARK: ParkingUserDetailViewController
     static let titleParkDetail = "titleParkDetail"
     static let titleType = "titleType"
@@ -174,7 +188,7 @@ struct LocalizableKey {
     static let titleContactMe = "titleContactMe"
     static let titleDirection = "titleDirection"
     static let titleButtonKeepPlace = "titleButtonKeepPlace"
-    
+
     // MARK: BookingInfoViewController
     static let titleBookingInfo = "titleBookingInfo"
     static let keepPlace = "keepPlace"
@@ -199,6 +213,15 @@ struct LocalizableKey {
     static let bookingPopUpAttr3 = "bookingPopUpAttr3"
     static let bookingPopUpDirect = "bookingPopUpDirect"
     static let bookingPopUpDetail = "bookingPopUpDetail"
+    
+    // MARK: Wallet
+    static let titleWallet = "titleWallet"
+    static let titleBalance = "titleBalance"
+    static let titleRecharge = "titleRecharge"
+    
+    // MARK: FromTo datetime picker
+    static let from = "from"
+    static let to = "to"
     
     // --------------- English App ----------------- //
     static let privacyAndPolicy = "PrivacyAndPolicy"
@@ -330,7 +353,7 @@ struct LocalizableKey {
 //    static let time_end = "time_end"
 //    static let see_more = "see_more"
 //    static let sentence = "sentence"
-//    static let next = "next"
+    static let next = "next"
 //    static let do_entrance = "do_entrance"
 //
     

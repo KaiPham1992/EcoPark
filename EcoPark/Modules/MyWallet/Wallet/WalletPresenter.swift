@@ -16,6 +16,9 @@ class WalletPresenter: WalletPresenterProtocol, WalletInteractorOutputProtocol {
     var interactor: WalletInteractorInputProtocol?
     private let router: WalletWireframeProtocol
 
+    var canLoadMore: Bool = false
+    var listWalletHistory : [HistoryWalletEntity] = [HistoryWalletEntity]()
+    
     init(interface: WalletViewProtocol, interactor: WalletInteractorInputProtocol?, router: WalletWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
@@ -23,12 +26,18 @@ class WalletPresenter: WalletPresenterProtocol, WalletInteractorOutputProtocol {
     }
     
     // MARK: Get wallet history
-    func getWalletHistory() {
-        self.interactor?.getWalletHistory()
+    func getWalletHistory(showLoading: Bool) {
+        self.interactor?.getWalletHistory(offset: listWalletHistory.count, showLoading: showLoading)
     }
     
     func didGetWalletHistory(listLog: [HistoryWalletEntity]) {
-        self.view?.didGetWalletHistory(listLog: listLog)
+        if listLog.count == 10 {
+            canLoadMore = true
+        } else {
+            canLoadMore = false
+        }
+        listWalletHistory.append(contentsOf: listLog)
+        self.view?.didGetWalletHistory(listLog: listWalletHistory)
     }
     
     // MARK: Get wallet

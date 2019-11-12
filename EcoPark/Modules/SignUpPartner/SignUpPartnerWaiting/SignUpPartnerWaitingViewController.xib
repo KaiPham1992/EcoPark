@@ -24,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="323-Lc-9ww">
-                    <rect key="frame" x="97.5" y="193.5" width="180" height="180"/>
+                    <rect key="frame" x="97.5" y="143.5" width="180" height="180"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ls-s0-97G">
-                    <rect key="frame" x="32" y="389.5" width="311" height="23.5"/>
+                    <rect key="frame" x="32" y="339.5" width="311" height="23.5"/>
                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
             <constraints>
                 <constraint firstItem="yTr-ie-CeE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="801-OR-j1W"/>
                 <constraint firstItem="323-Lc-9ww" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Eua-Kf-HAh"/>
-                <constraint firstItem="323-Lc-9ww" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="Pu1-Xg-qvr"/>
+                <constraint firstItem="323-Lc-9ww" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="Pu1-Xg-qvr"/>
                 <constraint firstItem="2ls-s0-97G" firstAttribute="top" secondItem="323-Lc-9ww" secondAttribute="bottom" constant="16" id="dCP-4p-Xcs"/>
                 <constraint firstItem="2ls-s0-97G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="lhR-Wg-7sc"/>
                 <constraint firstAttribute="bottom" secondItem="yTr-ie-CeE" secondAttribute="bottom" id="nuO-ox-UHv"/>

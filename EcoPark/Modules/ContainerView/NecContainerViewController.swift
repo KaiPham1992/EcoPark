@@ -42,6 +42,11 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         self.present(controller: UINavigationController(rootViewController: vc))
     }
     
+    func signUpPartnerTapped() {
+        let signUpPartnerVC = SignUpPartnerStep1ViewController.initFromNib()
+        self.openViewController(presentingController: signUpPartnerVC)
+    }
+    
     func selected(item: MenuItem) {
         guard let icon = item.imgIcon else { return }
         switch icon {

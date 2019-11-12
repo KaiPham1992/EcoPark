@@ -21,6 +21,7 @@
 "MenuNotification" = "Thông báo";
 "Username" = "Tên đăng nhập";
 "Language" = "Ngôn ngữ:";
+"MenuSignUpPartner" = "Đăng ký làm đối tác";
 // Login Page
 
 "LoginEmail" = "Email";
@@ -123,6 +124,11 @@
 "JuridicalInfomation" = "Thông tin pháp lý";
 "ParkingInfomation" = "Thông tin bãi xe";
 "OtherInfomation" = "Thông tin khác";
+"photoNotice1" = "Vui lòng chụp ảnh ";
+"photoNotice2" = "rõ nét, không mờ, không loá sáng. ";
+"photoNotice3" = "Các thông tin bạn cung cấp sẽ được bảo mật tuyệt đối theo chính sách của công ty.";
+"frontPhoto" = "Ảnh mặt trước CMND *";
+"backsidePhoto" = "Ảnh mặt sau CMND *";
 
 // Sign Up Partner 2
 "ParkingInfo" = "Thông tin BÃI ĐỖ";
@@ -144,12 +150,20 @@
 "vndHours" = "VND/ giờ";
 "vnd8Hours" = "VND/ 8 giờ";
 
-
+"photoFront" = "Ảnh mặt trước giấy phép";
+"photoBackside" = "Ảnh mặt sau giấy phép";
 // Sign Up parner 3
 "UtilityOther" = "Tiện ích khác";
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";
 "parkingSubImage" = "Vui lòng chụp ảnh bãi đỗ của bạn, tối thiểu là 2 ảnh và tối đa là 4 ảnh *";
 "parkingWaitingSignUp" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ECOPARKING sẽ liên hệ với bạn trong thời gian sớm nhất.";
+"DoneSignUp" = "Hoàn tất đăng kí";
+"termAndPolicySignUp1" = "Bằng việc bấm ";
+"termAndPolicySignUp2" = ", bạn đồng ý với ";
+"termAndPolicySignUp3" = "Điều khoản ";
+"termAndPolicySignUp4" = "chính sách dịch vụ ";
+"termAndPolicySignUp5" = "chính sách bảo mật ";
+"termAndPolicySignUp6" = "của chúng tôi.";
 
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Chi tiết bãi xe";
@@ -186,7 +200,17 @@
 "bookingPopUpDirect" = "Nhận chỉ đường đến bãi đỗ";
 "bookingPopUpDetail" = "Xem chi tiết giao dịch";
 
- // ------------------- English App ---------------- //
+// MARK: Wallet
+"titleWallet" = "Ví tiền";
+"titleBalance" = "Số dư ví ECO";
+"titleRecharge" = "Nạp tiền";
+
+// MARK: FromTo datetime picker
+"from" = "Từ";
+"to" = "Đến";
+
+
+// ------------------- English App ---------------- //
 // logout
 //"popUpLogout" = "Bạn có muốn đăng xuất?";
 //"agree" = "Đồng ý";
@@ -336,7 +360,7 @@
 //"time_end" = "Kết thúc";
 //"see_more" = "Xem thêm";
 //"sentence" = "Câu";
-//"next" = "Tiếp tục";
+"next" = "Tiếp tục";
 //"do_entrance" = "Trắc nghiệm đầu vào";
 //
 ////result

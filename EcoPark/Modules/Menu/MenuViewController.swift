@@ -15,6 +15,7 @@ protocol MenuViewControllerDelegate: class {
     //    func openViewController(presentingController: UIViewController)
     func selected(item: MenuItem)
     func loginTapped()
+    func signUpPartnerTapped()
     //    func presentViewController(presentingController: UIViewController)
     //    func popToRootViewController()
     //    func closeDrawer()
@@ -30,7 +31,6 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var lbOwner: UILabel!
     @IBOutlet weak var vRegisterOwner: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
-    
     var itemSelected: MenuItem?
     
     var listMenuItem = [MenuItem]() {
@@ -101,6 +101,10 @@ class MenuViewController: UIViewController, MenuViewProtocol {
                 }
             }
         }
+    }
+    
+    @IBAction func btnSignUpPartnerTapped() {
+        delegateController?.signUpPartnerTapped()
     }
 }
 

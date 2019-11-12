@@ -26,7 +26,7 @@ class AppCollectionPhotoCell: BaseCollectionCell {
     let imgClose: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
-        img.image = AppImage.imgClose
+        img.image = AppImage.imgDelete_1
         
         return img
     }()

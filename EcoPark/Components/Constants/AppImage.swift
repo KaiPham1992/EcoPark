@@ -14,11 +14,13 @@ struct AppImage {
     static let imgDelete = UIImage(named: "delete")!
     static let imgPlaceHolderImage = UIImage(named: "")
     static let imgClear = UIImage(named: "ic_clear")!
+    static let imgDelete_1 = UIImage(named: "ic_delete")!
     
     static let imgUnCheck = UIImage(named: "ic_radio_button_off")!
     static let imgCheck = UIImage(named: "ic_radio_button_on")!
     static let imgMenu = UIImage(named: "ic_menu")!
     static let imgAddImage = UIImage(named: "ic_add_image- 1")!
+    static let imgAddImage1 = UIImage(named: "ic_add_image")!
     // Menu
         static let imgHistoryParking  = UIImage(named: "ic_historyparking_on")!.withRenderingMode(.alwaysTemplate)
         static let imgMyParking = UIImage(named: "ic_myparking_off")!.withRenderingMode(.alwaysTemplate)
