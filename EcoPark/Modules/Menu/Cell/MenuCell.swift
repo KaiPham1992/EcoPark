@@ -23,8 +23,7 @@ class MenuItem {
         
         if UserDefaultHelper.shared.loginUserInfo == nil {
             return [
-                MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),
-                MenuItem(imgIcon: AppImage.imgWallet, title: LocalizableKey.MenuWallet.showLanguage),                    MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuPolicy.showLanguage),
+                MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),        MenuItem(imgIcon: AppImage.imgPrivacy, title: LocalizableKey.MenuPolicy.showLanguage),
                 MenuItem(imgIcon: AppImage.imgSecurity, title: LocalizableKey.MenuSecuriry.showLanguage),
                 MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
                 MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
