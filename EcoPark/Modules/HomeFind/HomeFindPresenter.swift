@@ -25,7 +25,7 @@ class HomeFindPresenter: HomeFindPresenterProtocol, HomeFindInteractorOutputProt
     }
     
     func searchPlaceByString(text: String) {
-        let url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
+        let url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyCH838SCsSkX9s2kBT7IyZSUjiUaxIxm9c"
         let params: Parameters = ["input": text]
         //            print(section)
         
