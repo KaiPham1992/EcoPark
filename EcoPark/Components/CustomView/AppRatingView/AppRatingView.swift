@@ -25,14 +25,19 @@ class AppRatingView: BaseViewXib {
     }
     
     func setTitle(number: Int) {
+        self.lbNumberRating.isHidden = false
         self.lbNumberRating.text = "(\(number.description))"
+    }
+    
+    func hideTitle() {
+        self.lbNumberRating.isHidden = true
     }
     
     func setStar(number: Double) {
         self.number = number
         
         let intNumber = Int(number)
-        
+            
         for (index, subView) in vStackView.arrangedSubviews.enumerated() {
             if let btn = subView as? UIButton {
                 if btn.tag <= intNumber {
