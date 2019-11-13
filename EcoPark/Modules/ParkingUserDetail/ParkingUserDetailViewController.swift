@@ -81,13 +81,26 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
             vAppImageSlide.listItem = listImage as [Any]
         }
         lbName.text = info.name&
-        ratingBar.setStar(number: info.rating ?? 0)
+        if let rating = info.rating {
+            ratingBar.setStar(number: rating)
+        } else {
+            ratingBar.hideTitle()
+        }
+        
         if let timeStart = info.time_start?.toString(dateFormat: .HHmm),
             let timeEnd = info.time_end?.toString(dateFormat: .HHmm) {
             lbTime.text = timeStart + " - " + timeEnd
         }
         lbType.text = info.parking_type
-        lbEmptyPlace.text = "xxx"
+        
+        let totalPlace = info.number_place ?? 0
+        if let parkedPlace = info.parkedNumber {
+            let emptyPlace = totalPlace - parkedPlace
+            lbEmptyPlace.text = "\(emptyPlace)/\(totalPlace) " + LocalizableKey.place.showLanguage.lowercased()
+        } else {
+            lbEmptyPlace.text = "\(totalPlace)/\(totalPlace) " + LocalizableKey.place.showLanguage.lowercased()
+        }
+        
         if let price = info.price {
             lbPriceOneHour.text = price.toCurrency
         }

@@ -20,7 +20,7 @@ class BookingDetailEntity: BaseEntity {
     var is_active: Bool?
     var create_time: Date?
     var update_time: Date?
-    var create_time_mi: Double?
+    var create_time_mi: Date?
     var intend_checkout_time: Date?
     var money_paid: String?
     var parking_details: ParkingInfoEntity?
@@ -40,7 +40,7 @@ class BookingDetailEntity: BaseEntity {
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], yyyyMMddHHmmssTransform())
         self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
-        self.create_time_mi <- (map["create_time_mi"], StringToDoubleTransform())
+        self.create_time_mi <- (map["create_time_mi"], yyyyMMddHHmmssTransform())
         self.intend_checkout_time <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
         self.money_paid <- map["money_paid"]
         self.parking_details <- map["parking_details"]

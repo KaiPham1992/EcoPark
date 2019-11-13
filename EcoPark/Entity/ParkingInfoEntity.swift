@@ -17,7 +17,7 @@ class ParkingInfoEntity: BaseEntity {
     var price: Double?
     var package_price: Double?
     var package_number: String?
-    var number_place: String?
+    var number_place: Int?
     var ordinal: String?
     var is_active: Bool?
     var create_time: Date?
@@ -41,6 +41,7 @@ class ParkingInfoEntity: BaseEntity {
     var birthday: Date?
     var material: [MaterialEntity]?
     var img: [ImgEntity]?
+    var parkedNumber: Int?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -53,7 +54,7 @@ class ParkingInfoEntity: BaseEntity {
         self.price <- (map["price"], StringToDoubleTransform())
         self.package_price <- (map["package_price"], StringToDoubleTransform())
         self.package_number <- map["package_number"]
-        self.number_place <- map["number_place"]
+        self.number_place <- (map["number_place"], StringToIntTransform())
         self.ordinal <- map["ordinal"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], TimeTramsform())
@@ -77,6 +78,7 @@ class ParkingInfoEntity: BaseEntity {
         self.birthday <- (map["birthday"], TimeTramsform())
         self.material <- map["material"]
         self.img <- map["img"]
+        self.parkedNumber <- map["parked_number"]
     }
 }
 
