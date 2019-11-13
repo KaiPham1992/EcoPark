@@ -32,8 +32,11 @@ class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2Vi
     @IBOutlet weak var btnDeletePhotoFront: UIButton!
     @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
     @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var lbError: UILabel!
 	var presenter: SignUpPartnerStep2PresenterProtocol?
 
+    var param: BossRegisterParam?
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -94,4 +97,41 @@ class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2Vi
     @IBAction func btnNextTapped() {
         self.push(controller: SignUpPartnerStep3Router.createModule())
     }
+}
+
+extension SignUpPartnerStep2ViewController {
+    func validateInputData() -> Bool {
+        if self.vParkingName.getText() == "" && self.vParkingType.tfInput.text == "" && self.vParkingCapacity.getText() == "" && self.vParkingAddress.tvInput.text == "" && vOpen.tfInput.text == "" && vClose.tfInput.text == "" && vPriceAHours.tfInput.text == "" && vPriceCombo.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
+            return false
+        }
+        
+        if self.vParkingName.getText() == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorNamePartner.showLanguage)
+            return false
+        }
+        
+        if self.vParkingType.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorIDNumber.showLanguage)
+            return false
+        }
+        
+        if self.vParkingCapacity.getText() == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorIssueBy.showLanguage)
+            return false
+        }
+        
+        if self.vParkingAddress.tvInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorDateBy.showLanguage)
+            return false
+        }
+        
+        
+        hideError()
+        return true
+    }
+        func hideError(isHidden: Bool = true, message: String? = nil){
+            lbError.isHidden = isHidden
+            lbError.text = message ?? ""
+        }
 }

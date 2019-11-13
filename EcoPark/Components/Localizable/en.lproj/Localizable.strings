@@ -132,6 +132,12 @@
 "frontPhoto" = "Front photo of ID card *";
 "backsidePhoto" = "Backside photo of ID card *";
 
+//error
+"errorNamePartner" = "Please enter parking owner";
+"errorIDNumber" = "Please enter ID Number";
+"errorIssueBy" = "Please enter issue by";
+"errorDateBy" = "Please enter day by";
+
 // Sign Up Partner 2
 "ParkingInfo" = "Parking Info";
 "ParkingName" = "Paarking Name *";
