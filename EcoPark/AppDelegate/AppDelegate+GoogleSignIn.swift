@@ -12,9 +12,9 @@ import GooglePlaces
 import Firebase
 
 #if PROD
-    let googleApiKey = "AIzaSyCH838SCsSkX9s2kBT7IyZSUjiUaxIxm9c"
+    let googleApiKey = "AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
 #else
-    let googleApiKey = "AIzaSyCH838SCsSkX9s2kBT7IyZSUjiUaxIxm9c"
+    let googleApiKey = "AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
 #endif
 
 extension AppDelegate {
