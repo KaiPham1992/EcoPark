@@ -26,11 +26,11 @@ class ParkingDetailPopUp: BasePopUpView {
         vYesNoContentView.btnYes.addTarget(self, action: #selector(btnYesTapped), for: .touchUpInside)
     }
     
-    func showPopUp(money: Int, completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
+    func showPopUp(money: Double, completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
         
         let attr1 = "Bạn sẽ bị trừ ".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
         
-        let attr2 = money.description.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
+        let attr2 = money.toCurrency.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
         
         let attr3 = " vào tài khoản ví để xem thông tin chi tiết bãi đổ bao gồm địa chỉ và thông tin liên hệ của bãi đó.".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
         

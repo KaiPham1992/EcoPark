@@ -98,7 +98,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     @objc func showPopUpDetail() {
         let popUp = ParkingDetailPopUp()
         let price = parkingSelected?.config_price ?? 1000
-        popUp.showPopUp(money: Int(price), completionNo: nil, completionYes: {
+        popUp.showPopUp(money: price, completionNo: nil, completionYes: {
             let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
             self.push(controller: vc)
         })

@@ -570,3 +570,9 @@ extension String {
         return defaultString
     }
 }
+
+extension String {
+    func validate(validatorType: ValidatorType) throws -> String {
+        return try Validator.validateFor(type: validatorType).validate(value: self)
+    }
+}

@@ -223,6 +223,15 @@ struct LocalizableKey {
     static let from = "from"
     static let to = "to"
     
+    // MARK: Message pop up
+    static let ok = "ok"
+    
+    // MARK: Validation
+    static let requireDate = "requireDate"
+    static let requireTime = "requireTime"
+    static let requirePlate = "requirePlate"
+    static let requireVehicleType = "requireVehicleType"
+    
     // --------------- English App ----------------- //
     static let privacyAndPolicy = "PrivacyAndPolicy"
     static let pleaseEnterEmail = "pleaseEnterEmail"
