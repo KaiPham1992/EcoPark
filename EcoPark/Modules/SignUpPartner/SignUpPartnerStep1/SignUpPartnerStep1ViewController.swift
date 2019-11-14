@@ -102,21 +102,21 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     }
     
     @IBAction func btnNextTapped() {
-        if validateInputData() {
-            
-            if self.vGender.tfInput.text == "Nữ" {
-                self.vGender.tfInput.text = "female"
-            }
-            else if self.vGender.tfInput.text == "Nam" {
-                self.vGender.tfInput.text = "male"
-            }
-            else if self.vGender.tfInput.text == "Khác" {
-                self.vGender.tfInput.text = "other"
-            }
+//        if validateInputData() {
+//
+//            if self.vGender.tfInput.text == "Nữ" {
+//                self.vGender.tfInput.text = "female"
+//            }
+//            else if self.vGender.tfInput.text == "Nam" {
+//                self.vGender.tfInput.text = "male"
+//            }
+//            else if self.vGender.tfInput.text == "Khác" {
+//                self.vGender.tfInput.text = "other"
+//            }
             
             let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: nil, cmnd_img_after_src: nil, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
            self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
-        }
+//        }
     }
 }
 

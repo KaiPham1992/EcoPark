@@ -11,6 +11,15 @@
 import UIKit
 
 class SignUpPartnerStep2Presenter: SignUpPartnerStep2PresenterProtocol, SignUpPartnerStep2InteractorOutputProtocol {
+    
+    func getListParkingType() {
+        Provider.shared.parkingAPIService.getParkingType(success: { (listParkingType) in
+            self.view?.didGetListParkingType(listParkingType: listParkingType)
+        }) { (error) in
+            
+        }
+    }
+    
 
     weak private var view: SignUpPartnerStep2ViewProtocol?
     var interactor: SignUpPartnerStep2InteractorInputProtocol?

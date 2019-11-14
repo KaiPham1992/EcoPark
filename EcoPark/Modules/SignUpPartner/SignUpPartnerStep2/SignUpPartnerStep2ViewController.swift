@@ -10,7 +10,7 @@
 
 import UIKit
 
-class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2ViewProtocol {
+class SignUpPartnerStep2ViewController: BaseViewController {
 
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbParking: UILabel!
@@ -37,11 +37,22 @@ class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2Vi
 
     var param: BossRegisterParam?
     
+    let datePickerTimeOpen = UIDatePicker()
+    let formatterTimeOpen = DateFormatter()
+    let datePickerTimeClose = UIDatePicker()
+    let formatterTimeClose = DateFormatter()
+
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getListParkingType()
+    }
+    
     private func setupUI() {
         setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
         addBackToNavigation()
@@ -66,6 +77,8 @@ class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2Vi
         btnNext.setTitle(LocalizableKey.next.showLanguage, for: .normal)
         btnDeletePhotoFront.isHidden = true
         btnDeletePhotoBacksite.isHidden = true
+        
+        setTime()
     }
     
     @IBAction func btnPhotoFrontTapped() {
@@ -97,7 +110,9 @@ class SignUpPartnerStep2ViewController: BaseViewController, SignUpPartnerStep2Vi
     @IBAction func btnNextTapped() {
         self.push(controller: SignUpPartnerStep3Router.createModule())
     }
+    
 }
+
 
 extension SignUpPartnerStep2ViewController {
     func validateInputData() -> Bool {
@@ -134,4 +149,60 @@ extension SignUpPartnerStep2ViewController {
             lbError.isHidden = isHidden
             lbError.text = message ?? ""
         }
+}
+
+extension SignUpPartnerStep2ViewController {
+    
+    private func setTime() {
+        //--Time
+         datePickerTimeOpen.datePickerMode = .time
+         datePickerTimeClose.datePickerMode = .time
+         let toolbarTimeOpen = UIToolbar()
+         toolbarTimeOpen.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePicker))
+         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+         toolbarTimeOpen.setItems([doneButton,spaceButton,cancelButton], animated: false)
+         vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
+         vOpen.tfInput.inputView = datePickerTimeOpen
+        
+         //close time
+         let toolbarTimeClose = UIToolbar()
+          toolbarTimeClose.sizeToFit()
+         
+         let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
+          toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButton], animated: false)
+         
+         vClose.tfInput.inputAccessoryView = toolbarTimeClose
+         vClose.tfInput.inputView = datePickerTimeClose
+    }
+    
+    @objc func doneDatePicker(){
+           //For time formate
+           formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
+        vOpen.tfInput.text = formatterTimeOpen.string(from: datePickerTimeOpen.date)
+    
+           //dismiss date picker dialog
+           self.view.endEditing(true)
+       }
+    
+    @objc func doneDatePickerClose(){
+               //For time formate
+               formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
+            vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
+        
+               //dismiss date picker dialog
+               self.view.endEditing(true)
+           }
+       
+       @objc func cancelDatePicker(){
+           //cancel button dismiss datepicker dialog
+           self.view.endEditing(true)
+       }
+}
+
+extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
+    func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
+        vParkingType.listItem = listParkingType.map({$0.name&})
+    }
 }

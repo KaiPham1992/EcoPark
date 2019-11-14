@@ -18,6 +18,7 @@ protocol SignUpPartnerStep2WireframeProtocol: class {
 protocol SignUpPartnerStep2PresenterProtocol: class {
 
     var interactor: SignUpPartnerStep2InteractorInputProtocol? { get set }
+    func getListParkingType()
 }
 
 //MARK: Interactor -
@@ -39,4 +40,5 @@ protocol SignUpPartnerStep2ViewProtocol: class {
     var presenter: SignUpPartnerStep2PresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didGetListParkingType(listParkingType: [ParkingTypeEntity])
 }
