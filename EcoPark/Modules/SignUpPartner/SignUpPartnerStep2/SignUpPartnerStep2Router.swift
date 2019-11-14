@@ -14,13 +14,14 @@ class SignUpPartnerStep2Router: SignUpPartnerStep2WireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(param: BossRegisterParam) -> SignUpPartnerStep2ViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = SignUpPartnerStep2ViewController(nibName: nil, bundle: nil)
         let interactor = SignUpPartnerStep2Interactor()
         let router = SignUpPartnerStep2Router()
         let presenter = SignUpPartnerStep2Presenter(interface: view, interactor: interactor, router: router)
 
+        view.param = param
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

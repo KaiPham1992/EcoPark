@@ -71,6 +71,12 @@
 		1735228B236EB1EA004C889B /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17352287236EB1EA004C889B /* PriceCell.xib */; };
 		1735228C236EB1EA004C889B /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17352287236EB1EA004C889B /* PriceCell.xib */; };
 		1735228D236EB1EA004C889B /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17352287236EB1EA004C889B /* PriceCell.xib */; };
+		17378CA0237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */; };
+		17378CA1237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */; };
+		17378CA2237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */; };
+		17378CA4237BE2D700BBAFE5 /* ParkingTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378CA3237BE2D700BBAFE5 /* ParkingTypeEntity.swift */; };
+		17378CA5237BE2D700BBAFE5 /* ParkingTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378CA3237BE2D700BBAFE5 /* ParkingTypeEntity.swift */; };
+		17378CA6237BE2D700BBAFE5 /* ParkingTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378CA3237BE2D700BBAFE5 /* ParkingTypeEntity.swift */; };
 		175C73362367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
 		175C73372367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
 		175C73382367E4EE009F03F6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C73302367E4EE009F03F6 /* ProfilePresenter.swift */; };
@@ -1606,6 +1612,8 @@
 		172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerDetailCheckinViewController.xib; sourceTree = "<group>"; };
 		17352286236EB1EA004C889B /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		17352287236EB1EA004C889B /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
+		17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossRegisterParam.swift; sourceTree = "<group>"; };
+		17378CA3237BE2D700BBAFE5 /* ParkingTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTypeEntity.swift; sourceTree = "<group>"; };
 		175C73302367E4EE009F03F6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		175C73312367E4EE009F03F6 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		175C73322367E4EE009F03F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -3748,6 +3756,7 @@
 			children = (
 				2ADDCB00232F83710087B427 /* TermAndCondition */,
 				DE2D679622F9BFC60055586B /* PaymentViewModel */,
+				17378CA3237BE2D700BBAFE5 /* ParkingTypeEntity.swift */,
 				DE361EEE2283E84F00FA3B0D /* NotificationEntity.swift */,
 				DE361EF02283E84F00FA3B0D /* BaseEntity.swift */,
 				DE361EF62283E84F00FA3B0D /* PhoneEntity.swift */,
@@ -3817,6 +3826,7 @@
 				DE361F0C2283E84F00FA3B0D /* UpdateProfileParam.swift */,
 				DE361F0D2283E84F00FA3B0D /* UpdateProfileSocial.swift */,
 				228071F7235C11D70076D5CC /* RestoreParam.swift */,
+				17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */,
 			);
 			path = UserParam;
 			sourceTree = "<group>";
@@ -5060,6 +5070,7 @@
 				DE952F8D2287D2A700E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE361DFB2283E57900FA3B0D /* String+extension.swift in Sources */,
 				DE952F822287D2A700E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				17378CA0237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */,
 				2A07B998236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7354236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				17FCC5E6236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
@@ -5115,6 +5126,7 @@
 				DE952F9F2287D2A700E3F688 /* KActivityIndicatorShape.swift in Sources */,
 				DE361E712283E60500FA3B0D /* AppTextField.swift in Sources */,
 				DE361F4C2283E85000FA3B0D /* NotificationEndPoint.swift in Sources */,
+				17378CA4237BE2D700BBAFE5 /* ParkingTypeEntity.swift in Sources */,
 				DE361E9E2283E60500FA3B0D /* NotificationContent.swift in Sources */,
 				2238871D2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,
 				DE952F892287D2A700E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
@@ -5474,6 +5486,7 @@
 				DE952FF32287DF4800E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				DE952FF42287DF4800E3F688 /* String+extension.swift in Sources */,
 				DE952FF52287DF4800E3F688 /* KActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				17378CA1237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */,
 				2A07B999236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7355236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				17FCC5E7236AC9B4003E98D8 /* SignUpPartnerWaitingInteractor.swift in Sources */,
@@ -5529,6 +5542,7 @@
 				DE9530082287DF4800E3F688 /* AppTextField.swift in Sources */,
 				DE9530092287DF4800E3F688 /* NotificationEndPoint.swift in Sources */,
 				DE95300A2287DF4800E3F688 /* NotificationContent.swift in Sources */,
+				17378CA5237BE2D700BBAFE5 /* ParkingTypeEntity.swift in Sources */,
 				2238871E2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,
 				DE95300B2287DF4800E3F688 /* KActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				7629BDD722ACD2450051B835 /* ReportSuccessedView.swift in Sources */,
@@ -5888,6 +5902,7 @@
 				DE95309E2287DF6400E3F688 /* LoginRouter.swift in Sources */,
 				DE95309F2287DF6400E3F688 /* LoginProtocols.swift in Sources */,
 				DE9530A02287DF6400E3F688 /* NotificationPopUp.swift in Sources */,
+				17378CA2237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */,
 				2A07B99A236E9935004FE7CE /* DetailParkingProtocols.swift in Sources */,
 				175C7356236836C7009F03F6 /* SignUpPartnerStep1Router.swift in Sources */,
 				DE9530A12287DF6400E3F688 /* KActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -5943,6 +5958,7 @@
 				DE9530B42287DF6400E3F688 /* AppConstant.swift in Sources */,
 				DE9530B52287DF6400E3F688 /* KActivityIndicatorShape.swift in Sources */,
 				DE9530B62287DF6400E3F688 /* AppTextField.swift in Sources */,
+				17378CA6237BE2D700BBAFE5 /* ParkingTypeEntity.swift in Sources */,
 				DE9530B72287DF6400E3F688 /* NotificationEndPoint.swift in Sources */,
 				DE9530B82287DF6400E3F688 /* NotificationContent.swift in Sources */,
 				2238871F2366DF8200DAC978 /* HomeFilterPopUpContentView.swift in Sources */,

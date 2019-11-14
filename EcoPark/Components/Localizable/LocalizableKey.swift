@@ -142,6 +142,12 @@ struct LocalizableKey {
     static let frontPhoto = "frontPhoto"
     static let backsidePhoto = "backsidePhoto"
     
+    //error
+    static let errorNamePartner = "errorNamePartner"
+    static let errorIDNumber = "errorIDNumber"
+    static let errorIssueBy = "errorIssueBy"
+    static let errorDateBy = "errorDateBy"
+    
     //Sign Up Partner 2
     static let parkingInfo = "ParkingInfo"
     static let parkingName = "ParkingName"
@@ -165,6 +171,7 @@ struct LocalizableKey {
     
     static let photoFront = "photoFront"
     static let photoBackside = "photoBackside"
+    
     
     // Sign Up Partner 3
     static let utilityOther = "UtilityOther"

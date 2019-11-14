@@ -18,7 +18,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     @IBOutlet weak var vGender: AppDropDown!
     @IBOutlet weak var vBirthday: AppDateDropDown!
     @IBOutlet weak var vIDNumber: AppTextField!
-    @IBOutlet weak var vIssuedBy: AppDropDown!
+    @IBOutlet weak var vIssuedBy: AppTextField!
     @IBOutlet weak var vDateBy: AppDateDropDown!
     @IBOutlet weak var vEmail: AppTextField!
     @IBOutlet weak var lbImage: UILabel!
@@ -30,7 +30,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     @IBOutlet weak var imgBacksidePhoto: UIImageView!
     @IBOutlet weak var btnDeletePhotoFront: UIButton!
     @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
-    
+    @IBOutlet weak var lbError: UILabel!
     
 	var presenter: SignUpPartnerStep1PresenterProtocol?
 
@@ -48,10 +48,11 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         vGender.setTitleAndPlaceHolder(title: LocalizableKey.gender.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vBirthday.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vIDNumber.setTitleAndPlaceHolder(title: LocalizableKey.partnerID.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vIssuedBy.setTitleAndPlaceHolder(title: LocalizableKey.issuedBy.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
+        vIssuedBy.setTitleAndPlaceHolder(title: LocalizableKey.issuedBy.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vDateBy.setTitleAndPlaceHolder(title: LocalizableKey.dayBy.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         lbImage.text = LocalizableKey.partnerImage.showLanguage
+        vIDNumber.tfInput.keyboardType = .numberPad
         
         let attr1 = LocalizableKey.photoNotice1.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
         let attr2 = LocalizableKey.photoNotice2.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontBold15, isUnderLine: false)
@@ -101,7 +102,62 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     }
     
     @IBAction func btnNextTapped() {
-        self.push(controller: SignUpPartnerStep2Router.createModule())
+//        if validateInputData() {
+//
+//            if self.vGender.tfInput.text == "Nữ" {
+//                self.vGender.tfInput.text = "female"
+//            }
+//            else if self.vGender.tfInput.text == "Nam" {
+//                self.vGender.tfInput.text = "male"
+//            }
+//            else if self.vGender.tfInput.text == "Khác" {
+//                self.vGender.tfInput.text = "other"
+//            }
+            
+            let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: nil, cmnd_img_after_src: nil, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
+           self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
+//        }
     }
 }
 
+
+extension SignUpPartnerStep1ViewController {
+    func validateInputData() -> Bool {
+        if self.vPartnerName.getText() == "" && self.vIDNumber.getText() == "" && self.vIssuedBy.getText() == "" && self.vDateBy.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
+            return false
+        }
+        
+        if self.vPartnerName.getText() == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorNamePartner.showLanguage)
+            return false
+        }
+        
+        if self.vIDNumber.getText() == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorIDNumber.showLanguage)
+            return false
+        }
+        
+        if self.vIssuedBy.getText() == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorIssueBy.showLanguage)
+            return false
+        }
+        
+        if self.vDateBy.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorDateBy.showLanguage)
+            return false
+        }
+        
+        if self.vEmail.getText() != "" && self.vEmail.tfInput.text?.isValidEmail() == false {
+            hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
+            return false
+        }
+        
+        hideError()
+        return true
+    }
+        func hideError(isHidden: Bool = true, message: String? = nil){
+            lbError.isHidden = isHidden
+            lbError.text = message ?? ""
+        }
+}

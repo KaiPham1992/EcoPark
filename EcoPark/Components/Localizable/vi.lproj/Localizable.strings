@@ -130,6 +130,12 @@
 "frontPhoto" = "Ảnh mặt trước CMND *";
 "backsidePhoto" = "Ảnh mặt sau CMND *";
 
+//error
+"errorNamePartner" = "Vui lòng nhập tên chủ bãi";
+"errorIDNumber" = "Vui lòng nhập số chứng minh nhân dân";
+"errorIssueBy" = "Vui lòng nhập nơi cấp";
+"errorDateBy" = "Vui lòng chọn ngày cấp";
+
 // Sign Up Partner 2
 "ParkingInfo" = "Thông tin BÃI ĐỖ";
 "ParkingName" = "Tên hiển thị bãi xe *";
