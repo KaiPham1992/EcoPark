@@ -42,6 +42,8 @@ class ParkingInfoEntity: BaseEntity {
     var material: [MaterialEntity]?
     var img: [ImgEntity]?
     var parkedNumber: Int?
+    var config_price: Double? = 1000
+    var total_rating: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -79,6 +81,8 @@ class ParkingInfoEntity: BaseEntity {
         self.material <- map["material"]
         self.img <- map["img"]
         self.parkedNumber <- map["parked_number"]
+        self.config_price <- (map["config_price"], StringToDoubleTransform())
+        self.total_rating <- map["total_rating"]
     }
 }
 

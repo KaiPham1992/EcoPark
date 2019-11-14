@@ -81,10 +81,14 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
             vAppImageSlide.listItem = listImage as [Any]
         }
         lbName.text = info.name&
+        
         if let rating = info.rating {
             ratingBar.setStar(number: rating)
         } else {
             ratingBar.hideTitle()
+        }
+        if let totalRating = info.total_rating {
+            ratingBar.setTitle(number: totalRating)
         }
         
         if let timeStart = info.time_start?.toString(dateFormat: .HHmm),
