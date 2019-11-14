@@ -9,9 +9,10 @@
 //
 
 import UIKit
+import GooglePlaces
 
 protocol HomeFindViewControllerDelegate: class {
-    func didSelectAddress()
+    func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees)
 }
 
 class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
@@ -22,7 +23,13 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     @IBOutlet weak var tbFind: UITableView!
     
     weak var delegate: HomeFindViewControllerDelegate?
-
+    var locations = [GoogleLocationEntity]() {
+        didSet {
+            tbFind.reloadData()
+        }
+    }
+    var address: String = ""
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,11 +43,10 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     override func setUpViews() {
         super.setUpViews()
         vSearch.actionSearch = { text in
-           
+           self.presenter?.searchPlaceByString(text: text)
         }
         configureTable()
         
-        self.presenter?.searchPlaceByString(text: "hang  ")
     }
     
     override func setUpNavigation() {
@@ -54,12 +60,25 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     @objc func btnCancel() {
         self.pop()
     }
+    
+    func didSearch(locations: [GoogleLocationEntity]) {
+        self.locations = locations
+    }
+    
+    func getPlaceDetail(placeId: String) {
+        self.presenter?.getPlaceDetail(placeId: placeId)
+    }
+    
+    func didGetPlaceDetail(lat: Double, long: Double) {
+        self.delegate?.didSelectAddress(address: self.address, lat: lat, long: long)
+        self.pop()
+    }
 
 }
 
 extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return locations.count + 1
     }
     
     func configureTable() {
@@ -81,12 +100,16 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let cell = tableView.dequeue(HomeFindCell.self, for: indexPath)
+        cell.location = locations[indexPath.row - 1]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelectAddress()
-        self.pop()
+        if indexPath.row != 0 {
+            let item = locations[indexPath.row - 1]
+            self.address = item.getPlaceAddress()
+            getPlaceDetail(placeId: item.placeID)
+        }
     }
 }

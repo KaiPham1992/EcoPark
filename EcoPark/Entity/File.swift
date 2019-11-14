@@ -18,6 +18,10 @@ struct GoogleLocationEntity: Mappable  {
     init?(map: Map) {
     }
     
+    init() {
+        
+    }
+    
     mutating func mapping(map: Map) {
         self.placeID <- map["place_id"]
         self.address <- map["description"]

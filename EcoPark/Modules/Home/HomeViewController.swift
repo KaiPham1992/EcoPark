@@ -36,15 +36,14 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.viewDidLoad()
         
         // remove later
-        centerMapCoordinate = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
-        setUpMap()
+        setUpMap(lat: 10.7981483, long: 106.6715733)
         vParkingSort.isHidden = true
         
-        getParking()
+        getParking(address: "chung cư 8x plus")
     }
     
-    func getParking() {
-        Provider.shared.userAPIService.getParking(address: "chung cư 8x plus", success: { parking in
+    func getParking(address: String) {
+        Provider.shared.userAPIService.getParking(address: address, success: { parking in
             self.listParking = parking
             self.drawMarker(parkings: self.listParking)
         }) { error in
@@ -52,7 +51,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         }
     }
     
-    func setUpMap() {
+    func setUpMap(lat: CLLocationDegrees = 0, long: CLLocationDegrees = 0) {
+        centerMapCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
         self.mapView?.isMyLocationEnabled = true
         //Location Manager code to fetch current location
         self.locationManager.delegate = self
@@ -130,8 +130,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
 }
 extension HomeViewController: HomeFindViewControllerDelegate {
-    func didSelectAddress() {
-        
+    func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        setUpMap(lat: lat, long: long)
+        getParking(address: address)
     }
 }
 

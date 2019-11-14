@@ -19,6 +19,7 @@ protocol HomeFindPresenterProtocol: class {
 
     var interactor: HomeFindInteractorInputProtocol? { get set }
     func searchPlaceByString(text: String)
+    func getPlaceDetail(placeId: String)
 }
 
 //MARK: Interactor -
@@ -40,4 +41,6 @@ protocol HomeFindViewProtocol: class {
     var presenter: HomeFindPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didSearch(locations: [GoogleLocationEntity])
+    func didGetPlaceDetail(lat: Double, long: Double)
 }
