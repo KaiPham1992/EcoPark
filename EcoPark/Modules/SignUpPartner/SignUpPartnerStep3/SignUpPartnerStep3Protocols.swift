@@ -18,6 +18,7 @@ protocol SignUpPartnerStep3WireframeProtocol: class {
 protocol SignUpPartnerStep3PresenterProtocol: class {
 
     var interactor: SignUpPartnerStep3InteractorInputProtocol? { get set }
+    
 }
 
 //MARK: Interactor -

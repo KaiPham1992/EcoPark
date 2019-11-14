@@ -14,6 +14,8 @@ enum ParkingEndPoint {
     case booking(time: String, parkingId: String, vehicleId: String, plate: String, moneyPaid: String)
     case getBookingDetail(bookingId: String)
     case getParkingType
+    case getMaterial
+    case bossRegister(param: BossRegisterParam)
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -30,6 +32,10 @@ extension ParkingEndPoint: EndPointType {
             return "_api/order/get_booking_detail"
         case .getParkingType:
             return "_api/parking/get_list_parking_type"
+        case .getMaterial:
+            return "_api/parking/get_list_material"
+        case .bossRegister:
+            return "_api/user/register_boss"
         }
         
     }
@@ -50,6 +56,10 @@ extension ParkingEndPoint: EndPointType {
             return ["booking_id": bookingId]
         case .getParkingType:
             return [:]
+        case .getMaterial:
+            return [:]
+        case .bossRegister(let param):
+            return param.toJSON()
         }
     }
     

@@ -11,7 +11,7 @@ import ImagePicker
 
 protocol AppCollectionPhotoDelegate: class {
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat)
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto])
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage])
 }
 
 class AppCollectionPhoto: UIView {
@@ -28,7 +28,7 @@ class AppCollectionPhoto: UIView {
         cv.showsHorizontalScrollIndicator = false
         cv.isPagingEnabled = true
         cv.isScrollEnabled = true
-//        layout.scrollDirection = .horizontal
+        //        layout.scrollDirection = .horizontal
         return cv
         
     }()
@@ -38,9 +38,9 @@ class AppCollectionPhoto: UIView {
     var isSingleSelected = false
     var listIdDelete = [Int]() // use when edit
     
-    var limit = 10
+    var limit = 4
     
-    var listImage = [AppPhoto]() {
+    var listImage = [UIImage]() {
         didSet {
             cvPhoto.reloadData()
             calculateHeight()
@@ -93,9 +93,13 @@ class AppCollectionPhoto: UIView {
 extension AppCollectionPhoto: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if canEdit {
-            return listImage.count + 1
+            if listImage.count <= 4 {
+                return listImage.count + 1
+            } else {
+                return 5
+            }
         } else {
-            return listImage.count
+            return 5//listImage.count
         }
     }
     
@@ -132,7 +136,9 @@ extension AppCollectionPhoto: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if canEdit && indexPath.item == 0 {
-            showImagePicker()
+            if listImage.count < 4 {
+                showImagePicker()
+            }
         }
     }
     
@@ -163,32 +169,17 @@ extension AppCollectionPhoto: ImagePickerDelegate {
     private func receivedImages(imagePicker: ImagePickerController, images: [UIImage]) {
         imagePicker.dismiss(animated: true, completion: nil)
         
-        
-        let imagesItems = images.map({ (image) -> AppPhoto in
-            return AppPhoto(status: .new, image: image.resizeImage(maxWidth: 750), url: nil)
-        })
         if isSingleSelected {
-            self.listImage = imagesItems
+            self.listImage = images
         } else {
-            self.listImage.append(contentsOf: imagesItems)
-        }
-        
-        delegate?.appCollectionPhoto(self, selectedImages: imagesItems)
-        
-        imagesItems.forEach { _imageItem in
-            guard let _image = _imageItem.image else { return }
-            
-            Provider.shared.commonAPIService.uploadImage(image: _image, success: { photo in
-                _imageItem.status = AppPhotoStatus.uploaded
-                _imageItem.url = photo?.imgSrc
-                self.cvPhoto.reloadData()
-            }) { error in
-                _imageItem.status = AppPhotoStatus.error
-                print(error.debugDescription)
-                self.cvPhoto.reloadData()
+            if self.listImage.count < 4 {
+                self.listImage.append(contentsOf: images)
             }
         }
         
+        delegate?.appCollectionPhoto(self, selectedImages: images)
+        
+        self.cvPhoto.reloadData()
     }
     
     func showImagePicker() {
@@ -198,6 +189,19 @@ extension AppCollectionPhoto: ImagePickerDelegate {
             limit = 1
             imagePickerController.imageLimit = limit
         } else {
+            switch listImage.count {
+            case 1:
+                limit = 3
+            case 2:
+                limit = 2
+            case 3:
+                limit = 1
+            case 4:
+                limit = 0
+            default:
+                limit = 4
+            }
+            
             imagePickerController.imageLimit = limit
         }
         

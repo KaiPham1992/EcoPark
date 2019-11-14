@@ -18,8 +18,8 @@ class AppCollectionPhotoCell: BaseCollectionCell {
     let imgPhoto: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
-        img.backgroundColor = AppColor.gray999999
-        img.setBorder(borderWidth: 0, borderColor: .white, cornerRadius: 5)
+        img.backgroundColor = .clear
+        img.setBorder(borderWidth: 0, borderColor: .white, cornerRadius: 10)
         return img
     }()
     
@@ -37,15 +37,16 @@ class AppCollectionPhotoCell: BaseCollectionCell {
         return btn
     }()
     
-    var photo: AppPhoto? {
+    var photo: UIImage? {
         didSet {
-//            loadImage(photo: photo)
+            loadImage(photo: photo)
         }
     }
     
     
     override func setupViews() {
         super.setupViews()
+        self.contentView.backgroundColor = .clear
         //--
         addSubview(imgPhoto)
         addSubview(imgClose)
@@ -56,32 +57,10 @@ class AppCollectionPhotoCell: BaseCollectionCell {
         imgClose.anchor(topAnchor, right: rightAnchor, topConstant: 5, rightConstant: 5, widthConstant: 20, heightConstant: 20)
         btnRemove.fillToView(view: imgClose)
         
-        self.setBorder(borderWidth: 0.5, borderColor: .clear, cornerRadius: 0)
+        self.setBorder(borderWidth: 0, borderColor: .clear, cornerRadius: 0)
     }
     
-//    func loadImage(photo: AppPhoto?) {
-//        guard let _photo = photo else { return }
-//        var urlStr = ""
-//        if _photo.url&.contains("http"){
-//             urlStr = "\(_photo.url&)"
-//        } else {
-//             urlStr = "\(BASE_URL_IMAGE)\(_photo.url&)"
-//        }
-//
-//        switch _photo.status {
-//        case .new:
-//            imgPhoto.image = AppImage.imgPlaceHolderImage
-//        case .uploaded:
-//            if let image = _photo.image {
-//                imgPhoto.image = image
-//            } else if let url = URL(string: urlStr) {
-//                imgPhoto.sd_setImage(with: url, placeholderImage: AppImage.imgPlaceHolderImage)
-//            } else {
-//                 imgPhoto.image = AppImage.imgErrorUpLoadPhoto
-//            }
-//
-//        case .error:
-//            imgPhoto.image = AppImage.imgErrorUpLoadPhoto
-//        }
-//    }
+    func loadImage(photo: UIImage?) {
+        imgPhoto.image = photo
+    }
 }

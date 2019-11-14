@@ -135,6 +135,8 @@
 "errorIDNumber" = "Vui lòng nhập số chứng minh nhân dân";
 "errorIssueBy" = "Vui lòng nhập nơi cấp";
 "errorDateBy" = "Vui lòng chọn ngày cấp";
+"errorPhotoFront" = "Vui lòng chọn ảnh mặt trước chứ minh nhân dân";
+"errorPhotoBackside" = "Vui lòng chọn ảnh mặt sau chứng minh nhân dân";
 
 // Sign Up Partner 2
 "ParkingInfo" = "Thông tin BÃI ĐỖ";
@@ -158,6 +160,17 @@
 
 "photoFront" = "Ảnh mặt trước giấy phép";
 "photoBackside" = "Ảnh mặt sau giấy phép";
+
+//error
+ "errorParkingName" = "Vui lòng nhập tên bãi xe";
+ "errorParkingType" = "Vui lòng chọn loại bãi xe";
+ "errorParkingCapacity" = "Vui lòng nhập sức chứa bãi xe";
+ "errorParkingAddress" = "Vui lòng nhập địa chỉ bãi xe";
+ "errorOpenTime" = "Vui lòng chọn giờ mở cửa bãi xe";
+ "errorCloseTime" = "Vui lòng chọn giờ đóng cửa bãi xe";
+ "errorPriceAHours" = "Vui lòng nhập giá cho một giờ";
+ "errorCombo" = "Vui lòng nhập giá cho combo (8 giờ)";
+
 // Sign Up parner 3
 "UtilityOther" = "Tiện ích khác";
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";
@@ -170,6 +183,8 @@
 "termAndPolicySignUp4" = "chính sách dịch vụ ";
 "termAndPolicySignUp5" = "chính sách bảo mật ";
 "termAndPolicySignUp6" = "của chúng tôi.";
+
+"errorMinimunPhoto" = "Vui lòng chọn ít nhất 2 ảnh bãi xe";
 
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Chi tiết bãi xe";

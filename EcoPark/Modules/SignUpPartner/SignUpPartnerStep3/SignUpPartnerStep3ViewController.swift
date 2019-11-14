@@ -11,7 +11,7 @@
 import UIKit
 
 class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3ViewProtocol {
-
+    
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbUtility: UILabel!
     @IBOutlet weak var lbImage: UILabel!
@@ -21,15 +21,23 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     @IBOutlet weak var heightPhoto: NSLayoutConstraint!
     @IBOutlet weak var lbTermAndPolicy: UILabel!
     @IBOutlet weak var btnDone: UIButton!
+    @IBOutlet weak var lbError: UILabel!
     
-	var presenter: SignUpPartnerStep3PresenterProtocol?
-
+    var isSelect: Bool = true
+    var presenter: SignUpPartnerStep3PresenterProtocol?
+    
     var listUtility: [String] = []
     
-	override func viewDidLoad() {
+    var listMaterial: [String] = []
+    
+    var listImageParking: [UIImage] = []
+    
+    var param: BossRegisterParam?
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        listUtility = ["ic_roof_on", "ic_carwash_off", "ic_repair_on", "ic_rent_on", "ic_supermarket_off", "ic_atm_on", "ic_hotel_off", "ic_coffee_on"]
+        listUtility = ["ic_roof_on", "ic_carwash_on", "ic_repair_on", "ic_rent_on", "ic_supermarket_on", "ic_atm_on", "ic_hotel_on", "ic_coffee_on"]
+        listMaterial = ["1","2","3","4","5","6","7","8"]
         setupUI()
         configCollectionView()
     }
@@ -78,11 +86,51 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     }
     
     @IBAction func btnDoneTapped() {
-        self.push(controller: SignUpPartnerWaitingRouter.createModule())
+        if validateInputData() {
+            
+            let paraInput = BossRegisterParam(email: param?.email,
+                                              fullname: param?.fullname,
+                                              gender: param?.gender,
+                                              birthday: param?.birthday,
+                                              identity_number: param?.identity_number,
+                                              issued_by: param?.issued_by,
+                                              issued_date: param?.issued_date,
+                                              cmnd_img_before_src: param?.cmnd_img_before_src,
+                                              cmnd_img_after_src: param?.cmnd_img_after_src,
+                                              gpkd_img_before_src: param?.gpkd_img_before_src,
+                                              gpkd_img_after_src: param?.gpkd_img_after_src,
+                                              parking_name: param?.parking_name,
+                                              parking_type_id: param?.parking_type_id,
+                                              number_place: param?.number_place,
+                                              parking_address: param?.parking_address,
+                                              time_start: param?.time_start,
+                                              time_end: param?.time_end,
+                                              code_tax: param?.code_tax,
+                                              price: param?.price,
+                                              package_price: param?.package_price,
+                                              material: listMaterial,
+                                              parking_img_src: listImageParking)
+            
+//            self.push(controller: SignUpPartnerWaitingRouter.createModule())
+        }
+    }
+    
+    func hideError(isHidden: Bool = true, message: String? = nil){
+        lbError.isHidden = isHidden
+        lbError.text = message ?? ""
+    }
+    
+    func validateInputData() -> Bool {
+        if listImageParking.count <= 1 {
+            hideError(isHidden: false, message:  LocalizableKey.errorMinimunPhoto.showLanguage)
+            return false
+        }
+        hideError()
+        return true
     }
 }
 
-extension SignUpPartnerStep3ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SignUpPartnerStep3ViewController: UICollectionViewDataSource {
     
     func configCollectionView() {
         cvUtility.registerXibCell(UtilityCell.self)
@@ -98,9 +146,85 @@ extension SignUpPartnerStep3ViewController: UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(UtilityCell.self, indexPath: indexPath)
-        cell.imgItem.image = UIImage(named: listUtility[indexPath.item])
+        //        cell.imgItem.image = UIImage(named: listUtility[indexPath.item])
+        cell.setUI(isSelect: self.isSelect, index: indexPath.item)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 0:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("1")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 1:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("2")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 2:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("3")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 3:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("4")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 4:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("5")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 5:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("6")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 6:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("7")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        case 7:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+            if isSelect {
+                listMaterial.append("8")
+            } else {
+                listMaterial.remove(at: indexPath.item)
+            }
+        default:
+            isSelect = !isSelect
+            cvUtility.reloadItems(at: [indexPath])
+        }
+    }
+}
+
+extension SignUpPartnerStep3ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -121,9 +245,7 @@ extension SignUpPartnerStep3ViewController: AppCollectionPhotoDelegate {
         self.heightPhoto.constant = height
     }
     
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
-        
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage]) {
+        listImageParking = images
     }
-    
-    
 }

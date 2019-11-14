@@ -17,21 +17,21 @@ class BossRegisterParam: BaseParam {
     var identity_number: String?
     var issued_by: String?
     var issued_date: String?
-    var cmnd_img_before_src: String?
-    var cmnd_img_after_src: String?
-    var gpkd_img_before_src: String?
-    var gpkd_img_after_src: String?
+    var cmnd_img_before_src: UIImage?
+    var cmnd_img_after_src: UIImage?
+    var gpkd_img_before_src: UIImage?
+    var gpkd_img_after_src: UIImage?
     var parking_name: String?
-    var parking_type_id: Int?
-    var number_place: Int?
+    var parking_type_id: String?
+    var number_place: String?
     var parking_address: String?
     var time_start: String?
     var time_end: String?
     var code_tax: String?
-    var price: Int?
-    var package_price: Int?
+    var price: String?
+    var package_price: String?
     var material: [String] = []
-    var parking_img_src: [String] = []
+    var parking_img_src: [UIImage] = []
     
     override func mapping(map: Map) {
         self.email <- map["email"]
@@ -66,21 +66,21 @@ class BossRegisterParam: BaseParam {
         identity_number: String?,
         issued_by: String?,
         issued_date: String?,
-        cmnd_img_before_src: String?,
-        cmnd_img_after_src: String?,
-        gpkd_img_before_src: String?,
-        gpkd_img_after_src: String?,
+        cmnd_img_before_src: UIImage?,
+        cmnd_img_after_src: UIImage?,
+        gpkd_img_before_src: UIImage?,
+        gpkd_img_after_src: UIImage?,
         parking_name: String?,
-        parking_type_id: Int?,
-        number_place: Int?,
+        parking_type_id: String?,
+        number_place: String?,
         parking_address: String?,
         time_start: String?,
         time_end: String?,
         code_tax: String?,
-        price: Int?,
-        package_price: Int?,
+        price: String?,
+        package_price: String?,
         material: [String] = [],
-        parking_img_src: [String] = []) {
+        parking_img_src: [UIImage] = []) {
         
         super.init()
         self.email = email

@@ -36,6 +36,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
 	var presenter: SignUpPartnerStep2PresenterProtocol?
 
     var param: BossRegisterParam?
+    var parkingTypeID: String?
     
     let datePickerTimeOpen = UIDatePicker()
     let formatterTimeOpen = DateFormatter()
@@ -71,13 +72,16 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.pirceAHours.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vTaxCode.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vParkingCapacity.tfInput.keyboardType = .numberPad
+        vPriceAHours.tfInput.keyboardType = .numberPad
+        vPriceCombo.tfInput.keyboardType = .numberPad
         
         lbFrontPhoto.text = LocalizableKey.photoFront.showLanguage
         lbBacksidePhoto.text = LocalizableKey.photoBackside.showLanguage
         btnNext.setTitle(LocalizableKey.next.showLanguage, for: .normal)
         btnDeletePhotoFront.isHidden = true
         btnDeletePhotoBacksite.isHidden = true
-        
+        vParkingType.delegateDropDown = self
         setTime()
     }
     
@@ -108,7 +112,11 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     }
     
     @IBAction func btnNextTapped() {
-        self.push(controller: SignUpPartnerStep3Router.createModule())
+//        if validateInputData() {
+            let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: imgFrontPhoto.image, gpkd_img_after_src: imgBacksidePhoto.image, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: vParkingAddress.tvInput.text, time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
+            
+            self.push(controller: SignUpPartnerStep3Router.createModule(param: param2))
+//        }
     }
     
 }
@@ -122,25 +130,44 @@ extension SignUpPartnerStep2ViewController {
         }
         
         if self.vParkingName.getText() == "" {
-            hideError(isHidden: false, message: LocalizableKey.errorNamePartner.showLanguage)
+            hideError(isHidden: false, message: LocalizableKey.errorParkingName.showLanguage)
             return false
         }
         
         if self.vParkingType.tfInput.text == "" {
-            hideError(isHidden: false, message: LocalizableKey.errorIDNumber.showLanguage)
+            hideError(isHidden: false, message: LocalizableKey.errorParkingType.showLanguage)
             return false
         }
         
         if self.vParkingCapacity.getText() == "" {
-            hideError(isHidden: false, message: LocalizableKey.errorIssueBy.showLanguage)
+            hideError(isHidden: false, message: LocalizableKey.errorParkingCapacity.showLanguage)
             return false
         }
         
         if self.vParkingAddress.tvInput.text == "" {
-            hideError(isHidden: false, message: LocalizableKey.errorDateBy.showLanguage)
+            hideError(isHidden: false, message: LocalizableKey.errorParkingAddress.showLanguage)
             return false
         }
         
+        if self.vOpen.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorOpenTime.showLanguage)
+            return false
+        }
+        
+        if self.vClose.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorCloseTime.showLanguage)
+            return false
+        }
+        
+        if self.vPriceAHours.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorPriceAhours.showLanguage)
+            return false
+        }
+        
+        if self.vPriceCombo.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.errorPriceCombo.showLanguage)
+            return false
+        }
         
         hideError()
         return true
@@ -162,6 +189,7 @@ extension SignUpPartnerStep2ViewController {
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePicker))
          let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
          let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+        let cancelButtonClose = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
          toolbarTimeOpen.setItems([doneButton,spaceButton,cancelButton], animated: false)
          vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
          vOpen.tfInput.inputView = datePickerTimeOpen
@@ -171,7 +199,7 @@ extension SignUpPartnerStep2ViewController {
           toolbarTimeClose.sizeToFit()
          
          let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
-          toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButton], animated: false)
+          toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButtonClose], animated: false)
          
          vClose.tfInput.inputAccessoryView = toolbarTimeClose
          vClose.tfInput.inputView = datePickerTimeClose
@@ -204,5 +232,25 @@ extension SignUpPartnerStep2ViewController {
 extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
         vParkingType.listItem = listParkingType.map({$0.name&})
+        
     }
+}
+
+extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
+    func didChangedValue(sender: AppDropDown, item: Any) {
+        switch item as? String {
+        case "Bãi xe có mái che":
+            self.parkingTypeID = "1"
+            case "Bãi xe không có mái che":
+            self.parkingTypeID = "2"
+            case "Bãi xe tính tiền tự động":
+            self.parkingTypeID = "3"
+            case "Bãi xe đặc biệt":
+            self.parkingTypeID = "4"
+        default:
+            self.parkingTypeID = nil
+        }
+    }
+    
+    
 }

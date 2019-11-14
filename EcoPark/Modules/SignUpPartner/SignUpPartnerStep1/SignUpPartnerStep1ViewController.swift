@@ -114,7 +114,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
 //                self.vGender.tfInput.text = "other"
 //            }
             
-            let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: nil, cmnd_img_after_src: nil, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
+        let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: imgFrontPhoto.image, cmnd_img_after_src: imgBacksidePhoto.image, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
            self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
 //        }
     }
@@ -150,6 +150,16 @@ extension SignUpPartnerStep1ViewController {
         
         if self.vEmail.getText() != "" && self.vEmail.tfInput.text?.isValidEmail() == false {
             hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
+            return false
+        }
+        
+        if imgFrontPhoto.image == AppImage.imgAddImage {
+            hideError(isHidden: false, message:  LocalizableKey.errorPhotoFront.showLanguage)
+            return false
+        }
+        
+        if imgBacksidePhoto.image == AppImage.imgAddImage {
+            hideError(isHidden: false, message:  LocalizableKey.errorPhotoBackside.showLanguage)
             return false
         }
         

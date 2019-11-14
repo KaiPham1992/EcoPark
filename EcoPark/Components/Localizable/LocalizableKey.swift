@@ -147,6 +147,8 @@ struct LocalizableKey {
     static let errorIDNumber = "errorIDNumber"
     static let errorIssueBy = "errorIssueBy"
     static let errorDateBy = "errorDateBy"
+    static let errorPhotoFront = "errorPhotoFront"
+    static let errorPhotoBackside = "errorPhotoBackside"
     
     //Sign Up Partner 2
     static let parkingInfo = "ParkingInfo"
@@ -172,6 +174,16 @@ struct LocalizableKey {
     static let photoFront = "photoFront"
     static let photoBackside = "photoBackside"
     
+    //error
+    static let errorParkingName = "errorParkingName"
+    static let errorParkingType = "errorParkingType"
+    static let errorParkingCapacity = "errorParkingCapacity"
+    static let errorParkingAddress = "errorParkingAddress"
+    static let errorOpenTime = "errorOpenTime"
+    static let errorCloseTime = "errorCloseTime"
+    static let errorPriceAhours = "errorPriceAHours"
+    static let errorPriceCombo = "errorCombo"
+    
     
     // Sign Up Partner 3
     static let utilityOther = "UtilityOther"
@@ -185,6 +197,9 @@ struct LocalizableKey {
     static let termAndPolicySignUp4 = "termAndPolicySignUp4"
     static let termAndPolicySignUp5 = "termAndPolicySignUp5"
     static let termAndPolicySignUp6 = "termAndPolicySignUp6"
+    
+    //error
+    static let errorMinimunPhoto = "errorMinimunPhoto"
     
     // MARK: ParkingUserDetailViewController
     static let titleParkDetail = "titleParkDetail"
