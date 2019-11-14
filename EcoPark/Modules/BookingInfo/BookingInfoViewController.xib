@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,6 @@
                 <outlet property="dropDownType" destination="qaV-y7-lUA" id="iQc-p7-9mY"/>
                 <outlet property="lbCapacity" destination="lNX-ay-83f" id="ewv-vB-LMf"/>
                 <outlet property="lbName" destination="56H-5D-bW2" id="mlf-bM-AUH"/>
-                <outlet property="lbPlate" destination="lQP-KC-WqD" id="VJc-Zj-4a9"/>
                 <outlet property="lbPriceEightHour" destination="Ybt-xf-ZD0" id="Hdn-Qk-5i3"/>
                 <outlet property="lbPriceOneHour" destination="Ort-UR-3gZ" id="EDH-23-FTB"/>
                 <outlet property="lbPriceToHoldPlace" destination="vAB-LG-clP" id="FnO-SR-Bou"/>
@@ -39,6 +38,7 @@
                 <outlet property="lbTitleType" destination="eBL-FE-zON" id="HEG-zX-0UE"/>
                 <outlet property="lbType" destination="ljM-za-q4V" id="fm4-58-Yyb"/>
                 <outlet property="ratingBar" destination="uXe-LJ-eny" id="WBH-Vm-DKY"/>
+                <outlet property="tfPlate" destination="YrW-WN-Gqc" id="N9U-tP-oLj"/>
                 <outlet property="timePicker" destination="iXQ-Zh-fYZ" id="h70-9l-pYB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -233,33 +233,33 @@
                                                 <constraint firstAttribute="height" constant="50" id="PNd-Mc-UhX"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59F2-123.45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQP-KC-WqD">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrW-WN-Gqc">
                                             <rect key="frame" x="8" y="150" width="198" height="50"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
+                                            <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.0" green="0.50588235294117645" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                        </label>
+                                        </textField>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
+                                        <constraint firstItem="YrW-WN-Gqc" firstAttribute="height" secondItem="XJ7-R8-kuc" secondAttribute="height" id="1TO-Dy-FAn"/>
+                                        <constraint firstItem="YrW-WN-Gqc" firstAttribute="leading" secondItem="Ln7-bA-GS5" secondAttribute="leading" id="4jB-mD-dcA"/>
                                         <constraint firstItem="boW-FJ-7Te" firstAttribute="top" secondItem="mbG-iD-eqT" secondAttribute="top" constant="4" id="66s-en-icw"/>
                                         <constraint firstItem="DKi-Qt-cHQ" firstAttribute="top" secondItem="mbG-iD-eqT" secondAttribute="top" constant="4" id="AMF-wC-Un3"/>
                                         <constraint firstItem="eBL-FE-zON" firstAttribute="leading" secondItem="iXQ-Zh-fYZ" secondAttribute="leading" id="E2k-oF-cyI"/>
                                         <constraint firstItem="boW-FJ-7Te" firstAttribute="leading" secondItem="DKi-Qt-cHQ" secondAttribute="trailing" constant="16" id="IYM-Eh-e4T"/>
-                                        <constraint firstItem="qaV-y7-lUA" firstAttribute="top" secondItem="lQP-KC-WqD" secondAttribute="top" id="Iy3-1R-4Ie"/>
                                         <constraint firstItem="Ln7-bA-GS5" firstAttribute="trailing" secondItem="XJ7-R8-kuc" secondAttribute="trailing" id="JHR-cF-OWB"/>
-                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="width" secondItem="XJ7-R8-kuc" secondAttribute="width" id="LjU-ip-b0h"/>
                                         <constraint firstItem="XJ7-R8-kuc" firstAttribute="trailing" secondItem="DKi-Qt-cHQ" secondAttribute="trailing" id="MVC-pW-EjV"/>
                                         <constraint firstItem="XJ7-R8-kuc" firstAttribute="top" secondItem="DKi-Qt-cHQ" secondAttribute="bottom" constant="4" id="N1S-Dh-lXL"/>
                                         <constraint firstItem="Ln7-bA-GS5" firstAttribute="leading" secondItem="XJ7-R8-kuc" secondAttribute="leading" id="QVT-Jp-cmn"/>
@@ -269,12 +269,12 @@
                                         <constraint firstItem="qaV-y7-lUA" firstAttribute="trailing" secondItem="eBL-FE-zON" secondAttribute="trailing" id="Rwi-qr-rSH"/>
                                         <constraint firstAttribute="height" constant="210" id="UgG-4e-Ks8"/>
                                         <constraint firstItem="XJ7-R8-kuc" firstAttribute="leading" secondItem="DKi-Qt-cHQ" secondAttribute="leading" id="Wri-0p-hzh"/>
-                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="leading" secondItem="XJ7-R8-kuc" secondAttribute="leading" id="YgY-Yc-TpD"/>
                                         <constraint firstItem="iXQ-Zh-fYZ" firstAttribute="trailing" secondItem="boW-FJ-7Te" secondAttribute="trailing" id="drd-PB-7xu"/>
                                         <constraint firstItem="qaV-y7-lUA" firstAttribute="leading" secondItem="eBL-FE-zON" secondAttribute="leading" id="g3g-Aj-6i0"/>
-                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="top" secondItem="Ln7-bA-GS5" secondAttribute="bottom" constant="4" id="hc2-dZ-AxQ"/>
+                                        <constraint firstItem="qaV-y7-lUA" firstAttribute="centerY" secondItem="YrW-WN-Gqc" secondAttribute="centerY" id="h5L-1o-GrE"/>
                                         <constraint firstItem="DKi-Qt-cHQ" firstAttribute="leading" secondItem="mbG-iD-eqT" secondAttribute="leading" constant="8" id="kiU-hl-MNk"/>
-                                        <constraint firstItem="lQP-KC-WqD" firstAttribute="height" secondItem="XJ7-R8-kuc" secondAttribute="height" id="lKl-Va-keE"/>
+                                        <constraint firstItem="YrW-WN-Gqc" firstAttribute="width" secondItem="Ln7-bA-GS5" secondAttribute="width" id="lFn-b7-DHf"/>
+                                        <constraint firstItem="YrW-WN-Gqc" firstAttribute="top" secondItem="Ln7-bA-GS5" secondAttribute="bottom" constant="4" id="ofd-ih-nIk"/>
                                         <constraint firstItem="Ln7-bA-GS5" firstAttribute="top" secondItem="XJ7-R8-kuc" secondAttribute="bottom" constant="8" id="sU1-Lk-U5h"/>
                                         <constraint firstAttribute="trailing" secondItem="boW-FJ-7Te" secondAttribute="trailing" constant="16" id="uca-N7-9hA"/>
                                         <constraint firstItem="eBL-FE-zON" firstAttribute="trailing" secondItem="iXQ-Zh-fYZ" secondAttribute="trailing" id="zy3-1x-xwt"/>

@@ -24,7 +24,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     @IBOutlet weak var datePicker: DatePicker!
     @IBOutlet weak var timePicker: TimePicker!
     @IBOutlet weak var btnBook: UIButton!
-    @IBOutlet weak var lbPlate: UILabel!
+    @IBOutlet weak var tfPlate: UITextField!
     @IBOutlet weak var dropDownType: AppDropDownNoTitle!
     
     @IBOutlet weak var lbTitle: UILabel!
@@ -79,6 +79,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         lbPriceToHoldPlace.text = LocalizableKey.feeKeepPlace.showLanguage
         btnBook.setTitle(LocalizableKey.payToKeepPlace.showLanguage, for: .normal)
         dropDownType.setPlaceHolder(placeHolder: LocalizableKey.vehicleType.showLanguage)
+        tfPlate.placeholder = LocalizableKey.vehiclePlate.showLanguage
     }
     
     func displayData(info: ParkingInfoEntity) {
@@ -101,12 +102,11 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         }
         if let price = info.price {
             lbPriceOneHour.text = price.toCurrency + LocalizableKey.eachHours.showLanguage
+            lbPriceToHoldPlace.text = price.toCurrency
         }
         if let packagePrice = info.package_price {
             lbPriceEightHour.text = packagePrice.toCurrency + LocalizableKey.eachPackage.showLanguage
         }
-        lbPlate.text = "Don't know"
-        lbPriceToHoldPlace.text = "Don't know"
     }
     
     @IBAction func btnBookingTapped() {
@@ -120,14 +120,25 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     // MARK: Book reservation
     func booking() {
-        guard let parkId = parking?.parking_id,
-            let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id else { return }
-        
-        let time = datePicker.date& + " " + timePicker.time&
-        let plate = "59F2-123.45"
-        let moneyPaid = "1000"
-        presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid)
+        do {
+            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn ngày"))
+            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn giờ đến bãi"))
+            let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: "Bạn chưa nhập biển số")) ?? ""
+            _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn loại xe"))
+            
+            guard let parkId = parking?.parking_id,
+            let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id,
+            let moneyPaid = parking?.price else { return }
+            let time = datePicker.date& + " " + timePicker.time&
+            
+            presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
+            
+        } catch {
+            guard let error = error as? InvalidError else { return }
+            PopUpHelper.shared.showMessage(message: error.message, width: popUpwidth)
+        }
     }
+    
     func didBooking(info: BookingEntity) {
         guard let address = parking?.address else { return }
         let pop = BookingPopUp()

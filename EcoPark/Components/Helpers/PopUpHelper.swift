@@ -247,4 +247,9 @@ class PopUpHelper {
         let popUp = PartnerCheckOutPopUp()
         popUp.showPopUp(width: width, height: height, price: 320000, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkOutNumber, completionCancel: completionCancel, completionCheckAgain: completionCheckAgain, completionCheckout: completionCheckOut)
     }
+    
+    func showMessage(message: String ,width: CGFloat, height: CGFloat = 150) {
+        let popUp = MessagePopUp()
+        popUp.showPopUp(message: message, width: width, height: height, completion: nil)
+    }
 }

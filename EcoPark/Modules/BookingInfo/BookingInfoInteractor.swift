@@ -16,10 +16,13 @@ class BookingInfoInteractor: BookingInfoInteractorInputProtocol {
     
     // MARK: Get Park Info
     func getParkingInfo(id: String) {
+        ProgressView.shared.show()
         Provider.shared.parkingAPIService.getParkingInfo(id: id, success: { (info) in
+            ProgressView.shared.hide()
             guard let info = info else { return }
             self.presenter?.didGetInfo(info: info)
         }) { (error) in
+            ProgressView.shared.hide()
             guard let error = error else { return }
             self.presenter?.didGetError(error: error)
         }
@@ -27,9 +30,12 @@ class BookingInfoInteractor: BookingInfoInteractorInputProtocol {
     
     // MARK: Get vehicel type
     func getVehicleType() {
+        ProgressView.shared.show()
         Provider.shared.parkingAPIService.getListVehicle(success: { (list) in
+            ProgressView.shared.hide()
             self.presenter?.didGetVehicleType(listVehicle: list)
         }) { (error) in
+            ProgressView.shared.hide()
             guard let error = error else { return }
             self.presenter?.didGetError(error: error)
         }
@@ -38,10 +44,13 @@ class BookingInfoInteractor: BookingInfoInteractorInputProtocol {
     // MARK: Book reservation
     
     func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String) {
+        ProgressView.shared.show()
         Provider.shared.parkingAPIService.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid, success: { (booking) in
+            ProgressView.shared.hide()
             guard let info = booking else { return }
             self.presenter?.didBooking(info: info)
         }) { (error) in
+            ProgressView.shared.hide()
             guard let error = error else { return }
             self.presenter?.didGetError(error: error)
         }

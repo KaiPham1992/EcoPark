@@ -230,6 +230,15 @@
 "from" = "Từ";
 "to" = "Đến";
 
+// MARK: Message pop up
+"ok" = "Đồng ý";
+
+// MARK: Validation
+"requireDate" = "Bạn chưa chọn ngày";
+"requireTime" = "Bạn chưa chọn giờ đến bãi";
+"requirePlate" = "Bạn chưa nhập biển số xe";
+"requireVehicleType" = "Bạn chưa chọn loại xe";
+
 
 // ------------------- English App ---------------- //
 // logout

@@ -24,9 +24,9 @@ class AppRatingView: BaseViewXib {
         setStar(number: number)
     }
     
-    func setTitle(number: Int) {
+    func setTitle(number: String) {
         self.lbNumberRating.isHidden = false
-        self.lbNumberRating.text = "(\(number.description))"
+        self.lbNumberRating.text = number
     }
     
     func hideTitle() {

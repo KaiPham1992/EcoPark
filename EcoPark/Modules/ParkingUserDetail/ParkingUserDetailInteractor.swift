@@ -15,10 +15,13 @@ class ParkingUserDetailInteractor: ParkingUserDetailInteractorInputProtocol {
     weak var presenter: ParkingUserDetailInteractorOutputProtocol?
     
     func getParkingInfo(id: String) {
+        ProgressView.shared.show()
         Provider.shared.parkingAPIService.getParkingInfo(id: id, success: { (info) in
+            ProgressView.shared.hide()
             guard let info = info else { return }
             self.presenter?.didGetInfo(info: info)
         }) { (error) in
+            ProgressView.shared.hide()
             guard let error = error else { return }
             self.presenter?.didGetError(error: error)
         }
