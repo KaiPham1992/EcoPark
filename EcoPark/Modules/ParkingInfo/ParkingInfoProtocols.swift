@@ -18,6 +18,7 @@ protocol ParkingInfoWireframeProtocol: class {
 protocol ParkingInfoPresenterProtocol: class {
 
     var interactor: ParkingInfoInteractorInputProtocol? { get set }
+    func getParkingInfo(id: String)
 }
 
 //MARK: Interactor -
@@ -39,4 +40,5 @@ protocol ParkingInfoViewProtocol: class {
     var presenter: ParkingInfoPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didGetParkingInfo(parkingInfo: ParkingInfoEntity?)
 }

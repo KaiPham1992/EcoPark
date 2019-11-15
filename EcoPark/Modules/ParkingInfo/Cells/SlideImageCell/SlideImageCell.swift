@@ -10,6 +10,9 @@ import UIKit
 
 class SlideImageCell: UITableViewCell {
 
+    @IBOutlet weak var vSlideImage: AppImageSlide!
+    @IBOutlet weak var btnCamera: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +24,9 @@ class SlideImageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(parkingInfo: ParkingInfoEntity?) {
+        if let listImage = parkingInfo?.img?.map({ $0.imageURL }){
+            vSlideImage.listItem = listImage as [Any]
+        }
+    }
 }

@@ -43,4 +43,10 @@ class OtherInfoCell: UITableViewCell {
         lbTimeCombo.text = LocalizableKey.vnd8Hours.showLanguage
     }
     
+    func setData(parkingInfo: ParkingInfoEntity?) {
+        lbNumberCapacity.text = "\(parkingInfo?.number_place ?? 0)"
+        lbPriceAHours.text = "\(parkingInfo?.price ?? 0)"
+        lbPriceCombo.text = "\(parkingInfo?.package_price ?? 0)"
+    }
+    
 }

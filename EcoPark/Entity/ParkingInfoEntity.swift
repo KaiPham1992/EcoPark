@@ -56,7 +56,7 @@ class ParkingInfoEntity: BaseEntity {
         self.price <- (map["price"], StringToDoubleTransform())
         self.package_price <- (map["package_price"], StringToDoubleTransform())
         self.package_number <- map["package_number"]
-        self.number_place <- (map["number_place"], StringToIntTransform())
+        self.number_place <- (map["number_place"])//, StringToIntTransform())
         self.ordinal <- map["ordinal"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], TimeTramsform())
@@ -83,6 +83,23 @@ class ParkingInfoEntity: BaseEntity {
         self.parkedNumber <- map["parked_number"]
         self.config_price <- (map["config_price"], StringToDoubleTransform())
         self.total_rating <- map["total_rating"]
+        
+    }
+    
+    var url_gpkd_Before:  URL? {
+        if let urlString = self.gpkd_img_before_src, let url = URL(string: BASE_URL_IMAGE + urlString) {
+            return url
+            
+        }
+        return nil
+    }
+    
+    var url_gpkd_after:  URL? {
+        if let urlString = self.gpkd_img_after_src, let url = URL(string: BASE_URL_IMAGE + urlString) {
+            return url
+            
+        }
+        return nil
     }
 }
 

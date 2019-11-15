@@ -28,4 +28,9 @@ class LicenseInfoCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(parkingInfo: ParkingInfoEntity?) {
+        vLicense.tfInput.text = parkingInfo?.code_tax
+        image1.sd_setImage(with: parkingInfo?.url_gpkd_Before, completed: nil)
+        image2.sd_setImage(with: parkingInfo?.url_gpkd_after, completed: nil)
+    }
 }

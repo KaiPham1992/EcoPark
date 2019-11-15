@@ -22,4 +22,13 @@ class ParkingInfoPresenter: ParkingInfoPresenterProtocol, ParkingInfoInteractorO
         self.router = router
     }
 
+    func getParkingInfo(id: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getParkingInfo(id: id, success: { (parkingInfo) in
+            ProgressView.shared.hide()
+            self.view?.didGetParkingInfo(parkingInfo: parkingInfo)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

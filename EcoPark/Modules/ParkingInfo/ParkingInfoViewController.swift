@@ -11,7 +11,7 @@
 import UIKit
 
 
-class ParkingInfoViewController: UIViewController, ParkingInfoViewProtocol {
+class ParkingInfoViewController: BaseViewController {
 
     @IBOutlet weak var tbParkingInfo: UITableView!
     
@@ -20,11 +20,24 @@ class ParkingInfoViewController: UIViewController, ParkingInfoViewProtocol {
     var isExplandParkingInfo = true
     var isExplandLicenseInfo = true
     
+    var parkingInfo: ParkingInfoEntity? {
+        didSet {
+            tbParkingInfo.reloadData()
+        }
+    }
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
+        setTitleNavigation(title: "Thông tin bãi xe của tôi")
+        addBackToNavigation()
         configTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getParkingInfo(id: "2")
+    }
+    
 }
 
 extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate {
@@ -70,18 +83,21 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
         switch indexPath.section {
         case 0:
             let otherInfoCell = tableView.dequeueTableCell(OtherInfoCell.self)
+            otherInfoCell.setData(parkingInfo: parkingInfo)
             return otherInfoCell
         case 1:
             if indexPath.row == 0 {
                 let slideImageCell = tableView.dequeueTableCell(SlideImageCell.self)
+                slideImageCell.setData(parkingInfo: parkingInfo)
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
+                parkingInfoCell.setData(parkingInfo: parkingInfo)
                 return parkingInfoCell
             }
         default:
             let licenseInfoCell = tableView.dequeueTableCell(LicenseInfoCell.self)
-            
+            licenseInfoCell.setData(parkingInfo: parkingInfo)
             return licenseInfoCell
         }
     }
@@ -147,4 +163,10 @@ extension ParkingInfoViewController: HeaderViewDelegate {
         }
     }
     
+}
+
+extension ParkingInfoViewController: ParkingInfoViewProtocol {
+    func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
+        self.parkingInfo = parkingInfo
+    }
 }

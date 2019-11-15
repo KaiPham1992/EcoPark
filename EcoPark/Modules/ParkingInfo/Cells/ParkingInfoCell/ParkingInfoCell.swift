@@ -15,8 +15,9 @@ class ParkingInfoCell: UITableViewCell {
     @IBOutlet weak var vParkingAddress: AppTextView!
     @IBOutlet weak var vOpen: AppTextField!
     @IBOutlet weak var vClose: AppTextField!
-    @IBOutlet weak var cvUtility: UICollectionView!
+    @IBOutlet weak var cvUtility: UtilityView!
     
+    var parkingInfo: ParkingInfoEntity?
     var listUtility: [String] = []
     
     override func awakeFromNib() {
@@ -24,7 +25,6 @@ class ParkingInfoCell: UITableViewCell {
         // Initialization code
         listUtility = ["ic_roof_on", "ic_carwash_off", "ic_repair_on", "ic_rent_on", "ic_supermarket_off", "ic_atm_on", "ic_hotel_off", "ic_coffee_on"]
         setupUI()
-        configCollectionView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,43 +36,22 @@ class ParkingInfoCell: UITableViewCell {
     private func setupUI() {
         vParkingName.setTitleAndPlaceHolder(title: LocalizableKey.parkingName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.setTitleAndPlaceHolder(title: LocalizableKey.parkingType.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
-        vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: "")
         vParkingAddress.setPlaceHolder(placeHolder: LocalizableKey.enter.showLanguage)
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
     }
+    
+    func setData(parkingInfo: ParkingInfoEntity?) {
+        vParkingName.tfInput.text = parkingInfo?.name
+        vParkingType.tfInput.text = parkingInfo?.parking_type
+        vParkingAddress.tvInput.text = parkingInfo?.address
+        vOpen.tfInput.text = parkingInfo?.time_start?.toString(dateFormat: .HHmm)
+        vClose.tfInput.text = parkingInfo?.time_end?.toString(dateFormat: .HHmm)
+        
+        cvUtility.setMaterial(listMaterial: [.roof, .carwash, .rent, .atm])
+        
+    }
 }
 
-extension ParkingInfoCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func configCollectionView() {
-        cvUtility.registerXibCell(UtilityCell.self)
-        
-        cvUtility.dataSource = self
-        cvUtility.delegate = self
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listUtility.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCell(UtilityCell.self, indexPath: indexPath)
-        cell.imgItem.image = UIImage(named: listUtility[indexPath.item])
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 90, height: 60)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
-    }
-}
+

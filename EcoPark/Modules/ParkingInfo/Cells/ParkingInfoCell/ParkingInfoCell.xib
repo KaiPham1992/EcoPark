@@ -52,42 +52,36 @@
                                     <constraint firstAttribute="width" constant="180" id="jF5-YW-NRP"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-5A-Ac2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-du-oUb" customClass="UtilityView" customModule="EcoPark_AppStore" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="354" width="335" height="130"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="UoQ-BV-TpA"/>
+                                    <constraint firstAttribute="height" constant="130" id="sZ7-OE-O5g"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MvD-82-clU">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                            </collectionView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uAf-ZI-mih" firstAttribute="top" secondItem="uJi-zT-wUT" secondAttribute="bottom" constant="8" id="1ja-Qp-0h1"/>
                             <constraint firstItem="uAf-ZI-mih" firstAttribute="trailing" secondItem="uJi-zT-wUT" secondAttribute="trailing" id="3lg-IC-KMi"/>
+                            <constraint firstItem="rWd-du-oUb" firstAttribute="leading" secondItem="YA3-9x-ir6" secondAttribute="leading" id="9qs-N6-sFu"/>
                             <constraint firstItem="NRz-dJ-yQd" firstAttribute="height" secondItem="uAf-ZI-mih" secondAttribute="height" id="Akt-mb-jch"/>
                             <constraint firstItem="NRz-dJ-yQd" firstAttribute="top" secondItem="WkZ-QB-QQK" secondAttribute="bottom" id="E9m-tQ-cCp"/>
+                            <constraint firstAttribute="bottom" secondItem="rWd-du-oUb" secondAttribute="bottom" constant="16" id="EcB-Gi-OKz"/>
+                            <constraint firstItem="rWd-du-oUb" firstAttribute="top" secondItem="NRz-dJ-yQd" secondAttribute="bottom" constant="8" id="GH5-Pn-R8S"/>
                             <constraint firstItem="WkZ-QB-QQK" firstAttribute="trailing" secondItem="uAf-ZI-mih" secondAttribute="trailing" id="GqP-Ne-k18"/>
+                            <constraint firstAttribute="trailing" secondItem="rWd-du-oUb" secondAttribute="trailing" id="KTC-Qw-OQ9"/>
                             <constraint firstItem="uAf-ZI-mih" firstAttribute="leading" secondItem="uJi-zT-wUT" secondAttribute="leading" id="KbK-JO-jyK"/>
-                            <constraint firstAttribute="bottom" secondItem="6kj-5A-Ac2" secondAttribute="bottom" constant="16" id="KcL-7R-f3I"/>
                             <constraint firstItem="uJi-zT-wUT" firstAttribute="top" secondItem="YA3-9x-ir6" secondAttribute="top" id="MfX-Bs-ijg"/>
-                            <constraint firstItem="6kj-5A-Ac2" firstAttribute="top" secondItem="NRz-dJ-yQd" secondAttribute="bottom" constant="8" id="OjP-7G-gmm"/>
                             <constraint firstItem="uJi-zT-wUT" firstAttribute="leading" secondItem="YA3-9x-ir6" secondAttribute="leading" id="P0f-dS-sgs"/>
                             <constraint firstItem="NRz-dJ-yQd" firstAttribute="leading" secondItem="uAf-ZI-mih" secondAttribute="leading" id="TaW-sV-gok"/>
                             <constraint firstAttribute="trailing" secondItem="uJi-zT-wUT" secondAttribute="trailing" id="Vl3-O1-jMD"/>
                             <constraint firstItem="WkZ-QB-QQK" firstAttribute="top" secondItem="uAf-ZI-mih" secondAttribute="bottom" constant="8" id="Yip-zK-GHA"/>
                             <constraint firstItem="CMF-1W-Fin" firstAttribute="leading" secondItem="NRz-dJ-yQd" secondAttribute="trailing" constant="16" id="btx-kU-pZN"/>
-                            <constraint firstItem="6kj-5A-Ac2" firstAttribute="trailing" secondItem="CMF-1W-Fin" secondAttribute="trailing" id="gQM-Ja-avU"/>
                             <constraint firstItem="CMF-1W-Fin" firstAttribute="height" secondItem="uAf-ZI-mih" secondAttribute="height" id="jqy-an-RGF"/>
                             <constraint firstItem="CMF-1W-Fin" firstAttribute="top" secondItem="NRz-dJ-yQd" secondAttribute="top" id="n2y-GN-mCv"/>
                             <constraint firstItem="CMF-1W-Fin" firstAttribute="trailing" secondItem="uAf-ZI-mih" secondAttribute="trailing" id="nvA-Wk-AgH"/>
                             <constraint firstItem="WkZ-QB-QQK" firstAttribute="leading" secondItem="uAf-ZI-mih" secondAttribute="leading" id="oIl-dc-mPl"/>
-                            <constraint firstItem="6kj-5A-Ac2" firstAttribute="leading" secondItem="NRz-dJ-yQd" secondAttribute="leading" id="ohW-7V-yjV"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -101,7 +95,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cvUtility" destination="6kj-5A-Ac2" id="Lsb-Xi-pXV"/>
+                <outlet property="cvUtility" destination="rWd-du-oUb" id="MH5-xu-izu"/>
                 <outlet property="vClose" destination="CMF-1W-Fin" id="8HC-mu-ALh"/>
                 <outlet property="vOpen" destination="NRz-dJ-yQd" id="cBB-2d-zzE"/>
                 <outlet property="vParkingAddress" destination="WkZ-QB-QQK" id="VZu-Hp-q7W"/>
