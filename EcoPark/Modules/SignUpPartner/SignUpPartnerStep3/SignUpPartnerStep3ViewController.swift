@@ -88,30 +88,29 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     @IBAction func btnDoneTapped() {
         if validateInputData() {
             
-            let paraInput = BossRegisterParam(email: param?.email,
-                                              fullname: param?.fullname,
-                                              gender: param?.gender,
-                                              birthday: param?.birthday,
-                                              identity_number: param?.identity_number,
-                                              issued_by: param?.issued_by,
-                                              issued_date: param?.issued_date,
-                                              cmnd_img_before_src: param?.cmnd_img_before_src,
-                                              cmnd_img_after_src: param?.cmnd_img_after_src,
-                                              gpkd_img_before_src: param?.gpkd_img_before_src,
-                                              gpkd_img_after_src: param?.gpkd_img_after_src,
-                                              parking_name: param?.parking_name,
-                                              parking_type_id: param?.parking_type_id,
-                                              number_place: param?.number_place,
-                                              parking_address: param?.parking_address,
-                                              time_start: param?.time_start,
-                                              time_end: param?.time_end,
-                                              code_tax: param?.code_tax,
-                                              price: param?.price,
-                                              package_price: param?.package_price,
-                                              material: listMaterial,
-                                              parking_img_src: listImageParking)
-            
-//            self.push(controller: SignUpPartnerWaitingRouter.createModule())
+            let paramInput = BossRegisterParam(email: param?.email,
+                                               fullname: param?.fullname,
+                                               gender: param?.gender,
+                                               birthday: param?.birthday,
+                                               identity_number: param?.identity_number,
+                                               issued_by: param?.issued_by,
+                                               issued_date: param?.issued_date,
+                                               cmnd_img_before_src: param?.cmnd_img_before_src,
+                                               cmnd_img_after_src: param?.cmnd_img_after_src,
+                                               gpkd_img_before_src: param?.gpkd_img_before_src,
+                                               gpkd_img_after_src: param?.gpkd_img_after_src,
+                                               parking_name: param?.parking_name,
+                                               parking_type_id: param?.parking_type_id,
+                                               number_place: param?.number_place,
+                                               parking_address: param?.parking_address,
+                                               time_start: param?.time_start,
+                                               time_end: param?.time_end,
+                                               code_tax: param?.code_tax,
+                                               price: param?.price,
+                                               package_price: param?.package_price,
+                                               material: listMaterial,
+                                               parking_img_src: listImageParking)
+            presenter?.bossRegister(param: paramInput)
         }
     }
     
@@ -127,6 +126,12 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         }
         hideError()
         return true
+    }
+    
+    
+    func didBossRegister(parkingInfo: ParkingInfoEntity?) {
+        self.push(controller: SignUpPartnerWaitingRouter.createModule())
+        
     }
 }
 

@@ -19,6 +19,7 @@ protocol SignUpPartnerStep3PresenterProtocol: class {
 
     var interactor: SignUpPartnerStep3InteractorInputProtocol? { get set }
     
+    func bossRegister(param: BossRegisterParam)
 }
 
 //MARK: Interactor -
@@ -40,4 +41,6 @@ protocol SignUpPartnerStep3ViewProtocol: class {
     var presenter: SignUpPartnerStep3PresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    
+    func didBossRegister(parkingInfo: ParkingInfoEntity?)
 }

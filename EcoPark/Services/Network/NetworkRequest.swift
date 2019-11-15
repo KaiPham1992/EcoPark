@@ -45,6 +45,7 @@ protocol NetworkRequestProtocol {
     func uploadFile(endPoint: EndPointType)
     func uploadImages(image: UIImage, endPoint: EndPointType, success: @escaping RequestSuccess, failure: @escaping RequestFailure)
     func uploadVideo(endPoint: EndPointType)
+    func upload(_ route: EndPointType, success: @escaping RequestSuccess, failure: @escaping RequestFailure)
 }
 
 //---
@@ -185,6 +186,45 @@ struct NetworkRequest: NetworkRequestProtocol {
                 failure(apiError)
             }
         })
+    }
+    
+    func upload(_ endPoint: EndPointType, success: @escaping RequestSuccess, failure: @escaping RequestFailure) {
+        
+        let manager = Alamofire.SessionManager.default
+        let url = makeUrl(path: endPoint.path)
+        
+        manager.upload(multipartFormData: { multipartFormData in
+            for (key, value) in endPoint.parameters {
+                if let image = value as? UIImage {
+                    if let data = image.jpegData(compressionQuality: 0.6) {
+                            multipartFormData.append(data, withName: key, fileName: "\(key).jpg", mimeType: "image/jpg")
+                        }
+                } else if let images = value as? [UIImage] {
+                    for image in images {
+                        if let data = image.jpegData(compressionQuality: 0.6) {
+                                multipartFormData.append(data, withName: key, fileName: "\(key)).jpg", mimeType: "image/jpg")
+                            }
+                        
+                    }
+                } else  if value is String || value is Int || value is Float {
+                    if let data = "\(value)".data(using: String.Encoding.utf8) {
+                        multipartFormData.append(data, withName: key)
+                    }
+                }
+            }
+        }, to: url, method: endPoint.httpMethod, headers: endPoint.headers) { (encodingResult) in
+            switch encodingResult {
+            case .failure(let error):
+                let apiError = APIError(error: error)
+                failure(apiError)
+            case .success(let upload, _, _):
+                upload.responseJSON { (response) in
+                    if let data = response.data {
+                        success(data)
+                    }
+                }
+            }
+        }
     }
 }
 

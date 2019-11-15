@@ -11,6 +11,7 @@
 import UIKit
 
 class SignUpPartnerStep3Presenter: SignUpPartnerStep3PresenterProtocol, SignUpPartnerStep3InteractorOutputProtocol {
+    
 
     weak private var view: SignUpPartnerStep3ViewProtocol?
     var interactor: SignUpPartnerStep3InteractorInputProtocol?
@@ -21,5 +22,18 @@ class SignUpPartnerStep3Presenter: SignUpPartnerStep3PresenterProtocol, SignUpPa
         self.interactor = interactor
         self.router = router
     }
+    
+    
+    func bossRegister(param: BossRegisterParam) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.bossRegister(param: param, success: { (parkingInfo) in
+            ProgressView.shared.hide()
+            
+            self.view?.didBossRegister(parkingInfo: parkingInfo)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
+    
 
 }

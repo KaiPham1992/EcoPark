@@ -57,5 +57,6 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
     
     func bossRegister(param: BossRegisterParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure) {
         let endPoint = ParkingEndPoint.bossRegister(param: param)
+        network.upload(endPoint, success: MapperData.mapObject(success), failure: failure)
     }
 }

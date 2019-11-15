@@ -19,6 +19,7 @@ protocol APINetworkProtocol {
     func requestData(endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure)
     func uploadImages(image: UIImage, endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure)
     func uploadAvatar(image: UIImage, endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure)
+    func upload(_ endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure)
 }
 
 struct APINetwork: APINetworkProtocol {
@@ -143,6 +144,48 @@ struct APINetwork: APINetworkProtocol {
             self.handleResponse(response: result, success: success, failure: failure)
         }) { error in
             print("APINetwork - uploadImages: \(String(describing: error?.code?.description&))")
+            failure(APIError(error: error))
+        }
+    }
+    
+    func upload(_ endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure) {
+        
+//        self.checkTokenValid()
+        
+//        request.upload(endPoint, success: { data in
+//            let response = Response(data: data)
+//            if let error = ApiError(response: response) {
+//                if error.code == StatusCode.tokenInvalid.rawValue {
+//                    self.refreshToken()
+//                } else {
+//                    self.showAlert(error: error, isShowAlert: true)
+//                }
+//                failure(error)
+//            } else {
+//                do {
+//                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary {
+//                        success(json)
+//                    }
+//                } catch {
+//                    self.showAlert(error: error, isShowAlert: true)
+//                    failure(error)
+//                }
+//            }
+//        }) { error in
+//            self.showAlert(error: error, isShowAlert: true)
+//            failure(error)
+//        }
+        request.upload(endPoint, success: { (data) in
+            let json = JSON(data)
+            print(json)
+            guard let result = Mapper<BaseResponse>().map(JSONObject: json.dictionaryObject) else {
+                failure(APPError.canNotParseData)
+                return
+            }
+            self.handleResponse(response: result, success: success, failure: failure)
+            
+        }) { (error) in
+            print("APINetwork - upload: \(String(describing: error?.code?.description&))")
             failure(APIError(error: error))
         }
     }

@@ -54,7 +54,7 @@ class BossRegisterParam: BaseParam {
         self.code_tax <- map["code_tax"]
         self.price <- map["price"]
         self.package_price <- map["package_price"]
-        self.material <- map["material"]
+        self.material <- map["mertirial_id"]
         self.parking_img_src <- map["parking_img_src"]
     }
     
