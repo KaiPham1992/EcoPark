@@ -196,14 +196,15 @@ struct NetworkRequest: NetworkRequestProtocol {
         manager.upload(multipartFormData: { multipartFormData in
             for (key, value) in endPoint.parameters {
                 if let image = value as? UIImage {
-                    if let data = image.jpegData(compressionQuality: 0.6) {
-                            multipartFormData.append(data, withName: key, fileName: "\(key).jpg", mimeType: "image/jpg")
-                        }
+                    if let dataJPG = image.jpegData(compressionQuality: 1) {
+                        multipartFormData.append(dataJPG, withName: "img", fileName: "\(Date().timeIntervalSince1970).jpg", mimeType: "image/jpg")
+                    }
+
                 } else if let images = value as? [UIImage] {
                     for image in images {
-                        if let data = image.jpegData(compressionQuality: 0.6) {
-                                multipartFormData.append(data, withName: key, fileName: "\(key)).jpg", mimeType: "image/jpg")
-                            }
+                        if let dataJPG = image.jpegData(compressionQuality: 1) {
+                            multipartFormData.append(dataJPG, withName: "img", fileName: "\(Date().timeIntervalSince1970).jpg", mimeType: "image/jpg")
+                        }
                         
                     }
                 } else  if value is String || value is Int || value is Float {

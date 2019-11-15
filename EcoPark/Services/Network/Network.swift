@@ -150,31 +150,12 @@ struct APINetwork: APINetworkProtocol {
     
     func upload(_ endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure) {
         
-//        self.checkTokenValid()
+        print(endPoint.parameters)
         
-//        request.upload(endPoint, success: { data in
-//            let response = Response(data: data)
-//            if let error = ApiError(response: response) {
-//                if error.code == StatusCode.tokenInvalid.rawValue {
-//                    self.refreshToken()
-//                } else {
-//                    self.showAlert(error: error, isShowAlert: true)
-//                }
-//                failure(error)
-//            } else {
-//                do {
-//                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary {
-//                        success(json)
-//                    }
-//                } catch {
-//                    self.showAlert(error: error, isShowAlert: true)
-//                    failure(error)
-//                }
-//            }
-//        }) { error in
-//            self.showAlert(error: error, isShowAlert: true)
-//            failure(error)
-//        }
+        print("✳️ URL: \(BASE_URL)\(endPoint.path)")
+        print("✳️ Param: \(endPoint.parameters)")
+        print("✳️ Header: \(endPoint.headers)")
+        
         request.upload(endPoint, success: { (data) in
             let json = JSON(data)
             print(json)
