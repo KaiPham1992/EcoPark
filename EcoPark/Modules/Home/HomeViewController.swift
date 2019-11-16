@@ -32,6 +32,12 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var listParking = [ParkingEntity]()
     var parkingSelected: ParkingEntity?
     
+    /****** Default param - Fix me later. *****/
+    var star: [Int] = [1,2,3,4,5]
+    var distance = "1000"
+    var address = "chung cư 8x plus"
+    /********************************/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,15 +45,17 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setUpMap(lat: 10.7981483, long: 106.6715733)
         vParkingSort.isHidden = true
         
-        getParking(address: "chung cư 8x plus")
+        getParking()
     }
     
-    func getParking(address: String) {
-        Provider.shared.userAPIService.getParking(address: address, success: { parking in
+    func getParking() {
+        ProgressView.shared.show()
+        Provider.shared.userAPIService.getParking(address: self.address, star: self.star, distance: self.distance, success: { parking in
+            ProgressView.shared.hide()
             self.listParking = parking
             self.drawMarker(parkings: self.listParking)
         }) { error in
-            
+            ProgressView.shared.hide()
         }
     }
     
@@ -118,7 +126,6 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
                 let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
                 self.push(controller: vc)
             } else {
-                // Show not enough money popup
                 PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: self.popUpwidth)
             }
             
@@ -132,9 +139,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         }) { param in
             if let param = param as? NSArray {
                 if let distance = param[0] as? Int, let star = param[1] as? [Int] {
-                    // Call api here
-                    print(distance)
-                    print(star)
+                    self.star = star
+                    self.distance = distance.description
+                    self.getParking()
                 }
             }
         }
@@ -153,7 +160,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
 extension HomeViewController: HomeFindViewControllerDelegate {
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         setUpMap(lat: lat, long: long)
-        getParking(address: address)
+        self.address = address
+        getParking()
     }
 }
 

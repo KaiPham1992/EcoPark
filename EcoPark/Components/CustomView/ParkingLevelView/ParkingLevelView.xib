@@ -8,7 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingLevelView" customModule="EcoPark_AppStore" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingLevelView" customModule="EcoPark_AppStore" customModuleProvider="target">
+            <connections>
+                <outletCollection property="listButtonStar" destination="os8-sI-d7v" collectionClass="NSMutableArray" id="rvr-VL-cYL"/>
+                <outletCollection property="listButtonStar" destination="rLj-Rn-zsX" collectionClass="NSMutableArray" id="tFZ-rg-AqQ"/>
+                <outletCollection property="listButtonStar" destination="lcf-eG-JEq" collectionClass="NSMutableArray" id="A87-Ic-FAc"/>
+                <outletCollection property="listButtonStar" destination="1Xh-Xy-b2M" collectionClass="NSMutableArray" id="8hq-af-TGT"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="319"/>
@@ -35,6 +42,7 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="btnFiveStarTapped" destination="-1" eventType="touchUpInside" id="rQd-2s-549"/>
+                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="pYE-XN-60l"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-Rn-zsX">
@@ -55,6 +63,7 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="btnFourStarTapped" destination="-1" eventType="touchUpInside" id="L8g-E1-i8z"/>
+                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="g6R-ij-38n"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-eG-JEq">
@@ -74,6 +83,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
+                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="lPS-a2-FCr"/>
                                 <action selector="btnThreeStarTapped" destination="-1" eventType="touchUpInside" id="8Sr-PB-jqk"/>
                             </connections>
                         </button>
@@ -95,6 +105,7 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="btnFiveStarTapped" destination="-1" eventType="touchUpInside" id="EdR-WO-TvV"/>
+                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="IVj-kZ-Hoy"/>
                             </connections>
                         </button>
                     </subviews>

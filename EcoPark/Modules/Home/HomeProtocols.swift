@@ -18,12 +18,14 @@ protocol HomeWireframeProtocol: class {
 protocol HomePresenterProtocol: class {
 
     var interactor: HomeInteractorInputProtocol? { get set }
+//    func getListPark()
 }
 
 //MARK: Interactor -
 protocol HomeInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
+//    func getListPark()
 }
 
 protocol HomeInteractorInputProtocol: class {
@@ -39,4 +41,5 @@ protocol HomeViewProtocol: class {
     var presenter: HomePresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+//    func didGetListPark()
 }
