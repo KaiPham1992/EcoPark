@@ -95,15 +95,6 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setUpNavigation()
     }
     
-    @objc func showPopUpDetail() {
-        let popUp = ParkingDetailPopUp()
-        let price = parkingSelected?.config_price ?? 1000
-        popUp.showPopUp(money: price, completionNo: nil, completionYes: {
-            let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
-            self.push(controller: vc)
-        })
-    }
-    
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: "Nhập điểm đến")
@@ -112,6 +103,26 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
             vc.delegate = self
             self.push(controller: vc)
         }
+    }
+    
+    @objc func showPopUpDetail() {
+        guard isLogin() else {
+            showLoginScreen()
+            return
+        }
+        let popUp = ParkingDetailPopUp()
+        let price = parkingSelected?.config_price ?? 1000
+        
+        popUp.showPopUp(money: price, completionNo: nil, completionYes: {
+            if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, wallet >= price {
+                let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
+                self.push(controller: vc)
+            } else {
+                // Show not enough money popup
+                PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: self.popUpwidth)
+            }
+            
+        })
     }
     
     @IBAction func btnFilterTapped() {
@@ -130,8 +141,12 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @objc func btnBookingTapped() {
-        let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
-        self.push(controller: bookingInfo)
+        if isLogin() {
+            let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
+            self.push(controller: bookingInfo)
+        } else {
+            showLoginScreen()
+        }
     }
     
 }
@@ -279,4 +294,17 @@ extension HomeViewController: GMSMapViewDelegate {
     //                }
     //        })
     //    }
+}
+
+extension HomeViewController {
+    private func isLogin() -> Bool {
+        if UserDefaultHelper.shared.isLogedIn {
+            return true
+        }
+        return false
+    }
+   
+    private func showLoginScreen() {
+        present(controller: UINavigationController(rootViewController: LoginRouter.createModule()))
+    }
 }

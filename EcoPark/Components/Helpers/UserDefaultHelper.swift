@@ -94,6 +94,9 @@ class UserDefaultHelper {
         }
     }
     
+    var isLogedIn: Bool {
+        return !userToken&.isEmpty
+    }
 }
 
 extension UserDefaultHelper {
