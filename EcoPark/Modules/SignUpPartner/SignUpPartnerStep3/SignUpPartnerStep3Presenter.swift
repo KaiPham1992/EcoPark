@@ -35,5 +35,13 @@ class SignUpPartnerStep3Presenter: SignUpPartnerStep3PresenterProtocol, SignUpPa
         }
     }
     
-
+    func uploadImage(image: UIImage) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.commonAPIService.uploadImage(image: image, success: { (photo) in
+            ProgressView.shared.hide()
+            self.view?.didUploadImage(photo: photo)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

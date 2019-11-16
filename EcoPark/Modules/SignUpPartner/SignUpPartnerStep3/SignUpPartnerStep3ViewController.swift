@@ -30,10 +30,14 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     var listUtility: [String] = []
     
     var listMaterial: [String] = []
-    
     var listImageParking: [UIImage] = []
+    var url_listImage: [String] = [] {
+        didSet {
+            print(url_listImage)
+        }
+    }
     
-    var param: BossRegisterParam?
+    var param: BossRegisterParam? 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -99,7 +103,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
                                                cmnd_img_before_src: param?.cmnd_img_before_src,
                                                cmnd_img_after_src: param?.cmnd_img_after_src,
                                                gpkd_img_before_src: param?.gpkd_img_before_src,
-                                               gpkd_img_after_src: param?.gpkd_img_after_src,
+                                               gpkd_img_after_src:param?.gpkd_img_after_src,
                                                parking_name: param?.parking_name,
                                                parking_type_id: param?.parking_type_id,
                                                number_place: param?.number_place,
@@ -110,7 +114,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
                                                price: param?.price,
                                                package_price: param?.package_price,
                                                material: listMaterial,
-                                               parking_img_src: listImageParking)
+                                               parking_img_src: url_listImage)
             presenter?.bossRegister(param: paramInput)
         }
     }
@@ -134,8 +138,9 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         self.push(controller: SignUpPartnerWaitingRouter.createModule())
         
     }
-    func didUploadImages(photo: [PhotoEntity]) {
-        
+    
+    func didUploadImage(photo: PhotoEntity?) {
+        url_listImage.append((photo?.imgSrc)&)
     }
 }
 
@@ -250,12 +255,21 @@ extension SignUpPartnerStep3ViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SignUpPartnerStep3ViewController: AppCollectionPhotoDelegate {
+    func removeImage(_ collectionView: AppCollectionPhoto, index: Int) {
+        print(index)
+        
+        self.url_listImage.remove(at: index)
+            print(self.url_listImage)
+    }
+    
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat) {
         self.heightPhoto.constant = height
     }
     
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage]) {
-        listImageParking = images
-        presenter?.uploadImages(images: images)
+        self.listImageParking = images
+        for image in images {
+            presenter?.uploadImage(image: image)
+        }
     }
 }

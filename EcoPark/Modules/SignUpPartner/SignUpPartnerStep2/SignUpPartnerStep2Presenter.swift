@@ -22,7 +22,7 @@ class SignUpPartnerStep2Presenter: SignUpPartnerStep2PresenterProtocol, SignUpPa
     
     func uploadImageBackside(image: UIImage) {
         Provider.shared.commonAPIService.uploadImage(image: image, success: { (photo) in
-            self.view?.didUploadImageFront(photo: photo?.imgSrc)
+            self.view?.didUploadImageBackside(photo: photo?.imgSrc)
         }) { (error) in
             
         }

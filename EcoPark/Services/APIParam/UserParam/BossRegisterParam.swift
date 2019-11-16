@@ -31,7 +31,7 @@ class BossRegisterParam: BaseParam {
     var price: String?
     var package_price: String?
     var material: [String] = []
-    var parking_img_src: [UIImage] = []
+    var parking_img_src: [String] = []
     
     override func mapping(map: Map) {
         self.email <- map["email"]
@@ -80,7 +80,7 @@ class BossRegisterParam: BaseParam {
         price: String?,
         package_price: String?,
         material: [String] = [],
-        parking_img_src: [UIImage] = []) {
+        parking_img_src: [String] = []) {
         
         super.init()
         self.email = email

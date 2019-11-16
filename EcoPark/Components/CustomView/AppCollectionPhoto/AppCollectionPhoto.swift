@@ -12,6 +12,7 @@ import ImagePicker
 protocol AppCollectionPhotoDelegate: class {
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat)
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage])
+    func removeImage(_ collectionView: AppCollectionPhoto, index: Int)
 }
 
 class AppCollectionPhoto: UIView {
@@ -146,6 +147,7 @@ extension AppCollectionPhoto: UICollectionViewDataSource, UICollectionViewDelega
         if sender.tag < listImage.count {
             self.listImage.remove(at: sender.tag)
             self.cvPhoto.reloadData()
+            delegate?.removeImage(self, index: sender.tag)
         }
         
     }

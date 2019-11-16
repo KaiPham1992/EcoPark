@@ -101,7 +101,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
             guard let _image = image else { return }
             self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
-            self.presenter?.uploadImageFront(image: _image)
+            self.presenter?.uploadImageBackside(image: _image)
         }
     }
     
@@ -118,11 +118,11 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     }
     
     @IBAction func btnNextTapped() {
-//        if validateInputData() {
+        if validateInputData() {
             let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: urlPhoto_gpkd_front, gpkd_img_after_src: urlPhoto_gpkd_backside, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: vParkingAddress.tvInput.text, time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
             
             self.push(controller: SignUpPartnerStep3Router.createModule(param: param2))
-//        }
+        }
     }
     
 }
