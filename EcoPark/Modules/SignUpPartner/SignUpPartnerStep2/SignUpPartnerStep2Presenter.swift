@@ -13,7 +13,7 @@ import UIKit
 class SignUpPartnerStep2Presenter: SignUpPartnerStep2PresenterProtocol, SignUpPartnerStep2InteractorOutputProtocol {
     
     func uploadImageFront(image: UIImage) {
-        Provider.shared.userAPIService.uploadAvatar(image: image, success: { (photo) in
+        Provider.shared.commonAPIService.uploadImage(image: image, success: { (photo) in
             self.view?.didUploadImageFront(photo: photo?.imgSrc)
         }) { (error) in
             

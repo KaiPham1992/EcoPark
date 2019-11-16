@@ -12,6 +12,7 @@ import UIKit
 
 class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3ViewProtocol {
     
+    
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbUtility: UILabel!
     @IBOutlet weak var lbImage: UILabel!
@@ -133,6 +134,9 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         self.push(controller: SignUpPartnerWaitingRouter.createModule())
         
     }
+    func didUploadImages(photo: [PhotoEntity]) {
+        
+    }
 }
 
 extension SignUpPartnerStep3ViewController: UICollectionViewDataSource {
@@ -252,5 +256,6 @@ extension SignUpPartnerStep3ViewController: AppCollectionPhotoDelegate {
     
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage]) {
         listImageParking = images
+        presenter?.uploadImages(images: images)
     }
 }

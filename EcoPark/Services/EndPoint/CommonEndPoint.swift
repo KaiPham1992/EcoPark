@@ -12,13 +12,14 @@ enum CommonEndPoint {
     case uploadImages(image: UIImage)
     case getNationals
     case changeLanguageCode
+    case uploadImage(images: [UIImage])
 }
 
 extension CommonEndPoint: EndPointType {
     var path: String {
         
         switch self {
-        case .uploadImages:
+        case .uploadImages, .uploadImage:
             return "_api/common/upload_tmp_img"
         case .getNationals:
             return "_api/nation/get_list_nation"
@@ -37,7 +38,7 @@ extension CommonEndPoint: EndPointType {
         switch self {
         case .changeLanguageCode:
             return ["device_id": UIDevice.current.identifierForVendor!.uuidString]
-        case .uploadImages:
+        case .uploadImages, .uploadImage:
             return ["type": "parking"]
         default:
             return [:]

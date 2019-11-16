@@ -43,7 +43,7 @@ extension NecContainerViewController: MenuViewControllerDelegate {
     }
     
     func signUpPartnerTapped() {
-        let signUpPartnerVC = SignUpPartnerStep1ViewController.initFromNib()
+        let signUpPartnerVC = SignUpPartnerStep1Router.createModule()
         self.openViewController(presentingController: signUpPartnerVC)
     }
     
