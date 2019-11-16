@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,7 +43,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="om9-rq-Vlc">
-                            <rect key="frame" x="382" y="79" width="16" height="16"/>
+                            <rect key="frame" x="390" y="79" width="16" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="16" id="YSy-Ad-mhd"/>
                                 <constraint firstAttribute="height" constant="16" id="iWq-L0-M5e"/>
@@ -69,7 +69,7 @@
                         <constraint firstItem="l00-cW-T0z" firstAttribute="centerY" secondItem="ncN-7o-EcL" secondAttribute="centerY" id="Rhb-5C-4Gk"/>
                         <constraint firstItem="ndn-BU-Zxh" firstAttribute="top" secondItem="ncN-7o-EcL" secondAttribute="top" id="Yf5-mD-Uu9"/>
                         <constraint firstItem="l00-cW-T0z" firstAttribute="top" secondItem="ncN-7o-EcL" secondAttribute="top" id="c4m-Uz-Fqe"/>
-                        <constraint firstAttribute="trailing" secondItem="om9-rq-Vlc" secondAttribute="trailing" constant="16" id="cnZ-4M-yyG"/>
+                        <constraint firstAttribute="trailing" secondItem="om9-rq-Vlc" secondAttribute="trailing" constant="8" id="cnZ-4M-yyG"/>
                         <constraint firstAttribute="bottom" secondItem="ndn-BU-Zxh" secondAttribute="bottom" id="fmQ-oi-KrR"/>
                         <constraint firstItem="ndn-BU-Zxh" firstAttribute="leading" secondItem="ncN-7o-EcL" secondAttribute="leading" id="jBG-Zc-77e"/>
                     </constraints>

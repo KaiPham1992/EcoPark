@@ -26,7 +26,7 @@ class BookingPopUp: BasePopUpView {
         vYesNoContentView.btnDirection.addTarget(self, action: #selector(btnDirectionTapped), for: .touchUpInside)
     }
     
-    func showPopUp(address: String, message: String, completionDirection: CompletionClosure?, completionDetail: CompletionClosure?) {
+    func showPopUp(width: CGFloat, address: String, message: String, completionDirection: CompletionClosure?, completionDetail: CompletionClosure?) {
         
         let attr1 = LocalizableKey.bookingPopUpAttr1.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
         
@@ -46,7 +46,7 @@ class BookingPopUp: BasePopUpView {
         self.completionNo = completionDetail
         self.completionYes = completionDirection
         
-        super.showPopUp(height: 320)
+        super.showPopUp(width: width, height: 320)
     }
     
     @objc func btnDetailTapped() {

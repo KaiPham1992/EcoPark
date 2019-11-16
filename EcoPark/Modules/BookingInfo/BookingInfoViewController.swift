@@ -147,7 +147,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     func didBooking(info: BookingEntity) {
         guard let address = parking?.address else { return }
         let pop = BookingPopUp()
-        pop.showPopUp(address: address, message: "1", completionDirection: {
+        pop.showPopUp(width: popUpwidth, address: address, message: "1", completionDirection: {
             guard let lat = self.parking?.lat, let long = self.parking?.long else { return }
             self.openGoogleMapForPlace(lat: lat, long: long)
         }) {

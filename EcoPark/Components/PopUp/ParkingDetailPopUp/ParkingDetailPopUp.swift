@@ -26,7 +26,7 @@ class ParkingDetailPopUp: BasePopUpView {
         vYesNoContentView.btnYes.addTarget(self, action: #selector(btnYesTapped), for: .touchUpInside)
     }
     
-    func showPopUp(money: Double, completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
+    func showPopUp(width: CGFloat, money: Double, completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
         
         let attr1 = "Bạn sẽ bị trừ ".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
         
@@ -44,7 +44,7 @@ class ParkingDetailPopUp: BasePopUpView {
         self.completionNo = completionNo
         self.completionYes = completionYes
         
-        super.showPopUp(height: 216)
+        super.showPopUp(width: width, height: 216)
     }
     
     @objc func btnNoTapped() {
