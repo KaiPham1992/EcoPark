@@ -110,7 +110,12 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     }
     
     @IBAction func btnBookingTapped() {
-        booking()
+        if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, let price = parking?.price, wallet > price {
+            booking()
+        } else {
+            PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: popUpwidth)
+        }
+        
     }
     
     // MARK: Get error
