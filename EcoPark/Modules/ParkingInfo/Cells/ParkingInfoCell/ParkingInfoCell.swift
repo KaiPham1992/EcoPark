@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ParkingInfoCell: UITableViewCell {
+protocol ParkingInfoCellDelegate: class {
+    func getParkingInfo(parkingName: String, parkingTypeID: String, parkingAddress: String, openTime: String, closeTime: String, material: [String])
+}
 
+class ParkingInfoCell: UITableViewCell {
+    
     @IBOutlet weak var vParkingName: AppTextField!
     @IBOutlet weak var vParkingType: AppDropDown!
     @IBOutlet weak var vParkingAddress: AppTextView!
@@ -17,9 +21,11 @@ class ParkingInfoCell: UITableViewCell {
     @IBOutlet weak var vClose: AppTextField!
     @IBOutlet weak var cvUtility: UtilityView!
     
+    weak var delegate: ParkingInfoCellDelegate?
+    
     var parkingInfo: ParkingInfoEntity?
-    var listUtility: [String] = []
     var parkingTypeID: String = ""
+    var listMaterial: [String] = []
     
     let datePickerTimeOpen = UIDatePicker()
     let formatterTimeOpen = DateFormatter()
@@ -29,13 +35,12 @@ class ParkingInfoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        listUtility = ["ic_roof_on", "ic_carwash_off", "ic_repair_on", "ic_rent_on", "ic_supermarket_off", "ic_atm_on", "ic_hotel_off", "ic_coffee_on"]
         setupUI()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -46,7 +51,10 @@ class ParkingInfoCell: UITableViewCell {
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.delegateDropDown = self
+        cvUtility.delegate = self
         setTime()
+        
+       
     }
     
     func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any]) {
@@ -57,56 +65,56 @@ class ParkingInfoCell: UITableViewCell {
         vClose.tfInput.text = parkingInfo?.time_end?.toString(dateFormat: .HHmm)
         vParkingType.listItem = listItem
         cvUtility.setMaterial(listMaterial: [.roof, .carwash, .rent, .atm])
-        
+        listMaterial = parkingInfo?.material?.map({ $0.id&}) ?? [""]
     }
     
     private func setTime() {
         //--Time
-         datePickerTimeOpen.datePickerMode = .time
-         datePickerTimeClose.datePickerMode = .time
-         let toolbarTimeOpen = UIToolbar()
-         toolbarTimeOpen.sizeToFit()
+        datePickerTimeOpen.datePickerMode = .time
+        datePickerTimeClose.datePickerMode = .time
+        let toolbarTimeOpen = UIToolbar()
+        toolbarTimeOpen.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePicker))
-         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
         let cancelButtonClose = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
-         toolbarTimeOpen.setItems([doneButton,spaceButton,cancelButton], animated: false)
-         vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
-         vOpen.tfInput.inputView = datePickerTimeOpen
+        toolbarTimeOpen.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
+        vOpen.tfInput.inputView = datePickerTimeOpen
         
-         //close time
-         let toolbarTimeClose = UIToolbar()
-          toolbarTimeClose.sizeToFit()
-         
-         let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
-          toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButtonClose], animated: false)
-         
-         vClose.tfInput.inputAccessoryView = toolbarTimeClose
-         vClose.tfInput.inputView = datePickerTimeClose
+        //close time
+        let toolbarTimeClose = UIToolbar()
+        toolbarTimeClose.sizeToFit()
+        
+        let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
+        toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButtonClose], animated: false)
+        
+        vClose.tfInput.inputAccessoryView = toolbarTimeClose
+        vClose.tfInput.inputView = datePickerTimeClose
     }
     
     @objc func doneDatePicker(){
-           //For time formate
-           formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
+        //For time formate
+        formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
         vOpen.tfInput.text = formatterTimeOpen.string(from: datePickerTimeOpen.date)
-    
-           //dismiss date picker dialog
-           self.contentView.endEditing(true)
-       }
+        
+        //dismiss date picker dialog
+        self.contentView.endEditing(true)
+    }
     
     @objc func doneDatePickerClose(){
-               //For time formate
-               formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
-            vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
+        //For time formate
+        formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
+        vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
         
-               //dismiss date picker dialog
-               self.contentView.endEditing(true)
-           }
-       
-       @objc func cancelDatePicker(){
-           //cancel button dismiss datepicker dialog
-           self.contentView.endEditing(true)
-       }
+        //dismiss date picker dialog
+        self.contentView.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        //cancel button dismiss datepicker dialog
+        self.contentView.endEditing(true)
+    }
 }
 
 extension ParkingInfoCell: AppTextFieldDropDownDelegate {
@@ -114,16 +122,72 @@ extension ParkingInfoCell: AppTextFieldDropDownDelegate {
         switch item as? String {
         case "Bãi xe có mái che":
             self.parkingTypeID = "1"
-            case "Bãi xe không có mái che":
+        case "Bãi xe không có mái che":
             self.parkingTypeID = "2"
-            case "Bãi xe tính tiền tự động":
+        case "Bãi xe tính tiền tự động":
             self.parkingTypeID = "3"
-            case "Bãi xe đặc biệt":
+        case "Bãi xe đặc biệt":
             self.parkingTypeID = "4"
         default:
             self.parkingTypeID = ""
         }
     }
     
-    
+}
+
+extension ParkingInfoCell: UtilityViewDelegate {
+    func didSelect(isSelect: Bool, index: Int) {
+        switch index {
+        case 0:
+            if isSelect {
+                listMaterial.append("1")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 1:
+            if isSelect {
+                listMaterial.append("2")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 2:
+            if isSelect {
+                listMaterial.append("3")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 3:
+            if isSelect {
+                listMaterial.append("4")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 4:
+            if isSelect {
+                listMaterial.append("5")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 5:
+            if isSelect {
+                listMaterial.append("6")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 6:
+            if isSelect {
+                listMaterial.append("7")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        case 7:
+            if isSelect {
+                listMaterial.append("8")
+            } else {
+                listMaterial.remove(at: index)
+            }
+        default:
+            return
+        }
+    }
 }

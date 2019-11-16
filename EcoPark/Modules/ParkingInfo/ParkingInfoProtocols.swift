@@ -20,6 +20,7 @@ protocol ParkingInfoPresenterProtocol: class {
     var interactor: ParkingInfoInteractorInputProtocol? { get set }
     func getParkingInfo(id: String)
     func getListParkingType()
+    func updateInfoParking(param: UpdateInfoParkingParam)
 }
 
 //MARK: Interactor -
@@ -43,5 +44,5 @@ protocol ParkingInfoViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?)
     func didGetListParkingType(listParkingType: [ParkingTypeEntity])
-
+    func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?)
 }

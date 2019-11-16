@@ -16,6 +16,7 @@ enum ParkingEndPoint {
     case getParkingType
     case getMaterial
     case bossRegister(param: BossRegisterParam)
+    case updateInfoParking(param: UpdateInfoParkingParam)
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -36,6 +37,8 @@ extension ParkingEndPoint: EndPointType {
             return "_api/parking/get_list_material"
         case .bossRegister:
             return "_api/user/register_boss"
+        case .updateInfoParking:
+            return "_api/parking/update_info_parking"
         }
         
     }
@@ -59,6 +62,8 @@ extension ParkingEndPoint: EndPointType {
         case .getMaterial:
             return [:]
         case .bossRegister(let param):
+            return param.toJSON()
+        case .updateInfoParking(let param):
             return param.toJSON()
         }
     }

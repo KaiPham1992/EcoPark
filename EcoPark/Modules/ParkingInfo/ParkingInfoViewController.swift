@@ -14,6 +14,8 @@ import UIKit
 class ParkingInfoViewController: BaseViewController {
 
     @IBOutlet weak var tbParkingInfo: UITableView!
+    @IBOutlet weak var lbActive: UILabel!
+    @IBOutlet weak var vActive: CustomSwitch!
     
 	var presenter: ParkingInfoPresenterProtocol?
 
@@ -38,6 +40,19 @@ class ParkingInfoViewController: BaseViewController {
         super.viewWillAppear(animated)
         presenter?.getParkingInfo(id: "2")
         presenter?.getListParkingType()
+    }
+    
+    @IBAction func btnSaveTapped() {
+        
+    }
+    
+    @objc func imageParkingTapped() {
+        
+        
+        guard let  listImage = parkingInfo?.img else { return }
+        let listImageStr = listImage.map({ $0.img_src!})
+        
+        self.push(controller: ImageParkingRouter.createModule(listImage: listImageStr))
     }
     
 }
@@ -91,6 +106,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
             if indexPath.row == 0 {
                 let slideImageCell = tableView.dequeueTableCell(SlideImageCell.self)
                 slideImageCell.setData(parkingInfo: parkingInfo)
+                slideImageCell.btnCamera.addTarget(self, action: #selector(imageParkingTapped), for: .touchUpInside)
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
@@ -169,12 +185,20 @@ extension ParkingInfoViewController: HeaderViewDelegate {
     
 }
 
+
+
 extension ParkingInfoViewController: ParkingInfoViewProtocol {
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
         self.parkingInfo = parkingInfo
+        vActive.isOn = parkingInfo?.is_active ?? false ? true : false
     }
     
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
         self.listParkingType = listParkingType
+    }
+    
+    func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?) {
+        presenter?.getParkingInfo(id: "2")
+        tbParkingInfo.reloadData()
     }
 }
