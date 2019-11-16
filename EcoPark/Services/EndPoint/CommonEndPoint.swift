@@ -37,6 +37,8 @@ extension CommonEndPoint: EndPointType {
         switch self {
         case .changeLanguageCode:
             return ["device_id": UIDevice.current.identifierForVendor!.uuidString]
+        case .uploadImages:
+            return ["type": "parking"]
         default:
             return [:]
         }

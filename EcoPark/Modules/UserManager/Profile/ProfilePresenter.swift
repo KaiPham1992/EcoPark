@@ -23,11 +23,12 @@ class ProfilePresenter: ProfilePresenterProtocol, ProfileInteractorOutputProtoco
     }
     
     func updateAvatar(image: UIImage) {
+        
         ProgressView.shared.showProgressOnWindow()
         Provider.shared.userAPIService.uploadAvatar(image: image, success: { _user in
             guard let user = UserDefaultHelper.shared.loginUserInfo else {return }
             ProgressView.shared.hide()
-            
+
             user.imgSrc = _user?.imgSrc
             user.imgCropSrc = _user?.imgCropSrc
             UserDefaultHelper.shared.loginUserInfo = user
