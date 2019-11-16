@@ -37,6 +37,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
 
     var param: BossRegisterParam?
     var parkingTypeID: String?
+    var urlPhoto_gpkd_front: String = ""
+    var urlPhoto_gpkd_backside: String = ""
     
     let datePickerTimeOpen = UIDatePicker()
     let formatterTimeOpen = DateFormatter()
@@ -87,17 +89,19 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @IBAction func btnPhotoFrontTapped() {
         SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
-            guard let _iamge = image else { return }
-            self.imgFrontPhoto.image = _iamge
+            guard let _image = image else { return }
+            self.imgFrontPhoto.image = _image
             self.btnDeletePhotoFront.isHidden = false
+            self.presenter?.uploadImageFront(image: _image)
         }
     }
     
     @IBAction func btnPhotoBacksideTapped() {
         SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
-            guard let _iamge = image else { return }
-            self.imgBacksidePhoto.image = _iamge
+            guard let _image = image else { return }
+            self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
+            self.presenter?.uploadImageFront(image: _image)
         }
     }
     
@@ -113,7 +117,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @IBAction func btnNextTapped() {
         if validateInputData() {
-            let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: imgFrontPhoto.image, gpkd_img_after_src: imgBacksidePhoto.image, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: vParkingAddress.tvInput.text, time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
+            let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: urlPhoto_gpkd_front, gpkd_img_after_src: urlPhoto_gpkd_backside, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: vParkingAddress.tvInput.text, time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
             
             self.push(controller: SignUpPartnerStep3Router.createModule(param: param2))
         }
@@ -230,6 +234,14 @@ extension SignUpPartnerStep2ViewController {
 }
 
 extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
+    func didUploadImageFront(photo: String?) {
+        self.urlPhoto_gpkd_front = photo ?? ""
+    }
+    
+    func didUploadImageBackside(photo: String?) {
+        self.urlPhoto_gpkd_backside = photo ?? ""
+    }
+    
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
         vParkingType.listItem = listParkingType.map({$0.name&})
         

@@ -12,6 +12,23 @@ import UIKit
 
 class SignUpPartnerStep2Presenter: SignUpPartnerStep2PresenterProtocol, SignUpPartnerStep2InteractorOutputProtocol {
     
+    func uploadImageFront(image: UIImage) {
+        Provider.shared.userAPIService.uploadAvatar(image: image, success: { (photo) in
+            self.view?.didUploadImageFront(photo: photo?.imgSrc)
+        }) { (error) in
+            
+        }
+    }
+    
+    func uploadImageBackside(image: UIImage) {
+        Provider.shared.commonAPIService.uploadImage(image: image, success: { (photo) in
+            self.view?.didUploadImageFront(photo: photo?.imgSrc)
+        }) { (error) in
+            
+        }
+    }
+    
+    
     func getListParkingType() {
         Provider.shared.parkingAPIService.getParkingType(success: { (listParkingType) in
             self.view?.didGetListParkingType(listParkingType: listParkingType)

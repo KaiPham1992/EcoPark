@@ -34,6 +34,9 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     
 	var presenter: SignUpPartnerStep1PresenterProtocol?
 
+    var urlPhotoIDFront: String = ""
+    var urlPhotoIDBackside: String = ""
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -77,32 +80,37 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     
     @IBAction func btnPhotoFrontTapped() {
         SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
-            guard let _iamge = image else { return }
-            self.imgFrontPhoto.image = _iamge
+            guard let _image = image else { return }
+            self.imgFrontPhoto.image = _image
             self.btnDeletePhotoFront.isHidden = false
+            self.presenter?.uploadImageFront(image: _image)
+            
         }
     }
     
     @IBAction func btnPhotoBacksideTapped() {
         SelectPhotoCanCropPopUp.shared.showCropPicker(controller: self) { image in
-            guard let _iamge = image else { return }
-            self.imgBacksidePhoto.image = _iamge
+            guard let _image = image else { return }
+            self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
+            self.presenter?.uploadImageBackside(image: _image)
         }
     }
     
     @IBAction func btnDeleteFrontTapped() {
         imgFrontPhoto.image = AppImage.imgAddImage
         self.btnDeletePhotoFront.isHidden = true
+        self.urlPhotoIDFront = ""
     }
     
     @IBAction func btnDeleteBacksideTapped() {
         imgBacksidePhoto.image = AppImage.imgAddImage
         self.btnDeletePhotoBacksite.isHidden = true
+        self.urlPhotoIDBackside = ""
     }
     
     @IBAction func btnNextTapped() {
-        if validateInputData() {
+//        if validateInputData() {
 
             if self.vGender.tfInput.text == "Nữ" {
                 self.vGender.tfInput.text = "female"
@@ -114,9 +122,17 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
                 self.vGender.tfInput.text = "other"
             }
             
-        let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: imgFrontPhoto.image, cmnd_img_after_src: imgBacksidePhoto.image, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
+        let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: urlPhotoIDFront, cmnd_img_after_src: urlPhotoIDBackside, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
            self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
-        }
+//        }
+    }
+    
+    func didUploadImageFront(photo: PhotoEntity?) {
+        self.urlPhotoIDFront = (photo?.imgSrc)&
+    }
+    
+    func didUploadImageBackside(photo: PhotoEntity?) {
+        self.urlPhotoIDBackside = (photo?.imgSrc)&
     }
 }
 

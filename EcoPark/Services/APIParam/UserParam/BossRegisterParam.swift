@@ -17,10 +17,10 @@ class BossRegisterParam: BaseParam {
     var identity_number: String?
     var issued_by: String?
     var issued_date: String?
-    var cmnd_img_before_src: UIImage?
-    var cmnd_img_after_src: UIImage?
-    var gpkd_img_before_src: UIImage?
-    var gpkd_img_after_src: UIImage?
+    var cmnd_img_before_src: String?
+    var cmnd_img_after_src: String?
+    var gpkd_img_before_src: String?
+    var gpkd_img_after_src: String?
     var parking_name: String?
     var parking_type_id: String?
     var number_place: String?
@@ -54,7 +54,7 @@ class BossRegisterParam: BaseParam {
         self.code_tax <- map["code_tax"]
         self.price <- map["price"]
         self.package_price <- map["package_price"]
-        self.material <- map["mertirial_id"]
+        self.material <- map["material"]
         self.parking_img_src <- map["parking_img_src"]
     }
     
@@ -66,10 +66,10 @@ class BossRegisterParam: BaseParam {
         identity_number: String?,
         issued_by: String?,
         issued_date: String?,
-        cmnd_img_before_src: UIImage?,
-        cmnd_img_after_src: UIImage?,
-        gpkd_img_before_src: UIImage?,
-        gpkd_img_after_src: UIImage?,
+        cmnd_img_before_src: String?,
+        cmnd_img_after_src: String?,
+        gpkd_img_before_src: String?,
+        gpkd_img_after_src: String?,
         parking_name: String?,
         parking_type_id: String?,
         number_place: String?,

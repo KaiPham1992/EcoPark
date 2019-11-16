@@ -9,6 +9,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: Wireframe -
 protocol SignUpPartnerStep1WireframeProtocol: class {
@@ -18,6 +19,8 @@ protocol SignUpPartnerStep1WireframeProtocol: class {
 protocol SignUpPartnerStep1PresenterProtocol: class {
 
     var interactor: SignUpPartnerStep1InteractorInputProtocol? { get set }
+    func uploadImageFront(image: UIImage)
+    func uploadImageBackside(image: UIImage)
 }
 
 //MARK: Interactor -
@@ -39,4 +42,6 @@ protocol SignUpPartnerStep1ViewProtocol: class {
     var presenter: SignUpPartnerStep1PresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didUploadImageFront(photo: PhotoEntity?)
+    func didUploadImageBackside(photo: PhotoEntity?)
 }

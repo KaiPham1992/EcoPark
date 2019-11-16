@@ -22,4 +22,20 @@ class SignUpPartnerStep1Presenter: SignUpPartnerStep1PresenterProtocol, SignUpPa
         self.router = router
     }
 
+    func uploadImageFront(image: UIImage) {
+        Provider.shared.commonAPIService.uploadImage(image: image, success: { (photo) in
+            self.view?.didUploadImageFront(photo: photo)
+        }) { (error) in
+            
+        }
+    }
+    
+    func uploadImageBackside(image: UIImage) {
+        Provider.shared.commonAPIService.uploadImage(image: image, success: { (photo) in
+            self.view?.didUploadImageBackside(photo: photo)
+        }) { (error) in
+            
+        }
+    }
+    
 }
