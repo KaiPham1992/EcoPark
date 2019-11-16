@@ -20,6 +20,13 @@ class AppRouter {
         rootNavigation?.pushViewController(viewController, animated: true)
     }
     
+    func presentLogin(completion: @escaping CompletionClosure) {
+        let vc = LoginRouter.createModule()
+        vc.callBackLoginSuccessed = completion
+        guard let topController = UIApplication.topViewController() else { return }
+        topController.present(controller: UINavigationController(rootViewController: vc))
+    }
+    
     func openLogin() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         //---
