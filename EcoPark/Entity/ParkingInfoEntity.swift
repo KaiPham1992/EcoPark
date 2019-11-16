@@ -56,7 +56,7 @@ class ParkingInfoEntity: BaseEntity {
         self.price <- (map["price"], StringToDoubleTransform())
         self.package_price <- (map["package_price"], StringToDoubleTransform())
         self.package_number <- map["package_number"]
-        self.number_place <- (map["number_place"])//, StringToIntTransform())
+        self.number_place <- (map["number_place"], StringToIntTransform())
         self.ordinal <- map["ordinal"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], TimeTramsform())

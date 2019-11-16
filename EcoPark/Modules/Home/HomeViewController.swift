@@ -113,7 +113,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         let popUp = ParkingDetailPopUp()
         let price = parkingSelected?.config_price ?? 1000
         
-        popUp.showPopUp(money: price, completionNo: nil, completionYes: {
+        popUp.showPopUp(width: popUpwidth, money: price, completionNo: nil, completionYes: {
             if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, wallet >= price {
                 let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
                 self.push(controller: vc)
