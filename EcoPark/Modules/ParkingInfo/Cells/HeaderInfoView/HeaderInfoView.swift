@@ -34,6 +34,6 @@ class HeaderInfoView: BaseViewXib {
     }
     
     func setExpland(expland: Bool) {
-        imgArrow?.rotate(expland ? .pi : 0.0)
+        imgArrow.image = expland ? UIImage(named: "ic_arrow_down") : UIImage(named: "ic_arrow_right")
     }
 }

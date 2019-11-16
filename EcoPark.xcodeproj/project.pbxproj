@@ -4188,8 +4188,8 @@
 				DE3CC3372283DD980037DBE4 /* Frameworks */,
 				DE3CC3382283DD980037DBE4 /* Resources */,
 				ECC81D57BA8A2F47335BA0EE /* [CP] Embed Pods Frameworks */,
-				F7321019EC4AC75D7A647D72 /* [CP] Copy Pods Resources */,
 				DE04709A22BA635D00438206 /* ShellScript */,
+				A1ECA710CC13DEAFEB72D373 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4209,7 +4209,7 @@
 				DE95303F2287DF4800E3F688 /* Frameworks */,
 				DE9530412287DF4800E3F688 /* Resources */,
 				DE9530552287DF4800E3F688 /* [CP] Embed Pods Frameworks */,
-				DE9530562287DF4800E3F688 /* [CP] Copy Pods Resources */,
+				EDCFAEA8F9241676D438FC9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4229,7 +4229,7 @@
 				DE9530ED2287DF6400E3F688 /* Frameworks */,
 				DE9530EF2287DF6400E3F688 /* Resources */,
 				DE9531032287DF6400E3F688 /* [CP] Embed Pods Frameworks */,
-				DE9531042287DF6400E3F688 /* [CP] Copy Pods Resources */,
+				BD29F4892DE80FDB4867FAEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4667,6 +4667,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A1ECA710CC13DEAFEB72D373 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B1BFFD79D7336217D57D509F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4689,6 +4706,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BD29F4892DE80FDB4867FAEF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DE04709A22BA635D00438206 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4704,9 +4738,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-
-";
+			shellScript = "\n\n";
 		};
 		DE952FAF2287DF4800E3F688 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4745,23 +4777,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE9530562287DF4800E3F688 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE95305D2287DF6400E3F688 /* [CP] Check Pods Manifest.lock */ = {
@@ -4803,23 +4818,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE9531042287DF6400E3F688 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ECC81D57BA8A2F47335BA0EE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4837,21 +4835,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F7321019EC4AC75D7A647D72 /* [CP] Copy Pods Resources */ = {
+		EDCFAEA8F9241676D438FC9D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Dev/Pods-EcoPark_Dev-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoPark_Prod/Pods-EcoPark_Prod-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

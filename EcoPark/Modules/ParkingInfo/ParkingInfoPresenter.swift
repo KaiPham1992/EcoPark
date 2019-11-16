@@ -31,4 +31,12 @@ class ParkingInfoPresenter: ParkingInfoPresenterProtocol, ParkingInfoInteractorO
             ProgressView.shared.hide()
         }
     }
+    
+    func getListParkingType() {
+        Provider.shared.parkingAPIService.getParkingType(success: { (parkingType) in
+            self.view?.didGetListParkingType(listParkingType: parkingType)
+        }) { (error) in
+            
+        }
+    }
 }

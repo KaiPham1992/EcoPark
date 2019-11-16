@@ -20,6 +20,7 @@ class ParkingInfoViewController: BaseViewController {
     var isExplandParkingInfo = true
     var isExplandLicenseInfo = true
     
+    var listParkingType: [ParkingTypeEntity] = []
     var parkingInfo: ParkingInfoEntity? {
         didSet {
             tbParkingInfo.reloadData()
@@ -36,6 +37,7 @@ class ParkingInfoViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.getParkingInfo(id: "2")
+        presenter?.getListParkingType()
     }
     
 }
@@ -92,7 +94,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
-                parkingInfoCell.setData(parkingInfo: parkingInfo)
+                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}))
                 return parkingInfoCell
             }
         default:
@@ -126,6 +128,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
             headerView.setupUI(title: LocalizableKey.parkingInfo.showLanguage.uppercased())
             headerView.delegate = self
             headerView.section = section
+            headerView.setExpland(expland: isExplandParkingInfo)
             return headerView
             
         default:
@@ -133,6 +136,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
             headerView.setupUI(title: LocalizableKey.parkingInfo.showLanguage.uppercased())
             headerView.delegate = self
             headerView.section = section
+            headerView.setExpland(expland: isExplandLicenseInfo)
             return headerView
         }
     }
@@ -168,5 +172,9 @@ extension ParkingInfoViewController: HeaderViewDelegate {
 extension ParkingInfoViewController: ParkingInfoViewProtocol {
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
         self.parkingInfo = parkingInfo
+    }
+    
+    func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
+        self.listParkingType = listParkingType
     }
 }

@@ -54,7 +54,7 @@ class UtilityModel {
         if listMaterilType.contains(.roof) {
             array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff, isSelected: true))
         } else {
-            array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff, isSelected: true))
+            array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff, isSelected: false))
         }
         
         if listMaterilType.contains(.washing) {

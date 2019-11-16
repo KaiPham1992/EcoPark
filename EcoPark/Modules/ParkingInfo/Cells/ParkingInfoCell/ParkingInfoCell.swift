@@ -19,6 +19,12 @@ class ParkingInfoCell: UITableViewCell {
     
     var parkingInfo: ParkingInfoEntity?
     var listUtility: [String] = []
+    var parkingTypeID: String = ""
+    
+    let datePickerTimeOpen = UIDatePicker()
+    let formatterTimeOpen = DateFormatter()
+    let datePickerTimeClose = UIDatePicker()
+    let formatterTimeClose = DateFormatter()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,21 +43,87 @@ class ParkingInfoCell: UITableViewCell {
         vParkingName.setTitleAndPlaceHolder(title: LocalizableKey.parkingName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.setTitleAndPlaceHolder(title: LocalizableKey.parkingType.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: "")
-        vParkingAddress.setPlaceHolder(placeHolder: LocalizableKey.enter.showLanguage)
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vParkingType.delegateDropDown = self
+        setTime()
     }
     
-    func setData(parkingInfo: ParkingInfoEntity?) {
+    func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any]) {
         vParkingName.tfInput.text = parkingInfo?.name
         vParkingType.tfInput.text = parkingInfo?.parking_type
         vParkingAddress.tvInput.text = parkingInfo?.address
         vOpen.tfInput.text = parkingInfo?.time_start?.toString(dateFormat: .HHmm)
         vClose.tfInput.text = parkingInfo?.time_end?.toString(dateFormat: .HHmm)
-        
+        vParkingType.listItem = listItem
         cvUtility.setMaterial(listMaterial: [.roof, .carwash, .rent, .atm])
         
     }
+    
+    private func setTime() {
+        //--Time
+         datePickerTimeOpen.datePickerMode = .time
+         datePickerTimeClose.datePickerMode = .time
+         let toolbarTimeOpen = UIToolbar()
+         toolbarTimeOpen.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePicker))
+         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+        let cancelButtonClose = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+         toolbarTimeOpen.setItems([doneButton,spaceButton,cancelButton], animated: false)
+         vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
+         vOpen.tfInput.inputView = datePickerTimeOpen
+        
+         //close time
+         let toolbarTimeClose = UIToolbar()
+          toolbarTimeClose.sizeToFit()
+         
+         let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
+          toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButtonClose], animated: false)
+         
+         vClose.tfInput.inputAccessoryView = toolbarTimeClose
+         vClose.tfInput.inputView = datePickerTimeClose
+    }
+    
+    @objc func doneDatePicker(){
+           //For time formate
+           formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
+        vOpen.tfInput.text = formatterTimeOpen.string(from: datePickerTimeOpen.date)
+    
+           //dismiss date picker dialog
+           self.contentView.endEditing(true)
+       }
+    
+    @objc func doneDatePickerClose(){
+               //For time formate
+               formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
+            vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
+        
+               //dismiss date picker dialog
+               self.contentView.endEditing(true)
+           }
+       
+       @objc func cancelDatePicker(){
+           //cancel button dismiss datepicker dialog
+           self.contentView.endEditing(true)
+       }
 }
 
-
+extension ParkingInfoCell: AppTextFieldDropDownDelegate {
+    func didChangedValue(sender: AppDropDown, item: Any) {
+        switch item as? String {
+        case "Bãi xe có mái che":
+            self.parkingTypeID = "1"
+            case "Bãi xe không có mái che":
+            self.parkingTypeID = "2"
+            case "Bãi xe tính tiền tự động":
+            self.parkingTypeID = "3"
+            case "Bãi xe đặc biệt":
+            self.parkingTypeID = "4"
+        default:
+            self.parkingTypeID = ""
+        }
+    }
+    
+    
+}
