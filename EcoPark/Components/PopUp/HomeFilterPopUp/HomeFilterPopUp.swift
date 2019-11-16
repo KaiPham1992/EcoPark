@@ -41,6 +41,8 @@ class HomeFilterPopUp: BasePopUpView {
     
     @objc func btnYesTapped() {
         hidePopUp()
-        completionFilter?(100)
+        let distance = vYesNoContentView.distance
+        let star = vYesNoContentView.starView.star
+        completionFilter?([distance,star])
     }
 }

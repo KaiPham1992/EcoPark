@@ -119,7 +119,13 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         popUp.showPopUp(completionNo: {
             print("reset")
         }) { param in
-            print("Param")
+            if let param = param as? NSArray {
+                if let distance = param[0] as? Int, let star = param[1] as? [Int] {
+                    // Call api here
+                    print(distance)
+                    print(star)
+                }
+            }
         }
     }
     
