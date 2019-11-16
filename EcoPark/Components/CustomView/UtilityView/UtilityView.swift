@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol UtilityViewDelegate: class {
+    func didSelect(isSelect: Bool, index: Int)
+}
+
 class UtilityView: BaseViewXib {
     @IBOutlet weak var cvUtility: UICollectionView!
+    
+    weak var delegate: UtilityViewDelegate?
     
     var utilyties = [UtilityModel]() {
         didSet {
@@ -59,7 +65,9 @@ extension UtilityView: UICollectionViewDataSource, UICollectionViewDelegateFlowL
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = self.utilyties[indexPath.item]
         item.isSelected = !item.isSelected
-
+        
+        delegate?.didSelect(isSelect: item.isSelected, index: indexPath.item)
+        
         self.cvUtility.reloadData()
     }
 }

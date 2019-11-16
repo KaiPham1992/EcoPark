@@ -16,7 +16,7 @@ protocol ParkingAPIServiceProtocol {
     func getParkingType(success: @escaping SuccessHandler<ParkingTypeEntity>.array, failure: @escaping RequestFailure)
     func getMaterial(success: @escaping SuccessHandler<MaterialEntity>.array, failure: @escaping RequestFailure)
     func bossRegister(param: BossRegisterParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure)
-    
+    func updateInfoParking(param: UpdateInfoParkingParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure)
 }
 
 class ParkingAPIService: ParkingAPIServiceProtocol {
@@ -61,4 +61,8 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
 
+    func updateInfoParking(param: UpdateInfoParkingParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.updateInfoParking(param: param)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
+    }
 }

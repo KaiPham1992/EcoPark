@@ -39,4 +39,14 @@ class ParkingInfoPresenter: ParkingInfoPresenterProtocol, ParkingInfoInteractorO
             
         }
     }
+    
+    func updateInfoParking(param: UpdateInfoParkingParam) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.updateInfoParking(param: param, success: { (parkingInfo) in
+            ProgressView.shared.hide()
+            self.view?.didUpdateInfoParking(parkingInfo: parkingInfo)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

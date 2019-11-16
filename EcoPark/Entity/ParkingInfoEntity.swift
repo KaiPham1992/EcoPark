@@ -60,8 +60,8 @@ class ParkingInfoEntity: BaseEntity {
         self.ordinal <- map["ordinal"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], TimeTramsform())
-        self.time_start <- (map["time_start"], TimeTramsform())
-        self.time_end <- (map["time_end"], TimeTramsform())
+        self.time_start <- (map["time_start"], AppTimestampTransform())
+        self.time_end <- (map["time_end"], AppTimestampTransform())
         self.lat <- (map["lat"], StringToDoubleTransform())
         self.long <- (map["long"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToDoubleTransform())
