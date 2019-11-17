@@ -12,8 +12,7 @@ class ParkingLevelView: BaseViewXib {
     
     @IBOutlet var listButtonStar: [UIButton]!
     
-    // Default value if user not choose any thing
-    var star: [Int] = [1,2,3,4,5] {
+    var star: [Int] = [] {
         didSet{
             print(star)
         }
@@ -25,30 +24,10 @@ class ParkingLevelView: BaseViewXib {
         }
     }
     
-    @IBAction func btnFiveStarTapped() {
-        star = [5]
-        changeStatus(listButtonStar[0])
-        setUnSelected(listButtonStar[3])
-    }
-    
-    @IBAction func btnFourStarTapped() {
-        star = [4]
-        changeStatus(listButtonStar[1])
-        setUnSelected(listButtonStar[3])
-    }
-    
-    @IBAction func btnThreeStarTapped() {
-        star = [3]
-        changeStatus(listButtonStar[2])
-        setUnSelected(listButtonStar[3])
-    }
-    
-    @IBAction func btnAllStarTapped() {
-        star = [1,2,3,4,5]
-        changeStatus(listButtonStar[3])
-        setUnSelected(listButtonStar[0])
-        setUnSelected(listButtonStar[1])
-        setUnSelected(listButtonStar[2])
+    @IBAction func btnTapped(_ sender: UIButton) {
+        if sender != listButtonStar[3] { setUnSelected(listButtonStar[3]) }
+        changeStatus(sender)
+        updateStar()
     }
     
     private func changeStatus(_ button: UIButton) {
@@ -60,9 +39,51 @@ class ParkingLevelView: BaseViewXib {
         }
     }
     
-    func setUnSelected(_ button: UIButton) {
+    private func setUnSelected(_ button: UIButton) {
         button.isSelected = false
         button.backgroundColor = .white
+    }
+    
+    private func updateStar() {
+        if listButtonStar[3].isSelected {
+            self.star = [3,4,5]
+            setUnSelected(listButtonStar[0])
+            setUnSelected(listButtonStar[1])
+            setUnSelected(listButtonStar[2])
+        } else {
+            self.star = []
+            if listButtonStar[0].isSelected {
+                addStar(5)
+            } else {
+                removeStar(5)
+            }
+            
+            if listButtonStar[1].isSelected {
+                addStar(4)
+            } else {
+                removeStar(4)
+            }
+            
+            if listButtonStar[2].isSelected {
+                addStar(3)
+            } else {
+                removeStar(3)
+            }
+        }
+        // Default
+        if self.star == [] { self.star = [1,2,3,4,5]}
+    }
+    
+    private func addStar(_ star: Int) {
+        if !self.star.contains(star) {
+            self.star.append(star)
+        }
+    }
+    
+    private func removeStar(_ star: Int) {
+        if self.star.contains(star) {
+            self.star.removeFirst(star)
+        }
     }
 }
 
