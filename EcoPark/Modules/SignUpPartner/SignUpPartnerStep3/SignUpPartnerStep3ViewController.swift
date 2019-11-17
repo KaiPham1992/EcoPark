@@ -30,12 +30,8 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     var listUtility: [String] = []
     
     var listMaterial: [String] = []
-    var listImageParking: [UIImage] = []
-    var url_listImage: [String] = [] {
-        didSet {
-            print(url_listImage)
-        }
-    }
+    var listImageParking: [AppPhoto] = []
+    var url_listImage: [String] = [] 
     
     var param: BossRegisterParam? 
     override func viewDidLoad() {
@@ -92,6 +88,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     
     @IBAction func btnDoneTapped() {
         if validateInputData() {
+            url_listImage = vPhoto.listImage.map({ $0.url& })
             
             let paramInput = BossRegisterParam(email: param?.email,
                                                fullname: param?.fullname,
@@ -257,19 +254,13 @@ extension SignUpPartnerStep3ViewController: UICollectionViewDelegateFlowLayout {
 extension SignUpPartnerStep3ViewController: AppCollectionPhotoDelegate {
     func removeImage(_ collectionView: AppCollectionPhoto, index: Int) {
         print(index)
-        
-        self.url_listImage.remove(at: index)
-            print(self.url_listImage)
     }
     
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat) {
         self.heightPhoto.constant = height
     }
     
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage]) {
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
         self.listImageParking = images
-        for image in images {
-            presenter?.uploadImage(image: image)
-        }
     }
 }
