@@ -18,6 +18,7 @@ protocol ImageParkingWireframeProtocol: class {
 protocol ImageParkingPresenterProtocol: class {
 
     var interactor: ImageParkingInteractorInputProtocol? { get set }
+    func uploadImageParking(parkingID: String, parkingImage: [String])
 }
 
 //MARK: Interactor -
@@ -39,4 +40,5 @@ protocol ImageParkingViewProtocol: class {
     var presenter: ImageParkingPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+   func didUploadImageParking()
 }

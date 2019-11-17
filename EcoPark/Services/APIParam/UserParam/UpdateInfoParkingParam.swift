@@ -16,12 +16,12 @@ class UpdateInfoParkingParam: BaseParam {
     var gpkd_img_after_src : String?
     var parking_name : String?
     var parking_type_id : String?
-    var number_place : String?
+    var number_place : Int?
     var time_start : String?
     var time_end : String?
     var code_tax : String?
-    var price : String?
-    var package_price : String?
+    var price : Double?
+    var package_price : Double?
     var package_number : String?
     var material : [String] = []
     
@@ -51,12 +51,12 @@ class UpdateInfoParkingParam: BaseParam {
         gpkd_img_after_src : String?,
         parking_name : String?,
         parking_type_id : String?,
-        number_place : String?,
+        number_place : Int?,
         time_start : String?,
         time_end : String?,
         code_tax : String?,
-        price : String?,
-        package_price : String?,
+        price : Double?,
+        package_price : Double?,
         package_number : String?,
         material : [String] = []
     ) {

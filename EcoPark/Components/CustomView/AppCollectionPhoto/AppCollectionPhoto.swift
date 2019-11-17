@@ -11,7 +11,7 @@ import ImagePicker
 
 protocol AppCollectionPhotoDelegate: class {
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, changedHeight height: CGFloat)
-    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [UIImage])
+    func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto])
     func removeImage(_ collectionView: AppCollectionPhoto, index: Int)
 }
 
@@ -41,7 +41,7 @@ class AppCollectionPhoto: UIView {
     
     var limit = 4
     
-    var listImage = [UIImage]() {
+    var listImage = [AppPhoto]() {
         didSet {
             cvPhoto.reloadData()
             calculateHeight()
@@ -171,15 +171,33 @@ extension AppCollectionPhoto: ImagePickerDelegate {
     private func receivedImages(imagePicker: ImagePickerController, images: [UIImage]) {
         imagePicker.dismiss(animated: true, completion: nil)
         
+        let imagesItems = images.map({ (image) -> AppPhoto in
+            return AppPhoto(status: .new, image: image.resizeImage(maxWidth: 750), url: nil)
+        })
+        
         if isSingleSelected {
-            self.listImage = images
+            self.listImage = imagesItems
         } else {
             if self.listImage.count < 4 {
-                self.listImage.append(contentsOf: images)
+                self.listImage.append(contentsOf: imagesItems)
             }
         }
         
-        delegate?.appCollectionPhoto(self, selectedImages: images)
+        imagesItems.forEach { _imageItem in
+            guard let _image = _imageItem.image else { return }
+            
+            Provider.shared.commonAPIService.uploadImage(image: _image, success: { photo in
+                _imageItem.status = AppPhotoStatus.uploaded
+                _imageItem.url = photo?.imgSrc
+                self.cvPhoto.reloadData()
+            }) { error in
+                _imageItem.status = AppPhotoStatus.error
+                print(error.debugDescription)
+                self.cvPhoto.reloadData()
+            }
+        }
+        
+        delegate?.appCollectionPhoto(self, selectedImages: imagesItems)
         
         self.cvPhoto.reloadData()
     }

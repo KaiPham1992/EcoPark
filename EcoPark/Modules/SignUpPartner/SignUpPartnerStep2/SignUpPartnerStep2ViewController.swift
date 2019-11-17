@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class SignUpPartnerStep2ViewController: BaseViewController {
 
@@ -44,7 +45,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     let formatterTimeOpen = DateFormatter()
     let datePickerTimeClose = UIDatePicker()
     let formatterTimeClose = DateFormatter()
-
+    
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vParkingName.setTitleAndPlaceHolder(title: LocalizableKey.parkingName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.setTitleAndPlaceHolder(title: LocalizableKey.parkingType.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingCapacity.setTitleAndPlaceHolder(title: LocalizableKey.parkingCapacity.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingAddress.setPlaceHolder(placeHolder: LocalizableKey.enter.showLanguage)
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -119,12 +120,18 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @IBAction func btnNextTapped() {
         if validateInputData() {
-            let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: urlPhoto_gpkd_front, gpkd_img_after_src: urlPhoto_gpkd_backside, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: "220/2 Nguyễn Trọng Tuyển, Phường 8, Phú Nhuận, Hồ Chí Minh", time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
+            let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: urlPhoto_gpkd_front, gpkd_img_after_src: urlPhoto_gpkd_backside, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: vParkingAddress.tvInput.text, time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
             
             self.push(controller: SignUpPartnerStep3Router.createModule(param: param2))
         }
     }
     
+    @IBAction func btnSelectAddressTapped() {
+        let vcHomeFind = HomeFindRouter.createModule()
+        vcHomeFind.delegate = self
+        vcHomeFind.isSelectAddressSignUp = true
+        self.push(controller: vcHomeFind)
+    }
 }
 
 
@@ -265,6 +272,14 @@ extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
             self.parkingTypeID = nil
         }
     }
+}
+
+extension SignUpPartnerStep2ViewController: HomeFindViewControllerDelegate {
+    func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        vParkingAddress.tvInput.text = address
+        vParkingAddress.lbPlaceHolder.text = ""
+    }
     
-    
+    func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+    }
 }
