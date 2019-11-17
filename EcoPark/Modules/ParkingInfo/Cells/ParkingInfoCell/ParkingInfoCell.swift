@@ -10,6 +10,8 @@ import UIKit
 
 protocol ParkingInfoCellDelegate: class {
     func getParkingInfo(parkingName: String, parkingTypeID: String, parkingAddress: String, openTime: String, closeTime: String, material: [String])
+    
+    func selectAddress()
 }
 
 class ParkingInfoCell: UITableViewCell {
@@ -23,6 +25,8 @@ class ParkingInfoCell: UITableViewCell {
     
     weak var delegate: ParkingInfoCellDelegate?
     
+    var isSelectAddress: Bool = false
+    var selectAddress: String = ""
     var parkingInfo: ParkingInfoEntity?
     var parkingTypeID: String = ""
     var listMaterial: [String] = []
@@ -55,24 +59,30 @@ class ParkingInfoCell: UITableViewCell {
         setTime()
         
         vParkingName.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
-        vParkingType.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
-        vOpen.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
-        vClose.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
-    func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any]) {
+    func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any], isSelectAddress: Bool) {
         vParkingName.tfInput.text = parkingInfo?.name
         vParkingType.tfInput.text = parkingInfo?.parking_type
-        vParkingAddress.tvInput.text = parkingInfo?.address
+        if isSelectAddress {
+            vParkingAddress.tvInput.text = selectAddress
+        } else {
+            vParkingAddress.tvInput.text = parkingInfo?.address
+        }
         vOpen.tfInput.text = parkingInfo?.time_start?.toString(dateFormat: .HHmm)
         vClose.tfInput.text = parkingInfo?.time_end?.toString(dateFormat: .HHmm)
         vParkingType.listItem = listItem
         cvUtility.setMaterial(listMaterial: [.roof, .carwash, .rent, .atm])
         listMaterial = parkingInfo?.material?.map({ $0.id&}) ?? [""]
+        
     }
     
     @objc func textFieldDidChanged() {
-        print("AAAAAAAA")
+        delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
+    }
+    
+    @IBAction func btnSelectAddressTapped() {
+        delegate?.selectAddress()
     }
     
     private func setTime() {
@@ -105,6 +115,7 @@ class ParkingInfoCell: UITableViewCell {
         formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
         vOpen.tfInput.text = formatterTimeOpen.string(from: datePickerTimeOpen.date)
         
+        delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
         //dismiss date picker dialog
         self.contentView.endEditing(true)
     }
@@ -113,7 +124,7 @@ class ParkingInfoCell: UITableViewCell {
         //For time formate
         formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
         vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
-        
+        delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
         //dismiss date picker dialog
         self.contentView.endEditing(true)
     }
@@ -138,6 +149,7 @@ extension ParkingInfoCell: AppTextFieldDropDownDelegate {
         default:
             self.parkingTypeID = ""
         }
+        delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
     
 }
@@ -196,5 +208,7 @@ extension ParkingInfoCell: UtilityViewDelegate {
         default:
             return
         }
+        delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
 }
+

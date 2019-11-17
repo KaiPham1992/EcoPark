@@ -9,7 +9,7 @@
 //
 
 import UIKit
-
+import GooglePlaces
 
 class ParkingInfoViewController: BaseViewController {
 
@@ -21,6 +21,17 @@ class ParkingInfoViewController: BaseViewController {
 
     var isExplandParkingInfo = true
     var isExplandLicenseInfo = true
+    
+    var addressSelect: String = ""
+    var isSelectAddress: Bool = false
+    
+    var parkingName: String = ""
+    var parkingTypeID: String = ""
+    var openTime: String = ""
+    var closeTime: String = ""
+    var parkingAddress: String = ""
+    var listMaterial: [String] = []
+    var codeTax: String = ""
     
     var listParkingType: [ParkingTypeEntity] = []
     var parkingInfo: ParkingInfoEntity? {
@@ -43,7 +54,7 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     @IBAction func btnSaveTapped() {
-        
+        presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2", parking_address: parkingAddress, gpkd_img_before_src: parkingInfo?.gpkd_img_before_src, gpkd_img_after_src: parkingInfo?.gpkd_img_after_src, parking_name: parkingName, parking_type_id: parkingTypeID, number_place: parkingInfo?.number_place, time_start: openTime, time_end: closeTime, code_tax: codeTax, price: parkingInfo?.price, package_price: parkingInfo?.package_price, package_number: parkingInfo?.package_number, material: listMaterial))
     }
     
     @objc func imageParkingTapped() {
@@ -110,12 +121,15 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
-                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}))
+                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}), isSelectAddress: isSelectAddress)
+                parkingInfoCell.selectAddress = self.addressSelect
+                parkingInfoCell.delegate = self
                 return parkingInfoCell
             }
         default:
             let licenseInfoCell = tableView.dequeueTableCell(LicenseInfoCell.self)
             licenseInfoCell.setData(parkingInfo: parkingInfo)
+            licenseInfoCell.delegate = self
             return licenseInfoCell
         }
     }
@@ -200,5 +214,47 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
     func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?) {
         presenter?.getParkingInfo(id: "2")
         tbParkingInfo.reloadData()
+    }
+}
+
+extension ParkingInfoViewController: LicenseInfoCellDelegate {
+    func getDataLicenseInfo(codeTax: String) {
+        self.codeTax = codeTax
+    }
+}
+
+extension ParkingInfoViewController: ParkingInfoCellDelegate {
+    func getParkingInfo(parkingName: String, parkingTypeID: String, parkingAddress: String, openTime: String, closeTime: String, material: [String]) {
+        
+        self.parkingName = parkingName
+        self.parkingTypeID = parkingTypeID
+        if isSelectAddress {
+            self.parkingAddress = addressSelect
+        } else {
+            self.parkingAddress = parkingAddress
+        }
+        self.openTime = openTime
+        self.closeTime = closeTime
+        self.listMaterial = material
+    }
+    
+    func selectAddress() {
+        let vcHomeFind = HomeFindRouter.createModule()
+        vcHomeFind.delegate = self
+        vcHomeFind.isSelectAddressSignUp = true
+        self.push(controller: vcHomeFind)
+    }
+    
+    
+}
+
+extension ParkingInfoViewController: HomeFindViewControllerDelegate {
+    func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        self.addressSelect = address
+        self.isSelectAddress = true
+        tbParkingInfo.reloadData()
+    }
+    
+    func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
     }
 }
