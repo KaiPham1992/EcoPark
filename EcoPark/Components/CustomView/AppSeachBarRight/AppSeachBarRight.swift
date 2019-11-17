@@ -32,6 +32,7 @@ class AppSeachBarRight: BaseViewXib {
     }
     
     @IBAction func btnClearTapped() {
+        tfInput.text?.removeAll()
         actionSearch?("")
     }
 }

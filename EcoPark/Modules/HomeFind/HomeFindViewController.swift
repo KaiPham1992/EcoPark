@@ -14,6 +14,7 @@ import GooglePlaces
 protocol HomeFindViewControllerDelegate: class {
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees)
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees)
+    func didSelectMyLocation()
 }
 
 class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
@@ -133,6 +134,13 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
                 getPlaceDetail(placeId: item.placeID)
             }
             
+        if indexPath.row == 0 {
+            delegate?.didSelectMyLocation()
+            self.pop()
+        } else {
+            let item = locations[indexPath.row - 1]
+            self.address = item.getPlaceAddress()
+            getPlaceDetail(placeId: item.placeID)
         }
     }
 }
