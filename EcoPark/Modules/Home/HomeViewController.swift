@@ -170,6 +170,11 @@ extension HomeViewController: HomeFindViewControllerDelegate {
     
     func didSelectMyLocation() {
         print("did tap my location")
+        guard let myLocation = self.myLocationCoordinate else { return }
+        let newAddress = getAddressFromLocation(pdblLatitude: CGFloat(myLocation.latitude), withLongitude: CGFloat(myLocation.longitude))
+        self.address = newAddress
+        setMyLocation()
+        getParking()
     }
 }
 
