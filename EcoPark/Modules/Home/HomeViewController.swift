@@ -27,6 +27,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var locationManager = CLLocationManager()
     var centerMapCoordinate:CLLocationCoordinate2D!
     
+    var myLocationCoordinate:CLLocationCoordinate2D!
+    
     weak var delegate: HomeViewControllerDelegate?
     
     var listParking = [ParkingEntity]()
@@ -37,6 +39,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var distance = "1000"
     var address = "chung cư 8x plus"
     /********************************/
+    
+    var isFirst: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +78,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @IBAction func setMyLocation() {
-        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
+        let camera = GMSCameraPosition.camera(withTarget: myLocationCoordinate, zoom: 16)
         self.mapView?.animate(to: camera)
     }
     
@@ -171,13 +175,18 @@ extension HomeViewController: HomeFindViewControllerDelegate {
 
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations.last
-        self.centerMapCoordinate = location?.coordinate
-//        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
-//
-//        self.mapView?.animate(to: camera)
-        self.locationManager.stopUpdatingLocation()
+        if isFirst {
+            isFirst = false
+            
+            let location = locations.last
+            self.centerMapCoordinate = location?.coordinate
+            myLocationCoordinate = location?.coordinate
+            let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
+            
+            self.mapView?.animate(to: camera)
+            self.locationManager.stopUpdatingLocation()
+            
+        }
         
     }
     
@@ -260,52 +269,57 @@ extension HomeViewController: GMSMapViewDelegate {
     }
     
     
-    //    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
-    //        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-    //        let lat: Double = Double("\(pdblLatitude)")!
-    //        //21.228124
-    //        let lon: Double = Double("\(pdblLongitude)")!
-    //        //72.833770
-    //        let ceo: CLGeocoder = CLGeocoder()
-    //        center.latitude = lat
-    //        center.longitude = lon
-    //
-    //        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
-    //
-    //        var addressString : String = ""
-    //        ceo.reverseGeocodeLocation(loc, completionHandler:
-    //            {(placemarks, error) in
-    //                if (error != nil)
-    //                {
-    //                    print("reverse geodcode fail: \(error!.localizedDescription)")
-    //                }
-    //
-    //                guard let pm = placemarks  else { return }
-    //
-    //                if pm.count > 0 {
-    //                    let pm = placemarks![0]
-    //                    if pm.thoroughfare != nil {
-    //                        addressString = addressString + pm.thoroughfare! + ", "
-    //                    }
-    //
-    //                    if pm.subLocality != nil {
-    //                        addressString = addressString + pm.subLocality! + ", "
-    //                    }
-    //
-    //                    if pm.locality != nil {
-    //                        addressString = addressString + pm.locality! + ", "
-    //                    }
-    //                    if pm.country != nil {
-    //                        addressString = addressString + pm.country! + ", "
-    //                    }
-    //                    if pm.postalCode != nil {
-    //                        addressString = addressString + pm.postalCode! + " "
-    //                    }
-    //                    print(addressString)
-    ////                    self.tfAddress.text = addressString
-    //                }
-    //        })
-    //    }
+    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) -> String {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let lat: Double = Double("\(pdblLatitude)")!
+        //21.228124
+        let lon: Double = Double("\(pdblLongitude)")!
+        //72.833770
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = lat
+        center.longitude = lon
+        
+        var resultAddress: String = ""
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+        
+        var addressString : String = ""
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                
+                guard let pm = placemarks  else { return }
+                
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+                    if pm.thoroughfare != nil {
+                        addressString = addressString + pm.thoroughfare! + ", "
+                    }
+                    
+                    if pm.subLocality != nil {
+                        addressString = addressString + pm.subLocality! + ", "
+                    }
+                    
+                    if pm.locality != nil {
+                        addressString = addressString + pm.locality! + ", "
+                    }
+                    if pm.country != nil {
+                        addressString = addressString + pm.country! + ", "
+                    }
+                    if pm.postalCode != nil {
+                        addressString = addressString + pm.postalCode! + " "
+                    }
+                    print(addressString)
+                    
+                    resultAddress =  addressString
+                }
+        })
+        
+        return resultAddress
+    }
 }
 
 extension HomeViewController {
@@ -315,7 +329,7 @@ extension HomeViewController {
         }
         return false
     }
-   
+    
     private func showLoginScreen() {
         present(controller: UINavigationController(rootViewController: LoginRouter.createModule()))
     }
