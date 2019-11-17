@@ -167,6 +167,10 @@ extension HomeViewController: HomeFindViewControllerDelegate {
         self.address = address
         getParking()
     }
+    
+    func didSelectMyLocation() {
+        print("did tap my location")
+    }
 }
 
 extension HomeViewController: CLLocationManagerDelegate {
