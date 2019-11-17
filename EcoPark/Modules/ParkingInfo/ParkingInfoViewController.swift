@@ -249,6 +249,10 @@ extension ParkingInfoViewController: ParkingInfoCellDelegate {
 }
 
 extension ParkingInfoViewController: HomeFindViewControllerDelegate {
+    func didSelectMyLocation() {
+        
+    }
+    
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         self.addressSelect = address
         self.isSelectAddress = true

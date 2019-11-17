@@ -275,6 +275,10 @@ extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
 }
 
 extension SignUpPartnerStep2ViewController: HomeFindViewControllerDelegate {
+    func didSelectMyLocation() {
+        
+    }
+    
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         vParkingAddress.tvInput.text = address
         vParkingAddress.lbPlaceHolder.text = ""

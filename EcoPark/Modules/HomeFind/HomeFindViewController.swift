@@ -18,8 +18,8 @@ protocol HomeFindViewControllerDelegate: class {
 }
 
 class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
-
-	var presenter: HomeFindPresenterProtocol?
+    
+    var presenter: HomeFindPresenterProtocol?
     
     @IBOutlet weak var vSearch: AppSeachBarRight!
     @IBOutlet weak var tbFind: UITableView!
@@ -33,7 +33,7 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     }
     var address: String = ""
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
     
@@ -50,7 +50,7 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     override func setUpViews() {
         super.setUpViews()
         vSearch.actionSearch = { text in
-           self.presenter?.searchPlaceByString(text: text)
+            self.presenter?.searchPlaceByString(text: text)
         }
         configureTable()
         
@@ -62,7 +62,7 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
         if isSelectAddressSignUp {
             addButtonTextToNavigation(title: "CHỌN VỊ TRÍ", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
         } else {
-           addButtonTextToNavigation(title: "CHỌN ĐIỂM ĐẾN", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
+            addButtonTextToNavigation(title: "CHỌN ĐIỂM ĐẾN", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
         }
         
         
@@ -90,7 +90,7 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
         }
         self.pop()
     }
-
+    
 }
 
 extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
@@ -112,7 +112,7 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.item == 0 {
             let cell = tableView.dequeue(FindAroundMeCell.self, for: indexPath)
-                   
+            
             return cell
         }
         
@@ -134,13 +134,14 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
                 getPlaceDetail(placeId: item.placeID)
             }
             
-        if indexPath.row == 0 {
-            delegate?.didSelectMyLocation()
-            self.pop()
-        } else {
-            let item = locations[indexPath.row - 1]
-            self.address = item.getPlaceAddress()
-            getPlaceDetail(placeId: item.placeID)
+            if indexPath.row == 0 {
+                delegate?.didSelectMyLocation()
+                self.pop()
+            } else {
+                let item = locations[indexPath.row - 1]
+                self.address = item.getPlaceAddress()
+                getPlaceDetail(placeId: item.placeID)
+            }
         }
     }
 }
