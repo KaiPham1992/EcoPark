@@ -54,7 +54,10 @@ class ParkingInfoCell: UITableViewCell {
         cvUtility.delegate = self
         setTime()
         
-       
+        vParkingName.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+        vParkingType.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+        vOpen.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+        vClose.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
     func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any]) {
@@ -66,6 +69,10 @@ class ParkingInfoCell: UITableViewCell {
         vParkingType.listItem = listItem
         cvUtility.setMaterial(listMaterial: [.roof, .carwash, .rent, .atm])
         listMaterial = parkingInfo?.material?.map({ $0.id&}) ?? [""]
+    }
+    
+    @objc func textFieldDidChanged() {
+        print("AAAAAAAA")
     }
     
     private func setTime() {

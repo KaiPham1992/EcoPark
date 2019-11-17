@@ -31,7 +31,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     
     var listMaterial: [String] = []
     var listImageParking: [AppPhoto] = []
-    var url_listImage: [String] = [] 
+    var url_listImage: [String] = []
     
     var param: BossRegisterParam? 
     override func viewDidLoad() {

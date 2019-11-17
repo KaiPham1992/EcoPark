@@ -158,6 +158,10 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
 }
 extension HomeViewController: HomeFindViewControllerDelegate {
+    func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        
+    }
+    
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         setUpMap(lat: lat, long: long)
         self.address = address
