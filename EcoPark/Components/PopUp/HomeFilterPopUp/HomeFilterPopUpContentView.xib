@@ -53,6 +53,9 @@
                                     <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnResetTapped" destination="-1" eventType="touchUpInside" id="KjL-mt-B0O"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjc-UU-Kpz">
                             <rect key="frame" x="220.5" y="214" width="177.5" height="40"/>

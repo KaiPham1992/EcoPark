@@ -85,5 +85,12 @@ class ParkingLevelView: BaseViewXib {
             self.star.removeFirst(star)
         }
     }
+    
+    func resetAll() {
+        star = [1,2,3,4,5]
+        for btn in listButtonStar {
+            setUnSelected(btn)
+        }
+    }
 }
 

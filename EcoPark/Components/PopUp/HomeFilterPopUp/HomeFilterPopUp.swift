@@ -35,7 +35,6 @@ class HomeFilterPopUp: BasePopUpView {
     }
     
     @objc func btnNoTapped() {
-        hidePopUp()
         completionNo?()
     }
     
