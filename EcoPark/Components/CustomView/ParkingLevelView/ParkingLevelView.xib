@@ -41,7 +41,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnFiveStarTapped" destination="-1" eventType="touchUpInside" id="VRD-WI-In1"/>
+                                <action selector="btnTapped:" destination="-1" eventType="touchUpInside" id="gZ3-CW-NJx"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-Rn-zsX">
@@ -61,7 +61,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnFourStarTapped" destination="-1" eventType="touchUpInside" id="L8g-E1-i8z"/>
+                                <action selector="btnTapped:" destination="-1" eventType="touchUpInside" id="NCR-Mp-x2f"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-eG-JEq">
@@ -81,7 +81,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnThreeStarTapped" destination="-1" eventType="touchUpInside" id="8Sr-PB-jqk"/>
+                                <action selector="btnTapped:" destination="-1" eventType="touchUpInside" id="41x-74-XYx"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xh-Xy-b2M">
@@ -101,7 +101,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnAllStarTapped" destination="-1" eventType="touchUpInside" id="2W8-UN-sr0"/>
+                                <action selector="btnTapped:" destination="-1" eventType="touchUpInside" id="1aU-n4-oqy"/>
                             </connections>
                         </button>
                     </subviews>
