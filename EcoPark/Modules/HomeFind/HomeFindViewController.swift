@@ -134,14 +134,17 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
                 getPlaceDetail(placeId: item.placeID)
             }
             
-            if indexPath.row == 0 {
-                delegate?.didSelectMyLocation()
-                self.pop()
-            } else {
-                let item = locations[indexPath.row - 1]
-                self.address = item.getPlaceAddress()
-                getPlaceDetail(placeId: item.placeID)
-            }
+            
         }
+        
+        if indexPath.row == 0 {
+            delegate?.didSelectMyLocation()
+            self.pop()
+        }
+//        else {
+//            let item = locations[indexPath.row - 1]
+//            self.address = item.getPlaceAddress()
+//            getPlaceDetail(placeId: item.placeID)
+//        }
     }
 }

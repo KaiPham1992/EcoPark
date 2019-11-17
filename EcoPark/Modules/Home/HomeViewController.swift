@@ -27,8 +27,6 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var locationManager = CLLocationManager()
     var centerMapCoordinate:CLLocationCoordinate2D!
     
-    var myLocationCoordinate:CLLocationCoordinate2D!
-    
     weak var delegate: HomeViewControllerDelegate?
     
     var listParking = [ParkingEntity]()
@@ -78,7 +76,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @IBAction func setMyLocation() {
-        let camera = GMSCameraPosition.camera(withTarget: myLocationCoordinate, zoom: 16)
+        let camera = GMSCameraPosition.camera(withTarget: UserDefaultHelper.shared.myLocationCoordinate, zoom: 16)
         self.mapView?.animate(to: camera)
     }
     
@@ -174,8 +172,8 @@ extension HomeViewController: HomeFindViewControllerDelegate {
     
     func didSelectMyLocation() {
         print("did tap my location")
-        guard let myLocation = self.myLocationCoordinate else { return }
-        let newAddress = getAddressFromLocation(pdblLatitude: CGFloat(myLocation.latitude), withLongitude: CGFloat(myLocation.longitude))
+        
+        let newAddress = getAddressFromLocation(pdblLatitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.latitude), withLongitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.longitude))
         self.address = newAddress
         setMyLocation()
         getParking()
@@ -189,7 +187,7 @@ extension HomeViewController: CLLocationManagerDelegate {
             
             let location = locations.last
             self.centerMapCoordinate = location?.coordinate
-            myLocationCoordinate = location?.coordinate
+            UserDefaultHelper.shared.myLocationCoordinate = self.centerMapCoordinate
             let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
             
             self.mapView?.animate(to: camera)
