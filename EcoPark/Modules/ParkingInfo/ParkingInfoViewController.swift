@@ -16,6 +16,7 @@ class ParkingInfoViewController: BaseViewController {
     @IBOutlet weak var tbParkingInfo: UITableView!
     @IBOutlet weak var lbActive: UILabel!
     @IBOutlet weak var vActive: CustomSwitch!
+    @IBOutlet weak var lbError: UILabel!
     
 	var presenter: ParkingInfoPresenterProtocol?
 
@@ -54,7 +55,9 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     @IBAction func btnSaveTapped() {
-        presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2", parking_address: parkingAddress, gpkd_img_before_src: parkingInfo?.gpkd_img_before_src, gpkd_img_after_src: parkingInfo?.gpkd_img_after_src, parking_name: parkingName, parking_type_id: parkingTypeID, number_place: parkingInfo?.number_place, time_start: openTime, time_end: closeTime, code_tax: codeTax, price: parkingInfo?.price, package_price: parkingInfo?.package_price, package_number: parkingInfo?.package_number, material: listMaterial))
+        if validateInputData() {
+            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2", parking_address: parkingAddress, gpkd_img_before_src: parkingInfo?.gpkd_img_before_src, gpkd_img_after_src: parkingInfo?.gpkd_img_after_src, parking_name: parkingName, parking_type_id: parkingTypeID, number_place: parkingInfo?.number_place, time_start: openTime, time_end: closeTime, code_tax: codeTax, price: parkingInfo?.price, package_price: parkingInfo?.package_price, package_number: parkingInfo?.package_number, material: listMaterial))
+        }
     }
     
     @objc func imageParkingTapped() {
@@ -66,6 +69,45 @@ class ParkingInfoViewController: BaseViewController {
         self.push(controller: ImageParkingRouter.createModule(listImage: listImageStr))
     }
     
+    func hideError(isHidden: Bool = true, message: String? = nil){
+        lbError.isHidden = isHidden
+        lbError.text = message ?? ""
+    }
+    
+    func validateInputData() -> Bool {
+        if parkingName == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập tên bãi xe")
+            return false
+        }
+        if parkingTypeID == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập loại bãi xe")
+            return false
+        }
+        if parkingAddress == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập địa chỉ bãi xe")
+            return false
+        }
+        if openTime == "" {
+            hideError(isHidden: false, message: "Vui lòng chọn giờ mở cửa")
+            return false
+        }
+        if closeTime == "" {
+            hideError(isHidden: false, message: "Vui lòng chọn giờ đóng cửa")
+            return false
+        }
+        if listMaterial == [] {
+            hideError(isHidden: false, message: "Vui lòng chọn tiện ích")
+            return false
+        }
+        
+        if codeTax == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập mã số thuế")
+            return false
+        }
+        
+        hideError()
+        return true
+    }
 }
 
 extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate {

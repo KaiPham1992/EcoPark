@@ -18,6 +18,9 @@ class PartnerStepView: BaseViewXib {
     @IBOutlet weak var img3: UIImageView!
     @IBOutlet weak var imgSpace1: UIImageView!
     @IBOutlet weak var imgSpace2: UIImageView!
+    @IBOutlet weak var btnStep1: UIButton!
+    @IBOutlet weak var btnStep2: UIButton!
+    @IBOutlet weak var btnStep3: UIButton!
     
     override func setUpViews() {
         lbPartnerInfo.text = LocalizableKey.juridicalInfomation.showLanguage

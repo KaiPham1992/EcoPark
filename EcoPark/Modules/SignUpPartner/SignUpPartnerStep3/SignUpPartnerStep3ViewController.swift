@@ -55,7 +55,19 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         btnDone.setTitle(LocalizableKey.DoneSignUp.showLanguage, for: .normal)
         
         setTextTermAndPolicy()
-    }
+        
+    
+    vStep.btnStep1.addTarget(self, action: #selector(btnStep1Tapped), for: .touchUpInside)
+            vStep.btnStep2.addTarget(self, action: #selector(btnStep2Tapped), for: .touchUpInside)
+        }
+        
+        @objc func btnStep1Tapped() {
+        }
+        
+        @objc func btnStep2Tapped() {
+            self.pop()
+        }
+    
     
     private func setTextTermAndPolicy() {
         let attr1 = LocalizableKey.termAndPolicySignUp1.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
@@ -124,6 +136,11 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     func validateInputData() -> Bool {
         if listImageParking.count <= 1 {
             hideError(isHidden: false, message:  LocalizableKey.errorMinimunPhoto.showLanguage)
+            return false
+        }
+        
+        if listMaterial == [] {
+            hideError(isHidden: false, message:  "Vui lòng chọn thêm tiện ích")
             return false
         }
         hideError()
@@ -238,8 +255,8 @@ extension SignUpPartnerStep3ViewController: UICollectionViewDataSource {
 extension SignUpPartnerStep3ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 90, height: 60)
+        let width = (cvUtility.frame.width - 20 ) / 4
+        return CGSize(width: width, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

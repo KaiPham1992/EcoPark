@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingInfoViewController">
             <connections>
                 <outlet property="lbActive" destination="gmN-iK-y81" id="Cve-iX-QaC"/>
+                <outlet property="lbError" destination="lfG-T9-dy6" id="5QF-At-X2m"/>
                 <outlet property="tbParkingInfo" destination="Hz0-Ev-HaC" id="ebh-sC-UZE"/>
                 <outlet property="vActive" destination="qvW-Xm-Drk" id="L3K-ML-le0"/>
                 <outlet property="view" destination="G4I-5P-dUy" id="Thn-WO-L4T"/>
@@ -40,7 +41,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hz0-Ev-HaC">
-                    <rect key="frame" x="0.0" y="54.5" width="368" height="739.5"/>
+                    <rect key="frame" x="0.0" y="54.5" width="368" height="733.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS6-T5-usM">
@@ -62,20 +63,28 @@
                         <action selector="btnSaveTapped" destination="-1" eventType="touchUpInside" id="Mgo-Zt-Li6"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfG-T9-dy6">
+                    <rect key="frame" x="184" y="796" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.045310927020000002" blue="0.056812663579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="OS6-T5-usM" firstAttribute="leading" secondItem="G4I-5P-dUy" secondAttribute="leading" constant="16" id="2zm-ff-zjE"/>
                 <constraint firstItem="qvW-Xm-Drk" firstAttribute="leading" secondItem="gmN-iK-y81" secondAttribute="trailing" constant="16" id="9Iq-Oa-YKN"/>
+                <constraint firstItem="OS6-T5-usM" firstAttribute="top" secondItem="lfG-T9-dy6" secondAttribute="bottom" constant="8" id="DWp-F3-GWn"/>
                 <constraint firstAttribute="trailing" secondItem="OS6-T5-usM" secondAttribute="trailing" constant="16" id="LfK-kJ-1H9"/>
-                <constraint firstItem="OS6-T5-usM" firstAttribute="top" secondItem="Hz0-Ev-HaC" secondAttribute="bottom" constant="10" id="PLf-7w-ij1"/>
                 <constraint firstAttribute="trailing" secondItem="Hz0-Ev-HaC" secondAttribute="trailing" id="Pbs-mV-74s"/>
                 <constraint firstItem="Hz0-Ev-HaC" firstAttribute="top" secondItem="qvW-Xm-Drk" secondAttribute="bottom" constant="10" id="bcM-fh-dHE"/>
                 <constraint firstItem="gmN-iK-y81" firstAttribute="top" secondItem="G4I-5P-dUy" secondAttribute="top" constant="10" id="cn7-JG-iRd"/>
                 <constraint firstItem="qvW-Xm-Drk" firstAttribute="centerY" secondItem="gmN-iK-y81" secondAttribute="centerY" id="cvu-AE-1Lb"/>
+                <constraint firstItem="lfG-T9-dy6" firstAttribute="top" secondItem="Hz0-Ev-HaC" secondAttribute="bottom" constant="8" id="jZN-B3-Cor"/>
                 <constraint firstAttribute="trailing" secondItem="qvW-Xm-Drk" secondAttribute="trailing" constant="16" id="mIz-xt-BOz"/>
                 <constraint firstItem="gmN-iK-y81" firstAttribute="leading" secondItem="G4I-5P-dUy" secondAttribute="leading" constant="16" id="mJI-6D-GQl"/>
                 <constraint firstAttribute="bottom" secondItem="OS6-T5-usM" secondAttribute="bottom" constant="10" id="pgp-EF-YyU"/>
+                <constraint firstItem="lfG-T9-dy6" firstAttribute="centerX" secondItem="G4I-5P-dUy" secondAttribute="centerX" id="r5I-u1-0cx"/>
                 <constraint firstItem="Hz0-Ev-HaC" firstAttribute="leading" secondItem="G4I-5P-dUy" secondAttribute="leading" id="vwS-62-zgy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
