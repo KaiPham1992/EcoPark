@@ -41,8 +41,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnFiveStarTapped" destination="-1" eventType="touchUpInside" id="rQd-2s-549"/>
-                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="pYE-XN-60l"/>
+                                <action selector="btnFiveStarTapped" destination="-1" eventType="touchUpInside" id="VRD-WI-In1"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-Rn-zsX">
@@ -63,7 +62,6 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="btnFourStarTapped" destination="-1" eventType="touchUpInside" id="L8g-E1-i8z"/>
-                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="g6R-ij-38n"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-eG-JEq">
@@ -83,7 +81,6 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="lPS-a2-FCr"/>
                                 <action selector="btnThreeStarTapped" destination="-1" eventType="touchUpInside" id="8Sr-PB-jqk"/>
                             </connections>
                         </button>
@@ -104,8 +101,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="btnFiveStarTapped" destination="-1" eventType="touchUpInside" id="EdR-WO-TvV"/>
-                                <action selector="btnStarTapped:" destination="-1" eventType="touchUpInside" id="IVj-kZ-Hoy"/>
+                                <action selector="btnAllStarTapped" destination="-1" eventType="touchUpInside" id="2W8-UN-sr0"/>
                             </connections>
                         </button>
                     </subviews>
