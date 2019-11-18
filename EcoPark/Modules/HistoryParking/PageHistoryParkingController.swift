@@ -12,7 +12,7 @@ import XLPagerTabStrip
 class PageHistoryParkingController : PageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitleNavigation(title: "Lịch sử đỗ xe")
+        setTitleNavigation(title: LocalizableKey.history_parking.showLanguage)
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_menu"), style: StyleNavigation.left, action: #selector(openMenu))
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_qrcheckin"), style: StyleNavigation.right, action: #selector(checkQrCode))
     }

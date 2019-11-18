@@ -556,4 +556,5 @@ struct LocalizableKey {
     static let checked_in = "checked_in"
     static let reservation = "reservation"
     static let expired = "expired"
+    static let history_parking = "history_parking"
 }
