@@ -13,7 +13,7 @@ import SDWebImage
 
 class ImageParkingViewController: BaseViewController, ImageParkingViewProtocol {
 
-    @IBOutlet weak var cvPhoto: AppCollectionPhoto!
+    @IBOutlet weak var vPhoto: AppCollectionPhoto!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var lbTitle: UILabel!
@@ -24,14 +24,24 @@ class ImageParkingViewController: BaseViewController, ImageParkingViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setTitleNavigation(title: "Cập nhật hình ảnh bãi xe")
+        let images = listImage.map { (string) -> AppPhoto in
+            return AppPhoto(status: AppPhotoStatus.uploaded, image: nil, url: string)
+        }
+        vPhoto.listImage = images
     }
 
     @IBAction func btnReturnTapped() {
-        
+        self.pop()
     }
     
     @IBAction func btnSaveTapped() {
+        let listImage = vPhoto.listImage.map({ $0.url&})
+        presenter?.uploadImageParking(parkingID: "2", parkingImage: listImage)
+    }
+    
+    func didUploadImageParking() {
         
     }
+    
 }

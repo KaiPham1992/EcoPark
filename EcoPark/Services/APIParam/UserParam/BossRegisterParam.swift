@@ -32,6 +32,8 @@ class BossRegisterParam: BaseParam {
     var package_price: String?
     var material: [String] = []
     var parking_img_src: [String] = []
+    var latAddress: Double?
+    var longAddress: Double?
     
     override func mapping(map: Map) {
         self.email <- map["email"]
@@ -56,9 +58,11 @@ class BossRegisterParam: BaseParam {
         self.package_price <- map["package_price"]
         self.material <- map["material"]
         self.parking_img_src <- map["parking_img_src"]
+        self.latAddress <- map["lat"]
+        self.longAddress <- map["long"]
     }
     
-     init(
+    init(
         email: String?,
         fullname: String?,
         gender: String?,
@@ -80,7 +84,9 @@ class BossRegisterParam: BaseParam {
         price: String?,
         package_price: String?,
         material: [String] = [],
-        parking_img_src: [String] = []) {
+        parking_img_src: [String] = [],
+        latAddress: Double?,
+        longAddress: Double?) {
         
         super.init()
         self.email = email
@@ -105,6 +111,8 @@ class BossRegisterParam: BaseParam {
         self.package_price = package_price
         self.material = material
         self.parking_img_src = parking_img_src
+        self.latAddress = latAddress
+        self.longAddress = longAddress
     }
     
     required init?(map: Map) {

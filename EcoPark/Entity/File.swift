@@ -34,6 +34,10 @@ struct GoogleLocationEntity: Mappable  {
     func getPlaceAddress() -> String {
         return structuredFormatting?.secondaryText ?? ""
     }
+    
+    func getAddress() -> String {
+        return (structuredFormatting?.mainText ?? "") + ", " + (structuredFormatting?.secondaryText ?? "")
+    }
 }
 
 struct StructuredFormatting:Mappable {

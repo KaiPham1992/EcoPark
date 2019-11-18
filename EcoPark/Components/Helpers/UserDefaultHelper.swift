@@ -8,6 +8,9 @@
 
 import Foundation
 import ObjectMapper
+import GoogleMaps
+import GooglePlaces
+
 
 class LiveData {
     public static var listDownloading : [Int] = []
@@ -38,6 +41,8 @@ class UserDefaultHelper {
     static let shared = UserDefaultHelper()
     private let userDefaultManager = UserDefaults.standard
 //    var collectionProduct = ProductCollectionEntity()
+    
+     var myLocationCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
     
     var loginUserInfo: UserEntity? {
         get {

@@ -42,11 +42,22 @@ class AppDateDropDown: BaseViewXib {
     }
     
     @IBAction func btnActionTapped() {
+        hideKeyboard()
         let popUp = PopUpSelectDate()
         popUp.showPopUp(currentDate: self.selectedDate, completionDate: { date in
             self.selectedDate = date
 //            print(date!.toString(dateFormat: AppDateFormat.ddMMYYYY))
             self.tfInput.text = date?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
         })
+    }
+    
+    func hideKeyboard() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.endEditing(true)
     }
 }

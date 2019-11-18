@@ -13,17 +13,19 @@ import GooglePlaces
 
 protocol HomeFindViewControllerDelegate: class {
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees)
+    func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees)
     func didSelectMyLocation()
 }
 
 class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
-
-	var presenter: HomeFindPresenterProtocol?
+    
+    var presenter: HomeFindPresenterProtocol?
     
     @IBOutlet weak var vSearch: AppSeachBarRight!
     @IBOutlet weak var tbFind: UITableView!
     
     weak var delegate: HomeFindViewControllerDelegate?
+    var isSelectAddressSignUp: Bool = false
     var locations = [GoogleLocationEntity]() {
         didSet {
             tbFind.reloadData()
@@ -31,20 +33,24 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     }
     var address: String = ""
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func setTitleUI() {
         super.setTitleUI()
+        if isSelectAddressSignUp {
+            vSearch.setTitleAndPlaceHolder(placeHolder: "Chọn vị trí")
+        } else {
+            vSearch.setTitleAndPlaceHolder(placeHolder: "Chọn điểm đến")
+        }
         
-        vSearch.setTitleAndPlaceHolder(placeHolder: "Chọn điểm đến")
     }
     
     override func setUpViews() {
         super.setUpViews()
         vSearch.actionSearch = { text in
-           self.presenter?.searchPlaceByString(text: text)
+            self.presenter?.searchPlaceByString(text: text)
         }
         configureTable()
         
@@ -52,7 +58,13 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     
     override func setUpNavigation() {
         super.setUpNavigation()
-        addButtonTextToNavigation(title: "CHỌN ĐIỂM ĐẾN", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
+        
+        if isSelectAddressSignUp {
+            addButtonTextToNavigation(title: "CHỌN VỊ TRÍ", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
+        } else {
+            addButtonTextToNavigation(title: "CHỌN ĐIỂM ĐẾN", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
+        }
+        
         
         addButtonTextToNavigation(title: "Huỷ tìm kiếm", style: .right, action: #selector(btnCancel), textColor: AppColor.color_0_129_255, font: AppFont.fontRegular15)
     }
@@ -71,10 +83,14 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     }
     
     func didGetPlaceDetail(lat: Double, long: Double) {
-        self.delegate?.didSelectAddress(address: self.address, lat: lat, long: long)
+        if isSelectAddressSignUp {
+            self.delegate?.didSelectAddressSignUp(address: self.address, lat: lat, long: long)
+        } else {
+            self.delegate?.didSelectAddress(address: self.address, lat: lat, long: long)
+        }
         self.pop()
     }
-
+    
 }
 
 extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
@@ -96,7 +112,7 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.item == 0 {
             let cell = tableView.dequeue(FindAroundMeCell.self, for: indexPath)
-                   
+            
             return cell
         }
         
@@ -107,13 +123,28 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row != 0 {
+            if isSelectAddressSignUp {
+                let item = locations[indexPath.row - 1]
+                self.address = item.getAddress()
+                getPlaceDetail(placeId: item.placeID)
+            } else {
+                let item = locations[indexPath.row - 1]
+                self.address = item.getPlaceAddress()
+                getPlaceDetail(placeId: item.placeID)
+            }
+            
+            
+        }
+        
         if indexPath.row == 0 {
             delegate?.didSelectMyLocation()
             self.pop()
-        } else {
-            let item = locations[indexPath.row - 1]
-            self.address = item.getPlaceAddress()
-            getPlaceDetail(placeId: item.placeID)
         }
+//        else {
+//            let item = locations[indexPath.row - 1]
+//            self.address = item.getPlaceAddress()
+//            getPlaceDetail(placeId: item.placeID)
+//        }
     }
 }

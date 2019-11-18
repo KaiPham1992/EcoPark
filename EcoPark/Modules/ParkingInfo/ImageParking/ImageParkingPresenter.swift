@@ -22,4 +22,11 @@ class ImageParkingPresenter: ImageParkingPresenterProtocol, ImageParkingInteract
         self.router = router
     }
 
+    func uploadImageParking(parkingID: String, parkingImage: [String]) {
+        Provider.shared.parkingAPIService.uploadImageParking(parkingID: parkingID, ParkingImage: parkingImage, success: { (images) in
+            self.view?.didUploadImageParking()
+        }) { (error) in
+            
+        }
+    }
 }

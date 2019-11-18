@@ -9,9 +9,10 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class SignUpPartnerStep2ViewController: BaseViewController {
-
+    
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbParking: UILabel!
     @IBOutlet weak var vParkingName: AppTextField!
@@ -33,8 +34,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var lbError: UILabel!
-	var presenter: SignUpPartnerStep2PresenterProtocol?
-
+    var presenter: SignUpPartnerStep2PresenterProtocol?
+    
     var param: BossRegisterParam?
     var parkingTypeID: String?
     var urlPhoto_gpkd_front: String = ""
@@ -44,13 +45,15 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     let formatterTimeOpen = DateFormatter()
     let datePickerTimeClose = UIDatePicker()
     let formatterTimeClose = DateFormatter()
-
     
-	override func viewDidLoad() {
+    var lat: Double = 0
+    var long: Double = 0
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.getListParkingType()
@@ -67,7 +70,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vParkingName.setTitleAndPlaceHolder(title: LocalizableKey.parkingName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.setTitleAndPlaceHolder(title: LocalizableKey.parkingType.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingCapacity.setTitleAndPlaceHolder(title: LocalizableKey.parkingCapacity.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vParkingAddress.setTitleAndPlaceHolder(title: LocalizableKey.parkingAddress.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingAddress.setPlaceHolder(placeHolder: LocalizableKey.enter.showLanguage)
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -77,6 +80,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vParkingCapacity.tfInput.keyboardType = .numberPad
         vPriceAHours.tfInput.keyboardType = .numberPad
         vPriceCombo.tfInput.keyboardType = .numberPad
+        vTaxCode.tfInput.keyboardType = .numberPad
         
         lbFrontPhoto.text = LocalizableKey.photoFront.showLanguage
         lbBacksidePhoto.text = LocalizableKey.photoBackside.showLanguage
@@ -85,6 +89,43 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         btnDeletePhotoBacksite.isHidden = true
         vParkingType.delegateDropDown = self
         setTime()
+        vStep.btnStep1.addTarget(self, action: #selector(btnStep1Tapped), for: .touchUpInside)
+        vStep.btnStep3.addTarget(self, action: #selector(btnStep3Tapped), for: .touchUpInside)
+    }
+    
+    @objc func btnStep1Tapped() {
+        self.pop()
+    }
+    
+    @objc func btnStep3Tapped() {
+        if validateInputData() {
+            let param2 = BossRegisterParam(email: self.param?.email,
+                                           fullname: self.param?.fullname,
+                                           gender: self.param?.gender,
+                                           birthday: self.param?.birthday,
+                                           identity_number: self.param?.identity_number,
+                                           issued_by: self.param?.issued_by,
+                                           issued_date: self.param?.issued_date,
+                                           cmnd_img_before_src: self.param?.cmnd_img_before_src,
+                                           cmnd_img_after_src: self.param?.cmnd_img_after_src,
+                                           gpkd_img_before_src: urlPhoto_gpkd_front,
+                                           gpkd_img_after_src: urlPhoto_gpkd_backside,
+                                           parking_name: vParkingName.getText(),
+                                           parking_type_id: parkingTypeID,
+                                           number_place: vParkingCapacity.getText(),
+                                           parking_address: vParkingAddress.tvInput.text,
+                                           time_start: vOpen.getText(),
+                                           time_end: vClose.getText(),
+                                           code_tax: vTaxCode.getText(),
+                                           price: vPriceAHours.getText(),
+                                           package_price: vPriceCombo.getText(),
+                                           material: [],
+                                           parking_img_src: [],
+                                           latAddress: lat,
+                                           longAddress: long)
+            
+            self.push(controller: SignUpPartnerStep3Router.createModule(param: param2))
+        }
     }
     
     @IBAction func btnPhotoFrontTapped() {
@@ -119,12 +160,41 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @IBAction func btnNextTapped() {
         if validateInputData() {
-            let param2 = BossRegisterParam(email: self.param?.email, fullname: self.param?.fullname, gender: self.param?.gender, birthday: self.param?.birthday, identity_number: self.param?.identity_number, issued_by: self.param?.issued_by, issued_date: self.param?.issued_date, cmnd_img_before_src: self.param?.cmnd_img_before_src, cmnd_img_after_src: self.param?.cmnd_img_after_src, gpkd_img_before_src: urlPhoto_gpkd_front, gpkd_img_after_src: urlPhoto_gpkd_backside, parking_name: vParkingName.getText(), parking_type_id: parkingTypeID, number_place: vParkingCapacity.getText(), parking_address: "220/2 Nguyễn Trọng Tuyển, Phường 8, Phú Nhuận, Hồ Chí Minh", time_start: vOpen.getText(), time_end: vClose.getText(), code_tax: vTaxCode.getText(), price: vPriceAHours.getText(), package_price: vPriceCombo.getText(), material: [], parking_img_src: [])
+            let param2 = BossRegisterParam(email: self.param?.email,
+                                           fullname: self.param?.fullname,
+                                           gender: self.param?.gender,
+                                           birthday: self.param?.birthday,
+                                           identity_number: self.param?.identity_number,
+                                           issued_by: self.param?.issued_by,
+                                           issued_date: self.param?.issued_date,
+                                           cmnd_img_before_src: self.param?.cmnd_img_before_src,
+                                           cmnd_img_after_src: self.param?.cmnd_img_after_src,
+                                           gpkd_img_before_src: urlPhoto_gpkd_front,
+                                           gpkd_img_after_src: urlPhoto_gpkd_backside,
+                                           parking_name: vParkingName.getText(),
+                                           parking_type_id: parkingTypeID,
+                                           number_place: vParkingCapacity.getText(),
+                                           parking_address: vParkingAddress.tvInput.text,
+                                           time_start: vOpen.getText(),
+                                           time_end: vClose.getText(),
+                                           code_tax: vTaxCode.getText(),
+                                           price: vPriceAHours.getText(),
+                                           package_price: vPriceCombo.getText(),
+                                           material: [],
+                                           parking_img_src: [],
+                                           latAddress: lat,
+                                           longAddress: long)
             
             self.push(controller: SignUpPartnerStep3Router.createModule(param: param2))
         }
     }
     
+    @IBAction func btnSelectAddressTapped() {
+        let vcHomeFind = HomeFindRouter.createModule()
+        vcHomeFind.delegate = self
+        vcHomeFind.isSelectAddressSignUp = true
+        self.push(controller: vcHomeFind)
+    }
 }
 
 
@@ -178,61 +248,61 @@ extension SignUpPartnerStep2ViewController {
         hideError()
         return true
     }
-        func hideError(isHidden: Bool = true, message: String? = nil){
-            lbError.isHidden = isHidden
-            lbError.text = message ?? ""
-        }
+    func hideError(isHidden: Bool = true, message: String? = nil){
+        lbError.isHidden = isHidden
+        lbError.text = message ?? ""
+    }
 }
 
 extension SignUpPartnerStep2ViewController {
     
     private func setTime() {
         //--Time
-         datePickerTimeOpen.datePickerMode = .time
-         datePickerTimeClose.datePickerMode = .time
-         let toolbarTimeOpen = UIToolbar()
-         toolbarTimeOpen.sizeToFit()
+        datePickerTimeOpen.datePickerMode = .time
+        datePickerTimeClose.datePickerMode = .time
+        let toolbarTimeOpen = UIToolbar()
+        toolbarTimeOpen.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePicker))
-         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
         let cancelButtonClose = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelDatePicker))
-         toolbarTimeOpen.setItems([doneButton,spaceButton,cancelButton], animated: false)
-         vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
-         vOpen.tfInput.inputView = datePickerTimeOpen
+        toolbarTimeOpen.setItems([cancelButton,spaceButton,doneButton], animated: false)
+        vOpen.tfInput.inputAccessoryView = toolbarTimeOpen
+        vOpen.tfInput.inputView = datePickerTimeOpen
         
-         //close time
-         let toolbarTimeClose = UIToolbar()
-          toolbarTimeClose.sizeToFit()
-         
-         let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
-          toolbarTimeClose.setItems([doneButtonClose,spaceButton,cancelButtonClose], animated: false)
-         
-         vClose.tfInput.inputAccessoryView = toolbarTimeClose
-         vClose.tfInput.inputView = datePickerTimeClose
+        //close time
+        let toolbarTimeClose = UIToolbar()
+        toolbarTimeClose.sizeToFit()
+        
+        let doneButtonClose = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneDatePickerClose))
+        toolbarTimeClose.setItems([cancelButtonClose, spaceButton, doneButtonClose], animated: false)
+        
+        vClose.tfInput.inputAccessoryView = toolbarTimeClose
+        vClose.tfInput.inputView = datePickerTimeClose
     }
     
     @objc func doneDatePicker(){
-           //For time formate
-           formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
+        //For time formate
+        formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
         vOpen.tfInput.text = formatterTimeOpen.string(from: datePickerTimeOpen.date)
-    
-           //dismiss date picker dialog
-           self.view.endEditing(true)
-       }
+        
+        //dismiss date picker dialog
+        self.view.endEditing(true)
+    }
     
     @objc func doneDatePickerClose(){
-               //For time formate
-               formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
-            vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
+        //For time formate
+        formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
+        vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
         
-               //dismiss date picker dialog
-               self.view.endEditing(true)
-           }
-       
-       @objc func cancelDatePicker(){
-           //cancel button dismiss datepicker dialog
-           self.view.endEditing(true)
-       }
+        //dismiss date picker dialog
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        //cancel button dismiss datepicker dialog
+        self.view.endEditing(true)
+    }
 }
 
 extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
@@ -255,16 +325,30 @@ extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
         switch item as? String {
         case "Bãi xe có mái che":
             self.parkingTypeID = "1"
-            case "Bãi xe không có mái che":
+        case "Bãi xe không có mái che":
             self.parkingTypeID = "2"
-            case "Bãi xe tính tiền tự động":
+        case "Bãi xe tính tiền tự động":
             self.parkingTypeID = "3"
-            case "Bãi xe đặc biệt":
+        case "Bãi xe đặc biệt":
             self.parkingTypeID = "4"
         default:
             self.parkingTypeID = nil
         }
     }
+}
+
+extension SignUpPartnerStep2ViewController: HomeFindViewControllerDelegate {
+    func didSelectMyLocation() {
+        
+    }
     
+    func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        vParkingAddress.tvInput.text = address
+        vParkingAddress.lbPlaceHolder.text = ""
+        self.lat = lat
+        self.long = long
+    }
     
+    func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+    }
 }

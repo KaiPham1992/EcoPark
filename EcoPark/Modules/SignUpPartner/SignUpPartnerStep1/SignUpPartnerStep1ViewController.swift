@@ -11,7 +11,7 @@
 import UIKit
 
 class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1ViewProtocol {
-
+    
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbPartnerInfo: UILabel!
     @IBOutlet  weak var vPartnerName: AppTextField!
@@ -32,16 +32,17 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
     @IBOutlet weak var lbError: UILabel!
     
-	var presenter: SignUpPartnerStep1PresenterProtocol?
-
+    var presenter: SignUpPartnerStep1PresenterProtocol?
+    
     var urlPhotoIDFront: String = ""
     var urlPhotoIDBackside: String = ""
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupToHideKeyboardOnTapOnView()
     }
-
+    
     private func setupUI() {
         addMenu()
         setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
@@ -56,6 +57,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         lbImage.text = LocalizableKey.partnerImage.showLanguage
         vIDNumber.tfInput.keyboardType = .numberPad
+        
+        vStep.btnStep2.addTarget(self, action: #selector(btnStep2Tapped), for: .touchUpInside)
         
         let attr1 = LocalizableKey.photoNotice1.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
         let attr2 = LocalizableKey.photoNotice2.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontBold15, isUnderLine: false)
@@ -76,6 +79,63 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         btnDeletePhotoBacksite.isHidden = true
         
         vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
+    }
+    
+    func setupToHideKeyboardOnTapOnView()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+    
+    @objc func btnStep2Tapped() {
+        if validateInputData() {
+            
+            if self.vGender.tfInput.text == "Nữ" {
+                self.vGender.tfInput.text = "female"
+            }
+            else if self.vGender.tfInput.text == "Nam" {
+                self.vGender.tfInput.text = "male"
+            }
+            else if self.vGender.tfInput.text == "Khác" {
+                self.vGender.tfInput.text = "other"
+            }
+            
+            let param = BossRegisterParam(email: vEmail.getText(),
+                                          fullname: vPartnerName.getText(),
+                                          gender: self.vGender.tfInput.text,
+                                          birthday: vBirthday.tfInput.text,
+                                          identity_number: vIDNumber.getText(),
+                                          issued_by: vIssuedBy.getText(),
+                                          issued_date: vDateBy.tfInput.text,
+                                          cmnd_img_before_src: urlPhotoIDFront,
+                                          cmnd_img_after_src: urlPhotoIDBackside,
+                                          gpkd_img_before_src: nil,
+                                          gpkd_img_after_src: nil,
+                                          parking_name: nil,
+                                          parking_type_id: nil,
+                                          number_place: nil,
+                                          parking_address: nil,
+                                          time_start: nil,
+                                          time_end: nil,
+                                          code_tax: nil,
+                                          price: nil,
+                                          package_price: nil,
+                                          material: [],
+                                          parking_img_src: [],
+                                          latAddress: nil,
+                                          longAddress: nil)
+            self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
+            
+        }
     }
     
     @IBAction func btnPhotoFrontTapped() {
@@ -111,7 +171,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     
     @IBAction func btnNextTapped() {
         if validateInputData() {
-
+            
             if self.vGender.tfInput.text == "Nữ" {
                 self.vGender.tfInput.text = "female"
             }
@@ -122,9 +182,32 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
                 self.vGender.tfInput.text = "other"
             }
             
-        let param = BossRegisterParam(email: vEmail.getText(), fullname: vPartnerName.getText(), gender: self.vGender.tfInput.text, birthday: vBirthday.tfInput.text, identity_number: vIDNumber.getText(), issued_by: vIssuedBy.getText(), issued_date: vDateBy.tfInput.text, cmnd_img_before_src: urlPhotoIDFront, cmnd_img_after_src: urlPhotoIDBackside, gpkd_img_before_src: nil, gpkd_img_after_src: nil, parking_name: nil, parking_type_id: nil, number_place: nil, parking_address: nil, time_start: nil, time_end: nil, code_tax: nil, price: nil, package_price: nil, material: [], parking_img_src: [])
-           self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
-//            self.push(controller: ParkingInfoRouter.createModule())
+            let param = BossRegisterParam(email: vEmail.getText(),
+                                          fullname: vPartnerName.getText(),
+                                          gender: self.vGender.tfInput.text,
+                                          birthday: vBirthday.tfInput.text,
+                                          identity_number: vIDNumber.getText(),
+                                          issued_by: vIssuedBy.getText(),
+                                          issued_date: vDateBy.tfInput.text,
+                                          cmnd_img_before_src: urlPhotoIDFront,
+                                          cmnd_img_after_src: urlPhotoIDBackside,
+                                          gpkd_img_before_src: nil,
+                                          gpkd_img_after_src: nil,
+                                          parking_name: nil,
+                                          parking_type_id: nil,
+                                          number_place: nil,
+                                          parking_address: nil,
+                                          time_start: nil,
+                                          time_end: nil,
+                                          code_tax: nil,
+                                          price: nil,
+                                          package_price: nil,
+                                          material: [],
+                                          parking_img_src: [],
+                                          latAddress: nil,
+                                          longAddress: nil)
+            self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
+            //            self.push(controller: ParkingInfoRouter.createModule())
         }
     }
     
@@ -170,12 +253,12 @@ extension SignUpPartnerStep1ViewController {
             return false
         }
         
-        if imgFrontPhoto.image == AppImage.imgAddImage {
+        if urlPhotoIDFront == ""  {
             hideError(isHidden: false, message:  LocalizableKey.errorPhotoFront.showLanguage)
             return false
         }
         
-        if imgBacksidePhoto.image == AppImage.imgAddImage {
+        if urlPhotoIDBackside == ""  {
             hideError(isHidden: false, message:  LocalizableKey.errorPhotoBackside.showLanguage)
             return false
         }
@@ -183,8 +266,8 @@ extension SignUpPartnerStep1ViewController {
         hideError()
         return true
     }
-        func hideError(isHidden: Bool = true, message: String? = nil){
-            lbError.isHidden = isHidden
-            lbError.text = message ?? ""
-        }
+    func hideError(isHidden: Bool = true, message: String? = nil){
+        lbError.isHidden = isHidden
+        lbError.text = message ?? ""
+    }
 }

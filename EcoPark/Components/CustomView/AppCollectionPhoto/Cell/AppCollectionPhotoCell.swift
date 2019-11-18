@@ -37,7 +37,7 @@ class AppCollectionPhotoCell: BaseCollectionCell {
         return btn
     }()
     
-    var photo: UIImage? {
+    var photo: AppPhoto? {
         didSet {
             loadImage(photo: photo)
         }
@@ -60,7 +60,29 @@ class AppCollectionPhotoCell: BaseCollectionCell {
         self.setBorder(borderWidth: 0, borderColor: .clear, cornerRadius: 0)
     }
     
-    func loadImage(photo: UIImage?) {
-        imgPhoto.image = photo
+    func loadImage(photo: AppPhoto?) {
+        guard let _photo = photo else { return }
+        var urlStr = ""
+        if _photo.url&.contains("http"){
+             urlStr = "\(_photo.url&)"
+        } else {
+             urlStr = "\(BASE_URL_IMAGE)\(_photo.url&)"
+        }
+        
+        switch _photo.status {
+        case .new:
+            imgPhoto.image = AppImage.imgPlaceHolderImage
+        case .uploaded:
+            if let image = _photo.image {
+                imgPhoto.image = image
+            } else if let url = URL(string: urlStr) {
+                imgPhoto.sd_setImage(with: url, placeholderImage: AppImage.imgPlaceHolderImage)
+            } else {
+                 imgPhoto.image = AppImage.imgPlaceHolderImage
+            }
+            
+        case .error:
+            imgPhoto.image = AppImage.imgPlaceHolderImage
+        }
     }
 }

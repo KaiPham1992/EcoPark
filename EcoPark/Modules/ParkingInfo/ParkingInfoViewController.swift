@@ -9,18 +9,34 @@
 //
 
 import UIKit
-
+import GooglePlaces
 
 class ParkingInfoViewController: BaseViewController {
-
+    
     @IBOutlet weak var tbParkingInfo: UITableView!
     @IBOutlet weak var lbActive: UILabel!
     @IBOutlet weak var vActive: CustomSwitch!
+    @IBOutlet weak var lbError: UILabel!
     
-	var presenter: ParkingInfoPresenterProtocol?
-
+    var presenter: ParkingInfoPresenterProtocol?
+    
     var isExplandParkingInfo = true
     var isExplandLicenseInfo = true
+    
+    var addressSelect: String = ""
+    var latSelect: Double = 0
+    var longSelect: Double = 0
+    var isSelectAddress: Bool = false
+    
+    var parkingName: String = ""
+    var parkingTypeID: String = ""
+    var openTime: String = ""
+    var closeTime: String = ""
+    var parkingAddress: String = ""
+    var lat: Double = 0
+    var long: Double = 0
+    var listMaterial: [String] = []
+    var codeTax: String = ""
     
     var listParkingType: [ParkingTypeEntity] = []
     var parkingInfo: ParkingInfoEntity? {
@@ -29,13 +45,13 @@ class ParkingInfoViewController: BaseViewController {
         }
     }
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setTitleNavigation(title: "Thông tin bãi xe của tôi")
         addBackToNavigation()
         configTableView()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.getParkingInfo(id: "2")
@@ -43,7 +59,24 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     @IBAction func btnSaveTapped() {
-        
+        if validateInputData() {
+            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2",
+                                                                       parking_address: parkingAddress,
+                                                                       gpkd_img_before_src: parkingInfo?.gpkd_img_before_src,
+                                                                       gpkd_img_after_src: parkingInfo?.gpkd_img_after_src,
+                                                                       parking_name: parkingName,
+                                                                       parking_type_id: parkingTypeID,
+                                                                       number_place: parkingInfo?.number_place,
+                                                                       time_start: openTime,
+                                                                       time_end: closeTime,
+                                                                       code_tax: codeTax,
+                                                                       price: parkingInfo?.price,
+                                                                       package_price: parkingInfo?.package_price,
+                                                                       package_number: parkingInfo?.package_number,
+                                                                       material: listMaterial,
+                                                                       lat: self.lat,
+                                                                       long: self.long))
+        }
     }
     
     @objc func imageParkingTapped() {
@@ -55,6 +88,45 @@ class ParkingInfoViewController: BaseViewController {
         self.push(controller: ImageParkingRouter.createModule(listImage: listImageStr))
     }
     
+    func hideError(isHidden: Bool = true, message: String? = nil){
+        lbError.isHidden = isHidden
+        lbError.text = message ?? ""
+    }
+    
+    func validateInputData() -> Bool {
+        if parkingName == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập tên bãi xe")
+            return false
+        }
+        if parkingTypeID == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập loại bãi xe")
+            return false
+        }
+        if parkingAddress == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập địa chỉ bãi xe")
+            return false
+        }
+        if openTime == "" {
+            hideError(isHidden: false, message: "Vui lòng chọn giờ mở cửa")
+            return false
+        }
+        if closeTime == "" {
+            hideError(isHidden: false, message: "Vui lòng chọn giờ đóng cửa")
+            return false
+        }
+        if listMaterial == [] {
+            hideError(isHidden: false, message: "Vui lòng chọn tiện ích")
+            return false
+        }
+        
+        if codeTax == "" {
+            hideError(isHidden: false, message: "Vui lòng nhập mã số thuế")
+            return false
+        }
+        
+        hideError()
+        return true
+    }
 }
 
 extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate {
@@ -110,12 +182,15 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
-                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}))
+                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}), isSelectAddress: isSelectAddress)
+                parkingInfoCell.selectAddress = self.addressSelect
+                parkingInfoCell.delegate = self
                 return parkingInfoCell
             }
         default:
             let licenseInfoCell = tableView.dequeueTableCell(LicenseInfoCell.self)
             licenseInfoCell.setData(parkingInfo: parkingInfo)
+            licenseInfoCell.delegate = self
             return licenseInfoCell
         }
     }
@@ -200,5 +275,55 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
     func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?) {
         presenter?.getParkingInfo(id: "2")
         tbParkingInfo.reloadData()
+    }
+}
+
+extension ParkingInfoViewController: LicenseInfoCellDelegate {
+    func getDataLicenseInfo(codeTax: String) {
+        self.codeTax = codeTax
+    }
+}
+
+extension ParkingInfoViewController: ParkingInfoCellDelegate {
+    func getParkingInfo(parkingName: String, parkingTypeID: String, parkingAddress: String, openTime: String, closeTime: String, material: [String]) {
+        
+        self.parkingName = parkingName
+        self.parkingTypeID = parkingTypeID
+        if isSelectAddress {
+            self.parkingAddress = addressSelect
+            self.lat = latSelect
+            self.long = longSelect
+        } else {
+            self.parkingAddress = parkingAddress
+        }
+        self.openTime = openTime
+        self.closeTime = closeTime
+        self.listMaterial = material
+    }
+    
+    func selectAddress() {
+        let vcHomeFind = HomeFindRouter.createModule()
+        vcHomeFind.delegate = self
+        vcHomeFind.isSelectAddressSignUp = true
+        self.push(controller: vcHomeFind)
+    }
+    
+    
+}
+
+extension ParkingInfoViewController: HomeFindViewControllerDelegate {
+    func didSelectMyLocation() {
+        
+    }
+    
+    func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        self.addressSelect = address
+        self.latSelect = lat
+        self.longSelect = long
+        self.isSelectAddress = true
+        tbParkingInfo.reloadData()
+    }
+    
+    func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
     }
 }

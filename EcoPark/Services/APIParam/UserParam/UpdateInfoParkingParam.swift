@@ -16,14 +16,16 @@ class UpdateInfoParkingParam: BaseParam {
     var gpkd_img_after_src : String?
     var parking_name : String?
     var parking_type_id : String?
-    var number_place : String?
+    var number_place : Int?
     var time_start : String?
     var time_end : String?
     var code_tax : String?
-    var price : String?
-    var package_price : String?
+    var price : Double?
+    var package_price : Double?
     var package_number : String?
     var material : [String] = []
+    var lat: Double?
+    var long: Double?
     
     override func mapping(map: Map) {
         
@@ -41,7 +43,8 @@ class UpdateInfoParkingParam: BaseParam {
         self.package_price <- map["package_price"]
         self.package_number <- map["package_number"]
         self.material <- map["material"]
-        
+        self.lat <- map["lat"]
+        self.long <- map["long"]
     }
     
     init(
@@ -51,14 +54,16 @@ class UpdateInfoParkingParam: BaseParam {
         gpkd_img_after_src : String?,
         parking_name : String?,
         parking_type_id : String?,
-        number_place : String?,
+        number_place : Int?,
         time_start : String?,
         time_end : String?,
         code_tax : String?,
-        price : String?,
-        package_price : String?,
+        price : Double?,
+        package_price : Double?,
         package_number : String?,
-        material : [String] = []
+        material : [String] = [],
+        lat: Double?,
+        long: Double?
     ) {
         super.init()
         self.parking_id = parking_id
@@ -75,6 +80,8 @@ class UpdateInfoParkingParam: BaseParam {
         self.package_price = package_price
         self.package_number = package_number
         self.material = material
+        self.lat = lat
+        self.long = long
     }
     
     required init?(map: Map) {
