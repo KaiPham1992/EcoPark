@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -133,6 +133,15 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="DLVBook" destination="7zf-7d-P0h" id="rsg-Ih-GOf"/>
+                <outlet property="DLVCheckin" destination="S87-K2-hvI" id="1a4-aN-j1C"/>
+                <outlet property="DLVCheckout" destination="FlU-On-DyX" id="PgV-N4-sPP"/>
+                <outlet property="lblAddress" destination="wDq-8A-uv2" id="w41-aI-Aid"/>
+                <outlet property="lblCode" destination="kdF-EJ-seU" id="2JD-d4-Z5m"/>
+                <outlet property="lblPayment" destination="UOG-5i-XZb" id="aZq-Ob-ldd"/>
+                <outlet property="lblStatus" destination="V3e-cU-Lkr" id="Ps7-fd-p1K"/>
+            </connections>
             <point key="canvasLocation" x="213.04347826086959" y="158.37053571428569"/>
         </tableViewCell>
     </objects>

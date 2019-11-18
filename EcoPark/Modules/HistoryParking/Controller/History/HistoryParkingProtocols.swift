@@ -18,6 +18,8 @@ protocol HistoryParkingWireframeProtocol: class {
 protocol HistoryParkingPresenterProtocol: class {
 
     var interactor: HistoryParkingInteractorInputProtocol? { get set }
+    func getDoingBooking()
+    func getHistoryBooking()
 }
 
 //MARK: Interactor -
@@ -37,6 +39,7 @@ protocol HistoryParkingInteractorInputProtocol: class {
 protocol HistoryParkingViewProtocol: class {
 
     var presenter: HistoryParkingPresenterProtocol?  { get set }
-
+    func reloadViewDoingBooking(data: [HistoryBookingParkingResponse])
+    func reloadViewHistoryBooking(data: [HistoryBookingParkingResponse])
     /* Presenter -> ViewController */
 }

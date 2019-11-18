@@ -22,6 +22,14 @@ class DoubleLabelView : BaseViewXib {
         lblTime.textColor = #colorLiteral(red: 0.05098039216, green: 0.768627451, blue: 0.2666666667, alpha: 1)
     }
     
+    func setupViewForHistory(title: String) {
+        lblTitle.text = title
+        lblTitle.textColor = AppColor.color40_50_75
+        lblTitle.font = AppFont.fontRegular15
+        lblTime.textColor = AppColor.color_169_169_169
+        lblTitle.font = AppFont.fontRegular13
+    }
+    
     func setupViewTimeBlue(title: String) {
         lblTime.textColor = #colorLiteral(red: 0, green: 0.5058823529, blue: 1, alpha: 1)
         lblTitle.text = title

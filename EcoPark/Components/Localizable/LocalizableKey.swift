@@ -545,4 +545,15 @@ struct LocalizableKey {
 //    static let dateExpire = "dateExpire"
 //    static let update_package_recieved = "update_package_recieved"
 //    static let user_not_login = "user_not_login"
+    
+    
+    //history
+    
+    static let doing = "doing"
+    static let history = "history"
+    static let book_at = "book_at"
+    static let checked_out = "checked_out"
+    static let checked_in = "checked_in"
+    static let reservation = "reservation"
+    static let expired = "expired"
 }

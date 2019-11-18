@@ -506,3 +506,13 @@
 "user_not_login" = "User don't login";
 "restore_fail" = "Restore fail, please contact +84909172353";
 "restore_success" = "Restore success";
+
+//history
+"doing" = "Doing";
+"history" = "History";
+"book_at" = "Book at";
+"cancel" = "Cancel";
+"checked_out" = "Check out";
+"checked_in" = "Check in";
+"reservation" = "Reservation";
+"expired" = "Expired";

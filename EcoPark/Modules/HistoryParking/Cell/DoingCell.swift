@@ -10,8 +10,43 @@ import UIKit
 
 class DoingCell: UITableViewCell {
 
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var lblCode: UILabel!
+    @IBOutlet weak var DLVBook: DoubleLabelView!
+    @IBOutlet weak var DLVCheckin: DoubleLabelView!
+    @IBOutlet weak var DLVCheckout: DoubleLabelView!
+    @IBOutlet weak var lblPayment: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
+        DLVBook.setupViewForHistory(title: LocalizableKey.book_at.showLanguage)
+        DLVCheckin.setupViewForHistory(title: "Check in")
+        DLVCheckout.setupViewForHistory(title: "Check out")
+    }
+    
+    func setupCell(data: HistoryBookingParkingResponse) {
+        lblCode.text = data.code
+        let status = data.status ?? ""
+        switch status {
+        case StatusBooking.cancel.rawValue:
+            lblStatus.text = LocalizableKey.cancel.showLanguage
+        case StatusBooking.checked_out.rawValue:
+            lblStatus.text = LocalizableKey.checked_out.showLanguage
+        case StatusBooking.checked_in.rawValue:
+            lblStatus.text = LocalizableKey.checked_in.showLanguage
+        case StatusBooking.reservation.rawValue:
+            lblStatus.text = LocalizableKey.reservation.showLanguage
+        case StatusBooking.expired.rawValue:
+            lblStatus.text = LocalizableKey.expired.showLanguage
+        default:
+            break
+        }
+        lblAddress.text = data.parking_details?.name ?? ""
+        DLVBook.lblTime.text = data.create_time
+        DLVCheckin.lblTime.text = data.intend_checkin_time
+        DLVCheckout.lblTime.text = data.intend_checkout_time
+        lblPayment.text = (data.money_paid ?? "") + " VND"
     }
 }

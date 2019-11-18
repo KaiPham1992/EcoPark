@@ -18,6 +18,8 @@ protocol ParkingAPIServiceProtocol {
     func bossRegister(param: BossRegisterParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure)
     func updateInfoParking(param: UpdateInfoParkingParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure)
     func uploadImageParking(parkingID: String, ParkingImage: [String], success: @escaping SuccessHandler<ImgEntity>.array, failure: @escaping RequestFailure)
+    func getDoingBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
+    func getHistoryBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
 }
 
 class ParkingAPIService: ParkingAPIServiceProtocol {
@@ -26,6 +28,16 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
     
     init(network: APINetworkProtocol) {
         self.network = network
+    }
+    
+    func getDoingBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.getDoingBooking
+        network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
+    }
+    
+    func getHistoryBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.getHistoryBooking
+        network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
     }
     
     func getParkingInfo(id: String, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure) {

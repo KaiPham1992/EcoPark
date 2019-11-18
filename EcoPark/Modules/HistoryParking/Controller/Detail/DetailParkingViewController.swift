@@ -67,6 +67,7 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
             }
             viewRate.isHidden = true
         }
+        
         ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: "Liên hệ bãi")
         ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: "Chỉ đường")
         DLVInformationParking.setupViewForTitle(title: "Thông tin bãi đỗ xe")

@@ -16,15 +16,17 @@ enum TypeHistoryParking {
     case history
 }
 
-class HistoryParkingViewController: ListManagerVC, HistoryParkingViewProtocol {
+class HistoryParkingViewController: ListManagerVC {
 
 	var presenter: HistoryParkingPresenterProtocol?
     var type: TypeHistoryParking = .doing
     
     override func setUpViews() {
         super.setUpViews()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.initLoadData(data: Array(repeating: 1, count: 10))
+        if type == .doing {
+            self.presenter?.getDoingBooking()
+        } else {
+            self.presenter?.getHistoryBooking()
         }
         self.view.backgroundColor = .clear
     }
@@ -36,6 +38,7 @@ class HistoryParkingViewController: ListManagerVC, HistoryParkingViewProtocol {
     
     override func cellForRowListManager(item: Any, _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeue(DoingCell.self, for: indexPath)
+        cell.setupCell(data: item as! HistoryBookingParkingResponse)
         return cell
     }
     
@@ -54,7 +57,17 @@ class HistoryParkingViewController: ListManagerVC, HistoryParkingViewProtocol {
 
 extension HistoryParkingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return self.type == .doing ? IndicatorInfo(title: "Doing") : IndicatorInfo(title: "History")
+        return self.type == .doing ? IndicatorInfo(title: LocalizableKey.doing.showLanguage) : IndicatorInfo(title: LocalizableKey.history.showLanguage)
+    }
+}
+
+extension HistoryParkingViewController : HistoryParkingViewProtocol{
+    func reloadViewDoingBooking(data: [HistoryBookingParkingResponse]) {
+        self.initLoadData(data: data)
+    }
+    
+    func reloadViewHistoryBooking(data: [HistoryBookingParkingResponse]) {
+        self.initLoadData(data: data)
     }
 }
 

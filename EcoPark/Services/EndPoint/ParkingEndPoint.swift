@@ -18,6 +18,8 @@ enum ParkingEndPoint {
     case bossRegister(param: BossRegisterParam)
     case updateInfoParking(param: UpdateInfoParkingParam)
     case uploadImageParking(parkingID: String, parkingImage: [String])
+    case getDoingBooking
+    case getHistoryBooking
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -42,6 +44,10 @@ extension ParkingEndPoint: EndPointType {
             return "_api/parking/update_info_parking"
         case .uploadImageParking:
             return "_api/parking/update_img_parking"
+        case .getDoingBooking:
+            return "_api/order/get_list_booking"
+        case .getHistoryBooking:
+            return "_api/order/get_list_history_booking"
         }
         
     }
@@ -52,6 +58,8 @@ extension ParkingEndPoint: EndPointType {
     
     var parameters: JSONDictionary {
         switch self {
+        case .getDoingBooking, .getHistoryBooking:
+            return [:]
         case .getParkingInfo(let id):
             return ["parking_id": id]
         case .getListVehicle:

@@ -21,5 +21,24 @@ class HistoryParkingPresenter: HistoryParkingPresenterProtocol, HistoryParkingIn
         self.interactor = interactor
         self.router = router
     }
+    
+    func getDoingBooking() {
+        ProgressView.shared.show()
+        Provider.shared.parkingAPIService.getDoingBooking(success: { (listDoingBooking) in
+            ProgressView.shared.hide()
+            self.view?.reloadViewDoingBooking(data: listDoingBooking)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 
+    func getHistoryBooking() {
+        ProgressView.shared.show()
+        Provider.shared.parkingAPIService.getHistoryBooking(success: { (listHistoryBooking) in
+            ProgressView.shared.hide()
+            self.view?.reloadViewHistoryBooking(data: listHistoryBooking)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 }

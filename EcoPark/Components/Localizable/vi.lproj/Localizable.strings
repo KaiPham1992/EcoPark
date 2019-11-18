@@ -571,3 +571,15 @@
 //
 //"restore_fail" = "Khôi phục thất bại, vui lòng liên hệ +84909172353";
 //"restore_success" = "Khôi phục thành công";
+
+
+//history
+
+"doing" = "Đang thực hiện";
+"history" = "Lịch sử";
+"book_at" = "Đặt lúc";
+"cancel" = "Đã huỷ";
+"checked_out" = "Check out";
+"checked_in" = "Check in";
+"reservation" = "Đang giữ chỗ";
+"expired" = "Hết hạn";
