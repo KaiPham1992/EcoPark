@@ -53,6 +53,7 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         
         btnContact.setTitle(LocalizableKey.titleContactMe.showLanguage, for: .normal)
         btnDirect.setTitle(LocalizableKey.titleDirection.showLanguage, for: .normal)
+        cltMaterial.isUserInteractionEnabled = false
     }
     
     override func setUpNavigation() {

@@ -32,7 +32,7 @@ class BookingPopUp: BasePopUpView {
         
         let attr2 = "\(message) \(LocalizableKey.bookingPopUpAttr2.showLanguage)".description.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
         
-        let attr3 = LocalizableKey.bookingPopUpAttr3.showLanguage.toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr3 = LocalizableKey.bookingPopUpAttr3.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
         
         let attr = NSMutableAttributedString()
         attr.append(attr1)
@@ -50,12 +50,12 @@ class BookingPopUp: BasePopUpView {
     }
     
     @objc func btnDetailTapped() {
-        hidePopUp()
+//        hidePopUp()
         completionNo?()
     }
     
     @objc func btnDirectionTapped() {
-        hidePopUp()
+//        hidePopUp()
         completionYes?()
     }
 }

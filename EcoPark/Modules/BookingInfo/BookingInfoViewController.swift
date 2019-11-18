@@ -71,10 +71,10 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         lbTitleEight.text = LocalizableKey.parkingFeeCombo.showLanguage
         lbTitleBookingInfo.text = LocalizableKey.bookingInfo.showLanguage
         
-        lbTitleDate.setTitle(LocalizableKey.date.showLanguage, for: .normal)
-        lbTitleTime.setTitle(LocalizableKey.timeToCome.showLanguage, for: .normal)
-        lbTitlePlate.setTitle(LocalizableKey.vehiclePlate.showLanguage, for: .normal)
-        lbTitleType.setTitle(LocalizableKey.vehicleType.showLanguage, for: .normal)
+        lbTitleDate.setTitle("  \(LocalizableKey.date.showLanguage)*", for: .normal)
+        lbTitleTime.setTitle("  \(LocalizableKey.timeToCome.showLanguage)*", for: .normal)
+        lbTitlePlate.setTitle("  \(LocalizableKey.vehiclePlate.showLanguage)*", for: .normal)
+        lbTitleType.setTitle("  \(LocalizableKey.vehicleType.showLanguage)*", for: .normal)
         
         lbPriceToHoldPlace.text = LocalizableKey.feeKeepPlace.showLanguage
         btnBook.setTitle(LocalizableKey.payToKeepPlace.showLanguage, for: .normal)
