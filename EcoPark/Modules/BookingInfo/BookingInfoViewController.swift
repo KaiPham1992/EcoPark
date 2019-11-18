@@ -152,7 +152,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             self.openGoogleMapForPlace(lat: lat, long: long)
         }) {
             guard let bookingId = info.id else { return }
-            self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
+            self.push(controller: DetailParkingRouter.createModule(type: .checked_in, bookingId: bookingId))
         }
     }
     

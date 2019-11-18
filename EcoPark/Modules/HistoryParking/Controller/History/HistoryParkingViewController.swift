@@ -43,14 +43,8 @@ class HistoryParkingViewController: ListManagerVC {
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        var vc : UIViewController
-        if indexPath.row == 0 {
-            vc = DetailParkingRouter.createModule(type: TypeDetailParking.checkin)
-        } else if indexPath.row == 1 {
-            vc = DetailParkingRouter.createModule(type: TypeDetailParking.checkout)
-        } else {
-            vc = DetailParkingRouter.createModule(type: TypeDetailParking.complete)
-        }
+        let data = item as! HistoryBookingParkingResponse
+        let vc = DetailParkingRouter.createModule(type: StatusBooking(rawValue: data.status ?? "") ?? StatusBooking.cancel, bookingId: data._id ?? "")
         self.push(controller: vc, animated: true)
     }
 }

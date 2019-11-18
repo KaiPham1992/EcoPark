@@ -44,29 +44,35 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
     
-    var type : TypeDetailParking = .checkin
+    var type : StatusBooking = .cancel
     var bookingId: String = ""
     
     override func setUpViews() {
         super.setUpViews()
-        if type == .complete {
+        if type == .cancel, type == .expired {
             viewRate.isHidden = false
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
             btnBottom.isHidden = true
-        } else {
+        }
+        if type == .checked_out {
+           heightOfRating.constant = 0
+            heightOfButtonCancel.constant = 50
+            heightOfButtonExtend.constant = 50
+            btnBottom.isHidden = false
+            btnBottom.setTitle("Đánh giá dịch vụ bãi xe", for: .normal)
+            viewRate.isHidden = true
+        }
+        if type == .checked_in, type == .reservation {
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 50
             heightOfButtonExtend.constant = 50
             btnBottom.isHidden = false
-            if type == .checkin {
-                btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
-            } else {
-                btnBottom.setTitle("Đánh giá dịch vụ bãi xe", for: .normal)
-            }
+            btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
             viewRate.isHidden = true
         }
+
         
         ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: "Liên hệ bãi")
         ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: "Chỉ đường")
@@ -116,10 +122,16 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         if let intendCheck = info.intend_checkin_time {
             DLVExpected.setValueText(text: intendCheck.toString(dateFormat: .hhmmddmmyyy))
         }
-        
-        DLVCheckIn.setValueText(text: "-")
-        DLVCheckOut.setValueText(text: "-")
-        
+        if let checkIn = info.time_check_in?.toString(dateFormat: .hhmmddmmyyy) {
+            DLVCheckIn.setValueText(text: checkIn)
+        } else {
+            DLVCheckIn.setValueText(text: "-")
+        }
+        if let checkOut = info.time_check_out?.toString(dateFormat: .hhmmddmmyyy) {
+            DLVCheckOut.setValueText(text: checkOut)
+        } else {
+            DLVCheckOut.setValueText(text: "-")
+        }
         DLVLisencePlate.setValueText(text: info.license_plates ?? "")
         if let price = info.parking_details?.price {
             DLVBillForHour.setValueText(text: price.toCurrency)

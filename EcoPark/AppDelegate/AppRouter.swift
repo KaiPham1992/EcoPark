@@ -45,8 +45,8 @@ class AppRouter {
     func test() {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         
-        let vc = DetailParkingRouter.createModule(type: .checkin, bookingId: "13")
-            windowApp.rootViewController = UINavigationController(rootViewController: vc)
+//        let vc = DetailParkingRouter.createModule(type: .checkin, bookingId: "13")
+//            windowApp.rootViewController = UINavigationController(rootViewController: vc)
     }
     
     func openLoading() {
