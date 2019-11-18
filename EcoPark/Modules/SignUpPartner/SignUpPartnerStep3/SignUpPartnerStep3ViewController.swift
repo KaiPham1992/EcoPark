@@ -123,7 +123,9 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
                                                price: param?.price,
                                                package_price: param?.package_price,
                                                material: listMaterial,
-                                               parking_img_src: url_listImage)
+                                               parking_img_src: url_listImage,
+                                               latAddress: param?.latAddress,
+                                               longAddress: param?.longAddress)
             presenter?.bossRegister(param: paramInput)
         }
     }

@@ -12,18 +12,20 @@ import UIKit
 import GooglePlaces
 
 class ParkingInfoViewController: BaseViewController {
-
+    
     @IBOutlet weak var tbParkingInfo: UITableView!
     @IBOutlet weak var lbActive: UILabel!
     @IBOutlet weak var vActive: CustomSwitch!
     @IBOutlet weak var lbError: UILabel!
     
-	var presenter: ParkingInfoPresenterProtocol?
-
+    var presenter: ParkingInfoPresenterProtocol?
+    
     var isExplandParkingInfo = true
     var isExplandLicenseInfo = true
     
     var addressSelect: String = ""
+    var latSelect: Double = 0
+    var longSelect: Double = 0
     var isSelectAddress: Bool = false
     
     var parkingName: String = ""
@@ -31,6 +33,8 @@ class ParkingInfoViewController: BaseViewController {
     var openTime: String = ""
     var closeTime: String = ""
     var parkingAddress: String = ""
+    var lat: Double = 0
+    var long: Double = 0
     var listMaterial: [String] = []
     var codeTax: String = ""
     
@@ -41,13 +45,13 @@ class ParkingInfoViewController: BaseViewController {
         }
     }
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setTitleNavigation(title: "Thông tin bãi xe của tôi")
         addBackToNavigation()
         configTableView()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.getParkingInfo(id: "2")
@@ -56,7 +60,22 @@ class ParkingInfoViewController: BaseViewController {
     
     @IBAction func btnSaveTapped() {
         if validateInputData() {
-            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2", parking_address: parkingAddress, gpkd_img_before_src: parkingInfo?.gpkd_img_before_src, gpkd_img_after_src: parkingInfo?.gpkd_img_after_src, parking_name: parkingName, parking_type_id: parkingTypeID, number_place: parkingInfo?.number_place, time_start: openTime, time_end: closeTime, code_tax: codeTax, price: parkingInfo?.price, package_price: parkingInfo?.package_price, package_number: parkingInfo?.package_number, material: listMaterial))
+            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2",
+                                                                       parking_address: parkingAddress,
+                                                                       gpkd_img_before_src: parkingInfo?.gpkd_img_before_src,
+                                                                       gpkd_img_after_src: parkingInfo?.gpkd_img_after_src,
+                                                                       parking_name: parkingName,
+                                                                       parking_type_id: parkingTypeID,
+                                                                       number_place: parkingInfo?.number_place,
+                                                                       time_start: openTime,
+                                                                       time_end: closeTime,
+                                                                       code_tax: codeTax,
+                                                                       price: parkingInfo?.price,
+                                                                       package_price: parkingInfo?.package_price,
+                                                                       package_number: parkingInfo?.package_number,
+                                                                       material: listMaterial,
+                                                                       lat: self.lat,
+                                                                       long: self.long))
         }
     }
     
@@ -272,6 +291,8 @@ extension ParkingInfoViewController: ParkingInfoCellDelegate {
         self.parkingTypeID = parkingTypeID
         if isSelectAddress {
             self.parkingAddress = addressSelect
+            self.lat = latSelect
+            self.long = longSelect
         } else {
             self.parkingAddress = parkingAddress
         }
@@ -297,6 +318,8 @@ extension ParkingInfoViewController: HomeFindViewControllerDelegate {
     
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         self.addressSelect = address
+        self.latSelect = lat
+        self.longSelect = long
         self.isSelectAddress = true
         tbParkingInfo.reloadData()
     }

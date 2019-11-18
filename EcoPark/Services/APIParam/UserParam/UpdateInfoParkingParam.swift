@@ -24,6 +24,8 @@ class UpdateInfoParkingParam: BaseParam {
     var package_price : Double?
     var package_number : String?
     var material : [String] = []
+    var lat: Double?
+    var long: Double?
     
     override func mapping(map: Map) {
         
@@ -41,7 +43,8 @@ class UpdateInfoParkingParam: BaseParam {
         self.package_price <- map["package_price"]
         self.package_number <- map["package_number"]
         self.material <- map["material"]
-        
+        self.lat <- map["lat"]
+        self.long <- map["long"]
     }
     
     init(
@@ -58,7 +61,9 @@ class UpdateInfoParkingParam: BaseParam {
         price : Double?,
         package_price : Double?,
         package_number : String?,
-        material : [String] = []
+        material : [String] = [],
+        lat: Double?,
+        long: Double?
     ) {
         super.init()
         self.parking_id = parking_id
@@ -75,6 +80,8 @@ class UpdateInfoParkingParam: BaseParam {
         self.package_price = package_price
         self.package_number = package_number
         self.material = material
+        self.lat = lat
+        self.long = long
     }
     
     required init?(map: Map) {
