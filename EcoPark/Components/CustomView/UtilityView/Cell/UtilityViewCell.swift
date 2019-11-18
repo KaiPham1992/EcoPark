@@ -82,19 +82,19 @@ class UtilityModel {
         }
         
         if listMaterilType.contains(.atm) {
-            array.append(UtilityModel(type: .atm, iconOn: AppImage.imgAtmOn, iconOff: AppImage.imgAtmOff, isSelected: false))
+            array.append(UtilityModel(type: .atm, iconOn: AppImage.imgAtmOn, iconOff: AppImage.imgAtmOff, isSelected: true))
         } else {
             array.append(UtilityModel(type: .atm, iconOn: AppImage.imgAtmOn, iconOff: AppImage.imgAtmOff, isSelected: false))
         }
         
         if listMaterilType.contains(.hotel) {
-            array.append(UtilityModel(type: .hotel, iconOn: AppImage.imgHotelOn, iconOff: AppImage.imgHotelOff, isSelected: false))
+            array.append(UtilityModel(type: .hotel, iconOn: AppImage.imgHotelOn, iconOff: AppImage.imgHotelOff, isSelected: true))
         } else {
             array.append(UtilityModel(type: .hotel, iconOn: AppImage.imgHotelOn, iconOff: AppImage.imgHotelOff, isSelected: false))
         }
         
         if listMaterilType.contains(.coffee) {
-            array.append(UtilityModel(type: .coffee, iconOn: AppImage.imgCoffeeOn, iconOff: AppImage.imgCoffeeOff, isSelected: false))
+            array.append(UtilityModel(type: .coffee, iconOn: AppImage.imgCoffeeOn, iconOff: AppImage.imgCoffeeOff, isSelected: true))
         } else {
             array.append(UtilityModel(type: .coffee, iconOn: AppImage.imgCoffeeOn, iconOff: AppImage.imgCoffeeOff, isSelected: false))
         }

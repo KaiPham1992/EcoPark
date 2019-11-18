@@ -17,7 +17,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     @IBOutlet weak var lbUtility: UILabel!
     @IBOutlet weak var lbImage: UILabel!
     @IBOutlet weak var lbSubImage: UILabel!
-    @IBOutlet weak var cvUtility: UICollectionView!
+    @IBOutlet weak var vUtility: UtilityView!
     @IBOutlet weak var vPhoto: AppCollectionPhoto!
     @IBOutlet weak var heightPhoto: NSLayoutConstraint!
     @IBOutlet weak var lbTermAndPolicy: UILabel!
@@ -39,8 +39,16 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         
         listUtility = ["ic_roof_on", "ic_carwash_on", "ic_repair_on", "ic_rent_on", "ic_supermarket_on", "ic_atm_on", "ic_hotel_on", "ic_coffee_on"]
         listMaterial = ["1","2","3","4","5","6","7","8"]
+        vUtility.setMaterial(listMaterial: [.roof,
+                                            .carwash,
+                                            .repair,
+                                            .washing,
+                                            .rent,
+                                            .superMarket,
+                                            .atm,
+                                            .hotel,
+                                            .coffee])
         setupUI()
-        configCollectionView()
     }
     
     private func setupUI() {
@@ -54,19 +62,20 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         vPhoto.configCollectionImageView(delegate: self, controller: self, isSingleSelected: false)
         btnDone.setTitle(LocalizableKey.DoneSignUp.showLanguage, for: .normal)
         
+        vUtility.delegate = self
         setTextTermAndPolicy()
         
+        
+        vStep.btnStep1.addTarget(self, action: #selector(btnStep1Tapped), for: .touchUpInside)
+        vStep.btnStep2.addTarget(self, action: #selector(btnStep2Tapped), for: .touchUpInside)
+    }
     
-    vStep.btnStep1.addTarget(self, action: #selector(btnStep1Tapped), for: .touchUpInside)
-            vStep.btnStep2.addTarget(self, action: #selector(btnStep2Tapped), for: .touchUpInside)
-        }
-        
-        @objc func btnStep1Tapped() {
-        }
-        
-        @objc func btnStep2Tapped() {
-            self.pop()
-        }
+    @objc func btnStep1Tapped() {
+    }
+    
+    @objc func btnStep2Tapped() {
+        self.pop()
+    }
     
     
     private func setTextTermAndPolicy() {
@@ -160,113 +169,60 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     }
 }
 
-extension SignUpPartnerStep3ViewController: UICollectionViewDataSource {
-    
-    func configCollectionView() {
-        cvUtility.registerXibCell(UtilityCell.self)
-        
-        cvUtility.dataSource = self
-        cvUtility.delegate = self
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listUtility.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueCell(UtilityCell.self, indexPath: indexPath)
-        //        cell.imgItem.image = UIImage(named: listUtility[indexPath.item])
-        cell.setUI(isSelect: self.isSelect, index: indexPath.item)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.item {
+extension SignUpPartnerStep3ViewController: UtilityViewDelegate {
+    func didSelect(isSelect: Bool, index: Int) {
+        switch index {
         case 0:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("1")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 1:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("2")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 2:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("3")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 3:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("4")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 4:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("5")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 5:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("6")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 6:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("7")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         case 7:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
             if isSelect {
                 listMaterial.append("8")
             } else {
-                listMaterial.remove(at: indexPath.item)
+                listMaterial.remove(at: index)
             }
         default:
-            isSelect = !isSelect
-            cvUtility.reloadItems(at: [indexPath])
+            return
         }
-    }
-}
-
-extension SignUpPartnerStep3ViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (cvUtility.frame.width - 20 ) / 4
-        return CGSize(width: width, height: 60)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
     }
 }
 
