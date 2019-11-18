@@ -28,5 +28,11 @@ class HomeFilterPopUpContentView: BaseViewXib {
     @IBAction func sliderValueChanged(sender: UISlider) {
         self.distance = Int(sender.value)
     }
+    
+    @IBAction func btnResetTapped() {
+        slider.value = 1000
+        distance = 1000
+        starView.resetAll()
+    }
         
 }
