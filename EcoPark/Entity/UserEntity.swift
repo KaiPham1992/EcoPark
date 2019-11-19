@@ -52,6 +52,7 @@ class UserEntity: BaseEntity  {
     var birthDay: Date?
     var gender: String?
     var wallet: Double?
+    var parkingID: String?
     
     override func mapping(map: Map) {
         self.isLeader <- map["is_leader"]
@@ -97,6 +98,7 @@ class UserEntity: BaseEntity  {
         self.birthDay <- (map["birthday"], AppTimestampTransform())
         self.gender <- map["gender"]
         self.wallet <- (map["wallet"], StringToDoubleTransform())
+        self.parkingID <- map["parking_id"]
     }
     
     var urlAvatar:  URL? {

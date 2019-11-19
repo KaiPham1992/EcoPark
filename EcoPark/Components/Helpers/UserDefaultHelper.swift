@@ -35,6 +35,7 @@ enum UserDefaultHelperKey: String {
     case userSkipIntro = "UserSkipIntroduction"
     case isFirstLauch = "IsFirstLauch"
     case loginUserInfo = "loginUserInfo"
+    case parkingID = "ParkingID"
 }
 
 class UserDefaultHelper {
@@ -101,6 +102,11 @@ class UserDefaultHelper {
     
     var isLogedIn: Bool {
         return !userToken&.isEmpty
+    }
+    
+    var parkingID: String {
+        guard let _parkingID = get(key: .parkingID) as? String else { return "" }
+        return _parkingID
     }
 }
 

@@ -48,12 +48,17 @@ class ParkingInfoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitleNavigation(title: "Thông tin bãi xe của tôi")
-        addBackToNavigation()
+        addMenu()
         configTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getData()
+    }
+    
+    func getData() {
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
         presenter?.getParkingInfo(id: "2")
         presenter?.getListParkingType()
     }
@@ -73,7 +78,7 @@ class ParkingInfoViewController: BaseViewController {
                                                                        price: parkingInfo?.price,
                                                                        package_price: parkingInfo?.package_price,
                                                                        package_number: parkingInfo?.package_number,
-                                                                       material: listMaterial,
+                                                                       material: ["1", "2", "3", "4"],
                                                                        lat: self.lat,
                                                                        long: self.long))
         }
@@ -265,7 +270,11 @@ extension ParkingInfoViewController: HeaderViewDelegate {
 extension ParkingInfoViewController: ParkingInfoViewProtocol {
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
         self.parkingInfo = parkingInfo
-        vActive.isOn = parkingInfo?.is_active ?? false ? true : false
+        if parkingInfo?.is_active == "1" {
+            vActive.isOn = true
+        } else {
+            vActive.isOn = false
+        }
     }
     
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {

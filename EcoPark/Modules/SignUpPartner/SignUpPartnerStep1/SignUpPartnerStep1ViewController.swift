@@ -207,7 +207,6 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
                                           latAddress: nil,
                                           longAddress: nil)
             self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
-            //            self.push(controller: ParkingInfoRouter.createModule())
         }
     }
     

@@ -19,7 +19,7 @@ class ParkingInfoEntity: BaseEntity {
     var package_number: String?
     var number_place: Int?
     var ordinal: String?
-    var is_active: Bool?
+    var is_active: String?
     var create_time: Date?
     var time_start: Date?
     var time_end: Date?
@@ -48,7 +48,7 @@ class ParkingInfoEntity: BaseEntity {
     override func mapping(map: Map) {
         super.mapping(map: map)
         
-        self.id <- map["id"]
+        self.id <- map["_id"]
         self.code_tax <- map["code_tax"]
         self.name <- map["name"]
         self.type_id <- map["type_id"]

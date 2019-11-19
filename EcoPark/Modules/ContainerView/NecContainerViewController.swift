@@ -23,7 +23,7 @@ class NecContainerViewController: ContainerViewController {
         self.openViewController(presentingController: homeVC)
     }
     
-     init() {
+    init() {
         super.init(drawerDirection: .left, drawerWidth: 300, menuViewController: menuVC)
         menuVC.delegateController = self
     }
@@ -51,7 +51,11 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         guard let icon = item.imgIcon else { return }
         switch icon {
         case AppImage.imgHistoryParking:
-            self.openViewController(presentingController: homeVC)
+            let vcHistoryParking = PageHistoryPartnerViewControler()
+            self.openViewController(presentingController: vcHistoryParking)
+        case AppImage.imgMyParking:
+            let vcParkingInfo = ParkingInfoRouter.createModule()
+            self.openViewController(presentingController: vcParkingInfo)
         case AppImage.imgPrivacy:
             let webView = WebViewController.initFromNib()
             self.openViewController(presentingController: webView)
@@ -75,6 +79,6 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         }
         
     }
-   
+    
 }
 
