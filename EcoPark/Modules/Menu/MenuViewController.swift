@@ -59,6 +59,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         }
         tbMenu.reloadData()
         setUserName()
+        setRegisterOwner()
     }
     
     func setUserName() {
@@ -78,6 +79,14 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
             // LoggedIn owner
+        }
+    }
+    
+    func setRegisterOwner() {
+        if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.parkingID != "" {
+            vRegisterOwner.isHidden = true
+        } else {
+            vRegisterOwner.isHidden = false
         }
     }
     

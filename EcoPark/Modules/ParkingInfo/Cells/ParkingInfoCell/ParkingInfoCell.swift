@@ -156,58 +156,58 @@ extension ParkingInfoCell: AppTextFieldDropDownDelegate {
 
 extension ParkingInfoCell: UtilityViewDelegate {
     func didSelect(isSelect: Bool, index: Int) {
-        switch index {
-        case 0:
-            if isSelect {
-                listMaterial.append("1")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 1:
-            if isSelect {
-                listMaterial.append("2")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 2:
-            if isSelect {
-                listMaterial.append("3")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 3:
-            if isSelect {
-                listMaterial.append("4")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 4:
-            if isSelect {
-                listMaterial.append("5")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 5:
-            if isSelect {
-                listMaterial.append("6")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 6:
-            if isSelect {
-                listMaterial.append("7")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        case 7:
-            if isSelect {
-                listMaterial.append("8")
-            } else {
-                listMaterial.remove(at: index)
-            }
-        default:
-            return
-        }
+//        switch index {
+//        case 0:
+//            if isSelect {
+//                listMaterial.append("1")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 1:
+//            if isSelect {
+//                listMaterial.append("2")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 2:
+//            if isSelect {
+//                listMaterial.append("3")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 3:
+//            if isSelect {
+//                listMaterial.append("4")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 4:
+//            if isSelect {
+//                listMaterial.append("5")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 5:
+//            if isSelect {
+//                listMaterial.append("6")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 6:
+//            if isSelect {
+//                listMaterial.append("7")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        case 7:
+//            if isSelect {
+//                listMaterial.append("8")
+//            } else {
+//                listMaterial.remove(at: index)
+//            }
+//        default:
+//            return
+//        }
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
 }
