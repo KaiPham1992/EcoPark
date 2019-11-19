@@ -48,7 +48,7 @@ enum UserEndPoint {
     
     // Eco park
     
-    case getParking(address: String, star: [Int], distance: String)
+    case getParking(lat: String, long: String, star: [Int], distance: String)
     case getWallet
     case getWalletHistory(offset: Int, limit: Int)
 }
@@ -231,8 +231,8 @@ extension UserEndPoint: EndPointType {
         case .getPackage(let offset):
             return ["offset": offset,
                     "limit": limit]
-        case .getParking(let address, let star, let distance):
-            return ["address": address, "star": star, "distance": distance]
+        case .getParking(let lat,let long, let star, let distance):
+            return ["lat": lat,"long": long, "star": star, "distance": distance]
             
         case .getWalletHistory(let offset, let limit):
             return ["offset": offset, "limit": limit]

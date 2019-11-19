@@ -86,6 +86,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         lbName.text = info.name
         if let rate = info.rating {
             ratingBar.setStar(number: rate)
+            ratingBar.setTitle(number: info.total_rating&)
         }
         lbType.text = info.parking_type
         lbCapacity.text = LocalizableKey.maxCapacity.showLanguage + info.number_place& + " " + LocalizableKey.place.showLanguage

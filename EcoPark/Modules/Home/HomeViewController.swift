@@ -52,7 +52,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     func getParking() {
         ProgressView.shared.show()
-        Provider.shared.userAPIService.getParking(address: self.address, star: self.star, distance: self.distance, success: { parking in
+        Provider.shared.userAPIService.getParking(lat: centerMapCoordinate.latitude.description, long: centerMapCoordinate.longitude.description, star: self.star, distance: self.distance, success: { parking in
             ProgressView.shared.hide()
             self.listParking = parking
             self.drawMarker(parkings: self.listParking)

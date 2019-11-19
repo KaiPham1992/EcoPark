@@ -32,7 +32,7 @@ protocol UserAPIServiceProtocol {
     
     func getProfileUser(success: @escaping SuccessHandler<UserEntity>.object, failure: @escaping RequestFailure)
     
-    func getParking(address: String, star: [Int], distance: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure)
+    func getParking(lat: String, long: String, star: [Int], distance: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure)
     
     func getWallet(success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure)
     
@@ -119,8 +119,8 @@ class UserAPIService: UserAPIServiceProtocol {
     }
     
     // Eco park
-    func getParking(address: String, star: [Int], distance: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure) {
-        let endPoint = UserEndPoint.getParking(address: address, star: star, distance: distance)
+    func getParking(lat: String, long: String, star: [Int], distance: String, success: @escaping SuccessHandler<ParkingEntity>.array, failure: @escaping RequestFailure) {
+        let endPoint = UserEndPoint.getParking(lat: lat, long: long, star: star, distance: distance)
         network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
     }
     
