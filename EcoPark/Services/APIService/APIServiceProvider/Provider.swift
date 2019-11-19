@@ -32,4 +32,8 @@ class Provider {
     var parkingAPIService: ParkingAPIServiceProtocol {
         return ParkingAPIService(network: networkManager)
     }
+    
+    var bookingAPIService: BookingAPIServiceProtocol {
+        return BookingAPIService(network: networkManager)
+    }
 }

@@ -45,7 +45,7 @@ class BookingInfoInteractor: BookingInfoInteractorInputProtocol {
     
     func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String) {
         ProgressView.shared.show()
-        Provider.shared.parkingAPIService.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid, success: { (booking) in
+        Provider.shared.bookingAPIService.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid, success: { (booking) in
             ProgressView.shared.hide()
             guard let info = booking else { return }
             self.presenter?.didBooking(info: info)

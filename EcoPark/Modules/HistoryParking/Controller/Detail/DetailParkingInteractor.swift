@@ -15,7 +15,7 @@ class DetailParkingInteractor: DetailParkingInteractorInputProtocol {
     weak var presenter: DetailParkingInteractorOutputProtocol?
     
     func getBookingDetail(id: String) {
-        Provider.shared.parkingAPIService.getBookingDetail(bookingId: id, success: { (info) in
+        Provider.shared.bookingAPIService.getBookingDetail(bookingId: id, success: { (info) in
             guard let info = info else { return }
             self.presenter?.didGetBookingDetail(info: info)
         }) { (error) in
