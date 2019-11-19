@@ -19,6 +19,8 @@ protocol DetailParkingPresenterProtocol: class {
 
     var interactor: DetailParkingInteractorInputProtocol? { get set }
     func getBookingDetail(id: String)
+    func cancelReservation(id: String)
+    func extendReservation(id: String)
 }
 
 //MARK: Interactor -
@@ -27,6 +29,8 @@ protocol DetailParkingInteractorOutputProtocol: class {
     /* Interactor -> Presenter */
     func didGetBookingDetail(info: BookingDetailEntity)
     func didGetError(error: APIError)
+    func didCancelReservation()
+    func didExtendReservation(info: BookingDetailEntity)
 }
 
 protocol DetailParkingInteractorInputProtocol: class {
@@ -35,6 +39,8 @@ protocol DetailParkingInteractorInputProtocol: class {
 
     /* Presenter -> Interactor */
     func getBookingDetail(id: String)
+    func cancelReservation(id: String)
+    func extendReservation(id: String)
 }
 
 //MARK: View -
@@ -45,4 +51,6 @@ protocol DetailParkingViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetError(error: APIError)
     func didGetBookingDetail(info: BookingDetailEntity)
+    func didCancelReservation()
+    func didExtendReservation(info: BookingDetailEntity)
 }

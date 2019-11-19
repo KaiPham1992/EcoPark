@@ -31,6 +31,12 @@ class UtilityView: BaseViewXib {
     func setMaterial(listMaterial: [UtilityModelType]) {
         self.utilyties = UtilityModel.setMaterial(listMaterilType: listMaterial)
     }
+    
+    func setMaterial(listMaterialEntity: [MaterialEntity]) {
+        let filterList = listMaterialEntity.filter{ $0.is_active == "1"}
+        let listType = filterList.map { $0.type }
+        self.utilyties = UtilityModel.setMaterial(listMaterilType: listType as! [UtilityModelType])
+    }
 }
 
 extension UtilityView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

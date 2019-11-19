@@ -135,6 +135,37 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         
     }
     
+    @IBAction func btnCancelTapped() {
+        cancelReservation()
+    }
+    
+    @IBAction func btnExtendTapped() {
+        extendReservation()
+    }
+    
+    // MARK: Cancel reservation
+    func cancelReservation() {
+        if self.bookingId != "" {
+            self.presenter?.cancelReservation(id: self.bookingId)
+        }
+    }
+    
+    func didCancelReservation() {
+        PopUpHelper.shared.showMessage(message: "Huỷ đặt chỗ thành công", width: popUpwidth)
+    }
+    
+    // MARK: Extend reservation
+    func extendReservation() {
+        if self.bookingId != "" {
+            self.presenter?.extendReservation(id: self.bookingId)
+        }
+    }
+    
+    func didExtendReservation(info: BookingDetailEntity) {
+        PopUpHelper.shared.showMessage(message: "Bạn đã gia hạn thành công", width: popUpwidth)
+        displayData(info: info)
+    }
+    
     // MARK: Get booking detail
     func getBookingDetail() {
         if self.bookingId != "" {

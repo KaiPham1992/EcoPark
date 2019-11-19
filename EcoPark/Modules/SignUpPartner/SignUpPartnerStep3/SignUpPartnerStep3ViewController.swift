@@ -42,7 +42,6 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         vUtility.setMaterial(listMaterial: [.roof,
                                             .carwash,
                                             .repair,
-                                            .washing,
                                             .rent,
                                             .superMarket,
                                             .atm,

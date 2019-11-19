@@ -107,9 +107,31 @@ class MaterialEntity: BaseEntity {
     var id: String?
     var name: String?
     var plain_name: String?
-    var is_active: Bool?
+    var is_active: String?
     var icon: String?
     var unset_icon: String?
+    var type: UtilityModelType? {
+        get {
+            switch plain_name {
+            case "mai che":
+                return .roof
+            case "rua xe":
+                return .carwash
+            case "sua xe":
+                return .repair
+            case "cho thue xe":
+                return .rent
+            case "atm":
+                return .atm
+            case "khach san":
+                return .hotel
+            case "ca phe":
+                return .coffee
+            default:
+                return nil
+            }
+        }
+    }
     
     override func mapping(map: Map) {
         super.mapping(map: map)

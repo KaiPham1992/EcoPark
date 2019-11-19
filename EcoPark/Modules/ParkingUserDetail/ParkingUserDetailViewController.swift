@@ -85,11 +85,11 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         
         if let rating = info.rating {
             ratingBar.setStar(number: rating)
-        } else {
-            ratingBar.hideTitle()
         }
         if let totalRating = info.total_rating {
             ratingBar.setTitle(number: totalRating)
+        } else {
+            ratingBar.hideTitle()
         }
         
         if let timeStart = info.time_start?.toString(dateFormat: .HHmm),
@@ -114,7 +114,8 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         }
         
         lbAddress.text = info.address
-        cltMaterial.setMaterial(listMaterial: [.roof, .repair, .rent, .atm])
+//        cltMaterial.setMaterial(listMaterial: [.roof, .repair, .rent, .atm])
+        cltMaterial.setMaterial(listMaterialEntity: info.material ?? [])
     }
     
     // MARK: Get error

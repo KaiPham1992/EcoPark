@@ -50,12 +50,12 @@ class BookingPopUp: BasePopUpView {
     }
     
     @objc func btnDetailTapped() {
-//        hidePopUp()
+        hidePopUp()
         completionNo?()
     }
     
     @objc func btnDirectionTapped() {
-//        hidePopUp()
+        hidePopUp()
         completionYes?()
     }
 }

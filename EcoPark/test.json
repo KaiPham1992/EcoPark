@@ -1,33 +1,27 @@
 {
     "status": 200,
     "message": "OK",
-    "data": {
-        "_id": "13",
-        "account_id": "3",
-        "code": "EC1573185103432",
-        "vehicle_id": "5",
-        "license_plates": "59F2-123.45",
-        "intend_checkin_time": "2019-12-01 15:56:00",
-        "status": "reservation",
-        "parking_id": "2",
-        "is_active": "1",
-        "create_time": "2019-11-08 10:51:43",
-        "update_time": "2019-11-08 10:51:43",
-        "create_time_mi": "1573185103432",
-        "intend_checkout_time": "2019-12-01 16:56:00",
-        "money_paid": "1000.00",
-        "parking_details": {
-            "name": "Bãi xe Engma",
+    "data": [
+        {
+            "account_id": "7",
+            "fullname": "Phạm Tuấn Phát1",
+            "parking_id": "2",
             "address": "220/1 Nguyễn Trọng Tuyển, phường 8, quận Phú Nhuận, TPHCM",
-            "time_start": "07:00:00",
+            "lat": "10.831604",
+            "long": "106.623310",
+            "number_place": "100",
+            "time_start": "00:00:00",
             "time_end": "23:59:00",
-            "lat": "10.798143",
-            "long": "106.673762",
-            "phone": "098218477464",
-            "price": "40000.00",
             "package_price": "300000.00",
-            "package_number": "8"
-        },
-        "current_server_time": 1573360854246
-    }
+            "package_number": "8",
+            "price": "40000.00",
+            "gender": "female",
+            "phone": "0123456",
+            "parking_name": "Bãi xe Engma",
+            "distance": "262.9106199669522",
+            "img_parking": {
+                "img_parking": "public/upload/parking/parking_1_img_src_4.jpg"
+            }
+        }
+    ]
 }

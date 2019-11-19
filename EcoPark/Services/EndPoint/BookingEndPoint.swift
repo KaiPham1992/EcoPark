@@ -11,6 +11,8 @@ import Alamofire
 enum BookingEndPoint {
     case booking(time: String, parkingId: String, vehicleId: String, plate: String, moneyPaid: String)
     case getBookingDetail(bookingId: String)
+    case cancelReservation(bookingId: String)
+    case extendReservation(bookingId: String)
 }
 
 extension BookingEndPoint: EndPointType {
@@ -20,6 +22,10 @@ extension BookingEndPoint: EndPointType {
             return "_api/order/get_booking"
         case .getBookingDetail:
             return "_api/order/get_booking_detail"
+        case .cancelReservation:
+            return "_api/order/update_status_booking"
+        case .extendReservation:
+            return "_api/order/extra_reservation"
         }
     }
     
@@ -33,6 +39,10 @@ extension BookingEndPoint: EndPointType {
             return ["intend_checkin_time": time, "parking_id": parkId, "vehicle_id": vehicleId, "license_plates": plate, "money_paid": money]
         case .getBookingDetail(let bookingId):
             return ["booking_id": bookingId]
+        case .cancelReservation(let id):
+            return ["booking_id": id, "status": "cancel"]
+        case .extendReservation(let id):
+            return ["booking_id": id]
         }
     }
     

@@ -33,5 +33,21 @@ class DetailParkingPresenter: DetailParkingPresenterProtocol, DetailParkingInter
     func didGetError(error: APIError) {
         self.view?.didGetError(error: error)
     }
+    
+    func cancelReservation(id: String) {
+        self.interactor?.cancelReservation(id: id)
+    }
+    
+    func didCancelReservation() {
+        self.view?.didCancelReservation()
+    }
+    
+    func extendReservation(id: String) {
+        self.interactor?.extendReservation(id: id)
+    }
+    
+    func didExtendReservation(info: BookingDetailEntity) {
+        self.view?.didExtendReservation(info: info)
+    }
 
 }

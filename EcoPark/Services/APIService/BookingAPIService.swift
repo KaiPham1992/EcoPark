@@ -10,8 +10,12 @@ import Foundation
 
 protocol BookingAPIServiceProtocol {
     func booking(time: String, parkId: String, vehicleId: String, plate: String, moneyPaid: String, success: @escaping SuccessHandler<BookingEntity>.object, failure: @escaping RequestFailure)
+    
     func getBookingDetail(bookingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure)
     
+    func cancelReservation(bookingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure)
+    
+    func extendReservation(bookingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure)
 }
 
 class BookingAPIService: BookingAPIServiceProtocol {
@@ -29,6 +33,16 @@ class BookingAPIService: BookingAPIServiceProtocol {
     
     func getBookingDetail(bookingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure) {
         let endPoint = BookingEndPoint.getBookingDetail(bookingId: bookingId)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
+    }
+    
+    func cancelReservation(bookingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = BookingEndPoint.cancelReservation(bookingId: bookingId)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
+    }
+    
+    func extendReservation(bookingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = BookingEndPoint.extendReservation(bookingId: bookingId)
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
 }

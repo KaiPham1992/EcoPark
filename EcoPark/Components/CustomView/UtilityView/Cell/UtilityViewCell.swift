@@ -12,7 +12,6 @@ enum UtilityModelType: String {
     case roof
     case carwash
     case repair
-    case washing
     case rent
     case superMarket
     case atm
@@ -36,7 +35,7 @@ class UtilityModel {
     static func toArray() -> [UtilityModel] {
         var array = [UtilityModel]()
         array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff))
-        array.append(UtilityModel(type: .washing, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff))
+        array.append(UtilityModel(type: .carwash, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff))
         array.append(UtilityModel(type: .repair, iconOn: AppImage.imgRepairOn, iconOff: AppImage.imgRepairOff))
         array.append(UtilityModel(type: .rent, iconOn: AppImage.imgRentOn, iconOff: AppImage.imgRentOff))
         
@@ -57,10 +56,10 @@ class UtilityModel {
             array.append(UtilityModel(type: .roof, iconOn: AppImage.imgRootOn, iconOff: AppImage.imgRootOff, isSelected: false))
         }
         
-        if listMaterilType.contains(.washing) {
-            array.append(UtilityModel(type: .washing, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff, isSelected: true))
+        if listMaterilType.contains(.carwash) {
+            array.append(UtilityModel(type: .carwash, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff, isSelected: true))
         } else {
-            array.append(UtilityModel(type: .washing, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff, isSelected: false))
+            array.append(UtilityModel(type: .carwash, iconOn: AppImage.imgCarwashOn, iconOff: AppImage.imgCarwashOff, isSelected: false))
         }
         
         if listMaterilType.contains(.repair) {
