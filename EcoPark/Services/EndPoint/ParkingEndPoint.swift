@@ -18,6 +18,7 @@ enum ParkingEndPoint {
     case uploadImageParking(parkingID: String, parkingImage: [String])
     case getDoingBooking
     case getHistoryBooking
+    case getHistoryMyParking(parkingID: String, status: String, keyword: String)
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -42,6 +43,8 @@ extension ParkingEndPoint: EndPointType {
             return "_api/order/get_list_booking"
         case .getHistoryBooking:
             return "_api/order/get_list_history_booking"
+        case .getHistoryMyParking:
+            return "_api/order/get_list_history_booking_parking"
         }
         
     }
@@ -68,6 +71,8 @@ extension ParkingEndPoint: EndPointType {
             return param.toJSON()
         case .uploadImageParking(let parkingID, let parkingImage):
             return ["parking_id": parkingID, "parking_img_src" : parkingImage]
+        case .getHistoryMyParking(let parkingID, let status, let keyword):
+            return ["parking_id": parkingID, "status": status, "keyword": keyword]
         }
     }
     

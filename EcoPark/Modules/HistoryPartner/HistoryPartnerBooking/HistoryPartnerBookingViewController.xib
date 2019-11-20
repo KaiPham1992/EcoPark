@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerBookingViewController">
             <connections>
                 <outlet property="tbBooking" destination="mMb-Xc-ZhP" id="Scd-Sa-ML1"/>
+                <outlet property="vSearch" destination="S8J-Ur-Jq6" id="8jD-bY-V3C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8J-Ur-Jq6">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8J-Ur-Jq6" customClass="AppSearchBar" customModule="EcoPark_AppStore" customModuleProvider="target">
                     <rect key="frame" x="16" y="10" width="343" height="40"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>

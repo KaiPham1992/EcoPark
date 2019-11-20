@@ -11,17 +11,57 @@
 import UIKit
 import XLPagerTabStrip
 
-class HistoryPartnerHoldingViewController: BaseViewController, HistoryPartnerHoldingViewProtocol {
+class HistoryPartnerHoldingViewController: BaseViewController {
 
+    @IBOutlet weak var vSearch: AppSearchBar!
     @IBOutlet weak var tbPartnerHolding: UITableView!
     
 	var presenter: HistoryPartnerHoldingPresenterProtocol?
 
+    var historyParkingReservation: HistoryMyParkingEntity? {
+        didSet {
+            tbPartnerHolding.reloadData()
+        }
+    }
+    
+    var indexTap: Int = 0
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        
     }
 
+    override func setUpViews() {
+        super.setUpViews()
+        vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: "Tìm theo biển số xe")
+        vSearch.tapToTextField = {
+            let keyword = self.vSearch.tfInput.text!
+            self.presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: keyword)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
+    }
+    
+    private func getData() {
+        presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: "")
+    }
+    
+    @objc func btnCheckOutTapped() {
+        let price = historyParkingReservation?.booking[indexTap].money_paid ?? 0
+        let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
+        let vehicleNumber = historyParkingReservation?.booking[indexTap].license_plates ?? ""
+        let checkoutNumber = historyParkingReservation?.booking[indexTap].code ?? ""
+        
+        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+            self.push(controller: HistoryPartnerDetailCheckinRouter.createModule())
+        }) {
+            self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
+        }
+    }
 }
 
 extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableViewDelegate {
@@ -34,22 +74,32 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return historyParkingReservation?.booking.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(HistoryParnerCell.self)
-        
+        cell.setDataHistory(historyParking: historyParkingReservation?.booking[indexPath.item])
+        cell.btnStatus.addTarget(self, action: #selector(btnCheckOutTapped), for: .touchUpInside)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexTap = indexPath.item
         self.push(controller: HistoryPartnerDetailCheckinRouter.createModule())
     }
 }
 
 extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Đang giữ(0/0)")
+        let place = historyParkingReservation?.number_place
+        let reservation = historyParkingReservation?.reservation_number
+        return IndicatorInfo(title: "Đang giữ(\(reservation ?? 0)/\(place ?? "0"))")
+    }
+}
+
+extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
+    func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {
+        self.historyParkingReservation = historyParking
     }
 }

@@ -21,5 +21,13 @@ class HistoryPartnerBookingPresenter: HistoryPartnerBookingPresenterProtocol, Hi
         self.interactor = interactor
         self.router = router
     }
-
+    func getHistoryParkingBooking(parkingID: String, status: String, keyword: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, success: { (historyParking) in
+            ProgressView.shared.hide()
+            self.view?.didGetHistoryParkingBooking(historyParking: historyParking)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

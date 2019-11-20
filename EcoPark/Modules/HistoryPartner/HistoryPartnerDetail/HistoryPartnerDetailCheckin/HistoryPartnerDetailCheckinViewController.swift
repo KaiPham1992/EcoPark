@@ -15,15 +15,30 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     @IBOutlet weak var lbID: UILabel!
     @IBOutlet weak var lbStatus: UILabel!
     @IBOutlet weak var tbCheckInDetail: UITableView!
+    @IBOutlet weak var btnCheckOut: UIButton!
+    @IBOutlet weak var btnScanQR: UIButton!
     
 	var presenter: HistoryPartnerDetailCheckinPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addBackToNavigation()
+        setTitleNavigation(title: "Chi tiết giao dịch")
         configTableView()
+        btnCheckOut.setBorder(borderWidth: 0.5, borderColor: AppColor.color_0_129_255, cornerRadius: 5)
     }
 
+    @IBAction func btnCheckOutTapped() {
+        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: 0, vehicleType: "4", vehicleNumber: "51E-123.45", checkOutNumber: "EC1234567", completionCancel: nil, completionCheckAgain: {
+            
+        }) {
+            self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
+        }
+    }
+    
+    @IBAction func btnScanQRTapped() {
+        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
+    }
 }
 
 extension HistoryPartnerDetailCheckinViewController: UITableViewDataSource, UITableViewDelegate {
@@ -35,8 +50,6 @@ extension HistoryPartnerDetailCheckinViewController: UITableViewDataSource, UITa
         tbCheckInDetail.registerXibFile(TimeParkingCell.self)
         tbCheckInDetail.registerXibFile(UserInfoCell.self)
         tbCheckInDetail.registerXibFile(PriceCell.self)
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

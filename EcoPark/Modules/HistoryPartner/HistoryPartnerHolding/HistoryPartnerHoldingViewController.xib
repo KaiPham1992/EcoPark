@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerHoldingViewController">
             <connections>
                 <outlet property="tbPartnerHolding" destination="N1L-ll-WkI" id="qat-0c-0G9"/>
+                <outlet property="vSearch" destination="4fV-4b-xXf" id="ZQm-MU-L0S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

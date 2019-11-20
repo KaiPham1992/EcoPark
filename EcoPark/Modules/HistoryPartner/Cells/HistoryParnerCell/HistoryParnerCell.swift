@@ -43,4 +43,15 @@ class HistoryParnerCell: UITableViewCell {
         btnStatus.setTitleColor(.orange, for: .normal)
         btnStatus.setTitle("Đang giữ chỗ", for: .normal)
     }
+    
+    func setDataHistory(historyParking: BookingEntity?) {
+        guard let _historyParking = historyParking else { return }
+        lbName.text = _historyParking.fullname
+        lbBookingTime.text = _historyParking.create_time?.toString(dateFormat: AppDateFormat.hhmmddmmyyy)
+        lbExpectTime.text = _historyParking.update_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbNumberCar.text = _historyParking.license_plates
+        lbID.text = _historyParking.code
+    }
 }

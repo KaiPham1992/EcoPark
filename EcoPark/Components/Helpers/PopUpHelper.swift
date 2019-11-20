@@ -242,7 +242,7 @@ class PopUpHelper {
     }
     
     // MARK: Partner check out
-    func showPartnerCheckOut(width: CGFloat, height: CGFloat = 330, price: Int, vehicleType: String, vehicleNumber: String, checkOutNumber: String, completionCancel: CompletionClosure?, completionCheckAgain: CompletionClosure?, completionCheckOut: CompletionClosure?) {
+    func showPartnerCheckOut(width: CGFloat, height: CGFloat = 330, price: Double, vehicleType: String, vehicleNumber: String, checkOutNumber: String, completionCancel: CompletionClosure?, completionCheckAgain: CompletionClosure?, completionCheckOut: CompletionClosure?) {
         
         let popUp = PartnerCheckOutPopUp()
         popUp.showPopUp(width: width, height: height, price: 320000, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkOutNumber, completionCancel: completionCancel, completionCheckAgain: completionCheckAgain, completionCheckout: completionCheckOut)

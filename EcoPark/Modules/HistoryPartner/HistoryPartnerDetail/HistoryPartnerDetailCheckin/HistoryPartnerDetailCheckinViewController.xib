@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerDetailCheckinViewController">
             <connections>
+                <outlet property="btnCheckOut" destination="TcK-Gs-5Ia" id="MdW-At-g4T"/>
+                <outlet property="btnScanQR" destination="Dna-L8-47P" id="AN8-IS-2zg"/>
                 <outlet property="lbID" destination="vhH-N5-j0h" id="YvJ-12-Byd"/>
                 <outlet property="lbStatus" destination="zNP-9h-Izd" id="ZwS-fb-g6U"/>
                 <outlet property="tbCheckInDetail" destination="zPh-Eg-kMv" id="s83-cn-SZ6"/>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-Eg-kMv">
-                    <rect key="frame" x="16" y="37.5" width="343" height="629.5"/>
+                    <rect key="frame" x="16" y="37.5" width="343" height="524.5"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
@@ -44,16 +46,61 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYb-t2-jmn">
+                    <rect key="frame" x="0.0" y="577" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcK-Gs-5Ia">
+                            <rect key="frame" x="16" y="15" width="155.5" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Nm3-aR-JrQ"/>
+                            </constraints>
+                            <state key="normal" title="Cho phép check out"/>
+                            <connections>
+                                <action selector="btnCheckOutTapped" destination="-1" eventType="touchUpInside" id="NVE-vu-A2J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dna-L8-47P">
+                            <rect key="frame" x="203.5" y="15" width="155.5" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Scan QR">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnScanQRTapped" destination="-1" eventType="touchUpInside" id="7xT-cK-uj6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="0nz-0F-pdW"/>
+                        <constraint firstItem="Dna-L8-47P" firstAttribute="height" secondItem="TcK-Gs-5Ia" secondAttribute="height" id="8Xj-Xh-FoJ"/>
+                        <constraint firstItem="TcK-Gs-5Ia" firstAttribute="leading" secondItem="jYb-t2-jmn" secondAttribute="leading" constant="16" id="C4j-mA-X9C"/>
+                        <constraint firstAttribute="trailing" secondItem="Dna-L8-47P" secondAttribute="trailing" constant="16" id="Ckc-0k-3Vj"/>
+                        <constraint firstItem="TcK-Gs-5Ia" firstAttribute="width" secondItem="jYb-t2-jmn" secondAttribute="width" multiplier="1/2" constant="-32" id="Uut-vp-btB"/>
+                        <constraint firstItem="TcK-Gs-5Ia" firstAttribute="centerY" secondItem="jYb-t2-jmn" secondAttribute="centerY" id="Y2M-ML-zIP"/>
+                        <constraint firstItem="Dna-L8-47P" firstAttribute="width" secondItem="TcK-Gs-5Ia" secondAttribute="width" id="k7q-61-5ex"/>
+                        <constraint firstItem="Dna-L8-47P" firstAttribute="centerY" secondItem="TcK-Gs-5Ia" secondAttribute="centerY" id="vfU-vr-hKo"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="zPh-Eg-kMv" firstAttribute="trailing" secondItem="zNP-9h-Izd" secondAttribute="trailing" id="2CJ-T1-69R"/>
-                <constraint firstAttribute="bottom" secondItem="zPh-Eg-kMv" secondAttribute="bottom" id="Hci-Zz-ExH"/>
+                <constraint firstAttribute="trailing" secondItem="jYb-t2-jmn" secondAttribute="trailing" id="QA7-lf-XUh"/>
                 <constraint firstItem="vhH-N5-j0h" firstAttribute="leading" secondItem="WJg-TG-CZQ" secondAttribute="leading" constant="16" id="WcR-p8-ibh"/>
                 <constraint firstItem="zNP-9h-Izd" firstAttribute="centerY" secondItem="vhH-N5-j0h" secondAttribute="centerY" id="X6y-CQ-FXo"/>
                 <constraint firstItem="zPh-Eg-kMv" firstAttribute="leading" secondItem="vhH-N5-j0h" secondAttribute="leading" id="ZGh-g0-gGm"/>
                 <constraint firstAttribute="trailing" secondItem="zNP-9h-Izd" secondAttribute="trailing" constant="16" id="ZkH-DH-SCA"/>
+                <constraint firstItem="jYb-t2-jmn" firstAttribute="leading" secondItem="WJg-TG-CZQ" secondAttribute="leading" id="cN4-AV-cYj"/>
+                <constraint firstAttribute="bottom" secondItem="jYb-t2-jmn" secondAttribute="bottom" constant="10" id="cWv-YT-FV3"/>
                 <constraint firstItem="zPh-Eg-kMv" firstAttribute="top" secondItem="vhH-N5-j0h" secondAttribute="bottom" constant="10" id="cpV-Xt-4Pg"/>
+                <constraint firstItem="jYb-t2-jmn" firstAttribute="top" secondItem="zPh-Eg-kMv" secondAttribute="bottom" constant="15" id="whP-tV-5b2"/>
                 <constraint firstItem="vhH-N5-j0h" firstAttribute="top" secondItem="WJg-TG-CZQ" secondAttribute="top" constant="10" id="ygT-m8-EbA"/>
             </constraints>
             <point key="canvasLocation" x="132" y="152.47376311844079"/>
