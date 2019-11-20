@@ -70,6 +70,9 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     
     @IBAction func btnContactTapped() {
         // Code here
+        if let url = URL(string: "tel://1900587") {
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func btnDirectTapped() {

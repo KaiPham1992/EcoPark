@@ -136,7 +136,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id,
             let moneyPaid = parking?.price else { return }
             let time = datePicker.date& + " " + timePicker.time&
-            
+                        
             presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
             
         } catch {
@@ -148,8 +148,10 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     func didBooking(info: BookingEntity) {
         guard let address = parking?.address else { return }
         let pop = BookingPopUp()
+        
         pop.showPopUp(width: popUpwidth, address: address, message: "1", completionDirection: {
             guard let lat = self.parking?.lat, let long = self.parking?.long else { return }
+            self.navigationController?.popToRootViewController(animated: true)
             self.openGoogleMapForPlace(lat: lat, long: long)
         }) {
             guard let bookingId = info.id else { return }

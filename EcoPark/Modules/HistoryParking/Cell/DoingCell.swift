@@ -44,9 +44,9 @@ class DoingCell: UITableViewCell {
             break
         }
         lblAddress.text = data.parking_details?.name ?? ""
-        DLVBook.lblTime.text = data.create_time
-        DLVCheckin.lblTime.text = data.intend_checkin_time
-        DLVCheckout.lblTime.text = data.intend_checkout_time
-        lblPayment.text = (data.money_paid ?? "") + " VND"
+        DLVBook.lblTime.text = data.create_time?.toString(dateFormat: AppDateFormat.ecoTime)
+        DLVCheckin.lblTime.text = data.intend_checkin_time?.toString(dateFormat: AppDateFormat.ecoTime)
+        DLVCheckout.lblTime.text = data.intend_checkout_time?.toString(dateFormat: AppDateFormat.ecoTime)
+        lblPayment.text = (data.money_paid?.toCurrency ?? "") 
     }
 }

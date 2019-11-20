@@ -27,6 +27,7 @@ class BookingPopUp: BasePopUpView {
     }
     
     func showPopUp(width: CGFloat, address: String, message: String, completionDirection: CompletionClosure?, completionDetail: CompletionClosure?) {
+        self.vYesNoContentView.lbAddress.text = address
         
         let attr1 = LocalizableKey.bookingPopUpAttr1.showLanguage.toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: false)
         

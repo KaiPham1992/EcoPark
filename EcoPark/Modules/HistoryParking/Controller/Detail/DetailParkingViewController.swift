@@ -86,7 +86,6 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         DLVPriceParking.setupViewUnit(title: "Đã thanh toán:")
         DLVAddForWallet.setupViewUnit(title: "TT thêm bằng ví:")
         DLVAddForMoney.setupViewUnitColorRed(title: "TT thêm bằng tiền mặt:")
-        
     }
     
     override func viewDidLoad() {
@@ -99,6 +98,10 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         super.setUpNavigation()
         setTitleNavigation(title: "Chi tiết giao dịch")
         addBackToNavigation()
+    }
+    
+    override func btnBackTapped() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func displayData(info: BookingDetailEntity) {
@@ -181,6 +184,5 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     func didGetError(error: APIError) {
         printError(message: error.message)
     }
-    
 
 }

@@ -37,6 +37,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var distance = "1000"
     var address = "chung cư 8x plus"
     /********************************/
+    let zoomMap: Float = 14.0
     
     var isFirst: Bool = true
     
@@ -71,12 +72,12 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         mapView.delegate = self
         
         
-        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: 16)
+        let camera = GMSCameraPosition.camera(withTarget: centerMapCoordinate, zoom: self.zoomMap)
         self.mapView?.animate(to: camera)
     }
     
     @IBAction func setMyLocation() {
-        let camera = GMSCameraPosition.camera(withTarget: UserDefaultHelper.shared.myLocationCoordinate, zoom: 16)
+        let camera = GMSCameraPosition.camera(withTarget: UserDefaultHelper.shared.myLocationCoordinate, zoom: self.zoomMap)
         self.mapView?.animate(to: camera)
     }
     
@@ -188,7 +189,7 @@ extension HomeViewController: CLLocationManagerDelegate {
             let location = locations.last
             self.centerMapCoordinate = location?.coordinate
             UserDefaultHelper.shared.myLocationCoordinate = self.centerMapCoordinate
-            let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 16.0)
+            let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: self.zoomMap)
             
             self.mapView?.animate(to: camera)
             self.locationManager.stopUpdatingLocation()
