@@ -53,5 +53,6 @@ class HistoryParnerCell: UITableViewCell {
         lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
+        lbPrice.text = "\(_historyParking.money_paid ?? 0)"
     }
 }

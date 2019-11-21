@@ -50,14 +50,15 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: "")
     }
     
-    @objc func btnCheckOutTapped() {
-        let price = historyParkingReservation?.booking[indexTap].money_paid ?? 0
+    @objc func btnCheckOutTapped(sender: UIButton) {
+        
+        let price = historyParkingReservation?.booking[sender.tag].money_paid ?? 0
         let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
-        let vehicleNumber = historyParkingReservation?.booking[indexTap].license_plates ?? ""
-        let checkoutNumber = historyParkingReservation?.booking[indexTap].code ?? ""
+        let vehicleNumber = historyParkingReservation?.booking[sender.tag].license_plates ?? ""
+        let checkoutNumber = historyParkingReservation?.booking[sender.tag].code ?? ""
         
         PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
-            self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingReservation?.booking[self.indexTap].parking_id ?? "", bookingID: self.historyParkingReservation?.booking[self.indexTap].id ?? ""))
+            self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingReservation?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingReservation?.booking[sender.tag].id ?? ""))
         }) {
             self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
         }
@@ -80,12 +81,13 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(HistoryParnerCell.self)
         cell.setDataHistory(historyParking: historyParkingReservation?.booking[indexPath.item])
+        cell.btnStatus.tag = indexPath.item
         cell.btnStatus.addTarget(self, action: #selector(btnCheckOutTapped), for: .touchUpInside)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.indexTap = indexPath.item
         self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: historyParkingReservation?.booking[indexTap].parking_id ?? "", bookingID: historyParkingReservation?.booking[indexTap].id ?? ""))
     }
 }

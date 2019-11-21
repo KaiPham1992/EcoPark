@@ -71,6 +71,12 @@
 		1735228B236EB1EA004C889B /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17352287236EB1EA004C889B /* PriceCell.xib */; };
 		1735228C236EB1EA004C889B /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17352287236EB1EA004C889B /* PriceCell.xib */; };
 		1735228D236EB1EA004C889B /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17352287236EB1EA004C889B /* PriceCell.xib */; };
+		173582892386749100E1F32D /* PriceCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173582872386749100E1F32D /* PriceCheckoutCell.swift */; };
+		1735828A2386749100E1F32D /* PriceCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173582872386749100E1F32D /* PriceCheckoutCell.swift */; };
+		1735828B2386749100E1F32D /* PriceCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173582872386749100E1F32D /* PriceCheckoutCell.swift */; };
+		1735828C2386749100E1F32D /* PriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173582882386749100E1F32D /* PriceCheckoutCell.xib */; };
+		1735828D2386749100E1F32D /* PriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173582882386749100E1F32D /* PriceCheckoutCell.xib */; };
+		1735828E2386749100E1F32D /* PriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173582882386749100E1F32D /* PriceCheckoutCell.xib */; };
 		17378CA0237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */; };
 		17378CA1237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */; };
 		17378CA2237BA70600BBAFE5 /* BossRegisterParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */; };
@@ -215,6 +221,12 @@
 		17848B7923803057008B3A85 /* ImageParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17848B6923803057008B3A85 /* ImageParkingViewController.xib */; };
 		17848B7A23803057008B3A85 /* ImageParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17848B6923803057008B3A85 /* ImageParkingViewController.xib */; };
 		17848B7B23803057008B3A85 /* ImageParkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17848B6923803057008B3A85 /* ImageParkingViewController.xib */; };
+		1792FE7223867A160040C8A3 /* OtherPriceCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */; };
+		1792FE7323867A160040C8A3 /* OtherPriceCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */; };
+		1792FE7423867A160040C8A3 /* OtherPriceCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */; };
+		1792FE7523867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
+		1792FE7623867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
+		1792FE7723867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		17BAF899236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
 		17BAF89A236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
 		17BAF89B236EAB650066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
@@ -1666,6 +1678,8 @@
 		172D0970236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerDetailCheckinViewController.xib; sourceTree = "<group>"; };
 		17352286236EB1EA004C889B /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		17352287236EB1EA004C889B /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
+		173582872386749100E1F32D /* PriceCheckoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCheckoutCell.swift; sourceTree = "<group>"; };
+		173582882386749100E1F32D /* PriceCheckoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCheckoutCell.xib; sourceTree = "<group>"; };
 		17378C9F237BA70600BBAFE5 /* BossRegisterParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossRegisterParam.swift; sourceTree = "<group>"; };
 		17378CA3237BE2D700BBAFE5 /* ParkingTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTypeEntity.swift; sourceTree = "<group>"; };
 		17389E442385037200ABED8B /* HistoryMyParkingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMyParkingEntity.swift; sourceTree = "<group>"; };
@@ -1710,6 +1724,8 @@
 		17848B6723803057008B3A85 /* ImageParkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageParkingProtocols.swift; sourceTree = "<group>"; };
 		17848B6823803057008B3A85 /* ImageParkingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageParkingInteractor.swift; sourceTree = "<group>"; };
 		17848B6923803057008B3A85 /* ImageParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageParkingViewController.xib; sourceTree = "<group>"; };
+		1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPriceCheckoutCell.swift; sourceTree = "<group>"; };
+		1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPriceCheckoutCell.xib; sourceTree = "<group>"; };
 		17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingPresenter.swift; sourceTree = "<group>"; };
 		17BAF894236EAB640066BD29 /* HistoryPartnerDetailBookingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingRouter.swift; sourceTree = "<group>"; };
 		17BAF895236EAB640066BD29 /* HistoryPartnerDetailBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingViewController.swift; sourceTree = "<group>"; };
@@ -2267,6 +2283,15 @@
 			path = PriceCell;
 			sourceTree = "<group>";
 		};
+		173582862386744F00E1F32D /* PriceCheckoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				173582872386749100E1F32D /* PriceCheckoutCell.swift */,
+				173582882386749100E1F32D /* PriceCheckoutCell.xib */,
+			);
+			path = PriceCheckoutCell;
+			sourceTree = "<group>";
+		};
 		17389E432385032700ABED8B /* HistoryMyParking */ = {
 			isa = PBXGroup;
 			children = (
@@ -2382,11 +2407,20 @@
 			path = ImageParking;
 			sourceTree = "<group>";
 		};
+		1792FE6F238679F90040C8A3 /* OtherPriceCheckoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */,
+				1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */,
+			);
+			path = OtherPriceCheckoutCell;
+			sourceTree = "<group>";
+		};
 		17BAF890236EAAE60066BD29 /* HistoryPartnerDetail */ = {
 			isa = PBXGroup;
 			children = (
-				17389E4823851B2C00ABED8B /* HistoryPartnerDetailCheckout */,
 				17BAF8AB236EABD80066BD29 /* Cells */,
+				17389E4823851B2C00ABED8B /* HistoryPartnerDetailCheckout */,
 				17BAF892236EAB420066BD29 /* HistoryPartnerDetailCheckin */,
 				17BAF891236EAAF60066BD29 /* HistoryPartnerDetailBooking */,
 			);
@@ -2422,6 +2456,8 @@
 		17BAF8AB236EABD80066BD29 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1792FE6F238679F90040C8A3 /* OtherPriceCheckoutCell */,
+				173582862386744F00E1F32D /* PriceCheckoutCell */,
 				2A5B646F2376EB3D006EA266 /* HeaderTransactionCell */,
 				2ACBE6ED2376D00D0067C413 /* RealParkingCell */,
 				2ACBE6E42376CDC30067C413 /* RatingCell */,
@@ -4427,6 +4463,7 @@
 				17FFE277236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
 				2A07B9AC236E9E65004FE7CE /* TimeView.xib in Resources */,
 				DEECF8A122871D1B00A4678B /* ForgotPasswordViewController.xib in Resources */,
+				1792FE7523867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */,
 				2A456817236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				17389E5E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */,
 				17C2C4C7236C28040020B299 /* ParkingInfoCell.xib in Resources */,
@@ -4457,6 +4494,7 @@
 				22EB902423684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				22BE84E3236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				2A07B981236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
+				1735828C2386749100E1F32D /* PriceCheckoutCell.xib in Resources */,
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				1781C7F3236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
@@ -4552,6 +4590,7 @@
 				17FFE278236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
 				2A07B9AD236E9E65004FE7CE /* TimeView.xib in Resources */,
 				DE9530432287DF4800E3F688 /* ForgotPasswordViewController.xib in Resources */,
+				1792FE7623867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */,
 				2A456818236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				17389E5F23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */,
 				22EB900923683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
@@ -4582,6 +4621,7 @@
 				22BE84E4236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				2A07B982236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DE9530472287DF4800E3F688 /* SignUpViewController.xib in Resources */,
+				1735828D2386749100E1F32D /* PriceCheckoutCell.xib in Resources */,
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				1781C7F4236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
@@ -4677,6 +4717,7 @@
 				17FFE279236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
 				2A07B9AE236E9E65004FE7CE /* TimeView.xib in Resources */,
 				DE9530F12287DF6400E3F688 /* ForgotPasswordViewController.xib in Resources */,
+				1792FE7723867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */,
 				2A456819236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
 				17389E6023851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */,
 				22EB900A23683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
@@ -4707,6 +4748,7 @@
 				22BE84E5236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				2A07B983236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DE9530F52287DF6400E3F688 /* SignUpViewController.xib in Resources */,
+				1735828E2386749100E1F32D /* PriceCheckoutCell.xib in Resources */,
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
 				1781C7F5236C5D6000F053C1 /* HeaderInfoView.xib in Resources */,
@@ -5046,6 +5088,7 @@
 				DE952F8B2287D2A700E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				DE361E982283E60500FA3B0D /* AnimationHelper.swift in Sources */,
 				762E32E4236D1A7D00FF4F3E /* CheckInPopUpContent.swift in Sources */,
+				1792FE7223867A160040C8A3 /* OtherPriceCheckoutCell.swift in Sources */,
 				DE73CF1E22B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
 				DE6FDB0722AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
 				DE361E692283E60500FA3B0D /* AppColor.swift in Sources */,
@@ -5376,6 +5419,7 @@
 				DE953181228846D400E3F688 /* ChangePasswordViewController.swift in Sources */,
 				B16F60AD237CF5CC00D312A3 /* ValidatorFactory.swift in Sources */,
 				DE952F832287D2A700E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				173582892386749100E1F32D /* PriceCheckoutCell.swift in Sources */,
 				17819B8C237815D400506BF6 /* LoadingPresenter.swift in Sources */,
 				17BAF89F236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.swift in Sources */,
 				76682F2F236EB72C00F49482 /* MyNotificationViewController.swift in Sources */,
@@ -5478,6 +5522,7 @@
 				DE952FC22287DF4800E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				DE952FC32287DF4800E3F688 /* AnimationHelper.swift in Sources */,
 				762E32E5236D1A7D00FF4F3E /* CheckInPopUpContent.swift in Sources */,
+				1792FE7323867A160040C8A3 /* OtherPriceCheckoutCell.swift in Sources */,
 				DE73CF1F22B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
 				1781C7E1236C382600F053C1 /* ParkingInfoCell.swift in Sources */,
 				DE6FDB0822AB5F4000960422 /* ShareNativeHelper.swift in Sources */,
@@ -5808,6 +5853,7 @@
 				DE9530352287DF4800E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B16F60AE237CF5CC00D312A3 /* ValidatorFactory.swift in Sources */,
 				DE9530362287DF4800E3F688 /* YesNoContentView.swift in Sources */,
+				1735828A2386749100E1F32D /* PriceCheckoutCell.swift in Sources */,
 				17819B8D237815D400506BF6 /* LoadingPresenter.swift in Sources */,
 				17BAF8A0236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.swift in Sources */,
 				76682F30236EB72C00F49482 /* MyNotificationViewController.swift in Sources */,
@@ -5910,6 +5956,7 @@
 				DE9530702287DF6400E3F688 /* KActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				DE9530712287DF6400E3F688 /* AnimationHelper.swift in Sources */,
 				762E32E6236D1A7D00FF4F3E /* CheckInPopUpContent.swift in Sources */,
+				1792FE7423867A160040C8A3 /* OtherPriceCheckoutCell.swift in Sources */,
 				2ADDCB04232F83890087B427 /* TermAndConditionResponse.swift in Sources */,
 				1781C7E2236C382700F053C1 /* ParkingInfoCell.swift in Sources */,
 				DE73CF2022B913E700B8B83B /* SelectPhotoCanCropPopUp.swift in Sources */,
@@ -6240,6 +6287,7 @@
 				DE9530E32287DF6400E3F688 /* KActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B16F60AF237CF5CC00D312A3 /* ValidatorFactory.swift in Sources */,
 				DE9530E42287DF6400E3F688 /* YesNoContentView.swift in Sources */,
+				1735828B2386749100E1F32D /* PriceCheckoutCell.swift in Sources */,
 				17819B8E237815D400506BF6 /* LoadingPresenter.swift in Sources */,
 				17BAF8A1236EAB650066BD29 /* HistoryPartnerDetailBookingViewController.swift in Sources */,
 				76682F31236EB72C00F49482 /* MyNotificationViewController.swift in Sources */,

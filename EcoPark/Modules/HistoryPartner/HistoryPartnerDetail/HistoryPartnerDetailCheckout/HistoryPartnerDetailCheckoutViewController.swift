@@ -34,11 +34,12 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
         
         tbCheckoutDetail.registerXibFile(TimeParkingCell.self)
         tbCheckoutDetail.registerXibFile(UserInfoCell.self)
-        tbCheckoutDetail.registerXibFile(PriceCell.self)
+        tbCheckoutDetail.registerXibFile(PriceCheckoutCell.self)
+        tbCheckoutDetail.registerXibFile(OtherPriceCheckoutCell.self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,10 +53,14 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
             
             return userInfoCell
-        default:
-            let priceCell = tableView.dequeueTableCell(PriceCell.self)
+        case 2:
+            let priceCell = tableView.dequeueTableCell(PriceCheckoutCell.self)
             
             return priceCell
+        default:
+            let otherPriceCell = tableView.dequeueTableCell(OtherPriceCheckoutCell.self)
+            
+            return otherPriceCell
         }
     }
     
@@ -65,8 +70,10 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
             return 230
         case 1:
             return 145
+        case 2:
+            return 230
         default:
-            return 145
+            return 170
         }
     }
 }

@@ -245,7 +245,7 @@ class PopUpHelper {
     func showPartnerCheckOut(width: CGFloat, height: CGFloat = 330, price: Double, vehicleType: String, vehicleNumber: String, checkOutNumber: String, completionCancel: CompletionClosure?, completionCheckAgain: CompletionClosure?, completionCheckOut: CompletionClosure?) {
         
         let popUp = PartnerCheckOutPopUp()
-        popUp.showPopUp(width: width, height: height, price: 320000, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkOutNumber, completionCancel: completionCancel, completionCheckAgain: completionCheckAgain, completionCheckout: completionCheckOut)
+        popUp.showPopUp(width: width, height: height, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkOutNumber, completionCancel: completionCancel, completionCheckAgain: completionCheckAgain, completionCheckout: completionCheckOut)
     }
     
     func showMessage(message: String ,width: CGFloat, height: CGFloat = 200, completion: @escaping CompletionClosure) {
