@@ -114,7 +114,9 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, let price = parking?.price, wallet > price {
             booking()
         } else {
-            PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: popUpwidth)
+            PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: popUpwidth) {
+                
+            }
         }
         
     }
@@ -141,7 +143,9 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             
         } catch {
             guard let error = error as? InvalidError else { return }
-            PopUpHelper.shared.showMessage(message: error.message, width: popUpwidth)
+            PopUpHelper.shared.showMessage(message: error.message, width: popUpwidth) {
+                
+            }
         }
     }
     
@@ -155,7 +159,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             self.openGoogleMapForPlace(lat: lat, long: long)
         }) {
             guard let bookingId = info.id else { return }
-            self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
+//            self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
         }
     }
     

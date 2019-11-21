@@ -23,12 +23,17 @@ class HistoryParkingViewController: ListManagerVC {
     
     override func setUpViews() {
         super.setUpViews()
+        loadData()
+        self.view.backgroundColor = .clear
+        
+    }
+    
+    func loadData() {
         if type == .doing {
             self.presenter?.getDoingBooking()
         } else {
             self.presenter?.getHistoryBooking()
         }
-        self.view.backgroundColor = .clear
     }
 
     override func registerTableView() {
@@ -43,15 +48,24 @@ class HistoryParkingViewController: ListManagerVC {
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        var vc : UIViewController
+        guard let historyBookingParking = item as? HistoryBookingParkingResponse else { return }
+    
+        var vc : DetailParkingViewController
         if indexPath.row == 0 {
-            vc = DetailParkingRouter.createModule(type: TypeDetailParking.checkin)
+            vc = DetailParkingRouter.createModule(bookingParking: historyBookingParking)
         } else if indexPath.row == 1 {
-            vc = DetailParkingRouter.createModule(type: TypeDetailParking.checkout)
+            vc = DetailParkingRouter.createModule(bookingParking: historyBookingParking)
         } else {
-            vc = DetailParkingRouter.createModule(type: TypeDetailParking.complete)
+            vc = DetailParkingRouter.createModule(bookingParking: historyBookingParking)
         }
+        vc.delegate = self
         self.push(controller: vc, animated: true)
+    }
+}
+
+extension HistoryParkingViewController: DetailParkingViewControllerDelegate {
+    func dataChanged() {
+        loadData()
     }
 }
 

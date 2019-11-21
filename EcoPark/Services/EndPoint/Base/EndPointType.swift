@@ -26,6 +26,7 @@ struct DefaultHeader {
         header["Language"] = code
         if let token = UserDefaultHelper.shared.userToken {
             header["Authorization"] = "Bearer " + token
+            print(token)
         }
         return header
     }

@@ -10,9 +10,14 @@
 
 import UIKit
 
-class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol {
+// use for USER
+protocol DetailParkingViewControllerDelegate: class {
+    func dataChanged()
+}
 
-	var presenter: DetailParkingPresenterProtocol?
+class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol {
+    
+    var presenter: DetailParkingPresenterProtocol?
     
     @IBOutlet weak var viewRate: UIView!
     @IBOutlet weak var DLVInformationParking: DoubleLabelView!
@@ -44,29 +49,31 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
     
-    var type : TypeDetailParking = .checkin
-    var bookingId: String = ""
+    //    var type : TypeDetailParking = .checkin
+    var bookingParking: HistoryBookingParkingResponse?
+    
+    weak var delegate: DetailParkingViewControllerDelegate?
     
     override func setUpViews() {
         super.setUpViews()
-        if type == .complete {
-            viewRate.isHidden = false
-            heightOfRating.constant = 0
-            heightOfButtonCancel.constant = 0
-            heightOfButtonExtend.constant = 0
-            btnBottom.isHidden = true
-        } else {
-            heightOfRating.constant = 0
-            heightOfButtonCancel.constant = 50
-            heightOfButtonExtend.constant = 50
-            btnBottom.isHidden = false
-            if type == .checkin {
-                btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
-            } else {
-                btnBottom.setTitle("Đánh giá dịch vụ bãi xe", for: .normal)
-            }
-            viewRate.isHidden = true
-        }
+        //        if type == .complete {
+//                    viewRate.isHidden = false
+//                    heightOfRating.constant = 0
+        //            heightOfButtonCancel.constant = 0
+        //            heightOfButtonExtend.constant = 0
+        //            btnBottom.isHidden = true
+        //        } else {
+        //            heightOfRating.constant = 0
+        //            heightOfButtonCancel.constant = 50
+        //            heightOfButtonExtend.constant = 50
+        //            btnBottom.isHidden = false
+        //            if type == .checkin {
+        //                btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
+        //            } else {
+        //                btnBottom.setTitle("Đánh giá dịch vụ bãi xe", for: .normal)
+        //            }
+        //            viewRate.isHidden = true
+        //        }
         
         ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: "Liên hệ bãi")
         ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: "Chỉ đường")
@@ -113,16 +120,6 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         lbName.text = info.parking_details?.name
         lbAddress.text = info.parking_details?.address
         
-        if let createTime = info.create_time {
-            DLVBook.setValueText(text: createTime.toString(dateFormat: .hhmmddmmyyy))
-        }
-        if let intendCheck = info.intend_checkin_time {
-            DLVExpected.setValueText(text: intendCheck.toString(dateFormat: .hhmmddmmyyy))
-        }
-        
-        DLVCheckIn.setValueText(text: "-")
-        DLVCheckOut.setValueText(text: "-")
-        
         DLVLisencePlate.setValueText(text: info.license_plates ?? "")
         if let price = info.parking_details?.price {
             DLVBillForHour.setValueText(text: price.toCurrency)
@@ -130,11 +127,36 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         if let packagePrice = info.parking_details?.package_price {
             DLVBillFor8Hour.setValueText(text: packagePrice.toCurrency)
         }
-        DLVNumberParking.setValueText(text: "-")
-        DLVMoneyPayment.setValueText(text: "-")
-        DLVPriceParking.setValueText(text: "-")
-        DLVAddForWallet.setValueText(text: "-")
-        DLVAddForMoney.setValueText(text: "-")
+        // status reservation
+        
+        let status = info.status&
+        switch status {
+        case StatusBooking.reservation.rawValue:
+            if let createTime = info.create_time {
+                DLVBook.setValueText(text: createTime.toString(dateFormat: .ecoTime))
+            }
+            if let intendCheck = info.intend_checkin_time {
+                DLVExpected.setValueText(text: intendCheck.toString(dateFormat: .ecoTime))
+            }
+            
+            DLVCheckIn.setValueText(text: "_")
+            DLVCheckOut.setValueText(text: "-")
+            
+            //---
+            DLVNumberParking.setValueText(text: "-")
+            DLVMoneyPayment.setValueText(text: "-")
+            DLVPriceParking.setValueText(text: "-")
+            DLVAddForWallet.setValueText(text: "-")
+            DLVAddForMoney.setValueText(text: "-")
+            
+            // hidden rating
+            viewRate.isHidden = false
+            heightOfRating.constant = 0
+            //
+            btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
+        default:
+            break
+        }
         
     }
     
@@ -148,32 +170,40 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     
     // MARK: Cancel reservation
     func cancelReservation() {
-        if self.bookingId != "" {
-            self.presenter?.cancelReservation(id: self.bookingId)
+        PopUpHelper.shared.showCancelReservation(width: popUpwidth, completionYes: {
+            guard let bookingId = self.bookingParking?._id else { return }
+            self.presenter?.cancelReservation(id: bookingId)
+        }) {
+            //----
         }
+        
+       
     }
     
     func didCancelReservation() {
-        PopUpHelper.shared.showMessage(message: "Huỷ đặt chỗ thành công", width: popUpwidth)
+        PopUpHelper.shared.showMessage(message: "Huỷ đặt chỗ thành công", width: popUpwidth) {
+            self.delegate?.dataChanged()
+            self.pop()
+        }
     }
     
     // MARK: Extend reservation
     func extendReservation() {
-        if self.bookingId != "" {
-            self.presenter?.extendReservation(id: self.bookingId)
-        }
+        guard let bookingId = self.bookingParking?._id else { return }
+        self.presenter?.extendReservation(id: bookingId)
     }
     
     func didExtendReservation(info: BookingDetailEntity) {
-        PopUpHelper.shared.showMessage(message: "Bạn đã gia hạn thành công", width: popUpwidth)
-        displayData(info: info)
+        PopUpHelper.shared.showMessage(message: "Bạn đã gia hạn thành công", width: popUpwidth) {
+            self.displayData(info: info)
+        }
+        
     }
     
     // MARK: Get booking detail
     func getBookingDetail() {
-        if self.bookingId != "" {
-            self.presenter?.getBookingDetail(id: self.bookingId)
-        }
+        guard let bookingId = self.bookingParking?._id else { return }
+        self.presenter?.getBookingDetail(id: bookingId)
     }
     
     func didGetBookingDetail(info: BookingDetailEntity) {
@@ -184,5 +214,5 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     func didGetError(error: APIError) {
         printError(message: error.message)
     }
-
+    
 }
