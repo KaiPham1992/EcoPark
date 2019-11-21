@@ -19,6 +19,7 @@ protocol ParkingAPIServiceProtocol {
     func getDoingBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
     func getHistoryBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
     func getHistoryMyParking(parkingID: String, status: String, keyword: String, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure)
+    func getHistoryParkingDetail(parkingID: String, bookingID: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure)
 }
 
 class ParkingAPIService: ParkingAPIServiceProtocol {
@@ -76,5 +77,10 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
     func getHistoryMyParking(parkingID: String, status: String, keyword: String, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure) {
         let endPoint = ParkingEndPoint.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword)
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failre)
+    }
+    
+    func getHistoryParkingDetail(parkingID: String, bookingID: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.getHistoryParkingDetail(parkingID: parkingID, bookingID: bookingID)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
 }

@@ -29,4 +29,11 @@ class PriceCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        lbPriceComboPrice.text = _historyParkingDetail.price
+        lbPriceAHoursPrice.text = _historyParkingDetail.package_price
+//        lbHoldingTime.text = _historyParkingDetail.tim
+        lblPrice.text = _historyParkingDetail.money_paid?.toCurrency
+    }
 }

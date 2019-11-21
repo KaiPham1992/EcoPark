@@ -9,6 +9,10 @@
 import ObjectMapper
 class BookingDetailEntity: BaseEntity {
     
+    var fullname: String?
+    var img_src: String?
+    var package_price: String?
+    var price: String?
     var id: String?
     var account_id: String?
     var code: String?
@@ -29,6 +33,10 @@ class BookingDetailEntity: BaseEntity {
     override func mapping(map: Map) {
         super.mapping(map: map)
     
+        self.fullname <- map["fullname"]
+        self.img_src <- map["img_src"]
+        self.package_price <- map["package_price"]
+        self.price <- map["price"]
         self.id <- map["_id"]
         self.account_id <- map["account_id"]
         self.code <- map["code"]

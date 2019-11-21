@@ -27,4 +27,12 @@ class TimeParkingCell: UITableViewCell {
     
     private func setupUI() {
     }
+    
+    func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbCheckInTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbCheckOutTime.text = _historyParkingDetail.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
+    }
 }
