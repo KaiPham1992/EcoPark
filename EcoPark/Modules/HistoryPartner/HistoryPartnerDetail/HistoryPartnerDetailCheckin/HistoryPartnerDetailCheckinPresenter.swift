@@ -22,4 +22,13 @@ class HistoryPartnerDetailCheckinPresenter: HistoryPartnerDetailCheckinPresenter
         self.router = router
     }
 
+    func getHistoryParkingDetailCheckIn(parkingID: String, bookingID: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getHistoryParkingDetail(parkingID: parkingID, bookingID: bookingID, success: { (historyParkingDetail) in
+            ProgressView.shared.hide()
+            self.view?.didGetData(historyPakingDetail: historyParkingDetail)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

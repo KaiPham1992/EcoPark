@@ -11,6 +11,7 @@
 import UIKit
 
 class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPartnerDetailCheckinViewProtocol {
+    
 
     @IBOutlet weak var lbID: UILabel!
     @IBOutlet weak var lbStatus: UILabel!
@@ -18,6 +19,14 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     @IBOutlet weak var btnCheckOut: UIButton!
     @IBOutlet weak var btnScanQR: UIButton!
     
+    var parkingID: String = ""
+    var bookingID: String = ""
+    
+    var historyParkingDetail: HistoryBookingParkingResponse? {
+        didSet {
+            tbCheckInDetail.reloadData()
+        }
+    }
 	var presenter: HistoryPartnerDetailCheckinPresenterProtocol?
 
 	override func viewDidLoad() {
@@ -28,8 +37,20 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
         btnCheckOut.setBorder(borderWidth: 0.5, borderColor: AppColor.color_0_129_255, cornerRadius: 5)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getHistoryParkingDetailCheckIn(parkingID: parkingID, bookingID: bookingID)
+    }
+    
+    
     @IBAction func btnCheckOutTapped() {
-        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: 0, vehicleType: "4", vehicleNumber: "51E-123.45", checkOutNumber: "EC1234567", completionCancel: nil, completionCheckAgain: {
+        
+        let price = historyParkingDetail?.money_paid ?? 0
+        let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
+        let vehicleNumber = historyParkingDetail?.license_plates ?? ""
+        let checkoutNumber = historyParkingDetail?.code ?? ""
+        
+        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: Double(price), vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             
         }) {
             self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
@@ -38,6 +59,10 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     
     @IBAction func btnScanQRTapped() {
         self.push(controller: HistoryPartnerQRScannerRouter.createModule())
+    }
+    
+    func didGetData(historyPakingDetail: HistoryBookingParkingResponse?) {
+        self.historyParkingDetail = historyPakingDetail
     }
 }
 
@@ -61,15 +86,15 @@ extension HistoryPartnerDetailCheckinViewController: UITableViewDataSource, UITa
         switch indexPath.row {
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
-            
+            timeHoldingCell.setData(historyParkingDetail: historyParkingDetail)
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
-            
+            userInfoCell.setData(historyParkingDetail: historyParkingDetail)
             return userInfoCell
         default:
             let priceCell = tableView.dequeueTableCell(PriceCell.self)
-            
+            priceCell.setData(historyParkingDetail: historyParkingDetail)
             return priceCell
         }
     }

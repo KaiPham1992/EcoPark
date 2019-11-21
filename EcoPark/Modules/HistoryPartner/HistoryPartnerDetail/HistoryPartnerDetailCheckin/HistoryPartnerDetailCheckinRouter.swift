@@ -14,7 +14,7 @@ class HistoryPartnerDetailCheckinRouter: HistoryPartnerDetailCheckinWireframePro
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(parkingID: String, bookingID: String) -> HistoryPartnerDetailCheckinViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = HistoryPartnerDetailCheckinViewController(nibName: nil, bundle: nil)
         let interactor = HistoryPartnerDetailCheckinInteractor()
@@ -25,6 +25,8 @@ class HistoryPartnerDetailCheckinRouter: HistoryPartnerDetailCheckinWireframePro
         interactor.presenter = presenter
         router.viewController = view
 
+        view.parkingID = parkingID
+        view.bookingID = bookingID
         return view
     }
 }

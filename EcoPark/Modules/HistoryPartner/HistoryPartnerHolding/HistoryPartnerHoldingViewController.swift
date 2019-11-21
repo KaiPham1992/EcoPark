@@ -57,7 +57,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         let checkoutNumber = historyParkingReservation?.booking[indexTap].code ?? ""
         
         PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
-            self.push(controller: HistoryPartnerDetailCheckinRouter.createModule())
+            self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingReservation?.booking[self.indexTap].parking_id ?? "", bookingID: self.historyParkingReservation?.booking[self.indexTap].id ?? ""))
         }) {
             self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
         }
@@ -86,7 +86,7 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.indexTap = indexPath.item
-        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule())
+        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: historyParkingReservation?.booking[indexTap].parking_id ?? "", bookingID: historyParkingReservation?.booking[indexTap].id ?? ""))
     }
 }
 
@@ -94,7 +94,7 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         let place = historyParkingReservation?.number_place
         let reservation = historyParkingReservation?.reservation_number
-        return IndicatorInfo(title: "Đang giữ(\(reservation ?? 0)/\(place ?? "0"))")
+        return IndicatorInfo(title: "Đang giữ (\(reservation ?? 0)/\(place ?? "0"))")
     }
 }
 

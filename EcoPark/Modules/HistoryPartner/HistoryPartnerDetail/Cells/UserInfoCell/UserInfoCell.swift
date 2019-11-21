@@ -29,4 +29,11 @@ class UserInfoCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        lbUserName.text = _historyParkingDetail.fullname
+        lbType.text = _historyParkingDetail.vehicle_name
+        lbNumber.text = _historyParkingDetail.license_plates
+        imgAvatar.sd_setImage(with: _historyParkingDetail.urlAvatar, completed: nil)
+    }
 }

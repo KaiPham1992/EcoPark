@@ -16,6 +16,15 @@ class HistoryPartnerDetailBookingViewController: BaseViewController, HistoryPart
     @IBOutlet weak var lbStatus: UILabel!
     @IBOutlet weak var tbHoldingDetail: UITableView!
     
+    var parkingID: String = ""
+    var bookingID: String = ""
+    
+    var historyParkingDetail: HistoryBookingParkingResponse? {
+        didSet {
+            tbHoldingDetail.reloadData()
+        }
+    }
+    
 	var presenter: HistoryPartnerDetailBookingPresenterProtocol?
 
 	override func viewDidLoad() {
@@ -24,6 +33,15 @@ class HistoryPartnerDetailBookingViewController: BaseViewController, HistoryPart
         addBackToNavigation()
         setTitleNavigation(title: "Chi tiết giao dịch")
         configTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getHistoryParkingDetailBooking(parkingID: parkingID, bookingID: bookingID)
+    }
+    
+    func didGetData(historyPakingDetail: HistoryBookingParkingResponse?) {
+        self.historyParkingDetail = historyPakingDetail
     }
 }
 
@@ -47,15 +65,15 @@ extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITa
         switch indexPath.row {
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
-            
+            timeHoldingCell.setData(historyParkingDetail: historyParkingDetail)
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
-            
+            userInfoCell.setData(historyParkingDetail: historyParkingDetail)
             return userInfoCell
         default:
             let priceCell = tableView.dequeueTableCell(PriceCell.self)
-            
+            priceCell.setData(historyParkingDetail: historyParkingDetail)
             return priceCell
         }
     }
