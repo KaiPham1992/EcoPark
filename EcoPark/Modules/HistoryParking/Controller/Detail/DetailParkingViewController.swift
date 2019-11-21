@@ -171,7 +171,7 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     // MARK: Cancel reservation
     func cancelReservation() {
         PopUpHelper.shared.showCancelReservation(width: popUpwidth, completionYes: {
-            guard let bookingId = self.bookingParking?._id else { return }
+            guard let bookingId = self.bookingParking?.id else { return }
             self.presenter?.cancelReservation(id: bookingId)
         }) {
             //----
@@ -189,7 +189,7 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     
     // MARK: Extend reservation
     func extendReservation() {
-        guard let bookingId = self.bookingParking?._id else { return }
+        guard let bookingId = self.bookingParking?.id else { return }
         self.presenter?.extendReservation(id: bookingId)
     }
     
@@ -202,7 +202,7 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     
     // MARK: Get booking detail
     func getBookingDetail() {
-        guard let bookingId = self.bookingParking?._id else { return }
+        guard let bookingId = self.bookingParking?.id else { return }
         self.presenter?.getBookingDetail(id: bookingId)
     }
     
