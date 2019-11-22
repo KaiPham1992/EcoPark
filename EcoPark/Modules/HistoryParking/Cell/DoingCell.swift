@@ -32,14 +32,19 @@ class DoingCell: UITableViewCell {
         switch status {
         case StatusBooking.cancel.rawValue:
             lblStatus.text = LocalizableKey.cancel.showLanguage
+            lblStatus.textColor = UIColor.red
         case StatusBooking.checked_out.rawValue:
             lblStatus.text = LocalizableKey.checked_out.showLanguage
+            lblStatus.textColor = AppColor.color_0_129_255
         case StatusBooking.checked_in.rawValue:
             lblStatus.text = LocalizableKey.checked_in.showLanguage
+            lblStatus.textColor = AppColor.color_13_196_68
         case StatusBooking.reservation.rawValue:
             lblStatus.text = LocalizableKey.reservation.showLanguage
+            lblStatus.textColor = AppColor.color_0_129_255
         case StatusBooking.expired.rawValue:
             lblStatus.text = LocalizableKey.expired.showLanguage
+            lblStatus.textColor = UIColor.red
         default:
             break
         }

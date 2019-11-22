@@ -136,6 +136,25 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
+            
+        case StatusBooking.checked_out.rawValue:
+            lbStatus.text = "Đã check out"
+            lbStatus.textColor = AppColor.color_0_129_255
+            showMoney(info: info)
+            btnBottom.setTitle("Đánh giá dịch vụ bãi giữ xe", for: .normal)
+            heightOfRating.constant = 0
+            heightOfButtonCancel.constant = 0
+            heightOfButtonExtend.constant = 0
+            
+        case StatusBooking.cancel.rawValue:
+            lbStatus.text = "Đã huỷ"
+            lbStatus.textColor = UIColor.red
+            showMoney(info: info)
+            btnBottom.setTitle("Đánh giá dịch vụ bãi giữ xe", for: .normal)
+            heightOfRating.constant = 0
+            heightOfButtonCancel.constant = 0
+            heightOfButtonExtend.constant = 0
+            btnBottom.isHidden = true
         default:
             break
         }
@@ -170,7 +189,7 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         lbName.text = info.parking_details?.name
         lbAddress.text = info.parking_details?.address
         
-        DLVCheckIn.setValueText(text: "_")
+        DLVCheckIn.setValueText(text: "-")
         DLVCheckOut.setValueText(text: "-")
         
         DLVNumberParking.setValueText(text: "0 giờ")
