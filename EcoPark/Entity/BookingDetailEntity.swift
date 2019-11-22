@@ -26,9 +26,15 @@ class BookingDetailEntity: BaseEntity {
     var update_time: Date?
     var create_time_mi: Date?
     var intend_checkout_time: Date?
-    var money_paid: String?
+    var money_paid: Double?
     var parking_details: ParkingInfoEntity?
     var current_server_time: Int?
+    var time_check_in: Date?
+    var time_check_out : Date?
+    var payment_wallet: Double?
+    var plus_wallet_boss: Double?
+    var payment: Double?
+    var customer_payment_wallet: Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -43,6 +49,8 @@ class BookingDetailEntity: BaseEntity {
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
         self.intend_checkin_time <- (map["intend_checkin_time"], AppTimestampTransform())
+        self.time_check_in <- (map["time_check_in"], AppTimestampTransform())
+        self.time_check_out <- (map["time_check_out"], AppTimestampTransform())
         self.status <- map["status"]
         self.parking_id <- map["parking_id"]
         self.is_active <- map["is_active"]
@@ -50,9 +58,15 @@ class BookingDetailEntity: BaseEntity {
         self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
         self.create_time_mi <- (map["create_time_mi"], yyyyMMddHHmmssTransform())
         self.intend_checkout_time <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
-        self.money_paid <- map["money_paid"]
+        self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
         self.current_server_time <- map["current_server_time"]
+        
+        self.payment_wallet <- (map["payment_wallet"], StringToDoubleTransform())
+        self.plus_wallet_boss <- (map["plus_wallet_boss"], StringToDoubleTransform())
+        self.payment <- (map["payment"], StringToDoubleTransform())
+        self.customer_payment_wallet <- (map["customer_payment_wallet"], StringToDoubleTransform())
+        
         
     }
 }

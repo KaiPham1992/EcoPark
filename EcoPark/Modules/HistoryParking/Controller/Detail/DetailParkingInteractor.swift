@@ -41,7 +41,7 @@ class DetailParkingInteractor: DetailParkingInteractorInputProtocol {
     
     func extendReservation(id: String) {
         ProgressView.shared.show()
-        Provider.shared.bookingAPIService.cancelReservation(bookingId: id, success: { (info) in
+        Provider.shared.bookingAPIService.extendReservation(bookingId: id, success: { (info) in
             ProgressView.shared.hide()
             guard let info = info else { return }
             self.presenter?.didExtendReservation(info: info)

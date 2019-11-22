@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -44,6 +44,7 @@
                 <outlet property="lbAddress" destination="kJy-iL-XWX" id="HXe-Qo-WAo"/>
                 <outlet property="lbBookingNumber" destination="Loe-zy-6FN" id="xaM-Vj-YRc"/>
                 <outlet property="lbName" destination="The-Hb-a7U" id="aHi-NJ-WVK"/>
+                <outlet property="lbStatus" destination="aLp-QL-fam" id="oMN-Me-N66"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewRate" destination="JzW-XJ-Ue5" id="87K-WT-cwj"/>
             </connections>
