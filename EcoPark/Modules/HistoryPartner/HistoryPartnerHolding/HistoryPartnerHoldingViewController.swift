@@ -37,7 +37,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         vSearch.tapToTextField = {
             let keyword = self.vSearch.tfInput.text!
             guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-            self.presenter?.getHistoryReservation(parkingID: "25", status: "reservation", keyword: keyword)
+            self.presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: keyword)
         }
     }
     
@@ -48,7 +48,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     
     private func getData() {
         guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-        presenter?.getHistoryReservation(parkingID: "25", status: "reservation", keyword: "")
+        presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: "")
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {
@@ -57,11 +57,14 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
         let vehicleNumber = historyParkingReservation?.booking[sender.tag].license_plates ?? ""
         let checkoutNumber = historyParkingReservation?.booking[sender.tag].code ?? ""
+        let bookingID = historyParkingReservation?.booking[sender.tag].id
+        let code = historyParkingReservation?.booking[sender.tag].code
+        let licensePlates = historyParkingReservation?.booking[sender.tag].license_plates
         
         PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingReservation?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingReservation?.booking[sender.tag].id ?? ""))
         }) {
-            self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
+            self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
         }
     }
 }
@@ -104,5 +107,9 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
 extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {
         self.historyParkingReservation = historyParking
+    }
+    
+    func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
     }
 }

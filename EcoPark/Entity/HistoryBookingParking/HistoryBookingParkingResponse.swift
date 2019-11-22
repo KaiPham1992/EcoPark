@@ -34,9 +34,16 @@ class HistoryBookingParkingResponse : BaseEntity {
     var create_time_mi: Date?
     var intend_checkout_time: Date?
     var money_paid: Double?
+    var payment_wallet: Double?
+    var plus_wallet_boss: Double?
+    var receivables: Double?
     var parking_details: ParkingInfoEntity?
     var current_server_time: Int?
     var vehicle_name: String?
+    var payment: Double?
+    var real_money: Double?
+    var bonus: Double?
+    var customer_payment_wallet: Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -62,6 +69,11 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.parking_details <- map["parking_details"]
         self.current_server_time <- map["current_server_time"]
         self.vehicle_name <- map["vehicle_name"]
+        self.payment <- map["payment"]
+        self.real_money <- map["real_money"]
+        self.bonus <- map["bonus"]
+        self.customer_payment_wallet <- map["customer_payment_wallet"]
+        self.plus_wallet_boss <- map["plus_wallet_boss"]
     }
     
     var urlAvatar:  URL? {

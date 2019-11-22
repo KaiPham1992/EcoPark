@@ -27,6 +27,8 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
             tbCheckInDetail.reloadData()
         }
     }
+    
+    
 	var presenter: HistoryPartnerDetailCheckinPresenterProtocol?
 
 	override func viewDidLoad() {
@@ -49,11 +51,13 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
         let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
         let vehicleNumber = historyParkingDetail?.license_plates ?? ""
         let checkoutNumber = historyParkingDetail?.code ?? ""
-        
+        let bookingID = historyParkingDetail?.id
+        let code = historyParkingDetail?.code
+        let licensePlates = historyParkingDetail?.license_plates
         PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: Double(price), vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             
         }) {
-            self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule())
+            self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
         }
     }
     
@@ -61,8 +65,12 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
         self.push(controller: HistoryPartnerQRScannerRouter.createModule())
     }
     
-    func didGetData(historyPakingDetail: HistoryBookingParkingResponse?) {
-        self.historyParkingDetail = historyPakingDetail
+    func didGetData(historyParkingDetail: HistoryBookingParkingResponse?) {
+        self.historyParkingDetail = historyParkingDetail
+    }
+    
+    func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
     }
 }
 

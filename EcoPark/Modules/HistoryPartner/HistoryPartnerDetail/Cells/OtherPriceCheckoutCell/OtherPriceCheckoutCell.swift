@@ -33,4 +33,14 @@ class OtherPriceCheckoutCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        lbRealPaidPrice.text = _historyParkingDetail.real_money?.toCurrency
+        lbBonusEcoPrice.text = _historyParkingDetail.bonus?.toCurrency
+        lbPaidWithWalletPrice.text = _historyParkingDetail.customer_payment_wallet?.toCurrency
+        lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrency
+        lbWalletChangePrice.text = _historyParkingDetail.plus_wallet_boss?.toCurrency
+        
+    }
+    
 }

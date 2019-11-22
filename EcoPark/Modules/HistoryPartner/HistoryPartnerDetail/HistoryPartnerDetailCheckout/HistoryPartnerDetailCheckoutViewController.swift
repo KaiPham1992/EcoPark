@@ -18,6 +18,8 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
     
     var presenter: HistoryPartnerDetailCheckoutPresenterProtocol?
 
+    var historyParkingDetail: HistoryBookingParkingResponse?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addBackToNavigation()
@@ -47,19 +49,19 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
         switch indexPath.row {
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
-            
+            timeHoldingCell.setData(historyParkingDetail: historyParkingDetail)
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
-            
+            userInfoCell.setData(historyParkingDetail: historyParkingDetail)
             return userInfoCell
         case 2:
             let priceCell = tableView.dequeueTableCell(PriceCheckoutCell.self)
-            
+            priceCell.setData(historyParkingDetail: historyParkingDetail)
             return priceCell
         default:
             let otherPriceCell = tableView.dequeueTableCell(OtherPriceCheckoutCell.self)
-            
+            otherPriceCell.setData(historyParkingDetail: historyParkingDetail)
             return otherPriceCell
         }
     }

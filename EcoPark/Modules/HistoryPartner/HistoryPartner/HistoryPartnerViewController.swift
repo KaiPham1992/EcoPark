@@ -31,7 +31,7 @@ class HistoryPartnerViewController: UIViewController, HistoryPartnerViewProtocol
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-        presenter?.getHistoryParking(parkingID: "25", status: "history", keyword: "")
+        presenter?.getHistoryParking(parkingID: "2", status: "history", keyword: "")
     }
     
     

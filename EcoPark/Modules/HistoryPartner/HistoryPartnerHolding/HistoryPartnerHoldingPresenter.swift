@@ -31,4 +31,14 @@ class HistoryPartnerHoldingPresenter: HistoryPartnerHoldingPresenterProtocol, Hi
             ProgressView.shared.hide()
         }
     }
+    
+    func checkoutParking(bookingID: String, code: String, licensePlates: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: licensePlates, success: { (historyParkingDetail) in
+            ProgressView.shared.hide()
+            self.view?.didCheckout(historyParkingDetail: historyParkingDetail)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

@@ -60,7 +60,7 @@ class LoginViewController: BaseViewController {
     override func setTitleUI() {
 
         vUserName.setPlaceHolder(placeholder: LocalizableKey.username.showLanguage)
-        vUserName.setImage(img: AppImage.iconUsername)
+        vUserName.setImage(img: UIImage(named: "ic_person"))
         vPassword.setPlaceHolder(placeholder: LocalizableKey.LoginPassword.showLanguage)
         vPassword.setImage(img:  AppImage.iconPadlock)
         vUserName.backgroundColor = AppColor.color_32_45_55

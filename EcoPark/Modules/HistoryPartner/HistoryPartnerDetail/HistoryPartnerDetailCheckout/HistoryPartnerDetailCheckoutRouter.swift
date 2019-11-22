@@ -27,4 +27,19 @@ class HistoryPartnerDetailCheckoutRouter: HistoryPartnerDetailCheckoutWireframeP
 
         return view
     }
+    
+    static func createModule(historyParkingDetail: HistoryBookingParkingResponse?) -> UIViewController {
+        // Change to get view from storyboard if not using progammatic UI
+        let view = HistoryPartnerDetailCheckoutViewController(nibName: nil, bundle: nil)
+        let interactor = HistoryPartnerDetailCheckoutInteractor()
+        let router = HistoryPartnerDetailCheckoutRouter()
+        let presenter = HistoryPartnerDetailCheckoutPresenter(interface: view, interactor: interactor, router: router)
+
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+
+        view.historyParkingDetail = historyParkingDetail
+        return view
+    }
 }

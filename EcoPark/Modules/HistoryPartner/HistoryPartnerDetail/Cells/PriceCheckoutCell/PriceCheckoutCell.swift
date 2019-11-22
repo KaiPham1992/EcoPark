@@ -14,10 +14,10 @@ class PriceCheckoutCell: UITableViewCell {
     @IBOutlet weak var lbPriceACombo: UILabel!
     @IBOutlet weak var lbTimeHolding: UILabel!
     @IBOutlet weak var lbPriceParking: UILabel!
-    @IBOutlet weak var lbPriceAHoursPrice: UILabel!
     @IBOutlet weak var lbPaid: UILabel!
     @IBOutlet weak var lbPaidWithWallet: UILabel!
     @IBOutlet weak var lbPaidWithCash: UILabel!
+    @IBOutlet weak var lbPriceAHoursPrice: UILabel!
     @IBOutlet weak var lbPriceComboPrice: UILabel!
     @IBOutlet weak var lbHoldingTime: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
@@ -34,6 +34,18 @@ class PriceCheckoutCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        
+        self.lbPriceAHoursPrice.text = _historyParkingDetail.price
+        self.lbPriceComboPrice.text = _historyParkingDetail.package_price
+//        self.lbHoldingTime.text = _historyParkingDetail.
+        self.lblPrice.text = _historyParkingDetail.price
+        self.lbPaidPrice.text = _historyParkingDetail.money_paid?.toCurrency
+        self.lbPaidWithWalletPrice.text = _historyParkingDetail.payment_wallet?.toCurrency
+        self.lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrency
     }
     
 }

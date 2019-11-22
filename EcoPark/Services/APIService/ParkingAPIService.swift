@@ -20,6 +20,7 @@ protocol ParkingAPIServiceProtocol {
     func getHistoryBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
     func getHistoryMyParking(parkingID: String, status: String, keyword: String, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure)
     func getHistoryParkingDetail(parkingID: String, bookingID: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure)
+    func checkoutParking(bookingID: String, code: String, license_plates: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure)
 }
 
 class ParkingAPIService: ParkingAPIServiceProtocol {
@@ -81,6 +82,11 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
     
     func getHistoryParkingDetail(parkingID: String, bookingID: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure) {
         let endPoint = ParkingEndPoint.getHistoryParkingDetail(parkingID: parkingID, bookingID: bookingID)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
+    }
+    
+    func checkoutParking(bookingID: String, code: String, license_plates: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates)
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
 }
