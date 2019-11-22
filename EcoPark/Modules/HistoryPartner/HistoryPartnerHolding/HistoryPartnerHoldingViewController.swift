@@ -24,7 +24,6 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         }
     }
     
-    var indexTap: Int = 0
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +36,8 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: "Tìm theo biển số xe")
         vSearch.tapToTextField = {
             let keyword = self.vSearch.tfInput.text!
-            self.presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: keyword)
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            self.presenter?.getHistoryReservation(parkingID: "25", status: "reservation", keyword: keyword)
         }
     }
     
@@ -47,7 +47,8 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     }
     
     private func getData() {
-        presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: "")
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+        presenter?.getHistoryReservation(parkingID: "25", status: "reservation", keyword: "")
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {
@@ -88,7 +89,7 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: historyParkingReservation?.booking[indexTap].parking_id ?? "", bookingID: historyParkingReservation?.booking[indexTap].id ?? ""))
+        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: historyParkingReservation?.booking[indexPath.item].parking_id ?? "", bookingID: historyParkingReservation?.booking[indexPath.item].id ?? ""))
     }
 }
 

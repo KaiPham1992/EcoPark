@@ -18,6 +18,7 @@ protocol HistoryPartnerWireframeProtocol: class {
 protocol HistoryPartnerPresenterProtocol: class {
 
     var interactor: HistoryPartnerInteractorInputProtocol? { get set }
+    func getHistoryParking(parkingID: String, status: String, keyword: String)
 }
 
 //MARK: Interactor -
@@ -39,4 +40,5 @@ protocol HistoryPartnerViewProtocol: class {
     var presenter: HistoryPartnerPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didGetHistoryParking(historyParking: HistoryMyParkingEntity?)
 }

@@ -39,12 +39,14 @@ class HistoryPartnerBookingViewController: BaseViewController {
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: "Tìm theo biển số xe")
         vSearch.tapToTextField = {
             let keyword = self.vSearch.tfInput.text!
-            self.presenter?.getHistoryParkingBooking(parkingID: "2", status: "checked_in", keyword: keyword)
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            self.presenter?.getHistoryParkingBooking(parkingID: "25", status: "checked_in", keyword: keyword)
         }
     }
     
     private func getData() {
-        presenter?.getHistoryParkingBooking(parkingID: "2", status: "checked_in", keyword: "")
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+        presenter?.getHistoryParkingBooking(parkingID: "25", status: "checked_in", keyword: "")
     }
 }
 
@@ -69,7 +71,7 @@ extension HistoryPartnerBookingViewController: UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.push(controller: HistoryPartnerDetailBookingRouter.createModule())
+        self.push(controller: HistoryPartnerDetailBookingRouter.createModule(parkingID: historyParkingBooking?.booking[indexPath.item].parking_id ?? "", bookingID: historyParkingBooking?.booking[indexPath.item].id ?? ""))
     }
 }
 

@@ -13,12 +13,53 @@ import XLPagerTabStrip
 
 class HistoryPartnerViewController: UIViewController, HistoryPartnerViewProtocol {
 
+    @IBOutlet weak var tbHistoryParking: UITableView!
+    
+    var historyParking: HistoryMyParkingEntity? {
+        didSet{
+            tbHistoryParking.reloadData()
+        }
+    }
+    
 	var presenter: HistoryPartnerPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+        presenter?.getHistoryParking(parkingID: "25", status: "history", keyword: "")
+    }
+    
+    
+    func didGetHistoryParking(historyParking: HistoryMyParkingEntity?) {
+        self.historyParking = historyParking
+    }
+}
+
+extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func configTableView() {
+        tbHistoryParking.delegate = self
+        tbHistoryParking.dataSource = self
+        
+        tbHistoryParking.registerXibFile(HistoryParnerCell.self)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return historyParking?.booking.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueTableCell(HistoryParnerCell.self)
+        let status = historyParking?.booking[indexPath.item].status
+        cell.setDataHistoryParking(status: status&)
+        cell.setDataHistory(historyParking: historyParking?.booking[indexPath.item])
+        return cell
+    }
 }
 
 extension HistoryPartnerViewController: IndicatorInfoProvider {

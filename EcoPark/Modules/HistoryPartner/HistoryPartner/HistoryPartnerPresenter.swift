@@ -22,4 +22,11 @@ class HistoryPartnerPresenter: HistoryPartnerPresenterProtocol, HistoryPartnerIn
         self.router = router
     }
 
+    func getHistoryParking(parkingID: String, status: String, keyword: String) {
+        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, success: { (historyParking) in
+            self.view?.didGetHistoryParking(historyParking: historyParking)
+        }) { (error) in
+            
+        }
+    }
 }
