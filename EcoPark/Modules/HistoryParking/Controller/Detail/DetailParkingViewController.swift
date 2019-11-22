@@ -15,7 +15,7 @@ protocol DetailParkingViewControllerDelegate: class {
     func dataChanged()
 }
 
-class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol {
+class DetailParkingViewController: BaseViewController {
     
     var presenter: DetailParkingPresenterProtocol?
     
@@ -52,29 +52,12 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     
     //    var type : TypeDetailParking = .checkin
     var bookingParking: HistoryBookingParkingResponse?
+    var bookingDetailEntity: BookingDetailEntity?
     
     weak var delegate: DetailParkingViewControllerDelegate?
     
     override func setUpViews() {
         super.setUpViews()
-        //        if type == .complete {
-        //                    viewRate.isHidden = false
-        //                    heightOfRating.constant = 0
-        //            heightOfButtonCancel.constant = 0
-        //            heightOfButtonExtend.constant = 0
-        //            btnBottom.isHidden = true
-        //        } else {
-//                    heightOfRating.constant = 0
-//                    heightOfButtonCancel.constant = 50
-//                    heightOfButtonExtend.constant = 50
-        //            btnBottom.isHidden = false
-        //            if type == .checkin {
-        //                btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
-        //            } else {
-        //                btnBottom.setTitle("Đánh giá dịch vụ bãi xe", for: .normal)
-        //            }
-        //            viewRate.isHidden = true
-        //        }
         
         ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: "Liên hệ bãi")
         ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: "Chỉ đường")
@@ -113,7 +96,7 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     }
     
     func displayData(info: BookingDetailEntity) {
-        
+        bookingDetailEntity = info
         showGeneralInfo(info: info)
         let status = info.status&
         switch status {
@@ -250,6 +233,27 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
         }
     }
     
+    @IBAction func btnBottomTapped() {
+        guard let status = bookingDetailEntity?.status& else { return }
+        switch status {
+        case StatusBooking.reservation.rawValue:
+            let vc = QRScannerRouter.createModule()
+            self.present(controller: vc)
+   
+        case StatusBooking.checked_in.rawValue:
+           break
+        case StatusBooking.checked_out.rawValue:
+            break
+        case StatusBooking.cancel.rawValue:
+            break
+        default:
+            break
+        }
+    }
+}
+
+extension DetailParkingViewController: DetailParkingViewProtocol {
+    
     // MARK: Extend reservation
     func extendReservation() {
         PopUpHelper.shared.showExtendReservation(width: popUpwidth, completionYes: {
@@ -281,5 +285,4 @@ class DetailParkingViewController: BaseViewController, DetailParkingViewProtocol
     func didGetError(error: APIError) {
         printError(message: error.message)
     }
-    
 }
