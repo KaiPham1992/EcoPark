@@ -247,15 +247,13 @@ class DetailParkingViewController: BaseViewController {
         guard let status = bookingDetailEntity?.status& else { return }
         switch status {
         case StatusBooking.reservation.rawValue:
-            //            let vc = QRScannerRouter.createModule()
-            //            vc.completionCode = { qrCode in
-            //
-            //            }
-            //            self.present(controller: vc)
+            let vc = AppQRScanerViewController.createModule(isCheckIn: true)
+            vc.completionCode = { bossParkingId in
+                guard let parkingId = self.bookingParking?.parking_id else { return }
+                self.presenter?.scanQRCheckIn(parkingId: parkingId, bossParkingId: bossParkingId&)
+            }
             
-            
-            guard let parkingId = bookingParking?.parking_id else { return }
-            presenter?.scanQRCheckIn(parkingId: parkingId, bossParkingId: "14")
+            self.push(controller: vc)
             
         case StatusBooking.checked_in.rawValue:
             guard let bookingId =  bookingParking?.id, let licensePlate = bookingParking?.license_plates else { return }
