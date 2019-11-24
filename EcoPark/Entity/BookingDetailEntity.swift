@@ -35,6 +35,7 @@ class BookingDetailEntity: BaseEntity {
     var plus_wallet_boss: Double?
     var payment: Double?
     var customer_payment_wallet: Double?
+    var rating: Int?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -66,6 +67,7 @@ class BookingDetailEntity: BaseEntity {
         self.plus_wallet_boss <- (map["plus_wallet_boss"], StringToDoubleTransform())
         self.payment <- (map["payment"], StringToDoubleTransform())
         self.customer_payment_wallet <- (map["customer_payment_wallet"], StringToDoubleTransform())
+        self.rating <- (map["rating"], StringToIntTransform())
         
         
     }

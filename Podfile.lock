@@ -97,6 +97,7 @@ PODS:
   - ObjectMapper (3.5.1)
   - Popover (1.2.2)
   - Protobuf (3.10.0)
+  - QRCodeReader.swift (10.1.0)
   - SDWebImage (5.2.1):
     - SDWebImage/Core (= 5.2.1)
   - SDWebImage/Core (5.2.1)
@@ -119,6 +120,7 @@ DEPENDENCIES:
   - netfox (= 1.16.0)
   - ObjectMapper (= 3.5.1)
   - Popover (= 1.2.2)
+  - QRCodeReader.swift (~> 10.1.0)
   - SDWebImage (= 5.2.1)
   - SwiftyJSON (= 5.0.0)
   - XLPagerTabStrip (= 9.0.0)
@@ -151,6 +153,7 @@ SPEC REPOS:
     - ObjectMapper
     - Popover
     - Protobuf
+    - QRCodeReader.swift
     - SDWebImage
     - SwiftyJSON
     - XLPagerTabStrip
@@ -182,11 +185,12 @@ SPEC CHECKSUMS:
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Popover: 21e357f86d45c8d9e29a41a4adbca3664d6e511f
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   SDWebImage: 336f6958a13d5e8347a317cd68a9f6ee9aaaaf03
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: fd8f0dcc34a2de49d6f9afcbf8ccf58c61c85ad6
+PODFILE CHECKSUM: 268a5b05186410cc6f48a91aa45997cf06f13583
 
 COCOAPODS: 1.8.4

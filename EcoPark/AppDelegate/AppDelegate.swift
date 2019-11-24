@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //---
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-//        checkLogin()
+        checkLogin()
 //        realmConfig()
 
         AppRouter.shared.openHomeView()
@@ -59,19 +59,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-//    func checkLogin() {
-//        Provider.shared.userAPIService.checkLogin(success: { _ in
-//
-//        }) { _error in
-//            if let _ = _error?.code {
-//                UserDefaultHelper.shared.clearUser()
+    func checkLogin() {
+        Provider.shared.userAPIService.checkLogin(success: { _ in
+
+        }) { _error in
+            if let _ = _error?.code {
+                UserDefaultHelper.shared.clearUser()
 //                AppRouter.shared.openLogin()
-//                return
-//            } else {
-//                return
-//            }
-//        }
-//    }
+                return
+            } else {
+                return
+            }
+        }
+    }
     
     func realmConfig() {
 //        let config = Realm.Configuration(schemaVersion: 2, migrationBlock: { (migration, oldSchemaVersion) in

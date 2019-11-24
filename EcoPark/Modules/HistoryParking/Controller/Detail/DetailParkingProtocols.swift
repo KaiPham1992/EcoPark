@@ -21,6 +21,9 @@ protocol DetailParkingPresenterProtocol: class {
     func getBookingDetail(id: String)
     func cancelReservation(id: String)
     func extendReservation(id: String)
+    func scanQRCheckIn(parkingId: String, bossParkingId: String)
+    func scanQRCheckOut(bookingId: String, code: String, licensePlates: String)
+    func ratingBooking(bookingId: String, rating: String)
 }
 
 //MARK: Interactor -
@@ -51,6 +54,8 @@ protocol DetailParkingViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetError(error: APIError)
     func didGetBookingDetail(info: BookingDetailEntity)
+    func didGetRating(rating: RatingEntity)
     func didCancelReservation()
     func didExtendReservation(info: BookingDetailEntity)
+   
 }

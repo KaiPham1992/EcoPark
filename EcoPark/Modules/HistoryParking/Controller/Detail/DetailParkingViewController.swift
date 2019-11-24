@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Cosmos
 
 // use for USER
 protocol DetailParkingViewControllerDelegate: class {
@@ -49,6 +50,8 @@ class DetailParkingViewController: BaseViewController {
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbStatus: UILabel!
+    
+     @IBOutlet weak var vRating: CosmosView!
     
     //    var type : TypeDetailParking = .checkin
     var bookingParking: HistoryBookingParkingResponse?
@@ -129,6 +132,11 @@ class DetailParkingViewController: BaseViewController {
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
             
+            if let rating = info.rating, rating != 0 {
+                vRating.rating = Double(rating)
+                heightOfRating.constant = 50
+            }
+            
         case StatusBooking.cancel.rawValue:
             lbStatus.text = "Đã huỷ"
             lbStatus.textColor = UIColor.red
@@ -204,6 +212,8 @@ class DetailParkingViewController: BaseViewController {
         if let timeCheckOut = info.time_check_out {
             DLVCheckIn.setValueText(text: timeCheckOut.toString(dateFormat: .ecoTime))
         }
+        
+        
     }
     
     @IBAction func btnCancelTapped() {
@@ -237,12 +247,29 @@ class DetailParkingViewController: BaseViewController {
         guard let status = bookingDetailEntity?.status& else { return }
         switch status {
         case StatusBooking.reservation.rawValue:
-            let vc = QRScannerRouter.createModule()
-            self.present(controller: vc)
-   
+            //            let vc = QRScannerRouter.createModule()
+            //            vc.completionCode = { qrCode in
+            //
+            //            }
+            //            self.present(controller: vc)
+            
+            
+            guard let parkingId = bookingParking?.parking_id else { return }
+            presenter?.scanQRCheckIn(parkingId: parkingId, bossParkingId: "14")
+            
         case StatusBooking.checked_in.rawValue:
-           break
+            guard let bookingId =  bookingParking?.id, let licensePlate = bookingParking?.license_plates else { return }
+            presenter?.scanQRCheckOut(bookingId: bookingId, code: "1222222", licensePlates: licensePlate)
+            break
         case StatusBooking.checked_out.rawValue:
+            PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {
+                //---
+            }) { number in
+                guard let number = number as? Double, let bookingId =  self.bookingParking?.id else { return }
+                
+                self.presenter?.ratingBooking(bookingId: bookingId, rating: Int(number).description)
+                
+            }
             break
         case StatusBooking.cancel.rawValue:
             break
@@ -284,5 +311,10 @@ extension DetailParkingViewController: DetailParkingViewProtocol {
     // MARK: Error
     func didGetError(error: APIError) {
         printError(message: error.message)
+        PopUpHelper.shared.showError(message: error.message&.showLanguage, completionYes: nil)
+    }
+    
+    func didGetRating(rating: RatingEntity) {
+        getBookingDetail()
     }
 }

@@ -496,6 +496,9 @@
 		229A7A4A236EB39E007A7C62 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A7A3A236EB39E007A7C62 /* WalletViewController.xib */; };
 		229A7A4B236EB39E007A7C62 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A7A3A236EB39E007A7C62 /* WalletViewController.xib */; };
 		229A7A4C236EB39E007A7C62 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A7A3A236EB39E007A7C62 /* WalletViewController.xib */; };
+		229B69DB2388FC7B00B43C90 /* RatingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B69DA2388FC7B00B43C90 /* RatingEntity.swift */; };
+		229B69DC2388FC7B00B43C90 /* RatingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B69DA2388FC7B00B43C90 /* RatingEntity.swift */; };
+		229B69DD2388FC7B00B43C90 /* RatingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B69DA2388FC7B00B43C90 /* RatingEntity.swift */; };
 		22AE2208236C1A6100148E2C /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE2206236C1A6000148E2C /* AppRatingView.swift */; };
 		22AE2209236C1A6100148E2C /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE2206236C1A6000148E2C /* AppRatingView.swift */; };
 		22AE220A236C1A6100148E2C /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE2206236C1A6000148E2C /* AppRatingView.swift */; };
@@ -1821,6 +1824,7 @@
 		229A7A38236EB39E007A7C62 /* WalletRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRouter.swift; sourceTree = "<group>"; };
 		229A7A39236EB39E007A7C62 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		229A7A3A236EB39E007A7C62 /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
+		229B69DA2388FC7B00B43C90 /* RatingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingEntity.swift; sourceTree = "<group>"; };
 		22AE2206236C1A6000148E2C /* AppRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
 		22AE2207236C1A6100148E2C /* AppRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppRatingView.xib; sourceTree = "<group>"; };
 		22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppImageSlide.swift; sourceTree = "<group>"; };
@@ -3927,6 +3931,7 @@
 				760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */,
 				762EAB2523784EE80079A31F /* WalletEntity.swift */,
 				762EAB29237852E20079A31F /* HistoryWalletEntity.swift */,
+				229B69DA2388FC7B00B43C90 /* RatingEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -5114,6 +5119,7 @@
 				DE361E672283E60500FA3B0D /* AppImage.swift in Sources */,
 				17C2C4C6236C28040020B299 /* ParkingInfoCell.swift in Sources */,
 				17C7FB9123700A1800ACE95D /* AppCollectionPhoto.swift in Sources */,
+				229B69DB2388FC7B00B43C90 /* RatingEntity.swift in Sources */,
 				17FCC5B9236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE95317B228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
 				2203D572236585550055E79F /* FindAroundMeCell.swift in Sources */,
@@ -5548,6 +5554,7 @@
 				DE952FC82287DF4800E3F688 /* NotificationEntity.swift in Sources */,
 				22EB901C23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				17C7FB9223700A1800ACE95D /* AppCollectionPhoto.swift in Sources */,
+				229B69DC2388FC7B00B43C90 /* RatingEntity.swift in Sources */,
 				DE952FC92287DF4800E3F688 /* AppImage.swift in Sources */,
 				17FCC5BA236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,
 				DE95317C228846D400E3F688 /* ChangePasswordPresenter.swift in Sources */,
@@ -5982,6 +5989,7 @@
 				DE9530752287DF6400E3F688 /* KActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				DE9530762287DF6400E3F688 /* NotificationEntity.swift in Sources */,
 				17C7FB9323700A1800ACE95D /* AppCollectionPhoto.swift in Sources */,
+				229B69DD2388FC7B00B43C90 /* RatingEntity.swift in Sources */,
 				22EB901D23684B1100F77BC0 /* BookingInfoProtocols.swift in Sources */,
 				DE9530772287DF6400E3F688 /* AppImage.swift in Sources */,
 				17FCC5BB236AB7A9003E98D8 /* SignUpPartnerStep3Protocols.swift in Sources */,

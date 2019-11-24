@@ -49,7 +49,7 @@
                     <rect key="frame" x="3" y="3" width="27" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cn-rM-BZu">
-                            <rect key="frame" x="6" y="4" width="15.5" height="37"/>
+                            <rect key="frame" x="6" y="7" width="15.5" height="31.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="27"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                     <rect key="frame" x="33" y="3" width="27" height="45"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veW-GJ-Xys">
-                            <rect key="frame" x="6" y="4" width="15.5" height="37"/>
+                            <rect key="frame" x="6" y="7" width="15.5" height="31.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="27"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -100,7 +100,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BS-6W-h0a">
-                    <rect key="frame" x="15" y="56" width="33" height="18"/>
+                    <rect key="frame" x="15.5" y="56" width="32" height="15.5"/>
                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                     <color key="textColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>

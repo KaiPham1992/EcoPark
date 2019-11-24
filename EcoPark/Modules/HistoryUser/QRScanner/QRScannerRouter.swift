@@ -14,9 +14,9 @@ class QRScannerRouter: QRScannerWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule() -> QRScannerViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = QRScannerViewController(nibName: nil, bundle: nil)
+        let view = QRScannerViewController.initFromNib()
         let interactor = QRScannerInteractor()
         let router = QRScannerRouter()
         let presenter = QRScannerPresenter(interface: view, interactor: interactor, router: router)

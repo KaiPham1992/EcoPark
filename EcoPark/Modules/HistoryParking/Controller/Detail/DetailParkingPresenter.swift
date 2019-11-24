@@ -11,11 +11,11 @@
 import UIKit
 
 class DetailParkingPresenter: DetailParkingPresenterProtocol, DetailParkingInteractorOutputProtocol {
-
+    
     weak private var view: DetailParkingViewProtocol?
     var interactor: DetailParkingInteractorInputProtocol?
     private let router: DetailParkingWireframeProtocol
-
+    
     init(interface: DetailParkingViewProtocol, interactor: DetailParkingInteractorInputProtocol?, router: DetailParkingWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
@@ -49,5 +49,46 @@ class DetailParkingPresenter: DetailParkingPresenterProtocol, DetailParkingInter
     func didExtendReservation(info: BookingDetailEntity) {
         self.view?.didExtendReservation(info: info)
     }
-
+    
+    func scanQRCheckIn(parkingId: String, bossParkingId: String) {
+        ProgressView.shared.show()
+        
+        Provider.shared.userAPIService.scanQRCheckIn(parkingId: parkingId, bossParkingId: bossParkingId, success: { bookingDetail in
+            ProgressView.shared.hide()
+            guard let bookingDetail = bookingDetail else { return }
+            self.view?.didGetBookingDetail(info: bookingDetail)
+        }) { error in
+            ProgressView.shared.hide()
+            guard let error = error else { return }
+            self.view?.didGetError(error: error)
+        }
+    }
+    
+    func scanQRCheckOut(bookingId: String, code: String, licensePlates: String) {
+        ProgressView.shared.show()
+        
+        Provider.shared.userAPIService.scanQRCheckOut(bookingId: bookingId, code: code, licensePlates: licensePlates, success: { bookingDetail in
+            ProgressView.shared.hide()
+            guard let bookingDetail = bookingDetail else { return }
+            self.view?.didGetBookingDetail(info: bookingDetail)
+        }, failure: { error in
+            ProgressView.shared.hide()
+            guard let error = error else { return }
+            self.view?.didGetError(error: error)
+        })
+    }
+    
+    func ratingBooking(bookingId: String, rating: String) {
+        ProgressView.shared.show()
+        Provider.shared.bookingAPIService.ratingBooking(bookingId: bookingId, rating: rating, success: { ratingEntity in
+            ProgressView.shared.hide()
+            guard let ratingEntity = ratingEntity else { return }
+            self.view?.didGetRating(rating: ratingEntity)
+        }, failure: { error in
+            ProgressView.shared.hide()
+            guard let error = error else { return }
+            self.view?.didGetError(error: error)
+        })
+    }
+    
 }

@@ -51,11 +51,17 @@ enum UserEndPoint {
     case getParking(lat: String, long: String, star: [Int], distance: String)
     case getWallet
     case getWalletHistory(offset: Int, limit: Int)
+    case scanQRCheckIn(parkingId: String, bossParkingId: String)
+    case scanQRCheckOut(bookingId: String, code: String, licensePlates: String)
 }
 
 extension UserEndPoint: EndPointType {
     var path: String {
         switch self {
+        case .scanQRCheckIn:
+            return "_api/user/scan_qr_checkin"
+        case .scanQRCheckOut:
+            return "_api/user/scan_qr_checkout"
         case .login(_, _):
             return "_api/user/login"
         case .fogotPassword(_):
@@ -124,7 +130,7 @@ extension UserEndPoint: EndPointType {
         
         switch self {
             
-        case .login, .fogotPassword, .checkLogin, .logout, .loginGmail, .loginFacebook, .verifyPhone, .getPointHistory, .getListFavorite, .addFavorite, .addFavoriteStaff, .signUp, .uploadAvatar, .postRating, .getFavourite, .getHistoryBuy, .removeFavourite, .getHistoryCoin, .getRecordByFavoriteUser, .getGPSPosition, .getRecently, .getPackage, .getParking:
+        case .login, .fogotPassword, .checkLogin, .logout, .loginGmail, .loginFacebook, .verifyPhone, .getPointHistory, .getListFavorite, .addFavorite, .addFavoriteStaff, .signUp, .uploadAvatar, .postRating, .getFavourite, .getHistoryBuy, .removeFavourite, .getHistoryCoin, .getRecordByFavoriteUser, .getGPSPosition, .getRecently, .getPackage, .getParking, .scanQRCheckIn, .scanQRCheckOut:
             return .post
         case .getCaptcha, .getIntroduceList, .getProfileUser:
             return .get
@@ -236,6 +242,10 @@ extension UserEndPoint: EndPointType {
             
         case .getWalletHistory(let offset, let limit):
             return ["offset": offset, "limit": limit]
+        case .scanQRCheckIn(let parkingId, let bossParkingId):
+            return ["parking_id": parkingId, "boss_parking_id": bossParkingId]
+        case .scanQRCheckOut(let bookingId, let code, let licensePlates):
+                return ["booking_id": bookingId, "code": code, "license_plates": licensePlates]
         default:
             return [:]
         }
