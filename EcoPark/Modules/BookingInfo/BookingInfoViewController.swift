@@ -160,6 +160,8 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         }) {
             guard let bookingId = info.id else { return }
 //            self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
+            
+//            DetailParkingRouter.createModule(bookingParking: info)
         }
     }
     

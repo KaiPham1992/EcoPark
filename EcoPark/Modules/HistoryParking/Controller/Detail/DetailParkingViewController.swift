@@ -256,15 +256,17 @@ class DetailParkingViewController: BaseViewController {
             self.push(controller: vc)
             
         case StatusBooking.checked_in.rawValue:
-            guard let bookingId =  bookingParking?.id, let licensePlate = bookingParking?.license_plates else { return }
-            presenter?.scanQRCheckOut(bookingId: bookingId, code: "1222222", licensePlates: licensePlate)
+//            guard let bookingId =  bookingParking?.id, let code = bookingParking?.code, let licensePlate = bookingParking?.license_plates else { return }
+//            presenter?.scanQRCheckOut(bookingId: bookingId, code: code, licensePlates: licensePlate)
+            
+            let vc = CheckOutRouter.createModule(url: self.bookingParking?.urlQRCode)
+            self.push(controller: vc)
             break
         case StatusBooking.checked_out.rawValue:
             PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {
                 //---
             }) { number in
                 guard let number = number as? Double, let bookingId =  self.bookingParking?.id else { return }
-                
                 self.presenter?.ratingBooking(bookingId: bookingId, rating: Int(number).description)
                 
             }

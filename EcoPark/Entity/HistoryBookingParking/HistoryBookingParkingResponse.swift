@@ -44,10 +44,11 @@ class HistoryBookingParkingResponse : BaseEntity {
     var real_money: Double?
     var bonus: Double?
     var customer_payment_wallet: Double?
+    var qrCode: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
-    
+        
         self.fullname <- map["fullname"]
         self.img_src <- map["img_src"]
         self.package_price <- map["package_price"]
@@ -74,6 +75,16 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.bonus <- map["bonus"]
         self.customer_payment_wallet <- map["customer_payment_wallet"]
         self.plus_wallet_boss <- map["plus_wallet_boss"]
+        self.qrCode <- map["qr_code"]
+    }
+    
+    var urlQRCode:  URL? {
+        if let urlString = self.qrCode, let url = URL(string: BASE_URL_IMAGE + urlString) {
+            return url
+            
+        }
+        
+        return nil
     }
     
     var urlAvatar:  URL? {

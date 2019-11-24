@@ -14,13 +14,13 @@ class CheckOutRouter: CheckOutWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(url: URL?) -> CheckOutViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = CheckOutViewController(nibName: nil, bundle: nil)
+        let view = CheckOutViewController.initFromNib()
         let interactor = CheckOutInteractor()
         let router = CheckOutRouter()
         let presenter = CheckOutPresenter(interface: view, interactor: interactor, router: router)
-
+        view.url = url
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

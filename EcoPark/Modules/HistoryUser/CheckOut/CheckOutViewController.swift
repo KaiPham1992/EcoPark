@@ -13,11 +13,16 @@ import UIKit
 class CheckOutViewController: BaseViewController, CheckOutViewProtocol {
 
 	var presenter: CheckOutPresenterProtocol?
+    @IBOutlet weak var imgQRCode: UIImageView!
+    
+    var url: URL?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black
+        
+        imgQRCode.sd_setImage(with: url, placeholderImage: AppImage.imgPlaceHolder)
     }
     
     override func setUpNavigation() {
