@@ -28,12 +28,16 @@ class PageHistoryPartnerViewControler : PageViewController {
         let vc = AppQRScanerViewController.createModule(isCheckIn: false)
         vc.completionCode = { code in
            ///call api checkout
+            
             guard let qrcode = code as? [String] else { return }
-            print(qrcode)
-            let bookingID = qrcode[2]
-            let code = qrcode[4]
-            let licensePlates = qrcode[3]
-            self.callAPICheckout(bookingID: bookingID, code: code, license_plates: licensePlates)
+            if qrcode.count > 5 {
+                print(qrcode)
+                let bookingID = qrcode[2]
+                let code = qrcode[4]
+                let licensePlates = qrcode[3]
+                self.callAPICheckout(bookingID: bookingID, code: code, license_plates: licensePlates)
+            }
+            
         }
         self.push(controller: vc)
     }
@@ -46,7 +50,7 @@ class PageHistoryPartnerViewControler : PageViewController {
         Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
             self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParking))
         }) { (_) in
-            
+            PopUpHelper.shared.showInvalidQR(height: 350, completion: nil)
         }
     }
     

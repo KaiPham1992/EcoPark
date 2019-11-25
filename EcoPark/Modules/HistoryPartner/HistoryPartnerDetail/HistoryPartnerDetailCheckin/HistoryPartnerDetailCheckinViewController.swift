@@ -67,11 +67,13 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
         vc.completionCode = { code in
             
             guard let qrcode = code as? [String] else { return }
-            print(qrcode)
-            let bookingID = qrcode[2]
-            let code = qrcode[4]
-            let licensePlates = qrcode[3]
-            self.presenter?.checkoutParking(bookingID: bookingID, code: code, licensePlates: licensePlates)
+            if qrcode.count > 5 {
+                print(qrcode)
+                let bookingID = qrcode[2]
+                let code = qrcode[4]
+                let licensePlates = qrcode[3]
+                self.presenter?.checkoutParking(bookingID: bookingID, code: code, licensePlates: licensePlates)
+            }
         }
         self.push(controller: vc)
     }
