@@ -65,10 +65,13 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
 //        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
         let vc = AppQRScanerViewController.createModule(isCheckIn: false)
         vc.completionCode = { code in
-            let bookingID = self.historyParkingDetail?.id
-            let code = self.historyParkingDetail?.code
-            let licensePlates = self.historyParkingDetail?.license_plates
-            self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
+            
+            guard let qrcode = code as? [String] else { return }
+            print(qrcode)
+            let bookingID = qrcode[2]
+            let code = qrcode[4]
+            let licensePlates = qrcode[3]
+            self.presenter?.checkoutParking(bookingID: bookingID, code: code, licensePlates: licensePlates)
         }
         self.push(controller: vc)
     }

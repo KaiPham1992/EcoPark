@@ -25,11 +25,15 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     @objc func checkQrCode() {
-//        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
         let vc = AppQRScanerViewController.createModule(isCheckIn: false)
         vc.completionCode = { code in
            ///call api checkout
-            
+            guard let qrcode = code as? [String] else { return }
+            print(qrcode)
+            let bookingID = qrcode[2]
+            let code = qrcode[4]
+            let licensePlates = qrcode[3]
+            self.callAPICheckout(bookingID: bookingID, code: code, license_plates: licensePlates)
         }
         self.push(controller: vc)
     }
@@ -37,4 +41,13 @@ class PageHistoryPartnerViewControler : PageViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return [HistoryPartnerHoldingRouter.createModule(), HistoryPartnerBookingRouter.createModule(), HistoryPartnerRouter.createModule()]
     }
+    
+    func callAPICheckout(bookingID: String, code: String, license_plates: String) {
+        Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
+            self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParking))
+        }) { (_) in
+            
+        }
+    }
+    
 }
