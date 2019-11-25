@@ -114,7 +114,7 @@ class AppQRScanerViewController: BaseViewController {
             base64String = base64String.replacingOccurrences(of: "ENG#", with: "")
             base64String = base64String.replacingOccurrences(of: "#MA", with: "")
             
-            let decodedString = base64String.fromBase64()?.replacingOccurrences(of: "ECO_PARKING", with: "")
+            let decodedString = base64String.fromBase64()
             
             guard let arrayString = decodedString?.split(separator: "#") else { return }
             let mapString = arrayString.map{$0.description}
