@@ -249,9 +249,11 @@ class DetailParkingViewController: BaseViewController {
         switch status {
         case StatusBooking.reservation.rawValue:
             let vc = AppQRScanerViewController.createModule(isCheckIn: true)
-            vc.completionCode = { bossParkingId in
-                guard let parkingId = self.bookingParking?.parking_id else { return }
-                self.presenter?.scanQRCheckIn(parkingId: parkingId, bossParkingId: bossParkingId&)
+            vc.completionCode = { qrcode in
+                guard let qrcode = qrcode as? [String] else { return }
+                if qrcode.count > 2 {
+                    self.presenter?.scanQRCheckIn(parkingId: qrcode[2], bossParkingId: qrcode[1])
+                }
             }
             
             self.push(controller: vc)
