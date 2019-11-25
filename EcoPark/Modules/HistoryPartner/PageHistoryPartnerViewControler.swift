@@ -25,7 +25,13 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     @objc func checkQrCode() {
-        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
+//        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
+        let vc = AppQRScanerViewController.createModule(isCheckIn: false)
+        vc.completionCode = { code in
+           ///call api checkout
+            
+        }
+        self.push(controller: vc)
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

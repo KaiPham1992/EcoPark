@@ -31,6 +31,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var lbOwner: UILabel!
     @IBOutlet weak var vRegisterOwner: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
+    @IBOutlet weak var heightRegisterOwner: NSLayoutConstraint!
+    
     var itemSelected: MenuItem?
     
     var listMenuItem = [MenuItem]() {
@@ -85,8 +87,10 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     func setRegisterOwner() {
         if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.parkingID != "" {
             vRegisterOwner.isHidden = true
+            heightRegisterOwner.constant = 0
         } else {
             vRegisterOwner.isHidden = false
+            heightRegisterOwner.constant = 100
         }
     }
     
