@@ -135,6 +135,7 @@ class DetailParkingViewController: BaseViewController {
             if let rating = info.rating, rating != 0 {
                 vRating.rating = Double(rating)
                 heightOfRating.constant = 50
+                btnBottom.isHidden = true
             }
             
         case StatusBooking.cancel.rawValue:
@@ -256,12 +257,8 @@ class DetailParkingViewController: BaseViewController {
             self.push(controller: vc)
             
         case StatusBooking.checked_in.rawValue:
-//            guard let bookingId =  bookingParking?.id, let code = bookingParking?.code, let licensePlate = bookingParking?.license_plates else { return }
-//            presenter?.scanQRCheckOut(bookingId: bookingId, code: code, licensePlates: licensePlate)
-            
             let vc = CheckOutRouter.createModule(url: self.bookingParking?.urlQRCode)
             self.push(controller: vc)
-            break
         case StatusBooking.checked_out.rawValue:
             PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {
                 //---
