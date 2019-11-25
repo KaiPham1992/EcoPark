@@ -62,7 +62,12 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     }
     
     @IBAction func btnScanQRTapped() {
-        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
+//        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
+        let vc = AppQRScanerViewController.createModule(isCheckIn: true)
+        vc.completionCode = { code in
+            print("=======\(code&)")
+        }
+        self.push(controller: vc)
     }
     
     func didGetData(historyParkingDetail: HistoryBookingParkingResponse?) {
