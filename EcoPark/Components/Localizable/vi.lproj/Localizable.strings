@@ -238,6 +238,7 @@
 "requireTime" = "Bạn chưa chọn giờ đến bãi";
 "requirePlate" = "Bạn chưa nhập biển số xe";
 "requireVehicleType" = "Bạn chưa chọn loại xe";
+"SCAN_QR_FAILED" = "Mã QR code không hợp lệ";
 
 
 // ------------------- English App ---------------- //
