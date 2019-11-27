@@ -576,3 +576,13 @@ extension String {
         return try Validator.validateFor(type: validatorType).validate(value: self)
     }
 }
+
+extension StringProtocol  {
+    var digits: [Int] { compactMap{ $0.wholeNumberValue } }
+}
+extension LosslessStringConvertible {
+    var string: String { .init(self) }
+}
+extension Numeric where Self: LosslessStringConvertible {
+    var digits: [Int] { string.digits }
+}

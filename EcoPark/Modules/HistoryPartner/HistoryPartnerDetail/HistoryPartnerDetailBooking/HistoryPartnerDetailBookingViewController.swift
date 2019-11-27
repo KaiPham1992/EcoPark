@@ -66,6 +66,7 @@ extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITa
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
             timeHoldingCell.setData(historyParkingDetail: historyParkingDetail)
+            
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)

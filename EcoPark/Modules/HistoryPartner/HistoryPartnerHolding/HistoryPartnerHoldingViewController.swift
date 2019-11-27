@@ -37,7 +37,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         vSearch.tapToTextField = {
             let keyword = self.vSearch.tfInput.text!
             guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-            self.presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: keyword)
+            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: keyword)
         }
     }
     
@@ -48,7 +48,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     
     private func getData() {
         guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-        presenter?.getHistoryReservation(parkingID: "2", status: "reservation", keyword: "")
+        presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: "")
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {
