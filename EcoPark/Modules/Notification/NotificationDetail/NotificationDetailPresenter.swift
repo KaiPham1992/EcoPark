@@ -22,4 +22,11 @@ class NotificationDetailPresenter: NotificationDetailPresenterProtocol, Notifica
         self.router = router
     }
 
+    func getNotificationDetail(notificationID: Int) {
+        Provider.shared.notificationAPIService.getNotificationDetail(id: notificationID, success: { (notificationDetail) in
+            self.view?.didGetNotificationDetail(notificationDetail: notificationDetail)
+        }) { (error) in
+            
+        }
+    }
 }

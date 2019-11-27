@@ -9,7 +9,7 @@
 import Alamofire
 
 enum NotificationEndPoint {
-    case getNotification(offset: Int)
+    case getNotification(offset: Int, limit: Int, screen: String)
     case readNotification(notificationId: Int)
     case getNotificationDetail(id: Int)
 }
@@ -21,8 +21,8 @@ extension NotificationEndPoint: EndPointType {
             return "_api/notification/get_notification_list"
         case .readNotification:
             return "_api/notification/read_notifications"
-        case .getNotificationDetail:
-            return "_api/notification/notification_detail"
+        case .getNotificationDetail(let id):
+            return "_api/notification/get_notification_detail/\(id))"
         }
     }
     
@@ -32,12 +32,12 @@ extension NotificationEndPoint: EndPointType {
     
     var parameters: JSONDictionary {
         switch self {
-        case .getNotification(let offset):
-            return ["offset": "\(offset)", "limit": limit]
+        case .getNotification(let offset, let limit, let screen):
+            return ["offset": "\(offset)", "limit": limit, "screen": screen]
         case .readNotification(let id):
             return ["notification_ids": [id]]
-        case .getNotificationDetail(let id):
-            return ["notification_id": id]
+        case .getNotificationDetail:
+            return [: ]
         }
     }
     

@@ -14,7 +14,7 @@ class NotificationDetailRouter: NotificationDetailWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(notificationID: Int) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = NotificationDetailViewController(nibName: nil, bundle: nil)
         let interactor = NotificationDetailInteractor()
@@ -24,7 +24,8 @@ class NotificationDetailRouter: NotificationDetailWireframeProtocol {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
-
+        
+        view.notificationID = notificationID
         return view
     }
 }

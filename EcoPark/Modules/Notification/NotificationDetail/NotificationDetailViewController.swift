@@ -17,8 +17,15 @@ class NotificationDetailViewController: BaseViewController, NotificationDetailVi
     
     @IBOutlet weak var webView: WKWebView!
 
+    var notificationID: Int? = 0
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getNotificationDetail(notificationID: notificationID*)
     }
     
     override func setUpNavigation() {
@@ -28,4 +35,7 @@ class NotificationDetailViewController: BaseViewController, NotificationDetailVi
         setTitleNavigation(title: "Chi tiết thông báo")
     }
 
+    func didGetNotificationDetail(notificationDetail: NotificationEntity?) {
+        
+    }
 }
