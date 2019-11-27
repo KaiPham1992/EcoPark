@@ -59,6 +59,8 @@ class DetailParkingViewController: BaseViewController {
     
     weak var delegate: DetailParkingViewControllerDelegate?
     
+    var timer: Timer?
+    
     override func setUpViews() {
         super.setUpViews()
         
@@ -86,12 +88,24 @@ class DetailParkingViewController: BaseViewController {
         super.viewDidLoad()
         
         getBookingDetail()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+            self.countTime()
+        })
     }
     
     override func setUpNavigation() {
         super.setUpNavigation()
         setTitleNavigation(title: "Chi tiết giao dịch")
         addBackToNavigation()
+    }
+    
+    func countTime() {
+         guard let firstDate = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
+        
+        print(Utils.getTime(date: firstDate))
+        
+        
     }
     
     override func btnBackTapped() {

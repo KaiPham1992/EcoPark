@@ -16,16 +16,25 @@ class Utils {
         let estimateFrame = NSString(string: str).boundingRect(with: size, options: option, attributes: [NSAttributedString.Key.font: customFont], context: nil)
         return estimateFrame.height
     }
-
+    
     class func estimateWidth(_ height: CGFloat, customFont: UIFont, str: String) -> CGFloat {
         let size = CGSize(width: 1000, height: height)
         let option = NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin)
         let estimateFrame = NSString(string: str).boundingRect(with: size, options: option, attributes: [NSAttributedString.Key.font: customFont], context: nil)
         return estimateFrame.width
     }
-
+    
     static func isConnectedToInternet() -> Bool {
         return NetworkReachabilityManager()!.isReachable
+    }
+    
+    static func getTime(date: Double) -> (Int64, Int64, Int64) {
+        let secondDate = Date().timeIntervalSince1970
+        let other = Int64(secondDate - date)
+        let day = Int64(other / 86400)
+        let hour = (other - day * 86400)/3600
+        let minute = (other - day * 86400 - hour * 3600)/60
+        return (day, hour, minute)
     }
 }
 
