@@ -38,13 +38,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP1-18-Yui">
-                                <rect key="frame" x="182" y="19" width="121" height="28"/>
+                                <rect key="frame" x="162" y="19" width="141" height="28"/>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.7686274509803922" blue="0.26666666666666666" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="sYt-jh-QYP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
-                                <state key="normal" title="Cho phép check out">
+                                <state key="normal" title="   Cho phép check out   ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>

@@ -31,6 +31,7 @@ class TimeParkingCell: UITableViewCell {
     var hourOne = 0
     var dayOne = 0
     var dayTwo = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
