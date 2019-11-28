@@ -22,4 +22,13 @@ class SystemNotificationPresenter: SystemNotificationPresenterProtocol, SystemNo
         self.router = router
     }
 
+    func getNotification(screen: String, offset: Int, limit: Int) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.notificationAPIService.getNotification(offset: offset, limit: limit, screen: screen, success: { (notification) in
+            ProgressView.shared.hide()
+            self.view?.didGetNotification(notification: notification)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
 }

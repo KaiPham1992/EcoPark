@@ -36,7 +36,7 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        self.push(controller: NotificationDetailRouter.createModule(), animated: true)
+        self.push(controller: NotificationDetailRouter.createModule(notificationID: 0), animated: true)
     }
     
 }

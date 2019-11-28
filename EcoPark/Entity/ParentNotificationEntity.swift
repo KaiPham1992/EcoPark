@@ -16,7 +16,7 @@ class ParentNotificationEntity: BaseEntity {
     override func mapping(map: Map) {
         super.mapping(map: map)
         self.totalUnread <- map["total_unread"]
-        self.notifications <- map["data_notification"]
+        self.notifications <- map["notification"]
     }
 }
 

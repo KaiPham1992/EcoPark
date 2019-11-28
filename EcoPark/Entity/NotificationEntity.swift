@@ -28,8 +28,8 @@ class NotificationEntity: BaseEntity {
         super.mapping(map: map)
         self.id <- map["_id"]
         self.title <- map["title"]
-        self.content <- map["content"]
-        self.createTime <- (map["created_time_mi"], AppTimestampTransform())
+        self.content <- map["_content"]
+        self.createTime <- (map["create_time_mi"], AppTimestampTransform())
         self.isRead <- map["is_read"]
         self.isReadString <- map["is_read"]
         self.isRead =  self.isReadString == "1"

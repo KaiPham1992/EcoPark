@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NotificationAPIServiceProtocol {
-    func getNotification(offset: Int, success: @escaping SuccessHandler<ParentNotificationEntity>.object, failure: @escaping RequestFailure)
+    func getNotification(offset: Int, limit: Int, screen: String, success: @escaping SuccessHandler<ParentNotificationEntity>.object, failure: @escaping RequestFailure)
     func readNotification(notificationId: Int, success: @escaping SuccessHandler<BaseEntity>.object, failure: @escaping RequestFailure)
     func getNotificationDetail(id: Int, success: @escaping SuccessHandler<NotificationEntity>.object, failure: @escaping RequestFailure)
     
@@ -17,16 +17,19 @@ protocol NotificationAPIServiceProtocol {
 
 class NotificationAPIService: NotificationAPIServiceProtocol {
     
+    
+    
     private let network: APINetworkProtocol
     
     init(network: APINetworkProtocol) {
         self.network = network
     }
     
-    func getNotification(offset: Int, success: @escaping SuccessHandler<ParentNotificationEntity>.object, failure: @escaping RequestFailure) {
-        let endPoint = NotificationEndPoint.getNotification(offset: offset)
+    func getNotification(offset: Int, limit: Int, screen: String, success: @escaping SuccessHandler<ParentNotificationEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = NotificationEndPoint.getNotification(offset: offset, limit: limit, screen: screen)
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
+    
     
     func readNotification(notificationId: Int, success: @escaping SuccessHandler<BaseEntity>.object, failure: @escaping RequestFailure) {
         let endPoint = NotificationEndPoint.readNotification(notificationId: notificationId)

@@ -12,16 +12,28 @@ import UIKit
 import XLPagerTabStrip
 
 class SystemNotificationViewController: ListManagerVC, SystemNotificationViewProtocol {
+    
 
 	var presenter: SystemNotificationPresenterProtocol?
 
+    var notification: ParentNotificationEntity? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
 	override func setUpViews() {
         super.setUpViews()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.initLoadData(data: Array(repeating: 1, count: 10))
+            self.initLoadData(data: Array(repeating: 1, count: self.notification?.notifications.count ?? 0))
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getNotification(screen: "notification", offset: 0, limit: 10)
+    }
+    
     override func registerTableView() {
         super.registerTableView()
         self.tableView.registerXibFile(NotificationCell.self)
@@ -31,14 +43,31 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
     
     override func cellForRowListManager(item: Any, _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeue(NotificationCell.self, for: indexPath)
-        cell.displayData(type: .SystemNotification, status: .IsRead, datetime: "2:20 3/11/2019", content: "Nếu hôm nay bạn bỏ lỡ sẽ không có cơ hội lần sau. SĂN NGAY CƠ HỘI ngàn vàng cùng 9 lượng vàng SJC. Bỏ 5 giây còn hơn nuối tiếc 1 đời")
+        let status = notification?.notifications[indexPath.item].isRead
+        var statusType: NotificationStatus = .UnRead
+        if status ?? false {
+            statusType = NotificationStatus.IsRead
+        } else {
+            statusType = NotificationStatus.UnRead
+        }
+        let dateTime = notification?.notifications[indexPath.item].createTime?.toString(dateFormat: .hhmmddmmyyy)
+        let content = notification?.notifications[indexPath.item].content
+        cell.displayData(type: .SystemNotification, status: statusType, datetime: dateTime&, content: content&)
         return cell
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        self.push(controller: NotificationDetailRouter.createModule(), animated: true)
+        guard let id = notification?.notifications[indexPath.item].id,
+            let notiID = Int(id) else { return }
+        self.push(controller: NotificationDetailRouter.createModule(notificationID: notiID), animated: true)
     }
 
+    func didGetNotification(notification: ParentNotificationEntity?) {
+        self.notification = notification
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.initLoadData(data: Array(repeating: 1, count: self.notification?.notifications.count ?? 0))
+        }
+    }
 }
 
 extension SystemNotificationViewController: IndicatorInfoProvider {
