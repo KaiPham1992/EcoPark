@@ -24,6 +24,16 @@ class TimeView : BaseViewXib {
         
     }
     
+    func setUpTime(time: Int64) {
+        if time < 10 {
+            lblOne.text = "0"
+            lblTwo.text = time.description
+        } else {
+            lblOne.text = time.description[0]
+            lblTwo.text = time.description[1]
+        }
+    }
+    
     func setupTitle(title: String){
         lblTitle.text = title
     }

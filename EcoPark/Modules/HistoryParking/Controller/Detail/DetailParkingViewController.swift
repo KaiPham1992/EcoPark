@@ -88,10 +88,17 @@ class DetailParkingViewController: BaseViewController {
         super.viewDidLoad()
         
         getBookingDetail()
-        
+        timer = nil
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
             self.countTime()
         })
+    }
+    
+    
+    
+    
+    deinit {
+        timer?.invalidate()
     }
     
     override func setUpNavigation() {
@@ -101,14 +108,20 @@ class DetailParkingViewController: BaseViewController {
     }
     
     func countTime() {
-         guard let firstDate = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
+        guard let checkInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
         
-        print(Utils.getTime(date: firstDate))
+        let ddhhmm = Utils.getTime(date: checkInTime)
+        VTHour.setUpTime(time: ddhhmm.1)
+        VTMinute.setUpTime(time: ddhhmm.2)
+        VTDate.setUpTime(time: ddhhmm.0)
+        let numberParking = ddhhmm.0 * 24 + ddhhmm.1
+        DLVNumberParking.setValueText(text: numberParking.description + " giờ")
         
-        
+        print(ddhhmm)
     }
     
     override func btnBackTapped() {
+        timer?.invalidate()
         self.navigationController?.popToRootViewController(animated: true)
     }
     
