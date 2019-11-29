@@ -71,6 +71,7 @@ class MenuCell: BaseTableCell {
     @IBOutlet weak var lbLanguage: UILabel!
     @IBOutlet weak var vNotification: UIView!
     
+    @IBOutlet weak var btnLanguage: UIButton!
     
     var menuItem: MenuItem? {
         didSet {
@@ -92,6 +93,10 @@ class MenuCell: BaseTableCell {
             vNotification.isHidden = menuItem.imgIcon != AppImage.imgNotification
             
         }
+    }
+    
+    func btnLanguagueTapped() {
+        
     }
     
     override func awakeFromNib() {

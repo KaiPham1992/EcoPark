@@ -57,10 +57,10 @@ extension NecContainerViewController: MenuViewControllerDelegate {
             let vcParkingInfo = ParkingInfoRouter.createModule()
             self.openViewController(presentingController: vcParkingInfo)
         case AppImage.imgPrivacy:
-            let webView = WebViewController.initFromNib()
+            let webView = WebViewController.createModule(isTermCondition: true)
             self.openViewController(presentingController: webView)
         case AppImage.imgSecurity:
-            let webView = WebViewController.initFromNib()
+            let webView = WebViewController.createModule(isTermCondition: false)
             self.openViewController(presentingController: webView)
         case AppImage.imgProfile:
             let profile = ProfileRouter.createModule()

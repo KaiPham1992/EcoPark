@@ -256,6 +256,7 @@ struct LocalizableKey {
     
     // --------------- English App ----------------- //
     static let privacyAndPolicy = "PrivacyAndPolicy"
+    static let security = "Security"
     static let pleaseEnterEmail = "pleaseEnterEmail"
     static let pleaseEnterDisplayName = "pleaseEnterDisplayName"
     static let pleaseEnterPassword = "pleaseEnterPassword"

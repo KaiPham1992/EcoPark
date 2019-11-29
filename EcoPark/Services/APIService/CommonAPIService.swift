@@ -10,8 +10,11 @@ import UIKit
 
 protocol CommonAPIServiceProtocol {
     func uploadImage(image: UIImage, success: @escaping SuccessHandler<PhotoEntity>.object, failure: @escaping RequestFailure)
-//    func getNationals( success: @escaping SuccessHandler<NationalEntity>.array, failure: @escaping RequestFailure)
     func changeLanguageCode(success: @escaping SuccessHandler<BaseResponse>.object, failure: @escaping RequestFailure)
+    
+    func getTermAndCondition(success: @escaping SuccessHandler<TermAndConditionResponse>.object,failure: @escaping RequestFailure)
+      
+    func getPolicy(success: @escaping SuccessHandler<TermAndConditionResponse>.object,failure: @escaping RequestFailure)
     
 }
 
@@ -32,9 +35,16 @@ class CommonAPIService: CommonAPIServiceProtocol {
         let endPoint = CommonEndPoint.uploadImages(image: image)
         network.uploadImages(image: image, endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
-//    func getNationals(success: @escaping SuccessHandler<NationalEntity>.array, failure: @escaping RequestFailure) {
-//        let endPoint = CommonEndPoint.getNationals
-//        
-//        network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
-//    }
+    
+    
+    func getTermAndCondition(success: @escaping SuccessHandler<TermAndConditionResponse>.object,failure: @escaping RequestFailure){
+           let endpoint = CommonEndPoint.getTermAndCondition
+           network.requestData(endPoint: endpoint, success: MapperData.mapObject(success), failure: failure)
+       }
+       
+       func getPolicy(success: @escaping SuccessHandler<TermAndConditionResponse>.object, failure: @escaping RequestFailure) {
+           let endpoint = CommonEndPoint.policy
+           network.requestData(endPoint: endpoint, success: MapperData.mapObject(success), failure: failure)
+       }
+    
 }

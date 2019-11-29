@@ -16,50 +16,36 @@ protocol WebViewControllerDelegate: class {
 class WebViewController: BaseViewController {
     
     @IBOutlet weak var webView: WKWebView!
-    var font = """
-    <style>
-    @font-face
-    {
-        font-family: 'Comfortaa';
-        font-weight: normal;
-        src: url(Comfortaa-Regular.ttf);
+    var mainUrl = "_api/webview/terms_of_use"
+    
+    var isTermCondition: Bool = false
+    
+    static func createModule(isTermCondition: Bool) -> WebViewController {
+        let vc = WebViewController.initFromNib()
+        vc.isTermCondition = isTermCondition
+        
+        return vc
     }
-    @font-face
-    {
-        font-family: 'Comfortaa';
-        font-weight: bold;
-        src: url(Comfortaa-Bold.ttf);
-    }
-    </style>
-    """
+    
     
     override func setUpViews() {
         super.setUpViews()
 //        loadData()
-//        webView.navigationDelegate = self
-//        webView.scrollView.delegate = self
-    }
-    
-    private func loadData() {
-//        ProgressView.shared.show()
-//        Provider.shared.homeAPIService.getTermAndCondition(success: { (response) in
-//            ProgressView.shared.hide()
-//            if let _response = response {
-//                self.hideNoData()
-//                let htmlString = self.font + #"<span style="font-family: 'Comfortaa'; font-weight: Regular; font-size: 14; color: black">"# + (_response.content ?? "") + #"</span>"#
-//                self.webView.loadHTMLString(htmlString, baseURL: Bundle.main.bundleURL)
-//            } else {
-//                self.showNoData()
-//            }
-//        }) { (error) in
-//            ProgressView.shared.hide()
-//            self.showNoData()
-//        }
+        webView.navigationDelegate = self
+        webView.scrollView.delegate = self
+        setTitleNavigation(title: LocalizableKey.privacyAndPolicy.showLanguage)
+        if !isTermCondition {
+            mainUrl = "_api/webview/security_policy"
+            setTitleNavigation(title: LocalizableKey.security.showLanguage)
+        }
+        guard let url = URL(string: BASE_URL + "\(mainUrl)") else { return }
+        let request = URLRequest(url: url)
+        webView.load(request)
     }
     
     override func setUpNavigation() {
         super.setUpNavigation()
-        setTitleNavigation(title: LocalizableKey.privacyAndPolicy.showLanguage)
+        
         
         addMenu()
     }

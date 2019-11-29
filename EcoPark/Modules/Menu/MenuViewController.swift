@@ -132,6 +132,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(MenuCell.self, for: indexPath)
         cell.menuItem = self.listMenuItem[indexPath.item]
+        cell.btnLanguage.tag = indexPath.item
+        cell.btnLanguage.addTarget(self, action: #selector(btnLanguageTapped), for: .touchUpInside)
         return cell
     }
     
@@ -155,6 +157,12 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         delegateController?.selected(item: itemSelected)
         
         tbMenu.reloadData()
+    }
+    
+    @objc func btnLanguageTapped() {
+        LanguageHelper.changeLanguage()
+        
+        AppRouter.shared.openHomeView()
     }
 }
 
