@@ -44,8 +44,6 @@ class MenuItem {
             ]
         } else {
             return [
-                //            MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuHistoryParking.showLanguage),
-                //            MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuMyInfo.showLanguage),
                 MenuItem(imgIcon: AppImage.imgFindAround, title: LocalizableKey.MenuFindAround.showLanguage),
                 MenuItem(imgIcon: AppImage.imgHistory, title: LocalizableKey.MenuHistory.showLanguage),
                 MenuItem(imgIcon: AppImage.imgNotification, title: LocalizableKey.MenuNotification.showLanguage),
@@ -79,7 +77,7 @@ class MenuCell: BaseTableCell {
             lbTitle.text = menuItem.title
             imgIcon.image = menuItem.imgIcon
             guard let isSelected = menuItem.isSelected else { return }
-            
+            lbLanguage.text = LocalizableKey.MenuVNEN.showLanguage
             
             if isSelected {
                 lbTitle.textColor = AppColor.color_0_129_255

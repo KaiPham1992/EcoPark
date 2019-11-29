@@ -6,20 +6,25 @@
  Copyright © 2019 demo. All rights reserved.
  */
 
-// Menu Page
-"MenuHistoryParking" = "Lich sử giao dịch bãi xe";
-"MenuMyInfo" = "Thông tin bãi xe của tôi";
-"MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
-"MenuHistory" = "Lịch sử đỗ xe";
-"MenuNotificaiton" = "Thông báo";
-"MenuWallet" = "Tài khoản ví Eco";
-"MenuProfile" = "Thông tin cá nhân";
-"MenuPolicy" = "Điều khoản dịch vụ";
-"MenuSecuriry" = "Chính sách bảo mật";
+
+// Menu Page Ecopark
+"MenuHistoryParking" = "History parking";
+"MenuMyInfo" = "My parking info";
+"MenuFindAround" = "Find Park Around";
+"MenuHistory" = "My history";
+"MenuNotificaiton" = "Notification";
+"MenuWallet" = "Eco Wallet";
+"MenuProfile" = "Profile";
+"MenuPolicy" = "Term and condition";
+"MenuSecuriry" = "Security";
 "MenuHotLine" = "Hotline 1900587";
-"MenuLanguage" = "Ngôn ngữ";
-"MenuNotification" = "Thông báo";
-"MenuSignUpPartner" = "Register as a partner";
+"MenuLanguage" = "Language";
+"Username" = "User name";
+"Language" = "Language:";
+"MenuSignUpPartner" = "Register partner";
+"MenuLogout" = "Logout";
+"MenuVNEN" = "English";
+"MenuLogin" = "Login";
 
 // Login Page
 

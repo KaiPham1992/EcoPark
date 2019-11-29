@@ -22,20 +22,10 @@ struct LocalizableKey {
     static let MenuNotification = "MenuNotification"
     static let MenuWallet = "MenuWallet"
     static let MenuSignUpPartner = "MenuSignUpPartner"
+    static let MenuLogout = "MenuLogout"
+    static let MenuVNEN = "MenuVNEN"
+    static let MenuLogin = "MenuLogin"
     
-    
-    
-//    "MenuHistoryParking" = "Lich sử giao dịch bãi xe";
-//    "MenuMyInfo" = "Thông tin bãi xe của tôi";
-//    "MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
-//    "MenuHistory" = "Lịch sử đỗ xe";
-//    "MenuNotificaiton" = "Thông báo";
-//    "MenuWallet" = "Tài khoản ví Eco";
-//    "MenuProfile" = "Thông tin cá nhân";
-//    "MenuPolicy" = "Điều khoản dịch vụ";
-//    "MenuSecuriry" = "Chính sách bảo mật";
-//    "MenuHotLine" = "Hotline 1900587";
-//    "MenuLanguage" = "Ngôn ngữ";
     // Login Page
     static let LoginEmail = "LoginEmail"
     static let LoginEmailPlaceHolder = "LoginEmailPlaceHolder"

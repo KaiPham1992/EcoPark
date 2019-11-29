@@ -12,13 +12,9 @@ import UIKit
 
 protocol MenuViewControllerDelegate: class {
     
-    //    func openViewController(presentingController: UIViewController)
     func selected(item: MenuItem)
     func loginTapped()
     func signUpPartnerTapped()
-    //    func presentViewController(presentingController: UIViewController)
-    //    func popToRootViewController()
-    //    func closeDrawer()
 }
 
 
@@ -32,6 +28,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var vRegisterOwner: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var heightRegisterOwner: NSLayoutConstraint!
+    @IBOutlet weak var lbLogout: UILabel!
     
     var itemSelected: MenuItem?
     
@@ -67,14 +64,14 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     func setUserName() {
         if UserDefaultHelper.shared.loginUserInfo == nil {
             // not login
-            lbLogin.text = "Đăng Nhập"
+            lbLogin.text = LocalizableKey.MenuLogin.showLanguage
             lbDisplayname.isHidden = true
             lbOwner.isHidden = true
             vRegisterOwner.isHidden = true
             imgAvatar.image = AppImage.iconUsername
         } else {
             // LoggedIn user
-            lbLogin.text = "Đăng Xuất"
+            lbLogin.text = LocalizableKey.MenuLogout.showLanguage
             lbDisplayname.isHidden = false
             lbOwner.isHidden = true
             vRegisterOwner.isHidden = false
