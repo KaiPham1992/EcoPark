@@ -58,8 +58,9 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
         guard let id = notification?.notifications[indexPath.item].id,
-            let notiID = Int(id) else { return }
-        self.push(controller: NotificationDetailRouter.createModule(notificationID: notiID), animated: true)
+            let notiID = Int(id),
+        let content = notification?.notifications[indexPath.item].content else { return }
+        self.push(controller: NotificationDetailRouter.createModule(notificationID: notiID, content: content), animated: true)
     }
 
     func didGetNotification(notification: ParentNotificationEntity?) {
@@ -72,6 +73,6 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
 
 extension SystemNotificationViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Hệ thống")
+        return IndicatorInfo(title: LocalizableKey.System.showLanguage)
     }
 }

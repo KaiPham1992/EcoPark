@@ -18,9 +18,10 @@ class NotificationDetailViewController: BaseViewController, NotificationDetailVi
     @IBOutlet weak var webView: WKWebView!
 
     var notificationID: Int? = 0
-    
+    var content: String? = ""
 	override func viewDidLoad() {
         super.viewDidLoad()
+        webView.loadHTMLString(content ?? "", baseURL: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +33,7 @@ class NotificationDetailViewController: BaseViewController, NotificationDetailVi
         super.setUpNavigation()
         
         addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết thông báo")
+        setTitleNavigation(title: LocalizableKey.NotificationDetail.showLanguage)
     }
 
     func didGetNotificationDetail(notificationDetail: NotificationEntity?) {

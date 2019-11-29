@@ -25,7 +25,9 @@
 "MenuLogout" = "Logout";
 "MenuVNEN" = "English";
 "MenuLogin" = "Login";
-
+"NotificationDetail" = "Notification Detail";
+"System" = "System";
+"Giveme" = "Give me";
 // Login Page
 
 "LoginEmail" = "Email";

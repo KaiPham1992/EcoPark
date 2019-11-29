@@ -25,6 +25,9 @@
 "MenuLogout" = "Đăng xuất";
 "MenuVNEN" = "Tiếng Việt";
 "MenuLogin" = "Đăng nhập";
+"NotificationDetail" = "Chi tiết Thông báo";
+"System" = "Hệ Thống";
+"Giveme" = "Cho Tôi";
 // Login Page
 
 "LoginEmail" = "Email";
