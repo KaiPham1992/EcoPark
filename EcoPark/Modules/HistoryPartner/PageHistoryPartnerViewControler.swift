@@ -10,12 +10,23 @@ import Foundation
 import XLPagerTabStrip
 
 class PageHistoryPartnerViewControler : PageViewController {
+    
+    var parkedNumber: Int? = 0
+    var numberPlace: Int? = 0
+    var bookingReservation: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setTitleNavigation(title: "Lịch sử giao dịch bãi xe")
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_menu"), style: StyleNavigation.left, action: #selector(openMenu))
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_qrcheckout"), style: StyleNavigation.right, action: #selector(checkQrCode))
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        callAPIHistoryPartner()
     }
     
     @objc func openMenu(){
@@ -54,4 +65,14 @@ class PageHistoryPartnerViewControler : PageViewController {
         }
     }
     
+    func callAPIHistoryPartner() {
+        let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID&, status: "reversation", keyword: "", success: { (historyParking) in
+            self.parkedNumber = historyParking?.parked_number
+            self.numberPlace = historyParking?.number_place
+            self.bookingReservation = historyParking?.booking_reservation ?? 0
+        }) { (error) in
+            
+        }
+    }
 }

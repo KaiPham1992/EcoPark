@@ -21,8 +21,9 @@ class HistoryMyParkingEntity: BaseEntity {
     var package_price: String?
     var package_number: String?
     var fullname: String?
-    var number_place: String?
-    var parked_number: String?
+    var number_place: Int?
+    var parked_number: Int?
+    var booking_reservation: Int?
     var reservation_number: Int?
     var current_server_time: Date?
     var booking: [BookingEntity] = []
@@ -45,5 +46,6 @@ class HistoryMyParkingEntity: BaseEntity {
         self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
         self.booking <- map["booking"]
         self.reservation_number <- map["reservation_number"]
+        self.booking_reservation <- map["booking_reservation"]
     }
 }
