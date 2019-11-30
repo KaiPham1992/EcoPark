@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,6 +20,8 @@
             <connections>
                 <outlet property="btnNo" destination="7ED-0T-lVR" id="Dhw-1j-Xjy"/>
                 <outlet property="btnYes" destination="xjc-UU-Kpz" id="Q94-1Y-dn5"/>
+                <outlet property="lbFilter" destination="cZV-nd-j25" id="G44-4H-Qmv"/>
+                <outlet property="lbLevel" destination="plc-pH-avM" id="FGW-Af-906"/>
                 <outlet property="lbMaxDistance" destination="kKw-uf-LLf" id="x1W-3x-XSE"/>
                 <outlet property="slider" destination="mF4-Yx-lGn" id="0LU-QS-57Z"/>
                 <outlet property="starView" destination="h8y-Vz-gdl" id="plU-59-Q8w"/>

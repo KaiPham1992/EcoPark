@@ -289,3 +289,16 @@
 "reservation" = "Đang giữ chỗ";
 "expired" = "Hết hạn";
 "history_parking" = "Lịch sử đỗ xe";
+
+
+//HOME
+"InputDestination" = "Nhập điểm đến";
+"NotEnoughMoneyInWallet" = "Bạn không đủ tiền trong ví";
+"FilterHome" = "Lọc";
+"FilterToolFilter" = "BỘ LỌC";
+"ParkingLevel" = "HẠNG BÃI XE";
+"apply" = "Áp dụng";
+"reset" = "Đặt lại";
+"SelectPosition" = "Chọn vị trí";
+"SelectDestination" = "Chọn điểm đến";
+"CancelFind" = "Huỷ tìm kiếm";

@@ -40,9 +40,9 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     override func setTitleUI() {
         super.setTitleUI()
         if isSelectAddressSignUp {
-            vSearch.setTitleAndPlaceHolder(placeHolder: "Chọn vị trí")
+            vSearch.setTitleAndPlaceHolder(placeHolder: LocalizableKey.SelectPosition.showLanguage)
         } else {
-            vSearch.setTitleAndPlaceHolder(placeHolder: "Chọn điểm đến")
+            vSearch.setTitleAndPlaceHolder(placeHolder: LocalizableKey.SelectDestination.showLanguage)
         }
         
     }
@@ -60,13 +60,13 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
         super.setUpNavigation()
         
         if isSelectAddressSignUp {
-            addButtonTextToNavigation(title: "CHỌN VỊ TRÍ", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
+            addButtonTextToNavigation(title: LocalizableKey.SelectPosition.showLanguage.uppercased(), style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
         } else {
-            addButtonTextToNavigation(title: "CHỌN ĐIỂM ĐẾN", style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
+            addButtonTextToNavigation(title: LocalizableKey.SelectDestination.showLanguage.uppercased(), style: .left, action: nil, textColor: AppColor.color_0_129_255, font: AppFont.fontBold18)
         }
         
         
-        addButtonTextToNavigation(title: "Huỷ tìm kiếm", style: .right, action: #selector(btnCancel), textColor: AppColor.color_0_129_255, font: AppFont.fontRegular15)
+        addButtonTextToNavigation(title: LocalizableKey.CancelFind.showLanguage, style: .right, action: #selector(btnCancel), textColor: AppColor.color_0_129_255, font: AppFont.fontRegular15)
     }
     
     

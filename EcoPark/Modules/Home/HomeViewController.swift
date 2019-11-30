@@ -22,6 +22,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     @IBOutlet weak var vSearch: AppSearchBar!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var vParkingSort: ParkingSortView!
+    @IBOutlet weak var btnFilter: UIButton!
     var marker:GMSMarker!
     
     var locationManager = CLLocationManager()
@@ -49,6 +50,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         vParkingSort.isHidden = true
         
         getParking()
+        
+        btnFilter.setTitle(LocalizableKey.FilterHome.showLanguage, for: UIControl.State.normal)
     }
     
     func getParking() {
@@ -108,7 +111,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     override func setUpViews() {
         super.setUpViews()
-        vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: "Nhập điểm đến")
+        vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: LocalizableKey.InputDestination.showLanguage)
         vSearch.tapToTextField = {
             let vc = HomeFindRouter.createModule()
             vc.delegate = self

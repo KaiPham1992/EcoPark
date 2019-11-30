@@ -522,3 +522,9 @@
 "reservation" = "Reservation";
 "expired" = "Expired";
 "history_parking" = "History parking";
+
+
+// HOME
+"InputDestination" = "Enter destination";
+"NotEnoughMoneyInWallet" = "Not enought money";
+"FilterHome" = "Filter";

@@ -548,4 +548,18 @@ struct LocalizableKey {
     static let reservation = "reservation"
     static let expired = "expired"
     static let history_parking = "history_parking"
+    
+    
+    //HOME
+    static let FilterHome = "FilterHome"
+    static let FilterToolFilter = "FilterToolFilter"
+    static let ParkingLevel = "ParkingLevel"
+    static let reset = "reset"
+    static let apply = "apply"
+    static let InputDestination = "InputDestination"
+    
+    static let SelectPosition = "SelectPosition";
+    static let SelectDestination = "SelectDestination";
+    static let CancelFind = "CancelFind";
+
 }

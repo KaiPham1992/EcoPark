@@ -17,12 +17,21 @@ class HomeFilterPopUpContentView: BaseViewXib {
     @IBOutlet weak var starView: ParkingLevelView!
     var distance = 1000
 
+    
+    @IBOutlet weak var lbFilter: UILabel!
+    @IBOutlet weak var lbLevel: UILabel!
+    
     override func setUpViews() {
         // MARK: For slider
         slider.maximumValue = 1000
         slider.value = 1000
         
         // MARK: For star buttons
+        lbFilter.text = LocalizableKey.FilterToolFilter.showLanguage
+        lbLevel.text = LocalizableKey.ParkingLevel.showLanguage
+        
+        btnNo.setTitle(LocalizableKey.reset.showLanguage, for: .normal)
+        btnYes.setTitle(LocalizableKey.apply.showLanguage, for: .normal)
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
