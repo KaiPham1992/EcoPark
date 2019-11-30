@@ -100,13 +100,15 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         let place = historyParkingReservation?.number_place
         let reservation = historyParkingReservation?.reservation_number
-        return IndicatorInfo(title: "Đang giữ (\(reservation ?? 0)/\(place ?? "0"))")
+        return IndicatorInfo(title: "Đang giữ (\(reservation ?? 0)/\(place ?? 0))")
     }
+    
 }
 
 extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {
         self.historyParkingReservation = historyParking
+        
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {

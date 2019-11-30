@@ -25,6 +25,9 @@ struct LocalizableKey {
     static let MenuLogout = "MenuLogout"
     static let MenuVNEN = "MenuVNEN"
     static let MenuLogin = "MenuLogin"
+    static let NotificationDetail = "NotificationDetail"
+    static let System = "System"
+    static let Giveme = "Giveme"
     
     // Login Page
     static let LoginEmail = "LoginEmail"

@@ -36,13 +36,13 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        self.push(controller: NotificationDetailRouter.createModule(notificationID: 0), animated: true)
+        self.push(controller: NotificationDetailRouter.createModule(notificationID: 0, content: ""), animated: true)
     }
     
 }
 
 extension MyNotificationViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Cho tôi")
+        return IndicatorInfo(title: LocalizableKey.Giveme.showLanguage)
     }
 }
