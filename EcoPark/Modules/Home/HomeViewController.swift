@@ -100,8 +100,28 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @objc func btnCheckIn() {
-        let checkIn = QRScannerRouter.createModule()
-        self.push(controller: checkIn)
+        let vc = AppQRScanerViewController.createModule(isCheckIn: true)
+        vc.completionCode = { qrcode in
+            guard let qrcode = qrcode as? [String] else { return }
+            if qrcode.count > 2 {
+                
+                ProgressView.shared.show()
+                
+                Provider.shared.userAPIService.scanQRCheckIn(parkingId: qrcode[2], bossParkingId: qrcode[1], success: { bookingDetail in
+                    ProgressView.shared.hide()
+                    guard let bookingDetail = bookingDetail else { return }
+                   
+                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
+                    self.push(controller: vc)
+                    
+                }) { error in
+                    ProgressView.shared.hide()
+//                    guard let error = error else { return }
+                }
+            }
+        }
+        
+        self.push(controller: vc)
     }
     
     override func viewWillAppear(_ animated: Bool) {

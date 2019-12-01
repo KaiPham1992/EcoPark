@@ -21,19 +21,19 @@ class DetailParkingRouter: DetailParkingWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-//    static func createModule() -> UIViewController {
-//        // Change to get view from storyboard if not using progammatic UI
-//        let view = DetailParkingViewController(nibName: nil, bundle: nil)
-//        let interactor = DetailParkingInteractor()
-//        let router = DetailParkingRouter()
-//        let presenter = DetailParkingPresenter(interface: view, interactor: interactor, router: router)
-//
-//        view.presenter = presenter
-//        interactor.presenter = presenter
-//        router.viewController = view
-//
-//        return view
-//    }
+    static func createModule(bookingDetailEntity: BookingDetailEntity?) -> DetailParkingViewController {
+        // Change to get view from storyboard if not using progammatic UI
+        let view = DetailParkingViewController.initFromNib()
+        let interactor = DetailParkingInteractor()
+        let router = DetailParkingRouter()
+        let presenter = DetailParkingPresenter(interface: view, interactor: interactor, router: router)
+        view.bookingDetailEntity = bookingDetailEntity
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+
+        return view
+    }
     
     
     static func createModule(bookingParking: HistoryBookingParkingResponse) -> DetailParkingViewController {

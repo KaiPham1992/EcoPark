@@ -88,6 +88,11 @@ class DetailParkingViewController: BaseViewController {
         super.viewDidLoad()
         
         getBookingDetail()
+        
+        if let detail = bookingDetailEntity {
+            displayData(info: detail)
+        }
+        
         timer = nil
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
             self.countTime()
