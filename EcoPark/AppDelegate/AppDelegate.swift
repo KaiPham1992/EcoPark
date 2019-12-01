@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }) { _error in
             if let _ = _error?.code {
                 UserDefaultHelper.shared.clearUser()
-//                AppRouter.shared.openLogin()
+                AppRouter.shared.openHomeView()
                 return
             } else {
                 return

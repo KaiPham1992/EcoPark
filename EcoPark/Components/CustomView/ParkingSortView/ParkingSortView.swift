@@ -21,19 +21,24 @@ class ParkingSortView: BaseViewXib {
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var lbConfigure: UILabel!
     @IBOutlet weak var lbTypeName: UILabel!
+    @IBOutlet weak var lbDetail: UILabel!
     
     var parking: ParkingEntity? {
         didSet {
             guard let parking = parking else { return }
+            lbDetail.text = LocalizableKey.Detail.showLanguage + " >>"
+            btnBooking.setTitle(LocalizableKey.Booking.showLanguage, for: .normal)
             lbName.text = parking.parking_name
             lbTypeName.text = parking.parking_type_name
            
             if let price = parking.price {
-                lbPrice.text = price.toCurrency + "/ giờ"
+                let hour = price > 1 ? LocalizableKey.Hours.showLanguage: LocalizableKey.Hour.showLanguage
+                lbPrice.text = price.toCurrency + "/ \(hour)"
             }
             
             if let packagePrice = parking.package_price, let packageNumber = parking.package_number {
-                lbPackagePrice.text = "\(packagePrice.toCurrency)" + "/ gói " + Int(packageNumber).description + " giờ"
+                let hour = packagePrice > 1 ? LocalizableKey.Hours.showLanguage: LocalizableKey.Hour.showLanguage
+                lbPackagePrice.text = "\(packagePrice.toCurrency)" + "/ \(LocalizableKey.Package.showLanguage) " + Int(packageNumber).description + " \(hour)"
             }
             
             if let rating = parking.rating {
@@ -42,10 +47,10 @@ class ParkingSortView: BaseViewXib {
             
             lbConfigure.text = parking.config_price?.toCurrency
             
-            lbMaximum.text = "Sức chứa tối đa: " + parking.number_place& + " chỗ"
+            lbMaximum.text = "\(LocalizableKey.maxPlaceParking.showLanguage): " + parking.number_place& + " \(LocalizableKey.slot.showLanguage)"
             
             let attr = NSMutableAttributedString()
-            let attr1 = "Thời gian hoạt động: ".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
+            let attr1 = "\(LocalizableKey.TimeAction.showLanguage): ".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
             attr.append(attr1)
             
             if let timeStart = parking.time_start?.toString(dateFormat: AppDateFormat.HHmm),

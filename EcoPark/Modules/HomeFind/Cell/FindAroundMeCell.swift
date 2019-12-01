@@ -9,10 +9,13 @@
 import UIKit
 
 class FindAroundMeCell: BaseTableCell {
+    @IBOutlet weak var lbNearMe: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         addLineWhiteToBottom()
+        
+        lbNearMe.text = LocalizableKey.NearMe.showLanguage
     }
 }

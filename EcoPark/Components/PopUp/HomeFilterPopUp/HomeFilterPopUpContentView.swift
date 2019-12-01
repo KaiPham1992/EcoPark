@@ -19,6 +19,7 @@ class HomeFilterPopUpContentView: BaseViewXib {
 
     
     @IBOutlet weak var lbFilter: UILabel!
+    @IBOutlet weak var lbDistance: UILabel!
     @IBOutlet weak var lbLevel: UILabel!
     
     override func setUpViews() {
@@ -27,6 +28,7 @@ class HomeFilterPopUpContentView: BaseViewXib {
         slider.value = 1000
         
         // MARK: For star buttons
+        lbDistance.text = LocalizableKey.FilterDistance.showLanguage
         lbFilter.text = LocalizableKey.FilterToolFilter.showLanguage
         lbLevel.text = LocalizableKey.ParkingLevel.showLanguage
         

@@ -561,8 +561,17 @@ struct LocalizableKey {
     static let apply = "apply"
     static let InputDestination = "InputDestination"
     
-    static let SelectPosition = "SelectPosition";
-    static let SelectDestination = "SelectDestination";
-    static let CancelFind = "CancelFind";
-
+    static let SelectPosition = "SelectPosition"
+    static let SelectDestination = "SelectDestination"
+    static let CancelFind = "CancelFind"
+    static let FilterDistance = "FilterDistance"
+    static let NearMe = "NearMe"
+    static let Booking = "Booking"
+    static let Hour = "Hour"
+    static let Hours = "Hours"
+    static let Package = "Package"
+    static let maxPlaceParking = "MaxPlaceParking"
+    static let slot = "slot"
+    static let TimeAction = "TimeAction"
+    static let Detail = "Detail"
 }

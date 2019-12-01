@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +22,7 @@
                 <outlet property="btnOver" destination="ajB-iX-apv" id="ozZ-W9-8lI"/>
                 <outlet property="imgIcon" destination="NAg-oM-ccR" id="rgn-0U-joe"/>
                 <outlet property="lbConfigure" destination="LGI-L7-hpe" id="8jk-pr-dVN"/>
+                <outlet property="lbDetail" destination="TOa-Lj-ie0" id="sIo-eR-KLY"/>
                 <outlet property="lbMaximum" destination="QU8-6O-G5O" id="dyI-KQ-SIq"/>
                 <outlet property="lbName" destination="0fy-RK-m8j" id="7ds-Rf-P2K"/>
                 <outlet property="lbPackagePrice" destination="rgY-uA-LNJ" id="dft-ML-sdH"/>
