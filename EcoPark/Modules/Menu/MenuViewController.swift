@@ -30,6 +30,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var heightRegisterOwner: NSLayoutConstraint!
     @IBOutlet weak var lbLogout: UILabel!
     
+    var totalUnread: Int = 0
+    
     var itemSelected: MenuItem?
     
     var listMenuItem = [MenuItem]() {
@@ -59,6 +61,17 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         tbMenu.reloadData()
         setUserName()
         setRegisterOwner()
+        
+        Provider.shared.notificationAPIService.getNotification(offset: 1, limit: 20, screen: "SYSTEM", success: { parent in
+            
+            if let number = parent?.totalUnread {
+                self.totalUnread = number
+            }
+            
+             self.tbMenu.reloadData()
+        }) { error in
+            
+        }
     }
     
     func setUserName() {
@@ -131,6 +144,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.menuItem = self.listMenuItem[indexPath.item]
         cell.btnLanguage.tag = indexPath.item
         cell.btnLanguage.addTarget(self, action: #selector(btnLanguageTapped), for: .touchUpInside)
+        cell.totalUnread = self.totalUnread
+        
         return cell
     }
     

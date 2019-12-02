@@ -70,6 +70,9 @@ class MenuCell: BaseTableCell {
     @IBOutlet weak var vNotification: UIView!
     
     @IBOutlet weak var btnLanguage: UIButton!
+//    @IBOutlet weak var vNotification: UIView!
+    var totalUnread: Int = 0
+    
     
     var menuItem: MenuItem? {
         didSet {
@@ -88,7 +91,11 @@ class MenuCell: BaseTableCell {
             }
             
             lbLanguage.isHidden = menuItem.imgIcon != AppImage.imgLanguage
-            vNotification.isHidden = menuItem.imgIcon != AppImage.imgNotification
+            vNotification.isHidden = true
+            
+            if totalUnread > 0 &&  menuItem.imgIcon == AppImage.imgNotification {
+                 vNotification.isHidden = false
+            }
             
         }
     }
