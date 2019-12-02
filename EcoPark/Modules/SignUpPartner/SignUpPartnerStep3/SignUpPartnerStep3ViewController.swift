@@ -150,7 +150,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         }
         
         if listMaterial == [] {
-            hideError(isHidden: false, message:  "Vui lòng chọn thêm tiện ích")
+            hideError(isHidden: false, message:  LocalizableKey.errorUtility.showLanguage)
             return false
         }
         hideError()

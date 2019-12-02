@@ -64,6 +64,6 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
 
 extension HistoryPartnerViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Lịch sử")
+        return IndicatorInfo(title: LocalizableKey.history.showLanguage)
     }
 }

@@ -38,14 +38,14 @@ class NotificationCell: BaseTableCell {
         setUpTypeUI(type: type)
         
         lbDateTime.text = datetime
-        lbContent.text = content
+        lbContent.text = content.htmlToString
     }
     
     private func setUpTypeUI(type: NotificationType) {
         if type == NotificationType.MyNotification {
-            lbType.text = "Thông báo"
+            lbType.text = LocalizableKey.MenuNotification.showLanguage
         } else {
-            lbType.text = "Hệ thống"
+            lbType.text = LocalizableKey.System.showLanguage
         }
     }
     

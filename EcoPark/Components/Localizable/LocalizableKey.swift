@@ -29,6 +29,14 @@ struct LocalizableKey {
     static let System = "System"
     static let Giveme = "Giveme"
     
+    //other
+    static let searchNumberCar = "searchNumberCar"
+    
+    //Title
+    
+    static let titleHistoryParking = "titleHistoryParking"
+    static let titleHistoryDetail = "titleHistoryDetail"
+    
     // Login Page
     static let LoginEmail = "LoginEmail"
     static let LoginEmailPlaceHolder = "LoginEmailPlaceHolder"
@@ -193,6 +201,7 @@ struct LocalizableKey {
     
     //error
     static let errorMinimunPhoto = "errorMinimunPhoto"
+    static let errorUtility = "errorUtility"
     
     // MARK: ParkingUserDetailViewController
     static let titleParkDetail = "titleParkDetail"
@@ -220,6 +229,8 @@ struct LocalizableKey {
     static let vehicleType = "vehicleType"
     static let eachHours = "eachHours"
     static let eachPackage = "eachPackage"
+    static let hour = "hour"
+    static let minute = "minute"
     
     // MARK: BookingPopUp
     static let bookingPopUpTitle = "bookingPopUpTitle"
@@ -551,6 +562,8 @@ struct LocalizableKey {
     static let reservation = "reservation"
     static let expired = "expired"
     static let history_parking = "history_parking"
+    static let booked = "booked"
+    static let holding = "holding"
     
     
     //HOME

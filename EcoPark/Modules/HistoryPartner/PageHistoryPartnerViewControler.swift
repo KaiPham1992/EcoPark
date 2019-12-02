@@ -18,7 +18,7 @@ class PageHistoryPartnerViewControler : PageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitleNavigation(title: "Lịch sử giao dịch bãi xe")
+        setTitleNavigation(title: LocalizableKey.titleHistoryParking.showLanguage)
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_menu"), style: StyleNavigation.left, action: #selector(openMenu))
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_qrcheckout"), style: StyleNavigation.right, action: #selector(checkQrCode))
         

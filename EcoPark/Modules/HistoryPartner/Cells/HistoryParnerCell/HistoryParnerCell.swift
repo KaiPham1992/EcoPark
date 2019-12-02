@@ -41,7 +41,7 @@ class HistoryParnerCell: UITableViewCell {
     func setDataBookingHistory() {
         btnStatus.backgroundColor = .clear
         btnStatus.setTitleColor(.orange, for: .normal)
-        btnStatus.setTitle("Đang giữ chỗ", for: .normal)
+        btnStatus.setTitle(LocalizableKey.reservation.showLanguage, for: .normal)
     }
     
     func setDataHistoryParking(status: String) {
