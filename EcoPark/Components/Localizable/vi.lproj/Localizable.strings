@@ -7,7 +7,7 @@
 */
 
 // Menu Page Ecopark
-"MenuHistoryParking" = "Lich sử giao dịch bãi xe";
+"MenuHistoryParking" = "Lịch sử giao dịch bãi xe";
 "MenuMyInfo" = "Thông tin bãi xe của tôi";
 "MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
 "MenuHistory" = "Lịch sử đỗ xe";
@@ -28,6 +28,16 @@
 "NotificationDetail" = "Chi tiết Thông báo";
 "System" = "Hệ Thống";
 "Giveme" = "Cho Tôi";
+
+//other
+"searchNumberCar" = "Tìm theo biển số xe";
+
+
+//Title
+"titleHistoryParking" = "Lịch sử giao dịch bãi xe";
+"titleHistoryDetail" = "Chi tiết giao dịch";
+
+
 // Login Page
 
 "LoginEmail" = "Email";
@@ -183,6 +193,7 @@
 "termAndPolicySignUp6" = "của chúng tôi.";
 
 "errorMinimunPhoto" = "Vui lòng chọn ít nhất 2 ảnh bãi xe";
+"errorUtility" = "Vui lòng chọn thêm tiện ích";
 
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Chi tiết bãi xe";
@@ -210,6 +221,8 @@
 "vehicleType" = "Loại xe";
 "eachHours" = "/ giờ";
 "eachPackage" = "/ gói";
+"hour" = "Giờ";
+"minute" = "phút";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Địa chỉ bãi đỗ";
@@ -292,6 +305,8 @@
 "reservation" = "Đang giữ chỗ";
 "expired" = "Hết hạn";
 "history_parking" = "Lịch sử đỗ xe";
+"booked" = "Đã đặt chỗ";
+"holding" = "Đang giữ";
 
 
 //HOME

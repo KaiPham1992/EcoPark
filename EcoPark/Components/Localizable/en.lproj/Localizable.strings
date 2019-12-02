@@ -28,6 +28,18 @@
 "NotificationDetail" = "Notification Detail";
 "System" = "System";
 "Giveme" = "Give me";
+
+//other
+"searchNumberCar" = "Search by license plate";
+"date" = "Date";
+"hour" = "Hour";
+"minute" = "Minute";
+
+//Title
+"titleHistoryParking" = "Parking transaction history";
+"titleHistoryDetail" = "Transaction detail";
+
+
 // Login Page
 
 "LoginEmail" = "Email";
@@ -185,6 +197,7 @@
 "parkingWaitingSignUp" = "Your request to become a partner is in the process of checking. ECOPARKING will contact you as soon as possible.";
 
 "errorMinimunPhoto" = "Please take a picture of your at least 2 photo";
+"errorUtility" = "Please select more utility";
 
 // logout
 "popUpLogout" = "Do you want to logout?";
@@ -524,6 +537,8 @@
 "reservation" = "Reservation";
 "expired" = "Expired";
 "history_parking" = "History parking";
+"booked" = "Booked";
+"holding" = "Holding";
 
 
 // HOME

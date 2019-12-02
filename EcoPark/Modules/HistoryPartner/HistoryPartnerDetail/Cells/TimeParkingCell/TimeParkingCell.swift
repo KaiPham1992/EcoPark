@@ -49,9 +49,9 @@ class TimeParkingCell: UITableViewCell {
     
     private func setupUI() {
         
-        vDay.setupTitle(title: "Ngày")
-        vHour.setupTitle(title: "Giờ")
-        vMinute.setupTitle(title: "Phút")
+        vDay.setupTitle(title: LocalizableKey.date.showLanguage)
+        vHour.setupTitle(title: LocalizableKey.hour.showLanguage)
+        vMinute.setupTitle(title: LocalizableKey.minute.showLanguage)
         
         setupTimeCount()
         

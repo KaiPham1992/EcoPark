@@ -31,7 +31,7 @@ class HistoryPartnerDetailBookingViewController: BaseViewController, HistoryPart
         super.viewDidLoad()
         self.setUpNavigation()
         addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
     }
     

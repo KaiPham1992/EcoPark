@@ -33,7 +33,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
 
     override func setUpViews() {
         super.setUpViews()
-        vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: "Tìm theo biển số xe")
+        vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         vSearch.tapToTextField = {
             let keyword = self.vSearch.tfInput.text!
             guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
@@ -100,7 +100,7 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         let place = historyParkingReservation?.number_place
         let reservation = historyParkingReservation?.reservation_number
-        return IndicatorInfo(title: "Đang giữ (\(reservation ?? 0)/\(place ?? 0))")
+        return IndicatorInfo(title: LocalizableKey.holding.showLanguage + " (\(reservation ?? 0)/\(place ?? 0))")
     }
     
 }
