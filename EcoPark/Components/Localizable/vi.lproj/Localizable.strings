@@ -32,6 +32,41 @@
 //other
 "searchNumberCar" = "Tìm theo biển số xe";
 
+// Popup
+"receivable" = "Phải thu: ";
+"carType" = "Loại xe";
+"licensePlate" = "Biển số";
+"checkAgain" = "Kiểm tra lại";
+"agreeCheckout" = "Cho phép checkout";
+"contentCheckout" = "Xác nhận hoàn thành thu phí và hoàn thành check out cho dịch vụ";
+"titleNeedToPay" = "Cần phải thanh toán:";
+"titleEcoAccount" = "Tài khoản ví ECO";
+"titleCash" = "Cần trả tiền mặt";
+"payAndCheckout" = "Thanh toán & checkout";
+"rating" = "ĐÁNH GIÁ DỊCH VỤ";
+"contentRating1" = "Dịch vụ bạn đặt đã hoàn thành. Cảm ơn bạn đã tin tưởng sử dụng dịch vụ của ";
+"contentRating2" = " Bạn có hài lòng với dịch vụ của bãi xe?";
+"sent" = "Gửi";
+"timeExpect" = "Đã dự kiến đến bãi lúc ";
+"invalid" = "Không hợp lệ";
+"contentQRFail1" = "Mã QR này không thuộc hệ thống";
+"contentQRFail2" = "\nVui lòng đảm bảo bạn đã quét đúng thông tin!";
+"retry" = "Thử lại";
+"questionLogout" = "Bạn có muốn đăng xuất khỏi tài khoản này?";
+"back" = "Quay lại";
+"cancelHolding" = "Huỷ giữ chỗ";
+"questionCancelHolding" = "Bạn có chắc muốn huỷ giữ chỗ, chi phí đã thanh toán sẽ không được hoàn lại";
+"renewal" = "Gia hạn giữ chỗ";
+"renewalContent" = "Gia hạn giữ chỗ sẽ có giá trị trong vòng 60 phút. \nVui lòng thanh toán thêm phí giữ chỗ";
+"payWallet" = "Thanh toán ví";
+"noPlace" = "Chưa có chỗ";
+"noPlaceQuestion" = "Bạn chưa đặt chỗ trước tại bãi đỗ này. Bạn có muốn bắt đầu giữ xe không?";
+"noThanks" = "Không, cảm ơn";
+
+"deducted" = "Bạn sẽ bị trừ ";
+"deductedContent" = " vào tài khoản ví để xem thông tin chi tiết bãi đổ bao gồm địa chỉ và thông tin liên hệ của bãi đó.";
+"dontHaveMoney" = "Bạn không đủ tiền trong ví";
+
 
 //Title
 "titleHistoryParking" = "Lịch sử giao dịch bãi xe";

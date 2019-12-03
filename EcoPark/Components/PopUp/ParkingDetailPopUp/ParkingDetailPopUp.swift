@@ -28,11 +28,11 @@ class ParkingDetailPopUp: BasePopUpView {
     
     func showPopUp(width: CGFloat, money: Double, completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
         
-        let attr1 = "Bạn sẽ bị trừ ".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr1 = LocalizableKey.deducted.showLanguage.toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
         
         let attr2 = money.toCurrency.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
         
-        let attr3 = " vào tài khoản ví để xem thông tin chi tiết bãi đổ bao gồm địa chỉ và thông tin liên hệ của bãi đó.".toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr3 = LocalizableKey.deductedContent.showLanguage.toAttributedString(color: AppColor.color_102_102_102, font: AppFont.fontRegular15, isUnderLine: false)
         
         let attr = NSMutableAttributedString()
         attr.append(attr1)

@@ -22,7 +22,10 @@
                 <outlet property="btnCheckAgain" destination="jki-IN-egR" id="Wq6-jf-tEt"/>
                 <outlet property="btnCheckOut" destination="dhX-Ha-h75" id="4Pq-K3-CeI"/>
                 <outlet property="lbContent" destination="Kf3-ka-Ztt" id="ABu-9u-D9L"/>
+                <outlet property="lbLicensePlate" destination="2i2-Rc-xst" id="qB1-nB-haU"/>
                 <outlet property="lbPrice" destination="7g9-FQ-ZBH" id="pOO-5u-nzi"/>
+                <outlet property="lbReceivable" destination="eze-bj-VRF" id="Z78-gx-LTJ"/>
+                <outlet property="lbTypeCar" destination="YvF-uO-uou" id="yZg-Iw-HuY"/>
                 <outlet property="lbVehicleNumber" destination="rpw-Ay-t7k" id="Dpi-Aj-R4F"/>
                 <outlet property="lbVehicleType" destination="gfe-Fu-0AS" id="Jpm-tf-tdB"/>
             </connections>

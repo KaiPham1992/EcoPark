@@ -32,7 +32,7 @@ class PartnerCheckOutPopUp: BasePopUpView {
         viewPopUp.lbVehicleNumber.text = vehicleNumber
         
         
-        let attr1 = "Xác nhận đã hoàn thành thu phí và hoàn thành check out cho dịch vụ ".toAttributedString(color: AppColor.black, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr1 = LocalizableKey.contentCheckout.showLanguage.toAttributedString(color: AppColor.black, font: AppFont.fontRegular15, isUnderLine: false)
         let attr2 = "\(checkOutNumber)".description.toAttributedString(color: AppColor.black, font: AppFont.fontBold15, isUnderLine: false)
                 
         let attr = NSMutableAttributedString()

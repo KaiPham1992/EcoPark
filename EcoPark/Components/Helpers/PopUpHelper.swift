@@ -53,7 +53,7 @@ class PopUpHelper {
     
     func showLogout(completionNo: CompletionClosure?, completionYes: CompletionClosure?) {
         let popUp = TwoButtonPopUp()
-        popUp.showPopUp(titlePopUp: "ĐĂNG XUẤT", contentPopUpNormal: "Bạn có muốn đăng xuất khỏi tài khoản này?", btnTitleNo: "Quay lại", btnTitleYes: "Đăng Xuất", width: 350, height: 200, completionYes: completionYes, completionNo: completionNo)
+        popUp.showPopUp(titlePopUp: LocalizableKey.MenuLogout.showLanguage.uppercased(), contentPopUpNormal: LocalizableKey.questionLogout.showLanguage, btnTitleNo: LocalizableKey.back.showLanguage , btnTitleYes: LocalizableKey.MenuLogout.showLanguage, width: 350, height: 200, completionYes: completionYes, completionNo: completionNo)
     }
     
 //    func showCreateGroup(completionNo: CompletionClosure?, completionYes: CompletionMessage?) {
@@ -141,7 +141,7 @@ class PopUpHelper {
     
     func showEditProfile(completionYes: CompletionClosure?) {
         let popUp = OneButtonPopUp()
-        popUp.showPopUp(titlePopUp: "Thông Báo", contentPopUpNormal: "Chỉnh sửa thông tin thành công", buttonTitle: "OK", width: 375, height: 200, completion: completionYes)
+        popUp.showPopUp(titlePopUp: LocalizableKey.MenuNotification.showLanguage, contentPopUpNormal: LocalizableKey.editProfileSuccess.showLanguage, buttonTitle: "OK", width: 375, height: 200, completion: completionYes)
     }
     
     func showNoInternet(completionYes: CompletionClosure?) {
@@ -177,24 +177,24 @@ class PopUpHelper {
     func showInvalidQR(width: CGFloat = 350, height: CGFloat, completion: CompletionClosure?) {
         let popUp = OneButtonPopUp()
                 
-        let title = "Không hợp lệ"
+        let title = LocalizableKey.invalid.showLanguage
         
         let blueAttr = [ NSAttributedString.Key.foregroundColor: UIColor.blue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize),]
         let blackAttr = [ NSAttributedString.Key.foregroundColor: UIColor.black ]
         
-        let string = "ECOPARKING"
+        let string = LocalizableKey.termAndPolicyText6.showLanguage
         let attrString = NSAttributedString(string: string, attributes: blueAttr)
         
         
-        let content1 = NSAttributedString(string: "Mã QR này không thuộc hệ thống ", attributes: blackAttr)
-        let content2 = NSAttributedString(string: ".\nVui lòng đảm bảo bạn đã quét đúng thông tin!", attributes: blackAttr)
+        let content1 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
+        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
         
         let content = NSMutableAttributedString()
         content.append(content1)
         content.append(attrString)
         content.append(content2)
         
-        let buttonTitle = "Thử lại"
+        let buttonTitle = LocalizableKey.retry.showLanguage
         
         popUp.showPopUp(titlePopUp: title, contentPopUpAtributedString: content, buttonTitle: buttonTitle, width: width, height: height, completion: completion)
     }
@@ -210,21 +210,21 @@ class PopUpHelper {
     func showCancelReservation(width: CGFloat, height: CGFloat = 215 , completionYes: CompletionClosure?, completionNo: CompletionClosure?) {
         
         let popUp = TwoButtonPopUp()
-        popUp.showPopUp(titlePopUp: "HUỶ GIỮ CHỖ", contentPopUpNormal: "Bạn có chắc muốn huỷ giữ chỗ, chi phí đã thanh toán sẽ không được hoàn lại", btnTitleNo: "Quay lại", btnTitleYes: "Đồng ý", width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+        popUp.showPopUp(titlePopUp: LocalizableKey.cancelHolding.showLanguage.uppercased(), contentPopUpNormal: LocalizableKey.questionCancelHolding.showLanguage, btnTitleNo: LocalizableKey.back.showLanguage, btnTitleYes: LocalizableKey.ok.showLanguage, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
     }
     
     // MARK: Extend reservation
     func showExtendReservation(width: CGFloat, height: CGFloat = 215, completionYes: CompletionClosure?, completionNo: CompletionClosure?) {
         
         let popUp = TwoButtonPopUp()
-        popUp.showPopUp(titlePopUp: "GIA HẠN GIỮ CHỖ", contentPopUpNormal: "Gia hạn giữ chỗ sẽ có giá trị trong vòng 60 phút. \nVui lòng thanh toán thêm phí giữ chỗ", btnTitleNo: "Quay lại", btnTitleYes: "Thanh toán ví", width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+        popUp.showPopUp(titlePopUp: LocalizableKey.renewal.showLanguage.uppercased(), contentPopUpNormal: LocalizableKey.renewalContent.showLanguage, btnTitleNo: LocalizableKey.back.showLanguage, btnTitleYes: LocalizableKey.payWallet.showLanguage, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
     }
     
     // MARK: No reservation
     func showNoReservation(width: CGFloat, height: CGFloat = 215, completionYes: CompletionClosure?, completionNo: CompletionClosure? ) {
         
         let popUp = TwoButtonPopUp()
-        popUp.showPopUp(titlePopUp: "CHƯA CÓ ĐẶT CHỖ", contentPopUpNormal: "Bạn chưa đặt chỗ trước tại bãi đỗ này. Bạn có muốn bắt đầu giữ xe không?", btnTitleNo: "Không, cảm ơn", btnTitleYes: "Tiếp tục", width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+        popUp.showPopUp(titlePopUp: LocalizableKey.noPlace.showLanguage.uppercased(), contentPopUpNormal: LocalizableKey.noPlaceQuestion.showLanguage, btnTitleNo: LocalizableKey.noThanks.showLanguage, btnTitleYes: LocalizableKey.next.showLanguage, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
     }
     
     // MARK: Rating
@@ -250,6 +250,6 @@ class PopUpHelper {
     
     func showMessage(message: String ,width: CGFloat, height: CGFloat = 200, completion: @escaping CompletionClosure) {
         let popUp = OneButtonPopUp()
-        popUp.showPopUp(titlePopUp: "Thông Báo", contentPopUpNormal: message, buttonTitle: "OK", width: width, height: height, completion: completion)
+        popUp.showPopUp(titlePopUp: LocalizableKey.MenuNotification.showLanguage, contentPopUpNormal: message, buttonTitle: "OK", width: width, height: height, completion: completion)
     }
 }

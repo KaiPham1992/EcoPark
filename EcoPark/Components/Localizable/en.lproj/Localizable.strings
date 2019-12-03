@@ -35,6 +35,40 @@
 "hour" = "Hour";
 "minute" = "Minute";
 
+// Popup
+"receivable" = "Receicable: ";
+"carType" = "Vihecle type";
+"licensePlate" = "License plate";
+"checkAgain" = "Check Again";
+"agreeCheckout" = "Allow checkout";
+"contentCheckout" = "Confirm the fee and check the service completion";
+"titleNeedToPay" = "Need to pay: ";
+"titleEcoAccount" = "Account wallet ECO";
+"titleCash" = "Need to pay cash";
+"payAndCheckout" = "Pay & checkout";
+"rating" = "SERVICE REVIEW";
+"contentRating1" = "The service you have placed is completed. Thank you for using the service ";
+"contentRating2" = " Are you satisfied with the parking service?";
+"sent" = "Sent";
+"timeExpect" = "Expected to parking lot at";
+"invalid" = "Invalid";
+"contentQRFail1" = "This QR code is not part of the system";
+"contentQRFail2" = "\nPlease make sure you have scanned the right information!";
+"retry" = "Retry";
+"questionLogout" = "Do you want to log out of this account?";
+"back" = "Back";
+"cancelHolding" = "Cancellation";
+"questionCancelHolding" = "Are you sure you want to cancel the reservation, the paid fee will not be refunded";
+"renewal" = "Renewal of reservations";
+"renewalContent" = "Renewal of bookings will be valid for 60 minutes. \nPlease pay an extra reservation fee";
+"payWallet" = "Wallet payment";
+"noPlace" = "NO RESERVATION";
+"noPlaceQuestion" = "You have not made a reservation at this parking lot. Would you like to start parking?";
+"noThanks" = "No, Thanks";
+"deducted" = "You will be deducted ";
+"deductedContent" = " into your wallet account to see details of the dump including its address and contact information.";
+"dontHaveMoney" = "You do not have enough money in your wallet";
+
 //Title
 "titleHistoryParking" = "Parking transaction history";
 "titleHistoryDetail" = "Transaction detail";

@@ -22,7 +22,7 @@ class CheckInPopUp: BasePopUpView {
         viewPopUp.fillSuperview()
 
         viewPopUp.btnCheckIn.addTarget(self, action: #selector(btnCheckInTapped), for: .touchUpInside)
-        viewPopUp.btnCancle.addTarget(self, action: #selector(btnCancleTapped), for: .touchUpInside)
+        viewPopUp.btnCancel.addTarget(self, action: #selector(btnCancleTapped), for: .touchUpInside)
         
     }
     

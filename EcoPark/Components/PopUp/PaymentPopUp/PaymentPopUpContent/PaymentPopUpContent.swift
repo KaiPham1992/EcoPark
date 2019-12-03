@@ -14,7 +14,15 @@ class PaymentPopUpContent: BaseViewXib {
     @IBOutlet weak var btnPay: UIButton!
     @IBOutlet weak var line: UIView!
     
+    @IBOutlet weak var lbTitleNeedToPay: UILabel!
+    @IBOutlet weak var lbTitleEcoAccount: UILabel!
+    @IBOutlet weak var lbTitleCash: UILabel!
+    
     override func setUpViews() {
-        
+        super.setUpViews()
+        lbTitleNeedToPay.text = LocalizableKey.titleNeedToPay.showLanguage
+        lbTitleEcoAccount.text = LocalizableKey.titleEcoAccount.showLanguage
+        lbTitleCash.text = LocalizableKey.titleCash.showLanguage
+        btnPay.setTitle(LocalizableKey.payAndCheckout.showLanguage, for: .normal)
     }
 }
