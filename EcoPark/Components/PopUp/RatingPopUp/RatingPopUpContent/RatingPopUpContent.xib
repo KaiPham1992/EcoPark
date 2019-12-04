@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +21,7 @@
                 <outlet property="btnCancel" destination="Jjf-bj-DfC" id="oIt-6L-MdQ"/>
                 <outlet property="btnSend" destination="U5d-Lw-Crs" id="Hpc-b0-eJU"/>
                 <outlet property="lbContent" destination="v8h-0v-EZ1" id="31N-MT-QWV"/>
+                <outlet property="lbRating" destination="Sbn-2M-wkq" id="mqv-GL-gRV"/>
                 <outlet property="ratingBar" destination="ujF-f5-Bc3" id="1LU-70-f8v"/>
             </connections>
         </placeholder>

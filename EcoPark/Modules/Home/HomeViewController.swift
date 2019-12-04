@@ -152,7 +152,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
                 let vc  = ParkingUserDetailRouter.createModule(parking: self.parkingSelected)
                 self.push(controller: vc)
             } else {
-                PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: self.popUpwidth) {
+                PopUpHelper.shared.showMessage(message: LocalizableKey.dontHaveMoney.showLanguage, width: self.popUpwidth) {
                     
                 }
             }
