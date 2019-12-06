@@ -15,8 +15,8 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
     
 
 	var presenter: SystemNotificationPresenterProtocol?
-
-    var notification: ParentNotificationEntity? {
+    
+    var notificationSystem: [NotificationEntity] = [] {
         didSet {
             self.tableView.reloadData()
         }
@@ -25,7 +25,7 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
 	override func setUpViews() {
         super.setUpViews()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.initLoadData(data: Array(repeating: 1, count: self.notification?.notifications.count ?? 0))
+            self.initLoadData(data: Array(repeating: 1, count: self.notificationSystem.count ))
         }
     }
 
@@ -43,30 +43,35 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
     
     override func cellForRowListManager(item: Any, _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeue(NotificationCell.self, for: indexPath)
-        let status = notification?.notifications[indexPath.item].isRead
+        let status = notificationSystem[indexPath.item].isRead
         var statusType: NotificationStatus = .UnRead
         if status ?? false {
             statusType = NotificationStatus.IsRead
         } else {
             statusType = NotificationStatus.UnRead
         }
-        let dateTime = notification?.notifications[indexPath.item].createTime?.toString(dateFormat: .hhmmddmmyyy)
-        let content = notification?.notifications[indexPath.item].content
+        let dateTime = notificationSystem[indexPath.item].createTime?.toString(dateFormat: .hhmmddmmyyy)
+        let content = notificationSystem[indexPath.item].content
         cell.displayData(type: .SystemNotification, status: statusType, datetime: dateTime&, content: content&)
         return cell
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        guard let id = notification?.notifications[indexPath.item].id,
+        guard let id = notificationSystem[indexPath.item].id,
             let notiID = Int(id),
-        let content = notification?.notifications[indexPath.item].content else { return }
+        let content = notificationSystem[indexPath.item].content else { return }
         self.push(controller: NotificationDetailRouter.createModule(notificationID: notiID, content: content), animated: true)
     }
 
     func didGetNotification(notification: ParentNotificationEntity?) {
-        self.notification = notification
+        let noti = notification?.notifications
+        guard let notiSystem = (noti?.filter({ (notification) -> Bool in
+            notification.screen == "SYSTEM"
+        })) else { return }
+        self.notificationSystem = notiSystem
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.initLoadData(data: Array(repeating: 1, count: self.notification?.notifications.count ?? 0))
+            self.initLoadData(data: Array(repeating: 1, count: self.notificationSystem.count ))
         }
     }
 }
