@@ -31,7 +31,7 @@ class DoingCell: UITableViewCell {
         let status = data.status ?? ""
         switch status {
         case StatusBooking.cancel.rawValue:
-            lblStatus.text = LocalizableKey.cancel.showLanguage
+            lblStatus.text = LocalizableKey.canceled.showLanguage
             lblStatus.textColor = UIColor.red
         case StatusBooking.checked_out.rawValue:
             lblStatus.text = LocalizableKey.checked_out.showLanguage

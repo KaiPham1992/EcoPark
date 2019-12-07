@@ -31,7 +31,16 @@
 
 //other
 "searchNumberCar" = "Tìm theo biển số xe";
-
+"switchStatusParking" = "Chuyển sang ON nếu bạn muốn hoạt động";
+"agree" = "Đồng ý";
+"cancel" = "Huỷ";
+"MaxPlaceParking" = "Sức chứa tối đa";
+"TimeAction" = "Giờ hoạt động";
+"Detail" = "Chi tiết";
+"Hour" = "Giờ";
+"Package" = "gói";
+"Booking" = "Đặt ngay";
+"slot" = "chỗ";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
@@ -214,7 +223,7 @@
  "errorOpenTime" = "Vui lòng chọn giờ mở cửa bãi xe";
  "errorCloseTime" = "Vui lòng chọn giờ đóng cửa bãi xe";
  "errorPriceAHours" = "Vui lòng nhập giá cho một giờ";
- "errorCombo" = "Vui lòng nhập giá cho combo (8 giờ)";
+ "errorCombo" = "Vui lòng nhập giá cho gói (8 giờ)";
 
 // Sign Up parner 3
 "UtilityOther" = "Tiện ích khác";
@@ -268,6 +277,7 @@
 "bookingPopUpAttr3" = " vui lòng đến đúng giờ";
 "bookingPopUpDirect" = "Nhận chỉ đường đến bãi đỗ";
 "bookingPopUpDetail" = "Xem chi tiết giao dịch";
+"bookingParkingDetail" = "Xem chi tiết bãi đỗ";
 
 // MARK: Wallet
 "titleWallet" = "Ví tiền";
@@ -336,7 +346,7 @@
 "doing" = "Đang thực hiện";
 "history" = "Lịch sử";
 "book_at" = "Đặt lúc";
-"cancel" = "Đã huỷ";
+"canceled" = "Đã huỷ";
 "checked_out" = "Check out";
 "checked_in" = "Check in";
 "reservation" = "Đang giữ chỗ";
@@ -358,4 +368,3 @@
 "SelectDestination" = "Chọn điểm đến";
 "CancelFind" = "Huỷ tìm kiếm";
 "FilterDistance" = "KHOẢNG CÁCH";
-"Detail" = "Detail";

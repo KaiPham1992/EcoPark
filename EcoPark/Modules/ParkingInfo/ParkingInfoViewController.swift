@@ -17,6 +17,7 @@ class ParkingInfoViewController: BaseViewController {
     @IBOutlet weak var lbActive: UILabel!
     @IBOutlet weak var vActive: CustomSwitch!
     @IBOutlet weak var lbError: UILabel!
+    @IBOutlet weak var btnSave: UIButton!
     
     var presenter: ParkingInfoPresenterProtocol?
     
@@ -47,7 +48,10 @@ class ParkingInfoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitleNavigation(title: "Thông tin bãi xe của tôi")
+        setTitleNavigation(title: LocalizableKey.MenuMyInfo.showLanguage)
+        btnSave.setTitle(LocalizableKey.titleSave.showLanguage, for: .normal)
+        lbActive.text = LocalizableKey.switchStatusParking.showLanguage
+        
         addMenu()
         configTableView()
     }

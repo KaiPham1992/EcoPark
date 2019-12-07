@@ -16,11 +16,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingDetailContent" customModule="EnglishApp_AppStore" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParkingDetailContent" customModule="EcoPark_AppStore" customModuleProvider="target">
             <connections>
                 <outlet property="btnNo" destination="Iog-XB-84V" id="bOH-6G-376"/>
                 <outlet property="btnYes" destination="JRM-cn-Qvv" id="tgU-km-Ai6"/>
                 <outlet property="lbMessage" destination="4w1-Fn-ZOm" id="cOG-OM-zqA"/>
+                <outlet property="lbTitle" destination="pzT-x4-1jq" id="RBb-uh-oe2"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
