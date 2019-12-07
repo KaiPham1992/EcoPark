@@ -83,9 +83,10 @@ class ChooseTimePopUp: BasePopUpView {
     @objc func btnDoneTapped() {
         self.hidePopUp()
         let timeSelected = timePicker.date
-        let formatter = DateFormatter()
-        formatter.timeStyle = .medium
-        let time = formatter.string(from: timeSelected)
+//        let formatter = DateFormatter()
+//        formatter.timeStyle = .medium
+//        let time = formatter.string(from: timeSelected)
+        let time = timeSelected.toString(dateFormat: AppDateFormat.hhmmss)
         completionTime?(time)
     }
     

@@ -48,6 +48,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
 
         application.registerForRemoteNotifications()
+        
+        if let token = Messaging.messaging().fcmToken {
+            print("FCM token: \(token)")
+            UserDefaultHelper.shared.fcmToken = token
+        }
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -92,9 +97,8 @@ extension AppDelegate: MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         UserDefaultHelper.shared.fcmToken = fcmToken
+        print(UserDefaultHelper.shared.fcmToken)
     }
-    
-    
 }
 
 

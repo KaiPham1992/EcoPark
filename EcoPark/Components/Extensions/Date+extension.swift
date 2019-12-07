@@ -37,6 +37,7 @@ enum AppDateFormat: String {
     case ha = "ha"
     case yyyyMMddHHmmss               = "yyyy-MM-dd HH:mm:ss"
     case ddMMYYYYTransaction = "dd/MM/YYYY"
+    case hhmmss = "HH:mm:ss"
     
     
     case hhmmddmmyyy             = "hh:mm dd-MM-yyyy"
