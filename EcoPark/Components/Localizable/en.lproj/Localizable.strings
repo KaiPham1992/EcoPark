@@ -68,6 +68,9 @@
 "deducted" = "You will be deducted ";
 "deductedContent" = " into your wallet account to see details of the dump including its address and contact information.";
 "dontHaveMoney" = "You do not have enough money in your wallet";
+"updateSuccess" = "Update success";
+"cancelBookingSuccess" = "Cancel sooking success";
+"renewalSuccess" = "Renewal success";
 
 //Title
 "titleHistoryParking" = "Parking transaction history";

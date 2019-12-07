@@ -66,7 +66,9 @@
 "deducted" = "Bạn sẽ bị trừ ";
 "deductedContent" = " vào tài khoản ví để xem thông tin chi tiết bãi đổ bao gồm địa chỉ và thông tin liên hệ của bãi đó.";
 "dontHaveMoney" = "Bạn không đủ tiền trong ví";
-
+"updateSuccess" = "Cập nhật thành công ";
+"cancelBookingSuccess" = "Huỷ đặt chỗ thành công";
+"renewalSuccess" = "Bạn đã gia hạn thành công";
 
 //Title
 "titleHistoryParking" = "Lịch sử giao dịch bãi xe";

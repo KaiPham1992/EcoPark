@@ -270,7 +270,7 @@ class DetailParkingViewController: BaseViewController {
     }
     
     func didCancelReservation() {
-        PopUpHelper.shared.showMessage(message: "Huỷ đặt chỗ thành công", width: popUpwidth) {
+        PopUpHelper.shared.showMessage(message: LocalizableKey.cancelBookingSuccess.showLanguage, width: popUpwidth) {
             self.delegate?.dataChanged()
             self.pop()
         }
@@ -324,7 +324,7 @@ extension DetailParkingViewController: DetailParkingViewProtocol {
     }
     
     func didExtendReservation(info: BookingDetailEntity) {
-        PopUpHelper.shared.showMessage(message: "Bạn đã gia hạn thành công", width: popUpwidth) {
+        PopUpHelper.shared.showMessage(message: LocalizableKey.renewalSuccess.showLanguage, width: popUpwidth) {
             self.displayData(info: info)
         }
     }

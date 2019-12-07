@@ -65,6 +65,9 @@ struct LocalizableKey {
     static let deducted = "deducted"
     static let deductedContent = "deductedContent"
     static let dontHaveMoney = "dontHaveMoney"
+    static let updateSuccess = "updateSuccess"
+    static let cancelBookingSuccess = "cancelBookingSuccess"
+    static let renewalSuccess = "renewalSuccess"
     
     //Title
     

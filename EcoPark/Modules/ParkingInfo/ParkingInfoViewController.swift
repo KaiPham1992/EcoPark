@@ -59,13 +59,14 @@ class ParkingInfoViewController: BaseViewController {
     
     func getData() {
         guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
-        presenter?.getParkingInfo(id: "2")
+        presenter?.getParkingInfo(id: parkingID)
         presenter?.getListParkingType()
     }
     
     @IBAction func btnSaveTapped() {
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
         if validateInputData() {
-            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: "2",
+            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID,
                                                                        parking_address: parkingAddress,
                                                                        gpkd_img_before_src: parkingInfo?.gpkd_img_before_src,
                                                                        gpkd_img_after_src: parkingInfo?.gpkd_img_after_src,
@@ -270,6 +271,16 @@ extension ParkingInfoViewController: HeaderViewDelegate {
 extension ParkingInfoViewController: ParkingInfoViewProtocol {
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
         self.parkingInfo = parkingInfo
+        guard let _parkingInfo = parkingInfo else { return }
+        self.parkingName = _parkingInfo.name&
+        self.parkingTypeID = _parkingInfo.type_id&
+        self.openTime = _parkingInfo.time_start?.toString(dateFormat: .HHmm) ?? ""
+        self.closeTime = _parkingInfo.time_end?.toString(dateFormat: .HHmm) ?? ""
+        self.parkingAddress = _parkingInfo.address&
+        self.lat = _parkingInfo.lat ?? 0
+        self.long = _parkingInfo.long ?? 0
+        self.listMaterial = _parkingInfo.material?.map({ $0.id ?? ""}) ?? [""]
+        self.codeTax = _parkingInfo.code_tax&
         if parkingInfo?.is_active == "1" {
             vActive.isOn = true
         } else {
@@ -282,7 +293,9 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
     }
     
     func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?) {
-        presenter?.getParkingInfo(id: "2")
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
+        PopUpHelper.shared.showMessage(message: LocalizableKey.updateSuccess.showLanguage, width: popUpwidth) {}
+        presenter?.getParkingInfo(id: parkingID)
         tbParkingInfo.reloadData()
     }
 }
