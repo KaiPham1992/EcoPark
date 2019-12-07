@@ -658,7 +658,6 @@
 		2A07B9B0236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
 		2A07B9B1236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
 		2A07B9B2236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
-		2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		2A138E4D2376CB1600B74458 /* DetailTransactionCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E472376CB1600B74458 /* DetailTransactionCustomerPresenter.swift */; };
 		2A138E4E2376CB1600B74458 /* DetailTransactionCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E472376CB1600B74458 /* DetailTransactionCustomerPresenter.swift */; };
 		2A138E4F2376CB1600B74458 /* DetailTransactionCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E472376CB1600B74458 /* DetailTransactionCustomerPresenter.swift */; };
@@ -1118,7 +1117,6 @@
 		DE2ADE7922841BB9003768CE /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE7322841BB9003768CE /* MenuInteractor.swift */; };
 		DE2ADE7A22841BB9003768CE /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE7422841BB9003768CE /* MenuViewController.xib */; };
 		DE2C07F822857FF100BAE311 /* BaseTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C07F722857FF000BAE311 /* BaseTabStripViewController.swift */; };
-		DE2D679522F9BF050055586B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */; };
 		DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */; };
 		DE2D679A22F9BFFA0055586B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */; };
@@ -2063,7 +2061,6 @@
 		DE2ADE7322841BB9003768CE /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
 		DE2ADE7422841BB9003768CE /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		DE2C07F722857FF000BAE311 /* BaseTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabStripViewController.swift; sourceTree = "<group>"; };
-		DE2D679422F9BF050055586B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		DE361DD02283E4BD00FA3B0D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		DE361DD12283E4BD00FA3B0D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -2248,7 +2245,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */,
 				0CAD4EDBA5D7A5B75055CEBF /* Pods_EcoPark_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2257,7 +2253,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE2D679522F9BF050055586B /* StoreKit.framework in Frameworks */,
 				EDF37C296EFF808FB9FD16E0 /* Pods_EcoPark_Prod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3098,7 +3093,6 @@
 		2DF10F38001118A94DAFC38F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE2D679422F9BF050055586B /* StoreKit.framework */,
 				187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */,
 				8AE01F61C1A3C4397D3A0EED /* Pods_EcoPark_AppStore.framework */,
 				8EC38F393CC708506625D3A9 /* Pods_EcoPark_Dev.framework */,

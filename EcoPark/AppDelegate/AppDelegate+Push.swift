@@ -17,20 +17,22 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         #if PROD
         let googleServiceFile = "GoogleService-Prod-Info"
         #else
-        let googleServiceFile = "GoogleService-Prod-Info"
+        let googleServiceFile = "GoogleService-Dev-Info"
         #endif
-        
+
         let filePath = Bundle.main.path(forResource: googleServiceFile, ofType: "plist")!
         guard let options = FirebaseOptions(contentsOfFile: filePath) else {
             print("There are some problems with GoogleService-Info file")
             return
         }
-        
+
         FirebaseApp.configure(options: options)
     }
     
     func configurePushNotification(application: UIApplication) {
         Messaging.messaging().delegate = self
+        
+        
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
@@ -52,7 +54,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         Messaging.messaging().apnsToken = deviceToken
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         UserDefaultHelper.shared.deviceToken = token
-//        Messaging.messaging().apnsToken = deviceToken
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -86,11 +87,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print("didReceive")
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         UserDefaultHelper.shared.fcmToken = fcmToken
     }
+    
+    
 }
 
 
