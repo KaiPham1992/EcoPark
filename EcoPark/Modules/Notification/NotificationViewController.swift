@@ -14,7 +14,7 @@ class NotificationViewController: PageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitleNavigation(title: "Thông báo")
+        setTitleNavigation(title: LocalizableKey.MenuNotification.showLanguage)
         self.view.backgroundColor = AppColor.black
         addButtonImageToNavigation(image: #imageLiteral(resourceName: "ic_menu"), style: StyleNavigation.left, action: #selector(openMenu))
     }

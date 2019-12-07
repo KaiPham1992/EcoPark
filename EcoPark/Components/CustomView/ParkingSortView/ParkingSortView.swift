@@ -32,12 +32,12 @@ class ParkingSortView: BaseViewXib {
             lbTypeName.text = parking.parking_type_name
            
             if let price = parking.price {
-                let hour = price > 1 ? LocalizableKey.Hours.showLanguage: LocalizableKey.Hour.showLanguage
+                let hour = price > 1 ? LocalizableKey.Hour.showLanguage: LocalizableKey.Hour.showLanguage
                 lbPrice.text = price.toCurrency + "/ \(hour)"
             }
             
             if let packagePrice = parking.package_price, let packageNumber = parking.package_number {
-                let hour = packagePrice > 1 ? LocalizableKey.Hours.showLanguage: LocalizableKey.Hour.showLanguage
+                let hour = packagePrice > 1 ? LocalizableKey.hour.showLanguage: LocalizableKey.Hour.showLanguage
                 lbPackagePrice.text = "\(packagePrice.toCurrency)" + "/ \(LocalizableKey.Package.showLanguage) " + Int(packageNumber).description + " \(hour)"
             }
             

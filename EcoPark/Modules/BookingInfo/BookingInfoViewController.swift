@@ -80,6 +80,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         btnBook.setTitle(LocalizableKey.payToKeepPlace.showLanguage, for: .normal)
         dropDownType.setPlaceHolder(placeHolder: LocalizableKey.vehicleType.showLanguage)
         tfPlate.placeholder = LocalizableKey.vehiclePlate.showLanguage
+        lbTitlePriceHoldPlace.text = LocalizableKey.feeKeepPlace.showLanguage
     }
     
     func displayData(info: ParkingInfoEntity) {

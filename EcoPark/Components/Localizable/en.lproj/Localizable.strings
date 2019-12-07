@@ -12,7 +12,7 @@
 "MenuMyInfo" = "My parking info";
 "MenuFindAround" = "Find Park Around";
 "MenuHistory" = "My history";
-"MenuNotificaiton" = "Notification";
+"MenuNotification" = "Notification";
 "MenuWallet" = "Eco Wallet";
 "MenuProfile" = "Profile";
 "MenuPolicy" = "Term and condition";
@@ -34,6 +34,37 @@
 "date" = "Date";
 "hour" = "Hour";
 "minute" = "Minute";
+"switchStatusParking" = "Switch to ON if you want to operate";
+"bookingParkingDetail" = "See parking details";
+
+// MARK: ParkingUserDetailViewController
+"titleParkDetail" = "Parking Detail";
+"titleType" = "Parking type";
+"titlePlace" = "Capacity";
+"titlePriceOne" = "Price for a hour";
+"titlePriceEight" = "Price for a packet 8 hours";
+"titleContactMe" = "Contact me";
+"titleDirection" = "Direct";
+"titleButtonKeepPlace" = "Booking now";
+
+// MARK: BookingInfoViewController
+"titleBookingInfo" = "Book a place";
+"keepPlace" = "Make a reservation at the parking lot";
+"maxCapacity" = "Maximum capacity: ";
+"parkingTime" = "Operation time ";
+"parkingFee" = "Parking fee of the parking lot:";
+"parkingFeeCombo" = "Parking fee for 8 hour package:";
+"bookingInfo" = "Booking information";
+"feeKeepPlace" = "Booking fee";
+"payToKeepPlace" = "Pay to reserve seats";
+"date" = "Date";
+"timeToCome" = "Time to park";
+"vehiclePlate" = "License plates";
+"vehicleType" = "Type of vehicle";
+"eachHours" = "/ hour";
+"eachPackage" = "/ packet";
+"hour" = "hour";
+"minute" = "minute";
 
 // Popup
 "receivable" = "Receicable: ";
@@ -68,11 +99,14 @@
 "deducted" = "You will be deducted ";
 "deductedContent" = " into your wallet account to see details of the dump including its address and contact information.";
 "dontHaveMoney" = "You do not have enough money in your wallet";
+"updateSuccess" = "Update success";
+"cancelBookingSuccess" = "Cancel sooking success";
+"renewalSuccess" = "Renewal success";
 
 //Title
 "titleHistoryParking" = "Parking transaction history";
 "titleHistoryDetail" = "Transaction detail";
-
+"titleWallet" = "Title Wallet";
 
 // Login Page
 
@@ -236,7 +270,7 @@
 // logout
 "popUpLogout" = "Do you want to logout?";
 "agree" = "YES";
-"cancel" = "NO";
+"canceled" = "NO";
 
 //QA
 
@@ -592,6 +626,6 @@
 "Hour" = "hour";
 "Hours" = "hours";
 "Package" = "package";
-"MaxPlaceParking" = "MaxPlaceParking";
+"MaxPlaceParking" = "Max place parking";
 "Slot" = "Slot";
 "TimeAction" = "Time Action";
