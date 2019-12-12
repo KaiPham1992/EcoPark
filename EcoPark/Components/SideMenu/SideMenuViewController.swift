@@ -437,6 +437,7 @@ extension SideMenuViewController: MenuProtocol {
 
     func pushViewController(presentingController: UIViewController) {
         self.push(controller: presentingController)
+        AppRouter.shared.rootNavigation = self.navigationController
         rootNavigation?.pushViewController(presentingController, animated: true)
         self.setDrawerState(.closed)
     }

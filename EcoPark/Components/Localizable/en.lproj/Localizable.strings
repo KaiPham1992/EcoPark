@@ -271,6 +271,7 @@
 "popUpLogout" = "Do you want to logout?";
 "agree" = "YES";
 "canceled" = "NO";
+"cancelBooking" = "Cancel";
 
 //QA
 
