@@ -116,8 +116,8 @@
 "LoginButtonLogin" = "Login";
 "FBorGmail" = "Or login by";
 "ForgotPass" = "Forgot password";
-"NotYetAccount" = "You don't have any account? ";
-"Register" = "Register";
+"NotYetAccount" = "You don't have any account?";
+"Register" = "Register now!";
 "LoginButtonSignUp" = "REGISTER";
 "passwordDifference" = "Re-password is wrong!";
 "Username" = "Username";
@@ -270,7 +270,8 @@
 // logout
 "popUpLogout" = "Do you want to logout?";
 "agree" = "YES";
-"canceled" = "NO";
+"canceled" = "Canceled";
+"no" = "NO";
 
 //QA
 

@@ -45,7 +45,7 @@ class SignUpViewController: BaseViewController {
     override func setTitleUI() {
 //        self.hideNavigation()
         self.showNavigation()
-        self.setTitleNavigation(title: LocalizableKey.Register.showLanguage)
+        self.setTitleNavigation(title: LocalizableKey.LoginButtonSignUp.showLanguage)
         vUsername.setTitleAndPlaceHolder(title: LocalizableKey.usernameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.emailSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         

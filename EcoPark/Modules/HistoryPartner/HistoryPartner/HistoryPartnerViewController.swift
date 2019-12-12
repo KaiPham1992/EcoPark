@@ -60,6 +60,14 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
         cell.setDataHistory(historyParking: historyParking?.booking[indexPath.item])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bookingParking = HistoryBookingParkingResponse()
+        let bookingID = historyParking?.booking[indexPath.item].id
+         bookingParking.id = bookingID
+        let vc = DetailParkingRouter.createModule(bookingParking: bookingParking)
+        self.push(controller: vc)
+    }
 }
 
 extension HistoryPartnerViewController: IndicatorInfoProvider {

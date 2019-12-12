@@ -29,7 +29,7 @@ class AppSearchBar: BaseViewXib {
         super.setUpViews()
         tfInput.delegate = self
         
-        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.touchDown)
+        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingChanged)
     }
     
     @objc func textFieldTapped() {

@@ -37,10 +37,15 @@ class HistoryPartnerBookingViewController: BaseViewController {
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
-        vSearch.tapToTextField = {
-            let keyword = self.vSearch.tfInput.text!
+        vSearch.actionSearch = { text in
             guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-            self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: keyword)
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: text)
+        }
+        vSearch.tapToTextField = {
+            let text = self.vSearch.tfInput.text!
+            print(text)
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: text)
         }
     }
     

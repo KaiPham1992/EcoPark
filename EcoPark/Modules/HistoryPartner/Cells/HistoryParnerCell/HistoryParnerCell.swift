@@ -46,8 +46,26 @@ class HistoryParnerCell: UITableViewCell {
     
     func setDataHistoryParking(status: String) {
         btnStatus.backgroundColor = .clear
-        btnStatus.setTitleColor(AppColor.color_0_129_255, for: .normal)
-        btnStatus.setTitle(status, for: .normal)
+        let status = status
+        switch status {
+        case StatusBooking.cancel.rawValue:
+            btnStatus.setTitle(LocalizableKey.canceled.showLanguage, for: .normal)
+            btnStatus.setTitleColor(UIColor.red, for: .normal)
+        case StatusBooking.checked_out.rawValue:
+            btnStatus.setTitle(LocalizableKey.checked_out.showLanguage, for: .normal)
+            btnStatus.setTitleColor(AppColor.color_0_129_255, for: .normal)
+        case StatusBooking.checked_in.rawValue:
+            btnStatus.setTitle(LocalizableKey.checked_in.showLanguage, for: .normal)
+            btnStatus.setTitleColor(AppColor.color_13_196_68, for: .normal)
+        case StatusBooking.reservation.rawValue:
+            btnStatus.setTitle(LocalizableKey.reservation.showLanguage, for: .normal)
+            btnStatus.setTitleColor(AppColor.color_0_129_255, for: .normal)
+        case StatusBooking.expired.rawValue:
+            btnStatus.setTitle(LocalizableKey.expired.showLanguage, for: .normal)
+            btnStatus.setTitleColor(UIColor.red, for: .normal)
+        default:
+            break
+        }
     }
     
     func setDataHistory(historyParking: BookingEntity?) {

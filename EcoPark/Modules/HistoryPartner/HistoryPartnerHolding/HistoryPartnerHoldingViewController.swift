@@ -34,10 +34,15 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
-        vSearch.tapToTextField = {
-            let keyword = self.vSearch.tfInput.text!
+        
+        vSearch.actionSearch = { text in
             guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: keyword)
+            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: text)
+        }
+        vSearch.tapToTextField = {
+            let text = self.vSearch.tfInput.text!
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: text)
         }
     }
     

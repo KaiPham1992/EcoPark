@@ -41,6 +41,7 @@
 "Package" = "gói";
 "Booking" = "Đặt ngay";
 "slot" = "chỗ";
+"no" = "Không";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
@@ -92,8 +93,8 @@
 "LoginButtonLogin" = "Đăng nhập";
 "FBorGmail" = "Hoặc đăng nhập bằng";
 "ForgotPass" = "Quên mật khẩu";
-"NotYetAccount" = "Bạn chưa có tài khoản? ";
-"Register" = "Đăng ký";
+"NotYetAccount" = "Bạn chưa có tài khoản?";
+"Register" = "Đăng ký ngay!";
 "LoginButtonSignUp" = "ĐĂNG KÝ";
 "passwordDifference" = "Nhập lại sai mật khẩu";
 

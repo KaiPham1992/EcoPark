@@ -70,6 +70,9 @@ class LoginViewController: BaseViewController {
         btnEnglish.setTitle(LocalizableKey.english.showLanguage, for: .normal)
         btnVietnamese.setTitle(LocalizableKey.vietnamese.showLanguage, for: .normal)
         vPassword.tfInput.delegate = self
+        btnLogin.setTitle(LocalizableKey.LoginButtonLogin.showLanguage, for: .normal)
+        lbForgot.text = LocalizableKey.ForgotPass.showLanguage
+        lbRegister.text = LocalizableKey.NotYetAccount.showLanguage + ", " + LocalizableKey.Register.showLanguage
     }
     
     @IBAction func btnLoginTapped() {
