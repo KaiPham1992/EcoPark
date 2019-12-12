@@ -202,8 +202,8 @@
 "ParkingOpen" = "Mở cửa *";
 "ParkingClose" = "Đóng cửa *";
 "ParkingPrice" = "giá dịch vụ";
-"PriceAHours" = " Đơn giá theo giờ *";
-"PriceCombo" = "Đơn giá theo gói (8 giờ) *";
+"PriceAHours" = " Đơn giá theo giờ";
+"PriceCombo" = "Đơn giá theo gói (8 giờ)";
 "ParkingLicense" = "Giấy phép kinh doanh";
 "ParkingTaxCode" = "Mã số thuế";
 "hoursPrice" = "Giá theo giờ";
@@ -355,7 +355,18 @@
 "history_parking" = "Lịch sử đỗ xe";
 "booked" = "Đã đặt chỗ";
 "holding" = "Đang giữ";
-
+"contactParking" = "Liên hệ bãi";
+"infoParking" = "Thông tin bãi đỗ xe";
+"expect" = "Dự kiến";
+"NumberHoursSend" = "Số giờ đã gửi";
+"ParkingFee" = "Phí gửi xe";
+"Paid" = "Đã thanh toán";
+"paidWithWallet" = "TT thêm bằng ví";
+"paidWithCash" = "TT thêm bằng tiền mặt";
+"ScanCheckIn" = "Scan QR tại bãi để Check In";
+"statusCheckedIn" = "Đã check in";
+"statusCheckedOut" = "Đã check out";
+"ratingService" = "Đánh giá dịch vụ bãi giữ xe";
 
 //HOME
 "InputDestination" = "Nhập điểm đến";

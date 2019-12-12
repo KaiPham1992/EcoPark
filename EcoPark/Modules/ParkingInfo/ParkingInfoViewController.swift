@@ -105,34 +105,34 @@ class ParkingInfoViewController: BaseViewController {
     
     func validateInputData() -> Bool {
         if parkingName == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập tên bãi xe")
+            hideError(isHidden: false, message: LocalizableKey.errorParkingName.showLanguage)
             return false
         }
         if parkingTypeID == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập loại bãi xe")
+            hideError(isHidden: false, message: LocalizableKey.errorParkingType.showLanguage)
             return false
         }
         if parkingAddress == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập địa chỉ bãi xe")
+            hideError(isHidden: false, message: LocalizableKey.errorParkingAddress.showLanguage)
             return false
         }
         if openTime == "" {
-            hideError(isHidden: false, message: "Vui lòng chọn giờ mở cửa")
+            hideError(isHidden: false, message: LocalizableKey.errorOpenTime.showLanguage)
             return false
         }
         if closeTime == "" {
-            hideError(isHidden: false, message: "Vui lòng chọn giờ đóng cửa")
+            hideError(isHidden: false, message: LocalizableKey.errorCloseTime.showLanguage)
             return false
         }
         if listMaterial == [] {
-            hideError(isHidden: false, message: "Vui lòng chọn tiện ích")
+            hideError(isHidden: false, message: LocalizableKey.errorUtility.showLanguage)
             return false
         }
         
-        if codeTax == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập mã số thuế")
-            return false
-        }
+//        if codeTax == "" {
+//            hideError(isHidden: false, message: LocalizableKey.errorParkingType.showLanguage)
+//            return false
+//        }
         
         hideError()
         return true
@@ -234,7 +234,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
             
         default:
             let headerView = HeaderInfoView()
-            headerView.setupUI(title: LocalizableKey.parkingInfo.showLanguage.uppercased())
+            headerView.setupUI(title: LocalizableKey.juridicalInfomation.showLanguage.uppercased())
             headerView.delegate = self
             headerView.section = section
             headerView.setExpland(expland: isExplandLicenseInfo)

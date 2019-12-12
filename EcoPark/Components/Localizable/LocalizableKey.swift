@@ -201,7 +201,7 @@ struct LocalizableKey {
     static let parkingOpen = "ParkingOpen"
     static let parkingClose = "ParkingClose"
     static let parkingPrice = "ParkingPrice"
-    static let pirceAHours = "PriceAHours"
+    static let priceAHours = "PriceAHours"
     static let priceCombo   = "PriceCombo"
     static let parkingLicense = "ParkingLicense"
     static let parkingTaxCode = "ParkingTaxCode"
@@ -605,7 +605,18 @@ struct LocalizableKey {
     static let history_parking = "history_parking"
     static let booked = "booked"
     static let holding = "holding"
-    
+    static let contactParking = "contactParking"
+    static let infoParking = "infoParking"
+    static let expect = "expect"
+    static let NumberHoursSend = "NumberHoursSend"
+    static let ParkingFee = "ParkingFee"
+    static let Paid = "Paid"
+    static let paidWithWallet = "paidWithWallet"
+    static let paidWithCash = "paidWithCash"
+    static let ScanCheckIn = "ScanCheckIn"
+    static let statusCheckedIn = "statusCheckedIn"
+    static let statusCheckedOut = "statusCheckedOut"
+    static let ratingService = "ratingService"
     
     //HOME
     static let FilterHome = "FilterHome"

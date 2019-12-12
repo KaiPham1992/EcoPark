@@ -74,8 +74,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vParkingAddress.setPlaceHolder(placeHolder: LocalizableKey.enter.showLanguage)
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.pirceAHours.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.priceAHours.showLanguage + "*", placeHolder: LocalizableKey.enter.showLanguage)
+        vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage + "*", placeHolder: LocalizableKey.enter.showLanguage)
         vTaxCode.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingCapacity.tfInput.keyboardType = .numberPad
         vPriceAHours.tfInput.keyboardType = .numberPad

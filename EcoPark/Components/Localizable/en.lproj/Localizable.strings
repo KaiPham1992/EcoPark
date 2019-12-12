@@ -609,6 +609,18 @@
 "history_parking" = "History parking";
 "booked" = "Booked";
 "holding" = "Holding";
+"contactParking" = "Contact parking";
+"infoParking" = "Parking information";
+"expect" = "Expect";
+"NumberHoursSend" = "Number of hours to send";
+"ParkingFee" = "Parking fee";
+"Paid" = "Paid";
+"paidWithWallet" = "Pay more by wallet";
+"paidWithCash" = "Pay more by cash";
+"ScanCheckIn" = "Scan QR at parking lot to Check In";
+"statusCheckedIn" = "Checked in";
+"statusCheckedOut" = "Checked out";
+"ratingService" = "Evaluation of parking services";
 
 
 // HOME

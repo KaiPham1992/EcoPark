@@ -64,24 +64,24 @@ class DetailParkingViewController: BaseViewController {
     override func setUpViews() {
         super.setUpViews()
         
-        ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: "Liên hệ bãi")
-        ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: "Chỉ đường")
-        DLVInformationParking.setupViewForTitle(title: "Thông tin bãi đỗ xe")
-        VTDate.setupTitle(title: "Ngày")
-        VTHour.setupTitle(title: "Giờ")
-        VTMinute.setupTitle(title: "Phút")
-        DLVBook.setupViewTimeBlue(title: "Đặt lúc")
-        DLVExpected.setupViewTimeBlue(title: "Dự kiến")
+        ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: LocalizableKey.contactParking.showLanguage)
+        ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: LocalizableKey.titleDirection.showLanguage)
+        DLVInformationParking.setupViewForTitle(title: LocalizableKey.infoParking.showLanguage)
+        VTDate.setupTitle(title: LocalizableKey.date.showLanguage)
+        VTHour.setupTitle(title: LocalizableKey.hour.showLanguage)
+        VTMinute.setupTitle(title: LocalizableKey.minute.showLanguage)
+        DLVBook.setupViewTimeBlue(title: LocalizableKey.book_at.showLanguage)
+        DLVExpected.setupViewTimeBlue(title: LocalizableKey.expect.showLanguage)
         DLVCheckIn.setupViewTimeBlue(title: "Check in")
         DLVCheckOut.setupViewTimeBlue(title: "Check out")
-        DLVLisencePlate.setupViewTimeBold(title: "Biển số:")
-        DLVBillForHour.setupViewUnit(title: "Đơn giá theo giờ:")
-        DLVBillFor8Hour.setupViewUnit(title: "Đơn giá gói 8 giờ:")
-        DLVNumberParking.setupViewUnit(title: "Số giờ đã gửi:")
-        DLVMoneyPayment.setupViewUnit(title: "Phí giữ xe:")
-        DLVPriceParking.setupViewUnit(title: "Đã thanh toán:")
-        DLVAddForWallet.setupViewUnit(title: "TT thêm bằng ví:")
-        DLVAddForMoney.setupViewUnitColorRed(title: "TT thêm bằng tiền mặt:")
+        DLVLisencePlate.setupViewTimeBold(title: LocalizableKey.licensePlate.showLanguage + ":")
+        DLVBillForHour.setupViewUnit(title:  LocalizableKey.priceAHours.showLanguage + ":")
+        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + ":")
+        DLVNumberParking.setupViewUnit(title: LocalizableKey.NumberHoursSend.showLanguage + ":")
+        DLVMoneyPayment.setupViewUnit(title: LocalizableKey.ParkingFee.showLanguage + ":")
+        DLVPriceParking.setupViewUnit(title: LocalizableKey.Paid.showLanguage + ":")
+        DLVAddForWallet.setupViewUnit(title: LocalizableKey.paidWithWallet.showLanguage + ":")
+        DLVAddForMoney.setupViewUnitColorRed(title: LocalizableKey.paidWithCash.showLanguage + ":")
     }
     
     override func viewDidLoad() {
@@ -108,7 +108,7 @@ class DetailParkingViewController: BaseViewController {
     
     override func setUpNavigation() {
         super.setUpNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         addBackToNavigation()
     }
     
@@ -120,7 +120,7 @@ class DetailParkingViewController: BaseViewController {
         VTMinute.setUpTime(time: ddhhmm.2)
         VTDate.setUpTime(time: ddhhmm.0)
         let numberParking = ddhhmm.0 * 24 + ddhhmm.1
-        DLVNumberParking.setValueText(text: numberParking.description + " giờ")
+        DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
         
         print(ddhhmm)
     }
@@ -137,7 +137,7 @@ class DetailParkingViewController: BaseViewController {
         switch status {
         case StatusBooking.reservation.rawValue:
             //--
-            lbStatus.text = "Đang giữ chỗ"
+            lbStatus.text = LocalizableKey.reservation.showLanguage
             lbStatus.textColor = AppColor.color_255_145_0
             
             // hidden rating
@@ -145,9 +145,9 @@ class DetailParkingViewController: BaseViewController {
             heightOfRating.constant = 0
             
             //
-            btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
+            btnBottom.setTitle(LocalizableKey.ScanCheckIn.showLanguage, for: .normal)
         case StatusBooking.checked_in.rawValue:
-            lbStatus.text = "Đã check in"
+            lbStatus.text = LocalizableKey.statusCheckedIn.showLanguage
             lbStatus.textColor = AppColor.color_13_196_68
             showMoney(info: info)
             btnBottom.setTitle("QR Check Out", for: .normal)
@@ -156,10 +156,10 @@ class DetailParkingViewController: BaseViewController {
             heightOfButtonExtend.constant = 0
             
         case StatusBooking.checked_out.rawValue:
-            lbStatus.text = "Đã check out"
+            lbStatus.text = LocalizableKey.statusCheckedOut.showLanguage
             lbStatus.textColor = AppColor.color_0_129_255
             showMoney(info: info)
-            btnBottom.setTitle("Đánh giá dịch vụ bãi giữ xe", for: .normal)
+            btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
@@ -171,10 +171,10 @@ class DetailParkingViewController: BaseViewController {
             }
             
         case StatusBooking.cancel.rawValue:
-            lbStatus.text = "Đã huỷ"
+            lbStatus.text = LocalizableKey.canceled.showLanguage
             lbStatus.textColor = UIColor.red
             showMoney(info: info)
-            btnBottom.setTitle("Đánh giá dịch vụ bãi giữ xe", for: .normal)
+            btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
@@ -217,7 +217,7 @@ class DetailParkingViewController: BaseViewController {
         DLVCheckIn.setValueText(text: "-")
         DLVCheckOut.setValueText(text: "-")
         
-        DLVNumberParking.setValueText(text: "0 giờ")
+        DLVNumberParking.setValueText(text: "0 " + LocalizableKey.hour.showLanguage)
         DLVMoneyPayment.setValueText(text: "0 VND")
         DLVPriceParking.setValueText(text: "0 VND")
         DLVAddForWallet.setValueText(text: "0 VND")

@@ -19,12 +19,12 @@ class PriceAddMoneyCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-        DLVBillForHour.setupViewUnit(title: "Đơn giá theo giờ:")
-        DLVBillFor8Hour.setupViewUnit(title: "Đơn giá gói 8 giờ:")
-        DLVNumberParking.setupViewUnit(title: "Số giờ đã gửi:")
-        DLVMoneyPayment.setupViewUnit(title: "Phí giữ xe:")
-        DLVPriceParking.setupViewUnit(title: "Đã thanh toán:")
-        DLVAddForWallet.setupViewUnit(title: "TT thêm bằng ví:")
-        DLVAddForMoney.setupViewUnitColorRed(title: "TT thêm bằng tiền mặt:")
+        DLVBillForHour.setupViewUnit(title: LocalizableKey.priceAHours.showLanguage + ":")
+        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + ":")
+        DLVNumberParking.setupViewUnit(title: LocalizableKey.NumberHoursSend.showLanguage + ":")
+        DLVMoneyPayment.setupViewUnit(title: LocalizableKey.ParkingFee.showLanguage + ":")
+        DLVPriceParking.setupViewUnit(title: LocalizableKey.Paid.showLanguage + ":")
+        DLVAddForWallet.setupViewUnit(title: LocalizableKey.paidWithWallet.showLanguage + ":")
+        DLVAddForMoney.setupViewUnitColorRed(title: LocalizableKey.paidWithCash.showLanguage + ":")
     }
 }
