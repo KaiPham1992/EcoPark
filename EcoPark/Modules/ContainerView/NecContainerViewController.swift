@@ -58,7 +58,7 @@ class NecContainerViewController: ContainerViewController {
                 }
                 
             // fix for owner 
-            case NotificationKey.NOTIF_BOOKING_EXPIRED_FOR_BOSS.rawValue:
+            case NotificationKey.NOTIF_BOOKING_EXPIRED_FOR_BOSS.rawValue, NotificationKey.NOTIF_RATING_FOR_BOSS_PARKING.rawValue, NotificationKey.NOTIF_BOOKING_FOR_BOSS.rawValue, NotificationKey.NOTIF_EXTRA.rawValue, NotificationKey.NOTIF_STATUS_CANCEL.rawValue:
                 if let oid = notification.userInfo?["gcm.notification.nid"] as? String {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         let vc = PageHistoryPartnerViewControler()

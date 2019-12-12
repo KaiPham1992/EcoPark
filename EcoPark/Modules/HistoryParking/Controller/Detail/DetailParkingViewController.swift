@@ -178,6 +178,7 @@ class DetailParkingViewController: BaseViewController {
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
+            heightOfRating.constant = 0
             btnBottom.isHidden = true
         default:
             break
