@@ -38,6 +38,11 @@ class WebViewController: BaseViewController {
             mainUrl = "_api/webview/security_policy"
             setTitleNavigation(title: LocalizableKey.security.showLanguage)
         }
+        
+        if LanguageHelper.currentAppleLanguage() == "en" {
+            mainUrl = mainUrl + "/en"
+        }
+        
         guard let url = URL(string: BASE_URL + "\(mainUrl)") else { return }
         let request = URLRequest(url: url)
         webView.load(request)

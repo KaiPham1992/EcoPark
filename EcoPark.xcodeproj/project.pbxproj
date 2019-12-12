@@ -476,6 +476,9 @@
 		228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071FA235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
+		22822AD823A1F7CB00CB940B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22822AD723A1F7CB00CB940B /* NotificationKey.swift */; };
+		22822AD923A1F7CC00CB940B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22822AD723A1F7CB00CB940B /* NotificationKey.swift */; };
+		22822ADA23A1F7CC00CB940B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22822AD723A1F7CB00CB940B /* NotificationKey.swift */; };
 		2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
 		2292F20923653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
 		2292F20A23653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
@@ -1821,6 +1824,7 @@
 		2269ABA8238A850600EE2E36 /* AppQRScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppQRScanerViewController.swift; sourceTree = "<group>"; };
 		2269ABA9238A850600EE2E36 /* AppQRScanerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppQRScanerViewController.xib; sourceTree = "<group>"; };
 		228071F7235C11D70076D5CC /* RestoreParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreParam.swift; sourceTree = "<group>"; };
+		22822AD723A1F7CB00CB940B /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		2292F20523653B0300B570E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2292F20623653B0300B570E3 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		2292F20723653B0300B570E3 /* NecContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecContainerViewController.swift; sourceTree = "<group>"; };
@@ -4103,6 +4107,7 @@
 				76682F22236EB70D00F49482 /* SystemNotification */,
 				76682F21236EB70000F49482 /* MyNotification */,
 				76682F53236EB78B00F49482 /* NotificationViewController.swift */,
+				22822AD723A1F7CB00CB940B /* NotificationKey.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -5263,6 +5268,7 @@
 				22F33AAE23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				22BE84DD236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B0236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				22822AD823A1F7CB00CB940B /* NotificationKey.swift in Sources */,
 				17C7FB69236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				DE361DD92283E4BD00FA3B0D /* LoginProtocols.swift in Sources */,
 				2220A78C235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
@@ -5699,6 +5705,7 @@
 				22F33AAF23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				22BE84DE236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B1236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				22822AD923A1F7CC00CB940B /* NotificationKey.swift in Sources */,
 				17C7FB6A236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				DE952FF12287DF4800E3F688 /* LoginProtocols.swift in Sources */,
 				2220A78D235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
@@ -6135,6 +6142,7 @@
 				DE49F83122A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
 				22BE84DF236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B2236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				22822ADA23A1F7CC00CB940B /* NotificationKey.swift in Sources */,
 				17C7FB6B236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				2220A78E235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				2292F20D23653B0400B570E3 /* DrawerViewController.swift in Sources */,

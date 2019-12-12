@@ -272,6 +272,7 @@
 "agree" = "YES";
 "canceled" = "Canceled";
 "no" = "NO";
+"cancelBooking" = "Cancel";
 
 //QA
 

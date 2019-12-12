@@ -369,3 +369,6 @@
 "SelectDestination" = "Chọn điểm đến";
 "CancelFind" = "Huỷ tìm kiếm";
 "FilterDistance" = "KHOẢNG CÁCH";
+
+"cancelBooking" = "Huỷ";
+"NearMe" = "Gần vị trị của tôi";

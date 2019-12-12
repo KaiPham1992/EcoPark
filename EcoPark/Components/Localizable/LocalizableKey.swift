@@ -35,6 +35,7 @@ struct LocalizableKey {
     static let bookingParkingDetail = "bookingParkingDetail"
     static let cancel = "cancel"
     static let no = "no"
+     static let cancelBooking = "cancelBooking"
     //-- Popup
     static let receivable = "receivable"
     static let carType = "carType"
