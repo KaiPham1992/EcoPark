@@ -131,7 +131,7 @@
 "PasswordSignUp" = "Password (Minimum of 6 characters) *";
 "RePasswordSignUp" = "Retype Password*";
 "EmailSignUp" = "Email *";
-"PhoneNumberSignUp" = "Phone NUmber";
+"PhoneNumberSignUp" = "Phone Number";
 "Gender" = "Gender";
 "Birthday" = "Birth Day";
 "Capcha" = "Captcha *";

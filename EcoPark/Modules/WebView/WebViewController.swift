@@ -19,7 +19,7 @@ class WebViewController: BaseViewController {
     var mainUrl = "_api/webview/terms_of_use"
     
     var isTermCondition: Bool = false
-    
+    var isSignUp: Bool = false
     static func createModule(isTermCondition: Bool) -> WebViewController {
         let vc = WebViewController.initFromNib()
         vc.isTermCondition = isTermCondition
@@ -51,8 +51,12 @@ class WebViewController: BaseViewController {
     override func setUpNavigation() {
         super.setUpNavigation()
         
+        if isSignUp {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
         
-        addMenu()
     }
 }
 

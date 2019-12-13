@@ -96,7 +96,27 @@ class SignUpViewController: BaseViewController {
         attr.append(attr6)
         
         lbTermAndPolicy.attributedText = attr
+        self.lbTermAndPolicy.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnlabel(_ :)))
+        tapGesture.numberOfTapsRequired = 1
+        self.lbTermAndPolicy.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func tapOnlabel(_ gesture: UITapGestureRecognizer) {
+        guard let text = lbTermAndPolicy.text else { return }
+        let termOfUse = (text as NSString).range(of: LocalizableKey.termAndPolicyText2.showLanguage)
+        let policy = (text as NSString).range(of: LocalizableKey.termAndPolicyText4.showLanguage)
+        if gesture.didTapAttributedTextInLabel(label: lbTermAndPolicy, inRange: termOfUse) {
+            let webView = WebViewController.createModule(isTermCondition: true)
+            webView.isSignUp = true
+            self.push(controller: webView)
+        } else if gesture.didTapAttributedTextInLabel(label: lbTermAndPolicy, inRange: policy) {
+            let webView = WebViewController.createModule(isTermCondition: false)
+            webView.isSignUp = true
+            self.push(controller: webView)
+        }
+    }
+    
     
     @IBAction func btnSignUpTapped() {
         dismissKeyBoard()
@@ -242,4 +262,37 @@ extension SignUpViewController: AppTextFieldDropDownDelegate {
     func didChangedValue(sender: AppDropDown, item: Any) {
         self.genderSelect = item as! String
     }
+}
+
+extension UITapGestureRecognizer {
+    
+    func didTapAttributedTextInLabel(label: UILabel, inRange targetRange: NSRange) -> Bool {
+        // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
+        let layoutManager = NSLayoutManager()
+        let textContainer = NSTextContainer(size: CGSize.zero)
+        let textStorage = NSTextStorage(attributedString: label.attributedText!)
+        
+        // Configure layoutManager and textStorage
+        layoutManager.addTextContainer(textContainer)
+        textStorage.addLayoutManager(layoutManager)
+        
+        // Configure textContainer
+        textContainer.lineFragmentPadding = 0.0
+        textContainer.lineBreakMode = label.lineBreakMode
+        textContainer.maximumNumberOfLines = label.numberOfLines
+        let labelSize = label.bounds.size
+        textContainer.size = labelSize
+        
+        // Find the tapped character location and compare it to the specified range
+        let locationOfTouchInLabel = self.location(in: label)
+        let textBoundingBox = layoutManager.usedRect(for: textContainer)
+        let textContainerOffset = CGPoint(x: (labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x,
+                                          y: (labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y);
+        let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x,
+                                                     y: locationOfTouchInLabel.y - textContainerOffset.y);
+        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        
+        return NSLocationInRange(indexOfCharacter, targetRange)
+    }
+    
 }
