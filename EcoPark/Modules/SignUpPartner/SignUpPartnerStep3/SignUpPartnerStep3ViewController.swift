@@ -104,6 +104,26 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         attr.append(attr7)
         attr.append(attr8)
         lbTermAndPolicy.attributedText = attr
+        
+        self.lbTermAndPolicy.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnlabel(_ :)))
+        tapGesture.numberOfTapsRequired = 1
+        self.lbTermAndPolicy.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapOnlabel(_ gesture: UITapGestureRecognizer) {
+        guard let text = lbTermAndPolicy.text else { return }
+        let termOfUse = (text as NSString).range(of: LocalizableKey.termAndPolicySignUp4.showLanguage)
+        let policy = (text as NSString).range(of: LocalizableKey.termAndPolicySignUp5.showLanguage)
+        if gesture.didTapAttributedTextInLabel(label: lbTermAndPolicy, inRange: termOfUse) {
+            let webView = WebViewController.createModule(isTermCondition: true)
+            webView.isSignUp = true
+            self.push(controller: webView)
+        } else if gesture.didTapAttributedTextInLabel(label: lbTermAndPolicy, inRange: policy) {
+            let webView = WebViewController.createModule(isTermCondition: false)
+            webView.isSignUp = true
+            self.push(controller: webView)
+        }
     }
     
     @IBAction func btnDoneTapped() {

@@ -264,6 +264,14 @@
 "parkingSubImage" = "Please take a picture of your parking, at least 2 photos and maximum of 4 images *";
 "parkingWaitingSignUp" = "Your request to become a partner is in the process of checking. ECOPARKING will contact you as soon as possible.";
 
+"DoneSignUp" = "Sign up complete";
+"termAndPolicySignUp1" = "By clicking ";
+"termAndPolicySignUp2" = ", you agree with ";
+"termAndPolicySignUp3" = "Rules ";
+"termAndPolicySignUp4" = "Service policy ";
+"termAndPolicySignUp5" = "Privacy policy ";
+"termAndPolicySignUp6" = "ours.";
+
 "errorMinimunPhoto" = "Please take a picture of your at least 2 photo";
 "errorUtility" = "Please select more utility";
 
