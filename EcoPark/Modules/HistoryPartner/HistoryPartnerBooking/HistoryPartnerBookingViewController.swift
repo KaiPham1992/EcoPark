@@ -18,6 +18,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
     
 	var presenter: HistoryPartnerBookingPresenterProtocol?
 
+    var bookingReservation: Int = 0
     var historyParkingBooking: HistoryMyParkingEntity? {
         didSet {
             tbBooking.reloadData()
@@ -38,19 +39,19 @@ class HistoryPartnerBookingViewController: BaseViewController {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         vSearch.actionSearch = { text in
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
             self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: text)
         }
         vSearch.tapToTextField = {
             let text = self.vSearch.tfInput.text!
             print(text)
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
             self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: text)
         }
     }
     
     private func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
         presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: "")
     }
 }
@@ -82,7 +83,7 @@ extension HistoryPartnerBookingViewController: UITableViewDataSource, UITableVie
 
 extension HistoryPartnerBookingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: LocalizableKey.booked.showLanguage + " (0)")
+        return IndicatorInfo(title: LocalizableKey.booked.showLanguage + " (\(bookingReservation))")
     }
 }
 

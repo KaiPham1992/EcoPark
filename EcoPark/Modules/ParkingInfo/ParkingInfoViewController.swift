@@ -62,13 +62,13 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return  }
         presenter?.getParkingInfo(id: parkingID)
         presenter?.getListParkingType()
     }
     
     @IBAction func btnSaveTapped() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return  }
         if validateInputData() {
             presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID,
                                                                        parking_address: parkingAddress,
@@ -297,7 +297,7 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
     }
     
     func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?) {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return  }
         PopUpHelper.shared.showMessage(message: LocalizableKey.updateSuccess.showLanguage, width: popUpwidth) {}
         presenter?.getParkingInfo(id: parkingID)
         tbParkingInfo.reloadData()

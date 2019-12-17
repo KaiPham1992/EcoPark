@@ -95,7 +95,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     }
     
     func setRegisterOwner() {
-        if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.parkingID != "" {
+        if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.infoParking?.id != "" {
             vRegisterOwner.isHidden = true
             heightRegisterOwner.constant = 0
         } else {
