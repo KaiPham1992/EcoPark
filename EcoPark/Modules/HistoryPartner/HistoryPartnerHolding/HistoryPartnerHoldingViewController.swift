@@ -11,6 +11,10 @@
 import UIKit
 import XLPagerTabStrip
 
+protocol HistoryPartnerHoldingViewControllerDelegate: class {
+    func didLoadData()
+}
+
 class HistoryPartnerHoldingViewController: BaseViewController {
 
     @IBOutlet weak var vSearch: AppSearchBar!
@@ -18,6 +22,9 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     
 	var presenter: HistoryPartnerHoldingPresenterProtocol?
 
+    weak var delegate: HistoryPartnerHoldingViewControllerDelegate?
+    var number_place: String = "0"
+    var parkedNumber: Int = 0
     var historyParkingReservation: HistoryMyParkingEntity? {
         didSet {
             tbPartnerHolding.reloadData()
@@ -28,7 +35,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        
+        getData()
     }
 
     override func setUpViews() {
@@ -36,23 +43,24 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         
         vSearch.actionSearch = { text in
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
             self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: text)
         }
+        
         vSearch.tapToTextField = {
             let text = self.vSearch.tfInput.text!
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
             self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: text)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getData()
+        
     }
     
     private func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
         presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: "")
     }
     
@@ -105,7 +113,7 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         let place = historyParkingReservation?.number_place
         let reservation = historyParkingReservation?.reservation_number
-        return IndicatorInfo(title: LocalizableKey.holding.showLanguage + " (\(reservation ?? 0)/\(place ?? 0))")
+        return IndicatorInfo(title: LocalizableKey.holding.showLanguage + " (\(parkedNumber)/\(number_place))")
     }
     
 }
@@ -113,7 +121,7 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
 extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {
         self.historyParkingReservation = historyParking
-        
+        delegate?.didLoadData()
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {

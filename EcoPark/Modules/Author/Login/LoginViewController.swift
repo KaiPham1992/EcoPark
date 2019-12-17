@@ -73,6 +73,13 @@ class LoginViewController: BaseViewController {
         btnLogin.setTitle(LocalizableKey.LoginButtonLogin.showLanguage, for: .normal)
         lbForgot.text = LocalizableKey.ForgotPass.showLanguage
         lbRegister.text = LocalizableKey.NotYetAccount.showLanguage + ", " + LocalizableKey.Register.showLanguage
+        if LanguageHelper.currentAppleLanguage() == "en" {
+            btnEnglish.backgroundColor = AppColor.color_0_129_255
+            btnVietnamese.backgroundColor = AppColor.gray999999
+        } else {
+            btnEnglish.backgroundColor = AppColor.gray999999
+            btnVietnamese.backgroundColor = AppColor.color_0_129_255
+        }
     }
     
     @IBAction func btnLoginTapped() {
@@ -94,11 +101,15 @@ class LoginViewController: BaseViewController {
     @IBAction func btnEnglishTapped() {
         btnEnglish.backgroundColor = AppColor.color_0_129_255
         btnVietnamese.backgroundColor = AppColor.gray999999
+        LanguageHelper.setAppleLAnguageTo(lang: LanguageType.english)
+        AppRouter.shared.openHomeView()
     }
     
     @IBAction func btnVietnameseTapped() {
         btnEnglish.backgroundColor = AppColor.gray999999
         btnVietnamese.backgroundColor = AppColor.color_0_129_255
+        LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
+        AppRouter.shared.openHomeView()
     }
 }
 

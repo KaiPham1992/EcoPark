@@ -101,16 +101,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             }
         }
     }
-    
-//    func setRegisterOwner() {
-//        if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.parkingID& != "" {
-//            vRegisterOwner.isHidden = true
-//            heightRegisterOwner.constant = 0
-//        } else {
-//            vRegisterOwner.isHidden = false
-//            heightRegisterOwner.constant = 100
-//        }
-//    }
+
     
     @IBAction func btnLoginLogoutTapped() {
         // need login

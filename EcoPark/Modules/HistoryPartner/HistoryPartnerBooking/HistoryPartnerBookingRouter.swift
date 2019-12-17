@@ -14,13 +14,14 @@ class HistoryPartnerBookingRouter: HistoryPartnerBookingWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(bookingReservation: Int) -> HistoryPartnerBookingViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = HistoryPartnerBookingViewController(nibName: nil, bundle: nil)
         let interactor = HistoryPartnerBookingInteractor()
         let router = HistoryPartnerBookingRouter()
         let presenter = HistoryPartnerBookingPresenter(interface: view, interactor: interactor, router: router)
 
+        view.bookingReservation = bookingReservation
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

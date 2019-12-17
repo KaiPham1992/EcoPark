@@ -11,8 +11,8 @@ import XLPagerTabStrip
 
 class PageHistoryPartnerViewControler : PageViewController {
     
-    var parkedNumber: Int? = 0
-    var numberPlace: Int? = 0
+    var parkedNumber: Int = 0
+    var numberPlace: String = "0"
     var bookingReservation: Int = 0
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [HistoryPartnerHoldingRouter.createModule(), HistoryPartnerBookingRouter.createModule(), HistoryPartnerRouter.createModule()]
+        return [HistoryPartnerHoldingRouter.createModule(numberPlace: numberPlace, parkedNumber: parkedNumber), HistoryPartnerBookingRouter.createModule(bookingReservation: bookingReservation), HistoryPartnerRouter.createModule()]
     }
     
     func callAPICheckout(bookingID: String, code: String, license_plates: String) {
@@ -66,11 +66,12 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     func callAPIHistoryPartner() {
-        let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
         Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID&, status: "reversation", keyword: "", success: { (historyParking) in
-            self.parkedNumber = historyParking?.parked_number
-            self.numberPlace = historyParking?.number_place
+            self.parkedNumber = historyParking?.parked_number ?? 0
+            self.numberPlace = historyParking?.number_place ?? "0"
             self.bookingReservation = historyParking?.booking_reservation ?? 0
+            self.reloadPagerTabStripView()
         }) { (error) in
             
         }
