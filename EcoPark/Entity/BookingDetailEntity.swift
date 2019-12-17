@@ -36,11 +36,15 @@ class BookingDetailEntity: BaseEntity {
     var payment: Double?
     var customer_payment_wallet: Double?
     var rating: Int?
+    var address: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
     
         self.fullname <- map["fullname"]
+        if fullname == nil {
+            self.fullname <- map["name"]
+        }
         self.img_src <- map["img_src"]
         self.package_price <- map["package_price"]
         self.price <- map["price"]
@@ -50,8 +54,8 @@ class BookingDetailEntity: BaseEntity {
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
         self.intend_checkin_time <- (map["intend_checkin_time"], AppTimestampTransform())
-        self.time_check_in <- (map["time_check_in"], AppTimestampTransform())
-        self.time_check_out <- (map["time_check_out"], AppTimestampTransform())
+        self.time_check_in <- (map["time_check_in"], yyyyMMddHHmmssTransform())
+        self.time_check_out <- (map["time_check_out"], yyyyMMddHHmmssTransform())
         self.status <- map["status"]
         self.parking_id <- map["parking_id"]
         self.is_active <- map["is_active"]
@@ -68,6 +72,7 @@ class BookingDetailEntity: BaseEntity {
         self.payment <- (map["payment"], StringToDoubleTransform())
         self.customer_payment_wallet <- (map["customer_payment_wallet"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToIntTransform())
+        self.address <- map["address"]
         
         
     }

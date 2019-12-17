@@ -59,7 +59,7 @@
 "sent" = "Gửi";
 "timeExpect" = "Đã dự kiến đến bãi lúc ";
 "invalid" = "Không hợp lệ";
-"contentQRFail1" = "Mã QR này không thuộc hệ thống";
+"contentQRFail1" = "Mã QR này không thuộc hệ thống ";
 "contentQRFail2" = "\nVui lòng đảm bảo bạn đã quét đúng thông tin!";
 "retry" = "Thử lại";
 "questionLogout" = "Bạn có muốn đăng xuất khỏi tài khoản này?";
@@ -69,7 +69,7 @@
 "renewal" = "Gia hạn giữ chỗ";
 "renewalContent" = "Gia hạn giữ chỗ sẽ có giá trị trong vòng 60 phút. \nVui lòng thanh toán thêm phí giữ chỗ";
 "payWallet" = "Thanh toán ví";
-"noPlace" = "Chưa có chỗ";
+"noPlace" = "Chưa có đặt chỗ";
 "noPlaceQuestion" = "Bạn chưa đặt chỗ trước tại bãi đỗ này. Bạn có muốn bắt đầu giữ xe không?";
 "noThanks" = "Không, cảm ơn";
 

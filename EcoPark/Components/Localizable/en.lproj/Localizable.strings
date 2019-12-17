@@ -83,7 +83,7 @@
 "sent" = "Sent";
 "timeExpect" = "Expected to parking lot at";
 "invalid" = "Invalid";
-"contentQRFail1" = "This QR code is not part of the system";
+"contentQRFail1" = "This QR code is not part of the system ";
 "contentQRFail2" = "\nPlease make sure you have scanned the right information!";
 "retry" = "Retry";
 "questionLogout" = "Do you want to log out of this account?";
@@ -131,7 +131,7 @@
 "PasswordSignUp" = "Password (Minimum of 6 characters) *";
 "RePasswordSignUp" = "Retype Password*";
 "EmailSignUp" = "Email *";
-"PhoneNumberSignUp" = "Phone NUmber";
+"PhoneNumberSignUp" = "Phone Number";
 "Gender" = "Gender";
 "Birthday" = "Birth Day";
 "Capcha" = "Captcha *";
@@ -643,3 +643,5 @@
 "MaxPlaceParking" = "Max place parking";
 "Slot" = "Slot";
 "TimeAction" = "Time Action";
+
+"SCAN_QR_FAILED" = "Scan QR failed";

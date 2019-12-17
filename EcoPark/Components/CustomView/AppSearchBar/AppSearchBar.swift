@@ -29,10 +29,11 @@ class AppSearchBar: BaseViewXib {
         super.setUpViews()
         tfInput.delegate = self
         
-        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingChanged)
+        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingDidBegin)
     }
     
     @objc func textFieldTapped() {
+        tfInput.endEditing(true)
         tapToTextField?()
     }
     

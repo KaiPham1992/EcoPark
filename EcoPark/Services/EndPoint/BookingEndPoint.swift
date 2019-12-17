@@ -14,6 +14,7 @@ enum BookingEndPoint {
     case cancelReservation(bookingId: String)
     case extendReservation(bookingId: String)
     case ratingBooking(bookingId: String, rating: String)
+    case checkIn(bookingId: String)
 }
 
 extension BookingEndPoint: EndPointType {
@@ -23,7 +24,7 @@ extension BookingEndPoint: EndPointType {
             return "_api/order/get_booking"
         case .getBookingDetail:
             return "_api/order/get_booking_detail"
-        case .cancelReservation:
+        case .cancelReservation, .checkIn:
             return "_api/order/update_status_booking"
         case .extendReservation:
             return "_api/order/extra_reservation"
@@ -44,6 +45,8 @@ extension BookingEndPoint: EndPointType {
             return ["booking_id": bookingId]
         case .cancelReservation(let id):
             return ["booking_id": id, "status": "cancel"]
+        case .checkIn(let id):
+                   return ["booking_id": id, "status": "checked_in"]
         case .extendReservation(let id):
             return ["booking_id": id]
         case .ratingBooking(let bookingId, let rating):

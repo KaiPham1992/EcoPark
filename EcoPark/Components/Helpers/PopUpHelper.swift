@@ -187,7 +187,7 @@ class PopUpHelper {
         
         
         let content1 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
-        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
+        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail2.showLanguage, attributes: blackAttr)
         
         let content = NSMutableAttributedString()
         content.append(content1)
