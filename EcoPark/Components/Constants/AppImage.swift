@@ -22,16 +22,16 @@ struct AppImage {
     static let imgAddImage = UIImage(named: "ic_add_image- 1")!
     static let imgAddImage1 = UIImage(named: "ic_add_image")!
     // Menu
-        static let imgHistoryParking  = UIImage(named: "ic_historyparking_on")!.withRenderingMode(.alwaysTemplate)
-        static let imgMyParking = UIImage(named: "ic_myparking_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgFindAround = UIImage(named: "ic_myparking_off-1")!.withRenderingMode(.alwaysTemplate)
-        static let imgHistory = UIImage(named: "ic_history_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgNotification = UIImage(named: "ic_notification_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgProfile = UIImage(named: "ic_person_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgPrivacy = UIImage(named: "ic_list_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgSecurity = UIImage(named: "ic_shield_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgCall = UIImage(named: "ic_call_off")!.withRenderingMode(.alwaysTemplate)
-        static let imgLanguage = UIImage(named: "ic_news_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgHistoryParking  = UIImage(named: "ic_historyparking_on")!.withRenderingMode(.alwaysTemplate)
+    static let imgMyParking = UIImage(named: "ic_myparking_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgFindAround = UIImage(named: "ic_myparking_off-1")!.withRenderingMode(.alwaysTemplate)
+    static let imgHistory = UIImage(named: "ic_history_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgNotification = UIImage(named: "ic_notification_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgProfile = UIImage(named: "ic_person_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgPrivacy = UIImage(named: "ic_list_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgSecurity = UIImage(named: "ic_shield_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgCall = UIImage(named: "ic_call_off")!.withRenderingMode(.alwaysTemplate)
+    static let imgLanguage = UIImage(named: "ic_news_off")!.withRenderingMode(.alwaysTemplate)
     
     static let imgWallet = UIImage(named: "ic_star_outline")!.withRenderingMode(.alwaysTemplate)
     static let iconFilter = UIImage(named: "ic_filter")!
@@ -43,21 +43,21 @@ struct AppImage {
     static let iconCheckin = UIImage(named: "ic_qrcheckout")!
     static let iconPlaceMap = UIImage(named: "ic_placeholder_map")!
     static let imgPlaceHolder = UIImage(named: "placeHolderImage")!
-
+    
     //Login
     static let iconUsername = UIImage(named: "avatarDefautl")
     static let iconPadlock = UIImage(named: "ic_padlock")
     static let imgParking = UIImage(named: "ic_parking_3")!
     static let imgMarkerSelected = UIImage(named: "ic_placeholder_map-1")!
     
-
+    
     // Utility
     static let imgRootOn = UIImage(named: "ic_roof_on")!
     static let imgRootOff = UIImage(named: "ic_roof_off")!
     
     static let imgCarwashOn = UIImage(named: "ic_carwash_on")!
     static let imgCarwashOff = UIImage(named: "ic_carwash_off")!
-
+    
     //SignUp partner
     static let iconNumber1 = UIImage(named: "ic_step_1_on")
     static let iconNumber2_on = UIImage(named: "ic_step_2_on")
@@ -66,7 +66,7 @@ struct AppImage {
     static let iconNumber3_on = UIImage(named: "ic_step_3_on")
     static let iconSpace_on = UIImage(named: "ic_dash_on")
     static let iconSpace_off = UIImage(named: "ic_dash_off")
-
+    
     
     static let imgRepairOn = UIImage(named: "ic_repair_on")!
     static let imgRepairOff = UIImage(named: "ic_repair_off")!
@@ -90,12 +90,16 @@ struct AppImage {
     static let imgStarHalf = UIImage(named: "ic_star_half")!
     static let imgStarEmpty = UIImage(named: "ic_star_outline")!
     
-
+    
     // MARK: Notification
     static let imgNotificationOn = UIImage(named: "ic_notification_on")!
     static let imgNotificationOff = UIImage(named: "ic_notifications_off")!
-
+    
     // MARK: Wallet
     static let imgUp = UIImage(named: "ic_up")!
     static let imgDown = UIImage(named: "ic_downward")!
+    
+    
+    static let imgCar4 = UIImage(named: "ic_car_4cho")!.withRenderingMode(.alwaysTemplate)
+    static let imgCar7 = UIImage(named: "ic_car_7cho")!.withRenderingMode(.alwaysTemplate)
 }
