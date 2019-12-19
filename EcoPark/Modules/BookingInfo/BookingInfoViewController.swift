@@ -40,14 +40,15 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
 	var presenter: BookingInfoPresenterProtocol?
     var parking: ParkingEntity?
+    
+    var indexVehical: Int = 0
+    var listVehicle: [VehicleTypeEntity] = [VehicleTypeEntity]()
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         getParkingInfo()
         getVehicleType()
-        
-        
     }
     
     func getParkingInfo() {
@@ -111,6 +112,8 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         if let packagePrice = info.package_price {
             lbPriceEightHour.text = packagePrice.toCurrency + LocalizableKey.eachPackage.showLanguage
         }
+        
+        dropDownType.btnAction.isHidden = true 
     }
     
     @IBAction func btnBookingTapped() {
@@ -124,6 +127,15 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         
     }
     
+    @IBAction func btnTypeVehicalTapped() {
+        let pop = SelectCarPopUp()
+        pop.showPopUp(indexSelect: indexVehical, width: popUpwidth) { index in
+            guard let index = index as? Int else { return }
+            self.indexVehical = index
+            
+            self.dropDownType.tfInput.text = self.listVehicle[index].name&
+        }
+    }
     // MARK: Get error
     func didGetError(error: APIError) {
         printError(message: error.message)
@@ -132,29 +144,36 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     // MARK: Book reservation
     func booking() {
         
-        print(timePicker.date)
-        
+//        print(timePicker.date)
         
         do {
-            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn ngày"))
-            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn giờ đến bãi"))
-            let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: "Bạn chưa nhập biển số")) ?? ""
-            _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn loại xe"))
+            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseDate.showLanguage))
+            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTime.showLanguage))
+            let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: LocalizableKey.NotYetLisence.showLanguage)) ?? ""
+            _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTypeVehical.showLanguage))
             guard let dateTime = timePicker.date else { return }
             if datePicker.dateSelected?.isToday == true  {
                 if dateTime < Date() {
-                    PopUpHelper.shared.showMessage(message: "Giờ < giờ hiện tại", width: popUpwidth, completion: {})
+                    PopUpHelper.shared.showMessage(message: LocalizableKey.HourSmaller.showLanguage, width: popUpwidth, completion: {})
+                    return
+                }
+            }
+            
+            if let timeStart = parking?.time_start?.timeIntervalSince1970, let timeEnd = parking?.time_end?.timeIntervalSince1970 {
+                if timeStart > dateTime.timeIntervalSince1970 || timeEnd < dateTime.timeIntervalSince1970 {
+                    PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+                    
                     return
                 }
             }
             
             //---
             guard let parkId = parking?.parking_id,
-            let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id,
+            let vehicleId = (dropDownType.listItem[indexVehical] as? VehicleTypeEntity)?.id,
             let moneyPaid = parking?.price else { return }
             let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
             let time = datePicker.date& + " " + hhmm&
-                        
+            
             presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
             
         } catch {
@@ -190,6 +209,10 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     func didGetVehicleType(listVehicle: [VehicleTypeEntity]) {
         dropDownType.listItem = listVehicle
         dropDownType.selectedItem = listVehicle.first
+        
+        self.listVehicle = listVehicle.sorted(by: { (sort1, sort2) -> Bool in
+            return sort1.id& < sort2.id&
+        })
     }
     
     // MARK: Get Park Info
