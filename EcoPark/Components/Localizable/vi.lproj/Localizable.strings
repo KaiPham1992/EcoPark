@@ -348,8 +348,8 @@
 "history" = "Lịch sử";
 "book_at" = "Đặt lúc";
 "canceled" = "Đã huỷ";
-"checked_out" = "Check out";
-"checked_in" = "Check in";
+"checked_out" = "Đã check out";
+"checked_in" = "Đã check in";
 "reservation" = "Đang giữ chỗ";
 "expired" = "Hết hạn";
 "history_parking" = "Lịch sử đỗ xe";
