@@ -86,8 +86,8 @@ class ChooseTimePopUp: BasePopUpView {
 //        let formatter = DateFormatter()
 //        formatter.timeStyle = .medium
 //        let time = formatter.string(from: timeSelected)
-        let time = timeSelected.toString(dateFormat: AppDateFormat.hhmmss)
-        completionTime?(time)
+//        let time = timeSelected.toString(dateFormat: AppDateFormat.hhmmss)
+        completionTime?(timeSelected)
     }
     
     @objc func btnClearTapped() {
@@ -97,9 +97,11 @@ class ChooseTimePopUp: BasePopUpView {
     
     func showPopUp(completionTime: @escaping CompletionAny) {
         self.completionTime = completionTime
-    
+
         self.showPopUp(height: 250, type: .showFromBottom)
     }
+    
+    
     
 //    func showPopUp(currentTime: TimeZone? = nil) {
 //
@@ -113,9 +115,20 @@ class ChooseTimePopUp: BasePopUpView {
     
     
 //    func showPopUp(minDate: Date? = nil, maxDate: Date? = nil, currentDate: Date? = nil, completionDate: @escaping CompletionAny) {
-//        self.completionDate = completionDate
+//        self.completionTime = completionDate
 //
-//        self.showPopUp(minDate: minDate, maxDate: maxDate, currentDate: currentDate)
+//           if currentDate != nil {
+//                 self.timePicker.date = currentDate!
+//             }
+//             self.timePicker.minimumDate = minDate
+//             self.timePicker.maximumDate = maxDate
+//
+//
+//             if currentDate != nil {
+//                 self.timePicker.setDate(currentDate!, animated: true)
+//             }
+//
+//             showPopUp(height: 250, type: .showFromBottom)
 //    }
 //
 //    func showPopUp(minDate: Date? = nil, maxDate: Date? = nil, currentDate: Date? = nil, completionDate: @escaping CompletionAny, completionHide:  @escaping CompletionClosure) {

@@ -12,6 +12,7 @@ class DatePicker: BaseViewXib{
         
     @IBOutlet weak var tfDate: UITextField!
     var date: String?
+    var dateSelected: Date?
     
     override func setUpViews() {
         super.setUpViews()
@@ -23,14 +24,14 @@ class DatePicker: BaseViewXib{
         let popUp = ChooseDatePopUp()
         UIApplication.topViewController()?.view.endEditing(true)
 
-        popUp.showPopUp(currentDate: nil, completionDate: { date in
+        popUp.showPopUp(minDate: Date(), currentDate: nil, completionDate: { date in
             guard let date = date as? Date else {
                 self.date = nil
                 self.tfDate.text = ""
                 self.tfDate.placeholder = "dd/mm/yyyy"
                 return
             }
-            
+            self.dateSelected = date
             self.date = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
             self.tfDate.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
         })
