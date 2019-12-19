@@ -610,8 +610,8 @@
 "history" = "History";
 "book_at" = "Book at";
 "cancel" = "Cancel";
-"checked_out" = "Check out";
-"checked_in" = "Check in";
+"checked_out" = "Checked out";
+"checked_in" = "Checked in";
 "reservation" = "Reservation";
 "expired" = "Expired";
 "history_parking" = "History parking";
