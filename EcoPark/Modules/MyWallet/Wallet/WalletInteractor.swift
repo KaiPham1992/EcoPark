@@ -28,8 +28,9 @@ class WalletInteractor: WalletInteractorInputProtocol {
         if showLoading {
             ProgressView.shared.show()
         }
-        Provider.shared.userAPIService.getWalletHistory(offset: offset, limit: 10, success: { (list) in
+        Provider.shared.userAPIService.getWalletHistory(offset: offset, limit: 10, success: { (wallet) in
             ProgressView.shared.hide()
+            guard let list = wallet?.historyWallet else { return }
             self.presenter?.didGetWalletHistory(listLog: list)
         }) { (error) in
             ProgressView.shared.hide()
