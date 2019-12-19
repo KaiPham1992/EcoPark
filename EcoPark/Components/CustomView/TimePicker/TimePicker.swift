@@ -12,7 +12,9 @@ class TimePicker: BaseViewXib {
     
     @IBOutlet weak var tfTime: UITextField!
     
-    var time: String?
+//    var time: String?
+    var date: Date?
+    
 
     override func setUpViews() {
         super.setUpViews()
@@ -25,15 +27,15 @@ class TimePicker: BaseViewXib {
         UIApplication.topViewController()?.view.endEditing(true)
 
         popUp.showPopUp(completionTime: { time in
-            guard let time = time as? String else {
-                self.time = nil
+            guard let time = time as? Date else {
+//                self.time = nil
                 self.tfTime.text = ""
                 self.tfTime.placeholder = "hh/mm"
                 return
             }
 
-            self.time = time
-            self.tfTime.text = time
+            self.date = time
+            self.tfTime.text = time.toString(dateFormat: AppDateFormat.HHmm)
         })
     }
 

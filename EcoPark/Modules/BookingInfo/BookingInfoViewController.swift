@@ -46,6 +46,8 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         
         getParkingInfo()
         getVehicleType()
+        
+        
     }
     
     func getParkingInfo() {
@@ -129,16 +131,29 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     // MARK: Book reservation
     func booking() {
+        
+        print(timePicker.date)
+        
+        
         do {
             _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn ngày"))
             _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn giờ đến bãi"))
             let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: "Bạn chưa nhập biển số")) ?? ""
             _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn loại xe"))
+            guard let dateTime = timePicker.date else { return }
+            if datePicker.dateSelected?.isToday == true  {
+                if dateTime < Date() {
+                    PopUpHelper.shared.showMessage(message: "Giờ < giờ hiện tại", width: popUpwidth, completion: {})
+                    return
+                }
+            }
             
+            //---
             guard let parkId = parking?.parking_id,
             let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id,
             let moneyPaid = parking?.price else { return }
-            let time = datePicker.date& + " " + timePicker.time&
+            let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
+            let time = datePicker.date& + " " + hhmm&
                         
             presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
             
