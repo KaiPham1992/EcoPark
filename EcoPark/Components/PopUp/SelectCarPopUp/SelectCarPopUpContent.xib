@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="btn4" destination="tSe-fN-XbL" id="Op6-EJ-a8D"/>
                 <outlet property="btn7" destination="Pkg-vT-ILb" id="y5g-u7-JWP"/>
-                <outlet property="imgCar4" destination="bN1-2q-iBk" id="iHi-kA-dCM"/>
+                <outlet property="imgCar4" destination="bN1-2q-iBk" id="LfQ-za-eNI"/>
                 <outlet property="imgCar7" destination="9Jt-mp-Q31" id="YMd-WG-yvK"/>
                 <outlet property="lbCar4" destination="WQ6-N9-R92" id="vA0-ZV-Tmc"/>
                 <outlet property="lbCar7" destination="zgf-7j-8Q1" id="DCg-Si-Sge"/>

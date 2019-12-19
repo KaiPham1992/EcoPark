@@ -202,7 +202,7 @@
 "ParkingOpen" = "Mở cửa *";
 "ParkingClose" = "Đóng cửa *";
 "ParkingPrice" = "giá dịch vụ";
-"PriceAHours" = " Đơn giá theo giờ";
+"PriceAHours" = "Đơn giá theo giờ";
 "PriceCombo" = "Đơn giá theo gói (8 giờ)";
 "ParkingLicense" = "Giấy phép kinh doanh";
 "ParkingTaxCode" = "Mã số thuế";
@@ -383,3 +383,10 @@
 
 "cancelBooking" = "Huỷ";
 "NearMe" = "Gần vị trị của tôi";
+
+"HourSmaller" = "Giờ nhỏ hơn giờ hiện tại";
+"ChooseDate" = "Bạn chưa chọn ngày";
+"ChooseTime" = "Bạn chưa chọn giờ đến bãi";
+"ChooseTypeVehical" = "Bạn chưa chọn loại xe";
+"NotYetLisence" = "Bạn chưa nhập biển số";
+"TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";

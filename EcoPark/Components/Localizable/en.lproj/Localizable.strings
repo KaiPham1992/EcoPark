@@ -653,3 +653,12 @@
 "TimeAction" = "Time Action";
 
 "SCAN_QR_FAILED" = "Scan QR failed";
+"HourSmaller" = "Time is less than current time";
+
+"HourSmaller" = "Giờ nhỏ hơn giờ hiện tại";
+"ChooseDate" = "Bạn chưa chọn ngày";
+"ChooseTime" = "Bạn chưa chọn giờ đến bãi";
+"ChooseTypeVehical" = "Bạn chưa chọn loại xe";
+"NotYetLisence" = "Bạn chưa nhập biển số";
+"TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";
+
