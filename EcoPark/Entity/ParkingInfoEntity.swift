@@ -128,7 +128,7 @@ class MaterialEntity: BaseEntity {
             case "ca phe":
                 return .coffee
             default:
-                return nil
+                return .superMarket
             }
         }
     }
