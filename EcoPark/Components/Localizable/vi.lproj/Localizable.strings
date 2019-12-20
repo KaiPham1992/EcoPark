@@ -59,7 +59,7 @@
 "sent" = "Gửi";
 "timeExpect" = "Đã dự kiến đến bãi lúc ";
 "invalid" = "Không hợp lệ";
-"contentQRFail1" = "Mã QR này không thuộc hệ thống";
+"contentQRFail1" = "Mã QR này không thuộc hệ thống ";
 "contentQRFail2" = "\nVui lòng đảm bảo bạn đã quét đúng thông tin!";
 "retry" = "Thử lại";
 "questionLogout" = "Bạn có muốn đăng xuất khỏi tài khoản này?";
@@ -69,7 +69,7 @@
 "renewal" = "Gia hạn giữ chỗ";
 "renewalContent" = "Gia hạn giữ chỗ sẽ có giá trị trong vòng 60 phút. \nVui lòng thanh toán thêm phí giữ chỗ";
 "payWallet" = "Thanh toán ví";
-"noPlace" = "Chưa có chỗ";
+"noPlace" = "Chưa có đặt chỗ";
 "noPlaceQuestion" = "Bạn chưa đặt chỗ trước tại bãi đỗ này. Bạn có muốn bắt đầu giữ xe không?";
 "noThanks" = "Không, cảm ơn";
 
@@ -202,7 +202,7 @@
 "ParkingOpen" = "Mở cửa *";
 "ParkingClose" = "Đóng cửa *";
 "ParkingPrice" = "giá dịch vụ";
-"PriceAHours" = " Đơn giá theo giờ";
+"PriceAHours" = "Đơn giá theo giờ";
 "PriceCombo" = "Đơn giá theo gói (8 giờ)";
 "ParkingLicense" = "Giấy phép kinh doanh";
 "ParkingTaxCode" = "Mã số thuế";
@@ -348,8 +348,8 @@
 "history" = "Lịch sử";
 "book_at" = "Đặt lúc";
 "canceled" = "Đã huỷ";
-"checked_out" = "Check out";
-"checked_in" = "Check in";
+"checked_out" = "Đã check out";
+"checked_in" = "Đã check in";
 "reservation" = "Đang giữ chỗ";
 "expired" = "Hết hạn";
 "history_parking" = "Lịch sử đỗ xe";
@@ -383,3 +383,10 @@
 
 "cancelBooking" = "Huỷ";
 "NearMe" = "Gần vị trị của tôi";
+
+"HourSmaller" = "Giờ nhỏ hơn giờ hiện tại";
+"ChooseDate" = "Bạn chưa chọn ngày";
+"ChooseTime" = "Bạn chưa chọn giờ đến bãi";
+"ChooseTypeVehical" = "Bạn chưa chọn loại xe";
+"NotYetLisence" = "Bạn chưa nhập biển số";
+"TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";

@@ -24,21 +24,17 @@ class RechargeWalletViewController: BaseViewController, RechargeWalletViewProtoc
     
     override func setUpNavigation() {
         super.setUpNavigation()
-        
         addBackToNavigation()
         setTitleNavigation(title: "Nạp tiền")
     }
     
     override func setUpViews() {
         super.setUpViews()
-        
         checkBoxATMCard.setTitle(title: "Thẻ ATM nội địa / Internet banking", isCheck: true)
         checkBoxATMCard.delegate = self
         checkBoxCreditCard.setTitle(title: "Thẻ tín dụng / Thẻ ghi nợ", isCheck: false)
         checkBoxCreditCard.delegate = self
     }
-    
-
 }
 
 extension RechargeWalletViewController: AppCheckBoxDelegate {

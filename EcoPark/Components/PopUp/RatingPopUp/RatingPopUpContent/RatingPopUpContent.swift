@@ -18,7 +18,7 @@ class RatingPopUpContent: BaseViewXib {
     override func setUpViews() {
         
         lbRating.text = LocalizableKey.rating.showLanguage
-        let attr1 = LocalizableKey.contentRating1.toAttributedString(color: AppColor.black, font: AppFont.fontRegular15, isUnderLine: false)
+        let attr1 = LocalizableKey.contentRating1.showLanguage.toAttributedString(color: AppColor.black, font: AppFont.fontRegular15, isUnderLine: false)
         
         let attr2 = LocalizableKey.termAndPolicyText6.showLanguage.description.toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold15, isUnderLine: false)
         

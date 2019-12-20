@@ -21,7 +21,7 @@ class WalletViewController: BaseViewController {
     
     let refreshControl = UIRefreshControl()
 	var presenter: WalletPresenterProtocol?
-    var listWalletHistory : [HistoryWalletEntity] = [HistoryWalletEntity]() {
+    var listWalletHistory : [HistoryWallet] = [HistoryWallet]() {
         didSet {
             tbWallet.reloadData()
         }
@@ -105,7 +105,7 @@ extension WalletViewController: WalletViewProtocol {
         presenter?.getWalletHistory(showLoading: showLoading)
     }
     
-    func didGetWalletHistory(listLog: [HistoryWalletEntity]) {
+    func didGetWalletHistory(listLog: [HistoryWallet]) {
         self.listWalletHistory = listLog
     }
     
@@ -136,7 +136,7 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueTableCell(WalletCell.self)
         let item = listWalletHistory[indexPath.row]
         if let price = item.price,
-            let time = item.create_time_mi?.toString(dateFormat: .hhmmddmmyyy),
+            let time = item.create_time_mi?.toString(dateFormat: .HHmmddMMyyyy),
             let content = item.content,
             let status = item.status {
             var isPlus = true

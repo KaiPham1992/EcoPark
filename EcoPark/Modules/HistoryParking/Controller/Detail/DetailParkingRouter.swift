@@ -11,7 +11,6 @@
 import UIKit
 
 enum TypeDetailParking {
-
     case checkin
     case checkout
     case complete

@@ -83,7 +83,7 @@
 "sent" = "Sent";
 "timeExpect" = "Expected to parking lot at";
 "invalid" = "Invalid";
-"contentQRFail1" = "This QR code is not part of the system";
+"contentQRFail1" = "This QR code is not part of the system ";
 "contentQRFail2" = "\nPlease make sure you have scanned the right information!";
 "retry" = "Retry";
 "questionLogout" = "Do you want to log out of this account?";
@@ -610,8 +610,8 @@
 "history" = "History";
 "book_at" = "Book at";
 "cancel" = "Cancel";
-"checked_out" = "Check out";
-"checked_in" = "Check in";
+"checked_out" = "Checked out";
+"checked_in" = "Checked in";
 "reservation" = "Reservation";
 "expired" = "Expired";
 "history_parking" = "History parking";
@@ -651,3 +651,14 @@
 "MaxPlaceParking" = "Max place parking";
 "Slot" = "Slot";
 "TimeAction" = "Time Action";
+
+"SCAN_QR_FAILED" = "Scan QR failed";
+"HourSmaller" = "Time is less than current time";
+
+"HourSmaller" = "Giờ nhỏ hơn giờ hiện tại";
+"ChooseDate" = "Bạn chưa chọn ngày";
+"ChooseTime" = "Bạn chưa chọn giờ đến bãi";
+"ChooseTypeVehical" = "Bạn chưa chọn loại xe";
+"NotYetLisence" = "Bạn chưa nhập biển số";
+"TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";
+

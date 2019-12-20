@@ -113,7 +113,7 @@ class DetailParkingViewController: BaseViewController {
     }
     
     func countTime() {
-        guard let checkInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
+        guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
         
         let ddhhmm = Utils.getTime(date: checkInTime)
         VTHour.setUpTime(time: ddhhmm.1)
@@ -121,8 +121,6 @@ class DetailParkingViewController: BaseViewController {
         VTDate.setUpTime(time: ddhhmm.0)
         let numberParking = ddhhmm.0 * 24 + ddhhmm.1
         DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
-        
-        print(ddhhmm)
     }
     
     override func btnBackTapped() {

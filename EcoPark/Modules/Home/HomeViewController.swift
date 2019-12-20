@@ -110,13 +110,18 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
                 Provider.shared.userAPIService.scanQRCheckIn(parkingId: qrcode[2], bossParkingId: qrcode[1], success: { bookingDetail in
                     ProgressView.shared.hide()
                     guard let bookingDetail = bookingDetail else { return }
+                    
+                    PopUpHelper.shared.showCheckIn(name: bookingDetail.fullname&, address: "Địa Chỉ", time: "12/12", width: 350, height: 220, completionYes: {
+                        //---
+                    }) {
+                        //---
+                    }
                    
-                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
-                    self.push(controller: vc)
+//                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
+//                    self.push(controller: vc)
                     
                 }) { error in
                     ProgressView.shared.hide()
-//                    guard let error = error else { return }
                 }
             }
         }

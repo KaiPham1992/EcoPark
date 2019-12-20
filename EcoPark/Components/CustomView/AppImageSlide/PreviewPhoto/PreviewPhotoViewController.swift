@@ -19,18 +19,18 @@ class PreviewPhotoViewController: UIViewController {
     private  var currentPage: Int = 0
     private var listBanner = [URL]() {
         didSet {
-            loadImage()
+//            loadImage()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setUpStatusBar(color: UIColor.black)
+//        setUpStatusBar(color: UIColor.black)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        setUpStatusBar(color: AppColor.black)
+//        setUpStatusBar(color: AppColor.black)
     }
     
     func setUpStatusBar(color: UIColor) {

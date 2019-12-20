@@ -514,6 +514,15 @@
 		22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
 		22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
 		22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
+		22B1DC5723A9CF370041A03C /* SelectCarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */; };
+		22B1DC5823A9CF370041A03C /* SelectCarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */; };
+		22B1DC5923A9CF370041A03C /* SelectCarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */; };
+		22B1DC5B23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */; };
+		22B1DC5C23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */; };
+		22B1DC5D23A9D0010041A03C /* SelectCarPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */; };
+		22B1DC5F23A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */; };
+		22B1DC6023A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */; };
+		22B1DC6123A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */; };
 		22B4B31C236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
 		22B4B31D236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
 		22B4B31E236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
@@ -860,9 +869,6 @@
 		762EAB2623784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		762EAB2723784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		762EAB2823784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
-		762EAB2A237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
-		762EAB2B237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
-		762EAB2C237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
 		76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
@@ -1837,6 +1843,9 @@
 		229B69DA2388FC7B00B43C90 /* RatingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingEntity.swift; sourceTree = "<group>"; };
 		22AE2206236C1A6000148E2C /* AppRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
 		22AE2207236C1A6100148E2C /* AppRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppRatingView.xib; sourceTree = "<group>"; };
+		22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarPopUp.swift; sourceTree = "<group>"; };
+		22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarPopUpContent.swift; sourceTree = "<group>"; };
+		22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCarPopUpContent.xib; sourceTree = "<group>"; };
 		22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppImageSlide.swift; sourceTree = "<group>"; };
 		22B4B318236ABC4C004BD8FB /* AppImageSlide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppImageSlide.xib; sourceTree = "<group>"; };
 		22B4B31A236ABC4C004BD8FB /* PreviewPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPhotoViewController.swift; sourceTree = "<group>"; };
@@ -1965,7 +1974,6 @@
 		762E32E7236D1A8A00FF4F3E /* CheckInPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInPopUpContent.xib; sourceTree = "<group>"; };
 		762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUp.swift; sourceTree = "<group>"; };
 		762EAB2523784EE80079A31F /* WalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEntity.swift; sourceTree = "<group>"; };
-		762EAB29237852E20079A31F /* HistoryWalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWalletEntity.swift; sourceTree = "<group>"; };
 		76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountPopUp.swift; sourceTree = "<group>"; };
 		76483BEF229EE3C90079F9A1 /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAccountView.xib; sourceTree = "<group>"; };
@@ -2814,6 +2822,16 @@
 				22AE2207236C1A6100148E2C /* AppRatingView.xib */,
 			);
 			path = AppRatingView;
+			sourceTree = "<group>";
+		};
+		22B1DC5523A9CEED0041A03C /* SelectCarPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */,
+				22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */,
+				22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */,
+			);
+			path = SelectCarPopUp;
 			sourceTree = "<group>";
 		};
 		22B4B316236ABC4C004BD8FB /* AppImageSlide */ = {
@@ -3859,6 +3877,7 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				22B1DC5523A9CEED0041A03C /* SelectCarPopUp */,
 				B1789928237CFC1000BC529E /* MessagePopUp */,
 				7656E50A237462C100428F61 /* ChooseTimePopUp */,
 				760B92712371B30600C281D6 /* ChooseDatePopUp */,
@@ -3946,7 +3965,6 @@
 				760D15E52375AA3500062FC7 /* BookingEntity.swift */,
 				760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */,
 				762EAB2523784EE80079A31F /* WalletEntity.swift */,
-				762EAB29237852E20079A31F /* HistoryWalletEntity.swift */,
 				229B69DA2388FC7B00B43C90 /* RatingEntity.swift */,
 			);
 			path = Entity;
@@ -4582,6 +4600,7 @@
 				2238872E2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */,
 				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				7656E4FE23741E1D00428F61 /* DatePicker.xib in Resources */,
+				22B1DC5F23A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B31F236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
@@ -4710,6 +4729,7 @@
 				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				7656E4FF23741E1D00428F61 /* DatePicker.xib in Resources */,
+				22B1DC6023A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B320236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
@@ -4838,6 +4858,7 @@
 				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				7656E50023741E1D00428F61 /* DatePicker.xib in Resources */,
+				22B1DC6123A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B321236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
@@ -5083,6 +5104,7 @@
 				1781C7EF236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				172D097D236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
+				22B1DC5B23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				761A47442371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -5208,7 +5230,6 @@
 				76662853236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
-				762EAB2A237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DA236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -5465,6 +5486,7 @@
 				175C7357236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				17848B6A23803057008B3A85 /* ImageParkingPresenter.swift in Sources */,
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
+				22B1DC5723A9CF370041A03C /* SelectCarPopUp.swift in Sources */,
 				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DD236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
 				7609FBCD236D9F530029E003 /* CheckOutViewController.swift in Sources */,
@@ -5520,6 +5542,7 @@
 				1781C7F0236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				172D097E236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
+				22B1DC5C23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				761A47452371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -5645,7 +5668,6 @@
 				76662854236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
-				762EAB2B237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DB236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -5902,6 +5924,7 @@
 				175C7358236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				17848B6B23803057008B3A85 /* ImageParkingPresenter.swift in Sources */,
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
+				22B1DC5823A9CF370041A03C /* SelectCarPopUp.swift in Sources */,
 				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DE236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
 				7609FBCE236D9F530029E003 /* CheckOutViewController.swift in Sources */,
@@ -5957,6 +5980,7 @@
 				1781C7F1236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				172D097F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
+				22B1DC5D23A9D0010041A03C /* SelectCarPopUpContent.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				761A47462371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -6082,7 +6106,6 @@
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
 				76662855236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
-				762EAB2C237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DC236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
@@ -6339,6 +6362,7 @@
 				175C7359236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				17848B6C23803057008B3A85 /* ImageParkingPresenter.swift in Sources */,
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
+				22B1DC5923A9CF370041A03C /* SelectCarPopUp.swift in Sources */,
 				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DF236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
 				7609FBCF236D9F530029E003 /* CheckOutViewController.swift in Sources */,

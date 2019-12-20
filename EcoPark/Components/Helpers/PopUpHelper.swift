@@ -150,14 +150,14 @@ class PopUpHelper {
     }
     
     func showError(message: String, completionYes: CompletionClosure?) {
-        let popUp = NotificationPopUp()
-        popUp.showPopUp(message: message, completion: completionYes)
+        let popUp = OneButtonPopUp()
+        popUp.showPopUp(titlePopUp: message, contentPopUpNormal: message, buttonTitle: "OK", width: 350, height: 220, completion: completionYes)
     }
     
-    func showErrorDidNotRemoveView(message: String, completionYes: CompletionClosure?) {
-        let popUp = NotificationPopUp()
-        popUp.showPopUp(message: message, completion: completionYes)
-    }
+//    func showErrorDidNotRemoveView(message: String, completionYes: CompletionClosure?) {
+//        let popUp = OneButtonPopUp()
+//        popUp.showPopUp(message: message, completion: completionYes)
+//    }
     
     func sentNewPassword(completionYes: CompletionClosure?) {
         let popUp = UpdateAccountPopup()
@@ -187,7 +187,7 @@ class PopUpHelper {
         
         
         let content1 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
-        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
+        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail2.showLanguage, attributes: blackAttr)
         
         let content = NSMutableAttributedString()
         content.append(content1)

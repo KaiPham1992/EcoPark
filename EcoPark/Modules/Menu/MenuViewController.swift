@@ -60,7 +60,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         }
         tbMenu.reloadData()
         setUserName()
-        setRegisterOwner()
+//        setRegisterOwner()
         
         Provider.shared.notificationAPIService.getNotification(offset: 1, limit: 20, screen: "SYSTEM", success: { parent in
             
@@ -83,26 +83,25 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             vRegisterOwner.isHidden = true
             imgAvatar.image = AppImage.iconUsername
         } else {
-            // LoggedIn user
             lbLogin.text = LocalizableKey.MenuLogout.showLanguage
             lbDisplayname.isHidden = false
-            lbOwner.isHidden = true
-            vRegisterOwner.isHidden = false
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
-            // LoggedIn owner
+            
+            // login owner
+            if UserDefaultHelper.shared.loginUserInfo?.parkingID& != "" {
+                lbOwner.isHidden = false
+                vRegisterOwner.isHidden = true
+                heightRegisterOwner.constant = 0
+            } else {
+                // LoggedIn user
+                lbOwner.isHidden = true
+                vRegisterOwner.isHidden = false
+                heightRegisterOwner.constant = 100
+            }
         }
     }
-    
-    func setRegisterOwner() {
-        if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.infoParking?.id != "" {
-            vRegisterOwner.isHidden = true
-            heightRegisterOwner.constant = 0
-        } else {
-            vRegisterOwner.isHidden = false
-            heightRegisterOwner.constant = 100
-        }
-    }
+
     
     @IBAction func btnLoginLogoutTapped() {
         // need login

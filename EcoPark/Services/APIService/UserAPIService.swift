@@ -36,7 +36,7 @@ protocol UserAPIServiceProtocol {
     
     func getWallet(success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure)
     
-    func getWalletHistory(offset: Int, limit: Int, success: @escaping SuccessHandler<HistoryWalletEntity>.array, failure: @escaping RequestFailure)
+    func getWalletHistory(offset: Int, limit: Int, success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure)
     
     func scanQRCheckIn(parkingId: String, bossParkingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure)
     
@@ -133,9 +133,9 @@ class UserAPIService: UserAPIServiceProtocol {
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
     
-    func getWalletHistory(offset: Int, limit: Int, success: @escaping SuccessHandler<HistoryWalletEntity>.array, failure: @escaping RequestFailure) {
+    func getWalletHistory(offset: Int, limit: Int, success: @escaping SuccessHandler<WalletEntity>.object, failure: @escaping RequestFailure) {
         let endPoint = UserEndPoint.getWalletHistory(offset: offset, limit: limit)
-        network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
     
     func scanQRCheckIn(parkingId: String, bossParkingId: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure) {
