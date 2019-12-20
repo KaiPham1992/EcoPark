@@ -21,6 +21,7 @@ enum ParkingEndPoint {
     case getHistoryMyParking(parkingID: String, status: String, keyword: String)
     case getHistoryParkingDetail(parkingID: String, bookingID: String)
     case checkoutParking(bookingID: String, code: String, license_plates: String)
+    case changeStatusParking(parkingID: String, isActive: String)
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -51,6 +52,8 @@ extension ParkingEndPoint: EndPointType {
             return "_api/order/get_detail_history_booking_parking"
         case .checkoutParking:
             return "_api/user/scan_qr_checkout"
+        case .changeStatusParking:
+            return "_api/parking/change_status_parking"
         }
         
     }
@@ -83,6 +86,8 @@ extension ParkingEndPoint: EndPointType {
             return ["parking_id": parkingID, "booking_id": bookingID]
         case .checkoutParking(let bookingID, let code, let license_plates):
             return ["booking_id": bookingID, "code": code, "license_plates": license_plates]
+        case .changeStatusParking(let parkingID, let isActive):
+            return ["parking_id": parkingID, "is_active": isActive]
         }
     }
     

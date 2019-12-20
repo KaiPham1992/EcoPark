@@ -28,6 +28,7 @@ struct LocalizableKey {
     static let NotificationDetail = "NotificationDetail"
     static let System = "System"
     static let Giveme = "Giveme"
+    static let Owner = "Owner"
     
     //other
     static let searchNumberCar = "searchNumberCar"
@@ -119,6 +120,7 @@ struct LocalizableKey {
     static let termAndPolicyText5 = "termAndPolicyText5"
     static let termAndPolicyText6 = "termAndPolicyText6"
     
+    static let invalidTextSpecial = "invalidTextSpecial"
     // Forgot password Page
     static let ForgotPasswordMessage = "ForgotPasswordMessage"
     static let SentEmail = "SentEmail"

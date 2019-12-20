@@ -49,7 +49,7 @@ class AppRouter {
         windowApp.rootViewController = vc
     }
     
-    func test() {
+    func openParkingInfo() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let windowApp = appDelegate.window else { return }
         
         let vc = ParkingInfoRouter.createModule()

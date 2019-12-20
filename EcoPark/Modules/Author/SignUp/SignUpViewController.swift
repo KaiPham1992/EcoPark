@@ -137,6 +137,8 @@ class SignUpViewController: BaseViewController {
 
 extension SignUpViewController {
     func validateInputData() -> Bool {
+       
+
         if self.vUsername.tfInput.text == "" && self.vEmail.tfInput.text == "" && self.vPassword.tfInput.text == "" && self.vRePassword.tfInput.text == "" && self.vCapcha.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
@@ -145,6 +147,11 @@ extension SignUpViewController {
         if self.vUsername.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterDisplayName.showLanguage)
             return false
+        }
+        
+        if self.vUsername.tfInput.text&.hasSpecialCharacters() {
+                hideError(isHidden: false, message: LocalizableKey.invalidTextSpecial.showLanguage)
+                return false
         }
 
         if self.vEmail.tfInput.text == "" {

@@ -12,9 +12,9 @@
 import UIKit
 import DropDown
 
-//protocol AppTextFieldDropDownDelegate: class {
-//    func didChangedValue(sender: AppDropDown, item: Any)
-//}
+protocol AppDateDropDownDelegate: class {
+    func didChangedValue()
+}
 
 class AppDateDropDown: BaseViewXib {
     @IBOutlet weak var lbTitle: UILabel!
@@ -22,7 +22,7 @@ class AppDateDropDown: BaseViewXib {
     @IBOutlet weak var vContain: UIView!
     
     var selectedDate: Date?
-//    weak var delegateDropDown: AppTextFieldDropDownDelegate?
+    weak var delegateDropDown: AppDateDropDownDelegate?
     
     
     func setTitleAndPlaceHolder(title: String? = nil, placeHolder: String? = nil) {
@@ -48,6 +48,7 @@ class AppDateDropDown: BaseViewXib {
             self.selectedDate = date
 //            print(date!.toString(dateFormat: AppDateFormat.ddMMYYYY))
             self.tfInput.text = date?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.delegateDropDown?.didChangedValue()
         })
     }
     

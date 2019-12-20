@@ -10,7 +10,7 @@ import UIKit
 
 class AppTextField: BaseViewXib {
     @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var tfInput: UITextField!
+    @IBOutlet weak var tfInput: CustomSecureTextField!
     @IBOutlet weak var vLine: UIView!
     
     var textFieldDidBeginEditing : (() -> Void)?

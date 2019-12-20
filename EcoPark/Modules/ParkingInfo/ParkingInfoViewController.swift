@@ -51,9 +51,12 @@ class ParkingInfoViewController: BaseViewController {
         setTitleNavigation(title: LocalizableKey.MenuMyInfo.showLanguage)
         btnSave.setTitle(LocalizableKey.titleSave.showLanguage, for: .normal)
         lbActive.text = LocalizableKey.switchStatusParking.showLanguage
-        
+        btnSave.isEnabled = false
+        btnSave.backgroundColor = AppColor.color_205_205_205
         addMenu()
         configTableView()
+        vActive.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,15 +65,33 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return  }
-        presenter?.getParkingInfo(id: parkingID)
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        presenter?.getParkingInfo(id: parkingID&)
         presenter?.getListParkingType()
     }
     
+    @IBAction func swActive() {
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        if vActive.isOn {
+            presenter?.changeStatusParking(parkingID: parkingID&, isActive: "1")
+        } else {
+            presenter?.changeStatusParking(parkingID: parkingID&, isActive: "0")
+        }
+    }
+    
     @IBAction func btnSaveTapped() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return  }
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
         if validateInputData() {
-            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID,
+            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID&,
                                                                        parking_address: parkingAddress,
                                                                        gpkd_img_before_src: parkingInfo?.gpkd_img_before_src,
                                                                        gpkd_img_after_src: parkingInfo?.gpkd_img_after_src,
@@ -90,8 +111,8 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     @objc func imageParkingTapped() {
-        
-        
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
         guard let  listImage = parkingInfo?.img else { return }
         let listImageStr = listImage.map({ $0.img_src!})
         
@@ -208,7 +229,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 100
+            return 125
         case 1:
             if indexPath.row == 0 {
                 return 215
@@ -307,10 +328,13 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
 extension ParkingInfoViewController: LicenseInfoCellDelegate {
     func getDataLicenseInfo(codeTax: String) {
         self.codeTax = codeTax
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
     }
 }
 
 extension ParkingInfoViewController: ParkingInfoCellDelegate {
+    
     func getParkingInfo(parkingName: String, parkingTypeID: String, parkingAddress: String, openTime: String, closeTime: String, material: [String]) {
         
         self.parkingName = parkingName
@@ -325,9 +349,14 @@ extension ParkingInfoViewController: ParkingInfoCellDelegate {
         self.openTime = openTime
         self.closeTime = closeTime
         self.listMaterial = material
+        
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
     }
     
     func selectAddress() {
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
         let vcHomeFind = HomeFindRouter.createModule()
         vcHomeFind.delegate = self
         vcHomeFind.isSelectAddressSignUp = true
@@ -351,5 +380,15 @@ extension ParkingInfoViewController: HomeFindViewControllerDelegate {
     }
     
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+    }
+}
+
+extension ParkingInfoViewController: CustomSwitchDelegate {
+    func turnOnMatching() {
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
+    }
+    
+    func showPopupConfirm() {
     }
 }
