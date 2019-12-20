@@ -66,6 +66,8 @@ class ParkingEntity: BaseEntity {
         self.config_price <- (map["config_price"], StringToDoubleTransform())
         self.price <- (map["price"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToDoubleTransform())
+        print("*************")
+        print(rating)
         self.gender <- map["gender"]
         self.phone <- map["phone"]
         self.parking_name <- map["parking_name"]

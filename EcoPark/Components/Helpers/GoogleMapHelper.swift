@@ -26,7 +26,17 @@ class GoogleMapHelper: NSObject {
         let marker = ProjectMarker(position: position)
         marker.parking = parking
         marker.title = ""
-        marker.icon = AppImage.imgParking
+        marker.icon = AppImage.imgParkingBlue
+        if let rating = parking.rating {
+            if rating > 3.0 {
+                marker.icon = AppImage.imgParkingBlue
+            } else if rating == 3.0  {
+                marker.icon = AppImage.imgParkingYellow
+            } else {
+                marker.icon = AppImage.imgParkingRed
+            }
+        }
+        
         if parking.isSelected {
             marker.icon = AppImage.imgMarkerSelected
         }

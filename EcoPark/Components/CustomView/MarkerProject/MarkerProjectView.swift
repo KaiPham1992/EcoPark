@@ -13,7 +13,7 @@ class MarkerProjectView: BaseViewXib {
     
     var parking: ParkingEntity? {
         didSet {
-            self.imgIcon.image = AppImage.imgParking
+            self.imgIcon.image = AppImage.imgParkingBlue
         }
     }
 }
