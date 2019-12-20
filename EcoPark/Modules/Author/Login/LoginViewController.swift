@@ -65,12 +65,12 @@ class LoginViewController: BaseViewController {
         vPassword.setImage(img:  AppImage.iconPadlock)
         vUserName.backgroundColor = AppColor.color_32_45_55
         vPassword.backgroundColor = AppColor.color_32_45_55
+        vPassword.tfInput.delegate = self
         vPassword.tfInput.isSecureTextEntry = true
         lbLanguage.text = LocalizableKey.language.showLanguage
+        btnLogin.setTitle(LocalizableKey.MenuLogin.showLanguage, for: .normal)
         btnEnglish.setTitle(LocalizableKey.english.showLanguage, for: .normal)
         btnVietnamese.setTitle(LocalizableKey.vietnamese.showLanguage, for: .normal)
-        vPassword.tfInput.delegate = self
-        btnLogin.setTitle(LocalizableKey.LoginButtonLogin.showLanguage, for: .normal)
         lbForgot.text = LocalizableKey.ForgotPass.showLanguage
         lbRegister.text = LocalizableKey.NotYetAccount.showLanguage + ", " + LocalizableKey.Register.showLanguage
         if LanguageHelper.currentAppleLanguage() == "en" {
@@ -159,6 +159,9 @@ extension LoginViewController: LoginViewProtocol {
 //        AppRouter.shared.openHome()
         guard let _user = user else { return }
         UserDefaultHelper.shared.saveUser(user: _user)
+        if user?.infoParking != nil {
+            AppRouter.shared.test()
+        }
     }
     
     func didError(error: APIError?) {
@@ -173,7 +176,6 @@ extension LoginViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == vPassword.tfInput {
-            
             var hashPassword = String()
             let newChar = string.first
             let offsetToUpdate = passwordText.index(passwordText.startIndex, offsetBy: range.location)
@@ -194,4 +196,5 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
+    
 }
