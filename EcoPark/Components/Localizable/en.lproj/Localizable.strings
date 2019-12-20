@@ -148,6 +148,8 @@
 "termAndPolicyText5" = "of ";
 "termAndPolicyText6" = "ECOPARKING.";
 
+"invalidTextSpecial" = "The username cannot contain any special characters";
+
 // Forgot password page
 "ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";
 "SentEmail" = "Send email";

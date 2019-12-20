@@ -157,11 +157,11 @@ extension LoginViewController: LoginViewProtocol {
         self.callBackLoginSuccessed?()
         self.dismiss()
 //        AppRouter.shared.openHome()
-        guard let _user = user else { return }
-        UserDefaultHelper.shared.saveUser(user: _user)
-        if user?.infoParking != nil {
-            AppRouter.shared.test()
-        }
+//        guard let _user = user else { return }
+//        UserDefaultHelper.shared.saveUser(user: _user)
+//        if user?.infoParking != nil {
+//            AppRouter.shared.openParkingInfo()
+//        }
     }
     
     func didError(error: APIError?) {

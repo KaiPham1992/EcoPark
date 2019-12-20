@@ -336,6 +336,7 @@
 "signUpSuccess" = "Đăng ký thành công";
 
 "lbNoData" = "Không có dữ liệu";
+"invalidTextSpecial" = "Tên đăng nhập không được chứa ký tự đặc biệt";
 
 //// pop up choose photo
 "camera" = "Chụp ảnh";
