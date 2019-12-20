@@ -83,13 +83,19 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             vRegisterOwner.isHidden = true
             imgAvatar.image = AppImage.iconUsername
         } else {
+            lbOwner.text = LocalizableKey.Owner.showLanguage
             lbLogin.text = LocalizableKey.MenuLogout.showLanguage
             lbDisplayname.isHidden = false
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
             
             // login owner
-            if UserDefaultHelper.shared.loginUserInfo?.parkingID& != "" {
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            
+            if parkingID != "" || parkingID != nil {
                 lbOwner.isHidden = false
                 vRegisterOwner.isHidden = true
                 heightRegisterOwner.constant = 0

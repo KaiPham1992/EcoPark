@@ -66,7 +66,10 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     func callAPIHistoryPartner() {
-        let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
         Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID&, status: "reversation", keyword: "", success: { (historyParking) in
             self.parkedNumber = historyParking?.parked_number ?? 0
             self.numberPlace = historyParking?.number_place ?? "0"

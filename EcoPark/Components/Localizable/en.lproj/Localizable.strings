@@ -28,7 +28,7 @@
 "NotificationDetail" = "Notification Detail";
 "System" = "System";
 "Giveme" = "Give me";
-
+"Owner" = "Parking owner";
 //other
 "searchNumberCar" = "Search by license plate";
 "date" = "Date";
@@ -230,7 +230,7 @@
 "errorPhotoBackside" = "Plesae select backside photo ID card";
 // Sign Up Partner 2
 "ParkingInfo" = "Parking Info";
-"ParkingName" = "Paarking Name *";
+"ParkingName" = "Parking Name *";
 "ParkingType" = "Parking Type *";
 "ParkingCapacity" = "Parking Capacity *";
 "ParkingAddress" = "Parking Address *";
@@ -241,8 +241,8 @@
 "PriceCombo" = "A Combom (8 Hours) *";
 "ParkingLicense" = "Business License";
 "ParkingTaxCode" = "Tax Code";
-"hoursPrice" = "Price by the hour";
-"comboPrice" = "Price by combo";
+"hoursPrice" = "Price by a hour";
+"comboPrice" = "Price by packet";
 "capacity" = "Capacity";
 "place" = "Place";
 "vndHours" = "VND/ hours";

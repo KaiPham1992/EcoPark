@@ -28,6 +28,7 @@ struct LocalizableKey {
     static let NotificationDetail = "NotificationDetail"
     static let System = "System"
     static let Giveme = "Giveme"
+    static let Owner = "Owner"
     
     //other
     static let searchNumberCar = "searchNumberCar"

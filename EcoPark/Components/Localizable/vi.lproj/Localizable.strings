@@ -28,6 +28,7 @@
 "NotificationDetail" = "Chi tiết Thông báo";
 "System" = "Hệ Thống";
 "Giveme" = "Cho Tôi";
+"Owner" = "Chủ bãi đỗ";
 
 //other
 "searchNumberCar" = "Tìm theo biển số xe";
@@ -60,7 +61,7 @@
 "timeExpect" = "Đã dự kiến đến bãi lúc ";
 "invalid" = "Không hợp lệ";
 "contentQRFail1" = "Mã QR này không thuộc hệ thống ";
-"contentQRFail2" = "\nVui lòng đảm bảo bạn đã quét đúng thông tin!";
+"contentQRFail2" = ". Vui lòng đảm bảo bạn đã quét đúng thông tin!";
 "retry" = "Thử lại";
 "questionLogout" = "Bạn có muốn đăng xuất khỏi tài khoản này?";
 "back" = "Quay lại";

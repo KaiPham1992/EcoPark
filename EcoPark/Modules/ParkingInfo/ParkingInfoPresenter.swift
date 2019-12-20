@@ -49,4 +49,12 @@ class ParkingInfoPresenter: ParkingInfoPresenterProtocol, ParkingInfoInteractorO
             ProgressView.shared.hide()
         }
     }
+    
+    func changeStatusParking(parkingID: String, isActive: String) {
+        Provider.shared.parkingAPIService.changeStatusParking(parkingID: parkingID, isActive: isActive, success: { (_) in
+            
+        }) { (_) in
+            
+        }
+    }
 }

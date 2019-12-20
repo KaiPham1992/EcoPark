@@ -35,7 +35,6 @@ class HistoryPartnerHoldingViewController: BaseViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        getData()
     }
 
     override func setUpViews() {
@@ -43,25 +42,35 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         
         vSearch.actionSearch = { text in
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
-            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: text)
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "reversation", keyword: text)
         }
         
         vSearch.tapToTextField = {
             let text = self.vSearch.tfInput.text!
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
-            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: text)
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "reservation", keyword: text)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        getData()
     }
     
     private func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
-        presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: "")
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        
+        presenter?.getHistoryReservation(parkingID: parkingID&, status: "reservation", keyword: "")
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {

@@ -59,6 +59,7 @@ class ParkingInfoCell: UITableViewCell {
         setTime()
         
         vParkingName.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+        
     }
     
     func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any], isSelectAddress: Bool) {

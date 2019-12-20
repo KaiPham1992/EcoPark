@@ -39,20 +39,29 @@ class HistoryPartnerBookingViewController: BaseViewController {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         vSearch.actionSearch = { text in
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
-            self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: text)
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "checked_in", keyword: text)
         }
         vSearch.tapToTextField = {
             let text = self.vSearch.tfInput.text!
             print(text)
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
-            self.presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: text)
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "checked_in", keyword: text)
         }
     }
     
     private func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return }
-        presenter?.getHistoryParkingBooking(parkingID: parkingID, status: "checked_in", keyword: "")
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "checked_in", keyword: "")
     }
 }
 
