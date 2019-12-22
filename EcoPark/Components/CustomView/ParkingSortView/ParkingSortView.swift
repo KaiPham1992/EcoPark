@@ -43,6 +43,8 @@ class ParkingSortView: BaseViewXib {
             
             if let rating = parking.rating {
                  vRating.setStar(number: rating)
+            } else {
+                vRating.setStar(number: 0.0)
             }
             
             lbConfigure.text = parking.config_price?.toCurrency

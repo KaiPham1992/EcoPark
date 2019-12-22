@@ -15,7 +15,7 @@ class GoogleMapHelper: NSObject {
         guard let lat = parking.lat, let long = parking.long else { return }
                
         let position = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        print("lat: \(lat), long: \(long)")
+        print("lat: \(lat), long: \(long), parking: \(parking.rating&)")
         // add new
 //        let marker = ProjectMarker(position: position)
 //        marker.markerProjectView = MarkerProjectView()
