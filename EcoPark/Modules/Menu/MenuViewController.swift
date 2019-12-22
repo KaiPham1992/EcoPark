@@ -91,11 +91,11 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             
             // login owner
             var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-            if parkingID == "" || parkingID == nil {
+            if parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
             
-            if parkingID != "" || parkingID != nil {
+            if  parkingID != nil {
                 lbOwner.isHidden = false
                 vRegisterOwner.isHidden = true
                 heightRegisterOwner.constant = 0
