@@ -36,6 +36,8 @@
 "minute" = "Minute";
 "switchStatusParking" = "Switch to ON if you want to operate";
 "bookingParkingDetail" = "See parking details";
+"titleBalance" = "Balance wallet Eco";
+"titleRecharge" = "Recharge";
 
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Parking Detail";
@@ -106,7 +108,7 @@
 //Title
 "titleHistoryParking" = "Parking transaction history";
 "titleHistoryDetail" = "Transaction detail";
-"titleWallet" = "Title Wallet";
+"titleWallet" = "Wallet";
 
 // Login Page
 
@@ -237,8 +239,8 @@
 "ParkingOpen" = "Open *";
 "ParkingClose" = "Close *";
 "ParkingPrice" = "Service Prices";
-"PriceAHours" = " A Hours *";
-"PriceCombo" = "A Combom (8 Hours) *";
+"PriceAHours" = " A Hours";
+"PriceCombo" = "A Packet (8 Hours)";
 "ParkingLicense" = "Business License";
 "ParkingTaxCode" = "Tax Code";
 "hoursPrice" = "Price by a hour";

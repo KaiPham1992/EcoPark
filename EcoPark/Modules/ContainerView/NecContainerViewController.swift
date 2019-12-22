@@ -144,6 +144,9 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         case AppImage.imgHistory:
             let vc = PageHistoryParkingController()
             self.openViewController(presentingController: vc)
+        case AppImage.imgCall:
+            guard let number = URL(string: "tel://\(1900587)" ) else { return }
+            UIApplication.shared.open(number)
         default:
             self.openViewController(presentingController: homeVC)
         }
