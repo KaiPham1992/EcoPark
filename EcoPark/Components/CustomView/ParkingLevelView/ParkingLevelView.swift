@@ -46,7 +46,7 @@ class ParkingLevelView: BaseViewXib {
     
     private func updateStar() {
         if listButtonStar[3].isSelected {
-            self.star = [3,4,5]
+            self.star = [1,2,3,4,5]
             setUnSelected(listButtonStar[0])
             setUnSelected(listButtonStar[1])
             setUnSelected(listButtonStar[2])

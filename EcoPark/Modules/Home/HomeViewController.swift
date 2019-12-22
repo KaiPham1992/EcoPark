@@ -36,7 +36,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     /****** Default param - Fix me later. *****/
     var star: [Int] = [1,2,3,4,5]
     var distance = "1000"
-    var address = "chung cư 8x plus"
+    var address = ""
     /********************************/
     let zoomMap: Float = 14.0
     
@@ -132,6 +132,12 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpNavigation()
+        
+        if address == "" {
+            btnFilter.isEnabled = false
+        } else {
+             btnFilter.isEnabled = true
+        }
     }
     
     override func setUpViews() {
