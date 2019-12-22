@@ -108,7 +108,12 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         let vc = LoginRouter.createModule()
         vc.callBackLoginSuccessed = {
             self.menuVC.viewWillAppear(true)
+            if vc.isOwner {
+                let vcParkingInfo = ParkingInfoRouter.createModule()
+                self.openViewController(presentingController: vcParkingInfo)
+            }
         }
+        
         self.present(controller: UINavigationController(rootViewController: vc))
     }
     

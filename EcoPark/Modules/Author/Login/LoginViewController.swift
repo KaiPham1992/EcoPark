@@ -43,7 +43,7 @@ class LoginViewController: BaseViewController {
     var loginType = LoginType.normal
     var paramLogin: Any?
     var passwordText: String = ""
-    
+    var isOwner: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,6 +153,11 @@ extension LoginViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func didLogin(user: UserEntity?) {
+        if user?.infoParking != nil || user?.parkingID != nil || user?.parkingID != "" {
+            self.isOwner = true
+        } else {
+            self.isOwner = false
+        }
         
         self.callBackLoginSuccessed?()
         self.dismiss()
