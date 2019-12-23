@@ -126,6 +126,7 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
         tbWallet.registerXibFile(WalletCell.self)
         tbWallet.estimatedRowHeight = 200
         tbWallet.rowHeight = UITableView.automaticDimension
+        tbWallet.separatorStyle = .none 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

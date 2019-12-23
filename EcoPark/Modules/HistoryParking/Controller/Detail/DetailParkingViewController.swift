@@ -116,9 +116,11 @@ class DetailParkingViewController: BaseViewController {
         guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
         
         let ddhhmm = Utils.getTime(date: checkInTime)
+        
         VTHour.setUpTime(time: ddhhmm.1)
         VTMinute.setUpTime(time: ddhhmm.2)
         VTDate.setUpTime(time: ddhhmm.0)
+        
         let numberParking = ddhhmm.0 * 24 + ddhhmm.1
         DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
     }
