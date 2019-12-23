@@ -130,6 +130,7 @@ extension ProfileViewController:  ProfileViewProtocol {
     
     func didUpdateProfile(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)
+        
         PopUpHelper.shared.showEditProfile {
             self.getDataUser()
         }
