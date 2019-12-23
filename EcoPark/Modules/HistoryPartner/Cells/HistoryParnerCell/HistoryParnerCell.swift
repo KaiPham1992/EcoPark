@@ -29,6 +29,9 @@ class HistoryParnerCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lbBooking.text = LocalizableKey.book_at.showLanguage
+        lbExpect.text = LocalizableKey.expect.showLanguage
+        lbTotal.text = LocalizableKey.total.showLanguage
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

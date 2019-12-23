@@ -43,6 +43,8 @@
 "Booking" = "Đặt ngay";
 "slot" = "chỗ";
 "no" = "Không";
+"parkingTiming" = "Thời gian đỗ xe";
+"userInfo" = "Thông tin khách hàng";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
@@ -202,7 +204,7 @@
 "ParkingAddress" = "Địa chỉ bãi xe *";
 "ParkingOpen" = "Mở cửa *";
 "ParkingClose" = "Đóng cửa *";
-"ParkingPrice" = "giá dịch vụ";
+"ParkingPrice" = "Giá dịch vụ";
 "PriceAHours" = "Đơn giá theo giờ";
 "PriceCombo" = "Đơn giá theo gói (8 giờ)";
 "ParkingLicense" = "Giấy phép kinh doanh";
@@ -369,6 +371,7 @@
 "statusCheckedIn" = "Đã check in";
 "statusCheckedOut" = "Đã check out";
 "ratingService" = "Đánh giá dịch vụ bãi giữ xe";
+"total" = "Tổng thanh toán";
 
 //HOME
 "InputDestination" = "Nhập điểm đến";
