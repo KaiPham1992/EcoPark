@@ -153,7 +153,7 @@ extension LoginViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func didLogin(user: UserEntity?) {
-        if user?.infoParking != nil || user?.parkingID != nil || user?.parkingID != "" {
+        if UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" {
             self.isOwner = true
         } else {
             self.isOwner = false
