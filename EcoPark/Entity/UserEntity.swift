@@ -103,6 +103,9 @@ class UserEntity: BaseEntity  {
         self.attachImg <- map["attach_img_src"]
         self.phone <- map["phone"]
         self.birthDay <- (map["birthday"], AppTimestampTransform())
+         print("self.birthDayself.birthDayself.birthDayself.birthDayself.birthDayself.birthDayself.birthDayself.birthDayself.birthDay")
+        print(self.birthDay)
+        
         self.gender <- map["gender"]
         self.wallet <- (map["wallet"], StringToDoubleTransform())
         self.parkingID <- map["parking_id"]
