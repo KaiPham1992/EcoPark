@@ -46,6 +46,7 @@
                 <outlet property="lbName" destination="The-Hb-a7U" id="aHi-NJ-WVK"/>
                 <outlet property="lbRating" destination="eGd-Le-25h" id="nIY-T0-JgI"/>
                 <outlet property="lbStatus" destination="aLp-QL-fam" id="oMN-Me-N66"/>
+                <outlet property="parkingTime" destination="7w1-Wl-bdS" id="e5n-R3-ZAR"/>
                 <outlet property="vRating" destination="DZ2-wL-26O" id="PbB-Qm-ieh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewRate" destination="JzW-XJ-Ue5" id="87K-WT-cwj"/>

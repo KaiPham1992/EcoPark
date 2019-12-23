@@ -53,16 +53,8 @@ class BookingDetailEntity: BaseEntity {
         self.code <- map["code"]
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
-        self.intend_checkin_time <- (map["intend_checkin_time"], AppTimestampTransform())
-        self.time_check_in <- (map["time_check_in"], yyyyMMddHHmmssTransform())
-        if time_check_in == nil {
-            self.time_check_in <- (map["time_check_in"], AppTimestampTransform())
-        }
-        self.time_check_out <- (map["time_check_out"], yyyyMMddHHmmssTransform())
-        if time_check_out == nil {
-            self.time_check_in <- (map["time_check_out"], AppTimestampTransform())
-            
-        }
+        self.time_check_in <- (map["intend_checkin_time"], AppTimestampTransform())
+        self.time_check_out <- (map["intend_checkout_time"], AppTimestampTransform())
         
         self.status <- map["status"]
         self.parking_id <- map["parking_id"]

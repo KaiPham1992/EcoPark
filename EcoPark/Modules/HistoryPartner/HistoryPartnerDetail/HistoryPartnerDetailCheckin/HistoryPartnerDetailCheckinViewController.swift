@@ -34,7 +34,7 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
 	override func viewDidLoad() {
         super.viewDidLoad()
         addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
         btnCheckOut.setBorder(borderWidth: 0.5, borderColor: AppColor.color_0_129_255, cornerRadius: 5)
     }
@@ -79,6 +79,7 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     
     func didGetData(historyParkingDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyParkingDetail
+        lbID.text = historyParkingDetail?.code&
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {

@@ -52,7 +52,8 @@ class DetailParkingViewController: BaseViewController {
     @IBOutlet weak var lbStatus: UILabel!
     
     @IBOutlet weak var lbRating: UILabel!
-     @IBOutlet weak var vRating: CosmosView!
+    @IBOutlet weak var vRating: CosmosView!
+    @IBOutlet weak var parkingTime: UILabel!
     
     //    var type : TypeDetailParking = .checkin
     var bookingParking: HistoryBookingParkingResponse?
@@ -87,6 +88,7 @@ class DetailParkingViewController: BaseViewController {
         btnCancel.setTitle(LocalizableKey.cancelHolding.showLanguage, for: .normal)
         btnExtend.setTitle(LocalizableKey.extend.showLanguage, for: .normal)
         btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
+        parkingTime.text = LocalizableKey.parkingTimimg.showLanguage
     }
     
     override func viewDidLoad() {
@@ -148,8 +150,6 @@ class DetailParkingViewController: BaseViewController {
             // hidden rating
             viewRate.isHidden = false
             heightOfRating.constant = 0
-            
-            //
             btnBottom.setTitle(LocalizableKey.ScanCheckIn.showLanguage, for: .normal)
         case StatusBooking.checked_in.rawValue:
             lbStatus.text = LocalizableKey.statusCheckedIn.showLanguage
@@ -184,14 +184,14 @@ class DetailParkingViewController: BaseViewController {
             heightOfButtonExtend.constant = 0
             heightOfRating.constant = 0
             btnBottom.isHidden = true
-            case StatusBooking.expired.rawValue:
+        case StatusBooking.expired.rawValue:
             lbStatus.text = LocalizableKey.expired.showLanguage
             lbStatus.textColor = UIColor.red
             showMoney(info: info)
             btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
             heightOfRating.constant = 0
             btnBottom.isHidden = true
-
+            
         default:
             break
         }
@@ -247,19 +247,36 @@ class DetailParkingViewController: BaseViewController {
         if let createTime = info.create_time {
             DLVBook.setValueText(text: createTime.toString(dateFormat: .ecoTime))
         }
-        if let intendCheck = info.intend_checkin_time {
-            DLVExpected.setValueText(text: intendCheck.toString(dateFormat: .ecoTime))
+        
+        if let expectTime = info.update_time {
+            DLVExpected.setValueText(text: expectTime.toString(dateFormat: .ecoTime))
         }
         
-        if let timeCheckIn = info.time_check_in {
-            DLVCheckIn.setValueText(text: timeCheckIn.toString(dateFormat: .ecoTime))
+        let status = info.status&
+        switch status {
+        case StatusBooking.reservation.rawValue:
+            DLVCheckIn.setValueText(text: "-")
+            DLVCheckOut.setValueText(text: "-")
+        case StatusBooking.checked_in.rawValue:
+            if let checkInTime = info.time_check_in {
+                DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))
+            }
+            DLVCheckOut.setValueText(text: "-")
+        case StatusBooking.checked_out.rawValue:
+            if let checkInTime = info.time_check_in {
+                DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))
+            }
+            if let checkOutTime = info.time_check_out {
+                DLVCheckOut.setValueText(text: checkOutTime.toString(dateFormat: .ecoTime))
+            }
+        case StatusBooking.expired.rawValue:
+            if let checkInTime = info.time_check_in {
+                DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))
+            }
+            DLVCheckOut.setValueText(text: "-")
+        default:
+            break
         }
-        
-        if let timeCheckOut = info.time_check_out {
-            DLVCheckIn.setValueText(text: timeCheckOut.toString(dateFormat: .ecoTime))
-        }
-        
-        
     }
     
     @IBAction func btnCancelTapped() {
