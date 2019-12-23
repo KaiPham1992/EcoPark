@@ -45,8 +45,8 @@ class OtherInfoCell: UITableViewCell {
     
     func setData(parkingInfo: ParkingInfoEntity?) {
         lbNumberCapacity.text = "\(parkingInfo?.number_place ?? 0)"
-        lbPriceAHours.text = "\(parkingInfo?.price ?? 0)"
-        lbPriceCombo.text = "\(parkingInfo?.package_price ?? 0)"
+        lbPriceAHours.text = "\(parkingInfo?.price?.toCurrencyNoVND ?? "0")"
+        lbPriceCombo.text = "\(parkingInfo?.package_price?.toCurrencyNoVND ?? "0")"
     }
     
 }

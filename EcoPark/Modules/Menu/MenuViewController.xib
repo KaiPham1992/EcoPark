@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
             <connections>
+                <outlet property="btnResgister" destination="p0T-4L-zcu" id="oex-Li-f0I"/>
                 <outlet property="heightRegisterOwner" destination="JeA-yQ-uSK" id="y6a-As-Dci"/>
                 <outlet property="imgAvatar" destination="VrL-Ll-Ar1" id="QKl-CQ-Yqe"/>
                 <outlet property="lbDisplayname" destination="F8H-Tm-EQM" id="EDy-Ib-0Xf"/>

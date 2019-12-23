@@ -54,6 +54,10 @@ class UserEntity: BaseEntity  {
     var wallet: Double?
     var parkingID: String?
     var infoParking: ParkingInfoEntity?
+    var isBoss: String?
+    var wait_app: String? {
+        return self.infoParking?.wait_app
+    }
     
     override func mapping(map: Map) {
         self.isLeader <- map["is_leader"]
@@ -61,6 +65,8 @@ class UserEntity: BaseEntity  {
         if self.id == nil {
             self.id <- (map["_id"], IntToStringTransform())
         }
+        
+        self.isBoss <- map["is_boss"]
         
         self.email       <- map["email"]
         self.fullName          <- map["fullname"]

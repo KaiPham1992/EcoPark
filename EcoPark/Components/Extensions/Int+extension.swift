@@ -143,4 +143,16 @@ extension Double {
         
 //        print(currency.replacingOccurrences(of: ".", with: ","))
     }
+    
+        var toCurrencyNoVND: String {
+            let price = self as NSNumber
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            formatter.locale = Locale(identifier: "vi_vn")
+            
+            guard let currency = formatter.string(from: price) else { return ""}
+            return currency.replacingOccurrences(of: ".", with: ",").replacingOccurrences(of: "₫", with: "").trim()
+            
+    //        print(currency.replacingOccurrences(of: ".", with: ","))
+        }
 }

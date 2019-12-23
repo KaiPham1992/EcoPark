@@ -30,6 +30,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var heightRegisterOwner: NSLayoutConstraint!
     @IBOutlet weak var lbLogout: UILabel!
     
+     @IBOutlet weak var btnResgister: UIButton!
+    
     var totalUnread: Int = 0
     
     var itemSelected: MenuItem?
@@ -90,12 +92,8 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
             
             // login owner
-            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-            if parkingID == nil {
-                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-            }
-            
-            if  parkingID != nil {
+
+            if  UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" {
                 lbOwner.isHidden = false
                 vRegisterOwner.isHidden = true
                 heightRegisterOwner.constant = 0
@@ -104,6 +102,11 @@ class MenuViewController: UIViewController, MenuViewProtocol {
                 lbOwner.isHidden = true
                 vRegisterOwner.isHidden = false
                 heightRegisterOwner.constant = 100
+                
+                // wait apply boss
+                if UserDefaultHelper.shared.loginUserInfo?.wait_app == "1" {
+                    btnResgister.setTitle("WaitApp".showLanguage, for: .normal)
+                }
             }
         }
     }
