@@ -62,8 +62,7 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     }
     
     @IBAction func btnScanQRTapped() {
-//        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
-        let vc = AppQRScanerViewController.createModule(isCheckIn: false)
+        let vc = HistoryPartnerQRScannerRouter.createModule(isCheckIn: false)
         vc.completionCode = { code in
             
             guard let qrcode = code as? [String] else { return }

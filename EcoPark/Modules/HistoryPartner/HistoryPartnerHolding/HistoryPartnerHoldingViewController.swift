@@ -120,8 +120,6 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
 
 extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        let place = historyParkingReservation?.number_place
-        let reservation = historyParkingReservation?.reservation_number
         return IndicatorInfo(title: LocalizableKey.holding.showLanguage + " (\(parkedNumber)/\(number_place))")
     }
     

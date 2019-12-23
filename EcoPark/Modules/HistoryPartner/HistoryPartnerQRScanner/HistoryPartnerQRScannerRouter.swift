@@ -14,7 +14,7 @@ class HistoryPartnerQRScannerRouter: HistoryPartnerQRScannerWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(isCheckIn: Bool) -> HistoryPartnerQRScannerViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = HistoryPartnerQRScannerViewController(nibName: nil, bundle: nil)
         let interactor = HistoryPartnerQRScannerInteractor()
@@ -24,6 +24,7 @@ class HistoryPartnerQRScannerRouter: HistoryPartnerQRScannerWireframeProtocol {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        view.isCheckIn = isCheckIn
 
         return view
     }

@@ -36,7 +36,7 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     @objc func checkQrCode() {
-        let vc = AppQRScanerViewController.createModule(isCheckIn: false)
+        let vc = HistoryPartnerQRScannerRouter.createModule(isCheckIn: false)
         vc.completionCode = { code in
            ///call api checkout
             
