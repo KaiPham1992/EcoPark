@@ -82,6 +82,7 @@
 "updateSuccess" = "Cập nhật thành công ";
 "cancelBookingSuccess" = "Huỷ đặt chỗ thành công";
 "renewalSuccess" = "Bạn đã gia hạn thành công";
+"extend" = "Gia hạn giữ chỗ thêm 1 giờ";
 
 //Title
 "titleHistoryParking" = "Lịch sử giao dịch bãi xe";
@@ -372,6 +373,7 @@
 "statusCheckedOut" = "Đã check out";
 "ratingService" = "Đánh giá dịch vụ bãi giữ xe";
 "total" = "Tổng thanh toán";
+"ratingOfYou" = "Đánh giá của bạn";
 
 //HOME
 "InputDestination" = "Nhập điểm đến";

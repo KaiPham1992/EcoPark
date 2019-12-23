@@ -44,6 +44,7 @@
                 <outlet property="lbAddress" destination="kJy-iL-XWX" id="HXe-Qo-WAo"/>
                 <outlet property="lbBookingNumber" destination="Loe-zy-6FN" id="xaM-Vj-YRc"/>
                 <outlet property="lbName" destination="The-Hb-a7U" id="aHi-NJ-WVK"/>
+                <outlet property="lbRating" destination="eGd-Le-25h" id="nIY-T0-JgI"/>
                 <outlet property="lbStatus" destination="aLp-QL-fam" id="oMN-Me-N66"/>
                 <outlet property="vRating" destination="DZ2-wL-26O" id="PbB-Qm-ieh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

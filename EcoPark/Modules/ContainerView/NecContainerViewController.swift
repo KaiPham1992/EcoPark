@@ -109,7 +109,7 @@ extension NecContainerViewController: MenuViewControllerDelegate {
         vc.callBackLoginSuccessed = {
             self.menuVC.viewWillAppear(true)
             if vc.isOwner {
-                let vcParkingInfo = ParkingInfoRouter.createModule()
+                let vcParkingInfo = PageHistoryPartnerViewControler()
                 self.openViewController(presentingController: vcParkingInfo)
             }
         }

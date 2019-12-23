@@ -40,6 +40,8 @@ struct LocalizableKey {
     static let total = "total"
     static let parkingTimimg = "parkingTiming"
     static let userInfo = "userInfo"
+    static let ratingOfYou = "ratingOfYou"
+    static let extend = "extend"
     
     //-- Popup
     static let receivable = "receivable"

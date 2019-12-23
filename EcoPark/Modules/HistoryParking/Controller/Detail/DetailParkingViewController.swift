@@ -51,6 +51,7 @@ class DetailParkingViewController: BaseViewController {
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbStatus: UILabel!
     
+    @IBOutlet weak var lbRating: UILabel!
      @IBOutlet weak var vRating: CosmosView!
     
     //    var type : TypeDetailParking = .checkin
@@ -82,6 +83,10 @@ class DetailParkingViewController: BaseViewController {
         DLVPriceParking.setupViewUnit(title: LocalizableKey.Paid.showLanguage + ":")
         DLVAddForWallet.setupViewUnit(title: LocalizableKey.paidWithWallet.showLanguage + ":")
         DLVAddForMoney.setupViewUnitColorRed(title: LocalizableKey.paidWithCash.showLanguage + ":")
+        lbRating.text = LocalizableKey.ratingOfYou.showLanguage
+        btnCancel.setTitle(LocalizableKey.cancelHolding.showLanguage, for: .normal)
+        btnExtend.setTitle(LocalizableKey.extend.showLanguage, for: .normal)
+        btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
     }
     
     override func viewDidLoad() {
@@ -175,11 +180,18 @@ class DetailParkingViewController: BaseViewController {
             lbStatus.textColor = UIColor.red
             showMoney(info: info)
             btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
-            heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
             heightOfRating.constant = 0
             btnBottom.isHidden = true
+            case StatusBooking.expired.rawValue:
+            lbStatus.text = LocalizableKey.expired.showLanguage
+            lbStatus.textColor = UIColor.red
+            showMoney(info: info)
+            btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
+            heightOfRating.constant = 0
+            btnBottom.isHidden = true
+
         default:
             break
         }
