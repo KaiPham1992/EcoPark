@@ -77,7 +77,7 @@ class ProfileViewController: BaseViewController {
         vDisplayname.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.fullName
         vPhoneNumber.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.phone
         vEmail.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.email
-        vBirthDay.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYY)
+        vBirthDay.tfInput.text = UserDefaultHelper.shared.birthday?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
         imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
         if UserDefaultHelper.shared.loginUserInfo?.gender == "female" {
             vGender.tfInput.text = LocalizableKey.female.showLanguage
@@ -130,6 +130,8 @@ extension ProfileViewController:  ProfileViewProtocol {
     
     func didUpdateProfile(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)
+        
+        UserDefaultHelper.shared.birthday = user.birthDay
         PopUpHelper.shared.showEditProfile {
             self.getDataUser()
         }

@@ -34,6 +34,7 @@ class SignUpInteractor: SignUpInteractorInputProtocol {
             guard let user = user else { return}
             UserDefaultHelper.shared.saveUser(user: user)
             UserDefaultHelper.shared.userToken = user.jwt&
+            UserDefaultHelper.shared.birthday = user.birthDay
             self.presenter?.signUpSuccess(user: user)
         }) { (error) in
             ProgressView.shared.hide()

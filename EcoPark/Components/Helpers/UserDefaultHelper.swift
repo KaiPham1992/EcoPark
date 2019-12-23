@@ -36,6 +36,7 @@ enum UserDefaultHelperKey: String {
     case isFirstLauch = "IsFirstLauch"
     case loginUserInfo = "loginUserInfo"
     case parkingID = "ParkingID"
+    case birthday = "birthday"
 }
 
 class UserDefaultHelper {
@@ -109,6 +110,16 @@ class UserDefaultHelper {
         guard let _parkingID = get(key: .parkingID) as? String else { return "" }
         return _parkingID
     }
+    
+    var birthday: Date? {
+        get {
+        guard let _birthday = get(key: .birthday) as? Date else { return nil }
+            return _birthday
+        }
+        set(newValue) {
+            save(value: newValue, key: .birthday)
+        }
+    }
 }
 
 extension UserDefaultHelper {
@@ -124,6 +135,7 @@ extension UserDefaultHelper {
     func clearUser() {
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.userToken.rawValue)
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.loginUserInfo.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.birthday.rawValue)
     }
     
     func saveUser(user: UserEntity) {

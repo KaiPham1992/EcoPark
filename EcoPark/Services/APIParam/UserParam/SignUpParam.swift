@@ -50,7 +50,7 @@ class SignUpParam: BaseParam {
         self.username       = username
         self.phone          = phone
         self.gender         = gender
-        
+        self.birthDay       = birthDay
     }
     
     required init?(map: Map) {
