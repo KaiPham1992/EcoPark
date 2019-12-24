@@ -76,14 +76,14 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     @objc func btnCheckOutTapped(sender: UIButton) {
         
         let price = historyParkingReservation?.booking[sender.tag].money_paid ?? 0
-        let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
+        let vehicleType = historyParkingReservation?.booking[sender.tag].vehicleName
         let vehicleNumber = historyParkingReservation?.booking[sender.tag].license_plates ?? ""
         let checkoutNumber = historyParkingReservation?.booking[sender.tag].code ?? ""
         let bookingID = historyParkingReservation?.booking[sender.tag].id
         let code = historyParkingReservation?.booking[sender.tag].code
         let licensePlates = historyParkingReservation?.booking[sender.tag].license_plates
         
-        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingReservation?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingReservation?.booking[sender.tag].id ?? ""))
         }) {
             self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
