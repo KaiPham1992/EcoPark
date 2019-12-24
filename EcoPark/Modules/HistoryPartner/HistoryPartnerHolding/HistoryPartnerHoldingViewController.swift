@@ -30,7 +30,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             tbPartnerHolding.reloadData()
         }
     }
-    
+    var historyBookingParkingResponse: HistoryBookingParkingResponse?
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,12 +126,19 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
 }
 
 extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
+    
+    func didChangeStatusCheckout() {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: self.historyBookingParkingResponse))
+    }
+    
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {
         self.historyParkingReservation = historyParking
         delegate?.didLoadData()
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
-        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
+        presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "")
+        self.historyBookingParkingResponse = historyParkingDetail
+        
     }
 }

@@ -39,6 +39,17 @@ class HistoryPartnerDetailCheckinPresenter: HistoryPartnerDetailCheckinPresenter
             self.view?.didCheckout(historyParkingDetail: historyParkingDetail)
         }) { (erroe) in
             ProgressView.shared.hide()
+            PopUpHelper.shared.showInvalidQR(height: 350, completion: nil)
+        }
+    }
+    
+    func changeStatusCheckout(bookingID: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (_) in
+            ProgressView.shared.hide()
+            self.view?.didChangeStatusCheckout()
+        }) { (_) in
+            ProgressView.shared.hide()
         }
     }
 }

@@ -59,7 +59,11 @@ class PageHistoryPartnerViewControler : PageViewController {
     
     func callAPICheckout(bookingID: String, code: String, license_plates: String) {
         Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
-            self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParking))
+            Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (_) in
+                self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParking))
+            }) { (_) in
+            }
+            
         }) { (_) in
             PopUpHelper.shared.showInvalidQR(height: 350, completion: nil)
         }

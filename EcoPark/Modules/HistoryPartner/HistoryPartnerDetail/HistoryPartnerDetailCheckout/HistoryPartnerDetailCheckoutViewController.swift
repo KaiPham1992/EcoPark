@@ -26,6 +26,8 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
         addMenu()
         setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
+        lbStatus.text = LocalizableKey.checked_out.showLanguage
+        lbID.text = historyParkingDetail?.code
     }
 }
 
