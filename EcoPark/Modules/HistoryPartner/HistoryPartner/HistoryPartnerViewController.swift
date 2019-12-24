@@ -59,7 +59,7 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(HistoryParnerCell.self)
         let status = historyParking?.booking[indexPath.item].status
-        cell.setDataHistoryParking(status: status&)
+        cell.setDataHistoryParkingStatus(status: status&)
         cell.setDataHistory(historyParking: historyParking?.booking[indexPath.item])
         return cell
     }

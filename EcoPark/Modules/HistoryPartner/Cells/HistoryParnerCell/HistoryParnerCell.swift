@@ -47,7 +47,7 @@ class HistoryParnerCell: UITableViewCell {
         btnStatus.setTitle(LocalizableKey.reservation.showLanguage, for: .normal)
     }
     
-    func setDataHistoryParking(status: String) {
+    func setDataHistoryParkingStatus(status: String) {
         btnStatus.backgroundColor = .clear
         let status = status
         switch status {
@@ -76,10 +76,32 @@ class HistoryParnerCell: UITableViewCell {
         lbName.text = _historyParking.fullname
         lbBookingTime.text = _historyParking.create_time?.toString(dateFormat: AppDateFormat.hhmmddmmyyy)
         lbExpectTime.text = _historyParking.update_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
         lbPrice.text = "\(_historyParking.money_paid ?? 0)"
+        
+        let status = _historyParking.status
+        switch status {
+        case StatusBooking.cancel.rawValue:
+            lbCheckInTime.text = "-"
+            lbCheckoutTime.text = "-"
+        case StatusBooking.checked_out.rawValue:
+           lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .ecoTime)
+            
+        case StatusBooking.checked_in.rawValue:
+           lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckoutTime.text = "-"
+        case StatusBooking.reservation.rawValue:
+           lbCheckInTime.text = "-"
+            lbCheckoutTime.text = "-"
+        case StatusBooking.expired.rawValue:
+            lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckoutTime.text = "-"
+        default:
+            break
+        }
+        
+        
     }
 }

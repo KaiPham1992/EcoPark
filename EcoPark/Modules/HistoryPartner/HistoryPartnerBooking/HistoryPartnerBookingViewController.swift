@@ -52,7 +52,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "checked_in", keyword: text)
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: text)
         }
     }
     
@@ -61,7 +61,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
         if parkingID == "" || parkingID == nil {
             parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
         }
-        presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "checked_in", keyword: "")
+        presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: "")
     }
 }
 

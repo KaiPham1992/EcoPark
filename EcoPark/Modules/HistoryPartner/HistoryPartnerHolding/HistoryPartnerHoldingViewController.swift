@@ -46,7 +46,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "reversation", keyword: text)
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text)
         }
         
         vSearch.tapToTextField = {
@@ -55,7 +55,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "reservation", keyword: text)
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text)
         }
     }
     
@@ -70,7 +70,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
         }
         
-        presenter?.getHistoryReservation(parkingID: parkingID&, status: "reservation", keyword: "")
+        presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "")
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {
