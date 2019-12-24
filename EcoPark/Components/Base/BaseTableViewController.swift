@@ -158,7 +158,7 @@ open class BaseTableViewController: UIViewController {
         return UIStatusBarStyle.lightContent
     }
     
-    func setColorStatusBar(color: UIColor = AppColor.yellow) {
+    func setColorStatusBar(color: UIColor = AppColor.black) {
         guard #available(iOS 13, *) else {
             if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
                statusBar.backgroundColor = color
@@ -207,7 +207,7 @@ open class BaseTableViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
     }
     
-    func setNavigationColor(color: UIColor = AppColor.yellow) {
+    func setNavigationColor(color: UIColor = AppColor.black) {
         self.navigationController?.navigationBar.barTintColor = color
     }
     
