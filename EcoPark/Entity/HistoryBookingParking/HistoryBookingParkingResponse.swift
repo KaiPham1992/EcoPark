@@ -58,14 +58,14 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.code <- map["code"]
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
-        self.intend_checkin_time <- (map["intend_checkin_time"], yyyyMMddHHmmssTransform())
+        self.intend_checkin_time <- (map["intend_checkin_time"], AppTimestampTransform())
         self.status <- map["status"]
         self.parking_id <- map["parking_id"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], yyyyMMddHHmmssTransform())
         self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
         self.create_time_mi <- (map["create_time_mi"], yyyyMMddHHmmssTransform())
-        self.intend_checkout_time <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
+        self.intend_checkout_time <- (map["intend_checkout_time"], AppTimestampTransform())
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
         self.current_server_time <- map["current_server_time"]

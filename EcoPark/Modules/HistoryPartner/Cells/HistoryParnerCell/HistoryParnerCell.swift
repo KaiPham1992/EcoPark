@@ -79,7 +79,7 @@ class HistoryParnerCell: UITableViewCell {
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
         lbPrice.text = "\(_historyParking.money_paid ?? 0)"
-        
+        btnStatus.setTitle(LocalizableKey.agreeCheckout.showLanguage, for: .normal)
         let status = _historyParking.status
         switch status {
         case StatusBooking.cancel.rawValue:

@@ -68,7 +68,7 @@ class TimeParkingCell: UITableViewCell {
         lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .hhmmddmmyyy)
         lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .hhmmddmmyyy)
         lbCheckInTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckOutTime.text = _historyParkingDetail.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbCheckOutTime.text = "-"
         
         
         guard let checkinTime = _historyParkingDetail.intend_checkin_time?.timeIntervalSince1970 else { return }
@@ -77,7 +77,7 @@ class TimeParkingCell: UITableViewCell {
         setupTimeCount()
     }
     
-    func setDataCheckin(historyParkingDetail: HistoryBookingParkingResponse?) {
+    func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .hhmmddmmyyy)
         lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .hhmmddmmyyy)

@@ -78,7 +78,7 @@
 "carType" = "Vehicle type";
 "licensePlate" = "License plate";
 "checkAgain" = "Check Again";
-"agreeCheckout" = "Allow checkout";
+"agreeCheckout" = "   Allow checkout   ";
 "contentCheckout" = "Confirm the fee and check the service completion";
 "titleNeedToPay" = "Need to pay: ";
 "titleEcoAccount" = "Account wallet ECO";

@@ -67,7 +67,7 @@ extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITa
         switch indexPath.row {
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
-            timeHoldingCell.setDataCheckin(historyParkingDetail: historyParkingDetail)
+            timeHoldingCell.setDataBooking(historyParkingDetail: historyParkingDetail)
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
@@ -75,7 +75,7 @@ extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITa
             return userInfoCell
         default:
             let priceCell = tableView.dequeueTableCell(PriceCell.self)
-            priceCell.setDataCheckin(historyParkingDetail: historyParkingDetail)
+            priceCell.setDataBooking(historyParkingDetail: historyParkingDetail)
             return priceCell
         }
     }

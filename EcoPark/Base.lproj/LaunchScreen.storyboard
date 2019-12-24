@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,6 +24,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="pas-9A-JiC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="736"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqH-HN-tC8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="736"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWR-G6-eXy">
                                 <rect key="frame" x="117" y="34" width="180" height="180"/>
                             </imageView>
@@ -81,25 +88,32 @@ DỊCH VỤ CỦA ECOPARKING</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pas-9A-JiC" firstAttribute="top" secondItem="ZJ8-mb-E9t" secondAttribute="top" id="0zw-ln-KBb"/>
                             <constraint firstItem="Yg5-gQ-rgZ" firstAttribute="leading" secondItem="9lb-IF-vgD" secondAttribute="leading" constant="50" id="13x-CM-W5P"/>
                             <constraint firstItem="syb-kC-5qg" firstAttribute="centerX" secondItem="xou-HP-74a" secondAttribute="centerX" id="1Wv-JO-sKs"/>
+                            <constraint firstItem="ZJ8-mb-E9t" firstAttribute="trailing" secondItem="pas-9A-JiC" secondAttribute="trailing" id="4by-Rr-8Tz"/>
+                            <constraint firstItem="NqH-HN-tC8" firstAttribute="bottom" secondItem="pas-9A-JiC" secondAttribute="bottom" id="5yk-fR-kRc"/>
                             <constraint firstItem="e85-UT-1sU" firstAttribute="centerX" secondItem="iFR-6m-2FE" secondAttribute="centerX" id="6kd-z2-aJ1"/>
                             <constraint firstItem="gWR-G6-eXy" firstAttribute="centerX" secondItem="9lb-IF-vgD" secondAttribute="centerX" id="7n4-df-JeM"/>
-                            <constraint firstAttribute="trailing" secondItem="Yg5-gQ-rgZ" secondAttribute="trailing" constant="50" id="9rQ-2y-zLC"/>
                             <constraint firstItem="rKT-4k-p88" firstAttribute="top" secondItem="mOl-Nw-ig7" secondAttribute="bottom" constant="24" id="CS8-xk-cfx"/>
                             <constraint firstItem="xou-HP-74a" firstAttribute="centerX" secondItem="9lb-IF-vgD" secondAttribute="centerX" id="Ee2-AT-YCy"/>
                             <constraint firstItem="syb-kC-5qg" firstAttribute="top" secondItem="xou-HP-74a" secondAttribute="bottom" constant="24" id="G2d-xY-Ddt"/>
+                            <constraint firstAttribute="trailing" secondItem="Yg5-gQ-rgZ" secondAttribute="trailing" priority="999" constant="50" id="I7L-VF-3WO"/>
+                            <constraint firstItem="NqH-HN-tC8" firstAttribute="trailing" secondItem="pas-9A-JiC" secondAttribute="trailing" id="M7x-sn-w8f"/>
                             <constraint firstItem="mOl-Nw-ig7" firstAttribute="centerX" secondItem="9lb-IF-vgD" secondAttribute="centerX" id="SbL-QA-m23"/>
                             <constraint firstItem="rKT-4k-p88" firstAttribute="centerY" secondItem="CVs-Xr-Foc" secondAttribute="centerY" id="TzE-A8-mlY"/>
-                            <constraint firstItem="iFR-6m-2FE" firstAttribute="centerX" secondItem="Yg5-gQ-rgZ" secondAttribute="centerX" id="Vn1-D2-WdO"/>
+                            <constraint firstItem="ZJ8-mb-E9t" firstAttribute="bottom" secondItem="pas-9A-JiC" secondAttribute="bottom" constant="82" id="Wcr-gR-gl2"/>
+                            <constraint firstItem="pas-9A-JiC" firstAttribute="leading" secondItem="ZJ8-mb-E9t" secondAttribute="leading" id="clo-Ub-Zdm"/>
+                            <constraint firstItem="iFR-6m-2FE" firstAttribute="centerX" secondItem="Yg5-gQ-rgZ" secondAttribute="centerX" id="ePo-Ba-iDT"/>
                             <constraint firstItem="Yg5-gQ-rgZ" firstAttribute="top" secondItem="syb-kC-5qg" secondAttribute="bottom" constant="32" id="hE1-LG-W3C"/>
-                            <constraint firstItem="Yg5-gQ-rgZ" firstAttribute="centerX" secondItem="syb-kC-5qg" secondAttribute="centerX" id="n9a-ky-mGG"/>
                             <constraint firstAttribute="bottom" secondItem="CVs-Xr-Foc" secondAttribute="bottom" constant="20" id="qRj-kM-hSW"/>
                             <constraint firstItem="iFR-6m-2FE" firstAttribute="top" secondItem="Yg5-gQ-rgZ" secondAttribute="bottom" constant="32" id="qsl-Ev-cEY"/>
                             <constraint firstItem="rKT-4k-p88" firstAttribute="centerX" secondItem="CVs-Xr-Foc" secondAttribute="centerX" id="spy-sp-hTN"/>
+                            <constraint firstItem="NqH-HN-tC8" firstAttribute="leading" secondItem="pas-9A-JiC" secondAttribute="leading" id="tNs-Nq-Wnn"/>
                             <constraint firstItem="xou-HP-74a" firstAttribute="top" secondItem="gWR-G6-eXy" secondAttribute="bottom" constant="18" id="uKe-Ka-tb5"/>
                             <constraint firstItem="gWR-G6-eXy" firstAttribute="top" secondItem="9lb-IF-vgD" secondAttribute="top" constant="34" id="x2l-Ef-K8L"/>
                             <constraint firstItem="e85-UT-1sU" firstAttribute="top" secondItem="iFR-6m-2FE" secondAttribute="bottom" constant="24" id="xL6-Nj-zVy"/>
+                            <constraint firstItem="NqH-HN-tC8" firstAttribute="top" secondItem="pas-9A-JiC" secondAttribute="top" id="z5p-nI-YIN"/>
                             <constraint firstAttribute="trailing" secondItem="CVs-Xr-Foc" secondAttribute="trailing" constant="24" id="zjB-KU-vTV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZJ8-mb-E9t"/>
@@ -112,5 +126,6 @@ DỊCH VỤ CỦA ECOPARKING</string>
     </scenes>
     <resources>
         <image name="ic_logo" width="180" height="180"/>
+        <image name="img_background" width="414" height="736"/>
     </resources>
 </document>

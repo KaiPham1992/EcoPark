@@ -52,7 +52,7 @@
 "carType" = "Loại xe";
 "licensePlate" = "Biển số";
 "checkAgain" = "Kiểm tra lại";
-"agreeCheckout" = "Cho phép checkout";
+"agreeCheckout" = "   Cho phép checkout   ";
 "contentCheckout" = "Xác nhận hoàn thành thu phí và hoàn thành check out cho dịch vụ";
 "titleNeedToPay" = "Cần phải thanh toán:";
 "titleEcoAccount" = "Tài khoản ví ECO";
