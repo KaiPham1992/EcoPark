@@ -9,7 +9,7 @@
 import UIKit
 
 class HistoryParnerCell: UITableViewCell {
-
+    
     @IBOutlet weak var lbID: UILabel!
     @IBOutlet weak var btnStatus: UIButton!
     @IBOutlet weak var lbName: UILabel!
@@ -32,14 +32,15 @@ class HistoryParnerCell: UITableViewCell {
         lbBooking.text = LocalizableKey.book_at.showLanguage
         lbExpect.text = LocalizableKey.expect.showLanguage
         lbTotal.text = LocalizableKey.total.showLanguage
+        btnStatus.setTitle(LocalizableKey.agreeCheckout.showLanguage, for: .normal)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
- 
+    
     
     func setDataBookingHistory() {
         btnStatus.backgroundColor = .clear
@@ -79,21 +80,21 @@ class HistoryParnerCell: UITableViewCell {
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
         lbPrice.text = "\(_historyParking.money_paid ?? 0)"
-        btnStatus.setTitle(LocalizableKey.agreeCheckout.showLanguage, for: .normal)
+        
         let status = _historyParking.status
         switch status {
         case StatusBooking.cancel.rawValue:
             lbCheckInTime.text = "-"
             lbCheckoutTime.text = "-"
         case StatusBooking.checked_out.rawValue:
-           lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
             lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .ecoTime)
             
         case StatusBooking.checked_in.rawValue:
-           lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
             lbCheckoutTime.text = "-"
         case StatusBooking.reservation.rawValue:
-           lbCheckInTime.text = "-"
+            lbCheckInTime.text = "-"
             lbCheckoutTime.text = "-"
         case StatusBooking.expired.rawValue:
             lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
