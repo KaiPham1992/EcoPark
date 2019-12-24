@@ -181,6 +181,9 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     func didGetListMaterial(listMaterial: [MaterialEntity]) {
         vUtility.utilyties = listMaterial
     }
+    func didGetProfileUser(user: UserEntity) {
+        UserDefaultHelper.shared.saveUser(user: user)
+    }
 }
 
 extension SignUpPartnerStep3ViewController: AppCollectionPhotoDelegate {

@@ -208,9 +208,9 @@ extension SignUpViewController: SignUpViewProtocol {
     }
     
     func signUpSuccess(user: UserEntity?) {
-        PopUpHelper.shared.showSignUpSuccess {
+        PopUpHelper.shared.showMessage(message: LocalizableKey.signUpSuccess.showLanguage, width: 350, completion: {
             AppRouter.shared.openHomeView()
-        }
+        })
     }
     
     func signUpError(error: APIError) {
