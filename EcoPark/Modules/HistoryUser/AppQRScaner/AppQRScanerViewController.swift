@@ -125,8 +125,9 @@ class AppQRScanerViewController: BaseViewController {
                     // check QR
                     Provider.shared.userAPIService.scanQRCheckIn(parkingId: qrcode[2], bossParkingId: qrcode[1], success: { bookingDetail in
                         
-//                        ProgressView.shared.hide()
-                        guard let bookingDetail = bookingDetail, let time = bookingDetail.intend_checkin_time?.toString(dateFormat: AppDateFormat.ecoTime)& else { return }
+                        print(" bookingDetail.intend_checkin_time: \( bookingDetail?.intend_checkin_time)")
+                        guard let bookingDetail = bookingDetail, let timeDate = bookingDetail.intend_checkin_time else { return }
+                        let time = timeDate.toString(dateFormat: AppDateFormat.ecoTime)
                         
                         PopUpHelper.shared.showCheckIn(name: bookingDetail.fullname&, address: bookingDetail.address&, time: time, width: 350, height: 280, completionYes: {
                             

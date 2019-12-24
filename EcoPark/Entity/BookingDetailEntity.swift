@@ -38,6 +38,8 @@ class BookingDetailEntity: BaseEntity {
     var rating: Int?
     var address: String?
     
+    var test: Double?
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         
@@ -53,8 +55,30 @@ class BookingDetailEntity: BaseEntity {
         self.code <- map["code"]
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
-        self.time_check_in <- (map["intend_checkin_time"], AppTimestampTransform())
+       
         self.time_check_out <- (map["intend_checkout_time"], AppTimestampTransform())
+        
+        if self.time_check_out == nil {
+             self.time_check_out <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
+        }
+        
+        self.time_check_in <- (map["intend_checkin_time"], AppTimestampTransform())
+        if self.time_check_in == nil {
+             self.time_check_in <- (map["intend_checkin_time"], yyyyMMddHHmmssTransform())
+        }
+        
+        
+        self.intend_checkout_time <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
+        if self.intend_checkout_time == nil {
+             self.intend_checkout_time <- (map["intend_checkout_time"],  AppTimestampTransform())
+        }
+       
+        self.intend_checkin_time <- (map["intend_checkin_time"],  yyyyMMddHHmmssTransform())
+        
+        if self.intend_checkin_time == nil {
+             self.intend_checkin_time <- (map["intend_checkin_time"],  AppTimestampTransform())
+        }
+       
         
         self.status <- map["status"]
         self.parking_id <- map["parking_id"]
@@ -62,7 +86,7 @@ class BookingDetailEntity: BaseEntity {
         self.create_time <- (map["create_time"], yyyyMMddHHmmssTransform())
         self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
         self.create_time_mi <- (map["create_time_mi"], yyyyMMddHHmmssTransform())
-        self.intend_checkout_time <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
+        
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
         self.current_server_time <- map["current_server_time"]

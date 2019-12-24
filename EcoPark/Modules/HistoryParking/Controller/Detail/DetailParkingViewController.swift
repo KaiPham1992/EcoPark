@@ -120,16 +120,28 @@ class DetailParkingViewController: BaseViewController {
     }
     
     func countTime() {
-        guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
+        let status = bookingDetailEntity?.status&
+        switch status& {
+        case StatusBooking.checked_in.rawValue, StatusBooking.checked_out.rawValue:
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
+            
+            let ddhhmm = Utils.getTime(date: checkInTime)
+            
+            VTHour.setUpTime(time: ddhhmm.1)
+            VTMinute.setUpTime(time: ddhhmm.2)
+            VTDate.setUpTime(time: ddhhmm.0)
+            
+            let numberParking = ddhhmm.0 * 24 + ddhhmm.1
+            if status& != StatusBooking.checked_in.rawValue {
+                DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
+            }
+            
+        default:
+            break
+        }
         
-        let ddhhmm = Utils.getTime(date: checkInTime)
         
-        VTHour.setUpTime(time: ddhhmm.1)
-        VTMinute.setUpTime(time: ddhhmm.2)
-        VTDate.setUpTime(time: ddhhmm.0)
         
-        let numberParking = ddhhmm.0 * 24 + ddhhmm.1
-        DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
     }
     
     override func btnBackTapped() {
@@ -199,22 +211,24 @@ class DetailParkingViewController: BaseViewController {
     }
     
     private func showMoney(info: BookingDetailEntity) {
-        if let moneyPaid = info.money_paid {
-            DLVMoneyPayment.setValueText(text: moneyPaid.toCurrency)
+        if info.status& != StatusBooking.checked_in.rawValue {
+            if let moneyPaid = info.money_paid {
+                DLVMoneyPayment.setValueText(text: moneyPaid.toCurrency)
+            }
+            
+            if let moneyPaid = info.parking_details?.price {
+                DLVPriceParking.setValueText(text: moneyPaid.toCurrency)
+            }
+            
+            
+            if let moneyPaid = info.payment_wallet {
+                DLVAddForWallet.setValueText(text: moneyPaid.toCurrency)
+            }
+            
+            if let moneyPaid = info.payment {
+                DLVAddForMoney.setValueText(text: moneyPaid.toCurrency)
+            }
         }
-        
-        if let moneyPaid = info.parking_details?.price {
-            DLVPriceParking.setValueText(text: moneyPaid.toCurrency)
-        }
-        
-        if let moneyPaid = info.payment_wallet {
-            DLVAddForWallet.setValueText(text: moneyPaid.toCurrency)
-        }
-        
-        if let moneyPaid = info.payment {
-            DLVAddForMoney.setValueText(text: moneyPaid.toCurrency)
-        }
-        
     }
     
     private func showGeneralInfo(info: BookingDetailEntity) {

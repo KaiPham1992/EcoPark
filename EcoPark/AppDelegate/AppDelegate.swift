@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Fabric.with([Crashlytics.self])
 //        Crashlytics.sharedInstance().debugMode = true
 //        Fabric.sharedSDK().debug = true
-//        if UserDefaultHelper.shared.appLanguage == nil {
-//            LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
-//        }
+        
+        if UserDefaultHelper.shared.appLanguage == nil {
+            LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
+        }
         
 //        DropDown.startListeningToKeyboard()
         

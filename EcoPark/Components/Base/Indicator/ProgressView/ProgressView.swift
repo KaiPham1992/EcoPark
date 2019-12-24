@@ -107,7 +107,7 @@ open class ProgressView {
     open func hide() {
         DispatchQueue.main.async {
             let topViewController = UIApplication.topViewController() as? BaseViewController
-            topViewController?.setColorStatusBar(color: AppColor.yellow)
+            topViewController?.setColorStatusBar(color: AppColor.black)
             topViewController?.setNeedsStatusBarAppearanceUpdate()
             self.vcontainer.removeFromSuperview()
             self.vIndicator.removeFromSuperview()
