@@ -70,7 +70,7 @@ extension HistoryPartnerBookingViewController: UITableViewDataSource, UITableVie
     func configTableView() {
         tbBooking.delegate = self
         tbBooking.dataSource = self
-        
+        tbBooking.separatorStyle = .none
         tbBooking.registerXibFile(HistoryParnerCell.self)
     }
     

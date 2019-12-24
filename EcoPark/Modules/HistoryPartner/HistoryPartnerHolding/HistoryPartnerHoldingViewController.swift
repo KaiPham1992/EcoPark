@@ -96,7 +96,7 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     func configTableView() {
         tbPartnerHolding.delegate = self
         tbPartnerHolding.dataSource = self
-        
+        tbPartnerHolding.separatorStyle = .none
         tbPartnerHolding.registerXibFile(HistoryParnerCell.self)
     }
     

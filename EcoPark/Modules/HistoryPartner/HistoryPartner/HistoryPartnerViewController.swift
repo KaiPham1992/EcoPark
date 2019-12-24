@@ -48,7 +48,7 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
     func configTableView() {
         tbHistoryParking.delegate = self
         tbHistoryParking.dataSource = self
-        
+        tbHistoryParking.separatorStyle = .none
         tbHistoryParking.registerXibFile(HistoryParnerCell.self)
     }
     

@@ -65,9 +65,9 @@ class TimeParkingCell: UITableViewCell {
     
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckInTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+        lbCheckInTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
         lbCheckOutTime.text = "-"
         
         
@@ -79,8 +79,8 @@ class TimeParkingCell: UITableViewCell {
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
         lbCheckInTime.text = "-"
         lbCheckOutTime.text = "-"
         

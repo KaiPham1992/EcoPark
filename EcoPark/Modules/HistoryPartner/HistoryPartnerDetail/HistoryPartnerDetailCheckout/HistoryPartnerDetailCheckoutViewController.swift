@@ -22,8 +22,9 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+//        addBackToNavigation()
+        addMenu()
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
     }
 }
