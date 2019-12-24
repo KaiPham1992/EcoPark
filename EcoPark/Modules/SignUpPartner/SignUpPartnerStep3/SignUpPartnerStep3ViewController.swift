@@ -26,9 +26,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     
     var isSelect: Bool = true
     var presenter: SignUpPartnerStep3PresenterProtocol?
-    
-    var listUtility: [String] = []
-    
+        
     var listMaterial: [String] = []
     var listImageParking: [AppPhoto] = []
     var url_listImage: [String] = []
@@ -37,17 +35,8 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listUtility = ["ic_roof_on", "ic_carwash_on", "ic_repair_on", "ic_rent_on", "ic_supermarket_on", "ic_atm_on", "ic_hotel_on", "ic_coffee_on"]
-        listMaterial = ["1","2","3","4","5","6","7","8"]
-        vUtility.setMaterial(listMaterial: [.roof,
-                                            .carwash,
-                                            .repair,
-                                            .rent,
-                                            .superMarket,
-                                            .atm,
-                                            .hotel,
-                                            .coffee])
         setupUI()
+        presenter?.getListMaterial()
     }
     
     private func setupUI() {
@@ -61,7 +50,6 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
         vPhoto.configCollectionImageView(delegate: self, controller: self, isSingleSelected: false)
         btnDone.setTitle(LocalizableKey.DoneSignUp.showLanguage, for: .normal)
         
-        vUtility.delegate = self
         setTextTermAndPolicy()
         
         
@@ -80,7 +68,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     private func setTextTermAndPolicy() {
         let attr1 = LocalizableKey.termAndPolicySignUp1.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
         
-        let attr2 = LocalizableKey.DoneSignUp.showLanguage.uppercased().toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: true)
+        let attr2 = LocalizableKey.DoneSignUp.showLanguage.uppercased().toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontBold15, isUnderLine: false)
         
         let attr3 = LocalizableKey.termAndPolicySignUp2.showLanguage.toAttributedString(color: AppColor.color_136_136_136, font: AppFont.fontRegular15, isUnderLine: false)
         
@@ -129,6 +117,8 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     @IBAction func btnDoneTapped() {
         if validateInputData() {
             url_listImage = vPhoto.listImage.map({ $0.url& })
+            let listMaterialActive = vUtility.utilyties.filter({$0.is_active == "1"})
+            listMaterial = listMaterialActive.map({$0.id&})
             
             let paramInput = BossRegisterParam(email: param?.email,
                                                fullname: param?.fullname,
@@ -150,7 +140,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
                                                code_tax: param?.code_tax,
                                                price: param?.price,
                                                package_price: param?.package_price,
-                                               material: ["1", "2", "3", "4"],
+                                               material: listMaterial,
                                                parking_img_src: url_listImage,
                                                latAddress: param?.latAddress,
                                                longAddress: param?.longAddress)
@@ -187,62 +177,9 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     func didUploadImage(photo: PhotoEntity?) {
         url_listImage.append((photo?.imgSrc)&)
     }
-}
-
-extension SignUpPartnerStep3ViewController: UtilityViewDelegate {
-    func didSelect(isSelect: Bool, index: Int) {
-//        switch index {
-//        case 0:
-//            if isSelect {
-//                listMaterial.append("1")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 1:
-//            if isSelect {
-//                listMaterial.append("2")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 2:
-//            if isSelect {
-//                listMaterial.append("3")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 3:
-//            if isSelect {
-//                listMaterial.append("4")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 4:
-//            if isSelect {
-//                listMaterial.append("5")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 5:
-//            if isSelect {
-//                listMaterial.append("6")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 6:
-//            if isSelect {
-//                listMaterial.append("7")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 7:
-//            if isSelect {
-//                listMaterial.append("8")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        default:
-//            return
-//        }
+    
+    func didGetListMaterial(listMaterial: [MaterialEntity]) {
+        vUtility.utilyties = listMaterial
     }
 }
 

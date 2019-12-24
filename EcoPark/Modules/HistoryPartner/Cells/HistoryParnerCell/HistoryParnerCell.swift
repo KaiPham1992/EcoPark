@@ -75,8 +75,8 @@ class HistoryParnerCell: UITableViewCell {
     func setDataHistory(historyParking: BookingEntity?) {
         guard let _historyParking = historyParking else { return }
         lbName.text = _historyParking.fullname
-        lbBookingTime.text = _historyParking.create_time?.toString(dateFormat: AppDateFormat.hhmmddmmyyy)
-        lbExpectTime.text = _historyParking.update_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbBookingTime.text = _historyParking.create_time?.toString(dateFormat: AppDateFormat.ecoTime)
+        lbExpectTime.text = _historyParking.update_time?.toString(dateFormat: .ecoTime)
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
         lbPrice.text = "\(_historyParking.money_paid ?? 0)"

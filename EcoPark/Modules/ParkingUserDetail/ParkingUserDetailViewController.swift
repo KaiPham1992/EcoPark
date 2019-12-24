@@ -118,7 +118,8 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         
         lbAddress.text = info.address
 //        cltMaterial.setMaterial(listMaterial: [.roof, .repair, .rent, .atm])
-        cltMaterial.setMaterial(listMaterialEntity: info.material ?? [])
+//        cltMaterial.setMaterial(listMaterialEntity: info.material ?? [])
+        cltMaterial.utilyties = info.material ?? []
     }
     
     // MARK: Get error

@@ -39,7 +39,11 @@ class ParkingInfoViewController: BaseViewController {
     var listMaterial: [String] = []
     var codeTax: String = ""
     
-    var listParkingType: [ParkingTypeEntity] = []
+    var listParkingType: [ParkingTypeEntity] = [] {
+        didSet {
+            tbParkingInfo.reloadData()
+        }
+    }
     var parkingInfo: ParkingInfoEntity? {
         didSet {
             tbParkingInfo.reloadData()
@@ -104,7 +108,7 @@ class ParkingInfoViewController: BaseViewController {
                                                                        price: parkingInfo?.price,
                                                                        package_price: parkingInfo?.package_price,
                                                                        package_number: parkingInfo?.package_number,
-                                                                       material: ["1", "2", "3", "4"],
+                                                                       material: listMaterial,
                                                                        lat: self.lat,
                                                                        long: self.long))
         }
@@ -213,14 +217,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
-                var listItem: [String] = []
-                if LanguageHelper.currentAppleLanguage() == "en" {
-                    listItem = self.listParkingType.map({$0.key&})
-                } else {
-                    listItem = self.listParkingType.map({$0.name&})
-                }
-                
-                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: listItem, isSelectAddress: isSelectAddress)
+                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType, isSelectAddress: isSelectAddress)
                 parkingInfoCell.selectAddress = self.addressSelect
                 parkingInfoCell.delegate = self
                 return parkingInfoCell
@@ -311,7 +308,7 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
         self.parkingAddress = _parkingInfo.address&
         self.lat = _parkingInfo.lat ?? 0
         self.long = _parkingInfo.long ?? 0
-        self.listMaterial = _parkingInfo.material?.map({ $0.id ?? ""}) ?? [""]
+//        self.listMaterial = _parkingInfo.material?.map({ $0.id ?? ""}) ?? [""]
         self.codeTax = _parkingInfo.code_tax&
         if parkingInfo?.is_active == "1" {
             vActive.isOn = true

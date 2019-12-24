@@ -135,6 +135,14 @@ class MaterialEntity: BaseEntity {
         }
     }
     
+    var urlOn: URL? {
+        return URL(string: "\(BASE_URL_IMAGE)\(icon&)")
+    }
+    
+    var urlOff: URL? {
+           return URL(string: "\(BASE_URL_IMAGE)\(unset_icon&)")
+       }
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         
