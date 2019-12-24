@@ -33,7 +33,7 @@ class PartnerCheckOutPopUp: BasePopUpView {
         
         
         let attr1 = LocalizableKey.contentCheckout.showLanguage.toAttributedString(color: AppColor.black, font: AppFont.fontRegular15, isUnderLine: false)
-        let attr2 = "\(checkOutNumber)".description.toAttributedString(color: AppColor.black, font: AppFont.fontBold15, isUnderLine: false)
+        let attr2 = " \(checkOutNumber)".description.toAttributedString(color: AppColor.black, font: AppFont.fontBold15, isUnderLine: false)
                 
         let attr = NSMutableAttributedString()
         attr.append(attr1)

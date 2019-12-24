@@ -41,4 +41,14 @@ class HistoryPartnerHoldingPresenter: HistoryPartnerHoldingPresenterProtocol, Hi
             ProgressView.shared.hide()
         }
     }
+    
+    func changeStatusCheckout(booking: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.bookingAPIService.checkOut(bookingId: booking, success: { (_) in
+            ProgressView.shared.hide()
+            self.view?.didChangeStatusCheckout()
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 }

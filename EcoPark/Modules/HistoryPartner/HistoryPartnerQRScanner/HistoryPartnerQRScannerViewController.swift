@@ -116,7 +116,7 @@ class HistoryPartnerQRScannerViewController: BaseViewController, HistoryPartnerQ
                 let mapString = arrayString.map{$0.description}
                 //-----
                 
-    //            self.completionCode?(mapString)
+                self.completionCode?(mapString)
                
             }
             

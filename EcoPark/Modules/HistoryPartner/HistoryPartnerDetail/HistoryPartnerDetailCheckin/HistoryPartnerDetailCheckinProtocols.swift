@@ -20,6 +20,7 @@ protocol HistoryPartnerDetailCheckinPresenterProtocol: class {
     var interactor: HistoryPartnerDetailCheckinInteractorInputProtocol? { get set }
     func getHistoryParkingDetailCheckIn(parkingID: String, bookingID: String)
     func checkoutParking(bookingID: String, code: String, licensePlates: String)
+    func changeStatusCheckout(bookingID: String)
 }
 
 //MARK: Interactor -
@@ -43,4 +44,5 @@ protocol HistoryPartnerDetailCheckinViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetData(historyParkingDetail: HistoryBookingParkingResponse?)
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?)
+    func didChangeStatusCheckout()
 }

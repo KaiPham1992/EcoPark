@@ -85,6 +85,12 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
+        self.historyParkingDetail = historyParkingDetail
+        presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "")
+        
+    }
+    
+    func didChangeStatusCheckout() {
         self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
     }
 }
