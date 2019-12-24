@@ -92,8 +92,10 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
             lbRegister.text = LocalizableKey.registerYet.showLanguage
+            btnResgister.setTitle(LocalizableKey.registerOwner.showLanguage, for: .normal)
+            
             // login owner
-
+            
             if  UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" {
                 lbOwner.isHidden = false
                 vRegisterOwner.isHidden = true

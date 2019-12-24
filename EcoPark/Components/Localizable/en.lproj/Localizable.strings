@@ -639,6 +639,7 @@
 "statusCheckedOut" = "Checked out";
 "ratingService" = "Evaluation of parking services";
 "registerYet" = "Do you have a vacancy? \nPlease register as a parking lot";
+"registerOwner" = "Register as a parking partner";
 
 // HOME
 "InputDestination" = "Enter destination";

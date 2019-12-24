@@ -46,7 +46,7 @@
 "parkingTiming" = "Thời gian đỗ xe";
 "userInfo" = "Thông tin khách hàng";
 "registerYet" = "Bạn có chỗ trống? \nHãy đăng ký làm bãi xe";
-
+"registerOwner" = "Đăng ký làm đối tác bãi xe";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
