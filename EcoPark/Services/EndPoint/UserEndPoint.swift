@@ -53,6 +53,7 @@ enum UserEndPoint {
     case getWalletHistory(offset: Int, limit: Int)
     case scanQRCheckIn(parkingId: String, bossParkingId: String)
     case scanQRCheckOut(bookingId: String, code: String, licensePlates: String)
+    
 }
 
 extension UserEndPoint: EndPointType {
@@ -122,6 +123,7 @@ extension UserEndPoint: EndPointType {
             return "_api/user/get_user_wallet"
         case .getWalletHistory:
             return "_api/user/get_list_history_wallet"
+            
         }
         
     }

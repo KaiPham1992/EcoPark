@@ -23,7 +23,6 @@ class LoginInteractor: LoginInteractorInputProtocol {
             guard let user = user else { return }
             UserDefaultHelper.shared.saveUser(user: user)
             UserDefaultHelper.shared.userToken = user.jwt&
-            UserDefaultHelper.shared.birthday = user.birthDay
 
             // --
             self.presenter?.didLogin(user: user)
@@ -40,7 +39,6 @@ class LoginInteractor: LoginInteractorInputProtocol {
             guard let user = user else { return }
             UserDefaultHelper.shared.saveUser(user: user)
             UserDefaultHelper.shared.userToken = user.jwt&
-            UserDefaultHelper.shared.birthday = user.birthDay
             self.presenter?.didLogin(user: user)
         }) { error in
             ProgressView.shared.hide()

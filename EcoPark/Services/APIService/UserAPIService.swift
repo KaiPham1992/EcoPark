@@ -148,7 +148,6 @@ class UserAPIService: UserAPIServiceProtocol {
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
     
-    
 }
 
 

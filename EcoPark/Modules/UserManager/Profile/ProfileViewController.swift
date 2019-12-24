@@ -28,13 +28,24 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var lbVersion: UILabel!
 	var presenter: ProfilePresenterProtocol?
 
+    var user: UserEntity? {
+        didSet {
+            getDataUser()
+        }
+    }
+    
     var genderSelect: String = ""
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        getDataUser()
+//        getDataUser()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getProfile()
+    }
+    
     private func setupUI() {
         addMenu()
         setTitleNavigation(title: LocalizableKey.MenuProfile.showLanguage)
@@ -72,20 +83,20 @@ class ProfileViewController: BaseViewController {
     }
     
     private func getDataUser() {
-        lbName.text = UserDefaultHelper.shared.loginUserInfo?.fullName
-        vUsername.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.displayName
-        vDisplayname.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.fullName
-        vPhoneNumber.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.phone
-        vEmail.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.email
-        vBirthDay.tfInput.text = UserDefaultHelper.shared.birthday?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
-        imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
-        if UserDefaultHelper.shared.loginUserInfo?.gender == "female" {
+        lbName.text = user?.fullName
+        vUsername.tfInput.text = user?.displayName
+        vDisplayname.tfInput.text = user?.fullName
+        vPhoneNumber.tfInput.text = user?.phone
+        vEmail.tfInput.text = user?.email
+        vBirthDay.tfInput.text = user?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+        imgAvatar.sd_setImage(with:  user?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
+        if user?.gender == "female" {
             vGender.tfInput.text = LocalizableKey.female.showLanguage
         }
-        else if UserDefaultHelper.shared.loginUserInfo?.gender == "male" {
+        else if user?.gender == "male" {
             vGender.tfInput.text = LocalizableKey.male.showLanguage
         }
-        else if UserDefaultHelper.shared.loginUserInfo?.gender == "other" {
+        else if user?.gender == "other" {
             vGender.tfInput.text = LocalizableKey.other.showLanguage
         }
         
@@ -123,6 +134,10 @@ class ProfileViewController: BaseViewController {
 }
 
 extension ProfileViewController:  ProfileViewProtocol {
+    func didGetProfile(user: UserEntity) {
+        self.user = user
+    }
+    
     func didUpdateAvatar() {
         btnSave.isEnabled = true
         btnSave.backgroundColor = AppColor.color_0_129_255
@@ -131,9 +146,8 @@ extension ProfileViewController:  ProfileViewProtocol {
     func didUpdateProfile(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)
         
-        UserDefaultHelper.shared.birthday = user.birthDay
+        self.user = user
         PopUpHelper.shared.showEditProfile {
-            self.getDataUser()
         }
     }
 }
