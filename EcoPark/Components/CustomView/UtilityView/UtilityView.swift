@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UtilityViewDelegate: class {
-    func didSelect(isSelect: Bool, index: Int)
+    func didSelect()
 }
 
 class UtilityView: BaseViewXib {
@@ -17,7 +17,7 @@ class UtilityView: BaseViewXib {
     
     weak var delegate: UtilityViewDelegate?
     
-    var utilyties = [UtilityModel]() {
+    var utilyties = [MaterialEntity]() {
         didSet {
             cvUtility.reloadData()
         }
@@ -28,15 +28,17 @@ class UtilityView: BaseViewXib {
         configureCollection()
     }
     
-    func setMaterial(listMaterial: [UtilityModelType]) {
-        self.utilyties = UtilityModel.setMaterial(listMaterilType: listMaterial)
-    }
-    
-    func setMaterial(listMaterialEntity: [MaterialEntity]) {
-        let filterList = listMaterialEntity.filter{ $0.is_active == "1"}
-        let listType = filterList.map { $0.type }
-        self.utilyties = UtilityModel.setMaterial(listMaterilType: listType as! [UtilityModelType])
-    }
+//    func setMaterial(listMaterial: [MaterialEntity]) {
+//        self.utilyties = UtilityModel.setMaterial(listMaterilType: listMaterial)
+//    }
+//
+//    func setMaterial(listMaterialEntity: [MaterialEntity]) {
+//        let filterList = listMaterialEntity.filter{ $0.is_active == "1"}
+//        let listType = filterList.map { $0.type }
+//        self.utilyties = UtilityModel.setMaterial(listMaterilType: listType as! [UtilityModelType])
+//
+//
+//    }
 }
 
 extension UtilityView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -70,9 +72,8 @@ extension UtilityView: UICollectionViewDataSource, UICollectionViewDelegateFlowL
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = self.utilyties[indexPath.item]
-        item.isSelected = !item.isSelected
-        
-        delegate?.didSelect(isSelect: item.isSelected, index: indexPath.item)
+        item.is_active = item.is_active == "1" ? "0": "1"
+        delegate?.didSelect()
         
         self.cvUtility.reloadData()
     }

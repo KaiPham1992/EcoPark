@@ -47,7 +47,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         addMenu()
         setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
         vStep.setStep1()
-        lbPartnerInfo.text = LocalizableKey.partnerInfo.showLanguage
+        lbPartnerInfo.text = LocalizableKey.partnerInfo.showLanguage.uppercased()
         vPartnerName.setTitleAndPlaceHolder(title: LocalizableKey.partnerName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vGender.setTitleAndPlaceHolder(title: LocalizableKey.gender.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vBirthday.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
@@ -133,6 +133,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
                                           parking_img_src: [],
                                           latAddress: nil,
                                           longAddress: nil)
+            print("___====\(param)")
             self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
             
         }

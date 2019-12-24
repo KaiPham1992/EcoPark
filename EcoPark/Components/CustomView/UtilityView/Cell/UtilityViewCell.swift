@@ -105,10 +105,14 @@ class UtilityModel {
 class UtilityViewCell: UICollectionViewCell {
     @IBOutlet weak var imgIcon: UIImageView!
     
-    var utility: UtilityModel? {
+    var utility: MaterialEntity? {
         didSet {
             guard let utility = utility else { return }
-            imgIcon.image = utility.isSelected == true ? utility.iconOn: utility.iconOff
+            if utility.is_active == "1" {
+                imgIcon.sd_setImage(with: utility.urlOn)
+            } else {
+                 imgIcon.sd_setImage(with: utility.urlOff)
+            }
         }
     }
 

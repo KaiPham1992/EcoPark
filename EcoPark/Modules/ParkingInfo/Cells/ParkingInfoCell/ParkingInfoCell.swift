@@ -30,6 +30,7 @@ class ParkingInfoCell: UITableViewCell {
     var parkingInfo: ParkingInfoEntity?
     var parkingTypeID: String = ""
     var listMaterial: [String] = []
+    var listParkingType: [ParkingTypeEntity] = []
     
     let datePickerTimeOpen = UIDatePicker()
     let formatterTimeOpen = DateFormatter()
@@ -62,7 +63,7 @@ class ParkingInfoCell: UITableViewCell {
         
     }
     
-    func setData(parkingInfo: ParkingInfoEntity?, listItem: [Any], isSelectAddress: Bool) {
+    func setData(parkingInfo: ParkingInfoEntity?, listItem: [ParkingTypeEntity], isSelectAddress: Bool) {
         vParkingName.tfInput.text = parkingInfo?.name
         vParkingType.tfInput.text = parkingInfo?.parking_type
         if isSelectAddress {
@@ -72,13 +73,21 @@ class ParkingInfoCell: UITableViewCell {
         }
         vOpen.tfInput.text = parkingInfo?.time_start?.toString(dateFormat: .HHmm)
         vClose.tfInput.text = parkingInfo?.time_end?.toString(dateFormat: .HHmm)
-        vParkingType.listItem = listItem
-        cvUtility.setMaterial(listMaterial: [.roof, .carwash, .rent, .atm])
-        listMaterial = parkingInfo?.material?.map({ $0.id&}) ?? [""]
+        self.listParkingType = listItem
+        if LanguageHelper.currentAppleLanguage() == "en" {
+            vParkingType.listItem = listItem.map({$0.key&})
+        } else {
+            vParkingType.listItem = listItem.map({$0.name&})
+        }
+        
+        cvUtility.utilyties = parkingInfo?.material ?? []
         
     }
     
     @objc func textFieldDidChanged() {
+        let listMaterialActive = cvUtility.utilyties.filter({$0.is_active == "1"})
+        listMaterial = listMaterialActive.map({$0.id&})
+        
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
     
@@ -115,7 +124,8 @@ class ParkingInfoCell: UITableViewCell {
         //For time formate
         formatterTimeOpen.dateFormat = AppDateFormat.HHmm.formatString
         vOpen.tfInput.text = formatterTimeOpen.string(from: datePickerTimeOpen.date)
-        
+        let listMaterialActive = cvUtility.utilyties.filter({$0.is_active == "1"})
+        listMaterial = listMaterialActive.map({$0.id&})
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
         //dismiss date picker dialog
         self.contentView.endEditing(true)
@@ -125,6 +135,9 @@ class ParkingInfoCell: UITableViewCell {
         //For time formate
         formatterTimeClose.dateFormat = AppDateFormat.HHmm.formatString
         vClose.tfInput.text = formatterTimeClose.string(from: datePickerTimeClose.date)
+        let listMaterialActive = cvUtility.utilyties.filter({$0.is_active == "1"})
+        listMaterial = listMaterialActive.map({$0.id&})
+        
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
         //dismiss date picker dialog
         self.contentView.endEditing(true)
@@ -137,94 +150,18 @@ class ParkingInfoCell: UITableViewCell {
 }
 
 extension ParkingInfoCell: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
-        if LanguageHelper.currentAppleLanguage() == "en" {
-            switch item as? String {
-            case "bai xe co mai che":
-                self.parkingTypeID = "1"
-            case "bai xe khong co mai che":
-                self.parkingTypeID = "2"
-            case "bai xe tinh tien tu dong":
-                self.parkingTypeID = "3"
-            case "bai xe dac biet":
-                self.parkingTypeID = "4"
-            default:
-                self.parkingTypeID = ""
-            }
-        } else {
-            switch item as? String {
-            case "Bãi xe có mái che":
-                self.parkingTypeID = "1"
-            case "Bãi xe không có mái che":
-                self.parkingTypeID = "2"
-            case "Bãi xe tính tiền tự động":
-                self.parkingTypeID = "3"
-            case "Bãi xe đặc biệt":
-                self.parkingTypeID = "4"
-            default:
-                self.parkingTypeID = ""
-            }
-        }
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
         
+        parkingTypeID = listParkingType[index]._id ?? ""
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
     
 }
 
 extension ParkingInfoCell: UtilityViewDelegate {
-    func didSelect(isSelect: Bool, index: Int) {
-        //        switch index {
-        //        case 0:
-        //            if isSelect {
-        //                listMaterial.append("1")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 1:
-        //            if isSelect {
-        //                listMaterial.append("2")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 2:
-        //            if isSelect {
-        //                listMaterial.append("3")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 3:
-        //            if isSelect {
-        //                listMaterial.append("4")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 4:
-        //            if isSelect {
-        //                listMaterial.append("5")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 5:
-        //            if isSelect {
-        //                listMaterial.append("6")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 6:
-        //            if isSelect {
-        //                listMaterial.append("7")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        case 7:
-        //            if isSelect {
-        //                listMaterial.append("8")
-        //            } else {
-        //                listMaterial.remove(at: index)
-        //            }
-        //        default:
-        //            return
-        //        }
+    func didSelect() {
+        let listMaterialActive = cvUtility.utilyties.filter({$0.is_active == "1"})
+        listMaterial = listMaterialActive.map({$0.id&})
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
 }

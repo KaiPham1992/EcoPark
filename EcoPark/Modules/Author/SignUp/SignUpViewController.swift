@@ -266,7 +266,7 @@ extension SignUpViewController: UITextFieldDelegate {
 }
 
 extension SignUpViewController: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
         self.genderSelect = item as! String
     }
 }

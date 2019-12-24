@@ -259,7 +259,7 @@
 
 //error
 "errorParkingName" = "Please enter parking name";
-"errorParkingType" = "Please enter parkingtype";
+"errorParkingType" = "Please enter parking type";
 "errorParkingCapacity" = "Please enter parking capacity";
 "errorParkingAddress" = "Please enter parking address";
 "errorOpenTime" = "Please select open time";
@@ -276,9 +276,9 @@
 "DoneSignUp" = "Sign up complete";
 "termAndPolicySignUp1" = "By clicking ";
 "termAndPolicySignUp2" = ", you agree with ";
-"termAndPolicySignUp3" = "Rules ";
-"termAndPolicySignUp4" = "Service policy ";
-"termAndPolicySignUp5" = "Privacy policy ";
+"termAndPolicySignUp3" = "rules ";
+"termAndPolicySignUp4" = "service policy ";
+"termAndPolicySignUp5" = "privacy policy ";
 "termAndPolicySignUp6" = "ours.";
 
 "errorMinimunPhoto" = "Please take a picture of your at least 2 photo";

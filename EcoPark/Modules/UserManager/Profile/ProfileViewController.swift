@@ -186,7 +186,7 @@ extension ProfileViewController {
 }
 
 extension ProfileViewController: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
         self.genderSelect = item as! String
         btnSave.isEnabled = true
         btnSave.backgroundColor = AppColor.color_0_129_255

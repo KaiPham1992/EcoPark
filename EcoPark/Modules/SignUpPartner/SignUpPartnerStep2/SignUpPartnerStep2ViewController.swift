@@ -48,7 +48,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     var lat: Double = 0
     var long: Double = 0
-    
+    var listParkingType: [ParkingTypeEntity] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -315,7 +315,7 @@ extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
     }
     
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
-        
+        self.listParkingType = listParkingType
         if LanguageHelper.currentAppleLanguage() == "en" {
             vParkingType.listItem = listParkingType.map({$0.key&})
         } else {
@@ -326,35 +326,9 @@ extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
 }
 
 extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
-        
-        if LanguageHelper.currentAppleLanguage() == "en" {
-            switch item as? String {
-            case "bai xe co mai che":
-                self.parkingTypeID = "1"
-            case "bai xe khong co mai che":
-                self.parkingTypeID = "2"
-            case "bai xe tinh tien tu dong":
-                self.parkingTypeID = "3"
-            case "bai xe dac biet":
-                self.parkingTypeID = "4"
-            default:
-                self.parkingTypeID = ""
-            }
-        } else {
-            switch item as? String {
-            case "Bãi xe có mái che":
-                self.parkingTypeID = "1"
-            case "Bãi xe không có mái che":
-                self.parkingTypeID = "2"
-            case "Bãi xe tính tiền tự động":
-                self.parkingTypeID = "3"
-            case "Bãi xe đặc biệt":
-                self.parkingTypeID = "4"
-            default:
-                self.parkingTypeID = ""
-            }
-        }
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
+    
+        parkingTypeID = listParkingType[index]._id ?? ""
     }
 }
 
