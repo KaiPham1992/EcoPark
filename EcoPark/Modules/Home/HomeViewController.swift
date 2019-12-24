@@ -42,6 +42,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     var isFirst: Bool = true
     
+    var isMustCheckOut = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +54,27 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         getParking()
         
         btnFilter.setTitle(LocalizableKey.FilterHome.showLanguage, for: UIControl.State.normal)
+    }
+    
+    
+    
+    func checkIconCheckInCheckOut() {
+        Provider.shared.parkingAPIService.getDoingBooking(success: { array in
+            self.isMustCheckOut = false
+            for booking in array {
+                if booking.status == "checked_in" {
+                    self.isMustCheckOut = true
+                }
+            }
+            
+            if self.isMustCheckOut {
+                self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
+            } else {
+                self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
+            }
+        }) { error in
+            
+        }
     }
     
     func getParking() {
@@ -99,6 +122,10 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setMyLocation()
     }
     
+    @objc func btnCheckOut() {
+       
+    }
+    
     @objc func btnCheckIn() {
         let vc = AppQRScanerViewController.createModule(isCheckIn: true)
         vc.completionCode = { qrcode in
@@ -138,6 +165,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         } else {
              btnFilter.isEnabled = true
         }
+        
+        checkIconCheckInCheckOut()
     }
     
     override func setUpViews() {

@@ -28,9 +28,19 @@ class Utils {
         return NetworkReachabilityManager()!.isReachable
     }
     
-    static func getTime(date: Double) -> (Int64, Int64, Int64) {
+//    static func getTime(date: Double) -> (Int64, Int64, Int64) {
+//        let secondDate = Date().timeIntervalSince1970
+//        let other = Int64(secondDate - date)
+//        let day = Int64(other / 86400)
+//        let hour = (other - day * 86400)/3600
+//        let minute = (other - day * 86400 - hour * 3600)/60
+//        return (day, hour, minute)
+//    }
+    
+    static func getTime(dateCheckIn: Double, currentServerDate: Double) -> (Int64, Int64, Int64) {
+        
         let secondDate = Date().timeIntervalSince1970
-        let other = Int64(secondDate - date)
+        let other = Int64(secondDate - dateCheckIn)
         let day = Int64(other / 86400)
         let hour = (other - day * 86400)/3600
         let minute = (other - day * 86400 - hour * 3600)/60

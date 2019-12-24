@@ -54,7 +54,7 @@ class TimeParkingCell: UITableViewCell {
     func setupTimeCount() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
             
-            let ddhhmm = Utils.getTime(date: self.checkinTime)
+            let ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: 0)
             self.vHour.setUpTime(time: ddhhmm.1)
             self.vMinute.setUpTime(time: ddhhmm.2)
             self.vDay.setUpTime(time: ddhhmm.0)

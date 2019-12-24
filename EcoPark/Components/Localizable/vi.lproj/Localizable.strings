@@ -400,3 +400,4 @@
 "NotYetLisence" = "Bạn chưa nhập biển số";
 "TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";
 "WaitApp" = "Đăng kí làm đối tác bãi xe";
+"HAS_BOOKING_CHECKED_IN" = "Bạn đang checkin tại một bãi xe khác";

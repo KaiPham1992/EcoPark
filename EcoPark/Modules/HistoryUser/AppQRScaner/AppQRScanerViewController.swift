@@ -150,17 +150,22 @@ class AppQRScanerViewController: BaseViewController {
                         
                     }) { error in
                         ProgressView.shared.hide()
-                        print("ERRRRRRRRRRRRRR")
-                        PopUpHelper.shared.showNoReservation(width: 350, completionYes: {
-                            self.reader.startScanning()
-                            
-//                            let vc = BookingInfoRouter.createModule(parking: ParkingEntity(id: qrcode[2]))
-//                            self.push(controller: vc)
-                            
-                        }) {
-//                            self.reader.startScanning()
-                            self.pop()
+                        
+                        guard let error = error else { return }
+                        if error.message& == "HAS_BOOKING_CHECKED_IN" {
+                            PopUpHelper.shared.showMessage(message: "HAS_BOOKING_CHECKED_IN".showLanguage, width: self.popUpwidth, completion: {
+                                 self.reader.startScanning()
+                            })
+                        } else {
+                            PopUpHelper.shared.showNoReservation(width: 350, completionYes: {
+                                self.reader.startScanning()
+                                
+                            }) {
+                                self.pop()
+                            }
                         }
+                        
+                        
                     }
                 }
                 else {

@@ -40,8 +40,8 @@ struct AppImage {
     
     //APP Moi
     
-    static let iconCheckout = UIImage(named: "ic_qrcheckin")!
-    static let iconCheckin = UIImage(named: "ic_qrcheckout")!
+    static let iconCheckout = UIImage(named: "ic_qrcheckout")!
+    static let iconCheckin = UIImage(named: "ic_qrcheckin")!
     static let iconPlaceMap = UIImage(named: "ic_placeholder_map")!
     static let imgPlaceHolder = UIImage(named: "placeHolderImage")!
     

@@ -123,9 +123,9 @@ class DetailParkingViewController: BaseViewController {
         let status = bookingDetailEntity?.status&
         switch status& {
         case StatusBooking.checked_in.rawValue, StatusBooking.checked_out.rawValue:
-            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let currentDate = bookingDetailEntity?.current_server_time?.timeIntervalSince1970 else { return }
             
-            let ddhhmm = Utils.getTime(date: checkInTime)
+            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: currentDate)
             
             VTHour.setUpTime(time: ddhhmm.1)
             VTMinute.setUpTime(time: ddhhmm.2)

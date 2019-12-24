@@ -28,7 +28,7 @@ class BookingDetailEntity: BaseEntity {
     var intend_checkout_time: Date?
     var money_paid: Double?
     var parking_details: ParkingInfoEntity?
-    var current_server_time: Int?
+    var current_server_time: Date?
     var time_check_in: Date?
     var time_check_out : Date?
     var payment_wallet: Double?
@@ -56,15 +56,20 @@ class BookingDetailEntity: BaseEntity {
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
        
-        self.time_check_out <- (map["intend_checkout_time"], AppTimestampTransform())
+        self.time_check_out <- (map["time_check_out"], AppTimestampTransform())
         
         if self.time_check_out == nil {
-             self.time_check_out <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
+             self.time_check_out <- (map["time_check_out"], yyyyMMddHHmmssTransform())
         }
         
-        self.time_check_in <- (map["intend_checkin_time"], AppTimestampTransform())
+        self.time_check_in <- (map["time_check_in"], AppTimestampTransform())
         if self.time_check_in == nil {
-             self.time_check_in <- (map["intend_checkin_time"], yyyyMMddHHmmssTransform())
+             self.time_check_in <- (map["time_check_in"], yyyyMMddHHmmssTransform())
+        }
+        
+        self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
+        if self.current_server_time == nil {
+             self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
         }
         
         
