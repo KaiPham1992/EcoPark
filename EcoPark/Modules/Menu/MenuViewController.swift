@@ -29,6 +29,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var heightRegisterOwner: NSLayoutConstraint!
     @IBOutlet weak var lbLogout: UILabel!
+    @IBOutlet weak var lbRegister: UILabel!
     
      @IBOutlet weak var btnResgister: UIButton!
     
@@ -90,7 +91,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             lbDisplayname.isHidden = false
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
-            
+            lbRegister.text = LocalizableKey.registerYet.showLanguage
             // login owner
 
             if  UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" {

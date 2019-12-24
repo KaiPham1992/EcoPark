@@ -118,8 +118,13 @@ extension NecContainerViewController: MenuViewControllerDelegate {
     }
     
     func signUpPartnerTapped() {
-        let signUpPartnerVC = SignUpPartnerStep1Router.createModule()
-        self.openViewController(presentingController: signUpPartnerVC)
+        if UserDefaultHelper.shared.loginUserInfo?.wait_app == "1" {
+            let waitApproveVC = SignUpPartnerWaitingRouter.createModule()
+            self.openViewController(presentingController: waitApproveVC)
+        } else {
+            let signUpPartnerVC = SignUpPartnerStep1Router.createModule()
+            self.openViewController(presentingController: signUpPartnerVC)
+        }
     }
     
     func selected(item: MenuItem) {
