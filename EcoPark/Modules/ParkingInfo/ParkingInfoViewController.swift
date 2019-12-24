@@ -213,7 +213,14 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
-                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}), isSelectAddress: isSelectAddress)
+                var listItem: [String] = []
+                if LanguageHelper.currentAppleLanguage() == "en" {
+                    listItem = self.listParkingType.map({$0.key&})
+                } else {
+                    listItem = self.listParkingType.map({$0.name&})
+                }
+                
+                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: listItem, isSelectAddress: isSelectAddress)
                 parkingInfoCell.selectAddress = self.addressSelect
                 parkingInfoCell.delegate = self
                 return parkingInfoCell

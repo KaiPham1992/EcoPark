@@ -138,18 +138,34 @@ class ParkingInfoCell: UITableViewCell {
 
 extension ParkingInfoCell: AppTextFieldDropDownDelegate {
     func didChangedValue(sender: AppDropDown, item: Any) {
-        switch item as? String {
-        case "Bãi xe có mái che":
-            self.parkingTypeID = "1"
-        case "Bãi xe không có mái che":
-            self.parkingTypeID = "2"
-        case "Bãi xe tính tiền tự động":
-            self.parkingTypeID = "3"
-        case "Bãi xe đặc biệt":
-            self.parkingTypeID = "4"
-        default:
-            self.parkingTypeID = ""
+        if LanguageHelper.currentAppleLanguage() == "en" {
+            switch item as? String {
+            case "bai xe co mai che":
+                self.parkingTypeID = "1"
+            case "bai xe khong co mai che":
+                self.parkingTypeID = "2"
+            case "bai xe tinh tien tu dong":
+                self.parkingTypeID = "3"
+            case "bai xe dac biet":
+                self.parkingTypeID = "4"
+            default:
+                self.parkingTypeID = ""
+            }
+        } else {
+            switch item as? String {
+            case "Bãi xe có mái che":
+                self.parkingTypeID = "1"
+            case "Bãi xe không có mái che":
+                self.parkingTypeID = "2"
+            case "Bãi xe tính tiền tự động":
+                self.parkingTypeID = "3"
+            case "Bãi xe đặc biệt":
+                self.parkingTypeID = "4"
+            default:
+                self.parkingTypeID = ""
+            }
         }
+        
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
     
@@ -157,58 +173,58 @@ extension ParkingInfoCell: AppTextFieldDropDownDelegate {
 
 extension ParkingInfoCell: UtilityViewDelegate {
     func didSelect(isSelect: Bool, index: Int) {
-//        switch index {
-//        case 0:
-//            if isSelect {
-//                listMaterial.append("1")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 1:
-//            if isSelect {
-//                listMaterial.append("2")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 2:
-//            if isSelect {
-//                listMaterial.append("3")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 3:
-//            if isSelect {
-//                listMaterial.append("4")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 4:
-//            if isSelect {
-//                listMaterial.append("5")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 5:
-//            if isSelect {
-//                listMaterial.append("6")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 6:
-//            if isSelect {
-//                listMaterial.append("7")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        case 7:
-//            if isSelect {
-//                listMaterial.append("8")
-//            } else {
-//                listMaterial.remove(at: index)
-//            }
-//        default:
-//            return
-//        }
+        //        switch index {
+        //        case 0:
+        //            if isSelect {
+        //                listMaterial.append("1")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 1:
+        //            if isSelect {
+        //                listMaterial.append("2")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 2:
+        //            if isSelect {
+        //                listMaterial.append("3")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 3:
+        //            if isSelect {
+        //                listMaterial.append("4")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 4:
+        //            if isSelect {
+        //                listMaterial.append("5")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 5:
+        //            if isSelect {
+        //                listMaterial.append("6")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 6:
+        //            if isSelect {
+        //                listMaterial.append("7")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        case 7:
+        //            if isSelect {
+        //                listMaterial.append("8")
+        //            } else {
+        //                listMaterial.remove(at: index)
+        //            }
+        //        default:
+        //            return
+        //        }
         delegate?.getParkingInfo(parkingName: vParkingName.getText(), parkingTypeID: parkingTypeID, parkingAddress: vParkingAddress.tvInput.text, openTime: vOpen.getText(), closeTime: vClose.getText(), material: listMaterial)
     }
 }

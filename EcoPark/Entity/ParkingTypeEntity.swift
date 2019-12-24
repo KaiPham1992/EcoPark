@@ -13,6 +13,7 @@ class ParkingTypeEntity: BaseEntity {
    var name: String?
    var plain_name: String?
    var is_active: String?
+    var key: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -21,5 +22,6 @@ class ParkingTypeEntity: BaseEntity {
         self.name <- map["name"]
         self.plain_name <- map["plain_name"]
         self.is_active <- map["is_active"]
+        self.key <- map["_key"]
     }
 }
