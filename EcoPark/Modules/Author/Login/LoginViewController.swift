@@ -153,7 +153,7 @@ extension LoginViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func didLogin(user: UserEntity?) {
-        if UserDefaultHelper.shared.loginUserInfo?.wait_app == "0" {
+        if UserDefaultHelper.shared.loginUserInfo?.userIsBoss == true {
             self.isOwner = true
         } else {
             self.isOwner = false

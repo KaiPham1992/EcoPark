@@ -28,7 +28,7 @@ class MenuItem {
                 MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
                 MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
             ]
-        } else if UserDefaultHelper.shared.loginUserInfo?.wait_app == "0" {
+        } else if UserDefaultHelper.shared.loginUserInfo?.userIsWait == true {
             return [
                 MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuHistoryParking.showLanguage),
                 MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuMyInfo.showLanguage),

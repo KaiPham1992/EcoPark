@@ -118,7 +118,7 @@ extension NecContainerViewController: MenuViewControllerDelegate {
     }
     
     func signUpPartnerTapped() {
-        if UserDefaultHelper.shared.loginUserInfo?.wait_app == "1" {
+        if UserDefaultHelper.shared.loginUserInfo?.userIsWait == true {
             let waitApproveVC = SignUpPartnerWaitingRouter.createModule()
             self.openViewController(presentingController: waitApproveVC)
         } else {
