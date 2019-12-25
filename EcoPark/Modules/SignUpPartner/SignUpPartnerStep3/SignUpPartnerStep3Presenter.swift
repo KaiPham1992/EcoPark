@@ -54,4 +54,15 @@ class SignUpPartnerStep3Presenter: SignUpPartnerStep3PresenterProtocol, SignUpPa
             ProgressView.shared.hide()
         }
     }
+    
+    func getProfileUser() {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.userAPIService.getProfileUser(success: { (user) in
+            ProgressView.shared.hide()
+            guard let _user = user else { return }
+            self.view?.didGetProfileUser(user: _user)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 }
