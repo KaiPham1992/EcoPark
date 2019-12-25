@@ -169,6 +169,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     
     
     func didBossRegister(parkingInfo: ParkingInfoEntity?) {
+        presenter?.getProfileUser()
         parkingInfo?.id = UserDefaultHelper.shared.parkingID
         self.push(controller: SignUpPartnerWaitingRouter.createModule())
         

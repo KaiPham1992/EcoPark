@@ -20,7 +20,15 @@ class SignUpPartnerWaitingViewController: BaseViewController, SignUpPartnerWaiti
         super.viewDidLoad()
         setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
         addMenu()
-        lbWaiting.text = LocalizableKey.parkingWaitingSignUp.showLanguage
+        let attr = NSMutableAttributedString()
+        let attr1 = LocalizableKey.parkingWaitingSignUp1.showLanguage.toAttributedString(color: .white, font: AppFont.fontRegular17, isUnderLine: false)
+        let attr2 = LocalizableKey.parkingWaitingSignUp2.showLanguage.toAttributedString(color: .white, font: AppFont.fontRegular17, isUnderLine: false)
+        let attrEco = "ECOPARKING ".toAttributedString(color: AppColor.color_0_129_255, font: AppFont.fontBold17, isUnderLine: false)
+        
+        attr.append(attr1)
+        attr.append(attrEco)
+        attr.append(attr2)
+        lbWaiting.attributedText = attr
     }
 
 }
