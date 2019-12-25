@@ -101,15 +101,15 @@ class LoginViewController: BaseViewController {
     @IBAction func btnEnglishTapped() {
         btnEnglish.backgroundColor = AppColor.color_0_129_255
         btnVietnamese.backgroundColor = AppColor.gray999999
-        LanguageHelper.setAppleLAnguageTo(lang: LanguageType.english)
-        AppRouter.shared.openHomeView()
+        LanguageHelper.changeLanguage()
+        setTitleUI()
     }
     
     @IBAction func btnVietnameseTapped() {
         btnEnglish.backgroundColor = AppColor.gray999999
         btnVietnamese.backgroundColor = AppColor.color_0_129_255
-        LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
-        AppRouter.shared.openHomeView()
+        LanguageHelper.changeLanguage()
+        setTitleUI()
     }
 }
 
@@ -125,11 +125,6 @@ extension LoginViewController {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
-        
-//        if let email = self.vUserName.tfInput.text, email.isValidEmail() == false {
-//            hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
-//            return false
-//        }
         if self.vPassword.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterPassword.showLanguage)
             return false
@@ -161,12 +156,6 @@ extension LoginViewController: LoginViewProtocol {
         
         self.callBackLoginSuccessed?()
         self.dismiss()
-//        AppRouter.shared.openHome()
-//        guard let _user = user else { return }
-//        UserDefaultHelper.shared.saveUser(user: _user)
-//        if user?.infoParking != nil {
-//            AppRouter.shared.openParkingInfo()
-//        }
     }
     
     func didError(error: APIError?) {
