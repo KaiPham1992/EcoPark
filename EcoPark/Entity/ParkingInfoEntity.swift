@@ -176,4 +176,8 @@ class ImgEntity: BaseEntity {
         }
         return ""
     }
+    
+    var url: URL? {
+        return URL(string: imageURL&)
+    }
 }

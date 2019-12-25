@@ -26,6 +26,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     @IBOutlet weak var btnBook: UIButton!
     @IBOutlet weak var tfPlate: UITextField!
     @IBOutlet weak var dropDownType: AppDropDownNoTitle!
+    @IBOutlet weak var imgIcon: UIImageView!
     
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbTitleBookingInfo: UILabel!
@@ -113,7 +114,12 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             lbPriceEightHour.text = packagePrice.toCurrency + LocalizableKey.eachPackage.showLanguage
         }
         
-        dropDownType.btnAction.isHidden = true 
+        dropDownType.btnAction.isHidden = true
+        
+        if let listImage = info.img, listImage.count > 0 {
+             imgIcon.sd_setImage(with: listImage[0].url)
+        }
+       
     }
     
     @IBAction func btnBookingTapped() {

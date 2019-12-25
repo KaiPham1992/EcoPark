@@ -21,6 +21,7 @@
                 <outlet property="btnBook" destination="woj-s4-nVu" id="cdz-mm-siO"/>
                 <outlet property="datePicker" destination="XJ7-R8-kuc" id="OVK-Ko-hOg"/>
                 <outlet property="dropDownType" destination="qaV-y7-lUA" id="iQc-p7-9mY"/>
+                <outlet property="imgIcon" destination="r1N-Pe-Z7h" id="Mke-d8-EaF"/>
                 <outlet property="lbCapacity" destination="lNX-ay-83f" id="ewv-vB-LMf"/>
                 <outlet property="lbName" destination="56H-5D-bW2" id="mlf-bM-AUH"/>
                 <outlet property="lbPriceEightHour" destination="Ybt-xf-ZD0" id="Hdn-Qk-5i3"/>
@@ -66,7 +67,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-ci-erM">
                                     <rect key="frame" x="16" y="44" width="382" height="230"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="r1N-Pe-Z7h">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1N-Pe-Z7h">
                                             <rect key="frame" x="0.0" y="0.0" width="102" height="136"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="136" id="Ozn-Ey-ZW0"/>
@@ -411,7 +412,6 @@
         </view>
     </objects>
     <resources>
-        <image name="car" width="960" height="540"/>
         <image name="ic_calendar_outlined" width="24" height="24"/>
         <image name="ic_car" width="30" height="30"/>
         <image name="ic_clock" width="30" height="30"/>
