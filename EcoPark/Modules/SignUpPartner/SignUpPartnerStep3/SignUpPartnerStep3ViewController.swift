@@ -196,6 +196,11 @@ extension SignUpPartnerStep3ViewController: AppCollectionPhotoDelegate {
     }
     
     func appCollectionPhoto(_ collectionView: AppCollectionPhoto, selectedImages images: [AppPhoto]) {
-        self.listImageParking = images
+        if self.listImageParking.count == 0 {
+            self.listImageParking = images
+        } else {
+            self.listImageParking.append(contentsOf: images)
+        }
+        
     }
 }

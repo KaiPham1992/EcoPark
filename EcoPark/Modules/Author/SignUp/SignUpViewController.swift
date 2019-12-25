@@ -122,8 +122,19 @@ class SignUpViewController: BaseViewController {
         dismissKeyBoard()
         heightError.constant = 0
         //vPassword.getText()
+        
+        if self.vGender.tfInput.text == "Nữ" {
+            self.vGender.tfInput.text = "female"
+        }
+        else if self.vGender.tfInput.text == "Nam" {
+            self.vGender.tfInput.text = "male"
+        }
+        else if self.vGender.tfInput.text == "Khác" {
+            self.vGender.tfInput.text = "other"
+        }
+        
         if validateInputData() {
-            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: genderSelect, birthDay: vBirthDay.tfInput.text)
+            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: vGender.tfInput.text, birthDay: vBirthDay.tfInput.text)
             
             presenter?.signUp(param: param)
         }
@@ -209,6 +220,8 @@ extension SignUpViewController: SignUpViewProtocol {
     
     func signUpSuccess(user: UserEntity?) {
         PopUpHelper.shared.showMessage(message: LocalizableKey.signUpSuccess.showLanguage, width: 350, completion: {
+            guard let _user = user else { return }
+            UserDefaultHelper.shared.saveUser(user: _user)
             AppRouter.shared.openHomeView()
         })
     }
@@ -268,6 +281,7 @@ extension SignUpViewController: UITextFieldDelegate {
 extension SignUpViewController: AppTextFieldDropDownDelegate {
     func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
         self.genderSelect = item as! String
+        vGender.tfInput.text = genderSelect
     }
 }
 
