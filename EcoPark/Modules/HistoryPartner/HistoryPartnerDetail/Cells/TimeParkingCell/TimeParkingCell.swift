@@ -25,6 +25,7 @@ class TimeParkingCell: UITableViewCell {
     @IBOutlet weak var vMinute: TimeView!
     
     var checkinTime: TimeInterval = 0
+    var newCurrentDate: Double = 0
     
     var timer: Timer?
         
@@ -53,8 +54,9 @@ class TimeParkingCell: UITableViewCell {
     
     func setupTimeCount() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
-            
-            let ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: 0)
+            self.newCurrentDate = self.newCurrentDate + 1
+            let ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
+                       
             self.vHour.setUpTime(time: ddhhmm.1)
             self.vMinute.setUpTime(time: ddhhmm.2)
             self.vDay.setUpTime(time: ddhhmm.0)
@@ -67,12 +69,13 @@ class TimeParkingCell: UITableViewCell {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
         lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
-        lbCheckInTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
+        lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
         lbCheckOutTime.text = "-"
         
         
-        guard let checkinTime = _historyParkingDetail.intend_checkin_time?.timeIntervalSince1970 else { return }
-        
+        guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
+        guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
+        self.newCurrentDate = current_server_time
         self.checkinTime = checkinTime
         setupTimeCount()
     }
@@ -85,8 +88,9 @@ class TimeParkingCell: UITableViewCell {
         lbCheckOutTime.text = "-"
         
         
-        guard let checkinTime = _historyParkingDetail.intend_checkin_time?.timeIntervalSince1970 else { return }
-        
+        guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
+        guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
+        self.newCurrentDate = current_server_time
         self.checkinTime = checkinTime
         
     }
