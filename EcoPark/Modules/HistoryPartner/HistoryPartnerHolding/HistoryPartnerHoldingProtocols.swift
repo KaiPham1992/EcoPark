@@ -19,7 +19,7 @@ protocol HistoryPartnerHoldingPresenterProtocol: class {
 
     var interactor: HistoryPartnerHoldingInteractorInputProtocol? { get set }
     
-    func getHistoryReservation(parkingID: String, status: String, keyword: String)
+    func getHistoryReservation(parkingID: String, status: String, keyword: String, offset: Int, limit: Int)
     func checkoutParking(bookingID: String, code: String, licensePlates: String)
     func changeStatusCheckout(booking: String)
 }

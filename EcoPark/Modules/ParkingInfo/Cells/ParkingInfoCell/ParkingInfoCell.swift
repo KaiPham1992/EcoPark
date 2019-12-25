@@ -79,7 +79,7 @@ class ParkingInfoCell: UITableViewCell {
         } else {
             vParkingType.listItem = listItem.map({$0.name&})
         }
-        
+        parkingTypeID = parkingInfo?.type_id ?? ""
         cvUtility.utilyties = parkingInfo?.material ?? []
         
     }
