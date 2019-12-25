@@ -21,6 +21,8 @@ class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtoc
         }
     }
     
+    var isCanLoadMore: Bool = false
+    var isRefresh: Bool = false
     var refreshControl = UIRefreshControl()
 	var presenter: HistoryPartnerPresenterProtocol?
 
@@ -37,7 +39,7 @@ class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtoc
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        isRefresh = true
     }
     
     func getData() {
@@ -49,6 +51,7 @@ class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtoc
     }
     
     @objc func refresh() {
+        isRefresh = true
         var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
         if parkingID == "" || parkingID == nil {
             parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
@@ -59,7 +62,16 @@ class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtoc
     }
     
     func didGetHistoryParking(historyParking: HistoryMyParkingEntity?) {
-        self.historyParking = historyParking
+        isCanLoadMore = historyParking?.booking.count == limitLoad
+        if self.historyParking == nil || self.historyParking?.booking.count == 0 || isRefresh {
+                isRefresh = false
+                self.historyParking = historyParking
+        } else {
+            guard let booking = historyParking?.booking else { return }
+            self.historyParking?.booking.append(contentsOf: booking)
+            tbHistoryParking.reloadData()
+        }
+        
     }
 }
 
@@ -90,6 +102,18 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
          bookingParking.id = bookingID
         let vc = DetailParkingRouter.createModule(bookingParking: bookingParking)
         self.push(controller: vc)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let count = historyParking?.booking.count else { return }
+        if indexPath.item == count - 5 && isCanLoadMore {
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            print("load more")
+            presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: "", offset: count, limit: limitLoad)
+        }
     }
 }
 

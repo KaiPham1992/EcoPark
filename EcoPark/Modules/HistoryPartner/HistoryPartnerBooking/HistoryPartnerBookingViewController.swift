@@ -25,6 +25,8 @@ class HistoryPartnerBookingViewController: BaseViewController {
         }
     }
     
+    var isCanLoadMore: Bool = false
+    var isRefresh: Bool = false
     var refreshControl = UIRefreshControl()
     
 	override func viewDidLoad() {
@@ -37,6 +39,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
+        isRefresh = true
     }
     
     override func setUpViews() {
@@ -70,6 +73,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
     
     @objc func refresh() {
         getData()
+        isRefresh = true
         self.refreshControl.endRefreshing()
     }
 }
@@ -97,6 +101,18 @@ extension HistoryPartnerBookingViewController: UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.push(controller: HistoryPartnerDetailBookingRouter.createModule(parkingID: historyParkingBooking?.booking[indexPath.item].parking_id ?? "", bookingID: historyParkingBooking?.booking[indexPath.item].id ?? ""))
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let count = historyParkingBooking?.booking.count else { return }
+        if indexPath.item == count - 5 && isCanLoadMore {
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            print("load more")
+            presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: "", offset: count, limit: limitLoad)
+        }
+    }
 }
 
 extension HistoryPartnerBookingViewController: IndicatorInfoProvider {
@@ -107,7 +123,15 @@ extension HistoryPartnerBookingViewController: IndicatorInfoProvider {
 
 extension HistoryPartnerBookingViewController: HistoryPartnerBookingViewProtocol {
     func didGetHistoryParkingBooking(historyParking: HistoryMyParkingEntity?) {
-        self.historyParkingBooking = historyParking
+        isCanLoadMore = historyParking?.booking.count == limitLoad
+        if self.historyParkingBooking == nil || self.historyParkingBooking?.booking.count == 0 || isRefresh {
+                isRefresh = false
+                self.historyParkingBooking = historyParking
+        } else {
+            guard let booking = historyParking?.booking else { return }
+            self.historyParkingBooking?.booking.append(contentsOf: booking)
+            tbBooking.reloadData()
+        }
     }
     
 }

@@ -30,7 +30,7 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.getNotification(screen: "notification", offset: 0, limit: 10)
+        presenter?.getNotification(screen: "notification", offset: 0, limit: limitLoad)
     }
     
     override func registerTableView() {
