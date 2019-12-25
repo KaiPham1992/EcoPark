@@ -22,11 +22,13 @@ class HistoryPartnerPresenter: HistoryPartnerPresenterProtocol, HistoryPartnerIn
         self.router = router
     }
 
-    func getHistoryParking(parkingID: String, status: String, keyword: String) {
-        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, success: { (historyParking) in
+    func getHistoryParking(parkingID: String, status: String, keyword: String, offset: Int, limit: Int) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, offset: offset, limit: limit, success: { (historyParking) in
+            ProgressView.shared.hide()
             self.view?.didGetHistoryParking(historyParking: historyParking)
         }) { (error) in
-            
+            ProgressView.shared.hide()
         }
     }
 }

@@ -18,7 +18,7 @@ protocol ParkingAPIServiceProtocol {
     func uploadImageParking(parkingID: String, ParkingImage: [String], success: @escaping SuccessHandler<ImgEntity>.array, failure: @escaping RequestFailure)
     func getDoingBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
     func getHistoryBooking(success: @escaping SuccessHandler<HistoryBookingParkingResponse>.array, failure: @escaping RequestFailure)
-    func getHistoryMyParking(parkingID: String, status: String, keyword: String, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure)
+    func getHistoryMyParking(parkingID: String, status: String, keyword: String, offset: Int, limit: Int, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure)
     func getHistoryParkingDetail(parkingID: String, bookingID: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure)
     func checkoutParking(bookingID: String, code: String, license_plates: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure)
     func changeStatusParking(parkingID: String, isActive: String, success: @escaping SuccessHandler<BaseResponse>.object, failure: @escaping RequestFailure)
@@ -76,8 +76,8 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
         network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
     }
     
-    func getHistoryMyParking(parkingID: String, status: String, keyword: String, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure) {
-        let endPoint = ParkingEndPoint.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword)
+    func getHistoryMyParking(parkingID: String, status: String, keyword: String, offset: Int, limit: Int, success: @escaping SuccessHandler<HistoryMyParkingEntity>.object, failre: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, offset: offset, limit: limit)
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failre)
     }
     

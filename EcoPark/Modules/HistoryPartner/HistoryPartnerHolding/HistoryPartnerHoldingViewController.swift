@@ -17,7 +17,7 @@ protocol HistoryPartnerHoldingViewControllerDelegate: class {
 
 class HistoryPartnerHoldingViewController: BaseViewController {
 
-    @IBOutlet weak var vSearch: AppSearchBar!
+    @IBOutlet weak var vSearch: AppSearchTextField!
     @IBOutlet weak var tbPartnerHolding: UITableView!
     
 	var presenter: HistoryPartnerHoldingPresenterProtocol?
@@ -31,10 +31,13 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         }
     }
     var historyBookingParkingResponse: HistoryBookingParkingResponse?
+    var refreshControl = UIRefreshControl()
     
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tbPartnerHolding.addSubview(refreshControl)
     }
 
     override func setUpViews() {
@@ -46,7 +49,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text)
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text, offset: 0, limit: limitLoad)
         }
         
         vSearch.tapToTextField = {
@@ -55,7 +58,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text)
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text, offset: 0, limit: limitLoad)
         }
     }
     
@@ -70,7 +73,13 @@ class HistoryPartnerHoldingViewController: BaseViewController {
             parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
         }
         
-        presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "")
+        presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "", offset: 0, limit: limitLoad)
+    }
+    
+    @objc func refresh() {
+        getData()
+        
+        self.refreshControl.endRefreshing()
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {

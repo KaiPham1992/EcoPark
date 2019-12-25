@@ -13,7 +13,7 @@ import XLPagerTabStrip
 
 class HistoryPartnerBookingViewController: BaseViewController {
 
-    @IBOutlet weak var vSearch: AppSearchBar!
+    @IBOutlet weak var vSearch: AppSearchTextField!
     @IBOutlet weak var tbBooking: UITableView!
     
 	var presenter: HistoryPartnerBookingPresenterProtocol?
@@ -25,9 +25,13 @@ class HistoryPartnerBookingViewController: BaseViewController {
         }
     }
     
+    var refreshControl = UIRefreshControl()
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tbBooking.addSubview(refreshControl)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +47,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "checked_in", keyword: text)
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: text, offset: 0, limit: limitLoad)
         }
         vSearch.tapToTextField = {
             let text = self.vSearch.tfInput.text!
@@ -52,7 +56,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
             }
-            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: text)
+            self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: text, offset: 0, limit: limitLoad)
         }
     }
     
@@ -61,7 +65,12 @@ class HistoryPartnerBookingViewController: BaseViewController {
         if parkingID == "" || parkingID == nil {
             parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
         }
-        presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: "")
+        presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: "", offset: 0, limit: limitLoad)
+    }
+    
+    @objc func refresh() {
+        getData()
+        self.refreshControl.endRefreshing()
     }
 }
 
