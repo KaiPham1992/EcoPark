@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppSearchBar: BaseViewXib {
+class AppSearchTextField: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var vContain: UIView!
     @IBOutlet weak var btnSearch: UIButton!
@@ -41,7 +41,7 @@ class AppSearchBar: BaseViewXib {
     }
 }
 
-extension AppSearchBar: UITextFieldDelegate {
+extension AppSearchTextField: UITextFieldDelegate {
    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

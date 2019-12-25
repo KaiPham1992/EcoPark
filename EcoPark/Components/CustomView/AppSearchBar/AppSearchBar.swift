@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppSearchTextField: BaseViewXib {
+class AppSearchBar: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var vContain: UIView!
     @IBOutlet weak var btnSearch: UIButton!
@@ -29,10 +29,11 @@ class AppSearchTextField: BaseViewXib {
         super.setUpViews()
         tfInput.delegate = self
         
-        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingChanged)
+        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingDidBegin)
     }
     
     @objc func textFieldTapped() {
+        tfInput.endEditing(true)
         tapToTextField?()
     }
     
@@ -41,7 +42,7 @@ class AppSearchTextField: BaseViewXib {
     }
 }
 
-extension AppSearchTextField: UITextFieldDelegate {
+extension AppSearchBar: UITextFieldDelegate {
    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
