@@ -42,7 +42,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     var isFirst: Bool = true
     
-    var isMustCheckOut = false
+    // use check checkin and idCheckIn
+    var idBookingCheckIn = ""
+    var isHaveReserver: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,18 +61,30 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     
     func checkIconCheckInCheckOut() {
+        self.idBookingCheckIn = ""
+        self.isHaveReserver = false
+        
         Provider.shared.parkingAPIService.getDoingBooking(success: { array in
-            self.isMustCheckOut = false
             for booking in array {
                 if booking.status == "checked_in" {
-                    self.isMustCheckOut = true
+                    self.idBookingCheckIn = booking.id&
+                }
+                
+                if booking.status& == StatusBooking.reservation.rawValue {
+                    self.isHaveReserver = true
                 }
             }
             
-            if self.isMustCheckOut {
+            if self.idBookingCheckIn != "" {
                 self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
             } else {
-                self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
+                // have reserver
+                if self.isHaveReserver {
+                    self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
+                } else {
+                    self.navigationController?.navigationItem.rightBarButtonItem = nil
+                }
+                
             }
         }) { error in
             
@@ -111,7 +125,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.setUpNavigation()
         
         addMenu()
-        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
+//        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
         setTitleBoldLeftNavigation(title: "ECOPARKING", action: nil)
         
         vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
@@ -123,7 +137,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     @objc func btnCheckOut() {
-       
+        let vc = CheckOutRouter.createModule(bookingId: self.idBookingCheckIn)
+        self.push(controller: vc)
     }
     
     @objc func btnCheckIn() {
