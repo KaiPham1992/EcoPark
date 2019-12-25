@@ -58,7 +58,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         btnFilter.setTitle(LocalizableKey.FilterHome.showLanguage, for: UIControl.State.normal)
     }
     
-    
+
     
     func checkIconCheckInCheckOut() {
         self.idBookingCheckIn = ""
@@ -182,6 +182,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         }
         
         checkIconCheckInCheckOut()
+        presenter?.getProfileUser()
     }
     
     override func setUpViews() {
@@ -239,6 +240,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         }
     }
     
+    func didGetProfileUser(user: UserEntity) {
+        UserDefaultHelper.shared.saveUser(user: user)
+    }
 }
 extension HomeViewController: HomeFindViewControllerDelegate {
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
