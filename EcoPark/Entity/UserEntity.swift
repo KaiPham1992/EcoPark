@@ -55,7 +55,15 @@ class UserEntity: BaseEntity  {
     var parkingID: String?
     var infoParking: ParkingInfoEntity?
     var isBoss: String?
-    var wait_app: String?
+    var wait_app: String? = "0"
+    
+    var userIsBoss: Bool {
+        return isBoss == "1" && wait_app == "0"
+    }
+    
+    var userIsWait: Bool {
+           return isBoss == "1" && wait_app == "1"
+    }
     
     override func mapping(map: Map) {
         self.isLeader <- map["is_leader"]
