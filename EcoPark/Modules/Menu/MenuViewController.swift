@@ -94,7 +94,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             btnResgister.setTitle(LocalizableKey.registerOwner.showLanguage, for: .normal)
             
             // login owner
-            if  UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" && UserDefaultHelper.shared.loginUserInfo?.wait_app == "0" {
+            if  UserDefaultHelper.shared.loginUserInfo?.userIsBoss == true {
                 lbOwner.isHidden = false
                 vRegisterOwner.isHidden = true
                 heightRegisterOwner.constant = 0
