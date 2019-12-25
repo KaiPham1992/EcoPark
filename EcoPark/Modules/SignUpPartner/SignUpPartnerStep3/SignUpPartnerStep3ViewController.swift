@@ -180,6 +180,8 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     
     func didGetListMaterial(listMaterial: [MaterialEntity]) {
         vUtility.utilyties = listMaterial
+        let listMaterialActive = vUtility.utilyties.filter({$0.is_active == "1"})
+        self.listMaterial = listMaterialActive.map({$0.id&})
     }
     func didGetProfileUser(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)

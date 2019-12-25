@@ -58,7 +58,8 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
     }
     
     func getMaterial(success: @escaping SuccessHandler<MaterialEntity>.array, failure: @escaping RequestFailure) {
-        
+        let endPoint = ParkingEndPoint.getMaterial
+        network.requestData(endPoint: endPoint, success: MapperData.mapArray(success), failure: failure)
     }
     
     func bossRegister(param: BossRegisterParam, success: @escaping SuccessHandler<ParkingInfoEntity>.object, failure: @escaping RequestFailure) {
