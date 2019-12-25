@@ -33,7 +33,7 @@ open class BaseTableViewController: UIViewController {
         let btn = UILabel()
         btn.textAlignment = .center
         btn.font = AppFont.fontRegular15
-        
+        btn.textColor = AppColor.white
         return btn
     }()
     

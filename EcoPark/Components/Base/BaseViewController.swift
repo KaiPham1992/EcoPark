@@ -173,6 +173,7 @@ open class BaseViewController: UIViewController {
         lbNodata.removeFromSuperview()
         self.view.addSubview(lbNodata)
         lbNodata.text = text
+        lbNodata.textColor = .white
         lbNodata.centerSuperview()
     }
     
