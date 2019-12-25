@@ -22,7 +22,7 @@ protocol WalletPresenterProtocol: class {
     func didGetWallet(wallet: WalletEntity)
     var canLoadMore: Bool { get }
     var listWalletHistory: [HistoryWallet] { get set }
-    func getWalletHistory(showLoading: Bool)
+    func getWalletHistory(startDate: String, toDate: String, showLoading: Bool)
     func didGetWalletHistory(listLog: [HistoryWallet])
 }
 
@@ -41,7 +41,7 @@ protocol WalletInteractorInputProtocol: class {
 
     /* Presenter -> Interactor */
     func getWallet()
-    func getWalletHistory(offset: Int, showLoading: Bool)
+    func getWalletHistory(startDate: String, toDate: String, offset: Int, showLoading: Bool)
 }
 
 //MARK: View -

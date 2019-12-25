@@ -54,6 +54,9 @@ class WalletViewController: BaseViewController {
         
         lbBalance.text = LocalizableKey.titleBalance.showLanguage
         btnRecharge.setTitle(LocalizableKey.titleRecharge.showLanguage.uppercased(), for: .normal)
+        
+        fromToDatePicker.btnFrom.addTarget(self, action: #selector(btnFromTapped), for: .touchUpInside)
+        fromToDatePicker.btnTo.addTarget(self, action: #selector(btnToTapped), for: .touchUpInside)
     }
     
     func setWalletMoney(money: Int) {
@@ -65,6 +68,55 @@ class WalletViewController: BaseViewController {
         attr.append(attr1)
         attr.append(attr2)
         lbWalletMoney.attributedText = attr
+    }
+    
+    @objc func btnFromTapped() {
+        let popUp = ChooseDatePopUp()
+        UIApplication.topViewController()?.view.endEditing(true)
+
+        popUp.showPopUp(currentDate: fromToDatePicker.from, completionDate: { date in
+            guard let date = date as? Date else {
+                self.fromToDatePicker.from = nil
+                self.fromToDatePicker.fieldFrom.text = ""
+                self.fromToDatePicker.fieldFrom.placeholder = "dd/mm/yyyy"
+                self.fromToDatePicker.fieldFrom.placeHolderColor = AppColor.color_0_129_255
+                return
+            }
+            
+            self.fromToDatePicker.from = date
+            self.fromToDatePicker.fieldFrom.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.presenter?.listWalletHistory.removeAll()
+            if self.fromToDatePicker.fieldTo.text == "" {
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: Date().toString(dateFormat: AppDateFormat.ddMMYYYYTransaction), showLoading: true)
+            } else {
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: self.fromToDatePicker.fieldTo.text!, showLoading: true)
+            }
+            
+        })
+    }
+    
+    @objc func btnToTapped() {
+        UIApplication.topViewController()?.view.endEditing(true)
+        let popUp = ChooseDatePopUp()
+        
+        popUp.showPopUp(currentDate: fromToDatePicker.to, completionDate: { date in
+            guard let date = date as? Date else {
+                self.fromToDatePicker.to = nil
+                self.fromToDatePicker.fieldTo.text = ""
+                self.fromToDatePicker.fieldTo.placeholder = "dd/mm/yyyy"
+                self.fromToDatePicker.fieldTo.placeHolderColor = AppColor.color_0_129_255
+                return
+            }
+            self.fromToDatePicker.to = date
+            self.fromToDatePicker.fieldTo.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.presenter?.listWalletHistory.removeAll()
+            if self.fromToDatePicker.fieldFrom.text == "" {
+                self.presenter?.getWalletHistory(startDate: "" , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: true)
+            } else {
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text! , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: true)
+            }
+            
+        })
     }
     
     @IBAction func btnRechargeTapped() {
@@ -102,7 +154,7 @@ extension WalletViewController: WalletViewProtocol {
     
     // MARK: Get wallet history
     func getWalletHistory(showLoading: Bool = true) {
-        presenter?.getWalletHistory(showLoading: showLoading)
+        presenter?.getWalletHistory(startDate: "", toDate: "", showLoading: showLoading)
     }
     
     func didGetWalletHistory(listLog: [HistoryWallet]) {

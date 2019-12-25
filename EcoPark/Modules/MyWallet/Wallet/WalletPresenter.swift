@@ -26,8 +26,8 @@ class WalletPresenter: WalletPresenterProtocol, WalletInteractorOutputProtocol {
     }
     
     // MARK: Get wallet history
-    func getWalletHistory(showLoading: Bool) {
-        self.interactor?.getWalletHistory(offset: listWalletHistory.count, showLoading: showLoading)
+    func getWalletHistory(startDate: String, toDate: String, showLoading: Bool) {
+        self.interactor?.getWalletHistory(startDate: startDate, toDate: toDate, offset: listWalletHistory.count, showLoading: showLoading)
     }
     
     func didGetWalletHistory(listLog: [HistoryWallet]) {
@@ -36,6 +36,7 @@ class WalletPresenter: WalletPresenterProtocol, WalletInteractorOutputProtocol {
         } else {
             canLoadMore = false
         }
+        
         listWalletHistory.append(contentsOf: listLog)
         self.view?.didGetWalletHistory(listLog: listWalletHistory)
     }
