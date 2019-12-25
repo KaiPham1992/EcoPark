@@ -53,7 +53,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setUpMap(lat: 10.7981483, long: 106.6715733)
         vParkingSort.isHidden = true
         
-        getParking()
+//        getParking()
         
         btnFilter.setTitle(LocalizableKey.FilterHome.showLanguage, for: UIControl.State.normal)
     }
