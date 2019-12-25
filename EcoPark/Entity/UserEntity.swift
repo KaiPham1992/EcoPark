@@ -55,9 +55,7 @@ class UserEntity: BaseEntity  {
     var parkingID: String?
     var infoParking: ParkingInfoEntity?
     var isBoss: String?
-    var wait_app: String? {
-        return self.infoParking?.wait_app
-    }
+    var wait_app: String?
     
     override func mapping(map: Map) {
         self.isLeader <- map["is_leader"]
@@ -73,6 +71,7 @@ class UserEntity: BaseEntity  {
         self.national       <- map["nation"]
         self.imgSrc          <- map["img_src"]
         self.imgCropSrc      <- map["crop_img_src"]
+        self.wait_app <- map["wait_app"]
         
         if self.imgCropSrc == nil{
             self.imgCropSrc      <- map["img_src"]

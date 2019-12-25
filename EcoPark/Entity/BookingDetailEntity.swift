@@ -99,7 +99,11 @@ class BookingDetailEntity: BaseEntity {
         
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
-        self.current_server_time <- map["current_server_time"]
+         self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
+               
+               if self.current_server_time == nil {
+                    self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
+               }
         
         self.payment_wallet <- (map["payment_wallet"], StringToDoubleTransform())
         self.plus_wallet_boss <- (map["plus_wallet_boss"], StringToDoubleTransform())

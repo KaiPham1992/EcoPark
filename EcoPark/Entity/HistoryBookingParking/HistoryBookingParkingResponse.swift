@@ -76,7 +76,11 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.intend_checkout_time <- (map["intend_checkout_time"], AppTimestampTransform())
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
-        self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
+         self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
+               
+               if self.current_server_time == nil {
+                    self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
+               }
         self.vehicle_name <- map["vehicle_name"]
         self.payment <- map["payment"]
         self.real_money <- map["real_money"]

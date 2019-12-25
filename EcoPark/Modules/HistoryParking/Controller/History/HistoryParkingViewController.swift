@@ -23,9 +23,14 @@ class HistoryParkingViewController: ListManagerVC {
     
     override func setUpViews() {
         super.setUpViews()
-        loadData()
+//        loadData()
         self.view.backgroundColor = .clear
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
     }
     
     func loadData() {

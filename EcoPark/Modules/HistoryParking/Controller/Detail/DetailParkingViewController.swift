@@ -59,6 +59,7 @@ class DetailParkingViewController: BaseViewController {
     var bookingParking: HistoryBookingParkingResponse?
     var bookingDetailEntity: BookingDetailEntity?
     
+    var newCurrentDate: Double = 0
     weak var delegate: DetailParkingViewControllerDelegate?
     
     var timer: Timer?
@@ -106,6 +107,11 @@ class DetailParkingViewController: BaseViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getBookingDetail()
+    }
+    
     @IBAction func callOnwer() {
         guard let phone = self.bookingDetailEntity?.parking_details?.phone else { return }
         Utils.callPhone(phoneNumber: phone)
@@ -130,11 +136,23 @@ class DetailParkingViewController: BaseViewController {
     func countTime() {
         let status = bookingDetailEntity?.status&
         switch status& {
-        case StatusBooking.checked_in.rawValue, StatusBooking.checked_out.rawValue:
-            print(bookingDetailEntity?.current_server_time)
-            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let currentDate = bookingDetailEntity?.current_server_time?.timeIntervalSince1970 else { return }
+        case StatusBooking.checked_in.rawValue:
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
+            newCurrentDate = newCurrentDate + 1
+            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: newCurrentDate)
             
-            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: currentDate)
+            VTHour.setUpTime(time: ddhhmm.1)
+            VTMinute.setUpTime(time: ddhhmm.2)
+            VTDate.setUpTime(time: ddhhmm.0)
+            
+            let numberParking = ddhhmm.0 * 24 + ddhhmm.1
+            if status& != StatusBooking.checked_in.rawValue {
+                DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
+            }
+            
+        case StatusBooking.checked_out.rawValue:
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970,let checkOutTime = bookingDetailEntity?.time_check_out?.timeIntervalSince1970 else { return }
+            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
             
             VTHour.setUpTime(time: ddhhmm.1)
             VTMinute.setUpTime(time: ddhhmm.2)
@@ -161,6 +179,10 @@ class DetailParkingViewController: BaseViewController {
     func displayData(info: BookingDetailEntity) {
         bookingDetailEntity = info
         showGeneralInfo(info: info)
+        if let timeCurrent = info.current_server_time?.timeIntervalSince1970 {
+            newCurrentDate = timeCurrent
+        }
+        
         
         let status = info.status&
         switch status {
@@ -345,7 +367,8 @@ class DetailParkingViewController: BaseViewController {
             self.push(controller: vc)
             
         case StatusBooking.checked_in.rawValue:
-            let vc = CheckOutRouter.createModule(bookingId: bookingParking?.id)
+            
+            let vc = CheckOutRouter.createModule(bookingId: bookingDetailEntity?.id)
             self.push(controller: vc)
         case StatusBooking.checked_out.rawValue:
             PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {

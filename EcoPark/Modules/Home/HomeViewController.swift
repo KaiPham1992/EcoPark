@@ -63,8 +63,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     func checkIconCheckInCheckOut() {
         self.idBookingCheckIn = ""
         self.isHaveReserver = false
+        
         Provider.shared.parkingAPIService.getDoingBooking(success: { array in
-          
             for booking in array {
                 if booking.status == "checked_in" {
                     self.idBookingCheckIn = booking.id&

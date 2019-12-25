@@ -17,7 +17,6 @@ protocol MenuViewControllerDelegate: class {
     func signUpPartnerTapped()
 }
 
-
 class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var tbMenu: UITableView!
     var presenter: MenuPresenterProtocol?
@@ -95,21 +94,16 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             btnResgister.setTitle(LocalizableKey.registerOwner.showLanguage, for: .normal)
             
             // login owner
-            
-            if  UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" {
+            if  UserDefaultHelper.shared.loginUserInfo?.isBoss == "1" && UserDefaultHelper.shared.loginUserInfo?.wait_app == "0" {
                 lbOwner.isHidden = false
                 vRegisterOwner.isHidden = true
                 heightRegisterOwner.constant = 0
+                
             } else {
                 // LoggedIn user
                 lbOwner.isHidden = true
                 vRegisterOwner.isHidden = false
                 heightRegisterOwner.constant = 100
-                
-                // wait apply boss
-                if UserDefaultHelper.shared.loginUserInfo?.wait_app == "1" {
-                    btnResgister.setTitle("WaitApp".showLanguage, for: .normal)
-                }
             }
         }
     }
@@ -184,7 +178,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     @objc func btnLanguageTapped() {
 //        LanguageHelper.changeLanguage()
-//        
+//
 //        AppRouter.shared.openHomeView()
     }
 }
