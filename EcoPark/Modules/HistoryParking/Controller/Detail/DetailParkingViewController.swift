@@ -106,7 +106,15 @@ class DetailParkingViewController: BaseViewController {
         })
     }
     
+    @IBAction func callOnwer() {
+        guard let phone = self.bookingDetailEntity?.parking_details?.phone else { return }
+        Utils.callPhone(phoneNumber: phone)
+    }
     
+    @IBAction func goToMap() {
+        guard let lat = self.bookingDetailEntity?.parking_details?.lat, let long = self.bookingDetailEntity?.parking_details?.long else { return }
+        Utils.goToMap(latitude: lat.description, longitude: long.description)
+    }
     
     
     deinit {
@@ -123,6 +131,7 @@ class DetailParkingViewController: BaseViewController {
         let status = bookingDetailEntity?.status&
         switch status& {
         case StatusBooking.checked_in.rawValue, StatusBooking.checked_out.rawValue:
+            print(bookingDetailEntity?.current_server_time)
             guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let currentDate = bookingDetailEntity?.current_server_time?.timeIntervalSince1970 else { return }
             
             let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: currentDate)
@@ -152,6 +161,7 @@ class DetailParkingViewController: BaseViewController {
     func displayData(info: BookingDetailEntity) {
         bookingDetailEntity = info
         showGeneralInfo(info: info)
+        
         let status = info.status&
         switch status {
         case StatusBooking.reservation.rawValue:
@@ -262,7 +272,7 @@ class DetailParkingViewController: BaseViewController {
             DLVBook.setValueText(text: createTime.toString(dateFormat: .ecoTime))
         }
         
-        if let expectTime = info.update_time {
+        if let expectTime = info.intend_checkin_time {
             DLVExpected.setValueText(text: expectTime.toString(dateFormat: .ecoTime))
         }
         
@@ -335,7 +345,7 @@ class DetailParkingViewController: BaseViewController {
             self.push(controller: vc)
             
         case StatusBooking.checked_in.rawValue:
-            let vc = CheckOutRouter.createModule(url: self.bookingParking?.urlQRCode)
+            let vc = CheckOutRouter.createModule(bookingId: bookingParking?.id)
             self.push(controller: vc)
         case StatusBooking.checked_out.rawValue:
             PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {

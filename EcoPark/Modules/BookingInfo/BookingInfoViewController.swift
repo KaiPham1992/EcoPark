@@ -246,15 +246,17 @@ extension BookingInfoViewController {
     }
     
     func openGoogleMapForPlace(lat: Double, long: Double) {
-        let lat = lat
-        let long = long
+//        let lat = lat
+//        let long = long
+        
+        Utils.goToMap(latitude: lat.description, longitude: long.description)
 
-        let customURL = "comgooglemaps://"
-        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
-        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
-            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
-        } else {
-            openAppleMapForPlace(lat: lat, long: long)
-        }
+//        let customURL = "comgooglemaps://"
+//        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
+//        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
+//            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
+//        } else {
+//            openAppleMapForPlace(lat: lat, long: long)
+//        }
     }
 }

@@ -15,14 +15,15 @@ class CheckOutViewController: BaseViewController, CheckOutViewProtocol {
 	var presenter: CheckOutPresenterProtocol?
     @IBOutlet weak var imgQRCode: UIImageView!
     
-    var url: URL?
+    var bookingId: String?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black
         
-        imgQRCode.sd_setImage(with: url, placeholderImage: AppImage.imgPlaceHolder)
+//
+        getBookingDetail(id: bookingId&)
     }
     
     override func setUpNavigation() {
@@ -31,6 +32,17 @@ class CheckOutViewController: BaseViewController, CheckOutViewProtocol {
         addBackToNavigation()
         setTitleNavigation(title: "Check out")
         
+    }
+    
+    func getBookingDetail(id: String) {
+        ProgressView.shared.show()
+        Provider.shared.bookingAPIService.getBookingDetail(bookingId: id, success: { (bookingDetail) in
+            ProgressView.shared.hide()
+            guard let bookingDetail = bookingDetail else { return }
+            self.imgQRCode.sd_setImage(with: bookingDetail.qrUrl, placeholderImage: AppImage.imgPlaceHolder)
+        }) { (error) in
+            ProgressView.shared.hide()
+        }
     }
 
 }

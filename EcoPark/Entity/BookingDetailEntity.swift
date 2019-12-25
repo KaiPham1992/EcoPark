@@ -37,8 +37,11 @@ class BookingDetailEntity: BaseEntity {
     var customer_payment_wallet: Double?
     var rating: Int?
     var address: String?
+    var qr_code: String?
     
-    var test: Double?
+    var qrUrl: URL? {
+        return URL(string: "\(BASE_URL_IMAGE)\(qr_code&)")
+    }
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -55,19 +58,21 @@ class BookingDetailEntity: BaseEntity {
         self.code <- map["code"]
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
+        self.qr_code <- map["qr_code"]
        
-        self.time_check_out <- (map["time_check_out"], AppTimestampTransform())
+        self.time_check_out <- (map["time_check_out_mi"], AppTimestampTransform())
         
         if self.time_check_out == nil {
-             self.time_check_out <- (map["time_check_out"], yyyyMMddHHmmssTransform())
+             self.time_check_out <- (map["time_check_out_mi"], yyyyMMddHHmmssTransform())
         }
         
-        self.time_check_in <- (map["time_check_in"], AppTimestampTransform())
+        self.time_check_in <- (map["time_check_in_mi"], AppTimestampTransform())
         if self.time_check_in == nil {
-             self.time_check_in <- (map["time_check_in"], yyyyMMddHHmmssTransform())
+             self.time_check_in <- (map["time_check_in_mi"], yyyyMMddHHmmssTransform())
         }
         
         self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
+        
         if self.current_server_time == nil {
              self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
         }

@@ -183,9 +183,9 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func btnLanguageTapped() {
-        LanguageHelper.changeLanguage()
-        
-        AppRouter.shared.openHomeView()
+//        LanguageHelper.changeLanguage()
+//        
+//        AppRouter.shared.openHomeView()
     }
 }
 

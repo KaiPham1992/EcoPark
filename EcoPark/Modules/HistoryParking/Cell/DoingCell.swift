@@ -40,12 +40,12 @@ class DoingCell: UITableViewCell {
         case StatusBooking.checked_out.rawValue:
             lblStatus.text = LocalizableKey.checked_out.showLanguage
             lblStatus.textColor = AppColor.color_0_129_255
-            DLVCheckin.lblTime.text = data.intend_checkin_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
-            DLVCheckout.lblTime.text = data.intend_checkout_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            DLVCheckin.lblTime.text = data.time_check_in?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            DLVCheckout.lblTime.text = data.time_check_out?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
         case StatusBooking.checked_in.rawValue:
             lblStatus.text = LocalizableKey.checked_in.showLanguage
             lblStatus.textColor = AppColor.color_13_196_68
-            DLVCheckin.lblTime.text = data.intend_checkin_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            DLVCheckin.lblTime.text = data.time_check_in?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
             DLVCheckout.lblTime.text = "-"
         case StatusBooking.reservation.rawValue:
             lblStatus.text = LocalizableKey.reservation.showLanguage

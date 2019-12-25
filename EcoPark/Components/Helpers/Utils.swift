@@ -92,4 +92,23 @@ extension Utils {
     class func getTimeZone() -> String {
         return TimeZone.current.identifier
     }
+    
+    static func goToMap(latitude: String, longitude: String ) {
+        if let url = URL(string: "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving") {
+            if UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!) {
+                UIApplication.shared.open(url)
+            } else {
+                let urlStr = "http://maps.apple.com/maps?daddr=\(latitude),\(longitude)"
+                guard let urlApple = URL(string: urlStr) else { return }
+                UIApplication.shared.open(urlApple)
+            }
+        }
+       
+    }
+    
+    static func callPhone(phoneNumber: String) {
+        if let url = URL(string: "tel://\(phoneNumber)") {
+            UIApplication.shared.open(url)
+        }
+    }
 }

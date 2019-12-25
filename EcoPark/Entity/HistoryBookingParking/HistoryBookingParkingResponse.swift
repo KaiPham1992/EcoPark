@@ -38,7 +38,7 @@ class HistoryBookingParkingResponse : BaseEntity {
     var plus_wallet_boss: Double?
     var receivables: Double?
     var parking_details: ParkingInfoEntity?
-    var current_server_time: Int?
+    var current_server_time: Date?
     var vehicle_name: String?
     var payment: Double?
     var real_money: Double?
@@ -46,6 +46,10 @@ class HistoryBookingParkingResponse : BaseEntity {
     var customer_payment_wallet: Double?
     var qrCode: String?
     var bookingID: String?
+    
+    var time_check_out: Date?
+    var time_check_in: Date?
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         
@@ -63,12 +67,16 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.parking_id <- map["parking_id"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], yyyyMMddHHmmssTransform())
-        self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
-        self.create_time_mi <- (map["create_time_mi"], yyyyMMddHHmmssTransform())
+        self.update_time <- (map["update_time"], AppTimestampTransform())
+        self.create_time_mi <- (map["create_time_mi"], AppTimestampTransform())
+        
+        self.time_check_in <- (map["time_check_in_mi"], AppTimestampTransform())
+        self.time_check_out <- (map["time_check_out_mi"], AppTimestampTransform())
+        
         self.intend_checkout_time <- (map["intend_checkout_time"], AppTimestampTransform())
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
-        self.current_server_time <- map["current_server_time"]
+        self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
         self.vehicle_name <- map["vehicle_name"]
         self.payment <- map["payment"]
         self.real_money <- map["real_money"]
