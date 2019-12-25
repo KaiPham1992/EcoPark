@@ -21,7 +21,7 @@ enum UserDefaultHelperKey: String {
     case deviceToken = "DeviceToken"
     case fcmToken = "FcmToken"
     case userToken = "UserToken"
-    case appLanguage = "AppLanguage"
+    case appLanguage = "appLanguage"
     
     
     case userName  = "UserName"
