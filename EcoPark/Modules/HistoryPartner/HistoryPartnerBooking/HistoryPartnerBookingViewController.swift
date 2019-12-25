@@ -38,8 +38,11 @@ class HistoryPartnerBookingViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getData()
         isRefresh = true
+        historyParkingBooking = nil
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.getData()
+        }
     }
     
     override func setUpViews() {

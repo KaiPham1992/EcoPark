@@ -58,10 +58,13 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     func callAPICheckout(bookingID: String, code: String, license_plates: String) {
+        ProgressView.shared.showProgressOnWindow()
         Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
             Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (_) in
+                ProgressView.shared.hide()
                 self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParking))
             }) { (_) in
+                ProgressView.shared.hide()
             }
             
         }) { (_) in

@@ -23,7 +23,7 @@ class HistoryPartnerHoldingPresenter: HistoryPartnerHoldingPresenterProtocol, Hi
     }
 
     func getHistoryReservation(parkingID: String, status: String, keyword: String, offset: Int, limit: Int) {
-        ProgressView.shared.showProgressOnWindow()
+//        ProgressView.shared.showProgressOnWindow()
         Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, offset: offset, limit: limit, success: { (historyParking) in
             ProgressView.shared.hide()
             self.view?.didGetHistoryReservation(historyParking: historyParking)
