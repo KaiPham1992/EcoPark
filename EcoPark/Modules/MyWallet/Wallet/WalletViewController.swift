@@ -87,9 +87,9 @@ class WalletViewController: BaseViewController {
             self.fromToDatePicker.fieldFrom.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
             self.presenter?.listWalletHistory.removeAll()
             if self.fromToDatePicker.fieldTo.text == "" {
-                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: Date().toString(dateFormat: AppDateFormat.ddMMYYYYTransaction), showLoading: true)
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: Date().toString(dateFormat: AppDateFormat.ddMMYYYYTransaction), showLoading: false)
             } else {
-                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: self.fromToDatePicker.fieldTo.text!, showLoading: true)
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: self.fromToDatePicker.fieldTo.text!, showLoading: false)
             }
             
         })
@@ -111,9 +111,9 @@ class WalletViewController: BaseViewController {
             self.fromToDatePicker.fieldTo.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
             self.presenter?.listWalletHistory.removeAll()
             if self.fromToDatePicker.fieldFrom.text == "" {
-                self.presenter?.getWalletHistory(startDate: "" , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: true)
+                self.presenter?.getWalletHistory(startDate: "" , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: false)
             } else {
-                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text! , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: true)
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text! , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: false)
             }
             
         })
@@ -138,6 +138,10 @@ class WalletViewController: BaseViewController {
         getWallet()
         presenter?.listWalletHistory.removeAll()
         getWalletHistory(showLoading: false)
+        self.fromToDatePicker.fieldFrom.text = ""
+        self.fromToDatePicker.fieldFrom.placeholder = "dd/mm/yyyy"
+        self.fromToDatePicker.fieldTo.text = ""
+        self.fromToDatePicker.fieldTo.placeholder = "dd/mm/yyyy"
         refreshControl.endRefreshing()
     }
     
@@ -154,7 +158,7 @@ extension WalletViewController: WalletViewProtocol {
     }
     
     // MARK: Get wallet history
-    func getWalletHistory(showLoading: Bool = true) {
+    func getWalletHistory(showLoading: Bool = false) {
         presenter?.getWalletHistory(startDate: "", toDate: "", showLoading: showLoading)
     }
     
