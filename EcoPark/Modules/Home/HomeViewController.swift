@@ -53,12 +53,12 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setUpMap(lat: 10.7981483, long: 106.6715733)
         vParkingSort.isHidden = true
         
-//        getParking()
+        //        getParking()
         
         btnFilter.setTitle(LocalizableKey.FilterHome.showLanguage, for: UIControl.State.normal)
     }
     
-
+    
     
     func checkIconCheckInCheckOut() {
         self.idBookingCheckIn = ""
@@ -125,7 +125,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.setUpNavigation()
         
         addMenu()
-//        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
+        //        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
         setTitleBoldLeftNavigation(title: "ECOPARKING", action: nil)
         
         vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
@@ -158,9 +158,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
                     }) {
                         //---
                     }
-                   
-//                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
-//                    self.push(controller: vc)
+                    
+                    //                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
+                    //                    self.push(controller: vc)
                     
                 }) { error in
                     ProgressView.shared.hide()
@@ -178,7 +178,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         if address == "" {
             btnFilter.isEnabled = false
         } else {
-             btnFilter.isEnabled = true
+            btnFilter.isEnabled = true
         }
         
         checkIconCheckInCheckOut()
@@ -233,8 +233,16 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     @objc func btnBookingTapped() {
         if isLogin() {
-            let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
-            self.push(controller: bookingInfo)
+            let price = parkingSelected?.price ?? 1000
+            if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, wallet >= price {
+                let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
+                self.push(controller: bookingInfo)
+            } else {
+                PopUpHelper.shared.showMessage(message: LocalizableKey.dontHaveMoney.showLanguage, width: self.popUpwidth) {
+                    
+                }
+            }
+            
         } else {
             showLoginScreen()
         }

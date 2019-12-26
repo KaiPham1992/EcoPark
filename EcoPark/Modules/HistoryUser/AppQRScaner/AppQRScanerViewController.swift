@@ -156,7 +156,11 @@ class AppQRScanerViewController: BaseViewController {
                             PopUpHelper.shared.showMessage(message: "HAS_BOOKING_CHECKED_IN".showLanguage, width: self.popUpwidth, completion: {
                                  self.reader.startScanning()
                             })
-                        } else {
+                        } else if error.message& == "CHECKIN_EARLY" {
+                            PopUpHelper.shared.showMessage(message: "CHECKIN_EARLY".showLanguage, width: self.popUpwidth, completion: {
+                                 self.reader.startScanning()
+                            })
+                        }else {
                             PopUpHelper.shared.showNoReservation(width: 350, completionYes: {
                                 self.reader.startScanning()
                                 

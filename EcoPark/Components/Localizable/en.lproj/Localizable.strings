@@ -675,3 +675,4 @@
 "TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";
 "WaitApp" = "Resgiter onwer";
 "HAS_BOOKING_CHECKED_IN" = "You are checkin at other parking";
+"CHECKIN_EARLY" = "Can not check in early";

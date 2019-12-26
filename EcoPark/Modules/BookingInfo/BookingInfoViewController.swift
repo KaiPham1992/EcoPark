@@ -42,7 +42,8 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
 	var presenter: BookingInfoPresenterProtocol?
     var parking: ParkingEntity?
     
-    var indexVehical: Int = 0
+    var selectVehical: VehicleTypeEntity?
+    var indexSelected: Int = 0
     var listVehicle: [VehicleTypeEntity] = [VehicleTypeEntity]()
 
 	override func viewDidLoad() {
@@ -135,11 +136,13 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     @IBAction func btnTypeVehicalTapped() {
         let pop = SelectCarPopUp()
-        pop.showPopUp(indexSelect: indexVehical, width: popUpwidth) { index in
+        pop.showPopUp(indexSelect: indexSelected, listVehical: listVehicle, width: popUpwidth, completion: { vehical in
+            guard let vehical = vehical as? VehicleTypeEntity else { return }
+            self.selectVehical = vehical
+            self.dropDownType.tfInput.text = vehical.name&
+        }) { index in
             guard let index = index as? Int else { return }
-            self.indexVehical = index
-            
-            self.dropDownType.tfInput.text = self.listVehicle[index].name&
+            self.indexSelected = index
         }
     }
     // MARK: Get error
@@ -175,7 +178,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             
             //---
             guard let parkId = parking?.parking_id,
-            let vehicleId = (dropDownType.listItem[indexVehical] as? VehicleTypeEntity)?.id,
+                let vehicleId = selectVehical?.id,
             let moneyPaid = parking?.price else { return }
             let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
             let time = datePicker.date& + " " + hhmm&
