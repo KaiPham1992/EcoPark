@@ -25,6 +25,7 @@ class TimeParkingCell: UITableViewCell {
     @IBOutlet weak var vMinute: TimeView!
     
     var checkinTime: TimeInterval = 0
+    var checkoutTime: TimeInterval = 0
     var newCurrentDate: Double = 0
     
     var timer: Timer?
@@ -78,6 +79,20 @@ class TimeParkingCell: UITableViewCell {
         self.newCurrentDate = current_server_time
         self.checkinTime = checkinTime
         setupTimeCount()
+    }
+    
+    func setDataCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+        lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
+        lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
+        
+        
+        guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
+        guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
+        self.newCurrentDate = current_server_time
+        self.checkinTime = checkinTime
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {

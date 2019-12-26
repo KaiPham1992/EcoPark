@@ -14,6 +14,8 @@ class FromToDatePicker: BaseViewXib {
     @IBOutlet weak var lbTo: UILabel!
     @IBOutlet weak var fieldFrom: UITextField!
     @IBOutlet weak var fieldTo: UITextField!
+    @IBOutlet weak var btnFrom: UIButton!
+    @IBOutlet weak var btnTo: UIButton!
     
     var from: Date?
     var to: Date?

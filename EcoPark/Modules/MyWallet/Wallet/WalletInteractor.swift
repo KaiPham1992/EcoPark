@@ -24,11 +24,11 @@ class WalletInteractor: WalletInteractorInputProtocol {
         }
     }
     
-    func getWalletHistory(offset: Int, showLoading: Bool) {
+    func getWalletHistory(startDate: String, toDate: String, offset: Int, showLoading: Bool) {
         if showLoading {
             ProgressView.shared.show()
         }
-        Provider.shared.userAPIService.getWalletHistory(offset: offset, limit: 10, success: { (wallet) in
+        Provider.shared.userAPIService.getWalletHistory(startDate: startDate, toDate: toDate, offset: offset, limit: 10, success: { (wallet) in
             ProgressView.shared.hide()
             guard let list = wallet?.historyWallet else { return }
             self.presenter?.didGetWalletHistory(listLog: list)

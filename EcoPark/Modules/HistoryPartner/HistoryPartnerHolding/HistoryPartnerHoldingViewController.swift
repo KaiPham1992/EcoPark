@@ -63,7 +63,12 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isRefresh = true
-        getData()
+        historyParkingHolding = nil
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.getData()
+        }
+
+        
     }
     
     private func getData() {

@@ -33,13 +33,16 @@ class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtoc
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tbHistoryParking.addSubview(refreshControl)
         
-        getData()
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isRefresh = true
+        historyParking = nil
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.getData()
+        }
     }
     
     func getData() {
