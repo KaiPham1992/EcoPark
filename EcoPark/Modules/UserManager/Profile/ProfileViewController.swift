@@ -70,6 +70,7 @@ class ProfileViewController: BaseViewController {
         vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
         vGender.delegateDropDown = self
         vBirthDay.delegateDropDown = self
+        lbBoss.text = LocalizableKey.Owner.showLanguage
         
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 
@@ -99,7 +100,12 @@ class ProfileViewController: BaseViewController {
         else if user?.gender == "other" {
             vGender.tfInput.text = LocalizableKey.other.showLanguage
         }
-        
+        guard let _user = user else { return }
+        if _user.userIsBoss {
+            lbBoss.isHidden = false
+        } else {
+            lbBoss.isHidden = true
+        }
     }
     
     @IBAction func btnSaveTapped() {

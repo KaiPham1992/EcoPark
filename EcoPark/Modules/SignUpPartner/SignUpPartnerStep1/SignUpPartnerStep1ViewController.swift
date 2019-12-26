@@ -54,7 +54,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         vIDNumber.setTitleAndPlaceHolder(title: LocalizableKey.partnerID.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vIssuedBy.setTitleAndPlaceHolder(title: LocalizableKey.issuedBy.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vDateBy.setTitleAndPlaceHolder(title: LocalizableKey.dayBy.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
-        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage + "*", placeHolder: LocalizableKey.enter.showLanguage)
         lbImage.text = LocalizableKey.partnerImage.showLanguage
         vIDNumber.tfInput.keyboardType = .numberPad
         
@@ -223,7 +223,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
 
 extension SignUpPartnerStep1ViewController {
     func validateInputData() -> Bool {
-        if self.vPartnerName.getText() == "" && self.vIDNumber.getText() == "" && self.vIssuedBy.getText() == "" && self.vDateBy.tfInput.text == "" {
+        if self.vPartnerName.getText() == "" && self.vIDNumber.getText() == "" && self.vIssuedBy.getText() == "" && self.vDateBy.tfInput.text == "" &&
+        self.vEmail.getText() == ""  {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
         }
@@ -245,6 +246,11 @@ extension SignUpPartnerStep1ViewController {
         
         if self.vDateBy.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.errorDateBy.showLanguage)
+            return false
+        }
+        
+        if self.vEmail.getText() == ""  {
+            hideError(isHidden: false, message:  LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
         
