@@ -68,6 +68,7 @@ class PageHistoryPartnerViewControler : PageViewController {
             }
             
         }) { (_) in
+            ProgressView.shared.hide()
             PopUpHelper.shared.showInvalidQR(height: 350, completion: nil)
         }
     }

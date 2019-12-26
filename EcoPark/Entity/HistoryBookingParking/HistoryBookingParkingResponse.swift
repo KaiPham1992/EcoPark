@@ -71,16 +71,25 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.create_time_mi <- (map["create_time_mi"], AppTimestampTransform())
         
         self.time_check_in <- (map["time_check_in_mi"], AppTimestampTransform())
+        
+        if self.time_check_in == nil {
+            self.time_check_out <- (map["time_check_in_mi"], yyyyMMddHHmmssTransform())
+        }
+        
         self.time_check_out <- (map["time_check_out_mi"], AppTimestampTransform())
+        
+        if self.time_check_out == nil {
+            self.time_check_out <- (map["time_check_out_mi"], yyyyMMddHHmmssTransform())
+        }
         
         self.intend_checkout_time <- (map["intend_checkout_time"], AppTimestampTransform())
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.parking_details <- map["parking_details"]
-         self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
-               
-               if self.current_server_time == nil {
-                    self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
-               }
+        self.current_server_time <- (map["current_server_time"], AppTimestampTransform())
+        
+        if self.current_server_time == nil {
+            self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
+        }
         self.vehicle_name <- map["vehicle_name"]
         self.payment <- map["payment"]
         self.real_money <- map["real_money"]
