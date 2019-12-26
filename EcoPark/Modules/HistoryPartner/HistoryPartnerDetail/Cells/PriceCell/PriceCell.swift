@@ -40,7 +40,7 @@ class PriceCell: UITableViewCell {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         lbPriceComboPrice.text = _historyParkingDetail.price
         lbPriceAHoursPrice.text = _historyParkingDetail.package_price
-//        lbTimeHolding.text = _historyParkingDetail.tim
+        lbTimeHolding.text = "\(_historyParkingDetail.numberHours ?? 0)"
         lblPrice.text = "\(_historyParkingDetail.money_paid ?? 0)"
     }
     

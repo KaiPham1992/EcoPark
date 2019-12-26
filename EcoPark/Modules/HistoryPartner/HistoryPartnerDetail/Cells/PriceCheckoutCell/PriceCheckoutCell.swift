@@ -41,7 +41,7 @@ class PriceCheckoutCell: UITableViewCell {
         
         self.lbPriceAHoursPrice.text = _historyParkingDetail.price
         self.lbPriceComboPrice.text = _historyParkingDetail.package_price
-//        self.lbHoldingTime.text = _historyParkingDetail.
+        self.lbHoldingTime.text = "\(_historyParkingDetail.numberHours ?? 0)"
         self.lblPrice.text = _historyParkingDetail.price
         self.lbPaidPrice.text = "\(_historyParkingDetail.money_paid ?? 0)"
         self.lbPaidWithWalletPrice.text = "\(_historyParkingDetail.payment_wallet ?? 0)"
