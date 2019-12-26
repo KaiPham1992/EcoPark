@@ -103,7 +103,7 @@ class BasePopUpView: UIView {
         hidePopUp()
     }
     @objc func btnOverTapped() {
-        hidePopUp()
+//        hidePopUp()
     }
     
     func showPopUpNotRemoveView(width: CGFloat = 350 , height: CGFloat = 250, type: BasePopUpViewType = BasePopUpViewType.zoomOut) {
