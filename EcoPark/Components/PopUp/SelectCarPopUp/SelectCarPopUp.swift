@@ -18,6 +18,7 @@ class SelectCarPopUp: BasePopUpView {
     }()
     
     var completion: CompletionAny?
+    var completionIndex: CompletionAny?
     var indexSelect: Int = 0
     
     override func setupView() {
@@ -31,15 +32,19 @@ class SelectCarPopUp: BasePopUpView {
         viewPopUp.btn7.addTarget(self, action: #selector(btnPopUpTapped), for: .touchUpInside)
     }
     
-    func showPopUp(indexSelect: Int, width: CGFloat, completion: @escaping CompletionAny) {
+    func showPopUp(indexSelect: Int, listVehical: [VehicleTypeEntity], width: CGFloat, completion: @escaping CompletionAny, completionIndex: @escaping CompletionAny) {
         self.showPopUp(width: width, height: 250, type: .zoomOut)
-        viewPopUp.setStyle(indexSelected: indexSelect)
+          viewPopUp.isSelectIndex = indexSelect
+        viewPopUp.listVehical = listVehical
+      
         self.completion = completion
+        self.completionIndex = completionIndex
+        
     }
     
     @objc func btnPopUpTapped(sender: UIButton) {
         hidePopUp()
-        indexSelect = sender.tag
-        completion?(sender.tag)
+        completionIndex?(sender.tag)
+        completion?(viewPopUp.listVehical[sender.tag])
     }
 }
