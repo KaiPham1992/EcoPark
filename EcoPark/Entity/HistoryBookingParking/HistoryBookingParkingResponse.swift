@@ -18,8 +18,8 @@ class HistoryBookingParkingResponse : BaseEntity {
     
     var fullname: String?
     var img_src: String?
-    var package_price: String?
-    var price: String?
+    var package_price: Double?
+    var price: Double?
     var id: String?
     var account_id: String?
     var code: String?
@@ -56,8 +56,8 @@ class HistoryBookingParkingResponse : BaseEntity {
         
         self.fullname <- map["fullname"]
         self.img_src <- map["img_src"]
-        self.package_price <- map["package_price"]
-        self.price <- map["price"]
+        self.package_price <- (map["package_price"], StringToDoubleTransform())
+        self.price <- (map["price"],StringToDoubleTransform())
         self.id <- map["_id"]
         self.account_id <- map["account_id"]
         self.code <- map["code"]
@@ -68,7 +68,11 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.parking_id <- map["parking_id"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], yyyyMMddHHmmssTransform())
-        self.update_time <- (map["update_time"], AppTimestampTransform())
+//        self.update_time <- (map["update_time"], AppTimestampTransform())
+//        if self.update_time == nil {
+            self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
+//        }
+        
         self.create_time_mi <- (map["create_time_mi"], AppTimestampTransform())
         
         self.time_check_in <- (map["time_check_in_mi"], AppTimestampTransform())

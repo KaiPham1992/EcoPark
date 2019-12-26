@@ -39,13 +39,13 @@ class PriceCheckoutCell: UITableViewCell {
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         
-        self.lbPriceAHoursPrice.text = _historyParkingDetail.price
-        self.lbPriceComboPrice.text = _historyParkingDetail.package_price
+        self.lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
+        self.lbPriceComboPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
         self.lbHoldingTime.text = "\(_historyParkingDetail.numberHours ?? 0)"
-        self.lblPrice.text = _historyParkingDetail.price
-        self.lbPaidPrice.text = "\(_historyParkingDetail.money_paid ?? 0)"
-        self.lbPaidWithWalletPrice.text = "\(_historyParkingDetail.payment_wallet ?? 0)"
-        self.lbPaidWithCashPrice.text = "\(_historyParkingDetail.payment ?? 0)"
+        self.lblPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
+        self.lbPaidPrice.text = _historyParkingDetail.money_paid?.toCurrencyNoVND
+        self.lbPaidWithWalletPrice.text = _historyParkingDetail.payment_wallet?.toCurrencyNoVND
+        self.lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrencyNoVND
     }
     
 }

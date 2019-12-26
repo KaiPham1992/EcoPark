@@ -38,16 +38,16 @@ class PriceCell: UITableViewCell {
     
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbPriceComboPrice.text = _historyParkingDetail.price
-        lbPriceAHoursPrice.text = _historyParkingDetail.package_price
+        lbPriceComboPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
+        lbPriceAHoursPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
         lbTimeHolding.text = "\(_historyParkingDetail.numberHours ?? 0)"
-        lblPrice.text = "\(_historyParkingDetail.money_paid ?? 0)"
+        lblPrice.text = _historyParkingDetail.money_paid?.toCurrencyNoVND
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
             guard let _historyParkingDetail = historyParkingDetail else { return }
-            lbPriceComboPrice.text = _historyParkingDetail.price
-            lbPriceAHoursPrice.text = _historyParkingDetail.package_price
+        lbPriceComboPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
+        lbPriceAHoursPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
             lbTimeHolding.text = "0"
             lblPrice.text = "0"
         }
