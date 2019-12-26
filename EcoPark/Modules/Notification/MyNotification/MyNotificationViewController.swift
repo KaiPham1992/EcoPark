@@ -42,16 +42,21 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
     
     override func cellForRowListManager(item: Any, _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeue(NotificationCell.self, for: indexPath)
-        let status = notification[indexPath.item].isRead
-        var statusType: NotificationStatus = .UnRead
-        if status ?? false {
-            statusType = NotificationStatus.IsRead
-        } else {
-            statusType = NotificationStatus.UnRead
+        if indexPath.item < notification.count {
+            let status = notification[indexPath.item].isRead
+            var statusType: NotificationStatus = .UnRead
+            if status ?? false {
+                statusType = NotificationStatus.IsRead
+            } else {
+                statusType = NotificationStatus.UnRead
+            }
+            let dateTime = notification[indexPath.item].createTime?.toString(dateFormat: .hhmmddmmyyy)
+            let content = notification[indexPath.item].content
+            
+            cell.displayData(type: .MyNotification, status: statusType , datetime: dateTime&, content: content&)
         }
-        let dateTime = notification[indexPath.item].createTime?.toString(dateFormat: .hhmmddmmyyy)
-        let content = notification[indexPath.item].content
-        cell.displayData(type: .MyNotification, status: statusType , datetime: dateTime&, content: content&)
+        
+       
         return cell
     }
     

@@ -130,7 +130,7 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
                 getPlaceDetail(placeId: item.placeID)
             } else {
                 let item = locations[indexPath.row - 1]
-                self.address = item.getPlaceAddress()
+                self.address = item.getAddress()
                 getPlaceDetail(placeId: item.placeID)
             }
             

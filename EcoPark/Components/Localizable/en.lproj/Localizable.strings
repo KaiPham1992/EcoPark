@@ -667,12 +667,12 @@
 "SCAN_QR_FAILED" = "Scan QR failed";
 "HourSmaller" = "Time is less than current time";
 
-"HourSmaller" = "Giờ nhỏ hơn giờ hiện tại";
-"ChooseDate" = "Bạn chưa chọn ngày";
-"ChooseTime" = "Bạn chưa chọn giờ đến bãi";
-"ChooseTypeVehical" = "Bạn chưa chọn loại xe";
-"NotYetLisence" = "Bạn chưa nhập biển số";
-"TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";
+"HourSmaller" = "Time smaller than current";
+"ChooseDate" = "Please select date";
+"ChooseTime" = "Please select time";
+"ChooseTypeVehical" = "Please type vehical";
+"NotYetLisence" = "Please enter lisence";
+"TimeNotInRule" = "Time not in rule";
 "WaitApp" = "Resgiter onwer";
 "HAS_BOOKING_CHECKED_IN" = "You are checkin at other parking";
 "CHECKIN_EARLY" = "Can not check in early";

@@ -186,7 +186,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="cJ7-FK-4xR"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <state key="normal" title=" Giờ đến bãi*" image="ic_clock">
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -203,7 +203,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="hDY-e0-ha5"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <state key="normal" title=" Ngày*" image="ic_calendar_outlined">
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -220,7 +220,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="ZLr-rq-zen"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <state key="normal" title=" Biển số xe*" image="ic_license">
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -230,7 +230,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="KhR-VA-FSn"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <state key="normal" title=" Loại xe*" image="ic_car">
                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
@@ -244,6 +244,7 @@
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nJ-eK-29N">
                                             <rect key="frame" x="213.33333333333337" y="150" width="152.66666666666663" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <connections>
                                                 <action selector="btnTypeVehicalTapped" destination="-1" eventType="touchUpInside" id="7rx-tI-U7k"/>
                                             </connections>
@@ -251,7 +252,7 @@
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrW-WN-Gqc">
                                             <rect key="frame" x="8" y="150" width="189.33333333333334" height="50"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

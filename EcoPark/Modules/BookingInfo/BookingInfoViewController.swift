@@ -90,6 +90,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     func displayData(info: ParkingInfoEntity) {
         lbName.text = info.name
+        ratingBar.setStar(number: 0.0)
         if let rate = info.rating {
             ratingBar.setStar(number: rate)
             ratingBar.setTitle(number: info.total_rating&)

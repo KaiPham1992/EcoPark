@@ -92,6 +92,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     }
     
     func getParking() {
+        
         ProgressView.shared.show()
         Provider.shared.userAPIService.getParking(lat: centerMapCoordinate.latitude.description, long: centerMapCoordinate.longitude.description, star: self.star, distance: self.distance, success: { parking in
             ProgressView.shared.hide()
@@ -260,16 +261,19 @@ extension HomeViewController: HomeFindViewControllerDelegate {
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         setUpMap(lat: lat, long: long)
         self.address = address
+        self.vSearch.tfInput.text = address
         getParking()
     }
     
     func didSelectMyLocation() {
         print("did tap my location")
+        btnFilter.isEnabled = true
         
-        let newAddress = getAddressFromLocation(pdblLatitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.latitude), withLongitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.longitude))
-        self.address = newAddress
-        setMyLocation()
-        getParking()
+        getAddressFromLocation(pdblLatitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.latitude), withLongitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.longitude))
+        
+        self.setMyLocation()
+        self.getParking()
+       
     }
 }
 
@@ -369,7 +373,7 @@ extension HomeViewController: GMSMapViewDelegate {
     }
     
     
-    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) -> String {
+    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
         var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
         let lat: Double = Double("\(pdblLatitude)")!
         //21.228124
@@ -416,9 +420,10 @@ extension HomeViewController: GMSMapViewDelegate {
                     
                     resultAddress =  addressString
                 }
+                self.vSearch.tfInput.text = resultAddress
+                self.address = resultAddress
         })
-        
-        return resultAddress
+       
     }
 }
 

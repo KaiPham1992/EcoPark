@@ -135,6 +135,7 @@ class WalletViewController: BaseViewController {
     }
     
     @objc func pullToRefresh(){
+        getWallet()
         presenter?.listWalletHistory.removeAll()
         getWalletHistory(showLoading: false)
         refreshControl.endRefreshing()

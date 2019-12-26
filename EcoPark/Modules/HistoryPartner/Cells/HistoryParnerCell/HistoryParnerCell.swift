@@ -79,7 +79,7 @@ class HistoryParnerCell: UITableViewCell {
         lbExpectTime.text = _historyParking.update_time?.toString(dateFormat: .ecoTime)
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
-        lbPrice.text = "\(_historyParking.money_paid ?? 0)"
+        lbPrice.text = "\(_historyParking.money_paid?.toCurrencyNoVND ?? "0")"
         
         let status = _historyParking.status
         switch status {
