@@ -29,7 +29,7 @@ class AppSearchTextField: BaseViewXib {
         super.setUpViews()
         tfInput.delegate = self
         
-        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingDidBegin)
+        tfInput.addTarget(self, action: #selector(textFieldTapped), for: UIControl.Event.editingChanged)
     }
     
     @objc func textFieldTapped() {

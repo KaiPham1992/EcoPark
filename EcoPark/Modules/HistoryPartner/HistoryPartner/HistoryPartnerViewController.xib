@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerViewController">
             <connections>
                 <outlet property="tbHistoryParking" destination="AGk-b4-ltl" id="2sQ-Fk-kGH"/>
+                <outlet property="vSearch" destination="ioI-Wa-vqk" id="cfk-uw-ZGL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +20,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AGk-b4-ltl">
-                    <rect key="frame" x="16" y="16" width="343" height="641"/>
+                    <rect key="frame" x="16" y="60" width="343" height="597"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioI-Wa-vqk" customClass="AppSearchTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
+                    <rect key="frame" x="16" y="10" width="343" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0E2-56-RYY"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="ioI-Wa-vqk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="0Or-lq-HDo"/>
+                <constraint firstItem="AGk-b4-ltl" firstAttribute="top" secondItem="ioI-Wa-vqk" secondAttribute="bottom" constant="10" id="1ec-St-iv7"/>
                 <constraint firstAttribute="bottom" secondItem="AGk-b4-ltl" secondAttribute="bottom" constant="10" id="2S8-Zm-YAg"/>
-                <constraint firstItem="AGk-b4-ltl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="TJG-pQ-V8S"/>
+                <constraint firstItem="ioI-Wa-vqk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="2T4-0P-aPF"/>
                 <constraint firstItem="AGk-b4-ltl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="VRC-uj-RLC"/>
                 <constraint firstAttribute="trailing" secondItem="AGk-b4-ltl" secondAttribute="trailing" constant="16" id="b3J-VF-dnj"/>
+                <constraint firstAttribute="trailing" secondItem="ioI-Wa-vqk" secondAttribute="trailing" constant="16" id="xLH-NX-3h3"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="147"/>
+            <point key="canvasLocation" x="132" y="146.17691154422789"/>
         </view>
     </objects>
 </document>

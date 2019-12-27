@@ -47,6 +47,8 @@
 "userInfo" = "Thông tin khách hàng";
 "registerYet" = "Bạn có chỗ trống? \nHãy đăng ký làm bãi xe";
 "registerOwner" = "Đăng ký làm đối tác bãi xe";
+"ratingOfuser" = "Đánh giá của khách hàng";
+
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";

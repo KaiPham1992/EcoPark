@@ -43,6 +43,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         
         vSearch.actionSearch = { text in
+            self.isRefresh = true
             var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
@@ -51,6 +52,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         }
         
         vSearch.tapToTextField = {
+            self.isRefresh = true
             let text = self.vSearch.tfInput.text!
             var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
             if parkingID == "" || parkingID == nil {
@@ -88,7 +90,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     
     @objc func btnCheckOutTapped(sender: UIButton) {
         
-        let price = historyParkingHolding?.booking[sender.tag].money_paid ?? 0
+        let receivables = historyParkingHolding?.booking[sender.tag].receivables?.toCurrencyNoVND
         let vehicleType = historyParkingHolding?.booking[sender.tag].vehicleName
         let vehicleNumber = historyParkingHolding?.booking[sender.tag].license_plates ?? ""
         let checkoutNumber = historyParkingHolding?.booking[sender.tag].code ?? ""
@@ -96,7 +98,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         let code = historyParkingHolding?.booking[sender.tag].code
         let licensePlates = historyParkingHolding?.booking[sender.tag].license_plates
         
-        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables&, vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingHolding?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingHolding?.booking[sender.tag].id ?? ""))
         }) {
             self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
@@ -152,8 +154,8 @@ extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
 
 extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
     
-    func didChangeStatusCheckout() {
-        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: self.historyBookingParkingResponse))
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity) {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: historyCheckout.id ?? "", parkingID: historyCheckout.parking_id ?? ""))
     }
     
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {

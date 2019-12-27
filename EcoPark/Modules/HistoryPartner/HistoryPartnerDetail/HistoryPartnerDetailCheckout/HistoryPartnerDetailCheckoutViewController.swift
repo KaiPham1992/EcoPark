@@ -19,15 +19,34 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
     var presenter: HistoryPartnerDetailCheckoutPresenterProtocol?
 
     var historyParkingDetail: HistoryBookingParkingResponse?
+    var bookingID = ""
+    var parkingID = ""
+    var isFromList = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        addBackToNavigation()
-        addMenu()
+        if isFromList {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
+        
         setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
         lbStatus.text = LocalizableKey.checked_out.showLanguage
         lbID.text = historyParkingDetail?.code
+        
+            getData()
+    }
+    
+    func getData() {
+        presenter?.getCheckoutDetail(bookingID: bookingID, parkingID: parkingID)
+    }
+    
+    func didGetCheckoutDetail(historyDetail: HistoryBookingParkingResponse?) {
+        self.historyParkingDetail = historyDetail
+        lbID.text = historyDetail?.code ?? ""
+        tbCheckoutDetail.reloadData()
     }
 }
 
@@ -41,10 +60,16 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
         tbCheckoutDetail.registerXibFile(UserInfoCell.self)
         tbCheckoutDetail.registerXibFile(PriceCheckoutCell.self)
         tbCheckoutDetail.registerXibFile(OtherPriceCheckoutCell.self)
+        tbCheckoutDetail.registerXibFile(RatingCell.self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if historyParkingDetail?.rating == nil {
+            return 4
+        } else {
+            return 5
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,10 +87,16 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
             let priceCell = tableView.dequeueTableCell(PriceCheckoutCell.self)
             priceCell.setData(historyParkingDetail: historyParkingDetail)
             return priceCell
-        default:
+        case 3:
             let otherPriceCell = tableView.dequeueTableCell(OtherPriceCheckoutCell.self)
             otherPriceCell.setData(historyParkingDetail: historyParkingDetail)
             return otherPriceCell
+        case 4:
+            let ratingCell = tableView.dequeueTableCell(RatingCell.self)
+            ratingCell.vRating.rating = historyParkingDetail?.rating ?? 0
+            return ratingCell
+        default:
+            return UITableViewCell()
         }
     }
     
@@ -77,8 +108,12 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
             return 145
         case 2:
             return 230
-        default:
+        case 3:
             return 170
+        case 4:
+            return 50
+        default:
+            return 0
         }
     }
 }

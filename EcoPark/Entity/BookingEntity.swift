@@ -25,6 +25,9 @@ class BookingEntity: BaseEntity {
     var money_paid: Double?
     var fullname: String?
     var vehicleName: String?
+    var timeCheckInMi: Date?
+    var timeCheckOutMi: Date?
+    var receivables: Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -45,6 +48,9 @@ class BookingEntity: BaseEntity {
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.fullname <- map["fullname"]
         self.vehicleName <- map["vehicle_name"]
+        self.timeCheckInMi <- (map["time_check_in_mi"], AppTimestampTransform())
+        self.timeCheckOutMi <- (map["time_check_out_mi"], AppTimestampTransform())
+        self.receivables <- (map["receivables"], StringToDoubleTransform())
     }
 }
 
