@@ -76,7 +76,7 @@
 "minute" = "minute";
 
 // Popup
-"receivable" = "Receicable: ";
+"receivable" = "Receivable: ";
 "carType" = "Vehicle type";
 "licensePlate" = "License plate";
 "checkAgain" = "Check Again";

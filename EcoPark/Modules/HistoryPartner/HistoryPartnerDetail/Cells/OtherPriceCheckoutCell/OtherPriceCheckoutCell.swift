@@ -39,7 +39,7 @@ class OtherPriceCheckoutCell: UITableViewCell {
             lbBonusEcoPrice.text = _historyParkingDetail.bonus?.toCurrencyNoVND
         lbPaidWithWalletPrice.text = _historyParkingDetail.customer_payment_wallet?.toCurrencyNoVND
         lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrencyNoVND
-        lbWalletChangePrice.text = _historyParkingDetail.plus_wallet_boss?.toCurrencyNoVND
+        lbWalletChangePrice.text = "+" +  (_historyParkingDetail.plus_wallet_boss?.toCurrencyNoVND ?? "0")
         
     }
     
