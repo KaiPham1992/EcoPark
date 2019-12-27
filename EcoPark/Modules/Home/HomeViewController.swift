@@ -190,7 +190,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: LocalizableKey.InputDestination.showLanguage)
         vSearch.tapToTextField = {
-            let vc = HomeFindRouter.createModule()
+            let vc = HomeFindRouter.createModule(address: self.address)
             vc.delegate = self
             self.push(controller: vc)
         }

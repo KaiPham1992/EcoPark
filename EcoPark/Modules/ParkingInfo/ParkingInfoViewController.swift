@@ -361,7 +361,7 @@ extension ParkingInfoViewController: ParkingInfoCellDelegate {
     func selectAddress() {
         btnSave.isEnabled = true
         btnSave.backgroundColor = AppColor.color_0_129_255
-        let vcHomeFind = HomeFindRouter.createModule()
+        let vcHomeFind = HomeFindRouter.createModule(address: "")
         vcHomeFind.delegate = self
         vcHomeFind.isSelectAddressSignUp = true
         self.push(controller: vcHomeFind)

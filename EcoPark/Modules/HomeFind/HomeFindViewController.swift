@@ -35,6 +35,8 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.vSearch.tfInput.text = self.address
+        self.presenter?.searchPlaceByString(text: self.address)
     }
     
     override func setTitleUI() {

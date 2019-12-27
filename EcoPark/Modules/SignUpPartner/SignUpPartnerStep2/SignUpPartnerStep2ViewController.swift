@@ -190,7 +190,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     }
     
     @IBAction func btnSelectAddressTapped() {
-        let vcHomeFind = HomeFindRouter.createModule()
+        let vcHomeFind = HomeFindRouter.createModule(address: "")
         vcHomeFind.delegate = self
         vcHomeFind.isSelectAddressSignUp = true
         self.push(controller: vcHomeFind)
