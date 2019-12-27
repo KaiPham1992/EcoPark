@@ -45,11 +45,11 @@ class HistoryBookingParkingResponse : BaseEntity {
     var bonus: Double?
     var customer_payment_wallet: Double?
     var qrCode: String?
-    var bookingID: String?
     
     var time_check_out: Date?
     var time_check_in: Date?
     var numberHours: Double?
+    var rating: Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -78,7 +78,7 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.time_check_in <- (map["time_check_in_mi"], AppTimestampTransform())
         
         if self.time_check_in == nil {
-            self.time_check_out <- (map["time_check_in_mi"], yyyyMMddHHmmssTransform())
+            self.time_check_in <- (map["time_check_in_mi"], yyyyMMddHHmmssTransform())
         }
         
         self.time_check_out <- (map["time_check_out_mi"], AppTimestampTransform())
@@ -96,14 +96,16 @@ class HistoryBookingParkingResponse : BaseEntity {
             self.current_server_time <- (map["current_server_time"], yyyyMMddHHmmssTransform())
         }
         self.vehicle_name <- map["vehicle_name"]
-        self.payment <- map["payment"]
-        self.real_money <- map["real_money"]
-        self.bonus <- map["bonus"]
-        self.customer_payment_wallet <- map["customer_payment_wallet"]
-        self.plus_wallet_boss <- map["plus_wallet_boss"]
+        self.payment <- (map["payment"], StringToDoubleTransform())
+        self.payment_wallet <- (map["payment_wallet"], StringToDoubleTransform())
+        self.real_money <- (map["real_money"], StringToDoubleTransform())
+        self.bonus <- (map["bonus"], StringToDoubleTransform())
+        self.customer_payment_wallet <- (map["customer_payment_wallet"], StringToDoubleTransform())
+        self.plus_wallet_boss <- (map["plus_wallet_boss"], StringToDoubleTransform())
         self.qrCode <- map["qr_code"]
-        self.bookingID <- map["booking_id"]
-        self.numberHours <- map["number_hours"]
+        self.numberHours <- (map["number_hours"], StringToDoubleTransform())
+        self.rating <- (map["rating"], StringToDoubleTransform())
+        self.receivables <- (map["receivables"], StringToDoubleTransform())
     }
     
     var urlQRCode:  URL? {

@@ -45,5 +45,5 @@ protocol HistoryPartnerHoldingViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?)
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?)
-    func didChangeStatusCheckout()
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity)
 }

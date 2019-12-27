@@ -44,5 +44,5 @@ protocol HistoryPartnerDetailCheckinViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetData(historyParkingDetail: HistoryBookingParkingResponse?)
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?)
-    func didChangeStatusCheckout()
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity?)
 }

@@ -89,10 +89,13 @@ class TimeParkingCell: UITableViewCell {
         lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
         
         
-        guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
-        guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
-        self.newCurrentDate = current_server_time
-        self.checkinTime = checkinTime
+        guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970,
+            let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
+        let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+        
+        vHour.setUpTime(time: ddhhmm.1)
+        vMinute.setUpTime(time: ddhhmm.2)
+        vDay.setUpTime(time: ddhhmm.0)
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {

@@ -49,6 +49,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
         vSearch.actionSearch = { text in
+            self.isRefresh = true
             var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
             if parkingID == "" || parkingID == nil {
                 parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
@@ -56,6 +57,7 @@ class HistoryPartnerBookingViewController: BaseViewController {
             self.presenter?.getHistoryParkingBooking(parkingID: parkingID&, status: "reservation", keyword: text, offset: 0, limit: limitLoad)
         }
         vSearch.tapToTextField = {
+            self.isRefresh = true
             let text = self.vSearch.tfInput.text!
             print(text)
             var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id

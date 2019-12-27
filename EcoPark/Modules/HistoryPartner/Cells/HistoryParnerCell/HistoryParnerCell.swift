@@ -87,8 +87,8 @@ class HistoryParnerCell: UITableViewCell {
             lbCheckInTime.text = "-"
             lbCheckoutTime.text = "-"
         case StatusBooking.checked_out.rawValue:
-            lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
-            lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = _historyParking.timeCheckInMi?.toString(dateFormat: .ecoTime)
+            lbCheckoutTime.text = _historyParking.timeCheckOutMi?.toString(dateFormat: .ecoTime)
             
         case StatusBooking.checked_in.rawValue:
             lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)

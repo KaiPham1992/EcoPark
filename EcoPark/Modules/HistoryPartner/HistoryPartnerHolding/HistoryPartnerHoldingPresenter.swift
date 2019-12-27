@@ -44,9 +44,10 @@ class HistoryPartnerHoldingPresenter: HistoryPartnerHoldingPresenterProtocol, Hi
     
     func changeStatusCheckout(booking: String) {
         ProgressView.shared.showProgressOnWindow()
-        Provider.shared.bookingAPIService.checkOut(bookingId: booking, success: { (_) in
+        Provider.shared.bookingAPIService.checkOut(bookingId: booking, success: { (historyCheckout) in
             ProgressView.shared.hide()
-            self.view?.didChangeStatusCheckout()
+            guard let _historyCheckout = historyCheckout else { return }
+            self.view?.didChangeStatusCheckout(historyCheckout: _historyCheckout)
         }) { (_) in
             ProgressView.shared.hide()
         }

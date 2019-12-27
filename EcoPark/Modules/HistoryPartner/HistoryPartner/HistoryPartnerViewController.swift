@@ -14,6 +14,7 @@ import XLPagerTabStrip
 class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtocol {
 
     @IBOutlet weak var tbHistoryParking: UITableView!
+    @IBOutlet weak var vSearch: AppSearchTextField!
     
     var historyParking: HistoryMyParkingEntity? {
         didSet{
@@ -32,6 +33,26 @@ class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtoc
         
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tbHistoryParking.addSubview(refreshControl)
+        
+        vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
+        vSearch.actionSearch = { text in
+            self.isRefresh = true
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: text, offset: 0, limit: limitLoad)
+        }
+        vSearch.tapToTextField = {
+            self.isRefresh = true
+            let text = self.vSearch.tfInput.text!
+            print(text)
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: text, offset: 0, limit: limitLoad)
+        }
         
     }
 
@@ -103,8 +124,15 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
         let bookingParking = HistoryBookingParkingResponse()
         let bookingID = historyParking?.booking[indexPath.item].id
          bookingParking.id = bookingID
-        let vc = DetailParkingRouter.createModule(bookingParking: bookingParking)
-        self.push(controller: vc)
+        if historyParking?.booking[indexPath.item].status == StatusBooking.checked_out.rawValue {
+            let vc = HistoryPartnerDetailCheckoutRouter.createModule(bookingID: bookingID&, parkingID: historyParking?.booking[indexPath.item].parking_id ?? "")
+            vc.isFromList = true
+            self.push(controller: vc)
+        } else {
+            let vc = DetailParkingRouter.createModule(bookingParking: bookingParking)
+            self.push(controller: vc)
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

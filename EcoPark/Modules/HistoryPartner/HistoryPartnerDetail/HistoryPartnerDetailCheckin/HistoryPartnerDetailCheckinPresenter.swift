@@ -37,17 +37,17 @@ class HistoryPartnerDetailCheckinPresenter: HistoryPartnerDetailCheckinPresenter
         Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: licensePlates, success: { (historyParkingDetail) in
             ProgressView.shared.hide()
             self.view?.didCheckout(historyParkingDetail: historyParkingDetail)
-        }) { (erroe) in
+        }) { (error) in
             ProgressView.shared.hide()
-            PopUpHelper.shared.showInvalidQR(height: 350, completion: nil)
+            PopUpHelper.shared.showMessage(message: error?.message?.showLanguage ?? "", width: 350, completion: {})
         }
     }
     
     func changeStatusCheckout(bookingID: String) {
         ProgressView.shared.showProgressOnWindow()
-        Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (_) in
+        Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (historyCheckout) in
             ProgressView.shared.hide()
-            self.view?.didChangeStatusCheckout()
+            self.view?.didChangeStatusCheckout(historyCheckout: historyCheckout)
         }) { (_) in
             ProgressView.shared.hide()
         }

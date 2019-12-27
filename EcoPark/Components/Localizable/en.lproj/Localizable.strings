@@ -44,6 +44,8 @@
 "ratingOfYou" = "Rating";
 
 "extend" = "Renewal addination 1 hour ";
+"ratingOfuser" = "Customer reviews";
+
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Parking Detail";
 "titleType" = "Parking type";
@@ -182,7 +184,7 @@
 "pleaseTurnOnInternet" = "Please turn on the internet";
 
 // Change Language
-"vietnamese" = "Vietnamese";
+"vietnamese" = "Tiếng Việt";
 "english" = "English";
 
 // Profile

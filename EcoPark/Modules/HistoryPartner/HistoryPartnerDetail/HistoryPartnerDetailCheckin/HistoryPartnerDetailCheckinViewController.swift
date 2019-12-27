@@ -49,14 +49,14 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     
     @IBAction func btnCheckOutTapped() {
         
-        let price = historyParkingDetail?.money_paid ?? 0
+        let price = historyParkingDetail?.receivables
         let vehicleType = historyParkingDetail?.vehicle_name
         let vehicleNumber = historyParkingDetail?.license_plates ?? ""
         let checkoutNumber = historyParkingDetail?.code ?? ""
         let bookingID = historyParkingDetail?.id
         let code = historyParkingDetail?.code
         let licensePlates = historyParkingDetail?.license_plates
-        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: Double(price), vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: price&, vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             
         }) {
             self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
@@ -90,8 +90,8 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
         
     }
     
-    func didChangeStatusCheckout() {
-        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity?) {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: historyCheckout?.id ?? "", parkingID: historyCheckout?.parking_id ?? ""))
     }
 }
 

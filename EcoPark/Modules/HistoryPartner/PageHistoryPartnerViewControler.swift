@@ -60,16 +60,17 @@ class PageHistoryPartnerViewControler : PageViewController {
     func callAPICheckout(bookingID: String, code: String, license_plates: String) {
         ProgressView.shared.showProgressOnWindow()
         Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
-            Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (_) in
+            Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (historyParking) in
                 ProgressView.shared.hide()
-                self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParking))
+                self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: historyParking?.id ?? "", parkingID: historyParking?.parking_id ?? ""))
             }) { (_) in
                 ProgressView.shared.hide()
             }
             
-        }) { (_) in
+        }) { (error) in
+            
             ProgressView.shared.hide()
-            PopUpHelper.shared.showInvalidQR(height: 350, completion: nil)
+            PopUpHelper.shared.showMessage(message: error?.message?.showLanguage ?? "", width: 350, completion: {})
         }
     }
     
