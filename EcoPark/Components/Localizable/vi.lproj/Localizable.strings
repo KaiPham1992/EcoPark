@@ -361,7 +361,7 @@
 "checked_out" = "Đã check out";
 "checked_in" = "Đã check in";
 "reservation" = "Đang giữ chỗ";
-"expired" = "Hết hạn";
+"expired" = "Quá hạn giữ chỗ";
 "history_parking" = "Lịch sử đỗ xe";
 "booked" = "Đã đặt chỗ";
 "holding" = "Đang giữ";
