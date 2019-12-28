@@ -42,6 +42,7 @@ class DoingCell: UITableViewCell {
             lblStatus.textColor = AppColor.color_0_129_255
             DLVCheckin.lblTime.text = data.time_check_in?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
             DLVCheckout.lblTime.text = data.time_check_out?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            lblPayment.text = (data.money_paid?.toCurrency ?? "")
         case StatusBooking.checked_in.rawValue:
             lblStatus.text = LocalizableKey.checked_in.showLanguage
             lblStatus.textColor = AppColor.color_13_196_68
@@ -62,6 +63,6 @@ class DoingCell: UITableViewCell {
         }
         lblAddress.text = data.parking_details?.name ?? ""
         DLVBook.lblTime.text = data.create_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
-        lblPayment.text = (data.money_paid?.toCurrency ?? "")
+        lblPayment.text = "0"
     }
 }

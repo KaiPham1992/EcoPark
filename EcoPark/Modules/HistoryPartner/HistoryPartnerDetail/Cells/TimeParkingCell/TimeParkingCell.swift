@@ -82,20 +82,41 @@ class TimeParkingCell: UITableViewCell {
     }
     
     func setDataCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
-        guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
-        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
-        lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
-        lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
+        switch historyParkingDetail?.status {
+        case StatusBooking.checked_out.rawValue:
+            guard let _historyParkingDetail = historyParkingDetail else { return }
+            lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
+            lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
+            
+            
+            guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970,
+                let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
+            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            
+            vHour.setUpTime(time: ddhhmm.1)
+            vMinute.setUpTime(time: ddhhmm.2)
+            vDay.setUpTime(time: ddhhmm.0)
+        case StatusBooking.expired.rawValue:
+            guard let _historyParkingDetail = historyParkingDetail else { return }
+            lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = "-"
+            lbCheckOutTime.text = "-"
+            
+            case StatusBooking.cancel.rawValue:
+            guard let _historyParkingDetail = historyParkingDetail else { return }
+            lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = "-"
+            lbCheckOutTime.text = "-"
+            
+        default:
+            break
+            
+        }
         
-        
-        guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970,
-            let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
-        let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
-        
-        vHour.setUpTime(time: ddhhmm.1)
-        vMinute.setUpTime(time: ddhhmm.2)
-        vDay.setUpTime(time: ddhhmm.0)
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {

@@ -97,7 +97,7 @@ class HistoryParnerCell: UITableViewCell {
             lbCheckInTime.text = "-"
             lbCheckoutTime.text = "-"
         case StatusBooking.expired.rawValue:
-            lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = "-"
             lbCheckoutTime.text = "-"
         default:
             break
