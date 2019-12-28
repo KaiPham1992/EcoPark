@@ -48,9 +48,13 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getParkingInfo()
+//        if parking == nil {
+//             getParkingInfo()
+//        }
+       
         getVehicleType()
+        guard let parking = parking else { return }
+        displayData(info: parking)
     }
     
     func getParkingInfo() {
@@ -88,14 +92,14 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         lbTitlePriceHoldPlace.text = LocalizableKey.feeKeepPlace.showLanguage
     }
     
-    func displayData(info: ParkingInfoEntity) {
-        lbName.text = info.name
+    func displayData(info: ParkingEntity) {
+        lbName.text = info.parking_name
         ratingBar.setStar(number: 0.0)
         if let rate = info.rating {
             ratingBar.setStar(number: rate)
             ratingBar.setTitle(number: info.total_rating&)
         }
-        lbType.text = info.parking_type
+        lbType.text = info.parking_type_name
         lbCapacity.text = LocalizableKey.maxCapacity.showLanguage + info.number_place& + " " + LocalizableKey.place.showLanguage
         
         if let timeStart = info.time_start?.toString(dateFormat: .HHmm),
@@ -117,10 +121,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         }
         
         dropDownType.btnAction.isHidden = true
-        
-        if let listImage = info.img, listImage.count > 0 {
-             imgIcon.sd_setImage(with: listImage[0].url)
-        }
+        imgIcon.sd_setImage(with: info.url)
        
     }
     
@@ -232,7 +233,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         }
     }
     func didGetInfo(info: ParkingInfoEntity) {
-        displayData(info: info)
+//        displayData(info: info)
     }
 }
 

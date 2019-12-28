@@ -138,6 +138,10 @@ class MaterialEntity: BaseEntity {
     }
     
     var urlOn: URL? {
+        if icon& == "" {
+            return nil
+        }
+        
         return URL(string: "\(BASE_URL_IMAGE)\(icon&)")
     }
     

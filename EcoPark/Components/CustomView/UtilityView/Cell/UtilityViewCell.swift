@@ -108,10 +108,10 @@ class UtilityViewCell: UICollectionViewCell {
     var utility: MaterialEntity? {
         didSet {
             guard let utility = utility else { return }
-            if utility.is_active == "1" {
-                imgIcon.sd_setImage(with: utility.urlOn)
+            if utility.is_active == "0" || utility.urlOn == nil {
+                imgIcon.sd_setImage(with: utility.urlOff)
             } else {
-                 imgIcon.sd_setImage(with: utility.urlOff)
+                 imgIcon.sd_setImage(with: utility.urlOn)
             }
         }
     }

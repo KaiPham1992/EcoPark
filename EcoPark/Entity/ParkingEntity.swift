@@ -34,6 +34,8 @@ class ParkingEntity: BaseEntity {
     var total_rating: String?
     var parking_type_name: String?
     
+    
+    
     var url: URL? {
         guard let strImage = img_parking?.imgParking else { return nil }
         return URL(string: "\(BASE_URL_IMAGE)\(strImage)")
