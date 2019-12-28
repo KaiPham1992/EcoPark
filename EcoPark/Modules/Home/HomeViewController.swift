@@ -34,7 +34,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var parkingSelected: ParkingEntity?
     
     /****** Default param - Fix me later. *****/
-    var star: [Int] = [1,2,3,4,5]
+    var star: [Int] = []
     var distance = "1000"
     var address = ""
     /********************************/
@@ -196,6 +196,8 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         vSearch.tapToTextField = {
             let vc = HomeFindRouter.createModule(address: self.address)
             vc.delegate = self
+            self.star = []
+            
             self.push(controller: vc)
         }
     }

@@ -240,7 +240,7 @@ extension UserEndPoint: EndPointType {
             return ["offset": offset,
                     "limit": limit]
         case .getParking(let lat,let long, let star, let distance):
-            return ["lat": lat,"long": long, "star": star, "distance": distance]
+            return ["lat": lat,"long": long, "number_star": star, "radius": distance]
             
         case .getWalletHistory( let startDate, let toDate, let offset, let limit):
             return ["star_date": startDate, "to_date": toDate, "offset": offset, "limit": limit]
