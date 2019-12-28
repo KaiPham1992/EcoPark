@@ -64,7 +64,7 @@ class ParkingSortView: BaseViewXib {
             lbTime.attributedText = attr
             
             imgIcon.sd_setImage(with: parking.url, placeholderImage: AppImage.imgPlaceHolder)
-            vRating.lbNumberRating.text = parking.total_rating
+            vRating.lbNumberRating.text = "(\(parking.total_rating&))"
         }
     }
 }

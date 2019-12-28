@@ -75,12 +75,12 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
                 }
             }
             
-            if self.idBookingCheckIn != "" {
-                self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
+            if self.isHaveReserver  {
+                 self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
             } else {
                 // have reserver
-                if self.isHaveReserver {
-                    self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
+                if self.idBookingCheckIn != "" {
+                    self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
                 } else {
                     self.navigationController?.navigationItem.rightBarButtonItem = nil
                 }
@@ -176,14 +176,18 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.viewWillAppear(animated)
         setUpNavigation()
         
-        if address == "" {
-            btnFilter.isEnabled = false
-        } else {
-            btnFilter.isEnabled = true
-        }
+        setFilter()
         
         checkIconCheckInCheckOut()
         presenter?.getProfileUser()
+    }
+    
+    func setFilter() {
+        if address == "" {
+                   btnFilter.isEnabled = false
+               } else {
+                   btnFilter.isEnabled = true
+               }
     }
     
     override func setUpViews() {
@@ -422,6 +426,7 @@ extension HomeViewController: GMSMapViewDelegate {
                 }
                 self.vSearch.tfInput.text = resultAddress
                 self.address = resultAddress
+                self.setFilter()
         })
        
     }
