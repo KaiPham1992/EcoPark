@@ -42,10 +42,14 @@ class PriceCheckoutCell: UITableViewCell {
         self.lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
         self.lbPriceComboPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
         self.lbHoldingTime.text = "\(_historyParkingDetail.numberHours ?? 0)"
-        self.lblPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
-        self.lbPaidPrice.text = _historyParkingDetail.money_paid?.toCurrencyNoVND
-        self.lbPaidWithWalletPrice.text = _historyParkingDetail.payment_wallet?.toCurrencyNoVND
-        self.lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrencyNoVND
+        self.lblPrice.text = _historyParkingDetail.price?.toCurrencyNoVND ?? "0"
+        self.lbPaidPrice.text = _historyParkingDetail.money_paid?.toCurrencyNoVND ?? "0"
+        self.lbPaidWithWalletPrice.text = historyParkingDetail?.payment_wallet?.toCurrencyNoVND ?? "0"
+        self.lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrencyNoVND ?? "0"
+        
+        if historyParkingDetail?.status == StatusBooking.expired.rawValue || historyParkingDetail?.status == StatusBooking.cancel.rawValue {
+            self.lblPrice.text = "0"
+        }
     }
     
 }

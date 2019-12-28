@@ -33,7 +33,6 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
         
         setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
-        lbStatus.text = LocalizableKey.checked_out.showLanguage
         lbID.text = historyParkingDetail?.code
         
             getData()
@@ -46,6 +45,19 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
     func didGetCheckoutDetail(historyDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyDetail
         lbID.text = historyDetail?.code ?? ""
+        switch historyDetail?.status {
+        case StatusBooking.checked_out.rawValue:
+            lbStatus.text = LocalizableKey.checked_out.showLanguage
+        case StatusBooking.expired.rawValue:
+            lbStatus.text = LocalizableKey.expired.showLanguage
+            lbStatus.textColor = .red
+        case StatusBooking.cancel.rawValue:
+            lbStatus.text = LocalizableKey.canceled.showLanguage
+            lbStatus.textColor = .red
+        default:
+            break
+        }
+        
         tbCheckoutDetail.reloadData()
     }
 }
