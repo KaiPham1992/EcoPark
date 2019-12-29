@@ -21,6 +21,7 @@ protocol HistoryPartnerDetailCheckinPresenterProtocol: class {
     func getHistoryParkingDetailCheckIn(parkingID: String, bookingID: String)
     func checkoutParking(bookingID: String, code: String, licensePlates: String)
     func changeStatusCheckout(bookingID: String)
+    
 }
 
 //MARK: Interactor -

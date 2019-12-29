@@ -233,6 +233,24 @@
 		1792FE7523867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		1792FE7623867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		1792FE7723867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
+		17B9197C23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
+		17B9197D23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
+		17B9197E23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
+		17B9197F23B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */; };
+		17B9198023B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */; };
+		17B9198123B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */; };
+		17B9198223B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */; };
+		17B9198323B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */; };
+		17B9198423B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */; };
+		17B9198523B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */; };
+		17B9198623B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */; };
+		17B9198723B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */; };
+		17B9198823B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */; };
+		17B9198923B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */; };
+		17B9198A23B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */; };
+		17B9198B23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */; };
+		17B9198C23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */; };
+		17B9198D23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */; };
 		17BAF899236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
 		17BAF89A236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
 		17BAF89B236EAB650066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
@@ -1750,6 +1768,12 @@
 		17848B6923803057008B3A85 /* ImageParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageParkingViewController.xib; sourceTree = "<group>"; };
 		1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPriceCheckoutCell.swift; sourceTree = "<group>"; };
 		1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPriceCheckoutCell.xib; sourceTree = "<group>"; };
+		17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainPresenter.swift; sourceTree = "<group>"; };
+		17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainRouter.swift; sourceTree = "<group>"; };
+		17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainViewController.swift; sourceTree = "<group>"; };
+		17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainProtocols.swift; sourceTree = "<group>"; };
+		17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainInteractor.swift; sourceTree = "<group>"; };
+		17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerDetailCheckAgainViewController.xib; sourceTree = "<group>"; };
 		17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingPresenter.swift; sourceTree = "<group>"; };
 		17BAF894236EAB640066BD29 /* HistoryPartnerDetailBookingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingRouter.swift; sourceTree = "<group>"; };
 		17BAF895236EAB640066BD29 /* HistoryPartnerDetailBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingViewController.swift; sourceTree = "<group>"; };
@@ -2452,9 +2476,23 @@
 			path = OtherPriceCheckoutCell;
 			sourceTree = "<group>";
 		};
+		17B9197523B86AD70089B936 /* HistoryPartnerDetailCheckAgain */ = {
+			isa = PBXGroup;
+			children = (
+				17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */,
+				17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */,
+				17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */,
+				17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */,
+				17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */,
+				17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */,
+			);
+			path = HistoryPartnerDetailCheckAgain;
+			sourceTree = "<group>";
+		};
 		17BAF890236EAAE60066BD29 /* HistoryPartnerDetail */ = {
 			isa = PBXGroup;
 			children = (
+				17B9197523B86AD70089B936 /* HistoryPartnerDetailCheckAgain */,
 				17BAF8AB236EABD80066BD29 /* Cells */,
 				17389E4823851B2C00ABED8B /* HistoryPartnerDetailCheckout */,
 				17BAF892236EAB420066BD29 /* HistoryPartnerDetailCheckin */,
@@ -4590,6 +4628,7 @@
 				17BAF8B2236EAC5C0066BD29 /* TimeParkingCell.xib in Resources */,
 				1735228B236EB1EA004C889B /* PriceCell.xib in Resources */,
 				7666FC80236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				17B9198B23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */,
 				2A07B9A3236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
@@ -4720,6 +4759,7 @@
 				17BAF8B3236EAC5C0066BD29 /* TimeParkingCell.xib in Resources */,
 				1735228C236EB1EA004C889B /* PriceCell.xib in Resources */,
 				7666FC81236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				17B9198C23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */,
 				2A07B9A4236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
@@ -4850,6 +4890,7 @@
 				17BAF8B4236EAC5C0066BD29 /* TimeParkingCell.xib in Resources */,
 				1735228D236EB1EA004C889B /* PriceCell.xib in Resources */,
 				7666FC82236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				17B9198D23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */,
 				2A07B9A5236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
@@ -5126,6 +5167,7 @@
 				172D097D236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				22B1DC5B23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */,
+				17B9198823B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				761A47442371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -5249,6 +5291,7 @@
 				B1F00D2E23842AFB00B12701 /* BookingEndPoint.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
 				76662853236D888300019B4E /* PaymentPopUp.swift in Sources */,
+				17B9197F23B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */,
 				22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
 				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
@@ -5289,6 +5332,7 @@
 				DE89D1EF22A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FA92287DD2A00E3F688 /* Login+Facebook.swift in Sources */,
 				22BE84DA236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				17B9198523B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */,
 				DE2ADE7622841BB9003768CE /* MenuRouter.swift in Sources */,
 				DE952F9D2287D2A700E3F688 /* KActivityIndicatorView.swift in Sources */,
 				17FCC5FF236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -5393,6 +5437,7 @@
 				2238872A2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE952F852287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				17FFE274236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
+				17B9198223B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */,
 				DE952FA12287D2A700E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17C7FB8E23700A1800ACE95D /* AppPhoto.swift in Sources */,
 				2A138E532376CB1600B74458 /* DetailTransactionCustomerViewController.swift in Sources */,
@@ -5434,6 +5479,7 @@
 				2203D56A23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				DE361E6A2283E60500FA3B0D /* AppFont.swift in Sources */,
 				2A456814236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
+				17B9197C23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */,
 				766AE7EA22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				76FBA1D6236EE08B00DD92D2 /* NotificationDetailPresenter.swift in Sources */,
 				1717E0E9236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
@@ -5565,6 +5611,7 @@
 				172D097E236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				22B1DC5C23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */,
+				17B9198923B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				761A47452371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -5688,6 +5735,7 @@
 				B1F00D2F23842AFB00B12701 /* BookingEndPoint.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
 				76662854236D888300019B4E /* PaymentPopUp.swift in Sources */,
+				17B9198023B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */,
 				22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
 				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
@@ -5728,6 +5776,7 @@
 				DE89D1F022A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FEA2287DF4800E3F688 /* Login+Facebook.swift in Sources */,
 				22BE84DB236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				17B9198623B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */,
 				DE952FEB2287DF4800E3F688 /* MenuRouter.swift in Sources */,
 				DE952FEC2287DF4800E3F688 /* KActivityIndicatorView.swift in Sources */,
 				17FCC600236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -5832,6 +5881,7 @@
 				DE95300D2287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE95300E2287DF4800E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17FFE275236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
+				17B9198323B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */,
 				DE95300F2287DF4800E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
 				17C7FB8F23700A1800ACE95D /* AppPhoto.swift in Sources */,
 				2A138E542376CB1600B74458 /* DetailTransactionCustomerViewController.swift in Sources */,
@@ -5873,6 +5923,7 @@
 				DE95301C2287DF4800E3F688 /* AppFont.swift in Sources */,
 				766AE7EB22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				2A456815236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
+				17B9197D23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */,
 				DE95301D2287DF4800E3F688 /* SignUpPresenter.swift in Sources */,
 				76FBA1D7236EE08B00DD92D2 /* NotificationDetailPresenter.swift in Sources */,
 				1717E0EA236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
@@ -6004,6 +6055,7 @@
 				172D097F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
 				22B1DC5D23A9D0010041A03C /* SelectCarPopUpContent.swift in Sources */,
+				17B9198A23B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				761A47462371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -6127,6 +6179,7 @@
 				B1F00D3023842AFB00B12701 /* BookingEndPoint.swift in Sources */,
 				76FBA1E1236EE08B00DD92D2 /* NotificationDetailProtocols.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
+				17B9198123B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */,
 				76662855236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
@@ -6167,6 +6220,7 @@
 				DE9530942287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				DE9530952287DF6400E3F688 /* RecordParam.swift in Sources */,
 				22BE84DC236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				17B9198723B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */,
 				DE9530962287DF6400E3F688 /* Utils.swift in Sources */,
 				2220A78B235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */,
 				17FCC601236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -6271,6 +6325,7 @@
 				DE9530BB2287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE9530BC2287DF6400E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17FFE276236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
+				17B9198423B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */,
 				DE9530BD2287DF6400E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
 				17C7FB9023700A1800ACE95D /* AppPhoto.swift in Sources */,
 				2A138E552376CB1600B74458 /* DetailTransactionCustomerViewController.swift in Sources */,
@@ -6312,6 +6367,7 @@
 				766AE7EC22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DE9530CB2287DF6400E3F688 /* SignUpPresenter.swift in Sources */,
 				2A456816236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
+				17B9197E23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */,
 				DE9530CC2287DF6400E3F688 /* AppDropDown.swift in Sources */,
 				76FBA1D8236EE08B00DD92D2 /* NotificationDetailPresenter.swift in Sources */,
 				1717E0EB236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
