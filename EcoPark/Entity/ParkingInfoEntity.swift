@@ -139,15 +139,19 @@ class MaterialEntity: BaseEntity {
     
     var urlOn: URL? {
         if icon& == "" {
-            return nil
+            return URL(string: "\(BASE_URL_IMAGE)\(unset_icon&)")
         }
         
         return URL(string: "\(BASE_URL_IMAGE)\(icon&)")
     }
     
     var urlOff: URL? {
-           return URL(string: "\(BASE_URL_IMAGE)\(unset_icon&)")
-       }
+        if icon& == "" {
+            return URL(string: "\(BASE_URL_IMAGE)\(unset_icon&)")
+        }
+        
+        return URL(string: "\(BASE_URL_IMAGE)\(icon&)")
+    }
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -155,9 +159,15 @@ class MaterialEntity: BaseEntity {
         id <- map["_id"]
         name <- map["name"]
         plain_name <- map["plain_name"]
-        is_active <- map["is_active"]
+        
         icon <- map["icon"]
         unset_icon <- map["unset_icon"]
+        
+        if unset_icon == nil {
+            is_active = "0"
+        } else {
+            is_active = "1"
+        }
     }
 }
 

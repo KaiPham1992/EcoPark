@@ -30,7 +30,7 @@ class ParkingSortView: BaseViewXib {
             btnBooking.setTitle(LocalizableKey.Booking.showLanguage, for: .normal)
             lbName.text = parking.parking_name
             lbTypeName.text = parking.parking_type_name
-           
+            
             if let price = parking.price {
                 let hour = price > 1 ? LocalizableKey.Hour.showLanguage: LocalizableKey.Hour.showLanguage
                 lbPrice.text = price.toCurrency + "/ \(hour)"
@@ -42,7 +42,7 @@ class ParkingSortView: BaseViewXib {
             }
             
             if let rating = parking.rating {
-                 vRating.setStar(number: rating)
+                vRating.setStar(number: rating)
             } else {
                 vRating.setStar(number: 0.0)
             }
@@ -64,7 +64,13 @@ class ParkingSortView: BaseViewXib {
             lbTime.attributedText = attr
             
             imgIcon.sd_setImage(with: parking.url, placeholderImage: AppImage.imgPlaceHolder)
-            vRating.lbNumberRating.text = "(\(parking.total_rating&))"
+            //            vRating.lbNumberRating.text = "(\(parking.total_rating&))"
+            
+            if parking.total_rating& != "" {
+                vRating.lbNumberRating.text = "(\(parking.total_rating&))"
+            } else {
+                vRating.lbNumberRating.text = ""
+            }
         }
     }
 }
