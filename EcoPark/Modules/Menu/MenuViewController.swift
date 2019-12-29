@@ -176,9 +176,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         tbMenu.reloadData()
     }
     
-    @objc func btnLanguageTapped() {
+    @objc func btnLanguageTapped(sender: UIButton) {
         LanguageHelper.changeLanguage()
         AppRouter.shared.openHomeView()
+       
     }
 }
 

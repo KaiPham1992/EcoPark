@@ -122,7 +122,7 @@ class UtilityViewCell: UICollectionViewCell {
             }
             
             //----
-            if  utility.is_active == "0" {
+            if  utility.is_active == "1" {
                 self.setBorder(borderWidth: 1, borderColor: AppColor.color_0_129_255, cornerRadius: 10)
                 imgIcon.tintColor = AppColor.color_0_129_255
                 self.lbName.textColor = AppColor.color_0_129_255

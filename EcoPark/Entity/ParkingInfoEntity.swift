@@ -64,7 +64,6 @@ class ParkingInfoEntity: BaseEntity {
         self.create_time <- (map["create_time"], TimeTramsform())
         self.time_start <- (map["time_start"], AppTimestampTransform())
         self.time_end <- (map["time_end"], AppTimestampTransform())
-        
         self.lat <- (map["lat"], StringToDoubleTransform())
         self.long <- (map["long"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToDoubleTransform())
@@ -111,7 +110,7 @@ class MaterialEntity: BaseEntity {
     var id: String?
     var name: String?
     var plain_name: String?
-    var is_active: String?
+    var is_active: String? = "0"
     var icon: String?
     var unset_icon: String?
     var type: UtilityModelType? {
@@ -162,12 +161,13 @@ class MaterialEntity: BaseEntity {
         
         icon <- map["icon"]
         unset_icon <- map["unset_icon"]
+        is_active <- map["is_select"]
         
-        if unset_icon == nil {
-            is_active = "0"
-        } else {
-            is_active = "1"
-        }
+//        if unset_icon == nil {
+//            is_active = "0"
+//        } else {
+//            is_active = "1"
+//        }
     }
 }
 
