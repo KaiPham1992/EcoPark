@@ -91,6 +91,8 @@ class MenuCell: BaseTableCell {
             }
             
             lbLanguage.isHidden = menuItem.imgIcon != AppImage.imgLanguage
+            btnLanguage.isHidden = menuItem.imgIcon != AppImage.imgLanguage
+            
             vNotification.isHidden = true
             
             if totalUnread > 0 &&  menuItem.imgIcon == AppImage.imgNotification {
