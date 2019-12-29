@@ -46,6 +46,15 @@
 "extend" = "Renewal addination 1 hour ";
 "ratingOfuser" = "Customer reviews";
 
+// MARK: BookingPopUp
+"bookingPopUpTitle" = "Parking address";
+"bookingPopUpAttr1" = "The placeholder is valid in ";
+"bookingPopUpAttr2" = "hours from the scheduled time ";
+"bookingPopUpAttr3" = " please be on time";
+"bookingPopUpDirect" = "Get directions to the parking lot";
+"bookingPopUpDetail" = "See transaction details";
+"bookingParkingDetail" = "See parking details";
+
 // MARK: ParkingUserDetailViewController
 "titleParkDetail" = "Parking Detail";
 "titleType" = "Parking type";
