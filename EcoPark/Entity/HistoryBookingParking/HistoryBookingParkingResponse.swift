@@ -50,6 +50,7 @@ class HistoryBookingParkingResponse : BaseEntity {
     var time_check_in: Date?
     var numberHours: Double?
     var rating: Double?
+    var parking_price: Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -106,6 +107,7 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.numberHours <- (map["number_hours"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToDoubleTransform())
         self.receivables <- (map["receivables"], StringToDoubleTransform())
+        self.parking_price <- (map["parking_price"], StringToDoubleTransform())
     }
     
     var urlQRCode:  URL? {
