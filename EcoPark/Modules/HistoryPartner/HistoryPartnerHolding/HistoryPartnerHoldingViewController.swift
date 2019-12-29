@@ -172,7 +172,7 @@ extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
-        presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "")
+        presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? "0")", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
         self.historyBookingParkingResponse = historyParkingDetail
         
     }

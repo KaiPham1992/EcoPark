@@ -38,7 +38,7 @@ class PageHistoryPartnerViewControler : PageViewController {
     @objc func checkQrCode() {
         let vc = HistoryPartnerQRScannerRouter.createModule(isCheckIn: false)
         vc.completionCode = { code in
-           ///call api checkout
+            ///call api checkout
             
             guard let qrcode = code as? [String] else { return }
             if qrcode.count > 5 {
@@ -59,10 +59,14 @@ class PageHistoryPartnerViewControler : PageViewController {
     
     func callAPICheckout(bookingID: String, code: String, license_plates: String) {
         ProgressView.shared.showProgressOnWindow()
-        Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
-            Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (historyParking) in
+        Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in Provider.shared.parkingAPIService.changeStatusCheckout(bookingID: bookingID,
+                                                                                                                                                                                                                  bonus: "\(historyParking?.bonus ?? 0)",
+                                                                                                                                                                                                                  plus_wallet_boss: "\(historyParking?.plus_wallet_boss ?? "0")",
+                                                                                                                                                                                                                  parking_price: "\(historyParking?.parking_price ?? 0)",
+                                                                                                                                                                                                                  payment_wallet: "\(historyParking?.payment_wallet ?? 0)",
+                                                                                                                                                                                                                  success: { (parkingDetail) in
                 ProgressView.shared.hide()
-                self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: historyParking?.id ?? "", parkingID: historyParking?.parking_id ?? ""))
+                self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: parkingDetail?.id ?? "", parkingID: parkingDetail?.parking_id ?? ""))
             }) { (_) in
                 ProgressView.shared.hide()
             }

@@ -20,7 +20,7 @@ protocol HistoryPartnerDetailCheckAgainPresenterProtocol: class {
     var interactor: HistoryPartnerDetailCheckAgainInteractorInputProtocol? { get set }
     func getHistoryParkingDetailCheckIn(parkingID: String, bookingID: String)
     func checkoutParking(bookingID: String, code: String, licensePlates: String)
-    func changeStatusCheckout(bookingID: String)
+    func changeStatusCheckout(bookingID: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String)
 }
 
 //MARK: Interactor -

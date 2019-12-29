@@ -21,7 +21,7 @@ protocol HistoryPartnerHoldingPresenterProtocol: class {
     
     func getHistoryReservation(parkingID: String, status: String, keyword: String, offset: Int, limit: Int)
     func checkoutParking(bookingID: String, code: String, licensePlates: String)
-    func changeStatusCheckout(booking: String)
+    func changeStatusCheckout(booking: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String)
 }
 
 //MARK: Interactor -

@@ -35,7 +35,8 @@ class HistoryBookingParkingResponse : BaseEntity {
     var intend_checkout_time: Date?
     var money_paid: Double?
     var payment_wallet: Double?
-    var plus_wallet_boss: Double?
+    var plus_wallet_boss: String?
+    var plus_wallet_boss_Double: Double?
     var receivables: Double?
     var parking_details: ParkingInfoEntity?
     var current_server_time: Date?
@@ -102,12 +103,22 @@ class HistoryBookingParkingResponse : BaseEntity {
         self.real_money <- (map["real_money"], StringToDoubleTransform())
         self.bonus <- (map["bonus"], StringToDoubleTransform())
         self.customer_payment_wallet <- (map["customer_payment_wallet"], StringToDoubleTransform())
-        self.plus_wallet_boss <- (map["plus_wallet_boss"], StringToDoubleTransform())
+        self.plus_wallet_boss <- (map["plus_wallet_boss"])
+        self.plus_wallet_boss_Double <- (map["plus_wallet_boss"], StringToDoubleTransform())
         self.qrCode <- map["qr_code"]
         self.numberHours <- (map["number_hours"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToDoubleTransform())
         self.receivables <- (map["receivables"], StringToDoubleTransform())
         self.parking_price <- (map["parking_price"], StringToDoubleTransform())
+        if self.parking_price == nil {
+            self.parking_price <- (map["parking_price"])
+        }
+        if self.bonus == nil {
+            self.bonus <- (map["bonus"])
+        }
+        if self.payment_wallet == nil {
+            self.payment_wallet <- (map["payment_wallet"])
+        }
     }
     
     var urlQRCode:  URL? {

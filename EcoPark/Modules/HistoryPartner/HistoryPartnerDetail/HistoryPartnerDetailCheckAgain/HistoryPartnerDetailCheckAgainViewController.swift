@@ -64,7 +64,7 @@ class HistoryPartnerDetailCheckAgainViewController: BaseViewController, HistoryP
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyParkingDetail
-        presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "")
+        presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? "0")", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
         
     }
     

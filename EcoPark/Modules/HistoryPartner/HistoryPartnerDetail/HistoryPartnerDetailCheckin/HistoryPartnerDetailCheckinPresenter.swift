@@ -43,11 +43,18 @@ class HistoryPartnerDetailCheckinPresenter: HistoryPartnerDetailCheckinPresenter
         }
     }
     
-    func changeStatusCheckout(bookingID: String) {
+    func changeStatusCheckout(bookingID: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String) {
         ProgressView.shared.showProgressOnWindow()
-        Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (historyCheckout) in
+//        Provider.shared.bookingAPIService.checkOut(bookingId: bookingID, success: { (historyCheckout) in
+//            ProgressView.shared.hide()
+//            self.view?.didChangeStatusCheckout(historyCheckout: historyCheckout)
+//        }) { (_) in
+//            ProgressView.shared.hide()
+//        }
+        Provider.shared.parkingAPIService.changeStatusCheckout(bookingID: bookingID, bonus: bonus, plus_wallet_boss: plus_wallet_boss, parking_price: parking_price, payment_wallet: payment_wallet, success: { (historyCheckout) in
             ProgressView.shared.hide()
-            self.view?.didChangeStatusCheckout(historyCheckout: historyCheckout)
+            guard let _historyCheckout = historyCheckout else { return }
+            self.view?.didChangeStatusCheckout(historyCheckout: _historyCheckout)
         }) { (_) in
             ProgressView.shared.hide()
         }
