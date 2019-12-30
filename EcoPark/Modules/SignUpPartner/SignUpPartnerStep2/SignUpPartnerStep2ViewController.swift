@@ -34,6 +34,9 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var lbError: UILabel!
+    @IBOutlet weak var lbVndTime: UILabel!
+    @IBOutlet weak var lbVndPacKet: UILabel!
+    
     var presenter: SignUpPartnerStep2PresenterProtocol?
     
     var param: BossRegisterParam?
@@ -67,6 +70,9 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         lbPrice.text = LocalizableKey.parkingPrice.showLanguage.uppercased()
         lbLicense.text = LocalizableKey.parkingLicense.showLanguage.uppercased()
         
+        lbVndTime.text = "VND" + LocalizableKey.eachHours.showLanguage
+        lbVndPacKet.text = "VND" + LocalizableKey.eachPackage.showLanguage
+        
         vParkingName.setTitleAndPlaceHolder(title: LocalizableKey.parkingName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.setTitleAndPlaceHolder(title: LocalizableKey.parkingType.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingCapacity.setTitleAndPlaceHolder(title: LocalizableKey.parkingCapacity.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -91,6 +97,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         setTime()
         vStep.btnStep1.addTarget(self, action: #selector(btnStep1Tapped), for: .touchUpInside)
         vStep.btnStep3.addTarget(self, action: #selector(btnStep3Tapped), for: .touchUpInside)
+        vPriceAHours.tfInput.delegate = self
+        vPriceCombo.tfInput.delegate = self
     }
     
     @objc func btnStep1Tapped() {
@@ -99,6 +107,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @objc func btnStep3Tapped() {
         if validateInputData() {
+            let price = vPriceAHours.tfInput.text?.replacingOccurrences(of: ",", with: "")
+            let packetPrice = vPriceCombo.tfInput.text?.replacingOccurrences(of: ",", with: "")
             let param2 = BossRegisterParam(email: self.param?.email,
                                            fullname: self.param?.fullname,
                                            gender: self.param?.gender,
@@ -117,8 +127,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
                                            time_start: vOpen.getText(),
                                            time_end: vClose.getText(),
                                            code_tax: vTaxCode.getText(),
-                                           price: vPriceAHours.getText(),
-                                           package_price: vPriceCombo.getText(),
+                                           price: price,
+                                           package_price: packetPrice,
                                            material: [],
                                            parking_img_src: [],
                                            latAddress: lat,
@@ -164,6 +174,9 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @IBAction func btnNextTapped() {
         if validateInputData() {
+            let price = vPriceAHours.tfInput.text?.replacingOccurrences(of: ",", with: "")
+            let packetPrice = vPriceCombo.tfInput.text?.replacingOccurrences(of: ",", with: "")
+            
             let param2 = BossRegisterParam(email: self.param?.email,
                                            fullname: self.param?.fullname,
                                            gender: self.param?.gender,
@@ -182,8 +195,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
                                            time_start: vOpen.getText(),
                                            time_end: vClose.getText(),
                                            code_tax: vTaxCode.getText(),
-                                           price: vPriceAHours.getText(),
-                                           package_price: vPriceCombo.getText(),
+                                           price: price,
+                                           package_price: packetPrice,
                                            material: [],
                                            parking_img_src: [],
                                            latAddress: lat,
@@ -324,18 +337,14 @@ extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
     
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
         self.listParkingType = listParkingType
-//        if LanguageHelper.currentAppleLanguage() == "en" {
-//            vParkingType.listItem = listParkingType.map({$0.key&})
-//        } else {
-            vParkingType.listItem = listParkingType.map({$0.name&})
-//        }
+        vParkingType.listItem = listParkingType.map({$0.name&})
         
     }
 }
 
 extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
     func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
-    
+        
         parkingTypeID = listParkingType[index]._id ?? ""
     }
 }
@@ -353,5 +362,41 @@ extension SignUpPartnerStep2ViewController: HomeFindViewControllerDelegate {
     }
     
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+    }
+}
+extension SignUpPartnerStep2ViewController: UITextFieldDelegate {
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Uses the number format corresponding to your Locale
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = Locale.current
+        formatter.maximumFractionDigits = 0
+        
+        
+        // Uses the grouping separator corresponding to your Locale
+        // e.g. "," in the US, a space in France, and so on
+        if let groupingSeparator = formatter.groupingSeparator {
+            
+            if string == groupingSeparator {
+                return true
+            }
+            
+            
+            if let textWithoutGroupingSeparator = textField.text?.replacingOccurrences(of: groupingSeparator, with: "") {
+                var totalTextWithoutGroupingSeparators = textWithoutGroupingSeparator + string
+                if string.isEmpty { // pressed Backspace key
+                    totalTextWithoutGroupingSeparators.removeLast()
+                }
+                if let numberWithoutGroupingSeparator = formatter.number(from: totalTextWithoutGroupingSeparators),
+                    let formattedText = formatter.string(from: numberWithoutGroupingSeparator) {
+                    
+                    textField.text = formattedText
+                    return false
+                }
+            }
+        }
+        return true
     }
 }
