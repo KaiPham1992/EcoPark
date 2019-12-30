@@ -115,10 +115,10 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     }
     
     @IBAction func btnDoneTapped() {
+        let listMaterialActive = vUtility.utilyties.filter({$0.is_active == "1"})
+        listMaterial = listMaterialActive.map({$0.id&})
         if validateInputData() {
             url_listImage = vPhoto.listImage.map({ $0.url& })
-            let listMaterialActive = vUtility.utilyties.filter({$0.is_active == "1"})
-            listMaterial = listMaterialActive.map({$0.id&})
             
             let paramInput = BossRegisterParam(email: param?.email,
                                                fullname: param?.fullname,
@@ -177,6 +177,8 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     
     func didUploadImage(photo: PhotoEntity?) {
         url_listImage.append((photo?.imgSrc)&)
+        self.btnDone.isEnabled = true
+        self.btnDone.backgroundColor = AppColor.color_0_129_255
     }
     
     func didGetListMaterial(listMaterial: [MaterialEntity]) {

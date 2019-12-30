@@ -145,7 +145,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
             self.imgFrontPhoto.image = _image
             self.btnDeletePhotoFront.isHidden = false
             self.presenter?.uploadImageFront(image: _image)
-            
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -155,6 +156,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
             self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
             self.presenter?.uploadImageBackside(image: _image)
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -213,10 +216,14 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     
     func didUploadImageFront(photo: PhotoEntity?) {
         self.urlPhotoIDFront = (photo?.imgSrc)&
+        btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
     
     func didUploadImageBackside(photo: PhotoEntity?) {
         self.urlPhotoIDBackside = (photo?.imgSrc)&
+        btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
 }
 

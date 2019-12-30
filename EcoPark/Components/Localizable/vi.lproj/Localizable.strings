@@ -198,7 +198,7 @@
 "errorIDNumber" = "Vui lòng nhập số chứng minh nhân dân";
 "errorIssueBy" = "Vui lòng nhập nơi cấp";
 "errorDateBy" = "Vui lòng chọn ngày cấp";
-"errorPhotoFront" = "Vui lòng chọn ảnh mặt trước chứ minh nhân dân";
+"errorPhotoFront" = "Vui lòng chọn ảnh mặt trước chứng minh nhân dân";
 "errorPhotoBackside" = "Vui lòng chọn ảnh mặt sau chứng minh nhân dân";
 
 // Sign Up Partner 2
