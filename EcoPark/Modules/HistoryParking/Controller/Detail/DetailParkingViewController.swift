@@ -303,6 +303,14 @@ class DetailParkingViewController: BaseViewController {
         case StatusBooking.reservation.rawValue:
             DLVCheckIn.setValueText(text: "-")
             DLVCheckOut.setValueText(text: "-")
+//            heightPricePayment.constant = 0
+//            heightAddWallet.constant = 0
+//            heightAddCash.constant = 0
+            
+            DLVPriceParking.isHidden = true
+            DLVAddForWallet.isHidden = true
+            DLVAddForMoney.isHidden = true
+            
         case StatusBooking.checked_in.rawValue:
             if let checkInTime = info.time_check_in {
                 DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))

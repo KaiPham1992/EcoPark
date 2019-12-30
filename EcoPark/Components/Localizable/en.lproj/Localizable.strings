@@ -226,7 +226,7 @@
 "PartnerInfo" = "Partner Information";
 "PartnerName" = "Partner Name *";
 "PartnerID" = "Identity card number / CCCD Partner *";
-"IssuedBy" = "Issue By *";
+"IssuedBy" = "Issued By *";
 "DayBy" = "Day By *";
 "PartnerEmail" = "Partner Email";
 "PartnerImage" = "AUTHENTICIAL PICTURE";
