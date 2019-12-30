@@ -159,7 +159,7 @@ extension LoginViewController: LoginViewProtocol {
     }
     
     func didError(error: APIError?) {
-        guard let message = error?.message else { return }
+//        guard let message = error?.message else { return }
         UserDefaultHelper.shared.clearUser()
         hideError(isHidden: false, message:  LocalizableKey.INVALID_USERNAME_OR_PASSWORD.showLanguage)
     }
