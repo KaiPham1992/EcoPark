@@ -12,7 +12,6 @@ import UIKit
 
 class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3ViewProtocol {
     
-    
     @IBOutlet weak var vStep: PartnerStepView!
     @IBOutlet weak var lbUtility: UILabel!
     @IBOutlet weak var lbImage: UILabel!
@@ -154,6 +153,9 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     }
     
     func validateInputData() -> Bool {
+        let listMaterialActive = vUtility.utilyties.filter({$0.is_active == "1"})
+        listMaterial = listMaterialActive.map({$0.id&})
+        
         if listImageParking.count <= 1 {
             hideError(isHidden: false, message:  LocalizableKey.errorMinimunPhoto.showLanguage)
             return false
@@ -180,7 +182,8 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     }
     
     func didGetListMaterial(listMaterial: [MaterialEntity]) {
-        vUtility.utilyties = listMaterial
+        vUtility.utilyties = listMaterial.sorted{$0.id& < $1.id&}
+        
         let listMaterialActive = vUtility.utilyties.filter({$0.is_active == "1"})
         self.listMaterial = listMaterialActive.map({$0.id&})
     }

@@ -80,8 +80,14 @@ class ParkingInfoCell: UITableViewCell {
             vParkingType.listItem = listItem.map({$0.name&})
         }
         parkingTypeID = parkingInfo?.type_id ?? ""
-        cvUtility.utilyties = parkingInfo?.material ?? []
-        
+//        cvUtility.utilyties = parkingInfo?.material ?? []
+    if let material = parkingInfo?.material {
+               cvUtility.utilyties = material.sorted{$0.id& < $1.id&}
+               } else {
+                   cvUtility.utilyties = []
+               }
+               
+           
     }
     
     @objc func textFieldDidChanged() {
