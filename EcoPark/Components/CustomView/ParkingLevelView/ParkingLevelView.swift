@@ -46,7 +46,7 @@ class ParkingLevelView: BaseViewXib {
     
     private func updateStar() {
         if listButtonStar[3].isSelected {
-            self.star = [1,2,3,4,5]
+            self.star = []
             setUnSelected(listButtonStar[0])
             setUnSelected(listButtonStar[1])
             setUnSelected(listButtonStar[2])
@@ -71,7 +71,7 @@ class ParkingLevelView: BaseViewXib {
             }
         }
         // Default
-        if self.star == [] { self.star = [1,2,3,4,5]}
+//        if self.star == [] { self.star = [1,2,3,4,5]}
     }
     
     private func addStar(_ star: Int) {
@@ -87,7 +87,7 @@ class ParkingLevelView: BaseViewXib {
     }
     
     func resetAll() {
-        star = [1,2,3,4,5]
+        star = []
         for btn in listButtonStar {
             setUnSelected(btn)
         }

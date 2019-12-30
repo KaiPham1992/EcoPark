@@ -32,8 +32,8 @@ class DatePicker: BaseViewXib{
                 return
             }
             self.dateSelected = date
-            self.date = date.toString(dateFormat: AppDateFormat.ddMMyyyyy)
-            self.tfDate.text = date.toString(dateFormat: AppDateFormat.ddMMyyyyy)
+            self.date = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.tfDate.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
         })
     }
     

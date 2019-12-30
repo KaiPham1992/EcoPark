@@ -110,13 +110,12 @@ class UtilityViewCell: UICollectionViewCell {
         didSet {
             guard let utility = utility else { return }
             lbName.text = utility.name& == "" ? utility.plain_name&: utility.name
+            
             imgIcon.sd_setImage(with: utility.urlOn) { (image, _, _, _) in
                 self.imgIcon.image = image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-                if  utility.is_active == "0" {
-                    
+                if  utility.is_active == "1" {
                     self.imgIcon.tintColor = AppColor.color_0_129_255
                 } else {
-                    
                     self.imgIcon.tintColor = AppColor.color158_158_158
                 }
             }

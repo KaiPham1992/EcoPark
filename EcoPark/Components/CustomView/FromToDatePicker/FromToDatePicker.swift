@@ -65,7 +65,7 @@ class FromToDatePicker: BaseViewXib {
             }
             
             self.from = date
-            self.fieldFrom.text = date.toString(dateFormat: AppDateFormat.ddMMyyyyy)
+            self.fieldFrom.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
         })
     }
     
@@ -82,7 +82,7 @@ class FromToDatePicker: BaseViewXib {
                 return
             }
             self.to = date
-            self.fieldTo.text = date.toString(dateFormat: AppDateFormat.ddMMyyyyy)
+            self.fieldTo.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
         })
     }
 }

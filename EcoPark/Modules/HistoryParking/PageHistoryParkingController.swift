@@ -31,7 +31,6 @@ class PageHistoryParkingController : PageViewController {
         self.isHaveReserver = false
         
         Provider.shared.parkingAPIService.getDoingBooking(success: { array in
-            
             for booking in array {
                 if booking.status == "checked_in" {
                     self.idBookingCheckIn = booking.id&
@@ -42,12 +41,12 @@ class PageHistoryParkingController : PageViewController {
                 }
             }
             
-            if self.idBookingCheckIn != "" {
-                self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
+            if self.isHaveReserver  {
+                 self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
             } else {
                 // have reserver
-                if self.isHaveReserver {
-                    self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
+                if self.idBookingCheckIn != "" {
+                    self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
                 } else {
                     self.navigationController?.navigationItem.rightBarButtonItem = nil
                 }

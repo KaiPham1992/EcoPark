@@ -68,7 +68,7 @@ extension PaymentHelper: SKProductsRequestDelegate, SKPaymentTransactionObserver
 //            print("***********************: \(prodID)")
 ////            queue.finishTransaction(transaction)
             
-            let transactionDate = transaction.transactionDate?.toString(dateFormat: AppDateFormat.ddMMyyyyy)
+            let transactionDate = transaction.transactionDate?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
             let transactionId = transaction.transactionIdentifier&
             let productPurchaseId = transaction.payment.productIdentifier
             
