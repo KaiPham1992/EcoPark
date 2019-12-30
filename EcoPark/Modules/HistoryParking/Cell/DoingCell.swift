@@ -48,6 +48,11 @@ class DoingCell: UITableViewCell {
             DLVCheckin.lblTime.text = data.time_check_in?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
             DLVCheckout.lblTime.text = data.time_check_out?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
             lblPayment.text = (data.parking_price?.toCurrency ?? "0")
+            if let price = data.parking_price {
+                lblPayment.text = "\(price.toCurrencyNoVND )"
+            } else {
+                lblPayment.text = "\(data.money_paid?.toCurrencyNoVND ?? "0")"
+            }
         case StatusBooking.checked_in.rawValue:
             lblStatus.text = LocalizableKey.checked_in.showLanguage
             lblStatus.textColor = AppColor.color_13_196_68
