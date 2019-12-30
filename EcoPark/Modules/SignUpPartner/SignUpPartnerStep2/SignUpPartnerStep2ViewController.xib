@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,6 +28,8 @@
                 <outlet property="lbLicense" destination="bbq-aV-Uee" id="WUz-Aq-6aH"/>
                 <outlet property="lbParking" destination="sRR-dc-CTg" id="c9j-aJ-Pmi"/>
                 <outlet property="lbPrice" destination="LeD-M7-Qtp" id="jCO-jH-O7m"/>
+                <outlet property="lbVndPacKet" destination="Z3M-47-R1D" id="xkN-zc-KLY"/>
+                <outlet property="lbVndTime" destination="uW1-rd-7Uc" id="FJr-fd-hab"/>
                 <outlet property="vClose" destination="S9k-hy-5pe" id="Xjc-im-xB9"/>
                 <outlet property="vOpen" destination="aap-Cq-McA" id="Kku-qs-Ip0"/>
                 <outlet property="vParkingAddress" destination="6b3-hr-ebo" id="bil-CT-Bkn"/>
@@ -123,6 +125,12 @@
                                         <constraint firstAttribute="height" constant="70" id="nxq-pj-4My"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW1-rd-7Uc">
+                                    <rect key="frame" x="337" y="640" width="38" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frS-34-net" customClass="AppTextField" customModule="EcoPark_AppStore" customModuleProvider="target">
                                     <rect key="frame" x="16" y="681" width="364" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,6 +138,12 @@
                                         <constraint firstAttribute="height" constant="70" id="7rR-bl-nVi"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-47-R1D">
+                                    <rect key="frame" x="337" y="718" width="38" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbq-aV-Uee">
                                     <rect key="frame" x="16" y="767" width="40.5" height="20.5"/>
                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
@@ -286,6 +300,7 @@
                                 <constraint firstItem="S9k-hy-5pe" firstAttribute="height" secondItem="ItG-Ag-ITs" secondAttribute="height" id="9lA-dt-Z5o"/>
                                 <constraint firstItem="riA-2L-X9D" firstAttribute="width" secondItem="riA-2L-X9D" secondAttribute="height" multiplier="14:15" id="Aw5-uf-w9y"/>
                                 <constraint firstItem="geV-Q8-af0" firstAttribute="trailing" secondItem="frS-34-net" secondAttribute="trailing" id="CmW-ww-Brn"/>
+                                <constraint firstItem="uW1-rd-7Uc" firstAttribute="centerY" secondItem="Aki-1M-X6H" secondAttribute="centerY" constant="12" id="DMe-C9-u8l"/>
                                 <constraint firstItem="aap-Cq-McA" firstAttribute="height" secondItem="ItG-Ag-ITs" secondAttribute="height" id="Eag-i5-JrW"/>
                                 <constraint firstItem="riA-2L-X9D" firstAttribute="leading" secondItem="geV-Q8-af0" secondAttribute="leading" id="GVh-Dm-3rh"/>
                                 <constraint firstItem="geV-Q8-af0" firstAttribute="top" secondItem="bbq-aV-Uee" secondAttribute="bottom" constant="8" id="Gnu-ci-TPz"/>
@@ -302,8 +317,10 @@
                                 <constraint firstItem="S9k-hy-5pe" firstAttribute="leading" secondItem="aap-Cq-McA" secondAttribute="trailing" constant="16" id="OMy-yc-JWZ"/>
                                 <constraint firstAttribute="trailing" secondItem="pcG-ry-X3Z" secondAttribute="trailing" id="PdJ-j4-Yud"/>
                                 <constraint firstItem="RQS-Gt-N1N" firstAttribute="top" secondItem="O2G-Qx-wxr" secondAttribute="bottom" constant="8" id="PpQ-JZ-P7i"/>
+                                <constraint firstItem="uW1-rd-7Uc" firstAttribute="trailing" secondItem="Aki-1M-X6H" secondAttribute="trailing" constant="-5" id="RV4-Dw-tCb"/>
                                 <constraint firstItem="6b3-hr-ebo" firstAttribute="leading" secondItem="Plh-Kf-LGK" secondAttribute="leading" id="SPl-V8-CIb"/>
                                 <constraint firstItem="frS-34-net" firstAttribute="trailing" secondItem="S9k-hy-5pe" secondAttribute="trailing" id="Svq-Va-qLd"/>
+                                <constraint firstItem="Z3M-47-R1D" firstAttribute="centerY" secondItem="frS-34-net" secondAttribute="centerY" constant="12" id="VRI-ly-wql"/>
                                 <constraint firstItem="ItG-Ag-ITs" firstAttribute="trailing" secondItem="jQL-uw-Q53" secondAttribute="trailing" id="Vcj-XM-0jW"/>
                                 <constraint firstItem="jQL-uw-Q53" firstAttribute="top" secondItem="sRR-dc-CTg" secondAttribute="bottom" constant="16" id="W2I-UF-Zvd"/>
                                 <constraint firstItem="ItG-Ag-ITs" firstAttribute="top" secondItem="jQL-uw-Q53" secondAttribute="bottom" constant="8" id="XCL-PQ-igl"/>
@@ -316,6 +333,7 @@
                                 <constraint firstAttribute="trailing" secondItem="HSC-jd-yNK" secondAttribute="trailing" constant="5" id="dfl-le-U0x"/>
                                 <constraint firstItem="frS-34-net" firstAttribute="leading" secondItem="aap-Cq-McA" secondAttribute="leading" id="eW5-Q5-0HY"/>
                                 <constraint firstItem="pcG-ry-X3Z" firstAttribute="top" secondItem="jyF-zc-lIn" secondAttribute="top" id="ehh-gd-yRU"/>
+                                <constraint firstItem="Z3M-47-R1D" firstAttribute="trailing" secondItem="frS-34-net" secondAttribute="trailing" constant="-5" id="g0A-mC-Xqg"/>
                                 <constraint firstItem="pcG-ry-X3Z" firstAttribute="leading" secondItem="jyF-zc-lIn" secondAttribute="leading" id="gRE-gT-nyb"/>
                                 <constraint firstItem="Plh-Kf-LGK" firstAttribute="trailing" secondItem="ItG-Ag-ITs" secondAttribute="trailing" id="hxO-e1-9Xi"/>
                                 <constraint firstItem="Plh-Kf-LGK" firstAttribute="top" secondItem="ItG-Ag-ITs" secondAttribute="bottom" constant="8" id="lqa-go-E6s"/>
@@ -354,6 +372,14 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="153.59999999999999" y="292.80359820089956"/>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iOa-F2-Lf8">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-304" y="148"/>
+        </label>
     </objects>
     <resources>
         <image name="ic_add_image- 1" width="183" height="183"/>
