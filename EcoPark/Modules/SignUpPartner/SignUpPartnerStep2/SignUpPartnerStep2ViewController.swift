@@ -134,6 +134,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
             self.imgFrontPhoto.image = _image
             self.btnDeletePhotoFront.isHidden = false
             self.presenter?.uploadImageFront(image: _image)
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -143,6 +145,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
             self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
             self.presenter?.uploadImageBackside(image: _image)
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -308,19 +312,23 @@ extension SignUpPartnerStep2ViewController {
 extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
     func didUploadImageFront(photo: String?) {
         self.urlPhoto_gpkd_front = photo ?? ""
+        btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
     
     func didUploadImageBackside(photo: String?) {
         self.urlPhoto_gpkd_backside = photo ?? ""
+        self.btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
     
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
         self.listParkingType = listParkingType
-        if LanguageHelper.currentAppleLanguage() == "en" {
-            vParkingType.listItem = listParkingType.map({$0.key&})
-        } else {
+//        if LanguageHelper.currentAppleLanguage() == "en" {
+//            vParkingType.listItem = listParkingType.map({$0.key&})
+//        } else {
             vParkingType.listItem = listParkingType.map({$0.name&})
-        }
+//        }
         
     }
 }
