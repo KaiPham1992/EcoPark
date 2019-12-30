@@ -89,7 +89,7 @@ class ProfileViewController: BaseViewController {
         vDisplayname.tfInput.text = user?.fullName
         vPhoneNumber.tfInput.text = user?.phone
         vEmail.tfInput.text = user?.email
-        vBirthDay.tfInput.text = user?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+        vBirthDay.tfInput.text = user?.birthDay?.toString(dateFormat: AppDateFormat.ddMMyyyyy)
         imgAvatar.sd_setImage(with:  user?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
         if user?.gender == "female" {
             vGender.tfInput.text = LocalizableKey.female.showLanguage

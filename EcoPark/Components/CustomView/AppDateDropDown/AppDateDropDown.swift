@@ -47,7 +47,7 @@ class AppDateDropDown: BaseViewXib {
         popUp.showPopUp(currentDate: self.selectedDate, completionDate: { date in
             self.selectedDate = date
 //            print(date!.toString(dateFormat: AppDateFormat.ddMMYYYY))
-            self.tfInput.text = date?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.tfInput.text = date?.toString(dateFormat: AppDateFormat.ddMMyyyyy)
             self.delegateDropDown?.didChangedValue()
         })
     }

@@ -226,7 +226,7 @@
 "PartnerInfo" = "Partner Information";
 "PartnerName" = "Partner Name *";
 "PartnerID" = "Identity card number / CCCD Partner *";
-"IssuedBy" = "Issue By *";
+"IssuedBy" = "Issued By *";
 "DayBy" = "Day By *";
 "PartnerEmail" = "Partner Email";
 "PartnerImage" = "AUTHENTICIAL PICTURE";
@@ -242,7 +242,7 @@
 //error
 "errorNamePartner" = "Please enter parking owner";
 "errorIDNumber" = "Please enter ID Number";
-"errorIssueBy" = "Please enter issue by";
+"errorIssueBy" = "Please enter issued by";
 "errorDateBy" = "Please enter day by";
 "errorPhotoFront" = "Plesae select front photo ID card";
 "errorPhotoBackside" = "Plesae select backside photo ID card";

@@ -25,5 +25,6 @@ class PopUpSelectDateContent: BaseViewXib {
     override func setUpViews() {
         super.setUpViews()
         vPickerDate.datePickerMode = .date
+        vPickerDate.timeZone = TimeZone(secondsFromGMT: 7*60*60)
     }
 }
