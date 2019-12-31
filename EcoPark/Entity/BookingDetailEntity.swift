@@ -38,7 +38,8 @@ class BookingDetailEntity: BaseEntity {
     var rating: Int?
     var address: String?
     var qr_code: String?
-    
+    var number_hours: String?
+    var parking_price: Double?
     var qrUrl: URL? {
         return URL(string: "\(BASE_URL_IMAGE)\(qr_code&)")
     }
@@ -111,8 +112,8 @@ class BookingDetailEntity: BaseEntity {
         self.customer_payment_wallet <- (map["customer_payment_wallet"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToIntTransform())
         self.address <- map["address"]
-        
-        
+        self.number_hours <- map["number_hours"]
+        self.parking_price <- (map["parking_price"], StringToDoubleTransform())
     }
 }
 

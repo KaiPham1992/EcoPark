@@ -158,9 +158,8 @@ class DetailParkingViewController: BaseViewController {
             VTMinute.setUpTime(time: ddhhmm.2)
             VTDate.setUpTime(time: ddhhmm.0)
             
-            let numberParking = ddhhmm.0 * 24 + ddhhmm.1
             if status& != StatusBooking.checked_in.rawValue {
-                DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
+                DLVNumberParking.setValueText(text: (bookingDetailEntity?.number_hours ?? "0") + " " + LocalizableKey.hour.showLanguage)
             }
             
         default:
@@ -244,8 +243,8 @@ class DetailParkingViewController: BaseViewController {
     
     private func showMoney(info: BookingDetailEntity) {
         if info.status& != StatusBooking.checked_in.rawValue {
-            if let moneyPaid = info.money_paid {
-                DLVMoneyPayment.setValueText(text: moneyPaid.toCurrency)
+            if let package_price = info.parking_price {
+                DLVMoneyPayment.setValueText(text: package_price.toCurrency)
             }
             
             if let moneyPaid = info.parking_details?.price {
