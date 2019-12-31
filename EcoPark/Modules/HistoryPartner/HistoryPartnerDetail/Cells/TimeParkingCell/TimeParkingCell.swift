@@ -27,6 +27,7 @@ class TimeParkingCell: UITableViewCell {
     var checkinTime: TimeInterval = 0
     var checkoutTime: TimeInterval = 0
     var newCurrentDate: Double = 0
+    var intendCheckInTime: TimeInterval = 0
     
     var timer: Timer?
         
@@ -55,9 +56,18 @@ class TimeParkingCell: UITableViewCell {
     
     func setupTimeCount() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+//            self.newCurrentDate = self.newCurrentDate + 1
+//            let ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
+                 
+//            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
             self.newCurrentDate = self.newCurrentDate + 1
-            let ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
-                       
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
+            
+            if self.intendCheckInTime < self.checkinTime {
+                ddhhmm = Utils.getTime(dateCheckIn: self.intendCheckInTime, currentServerDate: self.newCurrentDate)
+            }
+            
             self.vHour.setUpTime(time: ddhhmm.1)
             self.vMinute.setUpTime(time: ddhhmm.2)
             self.vDay.setUpTime(time: ddhhmm.0)
@@ -75,9 +85,11 @@ class TimeParkingCell: UITableViewCell {
         
         
         guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
+        guard let intendCheckInTime = _historyParkingDetail.intend_checkin_time?.timeIntervalSince1970 else { return }
         guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
         self.newCurrentDate = current_server_time
         self.checkinTime = checkinTime
+        self.intendCheckInTime = intendCheckInTime
         setupTimeCount()
     }
     
@@ -91,9 +103,17 @@ class TimeParkingCell: UITableViewCell {
             lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
             
             
-            guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970,
-                let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
-            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+//            guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970,
+//                let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
+//            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            
+            guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = historyParkingDetail?.intend_checkin_time?.timeIntervalSince1970,let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            
+            if intendCheckInTime < checkInTime {
+                ddhhmm = Utils.getTime(dateCheckIn: intendCheckInTime, currentServerDate: checkOutTime)
+            }
             
             vHour.setUpTime(time: ddhhmm.1)
             vMinute.setUpTime(time: ddhhmm.2)

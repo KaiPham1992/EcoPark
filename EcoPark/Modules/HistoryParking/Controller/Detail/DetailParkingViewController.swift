@@ -137,9 +137,14 @@ class DetailParkingViewController: BaseViewController {
         let status = bookingDetailEntity?.status&
         switch status& {
         case StatusBooking.checked_in.rawValue:
-            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970 else { return }
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
             newCurrentDate = newCurrentDate + 1
-            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: newCurrentDate)
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: newCurrentDate)
+            
+            if intendCheckInTime < checkInTime {
+                ddhhmm = Utils.getTime(dateCheckIn: intendCheckInTime, currentServerDate: newCurrentDate)
+            }
             
             VTHour.setUpTime(time: ddhhmm.1)
             VTMinute.setUpTime(time: ddhhmm.2)
@@ -151,8 +156,14 @@ class DetailParkingViewController: BaseViewController {
             }
             
         case StatusBooking.checked_out.rawValue:
-            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970,let checkOutTime = bookingDetailEntity?.time_check_out?.timeIntervalSince1970 else { return }
-            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970,let checkOutTime = bookingDetailEntity?.time_check_out?.timeIntervalSince1970 else { return }
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            
+            if intendCheckInTime < checkInTime {
+                ddhhmm = Utils.getTime(dateCheckIn: intendCheckInTime, currentServerDate: checkOutTime)
+            }
+            
             
             VTHour.setUpTime(time: ddhhmm.1)
             VTMinute.setUpTime(time: ddhhmm.2)
@@ -302,9 +313,9 @@ class DetailParkingViewController: BaseViewController {
         case StatusBooking.reservation.rawValue:
             DLVCheckIn.setValueText(text: "-")
             DLVCheckOut.setValueText(text: "-")
-//            heightPricePayment.constant = 0
-//            heightAddWallet.constant = 0
-//            heightAddCash.constant = 0
+            //            heightPricePayment.constant = 0
+            //            heightAddWallet.constant = 0
+            //            heightAddCash.constant = 0
             
             DLVPriceParking.isHidden = true
             DLVAddForWallet.isHidden = true
