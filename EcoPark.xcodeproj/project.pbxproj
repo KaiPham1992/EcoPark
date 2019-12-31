@@ -6665,19 +6665,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nghia Nguyen (G7RSC937JS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Duong Vinh (XCFX4NM3YW)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
+				DEVELOPMENT_TEAM = F28VRDS433;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nghianguyen.obee-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.ecoparking;
 				PRODUCT_NAME = "Eco Parking";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.nghianguyen.obee-ios";
+				PROVISIONING_PROFILE_SPECIFIER = EcoProvisioningDev;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PROD";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6690,19 +6690,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Nghia Nguyen (8HQRBRRH7Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Duong Vinh (F28VRDS433)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
+				DEVELOPMENT_TEAM = F28VRDS433;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nghianguyen.obee-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.ecoparking;
 				PRODUCT_NAME = "Eco Parking";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.nghianguyen.obee-ios";
+				PROVISIONING_PROFILE_SPECIFIER = EcoProvisioningAdHoc;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
