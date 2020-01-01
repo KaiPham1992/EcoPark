@@ -32,7 +32,8 @@ struct LocalizableKey {
     
     //other
     static let searchNumberCar = "searchNumberCar"
-    static let switchStatusParking = "switchStatusParking"
+    static let switchStatusParkingOff = "switchStatusParkingOff"
+    static let switchStatusParkingOn = "switchStatusParkingOn"
     static let bookingParkingDetail = "bookingParkingDetail"
     static let cancel = "cancel"
     static let no = "no"
@@ -45,6 +46,7 @@ struct LocalizableKey {
     static let registerYet = "registerYet"
     static let registerOwner = "registerOwner"
     static let ratingOfuser = "ratingOfuser"
+    static let NOT_ENOUGH_MONEY = "NOT_ENOUGH_MONEY"
     
     //-- Popup
     static let receivable = "receivable"

@@ -436,8 +436,8 @@ extension DetailParkingViewController: DetailParkingViewProtocol {
     
     // MARK: Error
     func didGetError(error: APIError) {
-        printError(message: error.message)
-        PopUpHelper.shared.showError(message: error.message&.showLanguage, completionYes: nil)
+        printError(message: error.message) 
+        PopUpHelper.shared.showMessage(message: error.message&.showLanguage, width: 350, completion: {})
     }
     
     func didGetRating(rating: RatingEntity) {

@@ -54,7 +54,6 @@ class ParkingInfoViewController: BaseViewController {
         super.viewDidLoad()
         setTitleNavigation(title: LocalizableKey.MenuMyInfo.showLanguage)
         btnSave.setTitle(LocalizableKey.titleSave.showLanguage, for: .normal)
-        lbActive.text = LocalizableKey.switchStatusParking.showLanguage
         btnSave.isEnabled = false
         btnSave.backgroundColor = AppColor.color_205_205_205
         addMenu()
@@ -83,8 +82,10 @@ class ParkingInfoViewController: BaseViewController {
             parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
         }
         if vActive.isOn {
+            lbActive.text = LocalizableKey.switchStatusParkingOff.showLanguage
             presenter?.changeStatusParking(parkingID: parkingID&, isActive: "1")
         } else {
+            lbActive.text = LocalizableKey.switchStatusParkingOn.showLanguage
             presenter?.changeStatusParking(parkingID: parkingID&, isActive: "0")
         }
     }
@@ -312,8 +313,10 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
         self.codeTax = _parkingInfo.code_tax&
         if parkingInfo?.is_active == "1" {
             vActive.isOn = true
+            lbActive.text = LocalizableKey.switchStatusParkingOff.showLanguage
         } else {
             vActive.isOn = false
+            lbActive.text = LocalizableKey.switchStatusParkingOn.showLanguage
         }
     }
     

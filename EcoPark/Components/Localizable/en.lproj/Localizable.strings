@@ -34,7 +34,8 @@
 "date" = "Date";
 "hour" = "Hour";
 "minute" = "Minute";
-"switchStatusParking" = "Switch to ON if you want to operate";
+"switchStatusParkingOn" = "Switch to ON if you want to operate";
+"switchStatusParkingOff" = "Switch to OFF if you want to stop working";
 "bookingParkingDetail" = "See parking details";
 "titleBalance" = "Balance wallet Eco";
 "titleRecharge" = "Recharge";
@@ -45,6 +46,7 @@
 
 "extend" = "Renewal addination 1 hour ";
 "ratingOfuser" = "Customer reviews";
+"NOT_ENOUGH_MONEY" = "You don't have enough money";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";

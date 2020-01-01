@@ -60,10 +60,10 @@ protocol CustomSwitchDelegate:class {
     public var isOn = false {
         didSet {
             self.isAnimating = true
-            
             UIView.animate(withDuration: self.animationDuration, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [.curveEaseOut, .beginFromCurrentState], animations: {
                 self.thumbView.frame.origin.x = self.isOn ? self.onPoint.x : self.offPoint.x
                 self.backgroundColor = self.isOn ? self.onTintColor : self.offTintColor
+                
             }) { _ in
                 self.isAnimating = false
                 self.sendActions(for: UIControl.Event.valueChanged)

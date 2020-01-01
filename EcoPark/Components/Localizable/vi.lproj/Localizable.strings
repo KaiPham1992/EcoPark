@@ -32,7 +32,8 @@
 
 //other
 "searchNumberCar" = "Tìm theo biển số xe";
-"switchStatusParking" = "Chuyển sang ON nếu bạn muốn hoạt động";
+"switchStatusParkingOn" = "Chuyển sang ON nếu bạn muốn hoạt động";
+"switchStatusParkingOff" = "Chuyển sang OFF nếu bạn muốn tạm ngưng";
 "agree" = "Đồng ý";
 "cancel" = "Huỷ";
 "MaxPlaceParking" = "Sức chứa tối đa";
@@ -48,7 +49,7 @@
 "registerYet" = "Bạn có chỗ trống? \nHãy đăng ký làm bãi xe";
 "registerOwner" = "Đăng ký làm đối tác bãi xe";
 "ratingOfuser" = "Đánh giá của khách hàng";
-
+"NOT_ENOUGH_MONEY" = "Bạn không đủ tiền trong ví";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
