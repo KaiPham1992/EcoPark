@@ -52,6 +52,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     var lat: Double = 0
     var long: Double = 0
     var listParkingType: [ParkingTypeEntity] = []
+    var numberHours: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -60,6 +62,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.getListParkingType()
+        presenter?.getNumberHours()
     }
     
     private func setupUI() {
@@ -81,7 +84,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.priceAHours.showLanguage + " *", placeHolder: LocalizableKey.enter.showLanguage)
-        vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage + " *", placeHolder: LocalizableKey.enter.showLanguage)
+        vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage + " (\(numberHours + " " + LocalizableKey.hour.showLanguage) *)", placeHolder: LocalizableKey.enter.showLanguage)
         vTaxCode.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingCapacity.tfInput.keyboardType = .numberPad
         vPriceAHours.tfInput.keyboardType = .numberPad
@@ -339,6 +342,11 @@ extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
         self.listParkingType = listParkingType
         vParkingType.listItem = listParkingType.map({$0.name&})
         
+    }
+    
+    func didGetNumberHours(numberHours: String?) {
+        self.numberHours = numberHours ?? ""
+        setupUI()
     }
 }
 

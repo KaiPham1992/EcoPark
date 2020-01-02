@@ -47,6 +47,7 @@
 "extend" = "Renewal addination 1 hour ";
 "ratingOfuser" = "Customer reviews";
 "NOT_ENOUGH_MONEY" = "You don't have enough money";
+"packet" = "packet";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";
@@ -258,7 +259,7 @@
 "ParkingClose" = "Close *";
 "ParkingPrice" = "Service Prices";
 "PriceAHours" = "Price a hour";
-"PriceCombo" = "Price a packet (8 Hours)";
+"PriceCombo" = "Price a packet";
 "ParkingLicense" = "Business License";
 "ParkingTaxCode" = "Tax Code";
 "hoursPrice" = "Price by a hour";

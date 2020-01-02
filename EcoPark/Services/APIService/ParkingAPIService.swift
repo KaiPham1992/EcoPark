@@ -23,6 +23,8 @@ protocol ParkingAPIServiceProtocol {
     func checkoutParking(bookingID: String, code: String, license_plates: String, success: @escaping SuccessHandler<HistoryBookingParkingResponse>.object, failure: @escaping RequestFailure)
     func changeStatusParking(parkingID: String, isActive: String, success: @escaping SuccessHandler<BaseResponse>.object, failure: @escaping RequestFailure)
     func changeStatusCheckout(bookingID: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String, success:@escaping  SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure)
+    
+    func getNumberHours(success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure)
 }
 
 class ParkingAPIService: ParkingAPIServiceProtocol {
@@ -100,6 +102,11 @@ class ParkingAPIService: ParkingAPIServiceProtocol {
     
     func changeStatusCheckout(bookingID: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String, success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure) {
         let endPoint = ParkingEndPoint.changeStatusCheckout(bookingID: bookingID, bonus: bonus, plus_wallet_boss: plus_wallet_boss, parking_price: parking_price, payment_wallet: payment_wallet)
+        network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
+    }
+    
+    func getNumberHours(success: @escaping SuccessHandler<BookingDetailEntity>.object, failure: @escaping RequestFailure) {
+        let endPoint = ParkingEndPoint.getNumberHours
         network.requestData(endPoint: endPoint, success: MapperData.mapObject(success), failure: failure)
     }
 }

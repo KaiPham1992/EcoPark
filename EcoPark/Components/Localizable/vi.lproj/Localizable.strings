@@ -50,6 +50,8 @@
 "registerOwner" = "Đăng ký làm đối tác bãi xe";
 "ratingOfuser" = "Đánh giá của khách hàng";
 "NOT_ENOUGH_MONEY" = "Bạn không đủ tiền trong ví";
+"packet" = "gói";
+
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
@@ -212,7 +214,7 @@
 "ParkingClose" = "Đóng cửa *";
 "ParkingPrice" = "Giá dịch vụ";
 "PriceAHours" = "Đơn giá theo giờ";
-"PriceCombo" = "Đơn giá theo gói (8 giờ)";
+"PriceCombo" = "Đơn giá theo gói";
 "ParkingLicense" = "Giấy phép kinh doanh";
 "ParkingTaxCode" = "Mã số thuế";
 "hoursPrice" = "Giá theo giờ";

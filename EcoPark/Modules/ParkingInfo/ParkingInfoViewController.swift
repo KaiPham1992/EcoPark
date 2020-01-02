@@ -38,7 +38,7 @@ class ParkingInfoViewController: BaseViewController {
     var long: Double = 0
     var listMaterial: [String] = []
     var codeTax: String = ""
-    
+    var numberHours = ""
     var listParkingType: [ParkingTypeEntity] = [] {
         didSet {
             tbParkingInfo.reloadData()
@@ -74,6 +74,7 @@ class ParkingInfoViewController: BaseViewController {
         }
         presenter?.getParkingInfo(id: parkingID&)
         presenter?.getListParkingType()
+        presenter?.getNumberHours()
     }
     
     @IBAction func swActive() {
@@ -209,6 +210,8 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
         case 0:
             let otherInfoCell = tableView.dequeueTableCell(OtherInfoCell.self)
             otherInfoCell.setData(parkingInfo: parkingInfo)
+            otherInfoCell.numberHours = self.numberHours
+        
             return otherInfoCell
         case 1:
             if indexPath.row == 0 {
@@ -299,6 +302,10 @@ extension ParkingInfoViewController: HeaderViewDelegate {
 
 
 extension ParkingInfoViewController: ParkingInfoViewProtocol {
+    func didGetNumberHours(numberHours: String) {
+        self.numberHours = numberHours
+    }
+    
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
         self.parkingInfo = parkingInfo
         guard let _parkingInfo = parkingInfo else { return }

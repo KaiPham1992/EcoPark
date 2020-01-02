@@ -47,6 +47,7 @@ struct LocalizableKey {
     static let registerOwner = "registerOwner"
     static let ratingOfuser = "ratingOfuser"
     static let NOT_ENOUGH_MONEY = "NOT_ENOUGH_MONEY"
+    static let packet = "packet"
     
     //-- Popup
     static let receivable = "receivable"

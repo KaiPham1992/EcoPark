@@ -57,4 +57,12 @@ class ParkingInfoPresenter: ParkingInfoPresenterProtocol, ParkingInfoInteractorO
             
         }
     }
+    
+    func getNumberHours() {
+        Provider.shared.parkingAPIService.getNumberHours(success: { (data) in
+            self.view?.didGetNumberHours(numberHours: data?.number_hours ?? "")
+        }) { (_) in
+            
+        }
+    }
 }

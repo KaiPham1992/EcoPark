@@ -23,6 +23,7 @@ enum ParkingEndPoint {
     case checkoutParking(bookingID: String, code: String, license_plates: String)
     case changeStatusParking(parkingID: String, isActive: String)
     case changeStatusCheckout(bookingID: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String)
+    case getNumberHours
 }
 
 extension ParkingEndPoint: EndPointType {
@@ -57,12 +58,19 @@ extension ParkingEndPoint: EndPointType {
             return "_api/parking/change_status_parking"
         case .changeStatusCheckout:
             return "_api/order/update_status_booking"
+        case .getNumberHours:
+            return "_api/parking/number_hours"
         }
         
     }
     
     var httpMethod: HTTPMethod {
-        return .post
+        switch self {
+        case .getNumberHours:
+            return .get
+        default:
+            return .post
+        }
     }
     
     var parameters: JSONDictionary {
@@ -93,6 +101,8 @@ extension ParkingEndPoint: EndPointType {
             return ["parking_id": parkingID, "is_active": isActive]
         case .changeStatusCheckout(let bookingID, let bonus, let plus_wallet_boss, let parking_price, let payment_wallet):
             return ["booking_id": bookingID, "status": "checked_out", "bonus": bonus, "plus_wallet_boss": plus_wallet_boss, "parking_price": parking_price,  "payment_wallet": payment_wallet]
+        case .getNumberHours:
+            return [:]
         }
     }
     

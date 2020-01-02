@@ -21,6 +21,7 @@ protocol SignUpPartnerStep2PresenterProtocol: class {
     func getListParkingType()
     func uploadImageFront(image: UIImage)
     func uploadImageBackside(image: UIImage)
+    func getNumberHours()
 }
 
 //MARK: Interactor -
@@ -46,4 +47,5 @@ protocol SignUpPartnerStep2ViewProtocol: class {
     
     func didUploadImageFront(photo: String?)
     func didUploadImageBackside(photo: String?)
+    func didGetNumberHours(numberHours: String?)
 }
