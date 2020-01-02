@@ -50,7 +50,7 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
             } else {
                 statusType = NotificationStatus.UnRead
             }
-            let dateTime = notification[indexPath.item].createTime?.toString(dateFormat: .hhmmddmmyyy)
+            let dateTime = notification[indexPath.item].createTime?.toString(dateFormat: .HHmmddMMyyyy)
             let content = notification[indexPath.item].content
             
             cell.displayData(type: .MyNotification, status: statusType , datetime: dateTime&, content: content&)

@@ -51,6 +51,7 @@
 "ratingOfuser" = "Đánh giá của khách hàng";
 "NOT_ENOUGH_MONEY" = "Bạn không đủ tiền trong ví";
 "packet" = "gói";
+"check2Hours" = "Bạn không thể checkout khi xe gửi chưa đủ 2 giờ";
 
 // Popup
 "receivable" = "Phải thu: ";

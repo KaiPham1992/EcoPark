@@ -48,6 +48,7 @@
 "ratingOfuser" = "Customer reviews";
 "NOT_ENOUGH_MONEY" = "You don't have enough money";
 "packet" = "packet";
+"check2Hours" = "You cannot checkout when the vehicle has been sent for less than 2 hours";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";

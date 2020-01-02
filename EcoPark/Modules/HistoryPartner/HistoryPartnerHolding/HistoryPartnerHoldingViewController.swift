@@ -98,11 +98,17 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         let code = historyParkingHolding?.booking[sender.tag].code
         let licensePlates = historyParkingHolding?.booking[sender.tag].license_plates
         
-        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables ?? "0", vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
-            self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: self.historyParkingHolding?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingHolding?.booking[sender.tag].id ?? ""))
-        }) {
-            self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
-        }
+//        if historyParkingHolding?.booking[sender.tag].number_hours ?? 0 >= 2 {
+            PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables ?? "0", vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+                self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: self.historyParkingHolding?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingHolding?.booking[sender.tag].id ?? ""))
+            }) {
+                self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
+            }
+//        } else {
+//            PopUpHelper.shared.showMessage(message: LocalizableKey.check2Hours.showLanguage, width: 350, completion: {})
+//        }
+        
+        
     }
 }
 

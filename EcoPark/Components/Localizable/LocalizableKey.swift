@@ -48,6 +48,7 @@ struct LocalizableKey {
     static let ratingOfuser = "ratingOfuser"
     static let NOT_ENOUGH_MONEY = "NOT_ENOUGH_MONEY"
     static let packet = "packet"
+    static let check2Hours = "check2Hours"
     
     //-- Popup
     static let receivable = "receivable"
