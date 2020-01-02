@@ -38,10 +38,10 @@ class PriceCell: UITableViewCell {
     
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbPriceComboPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
-        lbPriceAHoursPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
+        lbPriceComboPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
+        lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
         lbTimeHolding.text = "\(_historyParkingDetail.numberHours ?? 0)"
-        lblPrice.text = _historyParkingDetail.money_paid?.toCurrencyNoVND
+        lblPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
