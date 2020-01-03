@@ -24,16 +24,30 @@ class PriceCheckoutCell: UITableViewCell {
     @IBOutlet weak var lbPaidPrice: UILabel!
     @IBOutlet weak var lbPaidWithWalletPrice: UILabel!
     @IBOutlet weak var lbPaidWithCashPrice: UILabel!
+    @IBOutlet weak var lbHour: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupUI() {
+        let numberHours = UserDefaultHelper.shared.numberHours
+        lbPriceAHours.text = LocalizableKey.priceAHours.showLanguage + ":"
+        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":"
+        lbTimeHolding.text = LocalizableKey.NumberHoursSend.showLanguage + ":"
+        lbPriceParking.text = LocalizableKey.ParkingFee.showLanguage + ":"
+        lbPaid.text = LocalizableKey.Paid.showLanguage + ":"
+        lbPaidWithCash.text = LocalizableKey.paidWithCash.showLanguage + ":"
+        lbPaidWithWallet.text = LocalizableKey.paidWithWallet.showLanguage + ":"
+        lbHour.text = LocalizableKey.Hours.showLanguage + ":"
     }
     
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {

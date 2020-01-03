@@ -52,6 +52,12 @@
 "NOT_ENOUGH_MONEY" = "Bạn không đủ tiền trong ví";
 "packet" = "gói";
 "check2Hours" = "Bạn không thể checkout khi xe gửi chưa đủ 2 giờ";
+"realMoney" = "Thực thu của bãi";
+"bonusEco" = "Hoa hồng EcoParking";
+"KHPaidWallet" = "KH Thanh toán ví";
+"KHPaidCash" = "KH thanh toán tiền mặt";
+"changeWallet" = "Thay đổi ví tiền";
+
 
 // Popup
 "receivable" = "Phải thu: ";
@@ -224,7 +230,7 @@
 "place" = "Chỗ";
 "vndHours" = "VND/ giờ";
 "vnd8Hours" = "VND/ 8 giờ";
-
+"Hours" = "giờ";
 "photoFront" = "Ảnh mặt trước giấy phép";
 "photoBackside" = "Ảnh mặt sau giấy phép";
 
@@ -260,7 +266,7 @@
 "titleType" = "Loại bãi đỗ";
 "titlePlace" = "Chỗ trống";
 "titlePriceOne" = "Phí gửi xe theo giờ";
-"titlePriceEight" = "Phí gửi xe theo gói 8 giờ";
+"titlePriceEight" = "Phí gửi xe theo gói ";
 "titleContactMe" = "Liên hệ tôi";
 "titleDirection" = "Chỉ đường";
 "titleButtonKeepPlace" = "Đặt giữ chỗ ngay";
@@ -281,7 +287,7 @@
 "vehicleType" = "Loại xe";
 "eachHours" = "/ giờ";
 "eachPackage" = "/ gói";
-"hour" = "Giờ";
+"hour" = "giờ";
 "minute" = "phút";
 
 // MARK: BookingPopUp

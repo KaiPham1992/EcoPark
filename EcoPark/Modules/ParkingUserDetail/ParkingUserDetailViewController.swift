@@ -44,12 +44,13 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     override func setUpViews() {
         super.setUpViews()
         
+        let numberHours = UserDefaultHelper.shared.numberHours
         ratingBar.isUserInteractionEnabled = false
         lbTitleTime.text = LocalizableKey.parkingTime.showLanguage
         lbTitleType.text = LocalizableKey.titleType.showLanguage
         lbTitleEmptyPlace.text = LocalizableKey.titlePlace.showLanguage
         lbTitlePriceOneHour.text = LocalizableKey.titlePriceOne.showLanguage
-        lbTitlePriceEightHour.text = LocalizableKey.titlePriceEight.showLanguage
+        lbTitlePriceEightHour.text = LocalizableKey.titlePriceEight.showLanguage + "\(numberHours) " + LocalizableKey.hour.showLanguage
         
         btnContact.setTitle(LocalizableKey.titleContactMe.showLanguage, for: .normal)
         btnDirect.setTitle(LocalizableKey.titleDirection.showLanguage, for: .normal)

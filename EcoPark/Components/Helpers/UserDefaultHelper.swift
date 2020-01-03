@@ -37,14 +37,15 @@ enum UserDefaultHelperKey: String {
     case loginUserInfo = "loginUserInfo"
     case parkingID = "ParkingID"
     case birthday = "birthday"
+    case numberHours = "numberHours"
 }
 
 class UserDefaultHelper {
     static let shared = UserDefaultHelper()
     private let userDefaultManager = UserDefaults.standard
-//    var collectionProduct = ProductCollectionEntity()
+    //    var collectionProduct = ProductCollectionEntity()
     
-     var myLocationCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
+    var myLocationCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
     
     var loginUserInfo: UserEntity? {
         get {
@@ -113,11 +114,22 @@ class UserDefaultHelper {
     
     var birthday: Date? {
         get {
-        guard let _birthday = get(key: .birthday) as? Date else { return nil }
+            guard let _birthday = get(key: .birthday) as? Date else { return nil }
             return _birthday
         }
         set(newValue) {
             save(value: newValue, key: .birthday)
+        }
+    }
+    
+    var numberHours: String {
+        get {
+            guard let _numberHours = get(key: .numberHours) as? String else { return "" }
+            return _numberHours
+        }
+        
+        set(value) {
+            save(value: value, key: .numberHours)
         }
     }
 }

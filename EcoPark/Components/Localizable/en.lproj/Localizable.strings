@@ -49,6 +49,12 @@
 "NOT_ENOUGH_MONEY" = "You don't have enough money";
 "packet" = "packet";
 "check2Hours" = "You cannot checkout when the vehicle has been sent for less than 2 hours";
+"realMoney" = "Actual income of parking";
+"bonusEco" = "Bonus EcoParking";
+"KHPaidWallet" = "Customers pay for the wallet";
+"KHPaidCash" = "Customers pay cash";
+"changeWallet" = "Change wallet";
+
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";
@@ -64,7 +70,7 @@
 "titleType" = "Parking type";
 "titlePlace" = "Capacity";
 "titlePriceOne" = "Price for a hour";
-"titlePriceEight" = "Price for a packet 8 hours";
+"titlePriceEight" = "Price for a packet";
 "titleContactMe" = "Contact me";
 "titleDirection" = "Direct";
 "titleButtonKeepPlace" = "Booking now";

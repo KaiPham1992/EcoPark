@@ -180,6 +180,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         
         checkIconCheckInCheckOut()
         presenter?.getProfileUser()
+        presenter?.getNumberHours()
     }
     
     func setFilter() {

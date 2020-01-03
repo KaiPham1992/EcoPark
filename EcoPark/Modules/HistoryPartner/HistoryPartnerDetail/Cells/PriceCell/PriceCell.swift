@@ -23,10 +23,11 @@ class PriceCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        lbPriceAHours.text = LocalizableKey.priceAHours.showLanguage
-        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage
-        lbHoldingTime.text = LocalizableKey.NumberHoursSend.showLanguage
-        lbPriceParking.text = LocalizableKey.ParkingFee.showLanguage
+        let numberHours = UserDefaultHelper.shared.numberHours
+        lbPriceAHours.text = LocalizableKey.priceAHours.showLanguage + ":"
+        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":"
+        lbHoldingTime.text = LocalizableKey.NumberHoursSend.showLanguage + ":"
+        lbPriceParking.text = LocalizableKey.ParkingFee.showLanguage + ":"
         lbHour.text = LocalizableKey.hour.showLanguage
     }
 
@@ -41,7 +42,7 @@ class PriceCell: UITableViewCell {
         lbPriceComboPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
         lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
         lbTimeHolding.text = "\(_historyParkingDetail.numberHours ?? 0)"
-        lblPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
+        lblPrice.text = "0"
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {

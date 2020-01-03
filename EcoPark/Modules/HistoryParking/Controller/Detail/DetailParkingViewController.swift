@@ -66,7 +66,8 @@ class DetailParkingViewController: BaseViewController {
     
     override func setUpViews() {
         super.setUpViews()
-        
+        let numberHours = UserDefaultHelper.shared.numberHours
+
         ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: LocalizableKey.contactParking.showLanguage)
         ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: LocalizableKey.titleDirection.showLanguage)
         DLVInformationParking.setupViewForTitle(title: LocalizableKey.infoParking.showLanguage)
@@ -79,7 +80,7 @@ class DetailParkingViewController: BaseViewController {
         DLVCheckOut.setupViewTimeBlue(title: "Check out")
         DLVLisencePlate.setupViewTimeBold(title: LocalizableKey.licensePlate.showLanguage + ":")
         DLVBillForHour.setupViewUnit(title:  LocalizableKey.priceAHours.showLanguage + ":")
-        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + ":")
+        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":")
         DLVNumberParking.setupViewUnit(title: LocalizableKey.NumberHoursSend.showLanguage + ":")
         DLVMoneyPayment.setupViewUnit(title: LocalizableKey.ParkingFee.showLanguage + ":")
         DLVPriceParking.setupViewUnit(title: LocalizableKey.Paid.showLanguage + ":")

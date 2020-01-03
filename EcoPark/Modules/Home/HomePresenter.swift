@@ -30,4 +30,11 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
             
         }
     }
+    func getNumberHours() {
+        Provider.shared.parkingAPIService.getNumberHours(success: { (data) in
+            UserDefaultHelper.shared.numberHours = data?.number_hours ?? ""
+        }) { (_) in
+            
+        }
+    }
 }

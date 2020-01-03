@@ -72,12 +72,12 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     override func setUpViews() {
         super.setUpViews()
-        
+        let numberHours = UserDefaultHelper.shared.numberHours
         lbTitle.text = LocalizableKey.keepPlace.showLanguage
         lbCapacity.text = LocalizableKey.maxCapacity.showLanguage
         lbTime.text = LocalizableKey.parkingTime.showLanguage
         lbTitleOne.text = LocalizableKey.parkingFee.showLanguage
-        lbTitleEight.text = LocalizableKey.parkingFeeCombo.showLanguage
+        lbTitleEight.text = LocalizableKey.titlePriceEight.showLanguage + "\(numberHours) " + LocalizableKey.hour.showLanguage + ":"
         lbTitleBookingInfo.text = LocalizableKey.bookingInfo.showLanguage
         
         lbTitleDate.setTitle("  \(LocalizableKey.date.showLanguage)*", for: .normal)

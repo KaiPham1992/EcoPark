@@ -49,6 +49,11 @@ struct LocalizableKey {
     static let NOT_ENOUGH_MONEY = "NOT_ENOUGH_MONEY"
     static let packet = "packet"
     static let check2Hours = "check2Hours"
+    static let realMoney = "realMoney"
+    static let bonusEco = "bonusEco"
+    static let KHPaidWallet = "KHPaidWallet"
+    static let KHPaidCash = "KHPaidCash"
+    static let changeWallet = "changeWallet"
     
     //-- Popup
     static let receivable = "receivable"

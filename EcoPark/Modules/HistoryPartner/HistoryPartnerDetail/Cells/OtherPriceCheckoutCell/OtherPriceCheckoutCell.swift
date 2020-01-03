@@ -25,12 +25,21 @@ class OtherPriceCheckoutCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupUI() {
+        lbRealPaid.text = LocalizableKey.realMoney.showLanguage + ":"
+        lbBonusEco.text = LocalizableKey.bonusEco.showLanguage + ":"
+        lbPaidWithWallet.text = LocalizableKey.KHPaidWallet.showLanguage + ":"
+        lbPaidWithCash.text = LocalizableKey.KHPaidCash.showLanguage + ":"
+        lbWalletChange.text = LocalizableKey.changeWallet.showLanguage + ":"
     }
     
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
