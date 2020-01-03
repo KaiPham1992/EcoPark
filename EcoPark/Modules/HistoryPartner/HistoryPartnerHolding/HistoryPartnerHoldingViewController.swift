@@ -90,24 +90,12 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     
     @objc func btnCheckOutTapped(sender: UIButton) {
         
-        let receivables = historyParkingHolding?.booking[sender.tag].receivables?.toCurrencyNoVND
-        let vehicleType = historyParkingHolding?.booking[sender.tag].vehicleName
-        let vehicleNumber = historyParkingHolding?.booking[sender.tag].license_plates ?? ""
-        let checkoutNumber = historyParkingHolding?.booking[sender.tag].code ?? ""
         let bookingID = historyParkingHolding?.booking[sender.tag].id
         let code = historyParkingHolding?.booking[sender.tag].code
         let licensePlates = historyParkingHolding?.booking[sender.tag].license_plates
         
-//        if historyParkingHolding?.booking[sender.tag].number_hours ?? 0 >= 2 {
-            PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables ?? "0", vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
-                self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: self.historyParkingHolding?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingHolding?.booking[sender.tag].id ?? ""))
-            }) {
-                self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
-            }
-//        } else {
-//            PopUpHelper.shared.showMessage(message: LocalizableKey.check2Hours.showLanguage, width: 350, completion: {})
-//        }
-        
+        presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
+            
         
     }
 }
@@ -178,8 +166,17 @@ extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
-        presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? "0")", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
-        self.historyBookingParkingResponse = historyParkingDetail
         
+        self.historyBookingParkingResponse = historyParkingDetail
+        let receivables = historyParkingDetail?.receivables?.toCurrencyNoVND
+        let vehicleType = historyParkingDetail?.vehicleName
+        let vehicleNumber = historyParkingDetail?.license_plates ?? ""
+        let checkoutNumber = historyParkingDetail?.code ?? ""
+        
+        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables ?? "0", vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+            self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: historyParkingDetail?.parking_id ?? "", bookingID: historyParkingDetail?.id ?? ""))
+                    }) {
+                        self.presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+                    }
     }
 }

@@ -47,8 +47,13 @@ class HistoryPartnerDetailCheckAgainViewController: BaseViewController, HistoryP
     
     
     @IBAction func btnCheckOutTapped() {
-        
-        
+        presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+    }
+    
+    
+    func didGetData(historyParkingDetail: HistoryBookingParkingResponse?) {
+//        self.historyParkingDetail = historyParkingDetail
+        lbID.text = historyParkingDetail?.code&
         let bookingID = historyParkingDetail?.id
         let code = historyParkingDetail?.code
         let licensePlates = historyParkingDetail?.license_plates
@@ -56,15 +61,8 @@ class HistoryPartnerDetailCheckAgainViewController: BaseViewController, HistoryP
             self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
     }
     
-    
-    func didGetData(historyParkingDetail: HistoryBookingParkingResponse?) {
-        self.historyParkingDetail = historyParkingDetail
-        lbID.text = historyParkingDetail?.code&
-    }
-    
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyParkingDetail
-        presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? "0")", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
         
     }
     
