@@ -40,8 +40,8 @@ extension CommonEndPoint: EndPointType {
     var parameters: JSONDictionary {
         switch self {
         case .changeLanguageCode:
-            let param = ["device_id": UIDevice.current.identifierForVendor!.uuidString]
-            param = BaseParam.addDeviceParams(inputParams: param)
+            var param = ["device_id": UIDevice.current.identifierForVendor!.uuidString]
+            param = BaseParam.addDeviceParams(inputParams: param) as! [String : String]
             return param
         case .uploadImages:
             return ["type": "parking"]
