@@ -39,19 +39,19 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     @IBOutlet weak var lbTitlePlate: UIButton!
     @IBOutlet weak var lbTitleType: UIButton!
     
-	var presenter: BookingInfoPresenterProtocol?
+    var presenter: BookingInfoPresenterProtocol?
     var parking: ParkingEntity?
     
     var selectVehical: VehicleTypeEntity?
     var indexSelected: Int = 0
     var listVehicle: [VehicleTypeEntity] = [VehicleTypeEntity]()
-
-	override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-//        if parking == nil {
-//             getParkingInfo()
-//        }
-       
+        //        if parking == nil {
+        //             getParkingInfo()
+        //        }
+        
         getVehicleType()
         guard let parking = parking else { return }
         displayData(info: parking)
@@ -122,7 +122,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         
         dropDownType.btnAction.isHidden = true
         imgIcon.sd_setImage(with: info.url)
-       
+        
     }
     
     @IBAction func btnBookingTapped() {
@@ -155,7 +155,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     // MARK: Book reservation
     func booking() {
         
-//        print(timePicker.date)
+        //        print(timePicker.date)
         
         do {
             _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseDate.showLanguage))
@@ -171,17 +171,30 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             }
             
             if let timeStart = parking?.time_start?.timeIntervalSince1970, let timeEnd = parking?.time_end?.timeIntervalSince1970 {
-                if timeStart > dateTime.timeIntervalSince1970 || timeEnd < dateTime.timeIntervalSince1970 {
-                    PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
-                    
-                    return
+                //---
+                if timeStart <= timeEnd {
+                    if timeStart > dateTime.timeIntervalSince1970 || timeEnd < dateTime.timeIntervalSince1970 {
+                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+                        
+                        return
+                    }
+                } else {
+                    if (timeStart <= dateTime.timeIntervalSince1970 && timeEnd <= dateTime.timeIntervalSince1970) || (timeStart >= dateTime.timeIntervalSince1970 && timeEnd >= dateTime.timeIntervalSince1970) {
+                       
+                    } else {
+                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+                                               
+                        return
+                    }
                 }
+                //---
+                
             }
             
             //---
             guard let parkId = parking?.parking_id,
                 let vehicleId = selectVehical?.id,
-            let moneyPaid = parking?.price else { return }
+                let moneyPaid = parking?.price else { return }
             let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
             let time = datePicker.date& + " " + hhmm&
             
@@ -233,7 +246,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         }
     }
     func didGetInfo(info: ParkingInfoEntity) {
-//        displayData(info: info)
+        //        displayData(info: info)
     }
 }
 
@@ -241,7 +254,7 @@ extension BookingInfoViewController {
     func openAppleMapForPlace(lat: Double, long: Double) {
         let latitude: CLLocationDegrees =  lat
         let longitude: CLLocationDegrees =  long
-
+        
         let regionDistance: CLLocationDistance = 1000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
@@ -253,21 +266,21 @@ extension BookingInfoViewController {
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = self.parking?.parking_name
         mapItem.openInMaps(launchOptions: options)
-
+        
     }
     
     func openGoogleMapForPlace(lat: Double, long: Double) {
-//        let lat = lat
-//        let long = long
+        //        let lat = lat
+        //        let long = long
         
         Utils.goToMap(latitude: lat.description, longitude: long.description)
-
-//        let customURL = "comgooglemaps://"
-//        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
-//        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
-//            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
-//        } else {
-//            openAppleMapForPlace(lat: lat, long: long)
-//        }
+        
+        //        let customURL = "comgooglemaps://"
+        //        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
+        //        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
+        //            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
+        //        } else {
+        //            openAppleMapForPlace(lat: lat, long: long)
+        //        }
     }
 }
