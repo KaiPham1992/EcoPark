@@ -57,7 +57,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>EcoPark muốn truy cập hình ảnh để lấy ảnh thay avatar</string>
+	<key>NSLocationUsageDescription</key>
+	<string>EcoPark muốn sử dụng vị trí của bạn để tải dữ liệu</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>EcoPark muốn sử dụng vị trí của bạn để tải dữ liệu</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>EcoPark muốn truy cập hình ảnh để lấy ảnh thay avatar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Comfortaa-Regular.ttf</string>
