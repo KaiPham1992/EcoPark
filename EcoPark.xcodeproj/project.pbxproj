@@ -6667,7 +6667,7 @@
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Duong Vinh (XCFX4NM3YW)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = F28VRDS433;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -6692,7 +6692,7 @@
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Duong Vinh (F28VRDS433)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = F28VRDS433;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
