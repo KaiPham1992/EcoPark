@@ -50,4 +50,18 @@ class DetailParkingRouter: DetailParkingWireframeProtocol {
 
         return view
     }
+    
+    static func createModule(bookingID: String) -> DetailParkingViewController {
+            // Change to get view from storyboard if not using progammatic UI
+            let view = DetailParkingViewController.initFromNib()
+            let interactor = DetailParkingInteractor()
+            let router = DetailParkingRouter()
+            let presenter = DetailParkingPresenter(interface: view, interactor: interactor, router: router)
+            view.bookingID = bookingID
+            view.presenter = presenter
+            interactor.presenter = presenter
+            router.viewController = view
+
+            return view
+        }
 }

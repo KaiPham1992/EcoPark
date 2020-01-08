@@ -43,6 +43,7 @@ class BookingDetailEntity: BaseEntity {
     var qrUrl: URL? {
         return URL(string: "\(BASE_URL_IMAGE)\(qr_code&)")
     }
+    var number_hours_in_package : Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -114,6 +115,10 @@ class BookingDetailEntity: BaseEntity {
         self.address <- map["address"]
         self.number_hours <- map["number_hours"]
         self.parking_price <- (map["parking_price"], StringToDoubleTransform())
+        self.number_hours_in_package <- (map["number_hours_in_package"], StringToDoubleTransform())
+        if number_hours_in_package == nil {
+            self.number_hours_in_package <- map["number_hours_in_package"]
+        }
     }
 }
 
