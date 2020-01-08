@@ -43,6 +43,7 @@ class PriceCell: UITableViewCell {
         lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
         lbTimeHolding.text = "0"
         lblPrice.text = "0"
+        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(_historyParkingDetail.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":"
     }
     
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
@@ -51,5 +52,6 @@ class PriceCell: UITableViewCell {
         lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
             lbTimeHolding.text = "0"
             lblPrice.text = "0"
+        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(_historyParkingDetail.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":"
         }
 }

@@ -14,7 +14,7 @@ class WalletRouter: WalletWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule() -> WalletViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = WalletViewController(nibName: nil, bundle: nil)
         let interactor = WalletInteractor()

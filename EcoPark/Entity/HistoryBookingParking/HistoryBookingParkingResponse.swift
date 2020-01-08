@@ -53,6 +53,7 @@ class HistoryBookingParkingResponse : BaseEntity {
     var numberHours: Double?
     var rating: Double?
     var parking_price: Double?
+    var number_hours_in_package : Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -144,6 +145,11 @@ class HistoryBookingParkingResponse : BaseEntity {
             self.payment_wallet <- (map["payment_wallet"])
         }
         self.vehicleName <- map["vehicle_name"]
+        
+        self.number_hours_in_package <- (map["number_hours_in_package"], StringToDoubleTransform())
+        if number_hours_in_package == nil {
+            self.number_hours_in_package <- map["number_hours_in_package"]
+        }
     }
     
     var urlQRCode:  URL? {

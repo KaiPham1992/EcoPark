@@ -57,7 +57,12 @@ class DetailParkingViewController: BaseViewController {
     
     //    var type : TypeDetailParking = .checkin
     var bookingParking: HistoryBookingParkingResponse?
-    var bookingDetailEntity: BookingDetailEntity?
+    var bookingDetailEntity: BookingDetailEntity? {
+        didSet {
+            DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(bookingDetailEntity?.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":")
+        }
+    }
+    var bookingID: String = ""
     
     var newCurrentDate: Double = 0
     weak var delegate: DetailParkingViewControllerDelegate?
@@ -427,12 +432,16 @@ extension DetailParkingViewController: DetailParkingViewProtocol {
     
     // MARK: Get booking detail
     func getBookingDetail() {
-        guard let bookingId = self.bookingParking?.id else { return }
+        guard let bookingId = self.bookingParking?.id else {
+            // from notification
+            self.presenter?.getBookingDetail(id: bookingID)
+            return }
         self.presenter?.getBookingDetail(id: bookingId)
     }
     
     func didGetBookingDetail(info: BookingDetailEntity) {
         displayData(info: info)
+        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(info.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":")
     }
     
     // MARK: Error

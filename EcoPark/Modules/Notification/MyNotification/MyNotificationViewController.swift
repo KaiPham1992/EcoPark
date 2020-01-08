@@ -61,10 +61,16 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
-        guard let id = notification[indexPath.item].id,
-            let notiID = Int(id),
-        let content = notification[indexPath.item].content else { return }
-        self.push(controller: NotificationDetailRouter.createModule(notificationID: notiID, content: content), animated: true)
+        let bookingID = notification[indexPath.item].bookingID
+        if bookingID != nil {
+            let vc = DetailParkingRouter.createModule(bookingID: bookingID ?? "")
+            self.push(controller: vc)
+        } else {
+            let vc = WalletRouter.createModule()
+            presenter?.getNotificationDetail(notificationID: Int(notification[indexPath.item].id ?? "") ?? 0)
+            vc.isBack = true
+            self.push(controller: vc)
+        }
     }
     
     func didGetNotification(notification: ParentNotificationEntity?) {

@@ -27,6 +27,8 @@ class WalletViewController: BaseViewController {
         }
     }
     
+    var isBack: Bool = false
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +39,12 @@ class WalletViewController: BaseViewController {
     
     override func setUpNavigation() {
         super.setUpNavigation()
+        if isBack {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
         
-        addMenu()
         setTitleNavigation(title: LocalizableKey.titleWallet.showLanguage)
 
     }
