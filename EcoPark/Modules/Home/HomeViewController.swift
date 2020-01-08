@@ -390,6 +390,8 @@ extension HomeViewController: GMSMapViewDelegate {
         center.latitude = lat
         center.longitude = lon
         
+        centerMapCoordinate = center
+        
         var resultAddress: String = ""
         
         let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
