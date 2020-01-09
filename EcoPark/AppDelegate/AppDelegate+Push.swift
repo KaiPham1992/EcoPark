@@ -27,18 +27,18 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
 
         FirebaseApp.configure(options: options)
-        
+
 //        FirebaseApp.configure()
     }
     
     func configurePushNotification(application: UIApplication) {
+        //configureFirebase()
         Messaging.messaging().delegate = self
-        
         
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
-
+//          Messaging.messaging().delegate = self
           let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
           UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
@@ -48,9 +48,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
           application.registerUserNotificationSettings(settings)
         }
-
         application.registerForRemoteNotifications()
-        
+
         if let token = Messaging.messaging().fcmToken {
             print("FCM token: \(token)")
             UserDefaultHelper.shared.fcmToken = token
@@ -98,10 +97,16 @@ extension AppDelegate: MessagingDelegate {
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("\n\n🚀 Firebase registration token\n\(fcmToken)\n\n")
         UserDefaultHelper.shared.fcmToken = fcmToken
         print(UserDefaultHelper.shared.fcmToken)
     }
-  
+    
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+        UserDefaultHelper.shared.fcmToken = fcmToken
+        
+    }
 }
 
 

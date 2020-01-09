@@ -27,7 +27,7 @@ extension AppDelegate {
         GMSServices.provideAPIKey(googleApiKey)
         GMSPlacesClient.provideAPIKey(googleApiKey)
         #endif
-        configureFirebase()
+        //configureFirebase()
     }
     
     func setUpStatusBar() {

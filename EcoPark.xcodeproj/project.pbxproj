@@ -413,9 +413,6 @@
 		2203D575236585550055E79F /* FindAroundMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D571236585550055E79F /* FindAroundMeCell.xib */; };
 		2203D576236585550055E79F /* FindAroundMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D571236585550055E79F /* FindAroundMeCell.xib */; };
 		2203D577236585550055E79F /* FindAroundMeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2203D571236585550055E79F /* FindAroundMeCell.xib */; };
-		221117A323C6E5F700C8BBD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 221117A223C6E5F700C8BBD5 /* GoogleService-Info.plist */; };
-		221117A423C6E5F700C8BBD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 221117A223C6E5F700C8BBD5 /* GoogleService-Info.plist */; };
-		221117A523C6E5F700C8BBD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 221117A223C6E5F700C8BBD5 /* GoogleService-Info.plist */; };
 		2220A786235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
 		2220A787235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
 		2220A788235EDA3A00E9C0F1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */; };
@@ -1836,7 +1833,6 @@
 		2203D56923655D5D0055E79F /* HomeFindCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFindCell.xib; sourceTree = "<group>"; };
 		2203D570236585550055E79F /* FindAroundMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAroundMeCell.swift; sourceTree = "<group>"; };
 		2203D571236585550055E79F /* FindAroundMeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindAroundMeCell.xib; sourceTree = "<group>"; };
-		221117A223C6E5F700C8BBD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2220A780235EDA3A00E9C0F1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		2220A781235EDA3A00E9C0F1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		2220A782235EDA3A00E9C0F1 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
@@ -3666,7 +3662,6 @@
 		DE2ADE5322841755003768CE /* GoogleInfo */ = {
 			isa = PBXGroup;
 			children = (
-				221117A223C6E5F700C8BBD5 /* GoogleService-Info.plist */,
 				DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */,
 				DE2ADE5522841755003768CE /* GoogleService-Dev-Info.plist */,
 			);
@@ -4561,7 +4556,6 @@
 			files = (
 				223887212366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */,
 				DEC62AAE2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
-				221117A323C6E5F700C8BBD5 /* GoogleService-Info.plist in Resources */,
 				DEECF88022870D1700A4678B /* Localizable.strings in Resources */,
 				17FFE277236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
 				2A07B9AC236E9E65004FE7CE /* TimeView.xib in Resources */,
@@ -4693,7 +4687,6 @@
 			files = (
 				223887222366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */,
 				DEC62AAF2293007F00D7CECE /* ThanksReportContent.xib in Resources */,
-				221117A423C6E5F700C8BBD5 /* GoogleService-Info.plist in Resources */,
 				DE9530422287DF4800E3F688 /* Localizable.strings in Resources */,
 				17FFE278236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
 				2A07B9AD236E9E65004FE7CE /* TimeView.xib in Resources */,
@@ -4825,7 +4818,6 @@
 			files = (
 				223887232366DF9E00DAC978 /* HomeFilterPopUpContentView.xib in Resources */,
 				DEC62AB02293007F00D7CECE /* ThanksReportContent.xib in Resources */,
-				221117A523C6E5F700C8BBD5 /* GoogleService-Info.plist in Resources */,
 				DE9530F02287DF6400E3F688 /* Localizable.strings in Resources */,
 				17FFE279236D3BBB00E740B3 /* HistoryParnerCell.xib in Resources */,
 				2A07B9AE236E9E65004FE7CE /* TimeView.xib in Resources */,

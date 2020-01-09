@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         
         configureGoogle()
+        
+        configureFirebase()
+        
         configurePushNotification(application: application)
         
 //        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
