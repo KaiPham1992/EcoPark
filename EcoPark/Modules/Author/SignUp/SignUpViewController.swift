@@ -225,7 +225,14 @@ extension SignUpViewController: SignUpViewProtocol {
         PopUpHelper.shared.showMessage(message: LocalizableKey.signUpSuccess.showLanguage, width: 350, completion: {
            
             //----
-            AppRouter.shared.openHomeView()
+            
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            
+            
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+//                 AppRouter.shared.openHomeView()
+//            }
+           
         })
     }
     

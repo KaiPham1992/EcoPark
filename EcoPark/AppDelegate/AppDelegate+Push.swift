@@ -101,8 +101,6 @@ extension AppDelegate: MessagingDelegate {
         UserDefaultHelper.shared.fcmToken = fcmToken
         print(UserDefaultHelper.shared.fcmToken)
     }
-    
-    
   
 }
 
