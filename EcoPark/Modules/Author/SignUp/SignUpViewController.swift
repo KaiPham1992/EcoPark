@@ -219,9 +219,12 @@ extension SignUpViewController: SignUpViewProtocol {
     }
     
     func signUpSuccess(user: UserEntity?) {
+        guard let _user = user else { return }
+                   UserDefaultHelper.shared.saveUser(user: _user)
+        
         PopUpHelper.shared.showMessage(message: LocalizableKey.signUpSuccess.showLanguage, width: 350, completion: {
-            guard let _user = user else { return }
-            UserDefaultHelper.shared.saveUser(user: _user)
+           
+            //----
             AppRouter.shared.openHomeView()
         })
     }

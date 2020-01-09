@@ -27,6 +27,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
 
         FirebaseApp.configure(options: options)
+        
+//        FirebaseApp.configure()
     }
     
     func configurePushNotification(application: UIApplication) {
@@ -99,6 +101,9 @@ extension AppDelegate: MessagingDelegate {
         UserDefaultHelper.shared.fcmToken = fcmToken
         print(UserDefaultHelper.shared.fcmToken)
     }
+    
+    
+  
 }
 
 
