@@ -31,7 +31,7 @@ class SystemNotificationViewController: ListManagerVC, SystemNotificationViewPro
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.getNotification(screen: "notification", offset: 0, limit: limitLoad)
+        presenter?.getNotification(screen: "SYSTEM", offset: 0, limit: limitLoad)
     }
     
     override func registerTableView() {

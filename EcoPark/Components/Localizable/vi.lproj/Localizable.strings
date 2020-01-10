@@ -75,6 +75,7 @@
 "contentRating2" = " Bạn có hài lòng với dịch vụ của bãi xe?";
 "sent" = "Gửi";
 "timeExpect" = "Đã dự kiến đến bãi lúc ";
+"timeCheckout" = "Đã dự kiến rời bãi lúc";
 "invalid" = "Không hợp lệ";
 "contentQRFail1" = "Mã QR này không thuộc hệ thống ";
 "contentQRFail2" = " Vui lòng đảm bảo bạn đã quét đúng thông tin!";

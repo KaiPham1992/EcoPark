@@ -206,6 +206,12 @@ class PopUpHelper {
         popUp.showPopUp(name: name, address: address, time: time, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
     }
     
+    // MARK: Check out
+    func  showCheckOut(name: String, licensePlate: String, time: String, timeOut: String, width: CGFloat, height: CGFloat, completionYes: CompletionClosure?, completionNo: CompletionClosure? ){
+        let popUp = CheckOutPopUp()
+        popUp.showPopUp(name: name, licensePlate: licensePlate, time: time, timeOut: timeOut, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+    }
+    
     // MARK: Cancel reservation
     func showCancelReservation(width: CGFloat, height: CGFloat = 215 , completionYes: CompletionClosure?, completionNo: CompletionClosure?) {
         

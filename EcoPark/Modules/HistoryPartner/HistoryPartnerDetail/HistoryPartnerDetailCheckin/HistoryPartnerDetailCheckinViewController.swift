@@ -86,7 +86,15 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyParkingDetail
-        presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+        guard let _historyParking = historyParkingDetail else { return }
+        let intendCheckin = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+        let intendCheckout = _historyParking.intend_checkout_time?.toString(dateFormat: .ecoTime)
+        PopUpHelper.shared.showCheckOut(name: _historyParking.fullname&, licensePlate: _historyParking.license_plates&, time: intendCheckin&, timeOut: intendCheckout&, width: 350, height: 280, completionYes: {
+            self.presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+        }) {
+            self.pop()
+        }
+        
         
     }
     

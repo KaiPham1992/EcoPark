@@ -71,6 +71,7 @@ struct LocalizableKey {
     static let contentRating2 = "contentRating2"
     static let sent = "sent"
     static let timeExpect = "timeExpect"
+    static let timeCheckout = "timeCheckout"
     static let invalid = "invalid"
     static let contentQRFail1 = "contentQRFail1"
     static let contentQRFail2 = "contentQRFail2"

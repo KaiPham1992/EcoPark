@@ -110,6 +110,7 @@
 "contentRating2" = " Are you satisfied with the parking service?";
 "sent" = "Sent";
 "timeExpect" = "Expected to parking lot at";
+"timeCheckout" = "Expected leave parking lot at";
 "invalid" = "Invalid";
 "contentQRFail1" = "This QR code is not part of the system ";
 "contentQRFail2" = "\nPlease make sure you have scanned the right information!";

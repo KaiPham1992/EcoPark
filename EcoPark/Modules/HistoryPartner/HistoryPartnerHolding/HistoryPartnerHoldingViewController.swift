@@ -13,12 +13,12 @@ import XLPagerTabStrip
 
 
 class HistoryPartnerHoldingViewController: BaseViewController {
-
+    
     @IBOutlet weak var vSearch: AppSearchTextField!
     @IBOutlet weak var tbPartnerHolding: UITableView!
     
-	var presenter: HistoryPartnerHoldingPresenterProtocol?
-
+    var presenter: HistoryPartnerHoldingPresenterProtocol?
+    
     var number_place: String = "0"
     var parkedNumber: Int = 0
     var historyParkingHolding: HistoryMyParkingEntity? {
@@ -31,13 +31,13 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     var isCanLoadMore: Bool = false
     var isRefresh: Bool = false
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tbPartnerHolding.addSubview(refreshControl)
     }
-
+    
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
@@ -69,7 +69,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.getData()
         }
-
+        
         
     }
     
@@ -95,7 +95,7 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         let licensePlates = historyParkingHolding?.booking[sender.tag].license_plates
         
         presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
-            
+        
         
     }
 }
@@ -156,8 +156,8 @@ extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol
         self.historyParkingHolding = historyParking
         isCanLoadMore = historyParking?.booking.count == limitLoad
         if self.historyParkingHolding == nil || self.historyParkingHolding?.booking.count == 0 || isRefresh {
-                isRefresh = false
-                self.historyParkingHolding = historyParking
+            isRefresh = false
+            self.historyParkingHolding = historyParking
         } else {
             guard let booking = historyParking?.booking else { return }
             self.historyParkingHolding?.booking.append(contentsOf: booking)
@@ -175,8 +175,8 @@ extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol
         
         PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables ?? "0", vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
             self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: historyParkingDetail?.parking_id ?? "", bookingID: historyParkingDetail?.id ?? ""))
-                    }) {
-                        self.presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
-                    }
+        }) {
+            self.presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+        }
     }
 }

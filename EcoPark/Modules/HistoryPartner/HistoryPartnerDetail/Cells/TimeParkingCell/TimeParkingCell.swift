@@ -56,10 +56,6 @@ class TimeParkingCell: UITableViewCell {
     
     func setupTimeCount() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
-//            self.newCurrentDate = self.newCurrentDate + 1
-//            let ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
-                 
-//            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
             self.newCurrentDate = self.newCurrentDate + 1
             
             var ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
@@ -79,7 +75,7 @@ class TimeParkingCell: UITableViewCell {
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
-        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
         lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
         lbCheckOutTime.text = "-"
         
@@ -98,14 +94,9 @@ class TimeParkingCell: UITableViewCell {
         case StatusBooking.checked_out.rawValue:
             guard let _historyParkingDetail = historyParkingDetail else { return }
             lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
-            lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
             lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
             lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
-            
-            
-//            guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970,
-//                let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
-//            let ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
             
             guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = historyParkingDetail?.intend_checkin_time?.timeIntervalSince1970,let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
             
@@ -121,14 +112,14 @@ class TimeParkingCell: UITableViewCell {
         case StatusBooking.expired.rawValue:
             guard let _historyParkingDetail = historyParkingDetail else { return }
             lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
-            lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
             lbCheckInTime.text = "-"
             lbCheckOutTime.text = "-"
             
             case StatusBooking.cancel.rawValue:
             guard let _historyParkingDetail = historyParkingDetail else { return }
             lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
-            lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
             lbCheckInTime.text = "-"
             lbCheckOutTime.text = "-"
             
@@ -142,7 +133,7 @@ class TimeParkingCell: UITableViewCell {
     func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
-        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
         lbCheckInTime.text = "-"
         lbCheckOutTime.text = "-"
         

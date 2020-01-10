@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckOutPopUpContent">
+            <connections>
+                <outlet property="btnCancel" destination="oCQ-yb-mDA" id="4U3-8i-yaU"/>
+                <outlet property="btnCheckOut" destination="7CH-1b-dlR" id="OGe-ID-Rk0"/>
+                <outlet property="lbCheckoutTime" destination="CbW-CQ-1as" id="SLd-js-kwr"/>
+                <outlet property="lbLicensePlate" destination="CBw-8C-s3d" id="xWe-Qj-XH7"/>
+                <outlet property="lbName" destination="frG-7U-668" id="PJv-D4-1PR"/>
+                <outlet property="lbTime" destination="tLa-lL-Glq" id="tNR-6Z-2M7"/>
+                <outlet property="lbTimeCheckout" destination="CAG-7i-olg" id="Fsw-te-wRJ"/>
+                <outlet property="lbTimeExpect" destination="EbV-lE-Qif" id="dNY-cE-DuG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="U1F-MG-BkW">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-q8-E1c">
+                    <rect key="frame" x="16" y="64" width="382" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="QVD-cG-33c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frG-7U-668">
+                    <rect key="frame" x="16" y="109" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51F-1111" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBw-8C-s3d">
+                    <rect key="frame" x="16" y="149.5" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã dự kiến đến bãi lúc " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-lE-Qif" userLabel="Đã dự kiến đến bãi lúc">
+                    <rect key="frame" x="16" y="190" width="156" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="156" id="0ea-5J-mBd"/>
+                        <constraint firstAttribute="height" constant="18" id="LvP-le-9ck"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLa-lL-Glq">
+                    <rect key="frame" x="188" y="190" width="210" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCQ-yb-mDA">
+                    <rect key="frame" x="16" y="319" width="165.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="F3V-SE-BmZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Huỷ"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CH-1b-dlR">
+                    <rect key="frame" x="232.5" y="319" width="165.5" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EXN-g1-rbA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Check out">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã dự kiến rời bãi lúc " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAG-7i-olg">
+                    <rect key="frame" x="16" y="218" width="156" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="Yvy-MG-Pwf"/>
+                        <constraint firstAttribute="width" constant="156" id="bAu-ET-Jqr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbW-CQ-1as">
+                    <rect key="frame" x="188" y="218" width="210" height="20.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.50588235290000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CbW-CQ-1as" firstAttribute="leading" secondItem="CAG-7i-olg" secondAttribute="trailing" constant="16" id="0Aj-1m-Paw"/>
+                <constraint firstItem="frG-7U-668" firstAttribute="leading" secondItem="MD3-kO-vXc" secondAttribute="leading" constant="16" id="2mF-Pw-P1l"/>
+                <constraint firstItem="EbV-lE-Qif" firstAttribute="top" secondItem="CBw-8C-s3d" secondAttribute="bottom" constant="20" id="3Pg-7A-qZL"/>
+                <constraint firstItem="CBw-8C-s3d" firstAttribute="leading" secondItem="MD3-kO-vXc" secondAttribute="leading" constant="16" id="3RM-AN-UHh"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="trailing" secondItem="ltI-q8-E1c" secondAttribute="trailing" constant="16" id="45F-s8-ue3"/>
+                <constraint firstItem="CbW-CQ-1as" firstAttribute="top" secondItem="CAG-7i-olg" secondAttribute="top" id="5DS-Vj-U9M"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="bottom" secondItem="oCQ-yb-mDA" secondAttribute="bottom" constant="20" id="66O-os-qXL"/>
+                <constraint firstItem="tLa-lL-Glq" firstAttribute="leading" secondItem="EbV-lE-Qif" secondAttribute="trailing" constant="16" id="8am-lZ-ese"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="trailing" secondItem="frG-7U-668" secondAttribute="trailing" constant="16" id="9Fy-5z-HQh"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="bottom" secondItem="7CH-1b-dlR" secondAttribute="bottom" constant="20" id="EGb-2I-AaD"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="trailing" secondItem="CBw-8C-s3d" secondAttribute="trailing" constant="16" id="F0M-tl-02k"/>
+                <constraint firstItem="7CH-1b-dlR" firstAttribute="width" secondItem="oCQ-yb-mDA" secondAttribute="width" id="FP4-FI-xuS"/>
+                <constraint firstItem="frG-7U-668" firstAttribute="top" secondItem="ltI-q8-E1c" secondAttribute="bottom" constant="20" id="KNi-gP-L6F"/>
+                <constraint firstItem="tLa-lL-Glq" firstAttribute="top" secondItem="EbV-lE-Qif" secondAttribute="top" id="RZc-wU-IkY"/>
+                <constraint firstItem="CAG-7i-olg" firstAttribute="top" secondItem="EbV-lE-Qif" secondAttribute="bottom" constant="10" id="YBi-cF-Zk6"/>
+                <constraint firstItem="oCQ-yb-mDA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EbV-lE-Qif" secondAttribute="bottom" constant="16" id="YR5-HK-Jal"/>
+                <constraint firstItem="oCQ-yb-mDA" firstAttribute="leading" secondItem="MD3-kO-vXc" secondAttribute="leading" constant="16" id="aLQ-7C-RHb"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="trailing" secondItem="tLa-lL-Glq" secondAttribute="trailing" constant="16" id="aNT-la-67K"/>
+                <constraint firstItem="CBw-8C-s3d" firstAttribute="top" secondItem="frG-7U-668" secondAttribute="bottom" constant="20" id="hrf-ma-zgz"/>
+                <constraint firstItem="CbW-CQ-1as" firstAttribute="trailing" secondItem="tLa-lL-Glq" secondAttribute="trailing" id="joM-qc-Mre"/>
+                <constraint firstItem="CAG-7i-olg" firstAttribute="leading" secondItem="EbV-lE-Qif" secondAttribute="leading" id="jrs-fD-hD1"/>
+                <constraint firstItem="ltI-q8-E1c" firstAttribute="top" secondItem="MD3-kO-vXc" secondAttribute="top" constant="20" id="msr-zt-4ph"/>
+                <constraint firstItem="oCQ-yb-mDA" firstAttribute="width" secondItem="U1F-MG-BkW" secondAttribute="width" multiplier="2/5" id="qu9-Ac-c3d"/>
+                <constraint firstItem="MD3-kO-vXc" firstAttribute="trailing" secondItem="7CH-1b-dlR" secondAttribute="trailing" constant="16" id="uOF-EP-vX8"/>
+                <constraint firstItem="ltI-q8-E1c" firstAttribute="leading" secondItem="U1F-MG-BkW" secondAttribute="leading" constant="16" id="vNk-Rh-dPT"/>
+                <constraint firstItem="EbV-lE-Qif" firstAttribute="leading" secondItem="MD3-kO-vXc" secondAttribute="leading" constant="16" id="wxr-rO-Xkt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="MD3-kO-vXc"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-84.709821428571431"/>
+        </view>
+    </objects>
+</document>

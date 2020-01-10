@@ -59,18 +59,26 @@ class PageHistoryPartnerViewControler : PageViewController {
     
     func callAPICheckout(bookingID: String, code: String, license_plates: String) {
         ProgressView.shared.showProgressOnWindow()
-        Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in Provider.shared.parkingAPIService.changeStatusCheckout(bookingID: bookingID,
-                                                                                                                                                                                                                  bonus: "\(historyParking?.bonus ?? 0)",
-                                                                                                                                                                                                                  plus_wallet_boss: "\(historyParking?.plus_wallet_boss ?? 0)",
-                                                                                                                                                                                                                  parking_price: "\(historyParking?.parking_price ?? 0)",
-                                                                                                                                                                                                                  payment_wallet: "\(historyParking?.payment_wallet ?? 0)",
-                                                                                                                                                                                                                  success: { (parkingDetail) in
-                ProgressView.shared.hide()
-                self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: parkingDetail?.id ?? "", parkingID: parkingDetail?.parking_id ?? ""))
-            }) { (_) in
-                ProgressView.shared.hide()
+        Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: license_plates, success: { (historyParking) in
+            guard let _historyParking = historyParking else { return }
+            let intendCheckin = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            let intendCheckout = _historyParking.intend_checkout_time?.toString(dateFormat: .ecoTime)
+            ProgressView.shared.hide()
+            PopUpHelper.shared.showCheckOut(name: _historyParking.fullname&, licensePlate: _historyParking.license_plates&, time: intendCheckin&, timeOut: intendCheckout&, width: 350, height: 280, completionYes: {
+                Provider.shared.parkingAPIService.changeStatusCheckout(bookingID: bookingID,
+                                                                                                                                                                                                                          bonus: "\(historyParking?.bonus ?? 0)",
+                    plus_wallet_boss: "\(historyParking?.plus_wallet_boss ?? 0)",
+                    parking_price: "\(historyParking?.parking_price ?? 0)",
+                    payment_wallet: "\(historyParking?.payment_wallet ?? 0)",
+                    success: { (parkingDetail) in
+                        ProgressView.shared.hide()
+                        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: parkingDetail?.id ?? "", parkingID: parkingDetail?.parking_id ?? ""))
+                }) { (_) in
+                    ProgressView.shared.hide()
+                    }
+            }) {
+                self.pop()
             }
-            
         }) { (error) in
             
             ProgressView.shared.hide()
