@@ -31,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
         }
         
+        if LanguageHelper.currentAppleLanguage() == LanguageType.english.rawValue {
+            LanguageHelper.setAppleLAnguageTo(lang: .english)
+        } else {
+            LanguageHelper.setAppleLAnguageTo(lang: .vietname)
+        }
+        
 //        DropDown.startListeningToKeyboard()
         
         IQKeyboardManager.shared.enable = true

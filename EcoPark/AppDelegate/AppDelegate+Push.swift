@@ -28,12 +28,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
         FirebaseApp.configure(options: options)
 
-//        FirebaseApp.configure()
+//        Messaging.messaging().delegate = self
     }
     
     func configurePushNotification(application: UIApplication) {
         //configureFirebase()
-        Messaging.messaging().delegate = self
+        
         
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
@@ -54,6 +54,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             print("FCM token: \(token)")
             UserDefaultHelper.shared.fcmToken = token
         }
+        
+        //---
+        Messaging.messaging().delegate = self
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
