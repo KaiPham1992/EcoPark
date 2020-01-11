@@ -12,6 +12,12 @@ import UIKit
 
 class LoadingViewController: BaseViewController, LoadingViewProtocol {
 
+    @IBOutlet weak var lbEcoParking: UILabel!
+    @IBOutlet weak var lbText1: UILabel!
+    @IBOutlet weak var lbText2: UILabel!
+    @IBOutlet weak var lbText3: UILabel!
+    @IBOutlet weak var lbText4: UILabel!
+    @IBOutlet weak var lbText5: UILabel!
     @IBOutlet weak var lbNext: UILabel!
     
 	var presenter: LoadingPresenterProtocol?
@@ -19,6 +25,9 @@ class LoadingViewController: BaseViewController, LoadingViewProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            AppRouter.shared.openHomeView()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +36,13 @@ class LoadingViewController: BaseViewController, LoadingViewProtocol {
     }
 
     private func setupUI() {
-        let attr1 = "Tiếp >>".toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: true)
+        lbText1.text = LocalizableKey.textLoading1.showLanguage
+        lbText2.text = LocalizableKey.textLoading2.showLanguage
+        lbText3.text = LocalizableKey.textLoading3.showLanguage
+        lbText4.text = LocalizableKey.textLoading4.showLanguage
+        lbText5.text = LocalizableKey.textLoading5.showLanguage
+        
+        let attr1 = (LocalizableKey.next1.showLanguage + " >>").toAttributedString(color: AppColor.white, font: AppFont.fontRegular15, isUnderLine: true)
         
         let attr = NSMutableAttributedString()
         attr.append(attr1)

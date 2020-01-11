@@ -54,7 +54,12 @@
 "KHPaidWallet" = "Customers pay for the wallet";
 "KHPaidCash" = "Customers pay cash";
 "changeWallet" = "Change wallet";
-
+"next1" = "Next";
+"textLoading1" = "YOU SEARCH FOR CARS?";
+"textLoading2" = "EcoParking will give you the best parking";
+"textLoading3" = "FAST BOOKING - CHEAP";
+"textLoading4" = "SMART - SAVE";
+"textLoading5" = "PLEASE LOG IN TO LEARN \nECOPARKING SERVICES";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";

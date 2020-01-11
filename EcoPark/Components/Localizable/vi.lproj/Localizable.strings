@@ -57,7 +57,11 @@
 "KHPaidWallet" = "KH Thanh toán ví";
 "KHPaidCash" = "KH thanh toán tiền mặt";
 "changeWallet" = "Thay đổi ví tiền";
-
+"textLoading1" = "BẠN TÌM CHỖ GỬI XE?";
+"textLoading2" = "EcoParking sẽ cho bạn chỗ gửi xe tốt nhất";
+"textLoading3" = "BOOKING NHANH - RẺ";
+"textLoading4" = "THÔNG MINH - TIẾT KIỆM";
+"textLoading5" = "HÃY ĐĂNG NHẬP ĐỂ TÌM HIỂU \nDỊCH VỤ CỦA ECOPARKING";
 
 // Popup
 "receivable" = "Phải thu: ";
@@ -328,6 +332,7 @@
 
 "next" = "Tiếp tục";
 
+"next1" = "Tiếp";
 ////popup
 "confirm" = "XÁC NHẬN";
 

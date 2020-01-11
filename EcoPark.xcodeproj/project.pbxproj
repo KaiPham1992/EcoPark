@@ -1863,7 +1863,6 @@
 		223887242366E23F00DAC978 /* HomeFilterPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterPopUp.swift; sourceTree = "<group>"; };
 		223887292366E5BF00DAC978 /* ParkingLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLevelView.swift; sourceTree = "<group>"; };
 		2238872D2366E5DD00DAC978 /* ParkingLevelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingLevelView.xib; sourceTree = "<group>"; };
-		223DA76723C7202400650973 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		22431741235EBCBE00CA1E13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		22431742235EBCBE00CA1E13 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		22431743235EBCBF00CA1E13 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -2281,7 +2280,6 @@
 		DEECF87A22870B3D00A4678B /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		DEECF88122870D1700A4678B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEECF88422870DA400A4678B /* LocalizableKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKey.swift; sourceTree = "<group>"; };
-		DEECF88622870F2500A4678B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DEECF88722870F2500A4678B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEECF88922871D0400A4678B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		DEECF88A22871D0400A4678B /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
@@ -6515,8 +6513,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE3CC3472283DD990037DBE4 /* Base */,
-				DEECF88622870F2500A4678B /* vi */,
-				223DA76723C7202400650973 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
