@@ -25,7 +25,7 @@ class LoadingViewController: BaseViewController, LoadingViewProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             AppRouter.shared.openHomeView()
         }
     }
