@@ -54,6 +54,9 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
         case StatusBooking.cancel.rawValue:
             lbStatus.text = LocalizableKey.canceled.showLanguage
             lbStatus.textColor = .red
+            case StatusBooking.checked_in.rawValue:
+            lbStatus.text = LocalizableKey.checked_in.showLanguage
+            lbStatus.textColor = AppColor.color_13_196_68
         default:
             break
         }

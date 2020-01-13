@@ -191,6 +191,7 @@ class SignUpPartnerStep3ViewController: BaseViewController, SignUpPartnerStep3Vi
     }
     func didGetProfileUser(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)
+        UserDefaultHelper.shared.parkingID = user.parkingID ?? ""
     }
 }
 

@@ -151,7 +151,7 @@ extension ProfileViewController:  ProfileViewProtocol {
     
     func didUpdateProfile(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)
-        
+        UserDefaultHelper.shared.parkingID = user.parkingID ?? ""
         self.user = user
         PopUpHelper.shared.showEditProfile {
         }

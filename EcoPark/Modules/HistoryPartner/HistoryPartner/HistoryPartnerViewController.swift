@@ -124,14 +124,9 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
         let bookingParking = HistoryBookingParkingResponse()
         let bookingID = historyParking?.booking[indexPath.item].id
          bookingParking.id = bookingID
-//        if historyParking?.booking[indexPath.item].status == StatusBooking.checked_out.rawValue || historyParking?.booking[indexPath.item].status == StatusBooking.expired.rawValue {
             let vc = HistoryPartnerDetailCheckoutRouter.createModule(bookingID: bookingID&, parkingID: historyParking?.booking[indexPath.item].parking_id ?? "")
             vc.isFromList = true
             self.push(controller: vc)
-//        } else {
-//            let vc = DetailParkingRouter.createModule(bookingParking: bookingParking)
-//            self.push(controller: vc)
-//        }
         
     }
     

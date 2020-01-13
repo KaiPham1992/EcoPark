@@ -18,10 +18,10 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     @IBOutlet weak var tbCheckInDetail: UITableView!
     @IBOutlet weak var btnCheckOut: UIButton!
     @IBOutlet weak var btnScanQR: UIButton!
-    
+    @IBOutlet weak var vContainer: UIView!
     var parkingID: String = ""
     var bookingID: String = ""
-    
+    var isNoti = false
     var historyParkingDetail: HistoryBookingParkingResponse? {
         didSet {
             tbCheckInDetail.reloadData()
@@ -39,6 +39,11 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
         btnCheckOut.setBorder(borderWidth: 0.5, borderColor: AppColor.color_0_129_255, cornerRadius: 5)
         lbStatus.text = LocalizableKey.checked_in.showLanguage
         btnCheckOut.setTitle(LocalizableKey.agreeCheckout.showLanguage, for: .normal)
+        if isNoti {
+            vContainer.isHidden = true
+        } else {
+            vContainer.isHidden = false
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

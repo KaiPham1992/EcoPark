@@ -27,7 +27,7 @@ enum NotificationKey: String {
     case NOTIF_STATUS_CANCEL
     case NOTIF_CHECK_INTEND_CHEKCIN_TIME
     case NOTIF_PLUS_MONEY_FOR_BOSS
-    
-    
+    case NOTIF_CHECKIN_EARLY
+    case NOTIF_CHECKED_OUT
     
 }

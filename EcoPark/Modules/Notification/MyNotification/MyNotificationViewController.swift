@@ -61,15 +61,34 @@ class MyNotificationViewController: ListManagerVC, MyNotificationViewProtocol {
     }
     
     override func didSelectTableView(item: Any, indexPath: IndexPath) {
+        guard let actionKey = notification[indexPath.item].actionKey, let id =  notification[indexPath.item].id else { return }
         let bookingID = notification[indexPath.item].bookingID
-        if bookingID != nil {
+        let parkingID = UserDefaultHelper.shared.parkingID
+        presenter?.getNotificationDetail(notificationID: Int(id) ?? 0)
+        switch actionKey {
+        case NotificationKey.NOTIF_CHECK_TIME_OUT.rawValue, NotificationKey.NOTIF_BOOKING_EXPIRED_FOR_CUS.rawValue, NotificationKey.NOTIF_CHECK_TIME_END_PARKING.rawValue, NotificationKey.NOTIF_RATING_FOR_CUSTOMER.rawValue, NotificationKey.NOTIF_CHECK_INTEND_CHEKCIN_TIME.rawValue, NotificationKey.NOTIF_CHECKED_OUT.rawValue:
             let vc = DetailParkingRouter.createModule(bookingID: bookingID ?? "")
             self.push(controller: vc)
-        } else {
+        case NotificationKey.NOTIF_BOOKING_EXPIRED_FOR_BOSS.rawValue, NotificationKey.NOTIF_RATING_FOR_BOSS_PARKING.rawValue, NotificationKey.NOTIF_STATUS_CANCEL.rawValue:
+            let vc = HistoryPartnerDetailCheckoutRouter.createModule(bookingID: bookingID ?? "", parkingID: parkingID)
+            vc.isFromList = true
+            self.push(controller: vc)
+        case NotificationKey.THE_WALLET_RUNS_OUT_OF_MONEY.rawValue, NotificationKey.NOTIF_PLUS.rawValue, NotificationKey.NOTIF_PLUS_MONEY_FOR_BOSS.rawValue:
             let vc = WalletRouter.createModule()
-            presenter?.getNotificationDetail(notificationID: Int(notification[indexPath.item].id ?? "") ?? 0)
             vc.isBack = true
             self.push(controller: vc)
+        case NotificationKey.NOTIF_REGISTER_BOSS_PARKING.rawValue:
+            let vc = ParkingInfoRouter.createModule()
+            self.push(controller: vc)
+        case NotificationKey.NOTIF_EXTRA.rawValue, NotificationKey.NOTIF_CHECKIN_EARLY.rawValue:
+            let vc = HistoryPartnerDetailCheckinRouter.createModule(parkingID: parkingID, bookingID: bookingID ?? "")
+            vc.isNoti = true
+            self.push(controller: vc)
+        case NotificationKey.NOTIF_BOOKING_FOR_BOSS.rawValue:
+            let vc = HistoryPartnerDetailBookingRouter.createModule(parkingID: parkingID, bookingID: bookingID ?? "")
+            self.push(controller: vc)
+        default:
+            break
         }
     }
     

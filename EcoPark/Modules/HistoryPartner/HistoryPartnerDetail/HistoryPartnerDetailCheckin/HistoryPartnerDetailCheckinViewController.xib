@@ -14,6 +14,7 @@
                 <outlet property="lbID" destination="vhH-N5-j0h" id="YvJ-12-Byd"/>
                 <outlet property="lbStatus" destination="zNP-9h-Izd" id="ZwS-fb-g6U"/>
                 <outlet property="tbCheckInDetail" destination="zPh-Eg-kMv" id="s83-cn-SZ6"/>
+                <outlet property="vContainer" destination="jYb-t2-jmn" id="UIF-2o-iKS"/>
                 <outlet property="view" destination="WJg-TG-CZQ" id="JA4-MU-Q7Y"/>
             </connections>
         </placeholder>

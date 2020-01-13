@@ -108,8 +108,13 @@ class UserDefaultHelper {
     }
     
     var parkingID: String {
-        guard let _parkingID = get(key: .parkingID) as? String else { return "" }
-        return _parkingID
+        get {
+            guard let _parkingID = get(key: .parkingID) as? String else { return "" }
+            return _parkingID
+        }
+        set(newValue) {
+            save(value: newValue, key: .parkingID)
+        }
     }
     
     var birthday: Date? {
