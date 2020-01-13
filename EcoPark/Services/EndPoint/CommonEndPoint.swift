@@ -25,7 +25,7 @@ extension CommonEndPoint: EndPointType {
         case .getNationals:
             return "_api/nation/get_list_nation"
         case .changeLanguageCode:
-            return "_api/user/change_language_code"
+            return "_api/user/change_language"
         case .getTermAndCondition:
             return "_api/webview/terms_of_use"
         case .policy:
