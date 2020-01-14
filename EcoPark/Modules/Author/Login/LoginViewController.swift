@@ -155,7 +155,8 @@ extension LoginViewController: LoginViewProtocol {
         }
         
         self.callBackLoginSuccessed?()
-        self.dismiss()
+//        self.dismiss()
+         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     func didError(error: APIError?) {
