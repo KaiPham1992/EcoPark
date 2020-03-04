@@ -35,7 +35,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     /****** Default param - Fix me later. *****/
     var star: [Int] = []
-    var distance = "1000"
+    var distance = "500"
     var address = ""
     /********************************/
     let zoomMap: Float = 14.0
