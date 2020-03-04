@@ -51,6 +51,7 @@ class ProfileViewController: BaseViewController {
         setTitleNavigation(title: LocalizableKey.MenuProfile.showLanguage)
         imgAvatar.setBorder(borderWidth: 0, borderColor: .clear, cornerRadius: imgAvatar.frame.width / 2)
         vUsername.setTitleAndPlaceHolder(title: LocalizableKey.username.showLanguage, placeHolder: "")
+        vUsername.vLine.backgroundColor = AppColor.color_205_205_205
         vDisplayname.setTitleAndPlaceHolder(title: LocalizableKey.displaynameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vPhoneNumber.setTitleAndPlaceHolder(title: LocalizableKey.phoneNumberSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.emailSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -170,15 +171,27 @@ extension ProfileViewController {
             return false
         }
 
+        if self.vPhoneNumber.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.pleaseEnterPhone.showLanguage)
+            return false
+        }
+        
+        if let phone = self.vPhoneNumber.tfInput.text, phone.isValidPhone() == false {
+            hideError(isHidden: false, message:  LocalizableKey.invalidLoginPhone.showLanguage)
+            return false
+        }
+        
         if self.vEmail.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
 
+        
         if let email = self.vEmail.tfInput.text, email.isValidEmail() == false {
             hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
             return false
         }
+        
         hideError()
         return true
         

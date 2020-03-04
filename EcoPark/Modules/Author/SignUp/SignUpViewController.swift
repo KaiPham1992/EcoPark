@@ -165,6 +165,16 @@ extension SignUpViewController {
                 return false
         }
 
+        if self.vPhoneNumber.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.pleaseEnterPhone.showLanguage)
+            return false
+        }
+        
+        if let phone = self.vPhoneNumber.tfInput.text, phone.isValidPhone() == false {
+            hideError(isHidden: false, message:  LocalizableKey.invalidLoginPhone.showLanguage)
+            return false
+        }
+        
         if self.vEmail.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false

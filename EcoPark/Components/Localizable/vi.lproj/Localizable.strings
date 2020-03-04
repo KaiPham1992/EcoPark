@@ -129,7 +129,7 @@
 "PasswordSignUp" = "Mật khẩu (Tối thiểu 6 ký tự) *";
 "RePasswordSignUp" = "Nhập lại mật khẩu *";
 "EmailSignUp" = "Email *";
-"PhoneNumberSignUp" = "Số điện thoại liên hệ";
+"PhoneNumberSignUp" = "Số điện thoại liên hệ *";
 "Gender" = "Giới tính";
 "Birthday" = "Ngày sinh";
 "Capcha" = "Captcha *";
@@ -152,11 +152,13 @@
 "ForgotTitle" = "Quên mật khẩu";
 
 "invalidLoginEmail" = "Địa chỉ email sai format";
+"invalidLoginPhone" = "Số điện thoại không hợp lệ";
 "invalidLoginPassword" = "Mật khẩu phải có 6 kí tự trở lên";
 "emptyLoginEmailPassword"  = "Vui lòng nhập đầy đủ thông tin";
 "emptyCapcha" = "Vui lòng nhập mã captcha";
 
 "pleaseEnterEmail" = "Vui lòng nhập email";
+"pleaseEnterPhone" = "Vui lòng nhập số điện thoại";
 "pleaseEnterDisplayName" = "Vui lòng nhập tên hiển thị";
 "pleaseEnterPassword" = "Vui lòng nhập mật khẩu";
 "pleaseEnterRePassword" = "Vui lòng nhập lại mật khẩu";

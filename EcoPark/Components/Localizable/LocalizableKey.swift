@@ -119,6 +119,7 @@ struct LocalizableKey {
     static let language = "Language"
     
     static let invalidLoginEmail = "invalidLoginEmail"
+    static let invalidLoginPhone = "invalidLoginPhone"
     static let invalidLoginPassword = "invalidLoginPassword"
     static let emptyLoginEmailPassword = "emptyLoginEmailPassword"
     static let passwordDifference = "passwordDifference"
@@ -333,6 +334,7 @@ struct LocalizableKey {
     static let privacyAndPolicy = "PrivacyAndPolicy"
     static let security = "Security"
     static let pleaseEnterEmail = "pleaseEnterEmail"
+    static let pleaseEnterPhone = "pleaseEnterPhone"
     static let pleaseEnterDisplayName = "pleaseEnterDisplayName"
     static let pleaseEnterPassword = "pleaseEnterPassword"
     static let pleaseEnterCurrentPassword = "pleaseEnterCurrentPassword"
