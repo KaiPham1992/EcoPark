@@ -76,7 +76,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         lbTitle.text = LocalizableKey.keepPlace.showLanguage
         lbCapacity.text = LocalizableKey.maxCapacity.showLanguage
         lbTime.text = LocalizableKey.parkingTime.showLanguage
-        lbTitleOne.text = LocalizableKey.parkingFee.showLanguage
+        lbTitleOne.text = LocalizableKey.parkingFeeUser.showLanguage
         lbTitleEight.text = LocalizableKey.titlePriceEight.showLanguage + " \(numberHours) " + LocalizableKey.hour.showLanguage + ":"
         lbTitleBookingInfo.text = LocalizableKey.bookingInfo.showLanguage
         

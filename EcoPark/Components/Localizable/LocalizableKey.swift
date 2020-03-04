@@ -62,6 +62,8 @@ struct LocalizableKey {
     static let textLoading4 = "textLoading4"
     static let textLoading5 = "textLoading5"
     
+    static let parkingFeeUser = "parkingFeeUser"
+    
     //-- Popup
     static let receivable = "receivable"
     static let carType = "carType"
@@ -648,7 +650,7 @@ struct LocalizableKey {
     static let infoParking = "infoParking"
     static let expect = "expect"
     static let NumberHoursSend = "NumberHoursSend"
-    static let ParkingFee = "ParkingFee"
+    static let FeeParking = "FeeParking"
     static let Paid = "Paid"
     static let paidWithWallet = "paidWithWallet"
     static let paidWithCash = "paidWithCash"

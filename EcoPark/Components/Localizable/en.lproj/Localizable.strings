@@ -8,7 +8,7 @@
 
 
 // Menu Page Ecopark
-"MenuHistoryParking" = "History parking";
+"MenuHistoryParking" = "Transaction status parking";
 "MenuMyInfo" = "My parking info";
 "MenuFindAround" = "Find Park Around";
 "MenuHistory" = "Transaction status";
@@ -60,6 +60,7 @@
 "textLoading3" = "FAST BOOKING - CHEAP";
 "textLoading4" = "SMART - SAVE";
 "textLoading5" = "PLEASE LOG IN TO LEARN \nECOPARKING SERVICES";
+"parkingFeeUser" = "Parking fee";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";
@@ -654,14 +655,14 @@
 "checked_in" = "Checked in";
 "reservation" = "Reservation";
 "expired" = "Expired";
-"history_parking" = "History parking";
+"history_parking" = "Transaction status parking";
 "booked" = "Booked";
 "holding" = "Holding";
 "contactParking" = "Contact parking";
 "infoParking" = "Parking information";
 "expect" = "Expect";
 "NumberHoursSend" = "Number of hours to send";
-"ParkingFee" = "Parking fee";
+"FeeParking" = "Total parking fee";
 "Paid" = "Paid";
 "paidWithWallet" = "Pay more by wallet";
 "paidWithCash" = "Pay more by cash";

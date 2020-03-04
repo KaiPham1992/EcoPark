@@ -22,7 +22,7 @@ class PriceAddMoneyCell: UITableViewCell {
         DLVBillForHour.setupViewUnit(title: LocalizableKey.priceAHours.showLanguage + ":")
         DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + ":")
         DLVNumberParking.setupViewUnit(title: LocalizableKey.NumberHoursSend.showLanguage + ":")
-        DLVMoneyPayment.setupViewUnit(title: LocalizableKey.ParkingFee.showLanguage + ":")
+        DLVMoneyPayment.setupViewUnit(title: LocalizableKey.parkingFeeUser.showLanguage + ":")
         DLVPriceParking.setupViewUnit(title: LocalizableKey.Paid.showLanguage + ":")
         DLVAddForWallet.setupViewUnit(title: LocalizableKey.paidWithWallet.showLanguage + ":")
         DLVAddForMoney.setupViewUnitColorRed(title: LocalizableKey.paidWithCash.showLanguage + ":")

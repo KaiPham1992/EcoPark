@@ -7,7 +7,7 @@
 */
 
 // Menu Page Ecopark
-"MenuHistoryParking" = "Lịch sử giao dịch bãi xe";
+"MenuHistoryParking" = "Tình trạng giao dịch bãi xe";
 "MenuMyInfo" = "Thông tin bãi xe của tôi";
 "MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
 "MenuHistory" = "Tình trạng giao dịch";
@@ -62,7 +62,7 @@
 "textLoading3" = "BOOKING NHANH - RẺ";
 "textLoading4" = "THÔNG MINH - TIẾT KIỆM";
 "textLoading5" = "HÃY ĐĂNG NHẬP ĐỂ TÌM HIỂU \nDỊCH VỤ CỦA ECOPARKING";
-
+"parkingFeeUser" = "Phí gửi xe";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
@@ -104,7 +104,7 @@
 "extend" = "Gia hạn giữ chỗ thêm 1 giờ";
 
 //Title
-"titleHistoryParking" = "Lịch sử giao dịch bãi xe";
+"titleHistoryParking" = "Tình trạng giao dịch bãi xe";
 "titleHistoryDetail" = "Chi tiết giao dịch";
 
 
@@ -387,7 +387,7 @@
 "infoParking" = "Thông tin bãi đỗ xe";
 "expect" = "Dự kiến";
 "NumberHoursSend" = "Số giờ đã gửi";
-"ParkingFee" = "Phí gửi xe";
+"FeeParking" = "Tổng phí giữ xe";
 "Paid" = "Đã thanh toán";
 "paidWithWallet" = "TT thêm bằng ví";
 "paidWithCash" = "TT thêm bằng tiền mặt";

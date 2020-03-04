@@ -27,7 +27,7 @@ class PriceCell: UITableViewCell {
         lbPriceAHours.text = LocalizableKey.priceAHours.showLanguage + ":"
         lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":"
         lbHoldingTime.text = LocalizableKey.NumberHoursSend.showLanguage + ":"
-        lbPriceParking.text = LocalizableKey.ParkingFee.showLanguage + ":"
+        lbPriceParking.text = LocalizableKey.FeeParking.showLanguage + ":"
         lbHour.text = LocalizableKey.hour.showLanguage
     }
 

@@ -43,7 +43,7 @@ class PriceCheckoutCell: UITableViewCell {
         lbPriceAHours.text = LocalizableKey.priceAHours.showLanguage + ":"
         lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":"
         lbTimeHolding.text = LocalizableKey.NumberHoursSend.showLanguage + ":"
-        lbPriceParking.text = LocalizableKey.ParkingFee.showLanguage + ":"
+        lbPriceParking.text = LocalizableKey.FeeParking.showLanguage + ":"
         lbPaid.text = LocalizableKey.Paid.showLanguage + ":"
         lbPaidWithCash.text = LocalizableKey.paidWithCash.showLanguage + ":"
         lbPaidWithWallet.text = LocalizableKey.paidWithWallet.showLanguage + ":"
