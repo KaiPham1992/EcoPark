@@ -103,7 +103,7 @@ class MenuViewController: UIViewController, MenuViewProtocol {
                 // LoggedIn user
                 lbOwner.isHidden = true
                 vRegisterOwner.isHidden = false
-                heightRegisterOwner.constant = 100
+                heightRegisterOwner.constant = 120
             }
         }
     }
