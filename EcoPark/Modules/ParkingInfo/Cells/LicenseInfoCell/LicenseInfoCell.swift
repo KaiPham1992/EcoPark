@@ -26,7 +26,9 @@ class LicenseInfoCell: UITableViewCell {
         // Initialization code
         vLicense.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: "")
         lbLicense.text = LocalizableKey.parkingLicense.showLanguage
-        vLicense.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+//        vLicense.tfInput.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+        vLicense.vLine.backgroundColor = AppColor.color_205_205_205
+        vLicense.tfInput.isUserInteractionEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,6 +44,6 @@ class LicenseInfoCell: UITableViewCell {
     }
     
     @objc func textFieldDidChanged() {
-        delegate?.getDataLicenseInfo(codeTax: vLicense.tfInput.text!)
+//        delegate?.getDataLicenseInfo(codeTax: vLicense.tfInput.text!)
     }
 }
