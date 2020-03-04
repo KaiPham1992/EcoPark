@@ -84,6 +84,7 @@ class DetailParkingViewController: BaseViewController {
         DLVCheckIn.setupViewTimeBlue(title: "Check in")
         DLVCheckOut.setupViewTimeBlue(title: "Check out")
         DLVLisencePlate.setupViewTimeBold(title: LocalizableKey.licensePlate.showLanguage + ":")
+        DLVLisencePlate.lblTime.textColor = AppColor.color_0_129_255
         DLVBillForHour.setupViewUnit(title:  LocalizableKey.priceAHours.showLanguage + ":")
         DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":")
         DLVNumberParking.setupViewUnit(title: LocalizableKey.NumberHoursSend.showLanguage + ":")
