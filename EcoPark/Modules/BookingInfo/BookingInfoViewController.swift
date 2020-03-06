@@ -21,8 +21,8 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     @IBOutlet weak var lbPriceOneHour: UILabel!
     @IBOutlet weak var lbPriceEightHour: UILabel!
     @IBOutlet weak var lbPriceToHoldPlace: UILabel!
-    @IBOutlet weak var datePicker: DatePicker!
-    @IBOutlet weak var timePicker: TimePicker!
+    @IBOutlet weak var datePicker: UITextField!
+    @IBOutlet weak var timePicker: UITextField!
     @IBOutlet weak var btnBook: UIButton!
     @IBOutlet weak var tfPlate: UITextField!
     @IBOutlet weak var dropDownType: AppDropDownNoTitle!
@@ -90,6 +90,22 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         dropDownType.setPlaceHolder(placeHolder: LocalizableKey.vehicleType.showLanguage)
         tfPlate.placeholder = LocalizableKey.vehiclePlate.showLanguage
         lbTitlePriceHoldPlace.text = LocalizableKey.feeKeepPlace.showLanguage
+        datePicker.text = Date().toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = AppDateFormat.HHmm.rawValue
+        let hourString = formatter.string(from: Date().adding(minutes: 10))
+        timePicker.text = hourString
+        datePicker.backgroundColor = AppColor.color_205_205_205
+        timePicker.backgroundColor = AppColor.color_205_205_205
+        datePicker.isUserInteractionEnabled = false
+        timePicker.isUserInteractionEnabled = false
+        
+        if UserDefaultHelper.shared.plate != "" {
+            tfPlate.text = UserDefaultHelper.shared.plate
+        } else {
+            tfPlate.text = ""
+        }
     }
     
     func displayData(info: ParkingEntity) {
@@ -158,47 +174,50 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         //        print(timePicker.date)
         
         do {
-            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseDate.showLanguage))
-            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTime.showLanguage))
+//            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseDate.showLanguage))
+//            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTime.showLanguage))
             let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: LocalizableKey.NotYetLisence.showLanguage)) ?? ""
             _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTypeVehical.showLanguage))
-            guard let dateTime = timePicker.date else { return }
-            if datePicker.dateSelected?.isToday == true  {
-                if dateTime < Date() {
-                    PopUpHelper.shared.showMessage(message: LocalizableKey.HourSmaller.showLanguage, width: popUpwidth, completion: {})
-                    return
-                }
-            }
+//            guard let dateTime = timePicker.date else { return }
+//            if datePicker.dateSelected?.isToday == true  {
+//                if dateTime < Date() {
+//                    PopUpHelper.shared.showMessage(message: LocalizableKey.HourSmaller.showLanguage, width: popUpwidth, completion: {})
+//                    return
+//                }
+//            }
             
-            if let timeStart = parking?.time_start?.timeIntervalSince1970, let timeEnd = parking?.time_end?.timeIntervalSince1970 {
-                //---
-                if timeStart <= timeEnd {
-                    if timeStart > dateTime.timeIntervalSince1970 || timeEnd < dateTime.timeIntervalSince1970 {
-                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
-                        
-                        return
-                    }
-                } else {
-                    if (timeStart <= dateTime.timeIntervalSince1970 && timeEnd <= dateTime.timeIntervalSince1970) || (timeStart >= dateTime.timeIntervalSince1970 && timeEnd >= dateTime.timeIntervalSince1970) {
-                       
-                    } else {
-                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
-                                               
-                        return
-                    }
-                }
+//            if let timeStart = parking?.time_start?.timeIntervalSince1970, let timeEnd = parking?.time_end?.timeIntervalSince1970 {
+//                //---
+//                if timeStart <= timeEnd {
+//                    if timeStart > dateTime.timeIntervalSince1970 || timeEnd < dateTime.timeIntervalSince1970 {
+//                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+//
+//                        return
+//                    }
+//                } else {
+//                    if (timeStart <= dateTime.timeIntervalSince1970 && timeEnd <= dateTime.timeIntervalSince1970) || (timeStart >= dateTime.timeIntervalSince1970 && timeEnd >= dateTime.timeIntervalSince1970) {
+//
+//                    } else {
+//                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+//
+//                        return
+//                    }
+//                }
                 //---
                 
-            }
+//            }
             
             //---
             guard let parkId = parking?.parking_id,
                 let vehicleId = selectVehical?.id,
                 let moneyPaid = parking?.price else { return }
-            let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
-            let time = datePicker.date& + " " + hhmm&
-            
-            presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
+//            let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
+//            let time = datePicker.date& + " " + hhmm&
+            let date = datePicker.text
+            let time = timePicker.text
+            let timeBooking = date& + " " + time&
+            UserDefaultHelper.shared.plate = plate
+            presenter?.booking(time: timeBooking, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
             
         } catch {
             guard let error = error as? InvalidError else { return }
@@ -284,3 +303,4 @@ extension BookingInfoViewController {
         //        }
     }
 }
+

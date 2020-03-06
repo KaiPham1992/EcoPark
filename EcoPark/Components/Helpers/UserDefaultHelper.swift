@@ -38,6 +38,7 @@ enum UserDefaultHelperKey: String {
     case parkingID = "ParkingID"
     case birthday = "birthday"
     case numberHours = "numberHours"
+    case plate = "plate"
 }
 
 class UserDefaultHelper {
@@ -135,6 +136,16 @@ class UserDefaultHelper {
         
         set(value) {
             save(value: value, key: .numberHours)
+        }
+    }
+    
+    var plate: String {
+        get {
+            guard let _plate = get(key: .plate) as? String else { return "" }
+            return _plate
+        }
+        set(newValue) {
+            save(value: newValue, key: .plate)
         }
     }
 }
