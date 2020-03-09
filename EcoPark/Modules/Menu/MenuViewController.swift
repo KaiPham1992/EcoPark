@@ -90,7 +90,21 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             lbDisplayname.isHidden = false
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
-            lbRegister.text = LocalizableKey.registerYet.showLanguage
+            
+            let boldAttr = [NSAttributedString.Key.font: AppFont.fontBold15]
+            
+            let attrText = NSMutableAttributedString()
+            
+            let text1 = NSAttributedString(string: LocalizableKey.registerYet1.showLanguage)
+            let text2 = NSAttributedString(string: LocalizableKey.registerYet2.showLanguage, attributes: boldAttr)
+            let text3 = NSAttributedString(string: LocalizableKey.registerYet3.showLanguage)
+            
+            attrText.append(text1)
+            attrText.append(text2)
+            attrText.append(text3)
+            
+            lbRegister.textColor = AppColor.color_0_129_255
+            lbRegister.attributedText = attrText
             btnResgister.setTitle(LocalizableKey.registerOwner.showLanguage, for: .normal)
             
             // login owner

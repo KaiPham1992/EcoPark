@@ -60,7 +60,7 @@
 "textLoading3" = "FAST BOOKING - CHEAP";
 "textLoading4" = "SMART - SAVE";
 "textLoading5" = "PLEASE LOG IN TO LEARN \nECOPARKING SERVICES";
-"parkingFeeUser" = "Parking fee";
+"parkingFeeUser" = "Total parking fee";
 
 // MARK: BookingPopUp
 "bookingPopUpTitle" = "Parking address";
@@ -670,7 +670,11 @@
 "statusCheckedIn" = "Checked in";
 "statusCheckedOut" = "Checked out";
 "ratingService" = "Evaluation of parking services";
-"registerYet" = "DO YOU HAVE A VACANCY? \nREGISTER FOR CAR PARKING INCREASE MORE VALUE";
+"registerYet1" = "DO YOU HAVE A VACANCY? ";
+"registerYet2" = "REGISTER FOR CAR PARKING ";
+"registerYet3" = "INCREASE MORE VALUE";
+
+
 "registerOwner" = "Register as a parking partner";
 
 // HOME

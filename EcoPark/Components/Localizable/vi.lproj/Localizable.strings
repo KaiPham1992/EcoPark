@@ -46,7 +46,9 @@
 "no" = "Không";
 "parkingTiming" = "Thời gian đỗ xe";
 "userInfo" = "Thông tin khách hàng";
-"registerYet" = "BẠN CÓ CHỖ TRỐNG? \nĐĂNG KÝ LÀM BÃI XE TĂNG THÊM GIÁ TRỊ";
+"registerYet1" = "BẠN CÓ CHỖ TRỐNG? ";
+"registerYet2" = "ĐĂNG KÝ LÀM BÃI XE ";
+"registerYet3" = "TĂNG THÊM GIÁ TRỊ";
 "registerOwner" = "Đăng ký làm đối tác bãi xe";
 "ratingOfuser" = "Đánh giá của khách hàng";
 "NOT_ENOUGH_MONEY" = "Bạn không đủ tiền trong ví";
@@ -62,7 +64,7 @@
 "textLoading3" = "BOOKING NHANH - RẺ";
 "textLoading4" = "THÔNG MINH - TIẾT KIỆM";
 "textLoading5" = "HÃY ĐĂNG NHẬP ĐỂ TÌM HIỂU \nDỊCH VỤ CỦA ECOPARKING";
-"parkingFeeUser" = "Phí gửi xe";
+"parkingFeeUser" = "Tổng phí gửi xe";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
@@ -380,7 +382,7 @@
 "checked_in" = "Đã check in";
 "reservation" = "Đang giữ chỗ";
 "expired" = "Quá hạn giữ chỗ";
-"history_parking" = "Lịch sử đỗ xe";
+"history_parking" = "Tình trạng giao dịch";
 "booked" = "Đã đặt chỗ";
 "holding" = "Đang giữ";
 "contactParking" = "Liên hệ bãi";
