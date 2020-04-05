@@ -204,9 +204,18 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
             let content = item.content,
             let status = item.status {
             var isPlus = true
-            if status.contains("minus") {
+            switch status {
+            case StatusWallet.plus_money.rawValue, StatusWallet.promotion.rawValue, StatusWallet.parking_receive.rawValue:
+                isPlus = true
+            case StatusWallet.pay_booking.rawValue, StatusWallet.parking_spent.rawValue, StatusWallet.extension_booking.rawValue, StatusWallet.commission.rawValue, StatusWallet.minus_money.rawValue:
+                isPlus = false
+            default:
                 isPlus = false
             }
+//            var isPlus = true
+//            if status.contains("minus") {
+//                isPlus = false
+//            }
             cell.displayData(isPlus: isPlus, dateTime: time, price: Int(price), content: content)
         }
         

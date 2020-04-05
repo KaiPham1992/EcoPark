@@ -8,6 +8,17 @@
 
 import UIKit
 
+enum StatusWallet: String {
+case plus_money = "plus_money"
+case promotion = "promotion"
+case parking_receive = "parking_receive"
+case pay_booking = "pay_booking"
+case parking_spent = "parking_spent"
+case extension_booking = "extension_booking"
+case commission = "commission"
+case minus_money = "minus_money"
+}
+
 class WalletCell: BaseTableCell {
     
     @IBOutlet weak var imgIcon: UIImageView!
