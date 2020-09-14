@@ -12,7 +12,7 @@ import UIKit
 import MapKit
 
 class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailViewProtocol {
-
+    
     @IBOutlet weak var vAppImageSlide: AppImageSlide!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var ratingBar: AppRatingView!
@@ -32,24 +32,25 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     @IBOutlet weak var cltMaterial: UtilityView!
     @IBOutlet weak var btnBookNow: UIButton!
     
-	var presenter: ParkingUserDetailPresenterProtocol?
+    var presenter: ParkingUserDetailPresenterProtocol?
     var parking: ParkingEntity?
-
-	override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         getParkingDetail()
     }
-        
+    
     override func setUpViews() {
         super.setUpViews()
         
+        let numberHours = UserDefaultHelper.shared.numberHours
         ratingBar.isUserInteractionEnabled = false
         lbTitleTime.text = LocalizableKey.parkingTime.showLanguage
         lbTitleType.text = LocalizableKey.titleType.showLanguage
         lbTitleEmptyPlace.text = LocalizableKey.titlePlace.showLanguage
         lbTitlePriceOneHour.text = LocalizableKey.titlePriceOne.showLanguage
-        lbTitlePriceEightHour.text = LocalizableKey.titlePriceEight.showLanguage
+        lbTitlePriceEightHour.text = LocalizableKey.titlePriceEight.showLanguage + "\(numberHours) " + LocalizableKey.hour.showLanguage
         
         btnContact.setTitle(LocalizableKey.titleContactMe.showLanguage, for: .normal)
         btnDirect.setTitle(LocalizableKey.titleDirection.showLanguage, for: .normal)
@@ -70,9 +71,12 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
     
     @IBAction func btnContactTapped() {
         // Code here
-        if let url = URL(string: "tel://1900587") {
-            UIApplication.shared.open(url)
-        }
+        //        if let url = URL(string: "tel://1900587") {
+        //            UIApplication.shared.open(url)
+        //        }
+        
+        guard let phone = parking?.phone else { return}
+        Utils.callPhone(phoneNumber: phone)
     }
     
     @IBAction func btnDirectTapped() {
@@ -117,8 +121,17 @@ class ParkingUserDetailViewController: BaseViewController, ParkingUserDetailView
         }
         
         lbAddress.text = info.address
-//        cltMaterial.setMaterial(listMaterial: [.roof, .repair, .rent, .atm])
-        cltMaterial.setMaterial(listMaterialEntity: info.material ?? [])
+        //        cltMaterial.setMaterial(listMaterial: [.roof, .repair, .rent, .atm])
+        //        cltMaterial.setMaterial(listMaterialEntity: info.material ?? [])
+        if let material = info.material {
+            cltMaterial.utilyties = material.sorted{$0.id& < $1.id&}
+        } else {
+            cltMaterial.utilyties = []
+        }
+        
+        
+        
+        cltMaterial.utilyties = info.material ?? []
     }
     
     // MARK: Get error
@@ -143,7 +156,7 @@ extension ParkingUserDetailViewController {
     func openAppleMapForPlace(lat: Double, long: Double) {
         let latitude: CLLocationDegrees =  lat
         let longitude: CLLocationDegrees =  long
-
+        
         let regionDistance: CLLocationDistance = 1000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
@@ -155,13 +168,13 @@ extension ParkingUserDetailViewController {
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = self.parking?.parking_name
         mapItem.openInMaps(launchOptions: options)
-
+        
     }
     
     func openGoogleMapForPlace(lat: Double, long: Double) {
         let lat = lat
         let long = long
-
+        
         let customURL = "comgooglemaps://"
         let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
         if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {

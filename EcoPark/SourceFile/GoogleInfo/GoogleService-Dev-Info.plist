@@ -7,9 +7,9 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.777133209264-doss012hiidabrpsf8u1q386ni4ammh2</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>777133209264-8kau4qh3srh6656edobs8ofe65l6jk50.apps.googleusercontent.com</string>
+	<string>777133209264-tcdgn6n4n3vgf9tr93fln4v0j118ipi8.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCH838SCsSkX9s2kBT7IyZSUjiUaxIxm9c</string>
+	<string>AIzaSyAxnvkGofJm2NZ7Ku-ycI-4n81ffNg5hc8</string>
 	<key>GCM_SENDER_ID</key>
 	<string>777133209264</string>
 	<key>PLIST_VERSION</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:777133209264:ios:59426ea280f52acec86d75</string>
+	<string>1:777133209264:ios:28aaa72a00db2ae3c86d75</string>
 	<key>DATABASE_URL</key>
 	<string>https://ecoparking-dev.firebaseio.com</string>
 </dict>

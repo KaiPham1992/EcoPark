@@ -20,6 +20,12 @@ class OtherInfoCell: UITableViewCell {
     @IBOutlet weak var lbPriceCombo: UILabel!
     @IBOutlet weak var lbTimeCombo: UILabel!
     
+    var numberHours = "" {
+        didSet {
+            setupUI()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,20 +39,20 @@ class OtherInfoCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    private func setupUI() {
+    func setupUI() {
         lbCapacity.text = LocalizableKey.capacity.showLanguage
         lbAHours.text = LocalizableKey.hoursPrice.showLanguage
         lbCombo.text = LocalizableKey.comboPrice.showLanguage
         
         lbItem.text = LocalizableKey.place.showLanguage
         lbTime.text = LocalizableKey.vndHours.showLanguage
-        lbTimeCombo.text = LocalizableKey.vnd8Hours.showLanguage
+        lbTimeCombo.text = "VND/ \(numberHours) " + LocalizableKey.hour.showLanguage
     }
     
     func setData(parkingInfo: ParkingInfoEntity?) {
         lbNumberCapacity.text = "\(parkingInfo?.number_place ?? 0)"
-        lbPriceAHours.text = "\(parkingInfo?.price ?? 0)"
-        lbPriceCombo.text = "\(parkingInfo?.package_price ?? 0)"
+        lbPriceAHours.text = "\(parkingInfo?.price?.toCurrencyNoVND ?? "0")"
+        lbPriceCombo.text = "\(parkingInfo?.package_price?.toCurrencyNoVND ?? "0")"
     }
     
 }

@@ -32,6 +32,7 @@ class HistoryPartnerDetailBookingViewController: BaseViewController, HistoryPart
         self.setUpNavigation()
         addBackToNavigation()
         setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
+        lbStatus.text = LocalizableKey.reservation.showLanguage
         configTableView()
     }
     
@@ -42,6 +43,7 @@ class HistoryPartnerDetailBookingViewController: BaseViewController, HistoryPart
     
     func didGetData(historyPakingDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyPakingDetail
+        self.lbID.text = historyParkingDetail?.code&
     }
 }
 
@@ -65,8 +67,7 @@ extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITa
         switch indexPath.row {
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
-            timeHoldingCell.setData(historyParkingDetail: historyParkingDetail)
-            
+            timeHoldingCell.setDataBooking(historyParkingDetail: historyParkingDetail)
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
@@ -74,7 +75,7 @@ extension HistoryPartnerDetailBookingViewController: UITableViewDataSource, UITa
             return userInfoCell
         default:
             let priceCell = tableView.dequeueTableCell(PriceCell.self)
-            priceCell.setData(historyParkingDetail: historyParkingDetail)
+            priceCell.setDataBooking(historyParkingDetail: historyParkingDetail)
             return priceCell
         }
     }

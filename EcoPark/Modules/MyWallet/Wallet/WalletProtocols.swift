@@ -21,9 +21,9 @@ protocol WalletPresenterProtocol: class {
     func getWallet()
     func didGetWallet(wallet: WalletEntity)
     var canLoadMore: Bool { get }
-    var listWalletHistory: [HistoryWalletEntity] { get set }
-    func getWalletHistory(showLoading: Bool)
-    func didGetWalletHistory(listLog: [HistoryWalletEntity])
+    var listWalletHistory: [HistoryWallet] { get set }
+    func getWalletHistory(startDate: String, toDate: String, showLoading: Bool)
+    func didGetWalletHistory(listLog: [HistoryWallet])
 }
 
 //MARK: Interactor -
@@ -31,7 +31,7 @@ protocol WalletInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
     func didGetWallet(wallet: WalletEntity)
-    func didGetWalletHistory(listLog: [HistoryWalletEntity])
+    func didGetWalletHistory(listLog: [HistoryWallet])
     func didGetError(error: APIError)
 }
 
@@ -41,7 +41,7 @@ protocol WalletInteractorInputProtocol: class {
 
     /* Presenter -> Interactor */
     func getWallet()
-    func getWalletHistory(offset: Int, showLoading: Bool)
+    func getWalletHistory(startDate: String, toDate: String, offset: Int, showLoading: Bool)
 }
 
 //MARK: View -
@@ -52,5 +52,5 @@ protocol WalletViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetError(error: APIError)
     func didGetWallet(wallet: WalletEntity)
-    func didGetWalletHistory(listLog: [HistoryWalletEntity])
+    func didGetWalletHistory(listLog: [HistoryWallet])
 }

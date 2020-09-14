@@ -18,6 +18,7 @@ protocol HistoryPartnerDetailCheckoutWireframeProtocol: class {
 protocol HistoryPartnerDetailCheckoutPresenterProtocol: class {
 
     var interactor: HistoryPartnerDetailCheckoutInteractorInputProtocol? { get set }
+    func getCheckoutDetail(bookingID: String, parkingID: String)
 }
 
 //MARK: Interactor -
@@ -39,4 +40,5 @@ protocol HistoryPartnerDetailCheckoutViewProtocol: class {
     var presenter: HistoryPartnerDetailCheckoutPresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func didGetCheckoutDetail(historyDetail: HistoryBookingParkingResponse?)
 }

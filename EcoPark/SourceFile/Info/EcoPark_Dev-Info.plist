@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -36,7 +34,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.925930271420-g38602u84281v4htrbc2um3o7i70jbi8</string>
+				<string>com.googleusercontent.apps.777133209264-doss012hiidabrpsf8u1q386ni4ammh2</string>
 			</array>
 		</dict>
 	</array>
@@ -73,19 +71,25 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
+	<string>EcoPark muốn truy cập camera để lấy ảnh thay avatar</string>
 	<key>NSLocationUsageDescription</key>
-	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
+	<string>EcoPark muốn sử dụng vị trí của bạn để tải dữ liệu</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Obee muốn truy cập camera để lấy ảnh thay avatar</string>
+	<string>EcoPark muốn sử dụng vị trí của bạn để tải dữ liệu</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Obee muốn truy cập hình ảnh để lấy ảnh thay avatar</string>
+	<string>EcoPark muốn truy cập hình ảnh để lấy ảnh thay avatar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Comfortaa[wght].ttf</string>
 		<string>OpenSans-Bold.ttf</string>
 		<string>OpenSans-Light.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -108,5 +112,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>

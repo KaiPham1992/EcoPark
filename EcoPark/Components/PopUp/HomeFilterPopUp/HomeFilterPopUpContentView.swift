@@ -15,7 +15,7 @@ class HomeFilterPopUpContentView: BaseViewXib {
     @IBOutlet weak var lbMaxDistance: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var starView: ParkingLevelView!
-    var distance = 1000
+    var distance = 500
 
     
     @IBOutlet weak var lbFilter: UILabel!
@@ -24,8 +24,8 @@ class HomeFilterPopUpContentView: BaseViewXib {
     
     override func setUpViews() {
         // MARK: For slider
-        slider.maximumValue = 1000
-        slider.value = 1000
+        slider.maximumValue = 500
+        slider.value = 500
         
         // MARK: For star buttons
         lbDistance.text = LocalizableKey.FilterDistance.showLanguage
@@ -41,8 +41,8 @@ class HomeFilterPopUpContentView: BaseViewXib {
     }
     
     @IBAction func btnResetTapped() {
-        slider.value = 1000
-        distance = 1000
+        slider.value = 500
+        distance = 500
         starView.resetAll()
     }
         

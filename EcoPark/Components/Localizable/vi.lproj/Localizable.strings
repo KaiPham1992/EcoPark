@@ -7,10 +7,10 @@
 */
 
 // Menu Page Ecopark
-"MenuHistoryParking" = "Lịch sử giao dịch bãi xe";
+"MenuHistoryParking" = "Tình trạng giao dịch bãi xe";
 "MenuMyInfo" = "Thông tin bãi xe của tôi";
 "MenuFindAround" = "Tìm bãi đỗ xe quanh địa điểm";
-"MenuHistory" = "Lịch sử đỗ xe";
+"MenuHistory" = "Tình trạng giao dịch";
 "MenuNotificaiton" = "Thông báo";
 "MenuWallet" = "Tài khoản ví Eco";
 "MenuProfile" = "Thông tin cá nhân";
@@ -28,10 +28,12 @@
 "NotificationDetail" = "Chi tiết Thông báo";
 "System" = "Hệ Thống";
 "Giveme" = "Cho Tôi";
+"Owner" = "Chủ bãi đỗ";
 
 //other
 "searchNumberCar" = "Tìm theo biển số xe";
-"switchStatusParking" = "Chuyển sang ON nếu bạn muốn hoạt động";
+"switchStatusParkingOn" = "Chuyển sang ON nếu bạn muốn hoạt động";
+"switchStatusParkingOff" = "Chuyển sang OFF nếu bạn muốn tạm ngưng";
 "agree" = "Đồng ý";
 "cancel" = "Huỷ";
 "MaxPlaceParking" = "Sức chứa tối đa";
@@ -41,12 +43,34 @@
 "Package" = "gói";
 "Booking" = "Đặt ngay";
 "slot" = "chỗ";
+"no" = "Không";
+"parkingTiming" = "Thời gian đỗ xe";
+"userInfo" = "Thông tin khách hàng";
+"registerYet1" = "BẠN CÓ CHỖ TRỐNG? ";
+"registerYet2" = "ĐĂNG KÝ LÀM BÃI XE ";
+"registerYet3" = "TĂNG THÊM GIÁ TRỊ";
+"registerOwner" = "Đăng ký làm đối tác bãi xe";
+"ratingOfuser" = "Đánh giá của khách hàng";
+"NOT_ENOUGH_MONEY" = "Bạn không đủ tiền trong ví";
+"packet" = "gói";
+"check2Hours" = "Bạn không thể checkout khi xe gửi chưa đủ 2 giờ";
+"realMoney" = "Thực thu của bãi";
+"bonusEco" = "Hoa hồng EcoParking";
+"KHPaidWallet" = "KH Thanh toán ví";
+"KHPaidCash" = "KH thanh toán tiền mặt";
+"changeWallet" = "Thay đổi ví tiền";
+"textLoading1" = "BẠN TÌM CHỖ GỬI XE?";
+"textLoading2" = "EcoParking sẽ cho bạn chỗ gửi xe tốt nhất";
+"textLoading3" = "BOOKING NHANH - RẺ";
+"textLoading4" = "THÔNG MINH - TIẾT KIỆM";
+"textLoading5" = "HÃY ĐĂNG NHẬP ĐỂ TÌM HIỂU \nDỊCH VỤ CỦA ECOPARKING";
+"parkingFeeUser" = "Tổng phí gửi xe";
 // Popup
 "receivable" = "Phải thu: ";
 "carType" = "Loại xe";
 "licensePlate" = "Biển số";
 "checkAgain" = "Kiểm tra lại";
-"agreeCheckout" = "Cho phép checkout";
+"agreeCheckout" = "   Cho phép checkout   ";
 "contentCheckout" = "Xác nhận hoàn thành thu phí và hoàn thành check out cho dịch vụ";
 "titleNeedToPay" = "Cần phải thanh toán:";
 "titleEcoAccount" = "Tài khoản ví ECO";
@@ -57,9 +81,10 @@
 "contentRating2" = " Bạn có hài lòng với dịch vụ của bãi xe?";
 "sent" = "Gửi";
 "timeExpect" = "Đã dự kiến đến bãi lúc ";
+"timeCheckout" = "Đã dự kiến rời bãi lúc";
 "invalid" = "Không hợp lệ";
-"contentQRFail1" = "Mã QR này không thuộc hệ thống";
-"contentQRFail2" = "\nVui lòng đảm bảo bạn đã quét đúng thông tin!";
+"contentQRFail1" = "Mã QR này không thuộc hệ thống ";
+"contentQRFail2" = " Vui lòng đảm bảo bạn đã quét đúng thông tin!";
 "retry" = "Thử lại";
 "questionLogout" = "Bạn có muốn đăng xuất khỏi tài khoản này?";
 "back" = "Quay lại";
@@ -68,7 +93,7 @@
 "renewal" = "Gia hạn giữ chỗ";
 "renewalContent" = "Gia hạn giữ chỗ sẽ có giá trị trong vòng 60 phút. \nVui lòng thanh toán thêm phí giữ chỗ";
 "payWallet" = "Thanh toán ví";
-"noPlace" = "Chưa có chỗ";
+"noPlace" = "Chưa có đặt chỗ";
 "noPlaceQuestion" = "Bạn chưa đặt chỗ trước tại bãi đỗ này. Bạn có muốn bắt đầu giữ xe không?";
 "noThanks" = "Không, cảm ơn";
 
@@ -78,9 +103,10 @@
 "updateSuccess" = "Cập nhật thành công ";
 "cancelBookingSuccess" = "Huỷ đặt chỗ thành công";
 "renewalSuccess" = "Bạn đã gia hạn thành công";
+"extend" = "Gia hạn giữ chỗ thêm 1 giờ";
 
 //Title
-"titleHistoryParking" = "Lịch sử giao dịch bãi xe";
+"titleHistoryParking" = "Tình trạng giao dịch bãi xe";
 "titleHistoryDetail" = "Chi tiết giao dịch";
 
 
@@ -92,8 +118,8 @@
 "LoginButtonLogin" = "Đăng nhập";
 "FBorGmail" = "Hoặc đăng nhập bằng";
 "ForgotPass" = "Quên mật khẩu";
-"NotYetAccount" = "Bạn chưa có tài khoản? ";
-"Register" = "Đăng ký";
+"NotYetAccount" = "Bạn chưa có tài khoản?";
+"Register" = "Đăng ký ngay!";
 "LoginButtonSignUp" = "ĐĂNG KÝ";
 "passwordDifference" = "Nhập lại sai mật khẩu";
 
@@ -105,7 +131,7 @@
 "PasswordSignUp" = "Mật khẩu (Tối thiểu 6 ký tự) *";
 "RePasswordSignUp" = "Nhập lại mật khẩu *";
 "EmailSignUp" = "Email *";
-"PhoneNumberSignUp" = "Số điện thoại liên hệ";
+"PhoneNumberSignUp" = "Số điện thoại liên hệ *";
 "Gender" = "Giới tính";
 "Birthday" = "Ngày sinh";
 "Capcha" = "Captcha *";
@@ -128,11 +154,13 @@
 "ForgotTitle" = "Quên mật khẩu";
 
 "invalidLoginEmail" = "Địa chỉ email sai format";
+"invalidLoginPhone" = "Số điện thoại không hợp lệ";
 "invalidLoginPassword" = "Mật khẩu phải có 6 kí tự trở lên";
 "emptyLoginEmailPassword"  = "Vui lòng nhập đầy đủ thông tin";
 "emptyCapcha" = "Vui lòng nhập mã captcha";
 
 "pleaseEnterEmail" = "Vui lòng nhập email";
+"pleaseEnterPhone" = "Vui lòng nhập số điện thoại";
 "pleaseEnterDisplayName" = "Vui lòng nhập tên hiển thị";
 "pleaseEnterPassword" = "Vui lòng nhập mật khẩu";
 "pleaseEnterRePassword" = "Vui lòng nhập lại mật khẩu";
@@ -140,7 +168,7 @@
 
 // Change Language
 "vietnamese" = "Tiếng Việt";
-"english" = "Tiếng Anh";
+"english" = "English";
 
 // Profile
 "DisplayName" = "Tên hiển thị";
@@ -189,7 +217,7 @@
 "errorIDNumber" = "Vui lòng nhập số chứng minh nhân dân";
 "errorIssueBy" = "Vui lòng nhập nơi cấp";
 "errorDateBy" = "Vui lòng chọn ngày cấp";
-"errorPhotoFront" = "Vui lòng chọn ảnh mặt trước chứ minh nhân dân";
+"errorPhotoFront" = "Vui lòng chọn ảnh mặt trước chứng minh nhân dân";
 "errorPhotoBackside" = "Vui lòng chọn ảnh mặt sau chứng minh nhân dân";
 
 // Sign Up Partner 2
@@ -200,9 +228,9 @@
 "ParkingAddress" = "Địa chỉ bãi xe *";
 "ParkingOpen" = "Mở cửa *";
 "ParkingClose" = "Đóng cửa *";
-"ParkingPrice" = "giá dịch vụ";
-"PriceAHours" = " Đơn giá theo giờ *";
-"PriceCombo" = "Đơn giá theo gói (8 giờ) *";
+"ParkingPrice" = "Giá dịch vụ";
+"PriceAHours" = "Đơn giá theo giờ";
+"PriceCombo" = "Đơn giá theo gói";
 "ParkingLicense" = "Giấy phép kinh doanh";
 "ParkingTaxCode" = "Mã số thuế";
 "hoursPrice" = "Giá theo giờ";
@@ -211,7 +239,7 @@
 "place" = "Chỗ";
 "vndHours" = "VND/ giờ";
 "vnd8Hours" = "VND/ 8 giờ";
-
+"Hours" = "giờ";
 "photoFront" = "Ảnh mặt trước giấy phép";
 "photoBackside" = "Ảnh mặt sau giấy phép";
 
@@ -229,11 +257,12 @@
 "UtilityOther" = "Tiện ích khác";
 "parkingImage" = "HÌNH ẢNH BÃI ĐỖ ";
 "parkingSubImage" = "Vui lòng chụp ảnh bãi đỗ của bạn, tối thiểu là 2 ảnh và tối đa là 4 ảnh *";
-"parkingWaitingSignUp" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ECOPARKING sẽ liên hệ với bạn trong thời gian sớm nhất.";
+"parkingWaitingSignUp1" = "Yêu cầu trở thành đối tác của bạn đang trong quá trình kiểm tra. ";
+"parkingWaitingSignUp2" = " sẽ liên hệ với bạn trong thời gian sớm nhất.";
 "DoneSignUp" = "Hoàn tất đăng kí";
 "termAndPolicySignUp1" = "Bằng việc bấm ";
 "termAndPolicySignUp2" = ", bạn đồng ý với ";
-"termAndPolicySignUp3" = "Điều khoản ";
+"termAndPolicySignUp3" = "điều khoản ";
 "termAndPolicySignUp4" = "chính sách dịch vụ ";
 "termAndPolicySignUp5" = "chính sách bảo mật ";
 "termAndPolicySignUp6" = "của chúng tôi.";
@@ -246,7 +275,7 @@
 "titleType" = "Loại bãi đỗ";
 "titlePlace" = "Chỗ trống";
 "titlePriceOne" = "Phí gửi xe theo giờ";
-"titlePriceEight" = "Phí gửi xe theo gói 8 giờ";
+"titlePriceEight" = "Phí gửi xe theo gói ";
 "titleContactMe" = "Liên hệ tôi";
 "titleDirection" = "Chỉ đường";
 "titleButtonKeepPlace" = "Đặt giữ chỗ ngay";
@@ -267,7 +296,7 @@
 "vehicleType" = "Loại xe";
 "eachHours" = "/ giờ";
 "eachPackage" = "/ gói";
-"hour" = "Giờ";
+"hour" = "giờ";
 "minute" = "phút";
 
 // MARK: BookingPopUp
@@ -307,6 +336,7 @@
 
 "next" = "Tiếp tục";
 
+"next1" = "Tiếp";
 ////popup
 "confirm" = "XÁC NHẬN";
 
@@ -318,9 +348,9 @@
 //// ERROR
 //
 "WRONG_CAPTCHA" = "Mã captcha không trùng khớp";
-"USER_IS_EXISTED" = "Email đã tồn tại";
+"USER_IS_EXISTED" = "Tên đăng nhập đã tồn tại";
 "EMAIL_IS_EXISTED" = "Email đã tồn tại";
-"INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại email hoặc mật khẩu";
+"INVALID_USERNAME_OR_PASSWORD" = "Vui lòng kiểm tra lại tên đăng nhập hoặc mật khẩu";
 "changePassswordSuccess" = "Đổi mật khẩu thành công";
 "INVALID_CURRENT_PASSWORD" = "Mật khẩu hiện tại không đúng";
 "editProfileSuccess" = "Chỉnh sửa thông tin thành công";
@@ -335,6 +365,7 @@
 "signUpSuccess" = "Đăng ký thành công";
 
 "lbNoData" = "Không có dữ liệu";
+"invalidTextSpecial" = "Tên đăng nhập không được chứa ký tự đặc biệt";
 
 //// pop up choose photo
 "camera" = "Chụp ảnh";
@@ -347,14 +378,27 @@
 "history" = "Lịch sử";
 "book_at" = "Đặt lúc";
 "canceled" = "Đã huỷ";
-"checked_out" = "Check out";
-"checked_in" = "Check in";
+"checked_out" = "Đã check out";
+"checked_in" = "Đã check in";
 "reservation" = "Đang giữ chỗ";
-"expired" = "Hết hạn";
-"history_parking" = "Lịch sử đỗ xe";
+"expired" = "Quá hạn giữ chỗ";
+"history_parking" = "Tình trạng giao dịch";
 "booked" = "Đã đặt chỗ";
 "holding" = "Đang giữ";
-
+"contactParking" = "Liên hệ bãi";
+"infoParking" = "Thông tin bãi đỗ xe";
+"expect" = "Dự kiến";
+"NumberHoursSend" = "Số giờ đã gửi";
+"FeeParking" = "Tổng phí giữ xe";
+"Paid" = "Đã thanh toán";
+"paidWithWallet" = "TT thêm bằng ví";
+"paidWithCash" = "TT thêm bằng tiền mặt";
+"ScanCheckIn" = "Scan QR tại bãi để Check In";
+"statusCheckedIn" = "Đã check in";
+"statusCheckedOut" = "Đã check out";
+"ratingService" = "Đánh giá dịch vụ bãi giữ xe";
+"total" = "Tổng thanh toán";
+"ratingOfYou" = "Đánh giá của bạn";
 
 //HOME
 "InputDestination" = "Nhập điểm đến";
@@ -368,3 +412,16 @@
 "SelectDestination" = "Chọn điểm đến";
 "CancelFind" = "Huỷ tìm kiếm";
 "FilterDistance" = "KHOẢNG CÁCH";
+
+"cancelBooking" = "Huỷ";
+"NearMe" = "Gần vị trị của tôi";
+
+"HourSmaller" = "Giờ nhỏ hơn giờ hiện tại";
+"ChooseDate" = "Bạn chưa chọn ngày";
+"ChooseTime" = "Bạn chưa chọn giờ đến bãi";
+"ChooseTypeVehical" = "Bạn chưa chọn loại xe";
+"NotYetLisence" = "Bạn chưa nhập biển số";
+"TimeNotInRule" = "Giờ không nằm trong thời gian hoạt động của bãi xe.";
+"WaitApp" = "Đăng kí làm đối tác bãi xe";
+"HAS_BOOKING_CHECKED_IN" = "Bạn đang checkin tại một bãi xe khác";
+"CHECKIN_EARLY" = "Bạn không được checkin sớm";

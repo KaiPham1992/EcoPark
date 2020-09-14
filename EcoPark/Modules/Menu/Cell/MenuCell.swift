@@ -28,7 +28,7 @@ class MenuItem {
                 MenuItem(imgIcon: AppImage.imgCall, title: LocalizableKey.MenuHotLine.showLanguage),
                 MenuItem(imgIcon: AppImage.imgLanguage, title: LocalizableKey.MenuLanguage.showLanguage)
             ]
-        } else if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.parkingID != "" {
+        } else if UserDefaultHelper.shared.loginUserInfo?.userIsBoss == true {
             return [
                 MenuItem(imgIcon: AppImage.imgHistoryParking, title: LocalizableKey.MenuHistoryParking.showLanguage),
                 MenuItem(imgIcon: AppImage.imgMyParking, title: LocalizableKey.MenuMyInfo.showLanguage),
@@ -70,6 +70,9 @@ class MenuCell: BaseTableCell {
     @IBOutlet weak var vNotification: UIView!
     
     @IBOutlet weak var btnLanguage: UIButton!
+//    @IBOutlet weak var vNotification: UIView!
+    var totalUnread: Int = 0
+    
     
     var menuItem: MenuItem? {
         didSet {
@@ -88,7 +91,13 @@ class MenuCell: BaseTableCell {
             }
             
             lbLanguage.isHidden = menuItem.imgIcon != AppImage.imgLanguage
-            vNotification.isHidden = menuItem.imgIcon != AppImage.imgNotification
+            btnLanguage.isHidden = menuItem.imgIcon != AppImage.imgLanguage
+            
+            vNotification.isHidden = true
+            
+            if totalUnread > 0 &&  menuItem.imgIcon == AppImage.imgNotification {
+                 vNotification.isHidden = false
+            }
             
         }
     }

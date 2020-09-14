@@ -30,19 +30,22 @@ class ParkingSortView: BaseViewXib {
             btnBooking.setTitle(LocalizableKey.Booking.showLanguage, for: .normal)
             lbName.text = parking.parking_name
             lbTypeName.text = parking.parking_type_name
-           
+            
             if let price = parking.price {
-                let hour = price > 1 ? LocalizableKey.Hour.showLanguage: LocalizableKey.Hour.showLanguage
+                let hour = price > 1 ? LocalizableKey.Hour.showLanguage: LocalizableKey.Hours.showLanguage
                 lbPrice.text = price.toCurrency + "/ \(hour)"
             }
             
-            if let packagePrice = parking.package_price, let packageNumber = parking.package_number {
+            if let packagePrice = parking.package_price {
+                let numberHours = UserDefaultHelper.shared.numberHours
                 let hour = packagePrice > 1 ? LocalizableKey.hour.showLanguage: LocalizableKey.Hour.showLanguage
-                lbPackagePrice.text = "\(packagePrice.toCurrency)" + "/ \(LocalizableKey.Package.showLanguage) " + Int(packageNumber).description + " \(hour)"
+                lbPackagePrice.text = "\(packagePrice.toCurrency)" + "/ \(LocalizableKey.Package.showLanguage) " + "\(numberHours)" + " \(hour)"
             }
             
             if let rating = parking.rating {
-                 vRating.setStar(number: rating)
+                vRating.setStar(number: rating)
+            } else {
+                vRating.setStar(number: 0.0)
             }
             
             lbConfigure.text = parking.config_price?.toCurrency
@@ -62,7 +65,13 @@ class ParkingSortView: BaseViewXib {
             lbTime.attributedText = attr
             
             imgIcon.sd_setImage(with: parking.url, placeholderImage: AppImage.imgPlaceHolder)
-            vRating.lbNumberRating.text = parking.total_rating
+            //            vRating.lbNumberRating.text = "(\(parking.total_rating&))"
+            
+            if parking.total_rating& != "" {
+                vRating.lbNumberRating.text = "(\(parking.total_rating&))"
+            } else {
+                vRating.lbNumberRating.text = ""
+            }
         }
     }
 }

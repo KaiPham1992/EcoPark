@@ -37,7 +37,19 @@ class HistoryPartnerDetailCheckinPresenter: HistoryPartnerDetailCheckinPresenter
         Provider.shared.parkingAPIService.checkoutParking(bookingID: bookingID, code: code, license_plates: licensePlates, success: { (historyParkingDetail) in
             ProgressView.shared.hide()
             self.view?.didCheckout(historyParkingDetail: historyParkingDetail)
-        }) { (erroe) in
+        }) { (error) in
+            ProgressView.shared.hide()
+            PopUpHelper.shared.showMessage(message: error?.message?.showLanguage ?? "", width: 350, completion: {})
+        }
+    }
+    
+    func changeStatusCheckout(bookingID: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.changeStatusCheckout(bookingID: bookingID, bonus: bonus, plus_wallet_boss: plus_wallet_boss, parking_price: parking_price, payment_wallet: payment_wallet, success: { (historyCheckout) in
+            ProgressView.shared.hide()
+            guard let _historyCheckout = historyCheckout else { return }
+            self.view?.didChangeStatusCheckout(historyCheckout: _historyCheckout)
+        }) { (_) in
             ProgressView.shared.hide()
         }
     }

@@ -22,12 +22,18 @@ extension NotificationEndPoint: EndPointType {
         case .readNotification:
             return "_api/notification/read_notifications"
         case .getNotificationDetail(let id):
-            return "_api/notification/get_notification_detail/\(id))"
+            return "_api/notification/get_notification_detail/\(id)"
         }
     }
     
     var httpMethod: HTTPMethod {
-        return .post
+        switch self {
+        case .getNotificationDetail:
+            return .get
+        default:
+            return .post
+        }
+       
     }
     
     var parameters: JSONDictionary {
@@ -37,7 +43,7 @@ extension NotificationEndPoint: EndPointType {
         case .readNotification(let id):
             return ["notification_ids": [id]]
         case .getNotificationDetail:
-            return [: ]
+            return [:]
         }
     }
     

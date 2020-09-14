@@ -150,14 +150,14 @@ class PopUpHelper {
     }
     
     func showError(message: String, completionYes: CompletionClosure?) {
-        let popUp = NotificationPopUp()
-        popUp.showPopUp(message: message, completion: completionYes)
+        let popUp = OneButtonPopUp()
+        popUp.showPopUp(titlePopUp: message, contentPopUpNormal: message, buttonTitle: "OK", width: 350, height: 220, completion: completionYes)
     }
     
-    func showErrorDidNotRemoveView(message: String, completionYes: CompletionClosure?) {
-        let popUp = NotificationPopUp()
-        popUp.showPopUp(message: message, completion: completionYes)
-    }
+//    func showErrorDidNotRemoveView(message: String, completionYes: CompletionClosure?) {
+//        let popUp = OneButtonPopUp()
+//        popUp.showPopUp(message: message, completion: completionYes)
+//    }
     
     func sentNewPassword(completionYes: CompletionClosure?) {
         let popUp = UpdateAccountPopup()
@@ -187,7 +187,7 @@ class PopUpHelper {
         
         
         let content1 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
-        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail1.showLanguage, attributes: blackAttr)
+        let content2 = NSAttributedString(string: LocalizableKey.contentQRFail2.showLanguage, attributes: blackAttr)
         
         let content = NSMutableAttributedString()
         content.append(content1)
@@ -204,6 +204,12 @@ class PopUpHelper {
         
         let popUp = CheckInPopUp()
         popUp.showPopUp(name: name, address: address, time: time, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
+    }
+    
+    // MARK: Check out
+    func  showCheckOut(name: String, licensePlate: String, time: String, timeOut: String, width: CGFloat, height: CGFloat, completionYes: CompletionClosure?, completionNo: CompletionClosure? ){
+        let popUp = CheckOutPopUp()
+        popUp.showPopUp(name: name, licensePlate: licensePlate, time: time, timeOut: timeOut, width: width, height: height, completionYes: completionYes, completionNo: completionNo)
     }
     
     // MARK: Cancel reservation
@@ -242,7 +248,7 @@ class PopUpHelper {
     }
     
     // MARK: Partner check out
-    func showPartnerCheckOut(width: CGFloat, height: CGFloat = 330, price: Double, vehicleType: String, vehicleNumber: String, checkOutNumber: String, completionCancel: CompletionClosure?, completionCheckAgain: CompletionClosure?, completionCheckOut: CompletionClosure?) {
+    func showPartnerCheckOut(width: CGFloat, height: CGFloat = 330, price: String, vehicleType: String, vehicleNumber: String, checkOutNumber: String, completionCancel: CompletionClosure?, completionCheckAgain: CompletionClosure?, completionCheckOut: CompletionClosure?) {
         
         let popUp = PartnerCheckOutPopUp()
         popUp.showPopUp(width: width, height: height, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkOutNumber, completionCancel: completionCancel, completionCheckAgain: completionCheckAgain, completionCheckout: completionCheckOut)

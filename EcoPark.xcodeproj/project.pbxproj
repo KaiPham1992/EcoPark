@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0CAD4EDBA5D7A5B75055CEBF /* Pods_EcoPark_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC38F393CC708506625D3A9 /* Pods_EcoPark_Dev.framework */; };
+		170DABB023C8817C005628A4 /* CheckOutPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DABAF23C8817C005628A4 /* CheckOutPopUpContent.swift */; };
+		170DABB123C8817C005628A4 /* CheckOutPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DABAF23C8817C005628A4 /* CheckOutPopUpContent.swift */; };
+		170DABB223C8817C005628A4 /* CheckOutPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DABAF23C8817C005628A4 /* CheckOutPopUpContent.swift */; };
+		170DABB923C881BC005628A4 /* CheckOutPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170DABB823C881BC005628A4 /* CheckOutPopUpContent.xib */; };
+		170DABBA23C881BC005628A4 /* CheckOutPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170DABB823C881BC005628A4 /* CheckOutPopUpContent.xib */; };
+		170DABBB23C881BC005628A4 /* CheckOutPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170DABB823C881BC005628A4 /* CheckOutPopUpContent.xib */; };
+		170DABBD23C88579005628A4 /* CheckOutPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DABBC23C88579005628A4 /* CheckOutPopUp.swift */; };
+		170DABBE23C88579005628A4 /* CheckOutPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DABBC23C88579005628A4 /* CheckOutPopUp.swift */; };
+		170DABBF23C88579005628A4 /* CheckOutPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DABBC23C88579005628A4 /* CheckOutPopUp.swift */; };
 		17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
 		17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17155F03236160FF001B81AE /* AppTextfiledLogin.swift */; };
@@ -104,6 +113,12 @@
 		17389E5E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17389E4E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib */; };
 		17389E5F23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17389E4E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib */; };
 		17389E6023851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17389E4E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib */; };
+		1743D91723B31AA100B08457 /* AppSearchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1743D91523B31AA000B08457 /* AppSearchTextField.xib */; };
+		1743D91823B31AA100B08457 /* AppSearchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1743D91523B31AA000B08457 /* AppSearchTextField.xib */; };
+		1743D91923B31AA100B08457 /* AppSearchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1743D91523B31AA000B08457 /* AppSearchTextField.xib */; };
+		1743D91A23B31AA100B08457 /* AppSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D91623B31AA000B08457 /* AppSearchTextField.swift */; };
+		1743D91B23B31AA100B08457 /* AppSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D91623B31AA000B08457 /* AppSearchTextField.swift */; };
+		1743D91C23B31AA100B08457 /* AppSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D91623B31AA000B08457 /* AppSearchTextField.swift */; };
 		174FEFEF23801CD70014F04D /* UpdateInfoParkingParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FEFEE23801CD70014F04D /* UpdateInfoParkingParam.swift */; };
 		174FEFF023801CD70014F04D /* UpdateInfoParkingParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FEFEE23801CD70014F04D /* UpdateInfoParkingParam.swift */; };
 		174FEFF123801CD70014F04D /* UpdateInfoParkingParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FEFEE23801CD70014F04D /* UpdateInfoParkingParam.swift */; };
@@ -227,6 +242,24 @@
 		1792FE7523867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		1792FE7623867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		1792FE7723867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
+		17B9197C23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
+		17B9197D23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
+		17B9197E23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
+		17B9197F23B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */; };
+		17B9198023B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */; };
+		17B9198123B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */; };
+		17B9198223B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */; };
+		17B9198323B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */; };
+		17B9198423B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */; };
+		17B9198523B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */; };
+		17B9198623B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */; };
+		17B9198723B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */; };
+		17B9198823B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */; };
+		17B9198923B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */; };
+		17B9198A23B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */; };
+		17B9198B23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */; };
+		17B9198C23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */; };
+		17B9198D23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */; };
 		17BAF899236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
 		17BAF89A236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
 		17BAF89B236EAB650066BD29 /* HistoryPartnerDetailBookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */; };
@@ -476,6 +509,9 @@
 		228071F8235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071F9235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
 		228071FA235C11D70076D5CC /* RestoreParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228071F7235C11D70076D5CC /* RestoreParam.swift */; };
+		22822AD823A1F7CB00CB940B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22822AD723A1F7CB00CB940B /* NotificationKey.swift */; };
+		22822AD923A1F7CC00CB940B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22822AD723A1F7CB00CB940B /* NotificationKey.swift */; };
+		22822ADA23A1F7CC00CB940B /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22822AD723A1F7CB00CB940B /* NotificationKey.swift */; };
 		2292F20823653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
 		2292F20923653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
 		2292F20A23653B0400B570E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292F20523653B0300B570E3 /* ContainerViewController.swift */; };
@@ -511,6 +547,15 @@
 		22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
 		22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
 		22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE2207236C1A6100148E2C /* AppRatingView.xib */; };
+		22B1DC5723A9CF370041A03C /* SelectCarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */; };
+		22B1DC5823A9CF370041A03C /* SelectCarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */; };
+		22B1DC5923A9CF370041A03C /* SelectCarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */; };
+		22B1DC5B23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */; };
+		22B1DC5C23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */; };
+		22B1DC5D23A9D0010041A03C /* SelectCarPopUpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */; };
+		22B1DC5F23A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */; };
+		22B1DC6023A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */; };
+		22B1DC6123A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */; };
 		22B4B31C236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
 		22B4B31D236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
 		22B4B31E236ABC4C004BD8FB /* AppImageSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */; };
@@ -658,7 +703,6 @@
 		2A07B9B0236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
 		2A07B9B1236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
 		2A07B9B2236E9E74004FE7CE /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07B9AF236E9E74004FE7CE /* TimeView.swift */; };
-		2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		2A138E4D2376CB1600B74458 /* DetailTransactionCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E472376CB1600B74458 /* DetailTransactionCustomerPresenter.swift */; };
 		2A138E4E2376CB1600B74458 /* DetailTransactionCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E472376CB1600B74458 /* DetailTransactionCustomerPresenter.swift */; };
 		2A138E4F2376CB1600B74458 /* DetailTransactionCustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E472376CB1600B74458 /* DetailTransactionCustomerPresenter.swift */; };
@@ -858,9 +902,6 @@
 		762EAB2623784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		762EAB2723784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
 		762EAB2823784EE80079A31F /* WalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB2523784EE80079A31F /* WalletEntity.swift */; };
-		762EAB2A237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
-		762EAB2B237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
-		762EAB2C237852E20079A31F /* HistoryWalletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EAB29237852E20079A31F /* HistoryWalletEntity.swift */; };
 		76483BEC229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BED229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
 		76483BEE229EE3A40079F9A1 /* UpdateAccountPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */; };
@@ -1118,7 +1159,6 @@
 		DE2ADE7922841BB9003768CE /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE7322841BB9003768CE /* MenuInteractor.swift */; };
 		DE2ADE7A22841BB9003768CE /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE7422841BB9003768CE /* MenuViewController.xib */; };
 		DE2C07F822857FF100BAE311 /* BaseTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C07F722857FF000BAE311 /* BaseTabStripViewController.swift */; };
-		DE2D679522F9BF050055586B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D679422F9BF050055586B /* StoreKit.framework */; };
 		DE2D679822F9BFFA0055586B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */; };
 		DE2D679922F9BFFA0055586B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */; };
 		DE2D679A22F9BFFA0055586B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */; };
@@ -1666,6 +1706,9 @@
 
 /* Begin PBXFileReference section */
 		0B8F3F00A0876F901165A5E0 /* Pods-EcoPark_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoPark_AppStore.release.xcconfig"; path = "Target Support Files/Pods-EcoPark_AppStore/Pods-EcoPark_AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		170DABAF23C8817C005628A4 /* CheckOutPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutPopUpContent.swift; sourceTree = "<group>"; };
+		170DABB823C881BC005628A4 /* CheckOutPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutPopUpContent.xib; sourceTree = "<group>"; };
+		170DABBC23C88579005628A4 /* CheckOutPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutPopUp.swift; sourceTree = "<group>"; };
 		17155F03236160FF001B81AE /* AppTextfiledLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextfiledLogin.swift; sourceTree = "<group>"; };
 		1717E0DD236D452B00E07734 /* HistoryPartnerHoldingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerHoldingPresenter.swift; sourceTree = "<group>"; };
 		1717E0DE236D452B00E07734 /* HistoryPartnerHoldingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerHoldingRouter.swift; sourceTree = "<group>"; };
@@ -1698,6 +1741,8 @@
 		17389E4C23851B4400ABED8B /* HistoryPartnerDetailCheckoutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckoutProtocols.swift; sourceTree = "<group>"; };
 		17389E4D23851B4400ABED8B /* HistoryPartnerDetailCheckoutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckoutInteractor.swift; sourceTree = "<group>"; };
 		17389E4E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerDetailCheckoutViewController.xib; sourceTree = "<group>"; };
+		1743D91523B31AA000B08457 /* AppSearchTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppSearchTextField.xib; sourceTree = "<group>"; };
+		1743D91623B31AA000B08457 /* AppSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchTextField.swift; sourceTree = "<group>"; };
 		174FEFEE23801CD70014F04D /* UpdateInfoParkingParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoParkingParam.swift; sourceTree = "<group>"; };
 		175C73302367E4EE009F03F6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		175C73312367E4EE009F03F6 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -1735,6 +1780,12 @@
 		17848B6923803057008B3A85 /* ImageParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageParkingViewController.xib; sourceTree = "<group>"; };
 		1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPriceCheckoutCell.swift; sourceTree = "<group>"; };
 		1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPriceCheckoutCell.xib; sourceTree = "<group>"; };
+		17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainPresenter.swift; sourceTree = "<group>"; };
+		17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainRouter.swift; sourceTree = "<group>"; };
+		17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainViewController.swift; sourceTree = "<group>"; };
+		17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainProtocols.swift; sourceTree = "<group>"; };
+		17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainInteractor.swift; sourceTree = "<group>"; };
+		17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPartnerDetailCheckAgainViewController.xib; sourceTree = "<group>"; };
 		17BAF893236EAB640066BD29 /* HistoryPartnerDetailBookingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingPresenter.swift; sourceTree = "<group>"; };
 		17BAF894236EAB640066BD29 /* HistoryPartnerDetailBookingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingRouter.swift; sourceTree = "<group>"; };
 		17BAF895236EAB640066BD29 /* HistoryPartnerDetailBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailBookingViewController.swift; sourceTree = "<group>"; };
@@ -1823,6 +1874,7 @@
 		2269ABA8238A850600EE2E36 /* AppQRScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppQRScanerViewController.swift; sourceTree = "<group>"; };
 		2269ABA9238A850600EE2E36 /* AppQRScanerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppQRScanerViewController.xib; sourceTree = "<group>"; };
 		228071F7235C11D70076D5CC /* RestoreParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreParam.swift; sourceTree = "<group>"; };
+		22822AD723A1F7CB00CB940B /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		2292F20523653B0300B570E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2292F20623653B0300B570E3 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		2292F20723653B0300B570E3 /* NecContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NecContainerViewController.swift; sourceTree = "<group>"; };
@@ -1835,6 +1887,9 @@
 		229B69DA2388FC7B00B43C90 /* RatingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingEntity.swift; sourceTree = "<group>"; };
 		22AE2206236C1A6000148E2C /* AppRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
 		22AE2207236C1A6100148E2C /* AppRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppRatingView.xib; sourceTree = "<group>"; };
+		22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarPopUp.swift; sourceTree = "<group>"; };
+		22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarPopUpContent.swift; sourceTree = "<group>"; };
+		22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCarPopUpContent.xib; sourceTree = "<group>"; };
 		22B4B317236ABC4C004BD8FB /* AppImageSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppImageSlide.swift; sourceTree = "<group>"; };
 		22B4B318236ABC4C004BD8FB /* AppImageSlide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppImageSlide.xib; sourceTree = "<group>"; };
 		22B4B31A236ABC4C004BD8FB /* PreviewPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPhotoViewController.swift; sourceTree = "<group>"; };
@@ -1963,7 +2018,6 @@
 		762E32E7236D1A8A00FF4F3E /* CheckInPopUpContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInPopUpContent.xib; sourceTree = "<group>"; };
 		762E32EB236D1A9600FF4F3E /* CheckInPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPopUp.swift; sourceTree = "<group>"; };
 		762EAB2523784EE80079A31F /* WalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEntity.swift; sourceTree = "<group>"; };
-		762EAB29237852E20079A31F /* HistoryWalletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWalletEntity.swift; sourceTree = "<group>"; };
 		76483BEB229EE3A40079F9A1 /* UpdateAccountPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountPopUp.swift; sourceTree = "<group>"; };
 		76483BEF229EE3C90079F9A1 /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		76483BF3229EE3F00079F9A1 /* UpdateAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAccountView.xib; sourceTree = "<group>"; };
@@ -2063,7 +2117,6 @@
 		DE2ADE7322841BB9003768CE /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
 		DE2ADE7422841BB9003768CE /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		DE2C07F722857FF000BAE311 /* BaseTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabStripViewController.swift; sourceTree = "<group>"; };
-		DE2D679422F9BF050055586B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE2D679722F9BFFA0055586B /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		DE361DD02283E4BD00FA3B0D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		DE361DD12283E4BD00FA3B0D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -2227,7 +2280,6 @@
 		DEECF87A22870B3D00A4678B /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		DEECF88122870D1700A4678B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEECF88422870DA400A4678B /* LocalizableKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKey.swift; sourceTree = "<group>"; };
-		DEECF88622870F2500A4678B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DEECF88722870F2500A4678B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEECF88922871D0400A4678B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		DEECF88A22871D0400A4678B /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
@@ -2248,7 +2300,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A13591D2311A67A00587C0E /* StoreKit.framework in Frameworks */,
 				0CAD4EDBA5D7A5B75055CEBF /* Pods_EcoPark_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2257,7 +2308,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE2D679522F9BF050055586B /* StoreKit.framework in Frameworks */,
 				EDF37C296EFF808FB9FD16E0 /* Pods_EcoPark_Prod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2273,6 +2323,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170DABAE23C88157005628A4 /* CheckOutPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				170DABB723C8819E005628A4 /* CheckOutPopUpContent */,
+				170DABBC23C88579005628A4 /* CheckOutPopUp.swift */,
+			);
+			path = CheckOutPopUp;
+			sourceTree = "<group>";
+		};
+		170DABB723C8819E005628A4 /* CheckOutPopUpContent */ = {
+			isa = PBXGroup;
+			children = (
+				170DABAF23C8817C005628A4 /* CheckOutPopUpContent.swift */,
+				170DABB823C881BC005628A4 /* CheckOutPopUpContent.xib */,
+			);
+			path = CheckOutPopUpContent;
+			sourceTree = "<group>";
+		};
 		1717E0F5236D98A600E07734 /* HistoryPartnerBooking */ = {
 			isa = PBXGroup;
 			children = (
@@ -2323,6 +2391,15 @@
 				17389E4E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib */,
 			);
 			path = HistoryPartnerDetailCheckout;
+			sourceTree = "<group>";
+		};
+		1743D91423B31A3100B08457 /* AppSearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1743D91623B31AA000B08457 /* AppSearchTextField.swift */,
+				1743D91523B31AA000B08457 /* AppSearchTextField.xib */,
+			);
+			path = AppSearchTextField;
 			sourceTree = "<group>";
 		};
 		175C732F2367E486009F03F6 /* Profile */ = {
@@ -2428,9 +2505,23 @@
 			path = OtherPriceCheckoutCell;
 			sourceTree = "<group>";
 		};
+		17B9197523B86AD70089B936 /* HistoryPartnerDetailCheckAgain */ = {
+			isa = PBXGroup;
+			children = (
+				17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */,
+				17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */,
+				17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */,
+				17B9197923B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift */,
+				17B9197A23B86BD60089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift */,
+				17B9197B23B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.xib */,
+			);
+			path = HistoryPartnerDetailCheckAgain;
+			sourceTree = "<group>";
+		};
 		17BAF890236EAAE60066BD29 /* HistoryPartnerDetail */ = {
 			isa = PBXGroup;
 			children = (
+				17B9197523B86AD70089B936 /* HistoryPartnerDetailCheckAgain */,
 				17BAF8AB236EABD80066BD29 /* Cells */,
 				17389E4823851B2C00ABED8B /* HistoryPartnerDetailCheckout */,
 				17BAF892236EAB420066BD29 /* HistoryPartnerDetailCheckin */,
@@ -2817,6 +2908,16 @@
 			path = AppRatingView;
 			sourceTree = "<group>";
 		};
+		22B1DC5523A9CEED0041A03C /* SelectCarPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				22B1DC5623A9CF370041A03C /* SelectCarPopUp.swift */,
+				22B1DC5A23A9D0000041A03C /* SelectCarPopUpContent.swift */,
+				22B1DC5E23A9D0100041A03C /* SelectCarPopUpContent.xib */,
+			);
+			path = SelectCarPopUp;
+			sourceTree = "<group>";
+		};
 		22B4B316236ABC4C004BD8FB /* AppImageSlide */ = {
 			isa = PBXGroup;
 			children = (
@@ -3098,7 +3199,6 @@
 		2DF10F38001118A94DAFC38F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE2D679422F9BF050055586B /* StoreKit.framework */,
 				187B6424E15EB5BB969D0CA6 /* Pods_EnglishApp.framework */,
 				8AE01F61C1A3C4397D3A0EED /* Pods_EcoPark_AppStore.framework */,
 				8EC38F393CC708506625D3A9 /* Pods_EcoPark_Dev.framework */,
@@ -3755,6 +3855,7 @@
 		DE361E062283E60400FA3B0D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				1743D91423B31A3100B08457 /* AppSearchTextField */,
 				7656E5012374605F00428F61 /* TimePicker */,
 				7656E4F823741DEA00428F61 /* DatePicker */,
 				760B92682371AD8400C281D6 /* FromToDatePicker */,
@@ -3861,6 +3962,8 @@
 		DE361E502283E60500FA3B0D /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				170DABAE23C88157005628A4 /* CheckOutPopUp */,
+				22B1DC5523A9CEED0041A03C /* SelectCarPopUp */,
 				B1789928237CFC1000BC529E /* MessagePopUp */,
 				7656E50A237462C100428F61 /* ChooseTimePopUp */,
 				760B92712371B30600C281D6 /* ChooseDatePopUp */,
@@ -3948,7 +4051,6 @@
 				760D15E52375AA3500062FC7 /* BookingEntity.swift */,
 				760D15ED2375BBE600062FC7 /* BookingDetailEntity.swift */,
 				762EAB2523784EE80079A31F /* WalletEntity.swift */,
-				762EAB29237852E20079A31F /* HistoryWalletEntity.swift */,
 				229B69DA2388FC7B00B43C90 /* RatingEntity.swift */,
 			);
 			path = Entity;
@@ -4109,6 +4211,7 @@
 				76682F22236EB70D00F49482 /* SystemNotification */,
 				76682F21236EB70000F49482 /* MyNotification */,
 				76682F53236EB78B00F49482 /* NotificationViewController.swift */,
+				22822AD723A1F7CB00CB940B /* NotificationKey.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -4517,6 +4620,7 @@
 				22EB902423684B1100F77BC0 /* BookingInfoViewController.xib in Resources */,
 				22BE84E3236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				2A07B981236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
+				170DABB923C881BC005628A4 /* CheckOutPopUpContent.xib in Resources */,
 				1735828C2386749100E1F32D /* PriceCheckoutCell.xib in Resources */,
 				DEECF89422871D0400A4678B /* SignUpViewController.xib in Resources */,
 				DEBD673F228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
@@ -4537,6 +4641,7 @@
 				766AE80022B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				B178992F237CFC4300BC529E /* MessagePopUpContent.xib in Resources */,
+				1743D91723B31AA100B08457 /* AppSearchTextField.xib in Resources */,
 				172D0980236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */,
 				22AE220B236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749D22C88A910015A75C /* Assets.xcassets in Resources */,
@@ -4554,6 +4659,7 @@
 				17BAF8B2236EAC5C0066BD29 /* TimeParkingCell.xib in Resources */,
 				1735228B236EB1EA004C889B /* PriceCell.xib in Resources */,
 				7666FC80236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				17B9198B23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */,
 				2A07B9A3236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				223887082366A94400DAC978 /* MarkerProjectView.xib in Resources */,
 				DE9531112287DFFB00E3F688 /* EcoPark_AppStore-Info.plist in Resources */,
@@ -4583,6 +4689,7 @@
 				2238872E2366E5DD00DAC978 /* ParkingLevelView.xib in Resources */,
 				2220A795235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				7656E4FE23741E1D00428F61 /* DatePicker.xib in Resources */,
+				22B1DC5F23A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B31F236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
@@ -4645,6 +4752,7 @@
 				22BE84E4236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				2A07B982236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DE9530472287DF4800E3F688 /* SignUpViewController.xib in Resources */,
+				170DABBA23C881BC005628A4 /* CheckOutPopUpContent.xib in Resources */,
 				1735828D2386749100E1F32D /* PriceCheckoutCell.xib in Resources */,
 				DEBD6740228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431745235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -4665,6 +4773,7 @@
 				22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
 				B1789930237CFC4300BC529E /* MessagePopUpContent.xib in Resources */,
+				1743D91823B31AA100B08457 /* AppSearchTextField.xib in Resources */,
 				172D0981236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */,
 				DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF5229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
@@ -4682,6 +4791,7 @@
 				17BAF8B3236EAC5C0066BD29 /* TimeParkingCell.xib in Resources */,
 				1735228C236EB1EA004C889B /* PriceCell.xib in Resources */,
 				7666FC81236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				17B9198C23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */,
 				2A07B9A4236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
@@ -4711,6 +4821,7 @@
 				2220A796235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92622C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				7656E4FF23741E1D00428F61 /* DatePicker.xib in Resources */,
+				22B1DC6023A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B320236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
@@ -4773,6 +4884,7 @@
 				22BE84E5236978DD0056DD51 /* ParkingUserDetailViewController.xib in Resources */,
 				2A07B983236E8632004FE7CE /* DoubleLabelView.xib in Resources */,
 				DE9530F52287DF6400E3F688 /* SignUpViewController.xib in Resources */,
+				170DABBB23C881BC005628A4 /* CheckOutPopUpContent.xib in Resources */,
 				1735828E2386749100E1F32D /* PriceCheckoutCell.xib in Resources */,
 				DEBD6741228D4905004B74C8 /* CreateGroupContent.xib in Resources */,
 				22431746235EBCBF00CA1E13 /* OpenSans-Bold.ttf in Resources */,
@@ -4793,6 +4905,7 @@
 				22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
 				B1789931237CFC4300BC529E /* MessagePopUpContent.xib in Resources */,
+				1743D91923B31AA100B08457 /* AppSearchTextField.xib in Resources */,
 				172D0982236EBA080000F0BC /* HistoryPartnerDetailCheckinViewController.xib in Resources */,
 				DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */,
 				76483BF6229EE3F00079F9A1 /* UpdateAccountView.xib in Resources */,
@@ -4810,6 +4923,7 @@
 				17BAF8B4236EAC5C0066BD29 /* TimeParkingCell.xib in Resources */,
 				1735228D236EB1EA004C889B /* PriceCell.xib in Resources */,
 				7666FC82236D313700BD813E /* RatingPopUpContent.xib in Resources */,
+				17B9198D23B86BD70089B936 /* HistoryPartnerDetailCheckAgainViewController.xib in Resources */,
 				2A07B9A5236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
@@ -4839,6 +4953,7 @@
 				2220A797235EDA3A00E9C0F1 /* HomeViewController.xib in Resources */,
 				DEC7F92722C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				7656E50023741E1D00428F61 /* DatePicker.xib in Resources */,
+				22B1DC6123A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B321236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
 				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
@@ -5084,6 +5199,8 @@
 				1781C7EF236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				172D097D236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887142366D99B00DAC978 /* ParkingSortView.swift in Sources */,
+				22B1DC5B23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */,
+				17B9198823B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */,
 				DE361F422283E85000FA3B0D /* SendCommentParam.swift in Sources */,
 				761A47442371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14B9228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -5154,6 +5271,7 @@
 				2A07B995236E9935004FE7CE /* DetailParkingViewController.swift in Sources */,
 				22EB900523683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				DE361DE52283E54C00FA3B0D /* BaseTableCell.swift in Sources */,
+				170DABBD23C88579005628A4 /* CheckOutPopUp.swift in Sources */,
 				DE952F7E2287D2A700E3F688 /* KActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				229A7A3B236EB39E007A7C62 /* WalletInteractor.swift in Sources */,
 				17848B7323803057008B3A85 /* ImageParkingProtocols.swift in Sources */,
@@ -5207,9 +5325,9 @@
 				B1F00D2E23842AFB00B12701 /* BookingEndPoint.swift in Sources */,
 				DE361DF52283E57900FA3B0D /* UIColor+extension.swift in Sources */,
 				76662853236D888300019B4E /* PaymentPopUp.swift in Sources */,
+				17B9197F23B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */,
 				22EB901823684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE2ADE7722841BB9003768CE /* MenuViewController.swift in Sources */,
-				762EAB2A237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				175C735A236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DA236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AA22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -5233,6 +5351,7 @@
 				17C7FB8B23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */,
 				2243175E235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				22F33AA523645B8100D136EB /* HomeFindInteractor.swift in Sources */,
+				170DABB023C8817C005628A4 /* CheckOutPopUpContent.swift in Sources */,
 				DE361F402283E85000FA3B0D /* UpdateProfileParam.swift in Sources */,
 				DE361F3A2283E85000FA3B0D /* BaseResponse.swift in Sources */,
 				DE361DDA2283E4BD00FA3B0D /* LoginInteractor.swift in Sources */,
@@ -5248,6 +5367,7 @@
 				DE89D1EF22A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FA92287DD2A00E3F688 /* Login+Facebook.swift in Sources */,
 				22BE84DA236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				17B9198523B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */,
 				DE2ADE7622841BB9003768CE /* MenuRouter.swift in Sources */,
 				DE952F9D2287D2A700E3F688 /* KActivityIndicatorView.swift in Sources */,
 				17FCC5FF236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -5269,6 +5389,7 @@
 				22F33AAE23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				22BE84DD236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B0236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				22822AD823A1F7CB00CB940B /* NotificationKey.swift in Sources */,
 				17C7FB69236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				DE361DD92283E4BD00FA3B0D /* LoginProtocols.swift in Sources */,
 				2220A78C235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
@@ -5351,6 +5472,7 @@
 				2238872A2366E5BF00DAC978 /* ParkingLevelView.swift in Sources */,
 				DE952F852287D2A700E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				17FFE274236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
+				17B9198223B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */,
 				DE952FA12287D2A700E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17C7FB8E23700A1800ACE95D /* AppPhoto.swift in Sources */,
 				2A138E532376CB1600B74458 /* DetailTransactionCustomerViewController.swift in Sources */,
@@ -5392,6 +5514,7 @@
 				2203D56A23655D5D0055E79F /* HomeFindCell.swift in Sources */,
 				DE361E6A2283E60500FA3B0D /* AppFont.swift in Sources */,
 				2A456814236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
+				17B9197C23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */,
 				766AE7EA22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				76FBA1D6236EE08B00DD92D2 /* NotificationDetailPresenter.swift in Sources */,
 				1717E0E9236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
@@ -5465,6 +5588,7 @@
 				175C7357236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				17848B6A23803057008B3A85 /* ImageParkingPresenter.swift in Sources */,
 				DE952FA22287D2A700E3F688 /* ProgressView.swift in Sources */,
+				22B1DC5723A9CF370041A03C /* SelectCarPopUp.swift in Sources */,
 				17155F0423616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DD236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
 				7609FBCD236D9F530029E003 /* CheckOutViewController.swift in Sources */,
@@ -5474,6 +5598,7 @@
 				B1F00D3223842B1500B12701 /* BookingAPIService.swift in Sources */,
 				22EB902123684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522422CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
+				1743D91A23B31AA100B08457 /* AppSearchTextField.swift in Sources */,
 				7609FBC7236D9F530029E003 /* CheckOutPresenter.swift in Sources */,
 				17FCC5FC236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
 				B178992B237CFC3300BC529E /* MessagePopUpContent.swift in Sources */,
@@ -5520,6 +5645,8 @@
 				1781C7F0236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				172D097E236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887152366D99B00DAC978 /* ParkingSortView.swift in Sources */,
+				22B1DC5C23A9D0000041A03C /* SelectCarPopUpContent.swift in Sources */,
+				17B9198923B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */,
 				DE952FB92287DF4800E3F688 /* SendCommentParam.swift in Sources */,
 				761A47452371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BA228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -5590,6 +5717,7 @@
 				2A07B996236E9935004FE7CE /* DetailParkingViewController.swift in Sources */,
 				2243175C235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				22EB900623683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
+				170DABBE23C88579005628A4 /* CheckOutPopUp.swift in Sources */,
 				DE952FCB2287DF4800E3F688 /* BaseTableCell.swift in Sources */,
 				229A7A3C236EB39E007A7C62 /* WalletInteractor.swift in Sources */,
 				17848B7423803057008B3A85 /* ImageParkingProtocols.swift in Sources */,
@@ -5643,9 +5771,9 @@
 				B1F00D2F23842AFB00B12701 /* BookingEndPoint.swift in Sources */,
 				DE952FD92287DF4800E3F688 /* UIColor+extension.swift in Sources */,
 				76662854236D888300019B4E /* PaymentPopUp.swift in Sources */,
+				17B9198023B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */,
 				22EB901923684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
 				DE952FDA2287DF4800E3F688 /* MenuViewController.swift in Sources */,
-				762EAB2B237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				175C735B236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DB236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
 				768074AB22C910390015A75C /* QuestionSubmitParam.swift in Sources */,
@@ -5669,6 +5797,7 @@
 				17C7FB8C23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */,
 				2243175F235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				22F33AA623645B8100D136EB /* HomeFindInteractor.swift in Sources */,
+				170DABB123C8817C005628A4 /* CheckOutPopUpContent.swift in Sources */,
 				DE952FE22287DF4800E3F688 /* UpdateProfileParam.swift in Sources */,
 				DE952FE32287DF4800E3F688 /* BaseResponse.swift in Sources */,
 				DE952FE42287DF4800E3F688 /* LoginInteractor.swift in Sources */,
@@ -5684,6 +5813,7 @@
 				DE89D1F022A41B44000638B0 /* LevelUpContent.swift in Sources */,
 				DE952FEA2287DF4800E3F688 /* Login+Facebook.swift in Sources */,
 				22BE84DB236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				17B9198623B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */,
 				DE952FEB2287DF4800E3F688 /* MenuRouter.swift in Sources */,
 				DE952FEC2287DF4800E3F688 /* KActivityIndicatorView.swift in Sources */,
 				17FCC600236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -5705,6 +5835,7 @@
 				22F33AAF23645B8100D136EB /* HomeFindRouter.swift in Sources */,
 				22BE84DE236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B1236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				22822AD923A1F7CC00CB940B /* NotificationKey.swift in Sources */,
 				17C7FB6A236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				DE952FF12287DF4800E3F688 /* LoginProtocols.swift in Sources */,
 				2220A78D235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
@@ -5787,6 +5918,7 @@
 				DE95300D2287DF4800E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE95300E2287DF4800E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17FFE275236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
+				17B9198323B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */,
 				DE95300F2287DF4800E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
 				17C7FB8F23700A1800ACE95D /* AppPhoto.swift in Sources */,
 				2A138E542376CB1600B74458 /* DetailTransactionCustomerViewController.swift in Sources */,
@@ -5828,6 +5960,7 @@
 				DE95301C2287DF4800E3F688 /* AppFont.swift in Sources */,
 				766AE7EB22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				2A456815236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
+				17B9197D23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */,
 				DE95301D2287DF4800E3F688 /* SignUpPresenter.swift in Sources */,
 				76FBA1D7236EE08B00DD92D2 /* NotificationDetailPresenter.swift in Sources */,
 				1717E0EA236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
@@ -5901,6 +6034,7 @@
 				175C7358236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				17848B6B23803057008B3A85 /* ImageParkingPresenter.swift in Sources */,
 				DE95303C2287DF4800E3F688 /* ProgressView.swift in Sources */,
+				22B1DC5823A9CF370041A03C /* SelectCarPopUp.swift in Sources */,
 				17155F0523616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DE236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
 				7609FBCE236D9F530029E003 /* CheckOutViewController.swift in Sources */,
@@ -5910,6 +6044,7 @@
 				B1F00D3323842B1500B12701 /* BookingAPIService.swift in Sources */,
 				22EB902223684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522522CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
+				1743D91B23B31AA100B08457 /* AppSearchTextField.swift in Sources */,
 				7609FBC8236D9F530029E003 /* CheckOutPresenter.swift in Sources */,
 				17FCC5FD236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
 				B178992C237CFC3300BC529E /* MessagePopUpContent.swift in Sources */,
@@ -5956,6 +6091,8 @@
 				1781C7F1236C5D4800F053C1 /* HeaderInfoView.swift in Sources */,
 				172D097F236EBA080000F0BC /* HistoryPartnerDetailCheckinInteractor.swift in Sources */,
 				223887162366D99B00DAC978 /* ParkingSortView.swift in Sources */,
+				22B1DC5D23A9D0010041A03C /* SelectCarPopUpContent.swift in Sources */,
+				17B9198A23B86BD70089B936 /* HistoryPartnerDetailCheckAgainInteractor.swift in Sources */,
 				DE9530672287DF6400E3F688 /* SendCommentParam.swift in Sources */,
 				761A47462371CE3100CD9A23 /* RechargeWalletRouter.swift in Sources */,
 				DE7D14BB228EA28A00713084 /* TitleNavigationBar.swift in Sources */,
@@ -6026,6 +6163,7 @@
 				766AE7F922B022DE002D474E /* UpdateFeaturePopUp.swift in Sources */,
 				2A07B997236E9935004FE7CE /* DetailParkingViewController.swift in Sources */,
 				22431752235ECBF900CA1E13 /* AppDateDropDown.swift in Sources */,
+				170DABBF23C88579005628A4 /* CheckOutPopUp.swift in Sources */,
 				22EB900723683B0900F77BC0 /* ParkingDetailContent.swift in Sources */,
 				2243175D235ECFBF00CA1E13 /* PopUpSelectDate.swift in Sources */,
 				17848B7523803057008B3A85 /* ImageParkingProtocols.swift in Sources */,
@@ -6079,9 +6217,9 @@
 				B1F00D3023842AFB00B12701 /* BookingEndPoint.swift in Sources */,
 				76FBA1E1236EE08B00DD92D2 /* NotificationDetailProtocols.swift in Sources */,
 				DEDDEF6722914A980043A62D /* MainTabbar.swift in Sources */,
+				17B9198123B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift in Sources */,
 				76662855236D888300019B4E /* PaymentPopUp.swift in Sources */,
 				22EB901A23684B1100F77BC0 /* BookingInfoPresenter.swift in Sources */,
-				762EAB2C237852E20079A31F /* HistoryWalletEntity.swift in Sources */,
 				76CF522222CBA40B00A9D205 /* CategoryParam.swift in Sources */,
 				175C735C236836C7009F03F6 /* SignUpPartnerStep1Protocols.swift in Sources */,
 				17FCC5DC236AC9B4003E98D8 /* SignUpPartnerWaitingPresenter.swift in Sources */,
@@ -6105,6 +6243,7 @@
 				172D0976236EBA080000F0BC /* HistoryPartnerDetailCheckinRouter.swift in Sources */,
 				17C7FB8D23700A1800ACE95D /* AppCollectionPhotoCell.swift in Sources */,
 				22F33AA723645B8100D136EB /* HomeFindInteractor.swift in Sources */,
+				170DABB223C8817C005628A4 /* CheckOutPopUpContent.swift in Sources */,
 				22431760235ECFBF00CA1E13 /* PopUpSelectDateContent.swift in Sources */,
 				DE95308C2287DF6400E3F688 /* PhotoEntity.swift in Sources */,
 				DE95308D2287DF6400E3F688 /* ForgotPasswordProtocols.swift in Sources */,
@@ -6120,6 +6259,7 @@
 				DE9530942287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				DE9530952287DF6400E3F688 /* RecordParam.swift in Sources */,
 				22BE84DC236978DD0056DD51 /* ParkingUserDetailProtocols.swift in Sources */,
+				17B9198723B86BD60089B936 /* HistoryPartnerDetailCheckAgainProtocols.swift in Sources */,
 				DE9530962287DF6400E3F688 /* Utils.swift in Sources */,
 				2220A78B235EDA3A00E9C0F1 /* HomePresenter.swift in Sources */,
 				17FCC601236AE4CF003E98D8 /* ParkingInfoRouter.swift in Sources */,
@@ -6141,6 +6281,7 @@
 				DE49F83122A3E0CE00A92C63 /* RewardPopUpContent.swift in Sources */,
 				22BE84DF236978DD0056DD51 /* ParkingUserDetailRouter.swift in Sources */,
 				17FCC5B2236AB7A9003E98D8 /* SignUpPartnerStep3Presenter.swift in Sources */,
+				22822ADA23A1F7CC00CB940B /* NotificationKey.swift in Sources */,
 				17C7FB6B236FF5A000ACE95D /* PageHistoryPartnerViewControler.swift in Sources */,
 				2220A78E235EDA3A00E9C0F1 /* HomeProtocols.swift in Sources */,
 				2292F20D23653B0400B570E3 /* DrawerViewController.swift in Sources */,
@@ -6223,6 +6364,7 @@
 				DE9530BB2287DF6400E3F688 /* KActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				DE9530BC2287DF6400E3F688 /* KActivityIndicatorAnimationDelegate.swift in Sources */,
 				17FFE276236D3BBB00E740B3 /* HistoryParnerCell.swift in Sources */,
+				17B9198423B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift in Sources */,
 				DE9530BD2287DF6400E3F688 /* KActivityIndicatorAnimationBallRotate.swift in Sources */,
 				17C7FB9023700A1800ACE95D /* AppPhoto.swift in Sources */,
 				2A138E552376CB1600B74458 /* DetailTransactionCustomerViewController.swift in Sources */,
@@ -6264,6 +6406,7 @@
 				766AE7EC22AFCA9D002D474E /* ConfirmPopUp.swift in Sources */,
 				DE9530CB2287DF6400E3F688 /* SignUpPresenter.swift in Sources */,
 				2A456816236C81D800A23FB0 /* HistoryParkingInteractor.swift in Sources */,
+				17B9197E23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */,
 				DE9530CC2287DF6400E3F688 /* AppDropDown.swift in Sources */,
 				76FBA1D8236EE08B00DD92D2 /* NotificationDetailPresenter.swift in Sources */,
 				1717E0EB236D452B00E07734 /* HistoryPartnerHoldingViewController.swift in Sources */,
@@ -6337,6 +6480,7 @@
 				175C7359236836C7009F03F6 /* SignUpPartnerStep1ViewController.swift in Sources */,
 				17848B6C23803057008B3A85 /* ImageParkingPresenter.swift in Sources */,
 				DE9530EA2287DF6400E3F688 /* ProgressView.swift in Sources */,
+				22B1DC5923A9CF370041A03C /* SelectCarPopUp.swift in Sources */,
 				17155F0623616100001B81AE /* AppTextfiledLogin.swift in Sources */,
 				17FCC5DF236AC9B4003E98D8 /* SignUpPartnerWaitingRouter.swift in Sources */,
 				7609FBCF236D9F530029E003 /* CheckOutViewController.swift in Sources */,
@@ -6346,6 +6490,7 @@
 				B1F00D3423842B1500B12701 /* BookingAPIService.swift in Sources */,
 				22EB902323684B1100F77BC0 /* BookingInfoViewController.swift in Sources */,
 				76CF522622CBA5FA00A9D205 /* CreateExerciseParam.swift in Sources */,
+				1743D91C23B31AA100B08457 /* AppSearchTextField.swift in Sources */,
 				7609FBC9236D9F530029E003 /* CheckOutPresenter.swift in Sources */,
 				17FCC5FE236AE4CF003E98D8 /* ParkingInfoPresenter.swift in Sources */,
 				B178992D237CFC3300BC529E /* MessagePopUpContent.swift in Sources */,
@@ -6368,7 +6513,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE3CC3472283DD990037DBE4 /* Base */,
-				DEECF88622870F2500A4678B /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -6559,19 +6703,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nghia Nguyen (G7RSC937JS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Duong Vinh (XCFX4NM3YW)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = F28VRDS433;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nghianguyen.obee-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.ecoparking;
 				PRODUCT_NAME = "Eco Parking";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.nghianguyen.obee-ios";
+				PROVISIONING_PROFILE_SPECIFIER = EcoProvisioningDev;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PROD";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6584,19 +6728,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Prod.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Nghia Nguyen (8HQRBRRH7Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Duong Vinh (F28VRDS433)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = 8HQRBRRH7Z;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = F28VRDS433;
 				INFOPLIST_FILE = "$(SRCROOT)/EcoPark/SourceFile/Info/EcoPark_Prod-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nghianguyen.obee-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.ecoparking;
 				PRODUCT_NAME = "Eco Parking";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.nghianguyen.obee-ios";
+				PROVISIONING_PROFILE_SPECIFIER = EcoProvisioningAppStore;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

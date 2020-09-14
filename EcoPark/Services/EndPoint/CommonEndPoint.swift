@@ -25,7 +25,7 @@ extension CommonEndPoint: EndPointType {
         case .getNationals:
             return "_api/nation/get_list_nation"
         case .changeLanguageCode:
-            return "_api/user/change_language_code"
+            return "_api/user/change_language"
         case .getTermAndCondition:
             return "_api/webview/terms_of_use"
         case .policy:
@@ -40,7 +40,10 @@ extension CommonEndPoint: EndPointType {
     var parameters: JSONDictionary {
         switch self {
         case .changeLanguageCode:
-            return ["device_id": UIDevice.current.identifierForVendor!.uuidString]
+            var param = ["device_id": UIDevice.current.identifierForVendor!.uuidString]
+            param = BaseParam.addDeviceParams(inputParams: param) as! [String : String]
+            return param
+
         case .uploadImages:
             return ["type": "parking"]
         default:

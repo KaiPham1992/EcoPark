@@ -28,18 +28,30 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var lbVersion: UILabel!
 	var presenter: ProfilePresenterProtocol?
 
+    var user: UserEntity? {
+        didSet {
+            getDataUser()
+        }
+    }
+    
     var genderSelect: String = ""
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        getDataUser()
+//        getDataUser()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getProfile()
+    }
+    
     private func setupUI() {
         addMenu()
         setTitleNavigation(title: LocalizableKey.MenuProfile.showLanguage)
         imgAvatar.setBorder(borderWidth: 0, borderColor: .clear, cornerRadius: imgAvatar.frame.width / 2)
         vUsername.setTitleAndPlaceHolder(title: LocalizableKey.username.showLanguage, placeHolder: "")
+        vUsername.vLine.backgroundColor = AppColor.color_205_205_205
         vDisplayname.setTitleAndPlaceHolder(title: LocalizableKey.displaynameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vPhoneNumber.setTitleAndPlaceHolder(title: LocalizableKey.phoneNumberSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.emailSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -49,35 +61,52 @@ class ProfileViewController: BaseViewController {
         vBirthDay.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         btnSave.setTitle(LocalizableKey.titleSave.showLanguage, for: .normal)
         btnChangePassword.setTitle(LocalizableKey.titleChangePassword.showLanguage, for: .normal)
+        vUsername.tfInput.isUserInteractionEnabled = false
+        vDisplayname.tfInput.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        vEmail.tfInput.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        vPhoneNumber.tfInput.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         
+        btnSave.isEnabled = false
+        btnSave.backgroundColor = AppColor.color_205_205_205
         vGender.listItem = [LocalizableKey.male.showLanguage, LocalizableKey.female.showLanguage, LocalizableKey.other.showLanguage]
         vGender.delegateDropDown = self
+        vBirthDay.delegateDropDown = self
+        lbBoss.text = LocalizableKey.Owner.showLanguage
         
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 
         lbVersion.text = "Version \(appVersion ?? "0")"
     }
     
+    
+    @objc func textDidChange() {
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
+    }
+    
     private func getDataUser() {
-        lbName.text = UserDefaultHelper.shared.loginUserInfo?.fullName
-        vUsername.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.displayName
-        vDisplayname.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.fullName
-        vPhoneNumber.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.phone
-        vEmail.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.email
-//        vGender.tfInput.text =  UserDefaultHelper.shared.loginUserInfo?.gender
-        vBirthDay.tfInput.text = UserDefaultHelper.shared.loginUserInfo?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYY)
-        imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
-        if UserDefaultHelper.shared.loginUserInfo?.gender == "female" {
+        lbName.text = user?.fullName
+        vUsername.tfInput.text = user?.displayName
+        vDisplayname.tfInput.text = user?.fullName
+        vPhoneNumber.tfInput.text = user?.phone
+        vEmail.tfInput.text = user?.email
+        vBirthDay.tfInput.text = user?.birthDay?.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+        imgAvatar.sd_setImage(with:  user?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
+        if user?.gender == "female" {
             vGender.tfInput.text = LocalizableKey.female.showLanguage
         }
-        else if UserDefaultHelper.shared.loginUserInfo?.gender == "male" {
+        else if user?.gender == "male" {
             vGender.tfInput.text = LocalizableKey.male.showLanguage
         }
-        else if UserDefaultHelper.shared.loginUserInfo?.gender == "other" {
+        else if user?.gender == "other" {
             vGender.tfInput.text = LocalizableKey.other.showLanguage
         }
-//        checkHideShowSaveButton()
-        
+        guard let _user = user else { return }
+        if _user.userIsBoss {
+            lbBoss.isHidden = false
+        } else {
+            lbBoss.isHidden = true
+        }
     }
     
     @IBAction func btnSaveTapped() {
@@ -112,55 +141,57 @@ class ProfileViewController: BaseViewController {
 }
 
 extension ProfileViewController:  ProfileViewProtocol {
+    func didGetProfile(user: UserEntity) {
+        self.user = user
+    }
+    
     func didUpdateAvatar() {
-        
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
     }
     
     func didUpdateProfile(user: UserEntity) {
         UserDefaultHelper.shared.saveUser(user: user)
+        UserDefaultHelper.shared.parkingID = user.parkingID ?? ""
+        self.user = user
         PopUpHelper.shared.showEditProfile {
-            self.getDataUser()
         }
     }
 }
 
-//extension ProfileViewController {
-//    func textFieldDidBeginEditing() {
-//        vDisplayname.textFieldDidChange = {
-//           self.checkHideShowSaveButton()
-//        }
-//
-//        vPhoneNumber.textFieldDidChange = {
-//            self.checkHideShowSaveButton()
-//        }
-//
-//        vEmail.textFieldDidChange = {
-//            self.checkHideShowSaveButton()
-//        }
-//    }
-//}
-
 extension ProfileViewController {
     func validateInputData() -> Bool {
-        if self.vUsername.tfInput.text == "" && self.vEmail.tfInput.text == "" {//&& self.vPhoneNumber.tfInput.text == "" && self.genderSelect == "" && self.vBirthDay.tfInput.text == "" {
+        if self.vDisplayname.tfInput.text == "" && self.vEmail.tfInput.text == "" {//&& self.vPhoneNumber.tfInput.text == "" && self.genderSelect == "" && self.vBirthDay.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
         }
 
-        if self.vUsername.tfInput.text == "" {
+        if self.vDisplayname.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterDisplayName.showLanguage)
             return false
         }
 
+        if self.vPhoneNumber.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.pleaseEnterPhone.showLanguage)
+            return false
+        }
+        
+        if let phone = self.vPhoneNumber.tfInput.text, phone.isValidPhone() == false {
+            hideError(isHidden: false, message:  LocalizableKey.invalidLoginPhone.showLanguage)
+            return false
+        }
+        
         if self.vEmail.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
 
+        
         if let email = self.vEmail.tfInput.text, email.isValidEmail() == false {
             hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
             return false
         }
+        
         hideError()
         return true
         
@@ -171,50 +202,19 @@ extension ProfileViewController {
         lbError.text = message
     }
     
-//    func isEnabledSaveButton(isEnabled: Bool = true) {
-//
-//
-//        self.btnSave.isEnabled = isEnabled
-//        if isEnabled {
-//            self.btnSave.backgroundColor = AppColor.color_0_129_255
-//        } else {
-//            self.btnSave.backgroundColor = AppColor.gray999999
-//        }
-//    }
-//
-//    func checkHideShowSaveButton(){
-//
-//    var isEnabled = false
-//
-//    if let user = UserDefaultHelper.shared.loginUserInfo {
-//        if  self.vDisplayname.tfInput.text != user.fullName
-//        {
-//            isEnabled = true
-//        }
-//
-//        if  vGender.tfInput.text != user.gender {
-//            isEnabled = true
-//        }
-//
-//
-//        if self.vPhoneNumber.tfInput.text != user.phone
-//        {
-//            isEnabled = true
-//        }
-//        if vUsername.tfInput.text != user.displayName {
-//            isEnabled = true
-//        }
-//
-////        if vBirthDay.tfInput.text != user.birthDay {
-////            isEnabled = true
-////        }
-//    }
-//        self.isEnabledSaveButton(isEnabled: isEnabled)
-//    }
 }
 
 extension ProfileViewController: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
         self.genderSelect = item as! String
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
+    }
+}
+
+extension ProfileViewController: AppDateDropDownDelegate {
+    func didChangedValue() {
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
     }
 }

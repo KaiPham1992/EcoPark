@@ -18,10 +18,10 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     @IBOutlet weak var tbCheckInDetail: UITableView!
     @IBOutlet weak var btnCheckOut: UIButton!
     @IBOutlet weak var btnScanQR: UIButton!
-    
+    @IBOutlet weak var vContainer: UIView!
     var parkingID: String = ""
     var bookingID: String = ""
-    
+    var isNoti = false
     var historyParkingDetail: HistoryBookingParkingResponse? {
         didSet {
             tbCheckInDetail.reloadData()
@@ -34,9 +34,16 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
 	override func viewDidLoad() {
         super.viewDidLoad()
         addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
         btnCheckOut.setBorder(borderWidth: 0.5, borderColor: AppColor.color_0_129_255, cornerRadius: 5)
+        lbStatus.text = LocalizableKey.checked_in.showLanguage
+        btnCheckOut.setTitle(LocalizableKey.agreeCheckout.showLanguage, for: .normal)
+        if isNoti {
+            vContainer.isHidden = true
+        } else {
+            vContainer.isHidden = false
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,23 +54,22 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     
     @IBAction func btnCheckOutTapped() {
         
-        let price = historyParkingDetail?.money_paid ?? 0
-        let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
+        let price = historyParkingDetail?.receivables
+        let vehicleType = historyParkingDetail?.vehicle_name
         let vehicleNumber = historyParkingDetail?.license_plates ?? ""
         let checkoutNumber = historyParkingDetail?.code ?? ""
         let bookingID = historyParkingDetail?.id
         let code = historyParkingDetail?.code
         let licensePlates = historyParkingDetail?.license_plates
-        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: Double(price), vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
-            
+        PopUpHelper.shared.showPartnerCheckOut(width: tbCheckInDetail.frame.width, price: price&, vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+            self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: self.historyParkingDetail?.parking_id ?? "", bookingID: bookingID ?? ""))
         }) {
             self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
         }
     }
     
     @IBAction func btnScanQRTapped() {
-//        self.push(controller: HistoryPartnerQRScannerRouter.createModule())
-        let vc = AppQRScanerViewController.createModule(isCheckIn: false)
+        let vc = HistoryPartnerQRScannerRouter.createModule(isCheckIn: false)
         vc.completionCode = { code in
             
             guard let qrcode = code as? [String] else { return }
@@ -80,10 +86,25 @@ class HistoryPartnerDetailCheckinViewController: BaseViewController, HistoryPart
     
     func didGetData(historyParkingDetail: HistoryBookingParkingResponse?) {
         self.historyParkingDetail = historyParkingDetail
+        lbID.text = historyParkingDetail?.code&
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
-        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
+        self.historyParkingDetail = historyParkingDetail
+        guard let _historyParking = historyParkingDetail else { return }
+        let intendCheckin = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
+        let intendCheckout = _historyParking.intend_checkout_time?.toString(dateFormat: .ecoTime)
+        PopUpHelper.shared.showCheckOut(name: _historyParking.fullname&, licensePlate: _historyParking.license_plates&, time: intendCheckin&, timeOut: intendCheckout&, width: 350, height: 280, completionYes: {
+            self.presenter?.changeStatusCheckout(bookingID: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+        }) {
+            self.pop()
+        }
+        
+        
+    }
+    
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity?) {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: historyCheckout?.id ?? "", parkingID: historyCheckout?.parking_id ?? ""))
     }
 }
 

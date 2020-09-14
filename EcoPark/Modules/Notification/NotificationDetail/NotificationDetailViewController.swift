@@ -24,9 +24,12 @@ class NotificationDetailViewController: BaseViewController, NotificationDetailVi
 	override func viewDidLoad() {
         super.viewDidLoad()
 //        webView.loadHTMLString(content ?? "", baseURL: nil)
-        let mainUrl = "_api/webview/get_notification_detail/\(notificationID )"
+        let mainUrl = "_api/webview/get_notification_detail/\(notificationID)"
+       
         guard let url = URL(string: BASE_URL + "\(mainUrl)") else { return }
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        let code = LanguageHelper.currentAppleLanguage()
+        request.setValue("\(code)", forHTTPHeaderField: "Language")
         webView.load(request)
     }
     

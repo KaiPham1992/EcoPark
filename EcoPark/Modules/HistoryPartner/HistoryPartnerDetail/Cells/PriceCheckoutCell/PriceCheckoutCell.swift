@@ -24,10 +24,12 @@ class PriceCheckoutCell: UITableViewCell {
     @IBOutlet weak var lbPaidPrice: UILabel!
     @IBOutlet weak var lbPaidWithWalletPrice: UILabel!
     @IBOutlet weak var lbPaidWithCashPrice: UILabel!
+    @IBOutlet weak var lbHour: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,16 +38,32 @@ class PriceCheckoutCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupUI() {
+        let numberHours = UserDefaultHelper.shared.numberHours
+        lbPriceAHours.text = LocalizableKey.priceAHours.showLanguage + ":"
+        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":"
+        lbTimeHolding.text = LocalizableKey.NumberHoursSend.showLanguage + ":"
+        lbPriceParking.text = LocalizableKey.FeeParking.showLanguage + ":"
+        lbPaid.text = LocalizableKey.Paid.showLanguage + ":"
+        lbPaidWithCash.text = LocalizableKey.paidWithCash.showLanguage + ":"
+        lbPaidWithWallet.text = LocalizableKey.paidWithWallet.showLanguage + ":"
+        lbHour.text = LocalizableKey.Hours.showLanguage
+    }
+    
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
         
-        self.lbPriceAHoursPrice.text = _historyParkingDetail.price
-        self.lbPriceComboPrice.text = _historyParkingDetail.package_price
-//        self.lbHoldingTime.text = _historyParkingDetail.
-        self.lblPrice.text = _historyParkingDetail.price
-        self.lbPaidPrice.text = _historyParkingDetail.money_paid?.toCurrency
-        self.lbPaidWithWalletPrice.text = _historyParkingDetail.payment_wallet?.toCurrency
-        self.lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrency
+        self.lblPrice.text = _historyParkingDetail.parking_price?.toCurrencyNoVND ?? "0"
+        self.lbPriceAHoursPrice.text = _historyParkingDetail.price?.toCurrencyNoVND
+        self.lbPriceComboPrice.text = _historyParkingDetail.package_price?.toCurrencyNoVND
+        self.lbHoldingTime.text = _historyParkingDetail.numberHours?.toCurrencyNoVND
+        self.lbPaidPrice.text = _historyParkingDetail.money_paid?.toCurrencyNoVND ?? "0"
+        self.lbPaidWithWalletPrice.text = historyParkingDetail?.payment_wallet?.toCurrencyNoVND ?? "0"
+        self.lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrencyNoVND ?? "0"
+        lbPriceACombo.text = LocalizableKey.priceCombo.showLanguage + " \(_historyParkingDetail.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":"
+        if historyParkingDetail?.status == StatusBooking.expired.rawValue || historyParkingDetail?.status == StatusBooking.cancel.rawValue {
+            self.lblPrice.text = "0"
+        }
     }
     
 }

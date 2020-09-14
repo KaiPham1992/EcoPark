@@ -38,8 +38,12 @@ class ParkingInfoViewController: BaseViewController {
     var long: Double = 0
     var listMaterial: [String] = []
     var codeTax: String = ""
-    
-    var listParkingType: [ParkingTypeEntity] = []
+    var numberHours = ""
+    var listParkingType: [ParkingTypeEntity] = [] {
+        didSet {
+            tbParkingInfo.reloadData()
+        }
+    }
     var parkingInfo: ParkingInfoEntity? {
         didSet {
             tbParkingInfo.reloadData()
@@ -50,10 +54,12 @@ class ParkingInfoViewController: BaseViewController {
         super.viewDidLoad()
         setTitleNavigation(title: LocalizableKey.MenuMyInfo.showLanguage)
         btnSave.setTitle(LocalizableKey.titleSave.showLanguage, for: .normal)
-        lbActive.text = LocalizableKey.switchStatusParking.showLanguage
-        
+        btnSave.isEnabled = false
+        btnSave.backgroundColor = AppColor.color_205_205_205
         addMenu()
         configTableView()
+        vActive.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,15 +68,36 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
-        presenter?.getParkingInfo(id: parkingID)
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        presenter?.getParkingInfo(id: parkingID&)
         presenter?.getListParkingType()
+        presenter?.getNumberHours()
+    }
+    
+    @IBAction func swActive() {
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        if vActive.isOn {
+            lbActive.text = LocalizableKey.switchStatusParkingOff.showLanguage
+            presenter?.changeStatusParking(parkingID: parkingID&, isActive: "1")
+        } else {
+            lbActive.text = LocalizableKey.switchStatusParkingOn.showLanguage
+            presenter?.changeStatusParking(parkingID: parkingID&, isActive: "0")
+        }
     }
     
     @IBAction func btnSaveTapped() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
         if validateInputData() {
-            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID,
+            presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID&,
                                                                        parking_address: parkingAddress,
                                                                        gpkd_img_before_src: parkingInfo?.gpkd_img_before_src,
                                                                        gpkd_img_after_src: parkingInfo?.gpkd_img_after_src,
@@ -83,15 +110,15 @@ class ParkingInfoViewController: BaseViewController {
                                                                        price: parkingInfo?.price,
                                                                        package_price: parkingInfo?.package_price,
                                                                        package_number: parkingInfo?.package_number,
-                                                                       material: ["1", "2", "3", "4"],
+                                                                       material: listMaterial,
                                                                        lat: self.lat,
                                                                        long: self.long))
         }
     }
     
     @objc func imageParkingTapped() {
-        
-        
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
         guard let  listImage = parkingInfo?.img else { return }
         let listImageStr = listImage.map({ $0.img_src!})
         
@@ -105,34 +132,34 @@ class ParkingInfoViewController: BaseViewController {
     
     func validateInputData() -> Bool {
         if parkingName == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập tên bãi xe")
+            hideError(isHidden: false, message: LocalizableKey.errorParkingName.showLanguage)
             return false
         }
         if parkingTypeID == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập loại bãi xe")
+            hideError(isHidden: false, message: LocalizableKey.errorParkingType.showLanguage)
             return false
         }
         if parkingAddress == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập địa chỉ bãi xe")
+            hideError(isHidden: false, message: LocalizableKey.errorParkingAddress.showLanguage)
             return false
         }
         if openTime == "" {
-            hideError(isHidden: false, message: "Vui lòng chọn giờ mở cửa")
+            hideError(isHidden: false, message: LocalizableKey.errorOpenTime.showLanguage)
             return false
         }
         if closeTime == "" {
-            hideError(isHidden: false, message: "Vui lòng chọn giờ đóng cửa")
+            hideError(isHidden: false, message: LocalizableKey.errorCloseTime.showLanguage)
             return false
         }
         if listMaterial == [] {
-            hideError(isHidden: false, message: "Vui lòng chọn tiện ích")
+            hideError(isHidden: false, message: LocalizableKey.errorUtility.showLanguage)
             return false
         }
         
-        if codeTax == "" {
-            hideError(isHidden: false, message: "Vui lòng nhập mã số thuế")
-            return false
-        }
+//        if codeTax == "" {
+//            hideError(isHidden: false, message: LocalizableKey.errorParkingType.showLanguage)
+//            return false
+//        }
         
         hideError()
         return true
@@ -183,6 +210,8 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
         case 0:
             let otherInfoCell = tableView.dequeueTableCell(OtherInfoCell.self)
             otherInfoCell.setData(parkingInfo: parkingInfo)
+            otherInfoCell.numberHours = self.numberHours
+        
             return otherInfoCell
         case 1:
             if indexPath.row == 0 {
@@ -192,7 +221,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
                 return slideImageCell
             } else {
                 let parkingInfoCell = tableView.dequeueTableCell(ParkingInfoCell.self)
-                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType.map({$0.name&}), isSelectAddress: isSelectAddress)
+                parkingInfoCell.setData(parkingInfo: parkingInfo, listItem: self.listParkingType, isSelectAddress: isSelectAddress)
                 parkingInfoCell.selectAddress = self.addressSelect
                 parkingInfoCell.delegate = self
                 return parkingInfoCell
@@ -208,7 +237,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 100
+            return 125
         case 1:
             if indexPath.row == 0 {
                 return 215
@@ -234,7 +263,7 @@ extension ParkingInfoViewController: UITableViewDataSource, UITableViewDelegate 
             
         default:
             let headerView = HeaderInfoView()
-            headerView.setupUI(title: LocalizableKey.parkingInfo.showLanguage.uppercased())
+            headerView.setupUI(title: LocalizableKey.juridicalInfomation.showLanguage.uppercased())
             headerView.delegate = self
             headerView.section = section
             headerView.setExpland(expland: isExplandLicenseInfo)
@@ -273,6 +302,10 @@ extension ParkingInfoViewController: HeaderViewDelegate {
 
 
 extension ParkingInfoViewController: ParkingInfoViewProtocol {
+    func didGetNumberHours(numberHours: String) {
+        self.numberHours = numberHours
+    }
+    
     func didGetParkingInfo(parkingInfo: ParkingInfoEntity?) {
         self.parkingInfo = parkingInfo
         guard let _parkingInfo = parkingInfo else { return }
@@ -283,12 +316,14 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
         self.parkingAddress = _parkingInfo.address&
         self.lat = _parkingInfo.lat ?? 0
         self.long = _parkingInfo.long ?? 0
-        self.listMaterial = _parkingInfo.material?.map({ $0.id ?? ""}) ?? [""]
+//        self.listMaterial = _parkingInfo.material?.map({ $0.id ?? ""}) ?? [""]
         self.codeTax = _parkingInfo.code_tax&
         if parkingInfo?.is_active == "1" {
             vActive.isOn = true
+            lbActive.text = LocalizableKey.switchStatusParkingOff.showLanguage
         } else {
             vActive.isOn = false
+            lbActive.text = LocalizableKey.switchStatusParkingOn.showLanguage
         }
     }
     
@@ -297,7 +332,7 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
     }
     
     func didUpdateInfoParking(parkingInfo: ParkingInfoEntity?) {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return  }
+        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id else { return  }
         PopUpHelper.shared.showMessage(message: LocalizableKey.updateSuccess.showLanguage, width: popUpwidth) {}
         presenter?.getParkingInfo(id: parkingID)
         tbParkingInfo.reloadData()
@@ -307,10 +342,13 @@ extension ParkingInfoViewController: ParkingInfoViewProtocol {
 extension ParkingInfoViewController: LicenseInfoCellDelegate {
     func getDataLicenseInfo(codeTax: String) {
         self.codeTax = codeTax
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
     }
 }
 
 extension ParkingInfoViewController: ParkingInfoCellDelegate {
+    
     func getParkingInfo(parkingName: String, parkingTypeID: String, parkingAddress: String, openTime: String, closeTime: String, material: [String]) {
         
         self.parkingName = parkingName
@@ -325,10 +363,15 @@ extension ParkingInfoViewController: ParkingInfoCellDelegate {
         self.openTime = openTime
         self.closeTime = closeTime
         self.listMaterial = material
+        
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
     }
     
     func selectAddress() {
-        let vcHomeFind = HomeFindRouter.createModule()
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
+        let vcHomeFind = HomeFindRouter.createModule(address: "")
         vcHomeFind.delegate = self
         vcHomeFind.isSelectAddressSignUp = true
         self.push(controller: vcHomeFind)
@@ -351,5 +394,15 @@ extension ParkingInfoViewController: HomeFindViewControllerDelegate {
     }
     
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+    }
+}
+
+extension ParkingInfoViewController: CustomSwitchDelegate {
+    func turnOnMatching() {
+        btnSave.isEnabled = true
+        btnSave.backgroundColor = AppColor.color_0_129_255
+    }
+    
+    func showPopupConfirm() {
     }
 }

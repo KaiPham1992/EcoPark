@@ -53,6 +53,17 @@ class UserEntity: BaseEntity  {
     var gender: String?
     var wallet: Double?
     var parkingID: String?
+    var infoParking: ParkingInfoEntity?
+    var isBoss: String?
+    var wait_app: String? = "0"
+    
+    var userIsBoss: Bool {
+        return isBoss == "1" && wait_app == "0"
+    }
+    
+    var userIsWait: Bool {
+           return isBoss == "1" && wait_app == "1"
+    }
     
     override func mapping(map: Map) {
         self.isLeader <- map["is_leader"]
@@ -61,11 +72,14 @@ class UserEntity: BaseEntity  {
             self.id <- (map["_id"], IntToStringTransform())
         }
         
+        self.isBoss <- map["is_boss"]
+        
         self.email       <- map["email"]
         self.fullName          <- map["fullname"]
         self.national       <- map["nation"]
         self.imgSrc          <- map["img_src"]
         self.imgCropSrc      <- map["crop_img_src"]
+        self.wait_app <- map["wait_app"]
         
         if self.imgCropSrc == nil{
             self.imgCropSrc      <- map["img_src"]
@@ -96,9 +110,11 @@ class UserEntity: BaseEntity  {
         self.attachImg <- map["attach_img_src"]
         self.phone <- map["phone"]
         self.birthDay <- (map["birthday"], AppTimestampTransform())
+        
         self.gender <- map["gender"]
         self.wallet <- (map["wallet"], StringToDoubleTransform())
         self.parkingID <- map["parking_id"]
+        self.infoParking <- map["info_parking"]
     }
     
     var urlAvatar:  URL? {

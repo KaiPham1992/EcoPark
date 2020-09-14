@@ -11,24 +11,26 @@
 import UIKit
 
 class HistoryPartnerPresenter: HistoryPartnerPresenterProtocol, HistoryPartnerInteractorOutputProtocol {
-
+    
     weak private var view: HistoryPartnerViewProtocol?
     var interactor: HistoryPartnerInteractorInputProtocol?
     private let router: HistoryPartnerWireframeProtocol
-
+    
     init(interface: HistoryPartnerViewProtocol, interactor: HistoryPartnerInteractorInputProtocol?, router: HistoryPartnerWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
     }
-
-    func getHistoryParking(parkingID: String, status: String, keyword: String) {
+    
+    
+    func getHistoryParking(parkingID: String, status: String, keyword: String, offset: Int, limit: Int) {
         ProgressView.shared.showProgressOnWindow()
-        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, success: { (historyParking) in
+        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, offset: offset, limit: limit, success: { (historyParking) in
             ProgressView.shared.hide()
             self.view?.didGetHistoryParking(historyParking: historyParking)
         }) { (error) in
             ProgressView.shared.hide()
+            
         }
     }
 }

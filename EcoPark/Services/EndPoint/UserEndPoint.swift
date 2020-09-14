@@ -50,9 +50,10 @@ enum UserEndPoint {
     
     case getParking(lat: String, long: String, star: [Int], distance: String)
     case getWallet
-    case getWalletHistory(offset: Int, limit: Int)
+    case getWalletHistory(startDate: String, toDate: String, offset: Int, limit: Int)
     case scanQRCheckIn(parkingId: String, bossParkingId: String)
     case scanQRCheckOut(bookingId: String, code: String, licensePlates: String)
+    
 }
 
 extension UserEndPoint: EndPointType {
@@ -122,6 +123,7 @@ extension UserEndPoint: EndPointType {
             return "_api/user/get_user_wallet"
         case .getWalletHistory:
             return "_api/user/get_list_history_wallet"
+            
         }
         
     }
@@ -238,10 +240,10 @@ extension UserEndPoint: EndPointType {
             return ["offset": offset,
                     "limit": limit]
         case .getParking(let lat,let long, let star, let distance):
-            return ["lat": lat,"long": long, "star": star, "distance": distance]
+            return ["lat": lat,"long": long, "number_star": star, "radius": distance]
             
-        case .getWalletHistory(let offset, let limit):
-            return ["offset": offset, "limit": limit]
+        case .getWalletHistory( let startDate, let toDate, let offset, let limit):
+            return ["star_date": startDate, "to_date": toDate, "offset": offset, "limit": limit]
         case .scanQRCheckIn(let parkingId, let bossParkingId):
             return ["parking_id": parkingId, "boss_parking_id": bossParkingId]
         case .scanQRCheckOut(let bookingId, let code, let licensePlates):

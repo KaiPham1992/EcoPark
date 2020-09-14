@@ -35,6 +35,8 @@ class HomeFindViewController: BaseViewController, HomeFindViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.vSearch.tfInput.text = self.address
+        self.presenter?.searchPlaceByString(text: self.address)
     }
     
     override func setTitleUI() {
@@ -130,7 +132,7 @@ extension HomeFindViewController: UITableViewDelegate, UITableViewDataSource {
                 getPlaceDetail(placeId: item.placeID)
             } else {
                 let item = locations[indexPath.row - 1]
-                self.address = item.getPlaceAddress()
+                self.address = item.getAddress()
                 getPlaceDetail(placeId: item.placeID)
             }
             

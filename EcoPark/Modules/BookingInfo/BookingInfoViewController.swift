@@ -21,11 +21,12 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     @IBOutlet weak var lbPriceOneHour: UILabel!
     @IBOutlet weak var lbPriceEightHour: UILabel!
     @IBOutlet weak var lbPriceToHoldPlace: UILabel!
-    @IBOutlet weak var datePicker: DatePicker!
-    @IBOutlet weak var timePicker: TimePicker!
+    @IBOutlet weak var datePicker: UITextField!
+    @IBOutlet weak var timePicker: UITextField!
     @IBOutlet weak var btnBook: UIButton!
     @IBOutlet weak var tfPlate: UITextField!
     @IBOutlet weak var dropDownType: AppDropDownNoTitle!
+    @IBOutlet weak var imgIcon: UIImageView!
     
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbTitleBookingInfo: UILabel!
@@ -38,14 +39,22 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     @IBOutlet weak var lbTitlePlate: UIButton!
     @IBOutlet weak var lbTitleType: UIButton!
     
-	var presenter: BookingInfoPresenterProtocol?
+    var presenter: BookingInfoPresenterProtocol?
     var parking: ParkingEntity?
-
-	override func viewDidLoad() {
+    
+    var selectVehical: VehicleTypeEntity?
+    var indexSelected: Int = 0
+    var listVehicle: [VehicleTypeEntity] = [VehicleTypeEntity]()
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
+        //        if parking == nil {
+        //             getParkingInfo()
+        //        }
         
-        getParkingInfo()
         getVehicleType()
+        guard let parking = parking else { return }
+        displayData(info: parking)
     }
     
     func getParkingInfo() {
@@ -63,12 +72,12 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     override func setUpViews() {
         super.setUpViews()
-        
+        let numberHours = UserDefaultHelper.shared.numberHours
         lbTitle.text = LocalizableKey.keepPlace.showLanguage
         lbCapacity.text = LocalizableKey.maxCapacity.showLanguage
         lbTime.text = LocalizableKey.parkingTime.showLanguage
-        lbTitleOne.text = LocalizableKey.parkingFee.showLanguage
-        lbTitleEight.text = LocalizableKey.parkingFeeCombo.showLanguage
+        lbTitleOne.text = LocalizableKey.parkingFeeUser.showLanguage
+        lbTitleEight.text = LocalizableKey.titlePriceEight.showLanguage + " \(numberHours) " + LocalizableKey.hour.showLanguage + ":"
         lbTitleBookingInfo.text = LocalizableKey.bookingInfo.showLanguage
         
         lbTitleDate.setTitle("  \(LocalizableKey.date.showLanguage)*", for: .normal)
@@ -81,15 +90,32 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         dropDownType.setPlaceHolder(placeHolder: LocalizableKey.vehicleType.showLanguage)
         tfPlate.placeholder = LocalizableKey.vehiclePlate.showLanguage
         lbTitlePriceHoldPlace.text = LocalizableKey.feeKeepPlace.showLanguage
+        datePicker.text = Date().toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = AppDateFormat.HHmm.rawValue
+        let hourString = formatter.string(from: Date().adding(minutes: 10))
+        timePicker.text = hourString
+        datePicker.backgroundColor = AppColor.color_205_205_205
+        timePicker.backgroundColor = AppColor.color_205_205_205
+        datePicker.isUserInteractionEnabled = false
+        timePicker.isUserInteractionEnabled = false
+        
+        if UserDefaultHelper.shared.plate != "" {
+            tfPlate.text = UserDefaultHelper.shared.plate
+        } else {
+            tfPlate.text = ""
+        }
     }
     
-    func displayData(info: ParkingInfoEntity) {
-        lbName.text = info.name
+    func displayData(info: ParkingEntity) {
+        lbName.text = info.parking_name
+        ratingBar.setStar(number: 0.0)
         if let rate = info.rating {
             ratingBar.setStar(number: rate)
             ratingBar.setTitle(number: info.total_rating&)
         }
-        lbType.text = info.parking_type
+        lbType.text = info.parking_type_name
         lbCapacity.text = LocalizableKey.maxCapacity.showLanguage + info.number_place& + " " + LocalizableKey.place.showLanguage
         
         if let timeStart = info.time_start?.toString(dateFormat: .HHmm),
@@ -109,19 +135,34 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         if let packagePrice = info.package_price {
             lbPriceEightHour.text = packagePrice.toCurrency + LocalizableKey.eachPackage.showLanguage
         }
+        
+        dropDownType.btnAction.isHidden = true
+        imgIcon.sd_setImage(with: info.url)
+        
     }
     
     @IBAction func btnBookingTapped() {
-        if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, let price = parking?.price, wallet > price {
+        if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, let price = parking?.price, wallet >= price {
             booking()
         } else {
-            PopUpHelper.shared.showMessage(message: "Bạn không đủ tiền trong ví", width: popUpwidth) {
+            PopUpHelper.shared.showMessage(message: LocalizableKey.dontHaveMoney.showLanguage, width: popUpwidth) {
                 
             }
         }
         
     }
     
+    @IBAction func btnTypeVehicalTapped() {
+        let pop = SelectCarPopUp()
+        pop.showPopUp(indexSelect: indexSelected, listVehical: listVehicle, width: popUpwidth, completion: { vehical in
+            guard let vehical = vehical as? VehicleTypeEntity else { return }
+            self.selectVehical = vehical
+            self.dropDownType.tfInput.text = vehical.name&
+        }) { index in
+            guard let index = index as? Int else { return }
+            self.indexSelected = index
+        }
+    }
     // MARK: Get error
     func didGetError(error: APIError) {
         printError(message: error.message)
@@ -129,18 +170,54 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     
     // MARK: Book reservation
     func booking() {
+        
+        //        print(timePicker.date)
+        
         do {
-            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn ngày"))
-            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn giờ đến bãi"))
-            let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: "Bạn chưa nhập biển số")) ?? ""
-            _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: "Bạn chưa chọn loại xe"))
+//            _ = try datePicker.tfDate.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseDate.showLanguage))
+//            _ = try timePicker.tfTime.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTime.showLanguage))
+            let plate = try tfPlate.text?.validate(validatorType: .requiredField(message: LocalizableKey.NotYetLisence.showLanguage)) ?? ""
+            _ = try dropDownType.tfInput.text?.validate(validatorType: .requiredField(message: LocalizableKey.ChooseTypeVehical.showLanguage))
+//            guard let dateTime = timePicker.date else { return }
+//            if datePicker.dateSelected?.isToday == true  {
+//                if dateTime < Date() {
+//                    PopUpHelper.shared.showMessage(message: LocalizableKey.HourSmaller.showLanguage, width: popUpwidth, completion: {})
+//                    return
+//                }
+//            }
             
+//            if let timeStart = parking?.time_start?.timeIntervalSince1970, let timeEnd = parking?.time_end?.timeIntervalSince1970 {
+//                //---
+//                if timeStart <= timeEnd {
+//                    if timeStart > dateTime.timeIntervalSince1970 || timeEnd < dateTime.timeIntervalSince1970 {
+//                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+//
+//                        return
+//                    }
+//                } else {
+//                    if (timeStart <= dateTime.timeIntervalSince1970 && timeEnd <= dateTime.timeIntervalSince1970) || (timeStart >= dateTime.timeIntervalSince1970 && timeEnd >= dateTime.timeIntervalSince1970) {
+//
+//                    } else {
+//                        PopUpHelper.shared.showMessage(message: LocalizableKey.TimeNotInRule.showLanguage, width: popUpwidth, completion: {})
+//
+//                        return
+//                    }
+//                }
+                //---
+                
+//            }
+            
+            //---
             guard let parkId = parking?.parking_id,
-            let vehicleId = (dropDownType.selectedItem as? VehicleTypeEntity)?.id,
-            let moneyPaid = parking?.price else { return }
-            let time = datePicker.date& + " " + timePicker.time&
-                        
-            presenter?.booking(time: time, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
+                let vehicleId = selectVehical?.id,
+                let moneyPaid = parking?.price else { return }
+//            let hhmm = timePicker.date?.toString(dateFormat: AppDateFormat.hhmmss)&
+//            let time = datePicker.date& + " " + hhmm&
+            let date = datePicker.text
+            let time = timePicker.text
+            let timeBooking = date& + " " + time&
+            UserDefaultHelper.shared.plate = plate
+            presenter?.booking(time: timeBooking, parkId: parkId, vehicleId: vehicleId, plate: plate, moneyPaid: moneyPaid.description)
             
         } catch {
             guard let error = error as? InvalidError else { return }
@@ -160,9 +237,10 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
             self.openGoogleMapForPlace(lat: lat, long: long)
         }) {
             guard let bookingId = info.id else { return }
-//            self.push(controller: DetailParkingRouter.createModule(type: .checkin, bookingId: bookingId))
-            
-//            DetailParkingRouter.createModule(bookingParking: info)
+            let bookingParking = HistoryBookingParkingResponse()
+            bookingParking.id = bookingId
+            let vc = DetailParkingRouter.createModule(bookingParking: bookingParking)
+            self.push(controller: vc)
         }
     }
     
@@ -174,6 +252,10 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
     func didGetVehicleType(listVehicle: [VehicleTypeEntity]) {
         dropDownType.listItem = listVehicle
         dropDownType.selectedItem = listVehicle.first
+        
+        self.listVehicle = listVehicle.sorted(by: { (sort1, sort2) -> Bool in
+            return sort1.id& < sort2.id&
+        })
     }
     
     // MARK: Get Park Info
@@ -183,7 +265,7 @@ class BookingInfoViewController: BaseViewController, BookingInfoViewProtocol {
         }
     }
     func didGetInfo(info: ParkingInfoEntity) {
-        displayData(info: info)
+        //        displayData(info: info)
     }
 }
 
@@ -191,7 +273,7 @@ extension BookingInfoViewController {
     func openAppleMapForPlace(lat: Double, long: Double) {
         let latitude: CLLocationDegrees =  lat
         let longitude: CLLocationDegrees =  long
-
+        
         let regionDistance: CLLocationDistance = 1000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
@@ -203,19 +285,22 @@ extension BookingInfoViewController {
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = self.parking?.parking_name
         mapItem.openInMaps(launchOptions: options)
-
+        
     }
     
     func openGoogleMapForPlace(lat: Double, long: Double) {
-        let lat = lat
-        let long = long
-
-        let customURL = "comgooglemaps://"
-        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
-        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
-            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
-        } else {
-            openAppleMapForPlace(lat: lat, long: long)
-        }
+        //        let lat = lat
+        //        let long = long
+        
+        Utils.goToMap(latitude: lat.description, longitude: long.description)
+        
+        //        let customURL = "comgooglemaps://"
+        //        let urlRoute = "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving"
+        //        if UIApplication.shared.canOpenURL(NSURL(string: customURL)! as URL) {
+        //            UIApplication.shared.open(NSURL(string: urlRoute)! as URL, options: [:], completionHandler: nil)
+        //        } else {
+        //            openAppleMapForPlace(lat: lat, long: long)
+        //        }
     }
 }
+

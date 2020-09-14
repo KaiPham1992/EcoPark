@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,12 +37,15 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rL-Jc-b90">
                                 <rect key="frame" x="41" y="39.5" width="19.5" height="23.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23.5" id="v73-es-aZY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-Ax-uMb">
-                                <rect key="frame" x="41" y="13.5" width="58" height="18"/>
+                                <rect key="frame" x="41" y="14" width="58" height="17.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <color key="textColor" red="0.8784313725490196" green="0.062745098039215685" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +56,7 @@
                                 <color key="textColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock" translatesAutoresizingMaskIntoConstraints="NO" id="FCh-xu-uBN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bill" translatesAutoresizingMaskIntoConstraints="NO" id="FCh-xu-uBN">
                                 <rect key="frame" x="119" y="10" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="XTl-gB-doN"/>
@@ -61,7 +64,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb1-Pu-QDh">
-                                <rect key="frame" x="152" y="13.5" width="33" height="18"/>
+                                <rect key="frame" x="152" y="13.5" width="79" height="18"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -86,13 +89,16 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZA-ln-tcb">
-                                <rect key="frame" x="285" y="13.5" width="67" height="18"/>
+                                <rect key="frame" x="285" y="14" width="67" height="17.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <color key="textColor" red="0.74901960784313726" green="0.69019607843137254" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-bV-qdS">
                                 <rect key="frame" x="285" y="39.5" width="63.5" height="23.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23.5" id="K8T-ak-7cB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -127,13 +133,16 @@
                             <constraint firstItem="YZA-ln-tcb" firstAttribute="leading" secondItem="StK-DW-i6Q" secondAttribute="trailing" constant="8" id="2Yw-3E-dza"/>
                             <constraint firstItem="eb1-Pu-QDh" firstAttribute="leading" secondItem="FCh-xu-uBN" secondAttribute="trailing" constant="8" id="30G-gs-obP"/>
                             <constraint firstAttribute="trailing" secondItem="YZA-ln-tcb" secondAttribute="trailing" constant="5" id="5Y7-Zq-Cuz"/>
+                            <constraint firstItem="5NG-ES-xs0" firstAttribute="top" secondItem="eb1-Pu-QDh" secondAttribute="bottom" constant="7.5" id="6ZH-4S-hZ5"/>
                             <constraint firstItem="7rL-Jc-b90" firstAttribute="centerY" secondItem="z7r-9H-GaL" secondAttribute="centerY" id="8vT-a8-IK6"/>
                             <constraint firstItem="lU7-XY-FvW" firstAttribute="top" secondItem="z7r-9H-GaL" secondAttribute="top" constant="10" id="Ber-4Q-r1A"/>
                             <constraint firstItem="7Kh-Ax-uMb" firstAttribute="centerY" secondItem="lU7-XY-FvW" secondAttribute="centerY" id="F4m-hB-qys"/>
+                            <constraint firstItem="7rL-Jc-b90" firstAttribute="top" secondItem="7Kh-Ax-uMb" secondAttribute="bottom" constant="8" id="GJy-NP-ksg"/>
                             <constraint firstItem="7rL-Jc-b90" firstAttribute="leading" secondItem="7Kh-Ax-uMb" secondAttribute="leading" id="HcI-jb-FkP"/>
                             <constraint firstItem="5NG-ES-xs0" firstAttribute="leading" secondItem="eb1-Pu-QDh" secondAttribute="leading" id="HhY-m6-b2v"/>
                             <constraint firstItem="7Kh-Ax-uMb" firstAttribute="leading" secondItem="lU7-XY-FvW" secondAttribute="trailing" constant="8" id="Hxt-8M-Jcj"/>
                             <constraint firstItem="StK-DW-i6Q" firstAttribute="leading" secondItem="ovy-Ng-uaD" secondAttribute="trailing" constant="20" id="IxC-Qd-34w"/>
+                            <constraint firstItem="Dla-bV-qdS" firstAttribute="top" secondItem="YZA-ln-tcb" secondAttribute="bottom" constant="8" id="KaS-gs-bqH"/>
                             <constraint firstItem="lU7-XY-FvW" firstAttribute="leading" secondItem="z7r-9H-GaL" secondAttribute="leading" constant="8" id="O1K-Dh-ctB"/>
                             <constraint firstItem="StK-DW-i6Q" firstAttribute="top" secondItem="FCh-xu-uBN" secondAttribute="top" id="OZJ-GL-cWc"/>
                             <constraint firstItem="BPs-fY-d77" firstAttribute="top" secondItem="5NG-ES-xs0" secondAttribute="bottom" constant="8" id="U3h-YE-x2U"/>
@@ -142,6 +151,7 @@
                             <constraint firstItem="FCh-xu-uBN" firstAttribute="leading" secondItem="7Kh-Ax-uMb" secondAttribute="trailing" constant="20" id="WOL-Sm-Yx9"/>
                             <constraint firstAttribute="trailing" secondItem="Dla-bV-qdS" secondAttribute="trailing" constant="8.5" id="Xvb-Cf-FyT"/>
                             <constraint firstItem="Dla-bV-qdS" firstAttribute="leading" secondItem="YZA-ln-tcb" secondAttribute="leading" id="Xy6-pq-Eh0"/>
+                            <constraint firstItem="eb1-Pu-QDh" firstAttribute="trailing" secondItem="ovy-Ng-uaD" secondAttribute="leading" id="YPr-23-64F"/>
                             <constraint firstItem="FCh-xu-uBN" firstAttribute="leading" secondItem="e0v-eJ-IsW" secondAttribute="trailing" constant="15" id="drY-Cq-Wjn"/>
                             <constraint firstItem="llk-Jn-5EB" firstAttribute="top" secondItem="Dla-bV-qdS" secondAttribute="bottom" constant="8" id="gB7-no-J0G"/>
                             <constraint firstItem="eb1-Pu-QDh" firstAttribute="centerY" secondItem="FCh-xu-uBN" secondAttribute="centerY" id="irr-Zv-8Sg"/>
@@ -184,8 +194,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_bill" width="30" height="30"/>
         <image name="ic_capacity" width="26" height="19"/>
-        <image name="ic_clock" width="30" height="30"/>
         <image name="ic_clock-1" width="30" height="30"/>
     </resources>
 </document>

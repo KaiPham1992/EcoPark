@@ -19,6 +19,7 @@ protocol MyNotificationPresenterProtocol: class {
 
     var interactor: MyNotificationInteractorInputProtocol? { get set }
     func getNotification(screen: String, offset: Int, limit: Int)
+    func getNotificationDetail(notificationID: Int)
 
 }
 

@@ -21,6 +21,9 @@ class UserInfoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lbUserInfo.text = LocalizableKey.userInfo.showLanguage
+        lbCarType.text = LocalizableKey.vehicleType.showLanguage
+        lbCarNumber.text = LocalizableKey.licensePlate.showLanguage
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,6 +37,6 @@ class UserInfoCell: UITableViewCell {
         lbUserName.text = _historyParkingDetail.fullname
         lbType.text = _historyParkingDetail.vehicle_name
         lbNumber.text = _historyParkingDetail.license_plates
-        imgAvatar.sd_setImage(with: _historyParkingDetail.urlAvatar, completed: nil)
+        imgAvatar.sd_setImage(with: _historyParkingDetail.urlAvatar, placeholderImage: AppImage.iconUsername)
     }
 }

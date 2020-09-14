@@ -137,6 +137,7 @@
                 <outlet property="DLVBook" destination="7zf-7d-P0h" id="rsg-Ih-GOf"/>
                 <outlet property="DLVCheckin" destination="S87-K2-hvI" id="1a4-aN-j1C"/>
                 <outlet property="DLVCheckout" destination="FlU-On-DyX" id="PgV-N4-sPP"/>
+                <outlet property="lbTotal" destination="zTw-jm-fKp" id="jOR-jf-CmV"/>
                 <outlet property="lblAddress" destination="wDq-8A-uv2" id="w41-aI-Aid"/>
                 <outlet property="lblCode" destination="kdF-EJ-seU" id="2JD-d4-Z5m"/>
                 <outlet property="lblPayment" destination="UOG-5i-XZb" id="aZq-Ob-ldd"/>

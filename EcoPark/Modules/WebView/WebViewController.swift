@@ -19,7 +19,7 @@ class WebViewController: BaseViewController {
     var mainUrl = "_api/webview/terms_of_use"
     
     var isTermCondition: Bool = false
-    
+    var isSignUp: Bool = false
     static func createModule(isTermCondition: Bool) -> WebViewController {
         let vc = WebViewController.initFromNib()
         vc.isTermCondition = isTermCondition
@@ -38,6 +38,11 @@ class WebViewController: BaseViewController {
             mainUrl = "_api/webview/security_policy"
             setTitleNavigation(title: LocalizableKey.security.showLanguage)
         }
+        
+        if LanguageHelper.currentAppleLanguage() == "en" {
+            mainUrl = mainUrl + "/en"
+        }
+        
         guard let url = URL(string: BASE_URL + "\(mainUrl)") else { return }
         let request = URLRequest(url: url)
         webView.load(request)
@@ -46,8 +51,12 @@ class WebViewController: BaseViewController {
     override func setUpNavigation() {
         super.setUpNavigation()
         
+        if isSignUp {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
         
-        addMenu()
     }
 }
 

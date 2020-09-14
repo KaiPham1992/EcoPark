@@ -38,6 +38,10 @@ class HomeFilterPopUp: BasePopUpView {
         completionNo?()
     }
     
+    override func btnOverTapped() {
+        hidePopUp()
+    }
+    
     @objc func btnYesTapped() {
         hidePopUp()
         let distance = vYesNoContentView.distance

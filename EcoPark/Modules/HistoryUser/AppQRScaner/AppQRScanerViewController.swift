@@ -103,11 +103,9 @@ class AppQRScanerViewController: BaseViewController {
             var base64String = result.value
             
             if !base64String.contains("ENG#") || !base64String.contains("#MA") {
-                //                               self.noticeOnlyText("Mã QRCODE này không hợp lệ")
-                //                               DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                //                                   self.startScan()
-                //                               }
-                print("Mã QRCODE này không hợp lệ")
+                PopUpHelper.shared.showInvalidQR(height: 220, completion: {
+                    self.reader.startScanning()
+                })
                 return
             }
             
@@ -118,8 +116,71 @@ class AppQRScanerViewController: BaseViewController {
             
             guard let arrayString = decodedString?.split(separator: "#") else { return }
             let mapString = arrayString.map{$0.description}
-            self.completionCode?(mapString)
-            self.pop()
+            //-----
+            
+            if self.isCheckIn {
+                let qrcode = mapString
+                if qrcode.count > 2 {
+                    ProgressView.shared.show()
+                    // check QR
+                    Provider.shared.userAPIService.scanQRCheckIn(parkingId: qrcode[2], bossParkingId: qrcode[1], success: { bookingDetail in
+                        
+                        print(" bookingDetail.intend_checkin_time: \( bookingDetail?.intend_checkin_time)")
+                        guard let bookingDetail = bookingDetail, let timeDate = bookingDetail.intend_checkin_time else { return }
+                        let time = timeDate.toString(dateFormat: AppDateFormat.ecoTime)
+                        
+                        PopUpHelper.shared.showCheckIn(name: bookingDetail.fullname&, address: bookingDetail.address&, time: time, width: 350, height: 280, completionYes: {
+                            
+                            Provider.shared.bookingAPIService.checkIn(bookingId: bookingDetail.id&, success: { bookingResult in
+                                //-- print checkin ok
+                                self.reader.startScanning()
+                                ProgressView.shared.hide()
+                                let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingResult)
+                                self.push(controller: vc)
+                            }) { _ in
+                                //-- error checkin
+                                self.reader.startScanning()
+                                 ProgressView.shared.hide()
+                            }
+                        }) {
+                            //---
+                            self.reader.startScanning()
+                            ProgressView.shared.hide()
+                        }
+                        
+                    }) { error in
+                        ProgressView.shared.hide()
+                        
+                        guard let error = error else { return }
+                        if error.message& == "HAS_BOOKING_CHECKED_IN" {
+                            PopUpHelper.shared.showMessage(message: "HAS_BOOKING_CHECKED_IN".showLanguage, width: self.popUpwidth, completion: {
+                                 self.reader.startScanning()
+                            })
+                        } else if error.message& == "CHECKIN_EARLY" {
+                            PopUpHelper.shared.showMessage(message: "CHECKIN_EARLY".showLanguage, width: self.popUpwidth, completion: {
+                                 self.reader.startScanning()
+                            })
+                        }else {
+                            PopUpHelper.shared.showNoReservation(width: 350, completionYes: {
+                                self.reader.startScanning()
+                                
+                            }) {
+                                self.pop()
+                            }
+                        }
+                        
+                        
+                    }
+                }
+                else {
+                    self.completionCode?(mapString)
+                    self.pop()
+                }
+            }
+            //-----
+            
+//            self.completionCode?(mapString)
+           
         }
         
         reader.startScanning()

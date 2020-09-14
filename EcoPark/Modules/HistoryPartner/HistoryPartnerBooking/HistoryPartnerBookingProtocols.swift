@@ -18,7 +18,7 @@ protocol HistoryPartnerBookingWireframeProtocol: class {
 protocol HistoryPartnerBookingPresenterProtocol: class {
 
     var interactor: HistoryPartnerBookingInteractorInputProtocol? { get set }
-    func getHistoryParkingBooking(parkingID: String, status: String, keyword: String)
+    func getHistoryParkingBooking(parkingID: String, status: String, keyword: String, offset: Int, limit: Int)
 }
 
 //MARK: Interactor -

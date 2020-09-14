@@ -14,13 +14,15 @@ class HistoryPartnerHoldingRouter: HistoryPartnerHoldingWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    static func createModule() -> UIViewController {
+    static func createModule(numberPlace: String, parkedNumber: Int) -> HistoryPartnerHoldingViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = HistoryPartnerHoldingViewController(nibName: nil, bundle: nil)
         let interactor = HistoryPartnerHoldingInteractor()
         let router = HistoryPartnerHoldingRouter()
         let presenter = HistoryPartnerHoldingPresenter(interface: view, interactor: interactor, router: router)
 
+        view.number_place = numberPlace
+        view.parkedNumber = parkedNumber
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

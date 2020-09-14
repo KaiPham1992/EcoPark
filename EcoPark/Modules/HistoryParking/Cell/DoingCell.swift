@@ -17,6 +17,7 @@ class DoingCell: UITableViewCell {
     @IBOutlet weak var DLVCheckin: DoubleLabelView!
     @IBOutlet weak var DLVCheckout: DoubleLabelView!
     @IBOutlet weak var lblPayment: UILabel!
+    @IBOutlet weak var lbTotal: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,34 +25,53 @@ class DoingCell: UITableViewCell {
         DLVBook.setupViewForHistory(title: LocalizableKey.book_at.showLanguage)
         DLVCheckin.setupViewForHistory(title: "Check in")
         DLVCheckout.setupViewForHistory(title: "Check out")
+        lbTotal.text = LocalizableKey.total.showLanguage
     }
     
     func setupCell(data: HistoryBookingParkingResponse) {
         lblCode.text = data.code
+        lblAddress.text = data.parking_details?.name ?? ""
+        DLVBook.lblTime.text = data.create_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+        lblPayment.text = "0"
         let status = data.status ?? ""
         switch status {
         case StatusBooking.cancel.rawValue:
-            lblStatus.text = LocalizableKey.canceled.showLanguage
+            lblStatus.text = LocalizableKey.cancelBooking.showLanguage
             lblStatus.textColor = UIColor.red
+            DLVCheckin.lblTime.text = "-"
+            DLVCheckout.lblTime.text = "-"
+            lblPayment.text = (data.money_paid?.toCurrency ?? "0")
+
         case StatusBooking.checked_out.rawValue:
             lblStatus.text = LocalizableKey.checked_out.showLanguage
             lblStatus.textColor = AppColor.color_0_129_255
+            DLVCheckin.lblTime.text = data.time_check_in?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            DLVCheckout.lblTime.text = data.time_check_out?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            lblPayment.text = (data.parking_price?.toCurrency ?? "0")
+            if let price = data.parking_price {
+                lblPayment.text = "\(price.toCurrencyNoVND )"
+            } else {
+                lblPayment.text = "\(data.money_paid?.toCurrencyNoVND ?? "0")"
+            }
         case StatusBooking.checked_in.rawValue:
             lblStatus.text = LocalizableKey.checked_in.showLanguage
             lblStatus.textColor = AppColor.color_13_196_68
+            DLVCheckin.lblTime.text = data.time_check_in?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            DLVCheckout.lblTime.text = "-"
         case StatusBooking.reservation.rawValue:
             lblStatus.text = LocalizableKey.reservation.showLanguage
-            lblStatus.textColor = AppColor.color_0_129_255
+            lblStatus.textColor = AppColor.color_255_145_0
+            DLVCheckin.lblTime.text = "-"
+            DLVCheckout.lblTime.text = "-"
         case StatusBooking.expired.rawValue:
             lblStatus.text = LocalizableKey.expired.showLanguage
+            DLVCheckin.lblTime.text = data.intend_checkin_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
+            DLVCheckout.lblTime.text = data.intend_checkout_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
             lblStatus.textColor = UIColor.red
+            lblPayment.text = (data.money_paid?.toCurrency ?? "0")
         default:
             break
         }
-        lblAddress.text = data.parking_details?.name ?? ""
-        DLVBook.lblTime.text = data.create_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
-        DLVCheckin.lblTime.text = data.intend_checkin_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
-        DLVCheckout.lblTime.text = data.intend_checkout_time?.toString(dateFormat: AppDateFormat.ecoTime) ?? "-"
-        lblPayment.text = (data.money_paid?.toCurrency ?? "")
+        
     }
 }

@@ -51,37 +51,52 @@ class DetailParkingViewController: BaseViewController {
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbStatus: UILabel!
     
-     @IBOutlet weak var vRating: CosmosView!
+    @IBOutlet weak var lbRating: UILabel!
+    @IBOutlet weak var vRating: CosmosView!
+    @IBOutlet weak var parkingTime: UILabel!
     
     //    var type : TypeDetailParking = .checkin
     var bookingParking: HistoryBookingParkingResponse?
     var bookingDetailEntity: BookingDetailEntity?
+//        didSet {
+//            DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(bookingDetailEntity?.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":")
+//        }
     
+    var bookingID: String = ""
+    
+    var newCurrentDate: Double = 0
     weak var delegate: DetailParkingViewControllerDelegate?
     
     var timer: Timer?
     
     override func setUpViews() {
         super.setUpViews()
-        
-        ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: "Liên hệ bãi")
-        ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: "Chỉ đường")
-        DLVInformationParking.setupViewForTitle(title: "Thông tin bãi đỗ xe")
-        VTDate.setupTitle(title: "Ngày")
-        VTHour.setupTitle(title: "Giờ")
-        VTMinute.setupTitle(title: "Phút")
-        DLVBook.setupViewTimeBlue(title: "Đặt lúc")
-        DLVExpected.setupViewTimeBlue(title: "Dự kiến")
+        let numberHours = UserDefaultHelper.shared.numberHours
+
+        ILVContactParking.initView(image: #imageLiteral(resourceName: "ic_call"), title: LocalizableKey.contactParking.showLanguage)
+        ILVPointRoad.initView(image: #imageLiteral(resourceName: "ic_direction"), title: LocalizableKey.titleDirection.showLanguage)
+        DLVInformationParking.setupViewForTitle(title: LocalizableKey.infoParking.showLanguage)
+        VTDate.setupTitle(title: LocalizableKey.date.showLanguage)
+        VTHour.setupTitle(title: LocalizableKey.hour.showLanguage)
+        VTMinute.setupTitle(title: LocalizableKey.minute.showLanguage)
+        DLVBook.setupViewTimeBlue(title: LocalizableKey.book_at.showLanguage)
+        DLVExpected.setupViewTimeBlue(title: LocalizableKey.expect.showLanguage)
         DLVCheckIn.setupViewTimeBlue(title: "Check in")
         DLVCheckOut.setupViewTimeBlue(title: "Check out")
-        DLVLisencePlate.setupViewTimeBold(title: "Biển số:")
-        DLVBillForHour.setupViewUnit(title: "Đơn giá theo giờ:")
-        DLVBillFor8Hour.setupViewUnit(title: "Đơn giá gói 8 giờ:")
-        DLVNumberParking.setupViewUnit(title: "Số giờ đã gửi:")
-        DLVMoneyPayment.setupViewUnit(title: "Phí giữ xe:")
-        DLVPriceParking.setupViewUnit(title: "Đã thanh toán:")
-        DLVAddForWallet.setupViewUnit(title: "TT thêm bằng ví:")
-        DLVAddForMoney.setupViewUnitColorRed(title: "TT thêm bằng tiền mặt:")
+        DLVLisencePlate.setupViewTimeBold(title: LocalizableKey.licensePlate.showLanguage + ":")
+        DLVLisencePlate.lblTime.textColor = AppColor.color_0_129_255
+        DLVBillForHour.setupViewUnit(title:  LocalizableKey.priceAHours.showLanguage + ":")
+        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(numberHours) " + LocalizableKey.Hours.showLanguage + ":")
+        DLVNumberParking.setupViewUnit(title: LocalizableKey.NumberHoursSend.showLanguage + ":")
+        DLVMoneyPayment.setupViewUnit(title: LocalizableKey.parkingFeeUser.showLanguage + ":")
+        DLVPriceParking.setupViewUnit(title: LocalizableKey.Paid.showLanguage + ":")
+        DLVAddForWallet.setupViewUnit(title: LocalizableKey.paidWithWallet.showLanguage + ":")
+        DLVAddForMoney.setupViewUnitColorRed(title: LocalizableKey.paidWithCash.showLanguage + ":")
+        lbRating.text = LocalizableKey.ratingOfYou.showLanguage
+        btnCancel.setTitle(LocalizableKey.cancelHolding.showLanguage, for: .normal)
+        btnExtend.setTitle(LocalizableKey.extend.showLanguage, for: .normal)
+        btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
+        parkingTime.text = LocalizableKey.parkingTimimg.showLanguage
     }
     
     override func viewDidLoad() {
@@ -99,7 +114,20 @@ class DetailParkingViewController: BaseViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getBookingDetail()
+    }
     
+    @IBAction func callOnwer() {
+        guard let phone = self.bookingDetailEntity?.parking_details?.phone else { return }
+        Utils.callPhone(phoneNumber: phone)
+    }
+    
+    @IBAction func goToMap() {
+        guard let lat = self.bookingDetailEntity?.parking_details?.lat, let long = self.bookingDetailEntity?.parking_details?.long else { return }
+        Utils.goToMap(latitude: lat.description, longitude: long.description)
+    }
     
     
     deinit {
@@ -108,21 +136,56 @@ class DetailParkingViewController: BaseViewController {
     
     override func setUpNavigation() {
         super.setUpNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         addBackToNavigation()
     }
     
     func countTime() {
-        guard let checkInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
+        let status = bookingDetailEntity?.status&
+        switch status& {
+        case StatusBooking.checked_in.rawValue:
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970 else { return }
+            newCurrentDate = newCurrentDate + 1
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: newCurrentDate)
+            
+            if intendCheckInTime < checkInTime {
+                ddhhmm = Utils.getTime(dateCheckIn: intendCheckInTime, currentServerDate: newCurrentDate)
+            }
+            
+            VTHour.setUpTime(time: ddhhmm.1)
+            VTMinute.setUpTime(time: ddhhmm.2)
+            VTDate.setUpTime(time: ddhhmm.0)
+            
+            let numberParking = ddhhmm.0 * 24 + ddhhmm.1
+            if status& != StatusBooking.checked_in.rawValue {
+                DLVNumberParking.setValueText(text: numberParking.description + " " + LocalizableKey.hour.showLanguage)
+            }
+            
+        case StatusBooking.checked_out.rawValue:
+            guard let checkInTime = bookingDetailEntity?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = bookingDetailEntity?.intend_checkin_time?.timeIntervalSince1970,let checkOutTime = bookingDetailEntity?.time_check_out?.timeIntervalSince1970 else { return }
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            
+            if intendCheckInTime < checkInTime {
+                ddhhmm = Utils.getTime(dateCheckIn: intendCheckInTime, currentServerDate: checkOutTime)
+            }
+            
+            
+            VTHour.setUpTime(time: ddhhmm.1)
+            VTMinute.setUpTime(time: ddhhmm.2)
+            VTDate.setUpTime(time: ddhhmm.0)
+            
+            if status& != StatusBooking.checked_in.rawValue {
+                DLVNumberParking.setValueText(text: (bookingDetailEntity?.number_hours ?? "0") + " " + LocalizableKey.hour.showLanguage)
+            }
+            
+        default:
+            break
+        }
         
-        let ddhhmm = Utils.getTime(date: checkInTime)
-        VTHour.setUpTime(time: ddhhmm.1)
-        VTMinute.setUpTime(time: ddhhmm.2)
-        VTDate.setUpTime(time: ddhhmm.0)
-        let numberParking = ddhhmm.0 * 24 + ddhhmm.1
-        DLVNumberParking.setValueText(text: numberParking.description + " giờ")
         
-        print(ddhhmm)
+        
     }
     
     override func btnBackTapped() {
@@ -133,21 +196,24 @@ class DetailParkingViewController: BaseViewController {
     func displayData(info: BookingDetailEntity) {
         bookingDetailEntity = info
         showGeneralInfo(info: info)
+        if let timeCurrent = info.current_server_time?.timeIntervalSince1970 {
+            newCurrentDate = timeCurrent
+        }
+        
+        
         let status = info.status&
         switch status {
         case StatusBooking.reservation.rawValue:
             //--
-            lbStatus.text = "Đang giữ chỗ"
+            lbStatus.text = LocalizableKey.reservation.showLanguage
             lbStatus.textColor = AppColor.color_255_145_0
             
             // hidden rating
             viewRate.isHidden = false
             heightOfRating.constant = 0
-            
-            //
-            btnBottom.setTitle("Scan QR tại bãi để Check In", for: .normal)
+            btnBottom.setTitle(LocalizableKey.ScanCheckIn.showLanguage, for: .normal)
         case StatusBooking.checked_in.rawValue:
-            lbStatus.text = "Đã check in"
+            lbStatus.text = LocalizableKey.statusCheckedIn.showLanguage
             lbStatus.textColor = AppColor.color_13_196_68
             showMoney(info: info)
             btnBottom.setTitle("QR Check Out", for: .normal)
@@ -156,10 +222,10 @@ class DetailParkingViewController: BaseViewController {
             heightOfButtonExtend.constant = 0
             
         case StatusBooking.checked_out.rawValue:
-            lbStatus.text = "Đã check out"
+            lbStatus.text = LocalizableKey.statusCheckedOut.showLanguage
             lbStatus.textColor = AppColor.color_0_129_255
             showMoney(info: info)
-            btnBottom.setTitle("Đánh giá dịch vụ bãi giữ xe", for: .normal)
+            btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
             heightOfRating.constant = 0
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
@@ -171,14 +237,22 @@ class DetailParkingViewController: BaseViewController {
             }
             
         case StatusBooking.cancel.rawValue:
-            lbStatus.text = "Đã huỷ"
+            lbStatus.text = LocalizableKey.canceled.showLanguage
             lbStatus.textColor = UIColor.red
             showMoney(info: info)
-            btnBottom.setTitle("Đánh giá dịch vụ bãi giữ xe", for: .normal)
-            heightOfRating.constant = 0
+            btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
             heightOfButtonCancel.constant = 0
             heightOfButtonExtend.constant = 0
+            heightOfRating.constant = 0
             btnBottom.isHidden = true
+        case StatusBooking.expired.rawValue:
+            lbStatus.text = LocalizableKey.expired.showLanguage
+            lbStatus.textColor = UIColor.red
+            showMoney(info: info)
+            btnBottom.setTitle(LocalizableKey.ratingService.showLanguage, for: .normal)
+            heightOfRating.constant = 0
+            btnBottom.isHidden = true
+            
         default:
             break
         }
@@ -186,22 +260,24 @@ class DetailParkingViewController: BaseViewController {
     }
     
     private func showMoney(info: BookingDetailEntity) {
-        if let moneyPaid = info.money_paid {
-            DLVMoneyPayment.setValueText(text: moneyPaid.toCurrency)
+        if info.status& != StatusBooking.checked_in.rawValue {
+            if let package_price = info.parking_price {
+                DLVMoneyPayment.setValueText(text: package_price.toCurrency)
+            }
+            
+            if let moneyPaid = info.parking_details?.price {
+                DLVPriceParking.setValueText(text: moneyPaid.toCurrency)
+            }
+            
+            
+            if let moneyPaid = info.payment_wallet {
+                DLVAddForWallet.setValueText(text: moneyPaid.toCurrency)
+            }
+            
+            if let moneyPaid = info.payment {
+                DLVAddForMoney.setValueText(text: moneyPaid.toCurrency)
+            }
         }
-        
-        if let moneyPaid = info.parking_details?.price {
-            DLVPriceParking.setValueText(text: moneyPaid.toCurrency)
-        }
-        
-        if let moneyPaid = info.payment_wallet {
-            DLVAddForWallet.setValueText(text: moneyPaid.toCurrency)
-        }
-        
-        if let moneyPaid = info.payment {
-            DLVAddForMoney.setValueText(text: moneyPaid.toCurrency)
-        }
-        
     }
     
     private func showGeneralInfo(info: BookingDetailEntity) {
@@ -216,7 +292,7 @@ class DetailParkingViewController: BaseViewController {
         DLVCheckIn.setValueText(text: "-")
         DLVCheckOut.setValueText(text: "-")
         
-        DLVNumberParking.setValueText(text: "0 giờ")
+        DLVNumberParking.setValueText(text: "0 " + LocalizableKey.hour.showLanguage)
         DLVMoneyPayment.setValueText(text: "0 VND")
         DLVPriceParking.setValueText(text: "0 VND")
         DLVAddForWallet.setValueText(text: "0 VND")
@@ -234,19 +310,44 @@ class DetailParkingViewController: BaseViewController {
         if let createTime = info.create_time {
             DLVBook.setValueText(text: createTime.toString(dateFormat: .ecoTime))
         }
-        if let intendCheck = info.intend_checkin_time {
-            DLVExpected.setValueText(text: intendCheck.toString(dateFormat: .ecoTime))
+        
+        if let expectTime = info.intend_checkin_time {
+            DLVExpected.setValueText(text: expectTime.toString(dateFormat: .ecoTime))
         }
         
-        if let timeCheckIn = info.time_check_in {
-            DLVCheckIn.setValueText(text: timeCheckIn.toString(dateFormat: .ecoTime))
+        let status = info.status&
+        switch status {
+        case StatusBooking.reservation.rawValue:
+            DLVCheckIn.setValueText(text: "-")
+            DLVCheckOut.setValueText(text: "-")
+            //            heightPricePayment.constant = 0
+            //            heightAddWallet.constant = 0
+            //            heightAddCash.constant = 0
+            
+            DLVPriceParking.isHidden = true
+            DLVAddForWallet.isHidden = true
+            DLVAddForMoney.isHidden = true
+            
+        case StatusBooking.checked_in.rawValue:
+            if let checkInTime = info.time_check_in {
+                DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))
+            }
+            DLVCheckOut.setValueText(text: "-")
+        case StatusBooking.checked_out.rawValue:
+            if let checkInTime = info.time_check_in {
+                DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))
+            }
+            if let checkOutTime = info.time_check_out {
+                DLVCheckOut.setValueText(text: checkOutTime.toString(dateFormat: .ecoTime))
+            }
+        case StatusBooking.expired.rawValue:
+            if let checkInTime = info.time_check_in {
+                DLVCheckIn.setValueText(text: checkInTime.toString(dateFormat: .ecoTime))
+            }
+            DLVCheckOut.setValueText(text: "-")
+        default:
+            break
         }
-        
-        if let timeCheckOut = info.time_check_out {
-            DLVCheckIn.setValueText(text: timeCheckOut.toString(dateFormat: .ecoTime))
-        }
-        
-        
     }
     
     @IBAction func btnCancelTapped() {
@@ -291,7 +392,8 @@ class DetailParkingViewController: BaseViewController {
             self.push(controller: vc)
             
         case StatusBooking.checked_in.rawValue:
-            let vc = CheckOutRouter.createModule(url: self.bookingParking?.urlQRCode)
+            
+            let vc = CheckOutRouter.createModule(bookingId: bookingDetailEntity?.id)
             self.push(controller: vc)
         case StatusBooking.checked_out.rawValue:
             PopUpHelper.shared.showRating(width: popUpwidth, completionCancel: {
@@ -331,18 +433,24 @@ extension DetailParkingViewController: DetailParkingViewProtocol {
     
     // MARK: Get booking detail
     func getBookingDetail() {
-        guard let bookingId = self.bookingParking?.id else { return }
-        self.presenter?.getBookingDetail(id: bookingId)
+        if let bookingId = self.bookingParking?.id {
+            self.presenter?.getBookingDetail(id: bookingId)
+        } else if let bookingIdDetail = self.bookingDetailEntity?.id {
+            self.presenter?.getBookingDetail(id: bookingIdDetail)
+        } else {
+            self.presenter?.getBookingDetail(id: bookingID)
+        }
     }
     
     func didGetBookingDetail(info: BookingDetailEntity) {
         displayData(info: info)
+        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(info.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":")
     }
     
     // MARK: Error
     func didGetError(error: APIError) {
-        printError(message: error.message)
-        PopUpHelper.shared.showError(message: error.message&.showLanguage, completionYes: nil)
+        printError(message: error.message) 
+        PopUpHelper.shared.showMessage(message: error.message&.showLanguage, width: 350, completion: {})
     }
     
     func didGetRating(rating: RatingEntity) {

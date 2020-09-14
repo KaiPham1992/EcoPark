@@ -25,6 +25,7 @@ class OtherPriceCheckoutCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,13 +34,21 @@ class OtherPriceCheckoutCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupUI() {
+        lbRealPaid.text = LocalizableKey.realMoney.showLanguage + ":"
+        lbBonusEco.text = LocalizableKey.bonusEco.showLanguage + ":"
+        lbPaidWithWallet.text = LocalizableKey.KHPaidWallet.showLanguage + ":"
+        lbPaidWithCash.text = LocalizableKey.KHPaidCash.showLanguage + ":"
+        lbWalletChange.text = LocalizableKey.changeWallet.showLanguage + ":"
+    }
+    
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbRealPaidPrice.text = _historyParkingDetail.real_money?.toCurrency
-        lbBonusEcoPrice.text = _historyParkingDetail.bonus?.toCurrency
-        lbPaidWithWalletPrice.text = _historyParkingDetail.customer_payment_wallet?.toCurrency
-        lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrency
-        lbWalletChangePrice.text = _historyParkingDetail.plus_wallet_boss?.toCurrency
+        lbRealPaidPrice.text = _historyParkingDetail.real_money?.toCurrencyNoVND ?? "0"
+            lbBonusEcoPrice.text = _historyParkingDetail.bonus?.toCurrencyNoVND ?? "0"
+        lbPaidWithWalletPrice.text = _historyParkingDetail.customer_payment_wallet?.toCurrencyNoVND ?? "0"
+        lbPaidWithCashPrice.text = _historyParkingDetail.payment?.toCurrencyNoVND ?? "0"
+        lbWalletChangePrice.text =  _historyParkingDetail.plus_wallet_boss?.toCurrencyNoVND ?? "0"
         
     }
     

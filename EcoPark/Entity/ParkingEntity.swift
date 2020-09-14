@@ -33,6 +33,8 @@ class ParkingEntity: BaseEntity {
     var config_price: Double? = 1000
     var total_rating: String?
     var parking_type_name: String?
+    var number_hours_in_package: Double?
+    
     
     var url: URL? {
         guard let strImage = img_parking?.imgParking else { return nil }
@@ -66,6 +68,8 @@ class ParkingEntity: BaseEntity {
         self.config_price <- (map["config_price"], StringToDoubleTransform())
         self.price <- (map["price"], StringToDoubleTransform())
         self.rating <- (map["rating"], StringToDoubleTransform())
+        print("*************")
+        print(rating)
         self.gender <- map["gender"]
         self.phone <- map["phone"]
         self.parking_name <- map["parking_name"]
@@ -73,6 +77,10 @@ class ParkingEntity: BaseEntity {
         self.img_parking <- map["img_parking"]
         self.total_rating <- map["total_rating"]
         self.parking_type_name <- map["parking_type_name"]
+        self.number_hours_in_package <- (map["number_hours_in_package"], StringToDoubleTransform())
+        if number_hours_in_package == nil {
+            self.number_hours_in_package <- map["number_hours_in_package"]
+        }
     }
     
     required init?(map: Map) {

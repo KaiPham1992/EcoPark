@@ -24,6 +24,12 @@ class BookingEntity: BaseEntity {
     var intend_checkout_time: Date?
     var money_paid: Double?
     var fullname: String?
+    var vehicleName: String?
+    var timeCheckInMi: Date?
+    var timeCheckOutMi: Date?
+    var receivables: Double?
+    var parking_price: Double?
+    var number_hours: Double?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -33,16 +39,22 @@ class BookingEntity: BaseEntity {
         self.code <- map["code"]
         self.vehicle_id <- map["vehicle_id"]
         self.license_plates <- map["license_plates"]
-        self.intend_checkin_time <- (map["intend_checkin_time"], yyyyMMddHHmmssTransform())
+        self.intend_checkin_time <- (map["intend_checkin_time"], AppTimestampTransform())
         self.status <- map["status"]
         self.parking_id <- map["parking_id"]
         self.is_active <- map["is_active"]
         self.create_time <- (map["create_time"], yyyyMMddHHmmssTransform())
         self.update_time <- (map["update_time"], yyyyMMddHHmmssTransform())
         self.create_time_mi <- map["create_time_mi"]
-        self.intend_checkout_time <- (map["intend_checkout_time"], yyyyMMddHHmmssTransform())
+        self.intend_checkout_time <- (map["intend_checkout_time"], AppTimestampTransform())
         self.money_paid <- (map["money_paid"], StringToDoubleTransform())
         self.fullname <- map["fullname"]
+        self.vehicleName <- map["vehicle_name"]
+        self.timeCheckInMi <- (map["time_check_in_mi"], AppTimestampTransform())
+        self.timeCheckOutMi <- (map["time_check_out_mi"], AppTimestampTransform())
+        self.receivables <- (map["receivables"], StringToDoubleTransform())
+        self.parking_price <- (map["parking_price"], StringToDoubleTransform())
+        self.number_hours <- (map["number_hours"], StringToDoubleTransform())
     }
 }
 

@@ -11,9 +11,10 @@
 import UIKit
 import XLPagerTabStrip
 
-class HistoryPartnerViewController: UIViewController, HistoryPartnerViewProtocol {
+class HistoryPartnerViewController: BaseViewController, HistoryPartnerViewProtocol {
 
     @IBOutlet weak var tbHistoryParking: UITableView!
+    @IBOutlet weak var vSearch: AppSearchTextField!
     
     var historyParking: HistoryMyParkingEntity? {
         didSet{
@@ -21,22 +22,80 @@ class HistoryPartnerViewController: UIViewController, HistoryPartnerViewProtocol
         }
     }
     
+    var isCanLoadMore: Bool = false
+    var isRefresh: Bool = false
+    var refreshControl = UIRefreshControl()
 	var presenter: HistoryPartnerPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tbHistoryParking.addSubview(refreshControl)
+        
+        vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
+        vSearch.actionSearch = { text in
+            self.isRefresh = true
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: text, offset: 0, limit: limitLoad)
+        }
+        vSearch.tapToTextField = {
+            self.isRefresh = true
+            let text = self.vSearch.tfInput.text!
+            print(text)
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: text, offset: 0, limit: limitLoad)
+        }
+        
     }
 
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-        presenter?.getHistoryParking(parkingID: parkingID, status: "history", keyword: "")
+        isRefresh = true
+        historyParking = nil
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.getData()
+        }
     }
     
+    func getData() {
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: "", offset: 0, limit: limitLoad)
+    }
+    
+    @objc func refresh() {
+        isRefresh = true
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: "", offset: 0, limit: limitLoad)
+        
+        self.refreshControl.endRefreshing()
+    }
     
     func didGetHistoryParking(historyParking: HistoryMyParkingEntity?) {
-        self.historyParking = historyParking
+        isCanLoadMore = historyParking?.booking.count == limitLoad
+        if self.historyParking == nil || self.historyParking?.booking.count == 0 || isRefresh {
+                isRefresh = false
+                self.historyParking = historyParking
+        } else {
+            guard let booking = historyParking?.booking else { return }
+            self.historyParking?.booking.append(contentsOf: booking)
+            tbHistoryParking.reloadData()
+        }
+        
     }
 }
 
@@ -45,7 +104,7 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
     func configTableView() {
         tbHistoryParking.delegate = self
         tbHistoryParking.dataSource = self
-        
+        tbHistoryParking.separatorStyle = .none
         tbHistoryParking.registerXibFile(HistoryParnerCell.self)
     }
     
@@ -56,9 +115,31 @@ extension HistoryPartnerViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(HistoryParnerCell.self)
         let status = historyParking?.booking[indexPath.item].status
-        cell.setDataHistoryParking(status: status&)
+        cell.setDataHistoryParkingStatus(status: status&)
         cell.setDataHistory(historyParking: historyParking?.booking[indexPath.item])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bookingParking = HistoryBookingParkingResponse()
+        let bookingID = historyParking?.booking[indexPath.item].id
+         bookingParking.id = bookingID
+            let vc = HistoryPartnerDetailCheckoutRouter.createModule(bookingID: bookingID&, parkingID: historyParking?.booking[indexPath.item].parking_id ?? "")
+            vc.isFromList = true
+            self.push(controller: vc)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let count = historyParking?.booking.count else { return }
+        if indexPath.item == count - 5 && isCanLoadMore {
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            print("load more")
+            presenter?.getHistoryParking(parkingID: parkingID&, status: "history", keyword: "", offset: count, limit: limitLoad)
+        }
     }
 }
 

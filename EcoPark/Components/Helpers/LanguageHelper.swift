@@ -50,6 +50,8 @@ class LanguageHelper {
         let userdef = UserDefaults.standard
         userdef.set([lang.rawValue,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
         userdef.synchronize()
+        
+        UserDefaultHelper.shared.appLanguage = lang.rawValue
         Bundle.setLanguage(lang.rawValue)
         Provider.shared.commonAPIService.changeLanguageCode(success: { (_) in
             

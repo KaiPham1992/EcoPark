@@ -10,7 +10,7 @@ import UIKit
 
 class AppTextField: BaseViewXib {
     @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var tfInput: UITextField!
+    @IBOutlet weak var tfInput: CustomSecureTextField!
     @IBOutlet weak var vLine: UIView!
     
     var textFieldDidBeginEditing : (() -> Void)?
@@ -43,6 +43,7 @@ extension AppTextField: UITextFieldDelegate{
             complete()
         }
     }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         if let complete = self.textFieldDidChange {
             complete()

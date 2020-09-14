@@ -26,8 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Fabric.with([Crashlytics.self])
 //        Crashlytics.sharedInstance().debugMode = true
 //        Fabric.sharedSDK().debug = true
+        
         if UserDefaultHelper.shared.appLanguage == nil {
             LanguageHelper.setAppleLAnguageTo(lang: LanguageType.vietname)
+        }
+        
+        if LanguageHelper.currentAppleLanguage() == LanguageType.english.rawValue {
+            LanguageHelper.setAppleLAnguageTo(lang: .english)
+        } else {
+            LanguageHelper.setAppleLAnguageTo(lang: .vietname)
         }
         
 //        DropDown.startListeningToKeyboard()
@@ -35,6 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         
         configureGoogle()
+        
+        configureFirebase()
+        
         configurePushNotification(application: application)
         
 //        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -45,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         checkLogin()
 //        realmConfig()
 
-        AppRouter.shared.openHomeView()
+        AppRouter.shared.openLoading()//openHomeView()
 //        AppRouter.shared.updateRootView()
 //        AppRouter.shared.openLoading()
 

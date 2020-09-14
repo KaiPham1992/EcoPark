@@ -49,4 +49,15 @@ class ProfilePresenter: ProfilePresenterProtocol, ProfileInteractorOutputProtoco
             ProgressView.shared.hide()
         }
     }
+    
+    func getProfile() {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.userAPIService.getProfileUser(success: { (user) in
+            ProgressView.shared.hide()
+            guard let _user = user else { return }
+            self.view?.didGetProfile(user: _user)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 }

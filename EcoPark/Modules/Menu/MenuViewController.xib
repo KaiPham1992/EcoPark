@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,11 +18,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
             <connections>
+                <outlet property="btnResgister" destination="p0T-4L-zcu" id="oex-Li-f0I"/>
                 <outlet property="heightRegisterOwner" destination="JeA-yQ-uSK" id="y6a-As-Dci"/>
                 <outlet property="imgAvatar" destination="VrL-Ll-Ar1" id="QKl-CQ-Yqe"/>
                 <outlet property="lbDisplayname" destination="F8H-Tm-EQM" id="EDy-Ib-0Xf"/>
                 <outlet property="lbLogin" destination="jnr-F6-AAG" id="8tI-AI-RqR"/>
                 <outlet property="lbOwner" destination="ZEW-E2-FBW" id="Edp-lM-20T"/>
+                <outlet property="lbRegister" destination="EDO-F3-Wxp" id="bXj-xP-nF2"/>
                 <outlet property="tbMenu" destination="mrk-ff-eaa" id="zJX-aN-OZc"/>
                 <outlet property="vRegisterOwner" destination="kFC-kM-VDs" id="7rc-1M-9vf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

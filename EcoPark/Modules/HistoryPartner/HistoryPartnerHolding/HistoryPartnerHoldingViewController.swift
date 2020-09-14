@@ -11,61 +11,92 @@
 import UIKit
 import XLPagerTabStrip
 
-class HistoryPartnerHoldingViewController: BaseViewController {
 
-    @IBOutlet weak var vSearch: AppSearchBar!
+class HistoryPartnerHoldingViewController: BaseViewController {
+    
+    @IBOutlet weak var vSearch: AppSearchTextField!
     @IBOutlet weak var tbPartnerHolding: UITableView!
     
-	var presenter: HistoryPartnerHoldingPresenterProtocol?
-
-    var historyParkingReservation: HistoryMyParkingEntity? {
+    var presenter: HistoryPartnerHoldingPresenterProtocol?
+    
+    var number_place: String = "0"
+    var parkedNumber: Int = 0
+    var historyParkingHolding: HistoryMyParkingEntity? {
         didSet {
             tbPartnerHolding.reloadData()
         }
     }
+    var historyBookingParkingResponse: HistoryBookingParkingResponse?
+    var refreshControl = UIRefreshControl()
+    var isCanLoadMore: Bool = false
+    var isRefresh: Bool = false
     
-    
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tbPartnerHolding.addSubview(refreshControl)
     }
-
+    
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: nil, placeHolder: LocalizableKey.searchNumberCar.showLanguage)
+        
+        vSearch.actionSearch = { text in
+            self.isRefresh = true
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text, offset: 0, limit: limitLoad)
+        }
+        
         vSearch.tapToTextField = {
-            let keyword = self.vSearch.tfInput.text!
-            guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-            self.presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: keyword)
+            self.isRefresh = true
+            let text = self.vSearch.tfInput.text!
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text, offset: 0, limit: limitLoad)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getData()
+        isRefresh = true
+        historyParkingHolding = nil
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.getData()
+        }
+        
+        
     }
     
     private func getData() {
-        guard let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID else { return }
-        presenter?.getHistoryReservation(parkingID: parkingID, status: "reservation", keyword: "")
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+        if parkingID == "" || parkingID == nil {
+            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+        }
+        
+        presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "", offset: 0, limit: limitLoad)
+    }
+    
+    @objc func refresh() {
+        getData()
+        isRefresh = true
+        self.refreshControl.endRefreshing()
     }
     
     @objc func btnCheckOutTapped(sender: UIButton) {
         
-        let price = historyParkingReservation?.booking[sender.tag].money_paid ?? 0
-        let vehicleType = "4"//historyParkingReservation?.booking[indexTap]
-        let vehicleNumber = historyParkingReservation?.booking[sender.tag].license_plates ?? ""
-        let checkoutNumber = historyParkingReservation?.booking[sender.tag].code ?? ""
-        let bookingID = historyParkingReservation?.booking[sender.tag].id
-        let code = historyParkingReservation?.booking[sender.tag].code
-        let licensePlates = historyParkingReservation?.booking[sender.tag].license_plates
+        let bookingID = historyParkingHolding?.booking[sender.tag].id
+        let code = historyParkingHolding?.booking[sender.tag].code
+        let licensePlates = historyParkingHolding?.booking[sender.tag].license_plates
         
-        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: price, vehicleType: vehicleType, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
-            self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: self.historyParkingReservation?.booking[sender.tag].parking_id ?? "", bookingID: self.historyParkingReservation?.booking[sender.tag].id ?? ""))
-        }) {
-            self.presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
-        }
+        presenter?.checkoutParking(bookingID: bookingID&, code: code&, licensePlates: licensePlates&)
+        
+        
     }
 }
 
@@ -74,17 +105,17 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     func configTableView() {
         tbPartnerHolding.delegate = self
         tbPartnerHolding.dataSource = self
-        
+        tbPartnerHolding.separatorStyle = .none
         tbPartnerHolding.registerXibFile(HistoryParnerCell.self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return historyParkingReservation?.booking.count ?? 0
+        return historyParkingHolding?.booking.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(HistoryParnerCell.self)
-        cell.setDataHistory(historyParking: historyParkingReservation?.booking[indexPath.item])
+        cell.setDataHistory(historyParking: historyParkingHolding?.booking[indexPath.item])
         cell.btnStatus.tag = indexPath.item
         cell.btnStatus.addTarget(self, action: #selector(btnCheckOutTapped), for: .touchUpInside)
         
@@ -92,26 +123,60 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: historyParkingReservation?.booking[indexPath.item].parking_id ?? "", bookingID: historyParkingReservation?.booking[indexPath.item].id ?? ""))
+        self.push(controller: HistoryPartnerDetailCheckinRouter.createModule(parkingID: historyParkingHolding?.booking[indexPath.item].parking_id ?? "", bookingID: historyParkingHolding?.booking[indexPath.item].id ?? ""))
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let count = historyParkingHolding?.booking.count else { return }
+        if indexPath.item == count - 5 && isCanLoadMore {
+            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+            if parkingID == "" || parkingID == nil {
+                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+            }
+            print("load more")
+            presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "", offset: count, limit: limitLoad)
+        }
     }
 }
 
 extension HistoryPartnerHoldingViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        let place = historyParkingReservation?.number_place
-        let reservation = historyParkingReservation?.reservation_number
-        return IndicatorInfo(title: LocalizableKey.holding.showLanguage + " (\(reservation ?? 0)/\(place ?? 0))")
+        return IndicatorInfo(title: LocalizableKey.holding.showLanguage + " (\(parkedNumber)/\(number_place))")
     }
     
 }
 
 extension HistoryPartnerHoldingViewController: HistoryPartnerHoldingViewProtocol {
+    
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity) {
+        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(bookingID: historyCheckout.id ?? "", parkingID: historyCheckout.parking_id ?? ""))
+    }
+    
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?) {
-        self.historyParkingReservation = historyParking
-        
+        self.historyParkingHolding = historyParking
+        isCanLoadMore = historyParking?.booking.count == limitLoad
+        if self.historyParkingHolding == nil || self.historyParkingHolding?.booking.count == 0 || isRefresh {
+            isRefresh = false
+            self.historyParkingHolding = historyParking
+        } else {
+            guard let booking = historyParking?.booking else { return }
+            self.historyParkingHolding?.booking.append(contentsOf: booking)
+            tbPartnerHolding.reloadData()
+        }
     }
     
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
-        self.push(controller: HistoryPartnerDetailCheckoutRouter.createModule(historyParkingDetail: historyParkingDetail))
+        
+        self.historyBookingParkingResponse = historyParkingDetail
+        let receivables = historyParkingDetail?.receivables?.toCurrencyNoVND
+        let vehicleType = historyParkingDetail?.vehicleName
+        let vehicleNumber = historyParkingDetail?.license_plates ?? ""
+        let checkoutNumber = historyParkingDetail?.code ?? ""
+        
+        PopUpHelper.shared.showPartnerCheckOut(width: tbPartnerHolding.frame.width, price: receivables ?? "0", vehicleType: vehicleType&, vehicleNumber: vehicleNumber, checkOutNumber: checkoutNumber, completionCancel: nil, completionCheckAgain: {
+            self.push(controller: HistoryPartnerDetailCheckAgainRouter.createModule(parkingID: historyParkingDetail?.parking_id ?? "", bookingID: historyParkingDetail?.id ?? ""))
+        }) {
+            self.presenter?.changeStatusCheckout(booking: historyParkingDetail?.id ?? "", bonus: "\(historyParkingDetail?.bonus ?? 0)", plus_wallet_boss: "\(historyParkingDetail?.plus_wallet_boss ?? 0)", parking_price: "\(historyParkingDetail?.parking_price ?? 0)", payment_wallet: "\(historyParkingDetail?.payment_wallet ?? 0)")
+        }
     }
 }

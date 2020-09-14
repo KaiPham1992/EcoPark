@@ -22,9 +22,9 @@ class HistoryPartnerHoldingPresenter: HistoryPartnerHoldingPresenterProtocol, Hi
         self.router = router
     }
 
-    func getHistoryReservation(parkingID: String, status: String, keyword: String) {
-        ProgressView.shared.showProgressOnWindow()
-        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, success: { (historyParking) in
+    func getHistoryReservation(parkingID: String, status: String, keyword: String, offset: Int, limit: Int) {
+//        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, offset: offset, limit: limit, success: { (historyParking) in
             ProgressView.shared.hide()
             self.view?.didGetHistoryReservation(historyParking: historyParking)
         }) { (error) in
@@ -38,6 +38,24 @@ class HistoryPartnerHoldingPresenter: HistoryPartnerHoldingPresenterProtocol, Hi
             ProgressView.shared.hide()
             self.view?.didCheckout(historyParkingDetail: historyParkingDetail)
         }) { (error) in
+            ProgressView.shared.hide()
+        }
+    }
+    
+    func changeStatusCheckout(booking: String , bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String) {
+        ProgressView.shared.showProgressOnWindow()
+//        Provider.shared.bookingAPIService.checkOut(bookingId: booking, success: { (historyCheckout) in
+//            ProgressView.shared.hide()
+//            guard let _historyCheckout = historyCheckout else { return }
+//            self.view?.didChangeStatusCheckout(historyCheckout: _historyCheckout)
+//        }) { (_) in
+//            ProgressView.shared.hide()
+//        }
+        Provider.shared.parkingAPIService.changeStatusCheckout(bookingID: booking, bonus: bonus, plus_wallet_boss: plus_wallet_boss, parking_price: parking_price, payment_wallet: payment_wallet, success: { (historyCheckout) in
+            ProgressView.shared.hide()
+            guard let _historyCheckout = historyCheckout else { return }
+            self.view?.didChangeStatusCheckout(historyCheckout: _historyCheckout)
+        }) { (_) in
             ProgressView.shared.hide()
         }
     }

@@ -21,5 +21,15 @@ class HistoryPartnerDetailCheckoutPresenter: HistoryPartnerDetailCheckoutPresent
         self.interactor = interactor
         self.router = router
     }
+    
+    func getCheckoutDetail(bookingID: String, parkingID: String) {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getHistoryParkingDetail(parkingID: parkingID, bookingID: bookingID, success: { (historyDetail) in
+            ProgressView.shared.hide()
+            self.view?.didGetCheckoutDetail(historyDetail: historyDetail)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 
 }

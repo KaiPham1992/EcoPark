@@ -97,23 +97,44 @@ class UtilityModel {
         } else {
             array.append(UtilityModel(type: .coffee, iconOn: AppImage.imgCoffeeOn, iconOff: AppImage.imgCoffeeOff, isSelected: false))
         }
-    
+        
         return array
     }
 }
 
 class UtilityViewCell: UICollectionViewCell {
     @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet weak var lbName: UILabel!
     
-    var utility: UtilityModel? {
+    var utility: MaterialEntity? {
         didSet {
             guard let utility = utility else { return }
-            imgIcon.image = utility.isSelected == true ? utility.iconOn: utility.iconOff
+            lbName.text = utility.name& == "" ? utility.plain_name&: utility.name
+            
+            imgIcon.sd_setImage(with: utility.urlOn) { (image, _, _, _) in
+                self.imgIcon.image = image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                if  utility.is_active == "1" {
+                    self.imgIcon.tintColor = AppColor.color_0_129_255
+                } else {
+                    self.imgIcon.tintColor = AppColor.color158_158_158
+                }
+            }
+            
+            //----
+            if  utility.is_active == "1" {
+                self.setBorder(borderWidth: 1, borderColor: AppColor.color_0_129_255, cornerRadius: 10)
+                imgIcon.tintColor = AppColor.color_0_129_255
+                self.lbName.textColor = AppColor.color_0_129_255
+            } else {
+                self.setBorder(borderWidth: 1, borderColor: AppColor.color158_158_158, cornerRadius: 10)
+                self.lbName.textColor = AppColor.color158_158_158
+                imgIcon.tintColor = AppColor.color158_158_158
+            }
         }
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
 }

@@ -16,6 +16,7 @@ protocol AppDropDownNoTitleDelegate: class {
 class AppDropDownNoTitle: BaseViewXib {
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var vContain: UIView!
+    @IBOutlet weak var btnAction: UIButton!
     
     let dropDown = DropDown()
     var selectedItem: Any?

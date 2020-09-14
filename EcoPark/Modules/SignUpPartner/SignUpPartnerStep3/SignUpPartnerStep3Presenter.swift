@@ -44,4 +44,25 @@ class SignUpPartnerStep3Presenter: SignUpPartnerStep3PresenterProtocol, SignUpPa
             ProgressView.shared.hide()
         }
     }
+    
+    func getListMaterial() {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.parkingAPIService.getMaterial(success: { (listMaterial) in
+            ProgressView.shared.hide()
+            self.view?.didGetListMaterial(listMaterial: listMaterial)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
+    
+    func getProfileUser() {
+        ProgressView.shared.showProgressOnWindow()
+        Provider.shared.userAPIService.getProfileUser(success: { (user) in
+            ProgressView.shared.hide()
+            guard let _user = user else { return }
+            self.view?.didGetProfileUser(user: _user)
+        }) { (_) in
+            ProgressView.shared.hide()
+        }
+    }
 }

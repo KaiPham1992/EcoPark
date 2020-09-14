@@ -31,4 +31,12 @@ class MyNotificationPresenter: MyNotificationPresenterProtocol, MyNotificationIn
             ProgressView.shared.hide()
         }
     }
+    
+    func getNotificationDetail(notificationID: Int) {
+        Provider.shared.notificationAPIService.getNotificationDetail(id: notificationID, success: { (_) in
+            
+        }) { (_) in
+            
+        }
+    }
 }

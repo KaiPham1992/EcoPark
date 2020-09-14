@@ -21,11 +21,13 @@ class WalletViewController: BaseViewController {
     
     let refreshControl = UIRefreshControl()
 	var presenter: WalletPresenterProtocol?
-    var listWalletHistory : [HistoryWalletEntity] = [HistoryWalletEntity]() {
+    var listWalletHistory : [HistoryWallet] = [HistoryWallet]() {
         didSet {
             tbWallet.reloadData()
         }
     }
+    
+    var isBack: Bool = false
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +39,12 @@ class WalletViewController: BaseViewController {
     
     override func setUpNavigation() {
         super.setUpNavigation()
+        if isBack {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
         
-        addMenu()
         setTitleNavigation(title: LocalizableKey.titleWallet.showLanguage)
 
     }
@@ -54,6 +60,9 @@ class WalletViewController: BaseViewController {
         
         lbBalance.text = LocalizableKey.titleBalance.showLanguage
         btnRecharge.setTitle(LocalizableKey.titleRecharge.showLanguage.uppercased(), for: .normal)
+        
+        fromToDatePicker.btnFrom.addTarget(self, action: #selector(btnFromTapped), for: .touchUpInside)
+        fromToDatePicker.btnTo.addTarget(self, action: #selector(btnToTapped), for: .touchUpInside)
     }
     
     func setWalletMoney(money: Int) {
@@ -65,6 +74,55 @@ class WalletViewController: BaseViewController {
         attr.append(attr1)
         attr.append(attr2)
         lbWalletMoney.attributedText = attr
+    }
+    
+    @objc func btnFromTapped() {
+        let popUp = ChooseDatePopUp()
+        UIApplication.topViewController()?.view.endEditing(true)
+
+        popUp.showPopUp(currentDate: fromToDatePicker.from, completionDate: { date in
+            guard let date = date as? Date else {
+                self.fromToDatePicker.from = nil
+                self.fromToDatePicker.fieldFrom.text = ""
+                self.fromToDatePicker.fieldFrom.placeholder = "dd/mm/yyyy"
+                self.fromToDatePicker.fieldFrom.placeHolderColor = AppColor.color_0_129_255
+                return
+            }
+            
+            self.fromToDatePicker.from = date
+            self.fromToDatePicker.fieldFrom.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.presenter?.listWalletHistory.removeAll()
+            if self.fromToDatePicker.fieldTo.text == "" {
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: Date().toString(dateFormat: AppDateFormat.ddMMYYYYTransaction), showLoading: false)
+            } else {
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text!, toDate: self.fromToDatePicker.fieldTo.text!, showLoading: false)
+            }
+            
+        })
+    }
+    
+    @objc func btnToTapped() {
+        UIApplication.topViewController()?.view.endEditing(true)
+        let popUp = ChooseDatePopUp()
+        
+        popUp.showPopUp(currentDate: fromToDatePicker.to, completionDate: { date in
+            guard let date = date as? Date else {
+                self.fromToDatePicker.to = nil
+                self.fromToDatePicker.fieldTo.text = ""
+                self.fromToDatePicker.fieldTo.placeholder = "dd/mm/yyyy"
+                self.fromToDatePicker.fieldTo.placeHolderColor = AppColor.color_0_129_255
+                return
+            }
+            self.fromToDatePicker.to = date
+            self.fromToDatePicker.fieldTo.text = date.toString(dateFormat: AppDateFormat.ddMMYYYYTransaction)
+            self.presenter?.listWalletHistory.removeAll()
+            if self.fromToDatePicker.fieldFrom.text == "" {
+                self.presenter?.getWalletHistory(startDate: "" , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: false)
+            } else {
+                self.presenter?.getWalletHistory(startDate: self.fromToDatePicker.fieldFrom.text! , toDate: self.fromToDatePicker.fieldTo.text! , showLoading: false)
+            }
+            
+        })
     }
     
     @IBAction func btnRechargeTapped() {
@@ -83,8 +141,13 @@ class WalletViewController: BaseViewController {
     }
     
     @objc func pullToRefresh(){
+        getWallet()
         presenter?.listWalletHistory.removeAll()
         getWalletHistory(showLoading: false)
+        self.fromToDatePicker.fieldFrom.text = ""
+        self.fromToDatePicker.fieldFrom.placeholder = "dd/mm/yyyy"
+        self.fromToDatePicker.fieldTo.text = ""
+        self.fromToDatePicker.fieldTo.placeholder = "dd/mm/yyyy"
         refreshControl.endRefreshing()
     }
     
@@ -101,11 +164,11 @@ extension WalletViewController: WalletViewProtocol {
     }
     
     // MARK: Get wallet history
-    func getWalletHistory(showLoading: Bool = true) {
-        presenter?.getWalletHistory(showLoading: showLoading)
+    func getWalletHistory(showLoading: Bool = false) {
+        presenter?.getWalletHistory(startDate: "", toDate: "", showLoading: showLoading)
     }
     
-    func didGetWalletHistory(listLog: [HistoryWalletEntity]) {
+    func didGetWalletHistory(listLog: [HistoryWallet]) {
         self.listWalletHistory = listLog
     }
     
@@ -126,6 +189,7 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
         tbWallet.registerXibFile(WalletCell.self)
         tbWallet.estimatedRowHeight = 200
         tbWallet.rowHeight = UITableView.automaticDimension
+        tbWallet.separatorStyle = .none 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -136,13 +200,22 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueTableCell(WalletCell.self)
         let item = listWalletHistory[indexPath.row]
         if let price = item.price,
-            let time = item.create_time_mi?.toString(dateFormat: .hhmmddmmyyy),
+            let time = item.create_time_mi?.toString(dateFormat: .HHmmddMMyyyy),
             let content = item.content,
             let status = item.status {
             var isPlus = true
-            if status.contains("minus") {
+            switch status {
+            case StatusWallet.plus_money.rawValue, StatusWallet.promotion.rawValue, StatusWallet.parking_receive.rawValue:
+                isPlus = true
+            case StatusWallet.pay_booking.rawValue, StatusWallet.parking_spent.rawValue, StatusWallet.extension_booking.rawValue, StatusWallet.commission.rawValue, StatusWallet.minus_money.rawValue:
+                isPlus = false
+            default:
                 isPlus = false
             }
+//            var isPlus = true
+//            if status.contains("minus") {
+//                isPlus = false
+//            }
             cell.displayData(isPlus: isPlus, dateTime: time, price: Int(price), content: content)
         }
         

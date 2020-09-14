@@ -42,7 +42,7 @@ open class BaseViewController: UIViewController {
         //store.subscribe(self)
         if #available(iOS 13.0, *) {
             // Always adopt a light interface style.
-//            overrideUserInterfaceStyle = .light
+            overrideUserInterfaceStyle = .light
         }
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         setUpViews()
@@ -73,6 +73,7 @@ open class BaseViewController: UIViewController {
         checkInternet()
     }
     
+  
     func addTopLine() {
         self.view.addSubview(line)
         line.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
@@ -172,6 +173,7 @@ open class BaseViewController: UIViewController {
         lbNodata.removeFromSuperview()
         self.view.addSubview(lbNodata)
         lbNodata.text = text
+        lbNodata.textColor = .white
         lbNodata.centerSuperview()
     }
     
@@ -446,7 +448,7 @@ extension BaseViewController {
     }
 }
 extension BaseViewController {
-    func addBackToNavigation(icon: UIImage = UIImage(named: "back_black")! ) {
+    func addBackToNavigation(icon: UIImage = UIImage(named: "ic_back")! ) {
         addButtonImageToNavigation(image: icon, style: .left, action: #selector(btnBackTapped))
     }
     

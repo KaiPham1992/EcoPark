@@ -9,7 +9,7 @@
 import UIKit
 
 class HistoryParnerCell: UITableViewCell {
-
+    
     @IBOutlet weak var lbID: UILabel!
     @IBOutlet weak var btnStatus: UIButton!
     @IBOutlet weak var lbName: UILabel!
@@ -29,14 +29,18 @@ class HistoryParnerCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lbBooking.text = LocalizableKey.book_at.showLanguage
+        lbExpect.text = LocalizableKey.expect.showLanguage
+        lbTotal.text = LocalizableKey.total.showLanguage
+        btnStatus.setTitle(LocalizableKey.agreeCheckout.showLanguage, for: .normal)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
- 
+    
     
     func setDataBookingHistory() {
         btnStatus.backgroundColor = .clear
@@ -44,21 +48,68 @@ class HistoryParnerCell: UITableViewCell {
         btnStatus.setTitle(LocalizableKey.reservation.showLanguage, for: .normal)
     }
     
-    func setDataHistoryParking(status: String) {
+    func setDataHistoryParkingStatus(status: String) {
         btnStatus.backgroundColor = .clear
-        btnStatus.setTitleColor(AppColor.color_0_129_255, for: .normal)
-        btnStatus.setTitle(status, for: .normal)
+        let status = status
+        switch status {
+        case StatusBooking.cancel.rawValue:
+            btnStatus.setTitle(LocalizableKey.canceled.showLanguage, for: .normal)
+            btnStatus.setTitleColor(UIColor.red, for: .normal)
+        case StatusBooking.checked_out.rawValue:
+            btnStatus.setTitle(LocalizableKey.checked_out.showLanguage, for: .normal)
+            btnStatus.setTitleColor(AppColor.color_0_129_255, for: .normal)
+        case StatusBooking.checked_in.rawValue:
+            btnStatus.setTitle(LocalizableKey.checked_in.showLanguage, for: .normal)
+            btnStatus.setTitleColor(AppColor.color_13_196_68, for: .normal)
+        case StatusBooking.reservation.rawValue:
+            btnStatus.setTitle(LocalizableKey.reservation.showLanguage, for: .normal)
+            btnStatus.setTitleColor(AppColor.color_0_129_255, for: .normal)
+        case StatusBooking.expired.rawValue:
+            btnStatus.setTitle(LocalizableKey.expired.showLanguage, for: .normal)
+            btnStatus.setTitleColor(UIColor.red, for: .normal)
+        default:
+            break
+        }
     }
     
     func setDataHistory(historyParking: BookingEntity?) {
         guard let _historyParking = historyParking else { return }
         lbName.text = _historyParking.fullname
-        lbBookingTime.text = _historyParking.create_time?.toString(dateFormat: AppDateFormat.hhmmddmmyyy)
-        lbExpectTime.text = _historyParking.update_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckInTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckoutTime.text = _historyParking.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbBookingTime.text = _historyParking.create_time?.toString(dateFormat: AppDateFormat.ecoTime)
+        lbExpectTime.text = _historyParking.intend_checkin_time?.toString(dateFormat: .ecoTime)
         lbNumberCar.text = _historyParking.license_plates
         lbID.text = _historyParking.code
-        lbPrice.text = "\(_historyParking.money_paid ?? 0)"
+        lbPrice.text = "0"
+        
+        let status = _historyParking.status
+        switch status {
+        case StatusBooking.cancel.rawValue:
+            lbCheckInTime.text = "-"
+            lbCheckoutTime.text = "-"
+            lbPrice.text = _historyParking.money_paid?.toCurrencyNoVND ?? "0"
+        case StatusBooking.checked_out.rawValue:
+            lbCheckInTime.text = _historyParking.timeCheckInMi?.toString(dateFormat: .ecoTime)
+            lbCheckoutTime.text = _historyParking.timeCheckOutMi?.toString(dateFormat: .ecoTime)
+            if let price = _historyParking.parking_price {
+                lbPrice.text = "\(price.toCurrencyNoVND )"
+            } else {
+                lbPrice.text = "\(_historyParking.money_paid?.toCurrencyNoVND ?? "0")"
+            }
+            
+        case StatusBooking.checked_in.rawValue:
+            lbCheckInTime.text = _historyParking.timeCheckInMi?.toString(dateFormat: .ecoTime)
+            lbCheckoutTime.text = "-"
+        case StatusBooking.reservation.rawValue:
+            lbCheckInTime.text = "-"
+            lbCheckoutTime.text = "-"
+        case StatusBooking.expired.rawValue:
+            lbCheckInTime.text = "-"
+            lbCheckoutTime.text = "-"
+            lbPrice.text = _historyParking.money_paid?.toCurrencyNoVND ?? "0"
+        default:
+            break
+        }
+        
+        
     }
 }

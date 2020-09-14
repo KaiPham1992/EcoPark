@@ -9,7 +9,7 @@
 import UIKit
 
 class AppRatingView: BaseViewXib {
-    var number: Double = 1.5
+    var number: Double = 0.0
     
     @IBOutlet weak var vStackView: UIStackView!
     @IBOutlet weak var lbNumberRating: UILabel!
@@ -26,7 +26,12 @@ class AppRatingView: BaseViewXib {
     
     func setTitle(number: String) {
         self.lbNumberRating.isHidden = false
-        self.lbNumberRating.text = number
+        if number != "" {
+            self.lbNumberRating.text = "(\(number))"
+        } else {
+            self.lbNumberRating.text = ""
+        }
+        
     }
     
     func hideTitle() {

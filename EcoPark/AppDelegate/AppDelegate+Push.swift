@@ -17,24 +17,28 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         #if PROD
         let googleServiceFile = "GoogleService-Prod-Info"
         #else
-        let googleServiceFile = "GoogleService-Prod-Info"
+        let googleServiceFile = "GoogleService-Dev-Info"
         #endif
-        
+
         let filePath = Bundle.main.path(forResource: googleServiceFile, ofType: "plist")!
         guard let options = FirebaseOptions(contentsOfFile: filePath) else {
             print("There are some problems with GoogleService-Info file")
             return
         }
-        
+
         FirebaseApp.configure(options: options)
+
+//        Messaging.messaging().delegate = self
     }
     
     func configurePushNotification(application: UIApplication) {
-        Messaging.messaging().delegate = self
+        //configureFirebase()
+        
+        
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
-
+//          Messaging.messaging().delegate = self
           let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
           UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
@@ -44,15 +48,21 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
           application.registerUserNotificationSettings(settings)
         }
-
         application.registerForRemoteNotifications()
+
+        if let token = Messaging.messaging().fcmToken {
+            print("FCM token: \(token)")
+            UserDefaultHelper.shared.fcmToken = token
+        }
+        
+        //---
+        Messaging.messaging().delegate = self
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         UserDefaultHelper.shared.deviceToken = token
-//        Messaging.messaging().apnsToken = deviceToken
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -86,10 +96,19 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print("didReceive")
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("\n\n🚀 Firebase registration token\n\(fcmToken)\n\n")
         UserDefaultHelper.shared.fcmToken = fcmToken
+        print(UserDefaultHelper.shared.fcmToken)
+    }
+    
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+        UserDefaultHelper.shared.fcmToken = fcmToken
+        
     }
 }
 

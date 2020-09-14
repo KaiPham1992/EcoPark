@@ -19,12 +19,49 @@ class HistoryPartnerDetailCheckoutViewController: BaseViewController, HistoryPar
     var presenter: HistoryPartnerDetailCheckoutPresenterProtocol?
 
     var historyParkingDetail: HistoryBookingParkingResponse?
+    var bookingID = ""
+    var parkingID = ""
+    var isFromList = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackToNavigation()
-        setTitleNavigation(title: "Chi tiết giao dịch")
+        if isFromList {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
+        
+        setTitleNavigation(title: LocalizableKey.titleHistoryDetail.showLanguage)
         configTableView()
+        lbID.text = historyParkingDetail?.code
+        
+            getData()
+    }
+    
+    func getData() {
+        presenter?.getCheckoutDetail(bookingID: bookingID, parkingID: parkingID)
+    }
+    
+    func didGetCheckoutDetail(historyDetail: HistoryBookingParkingResponse?) {
+        self.historyParkingDetail = historyDetail
+        lbID.text = historyDetail?.code ?? ""
+        switch historyDetail?.status {
+        case StatusBooking.checked_out.rawValue:
+            lbStatus.text = LocalizableKey.checked_out.showLanguage
+        case StatusBooking.expired.rawValue:
+            lbStatus.text = LocalizableKey.expired.showLanguage
+            lbStatus.textColor = .red
+        case StatusBooking.cancel.rawValue:
+            lbStatus.text = LocalizableKey.canceled.showLanguage
+            lbStatus.textColor = .red
+            case StatusBooking.checked_in.rawValue:
+            lbStatus.text = LocalizableKey.checked_in.showLanguage
+            lbStatus.textColor = AppColor.color_13_196_68
+        default:
+            break
+        }
+        
+        tbCheckoutDetail.reloadData()
     }
 }
 
@@ -38,10 +75,16 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
         tbCheckoutDetail.registerXibFile(UserInfoCell.self)
         tbCheckoutDetail.registerXibFile(PriceCheckoutCell.self)
         tbCheckoutDetail.registerXibFile(OtherPriceCheckoutCell.self)
+        tbCheckoutDetail.registerXibFile(RatingCell.self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if historyParkingDetail?.rating == nil {
+            return 4
+        } else {
+            return 5
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +92,7 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
         switch indexPath.row {
         case 0:
             let timeHoldingCell = tableView.dequeueTableCell(TimeParkingCell.self)
-            timeHoldingCell.setData(historyParkingDetail: historyParkingDetail)
+            timeHoldingCell.setDataCheckout(historyParkingDetail: historyParkingDetail)
             return timeHoldingCell
         case 1:
             let userInfoCell = tableView.dequeueTableCell(UserInfoCell.self)
@@ -59,10 +102,16 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
             let priceCell = tableView.dequeueTableCell(PriceCheckoutCell.self)
             priceCell.setData(historyParkingDetail: historyParkingDetail)
             return priceCell
-        default:
+        case 3:
             let otherPriceCell = tableView.dequeueTableCell(OtherPriceCheckoutCell.self)
             otherPriceCell.setData(historyParkingDetail: historyParkingDetail)
             return otherPriceCell
+        case 4:
+            let ratingCell = tableView.dequeueTableCell(RatingCell.self)
+            ratingCell.vRating.rating = historyParkingDetail?.rating ?? 0
+            return ratingCell
+        default:
+            return UITableViewCell()
         }
     }
     
@@ -74,8 +123,12 @@ extension HistoryPartnerDetailCheckoutViewController: UITableViewDataSource, UIT
             return 145
         case 2:
             return 230
-        default:
+        case 3:
             return 170
+        case 4:
+            return 50
+        default:
+            return 0
         }
     }
 }

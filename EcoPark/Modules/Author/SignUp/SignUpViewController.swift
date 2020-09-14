@@ -45,7 +45,7 @@ class SignUpViewController: BaseViewController {
     override func setTitleUI() {
 //        self.hideNavigation()
         self.showNavigation()
-        self.setTitleNavigation(title: LocalizableKey.Register.showLanguage)
+        self.setTitleNavigation(title: LocalizableKey.LoginButtonSignUp.showLanguage)
         vUsername.setTitleAndPlaceHolder(title: LocalizableKey.usernameSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vEmail.setTitleAndPlaceHolder(title: LocalizableKey.emailSignUp.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         
@@ -96,14 +96,45 @@ class SignUpViewController: BaseViewController {
         attr.append(attr6)
         
         lbTermAndPolicy.attributedText = attr
+        self.lbTermAndPolicy.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnlabel(_ :)))
+        tapGesture.numberOfTapsRequired = 1
+        self.lbTermAndPolicy.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func tapOnlabel(_ gesture: UITapGestureRecognizer) {
+        guard let text = lbTermAndPolicy.text else { return }
+        let termOfUse = (text as NSString).range(of: LocalizableKey.termAndPolicyText2.showLanguage)
+        let policy = (text as NSString).range(of: LocalizableKey.termAndPolicyText4.showLanguage)
+        if gesture.didTapAttributedTextInLabel(label: lbTermAndPolicy, inRange: termOfUse) {
+            let webView = WebViewController.createModule(isTermCondition: true)
+            webView.isSignUp = true
+            self.push(controller: webView)
+        } else if gesture.didTapAttributedTextInLabel(label: lbTermAndPolicy, inRange: policy) {
+            let webView = WebViewController.createModule(isTermCondition: false)
+            webView.isSignUp = true
+            self.push(controller: webView)
+        }
+    }
+    
     
     @IBAction func btnSignUpTapped() {
         dismissKeyBoard()
         heightError.constant = 0
         //vPassword.getText()
+        
+        if self.vGender.tfInput.text == "Nữ" {
+            self.vGender.tfInput.text = "female"
+        }
+        else if self.vGender.tfInput.text == "Nam" {
+            self.vGender.tfInput.text = "male"
+        }
+        else if self.vGender.tfInput.text == "Khác" {
+            self.vGender.tfInput.text = "other"
+        }
+        
         if validateInputData() {
-            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: genderSelect, birthDay: vBirthDay.tfInput.text)
+            let param = SignUpParam(email: vEmail.getText(), password: passwordText.sha256(), captcha: vCapcha.tfInput.text&, displayName: vDisplayName.getText(), username: vUsername.getText(), phone: vPhoneNumber.getText(), gender: vGender.tfInput.text, birthDay: vBirthDay.tfInput.text)
             
             presenter?.signUp(param: param)
         }
@@ -117,6 +148,8 @@ class SignUpViewController: BaseViewController {
 
 extension SignUpViewController {
     func validateInputData() -> Bool {
+       
+
         if self.vUsername.tfInput.text == "" && self.vEmail.tfInput.text == "" && self.vPassword.tfInput.text == "" && self.vRePassword.tfInput.text == "" && self.vCapcha.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
@@ -126,7 +159,22 @@ extension SignUpViewController {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterDisplayName.showLanguage)
             return false
         }
+        
+        if self.vUsername.tfInput.text&.hasSpecialCharacters() {
+                hideError(isHidden: false, message: LocalizableKey.invalidTextSpecial.showLanguage)
+                return false
+        }
 
+        if self.vPhoneNumber.tfInput.text == "" {
+            hideError(isHidden: false, message: LocalizableKey.pleaseEnterPhone.showLanguage)
+            return false
+        }
+        
+        if let phone = self.vPhoneNumber.tfInput.text, phone.isValidPhone() == false {
+            hideError(isHidden: false, message:  LocalizableKey.invalidLoginPhone.showLanguage)
+            return false
+        }
+        
         if self.vEmail.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
@@ -181,9 +229,21 @@ extension SignUpViewController: SignUpViewProtocol {
     }
     
     func signUpSuccess(user: UserEntity?) {
-        PopUpHelper.shared.showSignUpSuccess {
-            AppRouter.shared.openHomeView()
-        }
+        guard let _user = user else { return }
+                   UserDefaultHelper.shared.saveUser(user: _user)
+        UserDefaultHelper.shared.parkingID = user?.parkingID ?? ""
+        PopUpHelper.shared.showMessage(message: LocalizableKey.signUpSuccess.showLanguage, width: 350, completion: {
+           
+            //----
+            
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            
+            
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+//                 AppRouter.shared.openHomeView()
+//            }
+           
+        })
     }
     
     func signUpError(error: APIError) {
@@ -239,7 +299,41 @@ extension SignUpViewController: UITextFieldDelegate {
 }
 
 extension SignUpViewController: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
         self.genderSelect = item as! String
+        vGender.tfInput.text = genderSelect
     }
+}
+
+extension UITapGestureRecognizer {
+    
+    func didTapAttributedTextInLabel(label: UILabel, inRange targetRange: NSRange) -> Bool {
+        // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
+        let layoutManager = NSLayoutManager()
+        let textContainer = NSTextContainer(size: CGSize.zero)
+        let textStorage = NSTextStorage(attributedString: label.attributedText!)
+        
+        // Configure layoutManager and textStorage
+        layoutManager.addTextContainer(textContainer)
+        textStorage.addLayoutManager(layoutManager)
+        
+        // Configure textContainer
+        textContainer.lineFragmentPadding = 0.0
+        textContainer.lineBreakMode = label.lineBreakMode
+        textContainer.maximumNumberOfLines = label.numberOfLines
+        let labelSize = label.bounds.size
+        textContainer.size = labelSize
+        
+        // Find the tapped character location and compare it to the specified range
+        let locationOfTouchInLabel = self.location(in: label)
+        let textBoundingBox = layoutManager.usedRect(for: textContainer)
+        let textContainerOffset = CGPoint(x: (labelSize.width - textBoundingBox.size.width) * 0.5 - textBoundingBox.origin.x,
+                                          y: (labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y);
+        let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x,
+                                                     y: locationOfTouchInLabel.y - textContainerOffset.y);
+        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        
+        return NSLocationInRange(indexOfCharacter, targetRange)
+    }
+    
 }

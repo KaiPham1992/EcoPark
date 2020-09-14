@@ -3,12 +3,13 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryPartnerQRScannerViewController">
             <connections>
+                <outlet property="previewView" destination="23H-mL-4cq" id="DoU-vg-Hzv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23H-mL-4cq" customClass="QRCodeReaderView" customModule="QRCodeReader">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="23H-mL-4cq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ah2-93-p4T"/>
+                <constraint firstAttribute="trailing" secondItem="23H-mL-4cq" secondAttribute="trailing" id="Orv-sn-aSW"/>
+                <constraint firstAttribute="bottom" secondItem="23H-mL-4cq" secondAttribute="bottom" id="iHm-YT-0Iu"/>
+                <constraint firstItem="23H-mL-4cq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rhm-SF-qvk"/>
+            </constraints>
             <point key="canvasLocation" x="140" y="139"/>
         </view>
     </objects>

@@ -21,6 +21,8 @@ protocol SignUpPartnerStep3PresenterProtocol: class {
     
     func bossRegister(param: BossRegisterParam)
     func uploadImage(image: UIImage)
+    func getListMaterial()
+    func getProfileUser()
 }
 
 //MARK: Interactor -
@@ -45,4 +47,6 @@ protocol SignUpPartnerStep3ViewProtocol: class {
     
     func didBossRegister(parkingInfo: ParkingInfoEntity?)
     func didUploadImage(photo: PhotoEntity?)
+    func didGetListMaterial(listMaterial: [MaterialEntity])
+    func didGetProfileUser(user: UserEntity)
 }

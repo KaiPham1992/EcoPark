@@ -28,9 +28,19 @@ class Utils {
         return NetworkReachabilityManager()!.isReachable
     }
     
-    static func getTime(date: Double) -> (Int64, Int64, Int64) {
-        let secondDate = Date().timeIntervalSince1970
-        let other = Int64(secondDate - date)
+//    static func getTime(date: Double) -> (Int64, Int64, Int64) {
+//        let secondDate = Date().timeIntervalSince1970
+//        let other = Int64(secondDate - date)
+//        let day = Int64(other / 86400)
+//        let hour = (other - day * 86400)/3600
+//        let minute = (other - day * 86400 - hour * 3600)/60
+//        return (day, hour, minute)
+//    }
+    
+    static func getTime(dateCheckIn: Double, currentServerDate: Double) -> (Int64, Int64, Int64) {
+        
+        let secondDate = currentServerDate//Date().timeIntervalSince1970
+        let other = Int64(secondDate - dateCheckIn)
         let day = Int64(other / 86400)
         let hour = (other - day * 86400)/3600
         let minute = (other - day * 86400 - hour * 3600)/60
@@ -81,5 +91,24 @@ class Utils {
 extension Utils {
     class func getTimeZone() -> String {
         return TimeZone.current.identifier
+    }
+    
+    static func goToMap(latitude: String, longitude: String ) {
+        if let url = URL(string: "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving") {
+            if UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!) {
+                UIApplication.shared.open(url)
+            } else {
+                let urlStr = "http://maps.apple.com/maps?daddr=\(latitude),\(longitude)"
+                guard let urlApple = URL(string: urlStr) else { return }
+                UIApplication.shared.open(urlApple)
+            }
+        }
+       
+    }
+    
+    static func callPhone(phoneNumber: String) {
+        if let url = URL(string: "tel://\(phoneNumber)") {
+            UIApplication.shared.open(url)
+        }
     }
 }

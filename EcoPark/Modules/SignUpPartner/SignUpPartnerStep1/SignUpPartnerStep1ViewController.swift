@@ -47,14 +47,14 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
         addMenu()
         setTitleNavigation(title: LocalizableKey.MenuSignUpPartner.showLanguage)
         vStep.setStep1()
-        lbPartnerInfo.text = LocalizableKey.partnerInfo.showLanguage
+        lbPartnerInfo.text = LocalizableKey.partnerInfo.showLanguage.uppercased()
         vPartnerName.setTitleAndPlaceHolder(title: LocalizableKey.partnerName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vGender.setTitleAndPlaceHolder(title: LocalizableKey.gender.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vBirthday.setTitleAndPlaceHolder(title: LocalizableKey.birthday.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vIDNumber.setTitleAndPlaceHolder(title: LocalizableKey.partnerID.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vIssuedBy.setTitleAndPlaceHolder(title: LocalizableKey.issuedBy.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vDateBy.setTitleAndPlaceHolder(title: LocalizableKey.dayBy.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
-        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vEmail.setTitleAndPlaceHolder(title: LocalizableKey.partnerEmail.showLanguage + "*", placeHolder: LocalizableKey.enter.showLanguage)
         lbImage.text = LocalizableKey.partnerImage.showLanguage
         vIDNumber.tfInput.keyboardType = .numberPad
         
@@ -133,6 +133,7 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
                                           parking_img_src: [],
                                           latAddress: nil,
                                           longAddress: nil)
+            print("___====\(param)")
             self.push(controller: SignUpPartnerStep2Router.createModule(param: param))
             
         }
@@ -144,7 +145,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
             self.imgFrontPhoto.image = _image
             self.btnDeletePhotoFront.isHidden = false
             self.presenter?.uploadImageFront(image: _image)
-            
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -154,6 +156,8 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
             self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
             self.presenter?.uploadImageBackside(image: _image)
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -212,17 +216,22 @@ class SignUpPartnerStep1ViewController: BaseViewController, SignUpPartnerStep1Vi
     
     func didUploadImageFront(photo: PhotoEntity?) {
         self.urlPhotoIDFront = (photo?.imgSrc)&
+        btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
     
     func didUploadImageBackside(photo: PhotoEntity?) {
         self.urlPhotoIDBackside = (photo?.imgSrc)&
+        btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
 }
 
 
 extension SignUpPartnerStep1ViewController {
     func validateInputData() -> Bool {
-        if self.vPartnerName.getText() == "" && self.vIDNumber.getText() == "" && self.vIssuedBy.getText() == "" && self.vDateBy.tfInput.text == "" {
+        if self.vPartnerName.getText() == "" && self.vIDNumber.getText() == "" && self.vIssuedBy.getText() == "" && self.vDateBy.tfInput.text == "" &&
+        self.vEmail.getText() == ""  {
             hideError(isHidden: false, message: LocalizableKey.emptyLoginEmailPassword.showLanguage)
             return false
         }
@@ -244,6 +253,11 @@ extension SignUpPartnerStep1ViewController {
         
         if self.vDateBy.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.errorDateBy.showLanguage)
+            return false
+        }
+        
+        if self.vEmail.getText() == ""  {
+            hideError(isHidden: false, message:  LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
         

@@ -10,7 +10,7 @@ import UIKit
 
 class TimeParkingCell: UITableViewCell {
     
-    @IBOutlet weak var lbTimeBarking: UILabel!
+    @IBOutlet weak var lbTimeParking: UILabel!
     @IBOutlet weak var lbBooking: UILabel!
     @IBOutlet weak var lbExpect: UILabel!
     @IBOutlet weak var lbCheckIn: UILabel!
@@ -25,15 +25,12 @@ class TimeParkingCell: UITableViewCell {
     @IBOutlet weak var vMinute: TimeView!
     
     var checkinTime: TimeInterval = 0
+    var checkoutTime: TimeInterval = 0
+    var newCurrentDate: Double = 0
+    var intendCheckInTime: TimeInterval = 0
     
     var timer: Timer?
-    var minuteOne = 0
-    var minuteTwo = 0
-    var hourTwo = 0
-    var hourOne = 0
-    var dayOne = 0
-    var dayTwo = 0
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -48,107 +45,28 @@ class TimeParkingCell: UITableViewCell {
     }
     
     private func setupUI() {
-        
+        lbTimeParking.text = LocalizableKey.parkingTimimg.showLanguage
+        lbBooking.text = LocalizableKey.book_at.showLanguage
+        lbExpect.text = LocalizableKey.expect.showLanguage
         vDay.setupTitle(title: LocalizableKey.date.showLanguage)
         vHour.setupTitle(title: LocalizableKey.hour.showLanguage)
         vMinute.setupTitle(title: LocalizableKey.minute.showLanguage)
-        
-        setupTimeCount()
         
     }
     
     func setupTimeCount() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+            self.newCurrentDate = self.newCurrentDate + 1
             
-            let ddhhmm = Utils.getTime(date: self.checkinTime)
+            var ddhhmm = Utils.getTime(dateCheckIn: self.checkinTime, currentServerDate: self.newCurrentDate)
             
-            var minute = (ddhhmm.2).digits
-            var hour = (ddhhmm.1).digits
-            var day = (ddhhmm.0).digits
-            
-            if minute.count < 2 {
-                minute = [0, minute[0]]
-                self.minuteTwo = minute[1]
-                self.minuteOne = minute[0]
-                
-                self.vMinute.lblTwo.text = "\(self.minuteTwo)"
-                self.vMinute.lblOne.text = "\(self.minuteOne)"
-                
-            } else {
-                self.minuteTwo = minute[1]
-                self.minuteOne = minute[0]
-                
-                self.vMinute.lblTwo.text = "\(self.minuteTwo)"
-                self.vMinute.lblOne.text = "\(self.minuteOne)"
+            if self.intendCheckInTime < self.checkinTime {
+                ddhhmm = Utils.getTime(dateCheckIn: self.intendCheckInTime, currentServerDate: self.newCurrentDate)
             }
             
-            if hour.count < 2 {
-                hour = [0, hour[0]]
-                self.hourTwo = hour[1]
-                self.hourOne = hour[0]
-                self.vHour.lblTwo.text = "\(self.hourTwo)"
-                self.vHour.lblOne.text = "\(self.hourOne)"
-            } else {
-                self.minuteTwo = minute[1]
-                self.minuteOne = minute[0]
-                self.vHour.lblTwo.text = "\(self.hourTwo)"
-                self.vHour.lblOne.text = "\(self.hourOne)"
-            }
-            
-            if day.count > 2 {
-                day = [9,9]
-                self.dayTwo = day[1]
-                self.dayOne = day[0]
-                self.vDay.lblTwo.text = "\(self.dayTwo)"
-                self.vDay.lblOne.text = "\(self.dayOne)"
-            } else {
-                self.dayTwo = day[1]
-                self.dayOne = day[0]
-                self.vDay.lblTwo.text = "\(self.dayTwo)"
-                self.vDay.lblOne.text = "\(self.dayOne)"
-            }
-            
-            self.minuteTwo += 1
-            self.vMinute.lblTwo.text = "\(self.minuteTwo)"
-            
-            if self.minuteTwo > 9 {
-                self.minuteTwo = 0
-                self.minuteOne += 1
-                self.vMinute.lblTwo.text = "\(self.minuteTwo)"
-                self.vMinute.lblOne.text = "\(self.minuteOne)"
-                
-                if self.minuteOne > 5 {
-                    self.minuteTwo = 0
-                    self.minuteOne = 0
-                    self.hourTwo += 1
-                    self.vMinute.lblOne.text = "\(self.minuteOne)"
-                    self.vHour.lblTwo.text = "\(self.hourTwo)"
-                    
-                    if self.hourTwo > 9 {
-                        self.hourTwo = 0
-                        self.hourOne += 1
-                        self.vHour.lblTwo.text = "\(self.hourTwo)"
-                        self.vHour.lblOne.text = "\(self.hourOne)"
-                    }
-                    
-                    if self.hourOne == 2 && self.hourTwo == 4 {
-                        self.hourOne = 0
-                        self.hourTwo = 0
-                        self.dayTwo += 1
-                        self.vHour.lblTwo.text = "\(self.hourTwo)"
-                        self.vHour.lblOne.text = "\(self.hourOne)"
-                        self.vHour.lblTwo.text = "\(self.hourTwo)"
-                        self.vDay.lblTwo.text = "\(self.dayTwo)"
-                        
-                        if self.dayTwo > 9 {
-                            self.dayTwo = 0
-                            self.dayOne += 1
-                            self.vDay.lblTwo.text = "\(self.dayTwo)"
-                            self.vDay.lblOne.text = "\(self.dayOne)"
-                        }
-                    }
-                }
-            }
+            self.vHour.setUpTime(time: ddhhmm.1)
+            self.vMinute.setUpTime(time: ddhhmm.2)
+            self.vDay.setUpTime(time: ddhhmm.0)
         })
     }
     
@@ -156,14 +74,73 @@ class TimeParkingCell: UITableViewCell {
     
     func setData(historyParkingDetail: HistoryBookingParkingResponse?) {
         guard let _historyParkingDetail = historyParkingDetail else { return }
-        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbExpectTime.text = _historyParkingDetail.update_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckInTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .hhmmddmmyyy)
-        lbCheckOutTime.text = _historyParkingDetail.intend_checkout_time?.toString(dateFormat: .hhmmddmmyyy)
+        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
+        lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
+        lbCheckOutTime.text = "-"
         
         
-        guard let checkinTime = _historyParkingDetail.intend_checkin_time?.timeIntervalSince1970 else { return }
+        guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
+        guard let intendCheckInTime = _historyParkingDetail.intend_checkin_time?.timeIntervalSince1970 else { return }
+        guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
+        self.newCurrentDate = current_server_time
+        self.checkinTime = checkinTime
+        self.intendCheckInTime = intendCheckInTime
+        setupTimeCount()
+    }
+    
+    func setDataCheckout(historyParkingDetail: HistoryBookingParkingResponse?) {
+        switch historyParkingDetail?.status {
+        case StatusBooking.checked_out.rawValue:
+            guard let _historyParkingDetail = historyParkingDetail else { return }
+            lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = _historyParkingDetail.time_check_in?.toString(dateFormat: .ecoTime)
+            lbCheckOutTime.text = _historyParkingDetail.time_check_out?.toString(dateFormat: .ecoTime)
+            
+            guard let checkInTime = historyParkingDetail?.time_check_in?.timeIntervalSince1970, let intendCheckInTime = historyParkingDetail?.intend_checkin_time?.timeIntervalSince1970,let checkOutTime = historyParkingDetail?.time_check_out?.timeIntervalSince1970 else { return }
+            
+            var ddhhmm = Utils.getTime(dateCheckIn: checkInTime, currentServerDate: checkOutTime)
+            
+            if intendCheckInTime < checkInTime {
+                ddhhmm = Utils.getTime(dateCheckIn: intendCheckInTime, currentServerDate: checkOutTime)
+            }
+            
+            vHour.setUpTime(time: ddhhmm.1)
+            vMinute.setUpTime(time: ddhhmm.2)
+            vDay.setUpTime(time: ddhhmm.0)
+        case StatusBooking.expired.rawValue:
+            guard let _historyParkingDetail = historyParkingDetail else { return }
+            lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = "-"
+            lbCheckOutTime.text = "-"
+            
+            case StatusBooking.cancel.rawValue:
+            guard let _historyParkingDetail = historyParkingDetail else { return }
+            lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+            lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
+            lbCheckInTime.text = "-"
+            lbCheckOutTime.text = "-"
+            
+        default:
+            break
+            
+        }
         
+    }
+    
+    func setDataBooking(historyParkingDetail: HistoryBookingParkingResponse?) {
+        guard let _historyParkingDetail = historyParkingDetail else { return }
+        lbBookingTime.text = _historyParkingDetail.create_time?.toString(dateFormat: .ecoTime)
+        lbExpectTime.text = _historyParkingDetail.intend_checkin_time?.toString(dateFormat: .ecoTime)
+        lbCheckInTime.text = "-"
+        lbCheckOutTime.text = "-"
+        
+        
+        guard let checkinTime = _historyParkingDetail.time_check_in?.timeIntervalSince1970 else { return }
+        guard let current_server_time = _historyParkingDetail.current_server_time?.timeIntervalSince1970 else { return }
+        self.newCurrentDate = current_server_time
         self.checkinTime = checkinTime
         
     }

@@ -19,8 +19,10 @@ protocol HistoryPartnerHoldingPresenterProtocol: class {
 
     var interactor: HistoryPartnerHoldingInteractorInputProtocol? { get set }
     
-    func getHistoryReservation(parkingID: String, status: String, keyword: String)
+    func getHistoryReservation(parkingID: String, status: String, keyword: String, offset: Int, limit: Int)
     func checkoutParking(bookingID: String, code: String, licensePlates: String)
+    func changeStatusCheckout(booking: String, bonus: String, plus_wallet_boss: String, parking_price: String, payment_wallet: String)
+    
 }
 
 //MARK: Interactor -
@@ -44,4 +46,5 @@ protocol HistoryPartnerHoldingViewProtocol: class {
     /* Presenter -> ViewController */
     func didGetHistoryReservation(historyParking: HistoryMyParkingEntity?)
     func didCheckout(historyParkingDetail: HistoryBookingParkingResponse?)
+    func didChangeStatusCheckout(historyCheckout: BookingDetailEntity)
 }

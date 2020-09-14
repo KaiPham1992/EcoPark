@@ -8,10 +8,10 @@
 
 
 // Menu Page Ecopark
-"MenuHistoryParking" = "History parking";
+"MenuHistoryParking" = "Transaction status parking";
 "MenuMyInfo" = "My parking info";
 "MenuFindAround" = "Find Park Around";
-"MenuHistory" = "My history";
+"MenuHistory" = "Transaction status";
 "MenuNotification" = "Notification";
 "MenuWallet" = "Eco Wallet";
 "MenuProfile" = "Profile";
@@ -28,13 +28,47 @@
 "NotificationDetail" = "Notification Detail";
 "System" = "System";
 "Giveme" = "Give me";
-
+"Owner" = "Parking owner";
 //other
 "searchNumberCar" = "Search by license plate";
 "date" = "Date";
 "hour" = "Hour";
 "minute" = "Minute";
-"switchStatusParking" = "Switch to ON if you want to operate";
+"switchStatusParkingOn" = "Switch to ON if you want to operate";
+"switchStatusParkingOff" = "Switch to OFF if you want to stop working";
+"bookingParkingDetail" = "See parking details";
+"titleBalance" = "Balance wallet Eco";
+"titleRecharge" = "Recharge";
+"total" = "Total payment";
+"parkingTiming" = "Parking Time";
+"userInfo" = "User Info";
+"ratingOfYou" = "Rating";
+
+"extend" = "Renewal addination 1 hour ";
+"ratingOfuser" = "Customer reviews";
+"NOT_ENOUGH_MONEY" = "You don't have enough money";
+"packet" = "packet";
+"check2Hours" = "You cannot checkout when the vehicle has been sent for less than 2 hours";
+"realMoney" = "Actual income of parking";
+"bonusEco" = "Bonus EcoParking";
+"KHPaidWallet" = "Customers pay for the wallet";
+"KHPaidCash" = "Customers pay cash";
+"changeWallet" = "Change wallet";
+"next1" = "Next";
+"textLoading1" = "YOU SEARCH FOR CARS?";
+"textLoading2" = "EcoParking will give you the best parking";
+"textLoading3" = "FAST BOOKING - CHEAP";
+"textLoading4" = "SMART - SAVE";
+"textLoading5" = "PLEASE LOG IN TO LEARN \nECOPARKING SERVICES";
+"parkingFeeUser" = "Total parking fee";
+
+// MARK: BookingPopUp
+"bookingPopUpTitle" = "Parking address";
+"bookingPopUpAttr1" = "The placeholder is valid in ";
+"bookingPopUpAttr2" = "hours from the scheduled time ";
+"bookingPopUpAttr3" = " please be on time";
+"bookingPopUpDirect" = "Get directions to the parking lot";
+"bookingPopUpDetail" = "See transaction details";
 "bookingParkingDetail" = "See parking details";
 
 // MARK: ParkingUserDetailViewController
@@ -42,7 +76,7 @@
 "titleType" = "Parking type";
 "titlePlace" = "Capacity";
 "titlePriceOne" = "Price for a hour";
-"titlePriceEight" = "Price for a packet 8 hours";
+"titlePriceEight" = "Price for a packet";
 "titleContactMe" = "Contact me";
 "titleDirection" = "Direct";
 "titleButtonKeepPlace" = "Booking now";
@@ -67,11 +101,11 @@
 "minute" = "minute";
 
 // Popup
-"receivable" = "Receicable: ";
-"carType" = "Vihecle type";
+"receivable" = "Receivable: ";
+"carType" = "Vehicle type";
 "licensePlate" = "License plate";
 "checkAgain" = "Check Again";
-"agreeCheckout" = "Allow checkout";
+"agreeCheckout" = "   Allow checkout   ";
 "contentCheckout" = "Confirm the fee and check the service completion";
 "titleNeedToPay" = "Need to pay: ";
 "titleEcoAccount" = "Account wallet ECO";
@@ -82,8 +116,9 @@
 "contentRating2" = " Are you satisfied with the parking service?";
 "sent" = "Sent";
 "timeExpect" = "Expected to parking lot at";
+"timeCheckout" = "Expected leave parking lot at";
 "invalid" = "Invalid";
-"contentQRFail1" = "This QR code is not part of the system";
+"contentQRFail1" = "This QR code is not part of the system ";
 "contentQRFail2" = "\nPlease make sure you have scanned the right information!";
 "retry" = "Retry";
 "questionLogout" = "Do you want to log out of this account?";
@@ -106,7 +141,7 @@
 //Title
 "titleHistoryParking" = "Parking transaction history";
 "titleHistoryDetail" = "Transaction detail";
-"titleWallet" = "Title Wallet";
+"titleWallet" = "Wallet";
 
 // Login Page
 
@@ -116,8 +151,8 @@
 "LoginButtonLogin" = "Login";
 "FBorGmail" = "Or login by";
 "ForgotPass" = "Forgot password";
-"NotYetAccount" = "You don't have any account? ";
-"Register" = "Register";
+"NotYetAccount" = "You don't have any account?";
+"Register" = "Register now!";
 "LoginButtonSignUp" = "REGISTER";
 "passwordDifference" = "Re-password is wrong!";
 "Username" = "Username";
@@ -131,7 +166,7 @@
 "PasswordSignUp" = "Password (Minimum of 6 characters) *";
 "RePasswordSignUp" = "Retype Password*";
 "EmailSignUp" = "Email *";
-"PhoneNumberSignUp" = "Phone NUmber";
+"PhoneNumberSignUp" = "Phone Number *";
 "Gender" = "Gender";
 "Birthday" = "Birth Day";
 "Capcha" = "Captcha *";
@@ -148,6 +183,8 @@
 "termAndPolicyText5" = "of ";
 "termAndPolicyText6" = "ECOPARKING.";
 
+"invalidTextSpecial" = "The username cannot contain any special characters";
+
 // Forgot password page
 "ForgotPasswordMessage" = "Enter the correct email in your account to get a new password:";
 "SentEmail" = "Send email";
@@ -162,18 +199,20 @@
 "honey_diamond_not_enough" = "Honey and diamod haven't enough please refill.";
 
 "invalidLoginEmail" = "Invalid email";
+"invalidLoginPhone" = "Invalid phone number";
 "invalidLoginPassword" = "Password must be more than 6 characters";
 "emptyLoginEmailPassword"  = "Please enter full information";
 "emptyCapcha" = "Please enter captcha code";
 
 "pleaseEnterEmail" = "Please enter email";
+"pleaseEnterPhone" = "Please enter phone number";
 "pleaseEnterDisplayName" = "Please enter display name";
 "pleaseEnterPassword" = "Please enter password";
 "pleaseEnterRePassword" = "Please enter Re-password";
 "pleaseTurnOnInternet" = "Please turn on the internet";
 
 // Change Language
-"vietnamese" = "Vietnamese";
+"vietnamese" = "Tiếng Việt";
 "english" = "English";
 
 // Profile
@@ -206,7 +245,7 @@
 "PartnerInfo" = "Partner Information";
 "PartnerName" = "Partner Name *";
 "PartnerID" = "Identity card number / CCCD Partner *";
-"IssuedBy" = "Issue By *";
+"IssuedBy" = "Issued By *";
 "DayBy" = "Day By *";
 "PartnerEmail" = "Partner Email";
 "PartnerImage" = "AUTHENTICIAL PICTURE";
@@ -222,25 +261,25 @@
 //error
 "errorNamePartner" = "Please enter parking owner";
 "errorIDNumber" = "Please enter ID Number";
-"errorIssueBy" = "Please enter issue by";
+"errorIssueBy" = "Please enter issued by";
 "errorDateBy" = "Please enter day by";
 "errorPhotoFront" = "Plesae select front photo ID card";
 "errorPhotoBackside" = "Plesae select backside photo ID card";
 // Sign Up Partner 2
 "ParkingInfo" = "Parking Info";
-"ParkingName" = "Paarking Name *";
+"ParkingName" = "Parking Name *";
 "ParkingType" = "Parking Type *";
 "ParkingCapacity" = "Parking Capacity *";
 "ParkingAddress" = "Parking Address *";
 "ParkingOpen" = "Open *";
 "ParkingClose" = "Close *";
 "ParkingPrice" = "Service Prices";
-"PriceAHours" = " A Hours *";
-"PriceCombo" = "A Combom (8 Hours) *";
+"PriceAHours" = "Price a hour";
+"PriceCombo" = "Price a packet";
 "ParkingLicense" = "Business License";
 "ParkingTaxCode" = "Tax Code";
-"hoursPrice" = "Price by the hour";
-"comboPrice" = "Price by combo";
+"hoursPrice" = "Price by a hour";
+"comboPrice" = "Price by packet";
 "capacity" = "Capacity";
 "place" = "Place";
 "vndHours" = "VND/ hours";
@@ -250,7 +289,7 @@
 
 //error
 "errorParkingName" = "Please enter parking name";
-"errorParkingType" = "Please enter parkingtype";
+"errorParkingType" = "Please enter parking type";
 "errorParkingCapacity" = "Please enter parking capacity";
 "errorParkingAddress" = "Please enter parking address";
 "errorOpenTime" = "Please select open time";
@@ -262,7 +301,17 @@
 "UtilityOther" = "Utility Other";
 "parkingImage" = "Parking Image";
 "parkingSubImage" = "Please take a picture of your parking, at least 2 photos and maximum of 4 images *";
-"parkingWaitingSignUp" = "Your request to become a partner is in the process of checking. ECOPARKING will contact you as soon as possible.";
+"parkingWaitingSignUp1" = "Your request to become a partner is in the process of checking. ";
+"parkingWaitingSignUp2" =  " will contact you as soon as possible.";
+
+
+"DoneSignUp" = "Sign up complete";
+"termAndPolicySignUp1" = "By clicking ";
+"termAndPolicySignUp2" = ", you agree with ";
+"termAndPolicySignUp3" = "rules ";
+"termAndPolicySignUp4" = "service policy ";
+"termAndPolicySignUp5" = "privacy policy ";
+"termAndPolicySignUp6" = "ours.";
 
 "errorMinimunPhoto" = "Please take a picture of your at least 2 photo";
 "errorUtility" = "Please select more utility";
@@ -270,7 +319,9 @@
 // logout
 "popUpLogout" = "Do you want to logout?";
 "agree" = "YES";
-"canceled" = "NO";
+"canceled" = "Canceled";
+"no" = "NO";
+"cancelBooking" = "Cancel";
 
 //QA
 
@@ -511,7 +562,7 @@
 // ERROR
 
 "WRONG_CAPTCHA" = "Wrong captcha code";
-"USER_IS_EXISTED" = "Email already exists";
+"USER_IS_EXISTED" = "Username already exists";
 "EMAIL_IS_EXISTED" = "Email already exists";
 "INVALID_USERNAME_OR_PASSWORD" = "Please check your email or password";
 "changePassswordSuccess" = "Change password successfully";
@@ -600,14 +651,31 @@
 "history" = "History";
 "book_at" = "Book at";
 "cancel" = "Cancel";
-"checked_out" = "Check out";
-"checked_in" = "Check in";
+"checked_out" = "Checked out";
+"checked_in" = "Checked in";
 "reservation" = "Reservation";
 "expired" = "Expired";
-"history_parking" = "History parking";
+"history_parking" = "Transaction status parking";
 "booked" = "Booked";
 "holding" = "Holding";
+"contactParking" = "Contact parking";
+"infoParking" = "Parking information";
+"expect" = "Expect";
+"NumberHoursSend" = "Number of hours to send";
+"FeeParking" = "Total parking fee";
+"Paid" = "Paid";
+"paidWithWallet" = "Pay more by wallet";
+"paidWithCash" = "Pay more by cash";
+"ScanCheckIn" = "Scan QR at parking lot to Check In";
+"statusCheckedIn" = "Checked in";
+"statusCheckedOut" = "Checked out";
+"ratingService" = "Evaluation of parking services";
+"registerYet1" = "DO YOU HAVE A VACANCY? ";
+"registerYet2" = "REGISTER FOR CAR PARKING ";
+"registerYet3" = "INCREASE MORE VALUE";
 
+
+"registerOwner" = "Register as a parking partner";
 
 // HOME
 "InputDestination" = "Enter destination";
@@ -629,3 +697,16 @@
 "MaxPlaceParking" = "Max place parking";
 "Slot" = "Slot";
 "TimeAction" = "Time Action";
+
+"SCAN_QR_FAILED" = "Scan QR failed";
+"HourSmaller" = "Time is less than current time";
+
+"HourSmaller" = "Time smaller than current";
+"ChooseDate" = "Please select date";
+"ChooseTime" = "Please select time";
+"ChooseTypeVehical" = "Please type vehical";
+"NotYetLisence" = "Please enter lisence";
+"TimeNotInRule" = "Time not in rule";
+"WaitApp" = "Resgiter onwer";
+"HAS_BOOKING_CHECKED_IN" = "You are checkin at other parking";
+"CHECKIN_EARLY" = "Can not check in early";

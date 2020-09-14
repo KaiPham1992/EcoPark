@@ -21,7 +21,7 @@ enum UserDefaultHelperKey: String {
     case deviceToken = "DeviceToken"
     case fcmToken = "FcmToken"
     case userToken = "UserToken"
-    case appLanguage = "AppLanguage"
+    case appLanguage = "appLanguage"
     
     
     case userName  = "UserName"
@@ -36,14 +36,17 @@ enum UserDefaultHelperKey: String {
     case isFirstLauch = "IsFirstLauch"
     case loginUserInfo = "loginUserInfo"
     case parkingID = "ParkingID"
+    case birthday = "birthday"
+    case numberHours = "numberHours"
+    case plate = "plate"
 }
 
 class UserDefaultHelper {
     static let shared = UserDefaultHelper()
     private let userDefaultManager = UserDefaults.standard
-//    var collectionProduct = ProductCollectionEntity()
+    //    var collectionProduct = ProductCollectionEntity()
     
-     var myLocationCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
+    var myLocationCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 10.7981483, longitude: 106.6715733)
     
     var loginUserInfo: UserEntity? {
         get {
@@ -59,6 +62,7 @@ class UserDefaultHelper {
             UserDefaults.standard.set(json, forKey: UserDefaultHelperKey.loginUserInfo.rawValue)
         }
     }
+    
     
     var fcmToken: String? {
         get {
@@ -105,8 +109,44 @@ class UserDefaultHelper {
     }
     
     var parkingID: String {
-        guard let _parkingID = get(key: .parkingID) as? String else { return "" }
-        return _parkingID
+        get {
+            guard let _parkingID = get(key: .parkingID) as? String else { return "" }
+            return _parkingID
+        }
+        set(newValue) {
+            save(value: newValue, key: .parkingID)
+        }
+    }
+    
+    var birthday: Date? {
+        get {
+            guard let _birthday = get(key: .birthday) as? Date else { return nil }
+            return _birthday
+        }
+        set(newValue) {
+            save(value: newValue, key: .birthday)
+        }
+    }
+    
+    var numberHours: String {
+        get {
+            guard let _numberHours = get(key: .numberHours) as? String else { return "" }
+            return _numberHours
+        }
+        
+        set(value) {
+            save(value: value, key: .numberHours)
+        }
+    }
+    
+    var plate: String {
+        get {
+            guard let _plate = get(key: .plate) as? String else { return "" }
+            return _plate
+        }
+        set(newValue) {
+            save(value: newValue, key: .plate)
+        }
     }
 }
 
@@ -123,6 +163,7 @@ extension UserDefaultHelper {
     func clearUser() {
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.userToken.rawValue)
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.loginUserInfo.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.birthday.rawValue)
     }
     
     func saveUser(user: UserEntity) {

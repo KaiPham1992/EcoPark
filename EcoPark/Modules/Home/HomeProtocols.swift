@@ -19,6 +19,8 @@ protocol HomePresenterProtocol: class {
 
     var interactor: HomeInteractorInputProtocol? { get set }
 //    func getListPark()
+    func getProfileUser()
+    func getNumberHours()
 }
 
 //MARK: Interactor -
@@ -42,4 +44,5 @@ protocol HomeViewProtocol: class {
 
     /* Presenter -> ViewController */
 //    func didGetListPark()
+    func didGetProfileUser(user: UserEntity)
 }

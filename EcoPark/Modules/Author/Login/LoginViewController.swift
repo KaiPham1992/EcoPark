@@ -43,7 +43,7 @@ class LoginViewController: BaseViewController {
     var loginType = LoginType.normal
     var paramLogin: Any?
     var passwordText: String = ""
-    
+    var isOwner: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,11 +65,21 @@ class LoginViewController: BaseViewController {
         vPassword.setImage(img:  AppImage.iconPadlock)
         vUserName.backgroundColor = AppColor.color_32_45_55
         vPassword.backgroundColor = AppColor.color_32_45_55
+        vPassword.tfInput.delegate = self
         vPassword.tfInput.isSecureTextEntry = true
         lbLanguage.text = LocalizableKey.language.showLanguage
+        btnLogin.setTitle(LocalizableKey.MenuLogin.showLanguage, for: .normal)
         btnEnglish.setTitle(LocalizableKey.english.showLanguage, for: .normal)
         btnVietnamese.setTitle(LocalizableKey.vietnamese.showLanguage, for: .normal)
-        vPassword.tfInput.delegate = self
+        lbForgot.text = LocalizableKey.ForgotPass.showLanguage
+        lbRegister.text = LocalizableKey.NotYetAccount.showLanguage + ", " + LocalizableKey.Register.showLanguage
+        if LanguageHelper.currentAppleLanguage() == "en" {
+            btnEnglish.backgroundColor = AppColor.color_0_129_255
+            btnVietnamese.backgroundColor = AppColor.gray999999
+        } else {
+            btnEnglish.backgroundColor = AppColor.gray999999
+            btnVietnamese.backgroundColor = AppColor.color_0_129_255
+        }
     }
     
     @IBAction func btnLoginTapped() {
@@ -91,11 +101,15 @@ class LoginViewController: BaseViewController {
     @IBAction func btnEnglishTapped() {
         btnEnglish.backgroundColor = AppColor.color_0_129_255
         btnVietnamese.backgroundColor = AppColor.gray999999
+        LanguageHelper.changeLanguage()
+        setTitleUI()
     }
     
     @IBAction func btnVietnameseTapped() {
         btnEnglish.backgroundColor = AppColor.gray999999
         btnVietnamese.backgroundColor = AppColor.color_0_129_255
+        LanguageHelper.changeLanguage()
+        setTitleUI()
     }
 }
 
@@ -111,11 +125,6 @@ extension LoginViewController {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterEmail.showLanguage)
             return false
         }
-        
-//        if let email = self.vUserName.tfInput.text, email.isValidEmail() == false {
-//            hideError(isHidden: false, message:  LocalizableKey.invalidLoginEmail.showLanguage)
-//            return false
-//        }
         if self.vPassword.tfInput.text == "" {
             hideError(isHidden: false, message: LocalizableKey.pleaseEnterPassword.showLanguage)
             return false
@@ -139,16 +148,19 @@ extension LoginViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func didLogin(user: UserEntity?) {
+        if UserDefaultHelper.shared.loginUserInfo?.userIsBoss == true {
+            self.isOwner = true
+        } else {
+            self.isOwner = false
+        }
         
         self.callBackLoginSuccessed?()
-        self.dismiss()
-//        AppRouter.shared.openHome()
-        guard let _user = user else { return }
-        UserDefaultHelper.shared.saveUser(user: _user)
+//        self.dismiss()
+         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     func didError(error: APIError?) {
-        guard let message = error?.message else { return }
+//        guard let message = error?.message else { return }
         UserDefaultHelper.shared.clearUser()
         hideError(isHidden: false, message:  LocalizableKey.INVALID_USERNAME_OR_PASSWORD.showLanguage)
     }
@@ -159,7 +171,6 @@ extension LoginViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == vPassword.tfInput {
-            
             var hashPassword = String()
             let newChar = string.first
             let offsetToUpdate = passwordText.index(passwordText.startIndex, offsetBy: range.location)
@@ -180,4 +191,5 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
+    
 }

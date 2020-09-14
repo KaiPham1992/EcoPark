@@ -23,6 +23,7 @@ class NotificationEntity: BaseEntity {
     var screen: String?
     var objectId: String?
     var url: URL?
+    var bookingID: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -36,6 +37,7 @@ class NotificationEntity: BaseEntity {
         self.actionKey <- map["action_key"]
         self.screen <- map["screen"]
         self.objectId <- map["obj_id"]
+        self.bookingID <-  map["booking_id"]
     }
     
     required init?(map: Map) {

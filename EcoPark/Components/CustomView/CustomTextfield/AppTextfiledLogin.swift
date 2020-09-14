@@ -11,9 +11,10 @@ import UIKit
 
 class AppTextfiledLogin: UIView {
     
-    lazy var tfInput: UITextField = {
-        let textfield = UITextField()
+    lazy var tfInput: CustomSecureTextField = {
+        let textfield = CustomSecureTextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
+        
         return textfield
     }()
     
@@ -74,5 +75,17 @@ class AppTextfiledLogin: UIView {
     
     func setImage(img: UIImage?) {
         image.image = img
+    }
+}
+
+class CustomSecureTextField: UITextField {
+    override func becomeFirstResponder() -> Bool {
+        super.becomeFirstResponder()
+
+        if !isSecureTextEntry { return true  }
+
+        if let currentText = text { insertText(currentText) }
+
+        return true
     }
 }

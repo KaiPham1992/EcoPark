@@ -34,6 +34,9 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     @IBOutlet weak var btnDeletePhotoBacksite: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var lbError: UILabel!
+    @IBOutlet weak var lbVndTime: UILabel!
+    @IBOutlet weak var lbVndPacKet: UILabel!
+    
     var presenter: SignUpPartnerStep2PresenterProtocol?
     
     var param: BossRegisterParam?
@@ -48,6 +51,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     var lat: Double = 0
     var long: Double = 0
+    var listParkingType: [ParkingTypeEntity] = []
+    var numberHours: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +62,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.getListParkingType()
+        presenter?.getNumberHours()
     }
     
     private func setupUI() {
@@ -67,6 +73,9 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         lbPrice.text = LocalizableKey.parkingPrice.showLanguage.uppercased()
         lbLicense.text = LocalizableKey.parkingLicense.showLanguage.uppercased()
         
+        lbVndTime.text = "VND" + LocalizableKey.eachHours.showLanguage
+        lbVndPacKet.text = "VND" + LocalizableKey.eachPackage.showLanguage
+        
         vParkingName.setTitleAndPlaceHolder(title: LocalizableKey.parkingName.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingType.setTitleAndPlaceHolder(title: LocalizableKey.parkingType.showLanguage, placeHolder: LocalizableKey.select.showLanguage)
         vParkingCapacity.setTitleAndPlaceHolder(title: LocalizableKey.parkingCapacity.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
@@ -74,8 +83,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         vParkingAddress.setPlaceHolder(placeHolder: LocalizableKey.enter.showLanguage)
         vOpen.setTitleAndPlaceHolder(title: LocalizableKey.parkingOpen.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vClose.setTitleAndPlaceHolder(title: LocalizableKey.parkingClose.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.pirceAHours.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
-        vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
+        vPriceAHours.setTitleAndPlaceHolder(title: LocalizableKey.priceAHours.showLanguage + " *", placeHolder: LocalizableKey.enter.showLanguage)
+        vPriceCombo.setTitleAndPlaceHolder(title: LocalizableKey.priceCombo.showLanguage + " (\(numberHours + " " + LocalizableKey.hour.showLanguage) *)", placeHolder: LocalizableKey.enter.showLanguage)
         vTaxCode.setTitleAndPlaceHolder(title: LocalizableKey.parkingTaxCode.showLanguage, placeHolder: LocalizableKey.enter.showLanguage)
         vParkingCapacity.tfInput.keyboardType = .numberPad
         vPriceAHours.tfInput.keyboardType = .numberPad
@@ -91,6 +100,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
         setTime()
         vStep.btnStep1.addTarget(self, action: #selector(btnStep1Tapped), for: .touchUpInside)
         vStep.btnStep3.addTarget(self, action: #selector(btnStep3Tapped), for: .touchUpInside)
+        vPriceAHours.tfInput.delegate = self
+        vPriceCombo.tfInput.delegate = self
     }
     
     @objc func btnStep1Tapped() {
@@ -99,6 +110,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @objc func btnStep3Tapped() {
         if validateInputData() {
+            let price = vPriceAHours.tfInput.text?.replacingOccurrences(of: ",", with: "")
+            let packetPrice = vPriceCombo.tfInput.text?.replacingOccurrences(of: ",", with: "")
             let param2 = BossRegisterParam(email: self.param?.email,
                                            fullname: self.param?.fullname,
                                            gender: self.param?.gender,
@@ -117,8 +130,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
                                            time_start: vOpen.getText(),
                                            time_end: vClose.getText(),
                                            code_tax: vTaxCode.getText(),
-                                           price: vPriceAHours.getText(),
-                                           package_price: vPriceCombo.getText(),
+                                           price: price,
+                                           package_price: packetPrice,
                                            material: [],
                                            parking_img_src: [],
                                            latAddress: lat,
@@ -134,6 +147,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
             self.imgFrontPhoto.image = _image
             self.btnDeletePhotoFront.isHidden = false
             self.presenter?.uploadImageFront(image: _image)
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -143,6 +158,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
             self.imgBacksidePhoto.image = _image
             self.btnDeletePhotoBacksite.isHidden = false
             self.presenter?.uploadImageBackside(image: _image)
+            self.btnNext.isEnabled = false
+            self.btnNext.backgroundColor = AppColor.color_136_136_136
         }
     }
     
@@ -160,6 +177,9 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     
     @IBAction func btnNextTapped() {
         if validateInputData() {
+            let price = vPriceAHours.tfInput.text?.replacingOccurrences(of: ",", with: "")
+            let packetPrice = vPriceCombo.tfInput.text?.replacingOccurrences(of: ",", with: "")
+            
             let param2 = BossRegisterParam(email: self.param?.email,
                                            fullname: self.param?.fullname,
                                            gender: self.param?.gender,
@@ -178,8 +198,8 @@ class SignUpPartnerStep2ViewController: BaseViewController {
                                            time_start: vOpen.getText(),
                                            time_end: vClose.getText(),
                                            code_tax: vTaxCode.getText(),
-                                           price: vPriceAHours.getText(),
-                                           package_price: vPriceCombo.getText(),
+                                           price: price,
+                                           package_price: packetPrice,
                                            material: [],
                                            parking_img_src: [],
                                            latAddress: lat,
@@ -190,7 +210,7 @@ class SignUpPartnerStep2ViewController: BaseViewController {
     }
     
     @IBAction func btnSelectAddressTapped() {
-        let vcHomeFind = HomeFindRouter.createModule()
+        let vcHomeFind = HomeFindRouter.createModule(address: "")
         vcHomeFind.delegate = self
         vcHomeFind.isSelectAddressSignUp = true
         self.push(controller: vcHomeFind)
@@ -308,38 +328,94 @@ extension SignUpPartnerStep2ViewController {
 extension SignUpPartnerStep2ViewController: SignUpPartnerStep2ViewProtocol {
     func didUploadImageFront(photo: String?) {
         self.urlPhoto_gpkd_front = photo ?? ""
+        btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
     
     func didUploadImageBackside(photo: String?) {
         self.urlPhoto_gpkd_backside = photo ?? ""
+        self.btnNext.isEnabled = true
+        self.btnNext.backgroundColor = AppColor.color_0_129_255
     }
     
     func didGetListParkingType(listParkingType: [ParkingTypeEntity]) {
+        self.listParkingType = listParkingType
         vParkingType.listItem = listParkingType.map({$0.name&})
         
+    }
+    
+    func didGetNumberHours(numberHours: String?) {
+        self.numberHours = numberHours ?? ""
+        setupUI()
     }
 }
 
 extension SignUpPartnerStep2ViewController: AppTextFieldDropDownDelegate {
-    func didChangedValue(sender: AppDropDown, item: Any) {
-        switch item as? String {
-        case "Bãi xe có mái che":
-            self.parkingTypeID = "1"
-        case "Bãi xe không có mái che":
-            self.parkingTypeID = "2"
-        case "Bãi xe tính tiền tự động":
-            self.parkingTypeID = "3"
-        case "Bãi xe đặc biệt":
-            self.parkingTypeID = "4"
-        default:
-            self.parkingTypeID = nil
-        }
+    func didChangedValue(sender: AppDropDown, item: Any, index: Int) {
+        
+        parkingTypeID = listParkingType[index]._id ?? ""
     }
 }
 
 extension SignUpPartnerStep2ViewController: HomeFindViewControllerDelegate {
     func didSelectMyLocation() {
+        getAddressFromLocation(pdblLatitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.latitude), withLongitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.longitude))
+    }
+    
+    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let lat: Double = Double("\(pdblLatitude)")!
+        //21.228124
+        let lon: Double = Double("\(pdblLongitude)")!
+        //72.833770
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = lat
+        center.longitude = lon
         
+        var resultAddress: String = ""
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+        
+        var addressString : String = ""
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                
+                guard let pm = placemarks  else { return }
+                
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+                    if pm.thoroughfare != nil {
+                        addressString = addressString + pm.thoroughfare! + ", "
+                    }
+                    
+                    if pm.subLocality != nil {
+                        addressString = addressString + pm.subLocality! + ", "
+                    }
+                    
+                    if pm.locality != nil {
+                        addressString = addressString + pm.locality! + ", "
+                    }
+                    if pm.country != nil {
+                        addressString = addressString + pm.country! + ", "
+                    }
+                    if pm.postalCode != nil {
+                        addressString = addressString + pm.postalCode! + " "
+                    }
+                    print(addressString)
+                    
+                    resultAddress =  addressString
+                }
+                
+                self.vParkingAddress.tvInput.text = resultAddress
+                self.vParkingAddress.lbPlaceHolder.text = ""
+                self.lat = Double(pdblLatitude)
+                self.long = Double(pdblLongitude)
+        })
+       
     }
     
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
@@ -350,5 +426,42 @@ extension SignUpPartnerStep2ViewController: HomeFindViewControllerDelegate {
     }
     
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
+        
+    }
+}
+extension SignUpPartnerStep2ViewController: UITextFieldDelegate {
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Uses the number format corresponding to your Locale
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = Locale.current
+        formatter.maximumFractionDigits = 0
+        
+        
+        // Uses the grouping separator corresponding to your Locale
+        // e.g. "," in the US, a space in France, and so on
+        if let groupingSeparator = formatter.groupingSeparator {
+            
+            if string == groupingSeparator {
+                return true
+            }
+            
+            
+            if let textWithoutGroupingSeparator = textField.text?.replacingOccurrences(of: groupingSeparator, with: "") {
+                var totalTextWithoutGroupingSeparators = textWithoutGroupingSeparator + string
+                if string.isEmpty { // pressed Backspace key
+                    totalTextWithoutGroupingSeparators.removeLast()
+                }
+                if let numberWithoutGroupingSeparator = formatter.number(from: totalTextWithoutGroupingSeparators),
+                    let formattedText = formatter.string(from: numberWithoutGroupingSeparator) {
+                    
+                    textField.text = formattedText
+                    return false
+                }
+            }
+        }
+        return true
     }
 }

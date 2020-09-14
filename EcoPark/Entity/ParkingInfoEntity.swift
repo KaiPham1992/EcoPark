@@ -44,6 +44,8 @@ class ParkingInfoEntity: BaseEntity {
     var parkedNumber: Int?
     var config_price: Double? = 1000
     var total_rating: String?
+    var wait_app: String?
+    var phone: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -83,7 +85,8 @@ class ParkingInfoEntity: BaseEntity {
         self.parkedNumber <- map["parked_number"]
         self.config_price <- (map["config_price"], StringToDoubleTransform())
         self.total_rating <- map["total_rating"]
-        
+        self.wait_app <- map["wait_app"]
+        self.phone <- map["phone"]
     }
     
     var url_gpkd_Before:  URL? {
@@ -107,7 +110,7 @@ class MaterialEntity: BaseEntity {
     var id: String?
     var name: String?
     var plain_name: String?
-    var is_active: String?
+    var is_active: String? = "0"
     var icon: String?
     var unset_icon: String?
     var type: UtilityModelType? {
@@ -128,9 +131,25 @@ class MaterialEntity: BaseEntity {
             case "ca phe":
                 return .coffee
             default:
-                return nil
+                return .superMarket
             }
         }
+    }
+    
+    var urlOn: URL? {
+        if icon& == "" {
+            return URL(string: "\(BASE_URL_IMAGE)\(unset_icon&)")
+        }
+        
+        return URL(string: "\(BASE_URL_IMAGE)\(icon&)")
+    }
+    
+    var urlOff: URL? {
+        if icon& == "" {
+            return URL(string: "\(BASE_URL_IMAGE)\(unset_icon&)")
+        }
+        
+        return URL(string: "\(BASE_URL_IMAGE)\(icon&)")
     }
     
     override func mapping(map: Map) {
@@ -139,9 +158,16 @@ class MaterialEntity: BaseEntity {
         id <- map["_id"]
         name <- map["name"]
         plain_name <- map["plain_name"]
-        is_active <- map["is_active"]
+        
         icon <- map["icon"]
         unset_icon <- map["unset_icon"]
+        is_active <- map["is_select"]
+        
+//        if unset_icon == nil {
+//            is_active = "0"
+//        } else {
+//            is_active = "1"
+//        }
     }
 }
 
@@ -163,5 +189,9 @@ class ImgEntity: BaseEntity {
             return BASE_URL_IMAGE + urlString
         }
         return ""
+    }
+    
+    var url: URL? {
+        return URL(string: imageURL&)
     }
 }

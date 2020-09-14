@@ -11,8 +11,11 @@ import Cosmos
 
 class RatingCell: UITableViewCell {
 
+    @IBOutlet weak var lbRating: UILabel!
+    @IBOutlet weak var vRating: CosmosView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        lbRating.text = LocalizableKey.ratingOfuser.showLanguage
     }
 }

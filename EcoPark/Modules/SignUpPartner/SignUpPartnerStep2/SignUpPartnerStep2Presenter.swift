@@ -37,7 +37,14 @@ class SignUpPartnerStep2Presenter: SignUpPartnerStep2PresenterProtocol, SignUpPa
         }
     }
     
-
+    func getNumberHours() {
+        Provider.shared.parkingAPIService.getNumberHours(success: { (booking) in
+            self.view?.didGetNumberHours(numberHours: booking?.number_hours)
+        }) { (_) in
+            
+        }
+    }
+    
     weak private var view: SignUpPartnerStep2ViewProtocol?
     var interactor: SignUpPartnerStep2InteractorInputProtocol?
     private let router: SignUpPartnerStep2WireframeProtocol

@@ -34,13 +34,17 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     var parkingSelected: ParkingEntity?
     
     /****** Default param - Fix me later. *****/
-    var star: [Int] = [1,2,3,4,5]
-    var distance = "1000"
-    var address = "chung cư 8x plus"
+    var star: [Int] = []
+    var distance = "500"
+    var address = ""
     /********************************/
     let zoomMap: Float = 14.0
     
     var isFirst: Bool = true
+    
+    // use check checkin and idCheckIn
+    var idBookingCheckIn = ""
+    var isHaveReserver: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +53,46 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         setUpMap(lat: 10.7981483, long: 106.6715733)
         vParkingSort.isHidden = true
         
-        getParking()
+        //        getParking()
         
         btnFilter.setTitle(LocalizableKey.FilterHome.showLanguage, for: UIControl.State.normal)
     }
     
+    
+    
+    func checkIconCheckInCheckOut() {
+        self.idBookingCheckIn = ""
+        self.isHaveReserver = false
+        
+        Provider.shared.parkingAPIService.getDoingBooking(success: { array in
+            for booking in array {
+                if booking.status == "checked_in" {
+                    self.idBookingCheckIn = booking.id&
+                }
+                
+                if booking.status& == StatusBooking.reservation.rawValue {
+                    self.isHaveReserver = true
+                }
+            }
+            
+            if self.isHaveReserver  {
+                 self.addButtonToNavigation(image: AppImage.iconCheckin, style: .right, action: #selector(self.btnCheckIn))
+            } else {
+                // have reserver
+                if self.idBookingCheckIn != "" {
+                    self.addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(self.btnCheckOut))
+                } else {
+                    self.navigationController?.navigationItem.rightBarButtonItem = nil
+                }
+                
+            }
+        }) { error in
+            
+        }
+    }
+    
     func getParking() {
+        
         ProgressView.shared.show()
         Provider.shared.userAPIService.getParking(lat: centerMapCoordinate.latitude.description, long: centerMapCoordinate.longitude.description, star: self.star, distance: self.distance, success: { parking in
             ProgressView.shared.hide()
@@ -88,7 +126,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.setUpNavigation()
         
         addMenu()
-        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
+        //        addButtonToNavigation(image: AppImage.iconCheckout, style: .right, action: #selector(btnCheckIn))
         setTitleBoldLeftNavigation(title: "ECOPARKING", action: nil)
         
         vParkingSort.btnOver.addTarget(self, action: #selector(showPopUpDetail), for: UIControl.Event.touchUpInside)
@@ -97,6 +135,11 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     @objc func btnMyLocationTapped() {
         setMyLocation()
+    }
+    
+    @objc func btnCheckOut() {
+        let vc = CheckOutRouter.createModule(bookingId: self.idBookingCheckIn)
+        self.push(controller: vc)
     }
     
     @objc func btnCheckIn() {
@@ -110,13 +153,18 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
                 Provider.shared.userAPIService.scanQRCheckIn(parkingId: qrcode[2], bossParkingId: qrcode[1], success: { bookingDetail in
                     ProgressView.shared.hide()
                     guard let bookingDetail = bookingDetail else { return }
-                   
-                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
-                    self.push(controller: vc)
+                    
+                    PopUpHelper.shared.showCheckIn(name: bookingDetail.fullname&, address: "Địa Chỉ", time: "12/12", width: 350, height: 220, completionYes: {
+                        //---
+                    }) {
+                        //---
+                    }
+                    
+                    //                    let vc = DetailParkingRouter.createModule(bookingDetailEntity: bookingDetail)
+                    //                    self.push(controller: vc)
                     
                 }) { error in
                     ProgressView.shared.hide()
-//                    guard let error = error else { return }
                 }
             }
         }
@@ -127,14 +175,30 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpNavigation()
+        
+        setFilter()
+        
+        checkIconCheckInCheckOut()
+        presenter?.getProfileUser()
+        presenter?.getNumberHours()
+    }
+    
+    func setFilter() {
+        if address == "" {
+                   btnFilter.isEnabled = false
+               } else {
+                   btnFilter.isEnabled = true
+               }
     }
     
     override func setUpViews() {
         super.setUpViews()
         vSearch.setTitleAndPlaceHolder(icon: AppImage.iconPlaceMap, placeHolder: LocalizableKey.InputDestination.showLanguage)
         vSearch.tapToTextField = {
-            let vc = HomeFindRouter.createModule()
+            let vc = HomeFindRouter.createModule(address: self.address)
             vc.delegate = self
+            self.star = []
+            
             self.push(controller: vc)
         }
     }
@@ -177,13 +241,25 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     @objc func btnBookingTapped() {
         if isLogin() {
-            let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
-            self.push(controller: bookingInfo)
+            let price = parkingSelected?.price ?? 1000
+            if let wallet = UserDefaultHelper.shared.loginUserInfo?.wallet, wallet >= price {
+                let bookingInfo = BookingInfoRouter.createModule(parking: self.parkingSelected)
+                self.push(controller: bookingInfo)
+            } else {
+                PopUpHelper.shared.showMessage(message: LocalizableKey.dontHaveMoney.showLanguage, width: self.popUpwidth) {
+                    
+                }
+            }
+            
         } else {
             showLoginScreen()
         }
     }
     
+    func didGetProfileUser(user: UserEntity) {
+        UserDefaultHelper.shared.saveUser(user: user)
+        UserDefaultHelper.shared.parkingID = user.parkingID ?? ""
+    }
 }
 extension HomeViewController: HomeFindViewControllerDelegate {
     func didSelectAddressSignUp(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
@@ -193,16 +269,19 @@ extension HomeViewController: HomeFindViewControllerDelegate {
     func didSelectAddress(address: String, lat: CLLocationDegrees, long: CLLocationDegrees) {
         setUpMap(lat: lat, long: long)
         self.address = address
+        self.vSearch.tfInput.text = address
         getParking()
     }
     
     func didSelectMyLocation() {
         print("did tap my location")
+        btnFilter.isEnabled = true
         
-        let newAddress = getAddressFromLocation(pdblLatitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.latitude), withLongitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.longitude))
-        self.address = newAddress
-        setMyLocation()
-        getParking()
+        getAddressFromLocation(pdblLatitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.latitude), withLongitude: CGFloat(UserDefaultHelper.shared.myLocationCoordinate.longitude))
+        
+        self.setMyLocation()
+        self.getParking()
+       
     }
 }
 
@@ -302,7 +381,7 @@ extension HomeViewController: GMSMapViewDelegate {
     }
     
     
-    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) -> String {
+    func getAddressFromLocation(pdblLatitude: CGFloat, withLongitude pdblLongitude: CGFloat) {
         var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
         let lat: Double = Double("\(pdblLatitude)")!
         //21.228124
@@ -311,6 +390,8 @@ extension HomeViewController: GMSMapViewDelegate {
         let ceo: CLGeocoder = CLGeocoder()
         center.latitude = lat
         center.longitude = lon
+        
+        centerMapCoordinate = center
         
         var resultAddress: String = ""
         
@@ -349,9 +430,11 @@ extension HomeViewController: GMSMapViewDelegate {
                     
                     resultAddress =  addressString
                 }
+                self.vSearch.tfInput.text = resultAddress
+                self.address = resultAddress
+                self.setFilter()
         })
-        
-        return resultAddress
+       
     }
 }
 

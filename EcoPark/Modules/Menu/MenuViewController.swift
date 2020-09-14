@@ -17,7 +17,6 @@ protocol MenuViewControllerDelegate: class {
     func signUpPartnerTapped()
 }
 
-
 class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var tbMenu: UITableView!
     var presenter: MenuPresenterProtocol?
@@ -29,6 +28,11 @@ class MenuViewController: UIViewController, MenuViewProtocol {
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var heightRegisterOwner: NSLayoutConstraint!
     @IBOutlet weak var lbLogout: UILabel!
+    @IBOutlet weak var lbRegister: UILabel!
+    
+     @IBOutlet weak var btnResgister: UIButton!
+    
+    var totalUnread: Int = 0
     
     var itemSelected: MenuItem?
     
@@ -58,7 +62,18 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         }
         tbMenu.reloadData()
         setUserName()
-        setRegisterOwner()
+//        setRegisterOwner()
+        
+        Provider.shared.notificationAPIService.getNotification(offset: 1, limit: 20, screen: "SYSTEM", success: { parent in
+            
+            if let number = parent?.totalUnread {
+                self.totalUnread = number
+            }
+            
+             self.tbMenu.reloadData()
+        }) { error in
+            
+        }
     }
     
     func setUserName() {
@@ -70,26 +85,43 @@ class MenuViewController: UIViewController, MenuViewProtocol {
             vRegisterOwner.isHidden = true
             imgAvatar.image = AppImage.iconUsername
         } else {
-            // LoggedIn user
+            lbOwner.text = LocalizableKey.Owner.showLanguage
             lbLogin.text = LocalizableKey.MenuLogout.showLanguage
             lbDisplayname.isHidden = false
-            lbOwner.isHidden = true
-            vRegisterOwner.isHidden = false
             imgAvatar.sd_setImage(with:  UserDefaultHelper.shared.loginUserInfo?.urlAvatar, placeholderImage: AppImage.imgPlaceHolder)
             lbDisplayname.text = UserDefaultHelper.shared.loginUserInfo?.nameShowUI
-            // LoggedIn owner
+            
+            let boldAttr = [NSAttributedString.Key.font: AppFont.fontBold15]
+            
+            let attrText = NSMutableAttributedString()
+            
+            let text1 = NSAttributedString(string: LocalizableKey.registerYet1.showLanguage)
+            let text2 = NSAttributedString(string: LocalizableKey.registerYet2.showLanguage, attributes: boldAttr)
+            let text3 = NSAttributedString(string: LocalizableKey.registerYet3.showLanguage)
+            
+            attrText.append(text1)
+            attrText.append(text2)
+            attrText.append(text3)
+            
+            lbRegister.textColor = AppColor.color_0_129_255
+            lbRegister.attributedText = attrText
+            btnResgister.setTitle(LocalizableKey.registerOwner.showLanguage, for: .normal)
+            
+            // login owner
+            if  UserDefaultHelper.shared.loginUserInfo?.userIsBoss == true {
+                lbOwner.isHidden = false
+                vRegisterOwner.isHidden = true
+                heightRegisterOwner.constant = 0
+                
+            } else {
+                // LoggedIn user
+                lbOwner.isHidden = true
+                vRegisterOwner.isHidden = false
+                heightRegisterOwner.constant = 120
+            }
         }
     }
-    
-    func setRegisterOwner() {
-        if UserDefaultHelper.shared.parkingID != "" || UserDefaultHelper.shared.loginUserInfo?.parkingID != "" {
-            vRegisterOwner.isHidden = true
-            heightRegisterOwner.constant = 0
-        } else {
-            vRegisterOwner.isHidden = false
-            heightRegisterOwner.constant = 100
-        }
-    }
+
     
     @IBAction func btnLoginLogoutTapped() {
         // need login
@@ -131,6 +163,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.menuItem = self.listMenuItem[indexPath.item]
         cell.btnLanguage.tag = indexPath.item
         cell.btnLanguage.addTarget(self, action: #selector(btnLanguageTapped), for: .touchUpInside)
+        cell.totalUnread = self.totalUnread
+        
         return cell
     }
     
@@ -156,10 +190,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         tbMenu.reloadData()
     }
     
-    @objc func btnLanguageTapped() {
+    @objc func btnLanguageTapped(sender: UIButton) {
         LanguageHelper.changeLanguage()
-        
         AppRouter.shared.openHomeView()
+       
     }
 }
 
