@@ -23,10 +23,12 @@ class HistoryPartnerPresenter: HistoryPartnerPresenterProtocol, HistoryPartnerIn
     }
 
     func getHistoryParking(parkingID: String, status: String, keyword: String) {
+        ProgressView.shared.showProgressOnWindow()
         Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID, status: status, keyword: keyword, success: { (historyParking) in
+            ProgressView.shared.hide()
             self.view?.didGetHistoryParking(historyParking: historyParking)
         }) { (error) in
-            
+            ProgressView.shared.hide()
         }
     }
 }

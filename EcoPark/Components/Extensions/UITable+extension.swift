@@ -1,9 +1,6 @@
 //
 //  UITable+extension.swift
-//  EnglishApp
 //
-//  Created by Kai Pham on 5/11/19.
-//  Copyright © 2019 demo. All rights reserved.
 //
 
 import Foundation

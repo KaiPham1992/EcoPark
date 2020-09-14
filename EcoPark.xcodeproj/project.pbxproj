@@ -6509,7 +6509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Dev.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ngoc Duong (39DGKB335U)";
+				CODE_SIGN_IDENTITY = "Apple Development: Le Thanh Lê (BD8Y347428)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = Q3TBY53XUC;
@@ -6534,7 +6534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EnglishApp_Dev.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ENGMA Engineering Services Trading Company Limited (Q3TBY53XUC)";
+				CODE_SIGN_IDENTITY = "Apple Development: Le Thanh Lê (BD8Y347428)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = Q3TBY53XUC;
