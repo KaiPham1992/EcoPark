@@ -238,4 +238,9 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let bookingID = listWalletHistory[indexPath.item].booking_id else { return}
+        let vc = DetailParkingRouter.createModule(bookingID: bookingID)
+        self.push(controller: vc)
+    }
 }
