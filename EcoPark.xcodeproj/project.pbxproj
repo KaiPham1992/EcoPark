@@ -242,6 +242,12 @@
 		1792FE7523867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		1792FE7623867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
 		1792FE7723867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */; };
+		17AE6F882510ACD900C3F36F /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17AE6F862510ACD900C3F36F /* GoogleService-Prod-Info.plist */; };
+		17AE6F892510ACD900C3F36F /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17AE6F862510ACD900C3F36F /* GoogleService-Prod-Info.plist */; };
+		17AE6F8A2510ACD900C3F36F /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17AE6F862510ACD900C3F36F /* GoogleService-Prod-Info.plist */; };
+		17AE6F8B2510ACD900C3F36F /* GoogleService-Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17AE6F872510ACD900C3F36F /* GoogleService-Dev-Info.plist */; };
+		17AE6F8C2510ACD900C3F36F /* GoogleService-Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17AE6F872510ACD900C3F36F /* GoogleService-Dev-Info.plist */; };
+		17AE6F8D2510ACD900C3F36F /* GoogleService-Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17AE6F872510ACD900C3F36F /* GoogleService-Dev-Info.plist */; };
 		17B9197C23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
 		17B9197D23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
 		17B9197E23B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */; };
@@ -1149,8 +1155,8 @@
 		DE1F61B9228573950024223F /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F61B8228573950024223F /* AppConstant.swift */; };
 		DE2ADE5622841756003768CE /* AppDelegate+GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE5122841755003768CE /* AppDelegate+GoogleSignIn.swift */; };
 		DE2ADE5722841756003768CE /* AppDelegate+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE5222841755003768CE /* AppDelegate+Push.swift */; };
-		DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */; };
-		DE2ADE5922841756003768CE /* GoogleService-Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5522841755003768CE /* GoogleService-Dev-Info.plist */; };
+		DE2ADE5822841756003768CE /* GoogleService-Prod-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info1.plist */; };
+		DE2ADE5922841756003768CE /* GoogleService-Dev-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5522841755003768CE /* GoogleService-Dev-Info1.plist */; };
 		DE2ADE5D22841A68003768CE /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE5C22841A68003768CE /* SideMenuViewController.swift */; };
 		DE2ADE7522841BB9003768CE /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE6F22841BB9003768CE /* MenuPresenter.swift */; };
 		DE2ADE7622841BB9003768CE /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ADE7022841BB9003768CE /* MenuRouter.swift */; };
@@ -1462,11 +1468,11 @@
 		DE95304A2287DF4800E3F688 /* AppSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E1D2283E60500FA3B0D /* AppSearchBar.xib */; };
 		DE95304B2287DF4800E3F688 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE7422841BB9003768CE /* MenuViewController.xib */; };
 		DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E3B2283E60500FA3B0D /* AppCheckBox.xib */; };
-		DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5522841755003768CE /* GoogleService-Dev-Info.plist */; };
+		DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5522841755003768CE /* GoogleService-Dev-Info1.plist */; };
 		DE95304E2287DF4800E3F688 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361DD52283E4BD00FA3B0D /* LoginViewController.xib */; };
 		DE95304F2287DF4800E3F688 /* YesNoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E5A2283E60500FA3B0D /* YesNoContentView.xib */; };
 		DE9530502287DF4800E3F688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3462283DD990037DBE4 /* LaunchScreen.storyboard */; };
-		DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */; };
+		DE9530512287DF4800E3F688 /* GoogleService-Prod-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info1.plist */; };
 		DE9530532287DF4800E3F688 /* AppTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E122283E60500FA3B0D /* AppTextField.xib */; };
 		DE95305F2287DF6400E3F688 /* KActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE952F582287D2A700E3F688 /* KActivityIndicatorAnimationPacman.swift */; };
 		DE9530602287DF6400E3F688 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECF88B22871D0400A4678B /* SignUpViewController.swift */; };
@@ -1613,11 +1619,11 @@
 		DE9530F82287DF6400E3F688 /* AppSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E1D2283E60500FA3B0D /* AppSearchBar.xib */; };
 		DE9530F92287DF6400E3F688 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE7422841BB9003768CE /* MenuViewController.xib */; };
 		DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E3B2283E60500FA3B0D /* AppCheckBox.xib */; };
-		DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5522841755003768CE /* GoogleService-Dev-Info.plist */; };
+		DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5522841755003768CE /* GoogleService-Dev-Info1.plist */; };
 		DE9530FC2287DF6400E3F688 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361DD52283E4BD00FA3B0D /* LoginViewController.xib */; };
 		DE9530FD2287DF6400E3F688 /* YesNoContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E5A2283E60500FA3B0D /* YesNoContentView.xib */; };
 		DE9530FE2287DF6400E3F688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3CC3462283DD990037DBE4 /* LaunchScreen.storyboard */; };
-		DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */; };
+		DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2ADE5422841755003768CE /* GoogleService-Prod-Info1.plist */; };
 		DE9531012287DF6400E3F688 /* AppTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE361E122283E60500FA3B0D /* AppTextField.xib */; };
 		DE95310E2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */; };
 		DE95310F2287DFFB00E3F688 /* EcoPark_Prod-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE95310C2287DFFB00E3F688 /* EcoPark_Prod-Info.plist */; };
@@ -1780,6 +1786,8 @@
 		17848B6923803057008B3A85 /* ImageParkingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageParkingViewController.xib; sourceTree = "<group>"; };
 		1792FE7023867A160040C8A3 /* OtherPriceCheckoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPriceCheckoutCell.swift; sourceTree = "<group>"; };
 		1792FE7123867A160040C8A3 /* OtherPriceCheckoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPriceCheckoutCell.xib; sourceTree = "<group>"; };
+		17AE6F862510ACD900C3F36F /* GoogleService-Prod-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Prod-Info.plist"; sourceTree = "<group>"; };
+		17AE6F872510ACD900C3F36F /* GoogleService-Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Dev-Info.plist"; sourceTree = "<group>"; };
 		17B9197623B86BD60089B936 /* HistoryPartnerDetailCheckAgainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainPresenter.swift; sourceTree = "<group>"; };
 		17B9197723B86BD60089B936 /* HistoryPartnerDetailCheckAgainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainRouter.swift; sourceTree = "<group>"; };
 		17B9197823B86BD60089B936 /* HistoryPartnerDetailCheckAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPartnerDetailCheckAgainViewController.swift; sourceTree = "<group>"; };
@@ -2107,8 +2115,8 @@
 		DE1F61B8228573950024223F /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		DE2ADE5122841755003768CE /* AppDelegate+GoogleSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+GoogleSignIn.swift"; sourceTree = "<group>"; };
 		DE2ADE5222841755003768CE /* AppDelegate+Push.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Push.swift"; sourceTree = "<group>"; };
-		DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Prod-Info.plist"; sourceTree = "<group>"; };
-		DE2ADE5522841755003768CE /* GoogleService-Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Dev-Info.plist"; sourceTree = "<group>"; };
+		DE2ADE5422841755003768CE /* GoogleService-Prod-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Prod-Info1.plist"; sourceTree = "<group>"; };
+		DE2ADE5522841755003768CE /* GoogleService-Dev-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Dev-Info1.plist"; sourceTree = "<group>"; };
 		DE2ADE5C22841A68003768CE /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		DE2ADE6F22841BB9003768CE /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		DE2ADE7022841BB9003768CE /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
@@ -3690,8 +3698,10 @@
 		DE2ADE5322841755003768CE /* GoogleInfo */ = {
 			isa = PBXGroup;
 			children = (
-				DE2ADE5422841755003768CE /* GoogleService-Prod-Info.plist */,
-				DE2ADE5522841755003768CE /* GoogleService-Dev-Info.plist */,
+				17AE6F872510ACD900C3F36F /* GoogleService-Dev-Info.plist */,
+				17AE6F862510ACD900C3F36F /* GoogleService-Prod-Info.plist */,
+				DE2ADE5422841755003768CE /* GoogleService-Prod-Info1.plist */,
+				DE2ADE5522841755003768CE /* GoogleService-Dev-Info1.plist */,
 			);
 			path = GoogleInfo;
 			sourceTree = "<group>";
@@ -4591,6 +4601,7 @@
 				DEECF8A122871D1B00A4678B /* ForgotPasswordViewController.xib in Resources */,
 				1792FE7523867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */,
 				2A456817236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
+				17AE6F882510ACD900C3F36F /* GoogleService-Prod-Info.plist in Resources */,
 				17389E5E23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */,
 				17C2C4C7236C28040020B299 /* ParkingInfoCell.xib in Resources */,
 				22EB900823683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
@@ -4638,6 +4649,7 @@
 				DE361E832283E60500FA3B0D /* AppDropDownCell.xib in Resources */,
 				22BE84BD236975030056DD51 /* UtilityView.xib in Resources */,
 				7615D239236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
+				17AE6F8B2510ACD900C3F36F /* GoogleService-Dev-Info.plist in Resources */,
 				766AE80022B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174A235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				B178992F237CFC4300BC529E /* MessagePopUpContent.xib in Resources */,
@@ -4669,7 +4681,7 @@
 				17848B7923803057008B3A85 /* ImageParkingViewController.xib in Resources */,
 				DE361E8C2283E60500FA3B0D /* AppCheckBox.xib in Resources */,
 				76EF7E1223706FC50038486A /* HistoryPartnerQRScannerViewController.xib in Resources */,
-				DE2ADE5922841756003768CE /* GoogleService-Dev-Info.plist in Resources */,
+				DE2ADE5922841756003768CE /* GoogleService-Dev-Info1.plist in Resources */,
 				DE361DDB2283E4BD00FA3B0D /* LoginViewController.xib in Resources */,
 				76BD143B22ACC75500A48635 /* ReportQuestionView.xib in Resources */,
 				DE361EA02283E60500FA3B0D /* YesNoContentView.xib in Resources */,
@@ -4693,7 +4705,7 @@
 				DEC7F92522C4EDAA0096D3D1 /* Comfortaa-Bold.ttf in Resources */,
 				175C7360236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B31F236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
-				DE2ADE5822841756003768CE /* GoogleService-Prod-Info.plist in Resources */,
+				DE2ADE5822841756003768CE /* GoogleService-Prod-Info1.plist in Resources */,
 				DE9531142287E00900E3F688 /* EcoPark_Dev-Info.plist in Resources */,
 				2ACBE6EA2376CDD70067C413 /* RatingCell.xib in Resources */,
 				2ACBE6F32376D0210067C413 /* RealParkingCell.xib in Resources */,
@@ -4723,6 +4735,7 @@
 				DE9530432287DF4800E3F688 /* ForgotPasswordViewController.xib in Resources */,
 				1792FE7623867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */,
 				2A456818236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
+				17AE6F892510ACD900C3F36F /* GoogleService-Prod-Info.plist in Resources */,
 				17389E5F23851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */,
 				22EB900923683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92922C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
@@ -4770,6 +4783,7 @@
 				766AE80122B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174B235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				7615D23A236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
+				17AE6F8C2510ACD900C3F36F /* GoogleService-Dev-Info.plist in Resources */,
 				22AE220C236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749E22C88A910015A75C /* Assets.xcassets in Resources */,
 				B1789930237CFC4300BC529E /* MessagePopUpContent.xib in Resources */,
@@ -4795,7 +4809,7 @@
 				2A07B9A4236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431748235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE95304C2287DF4800E3F688 /* AppCheckBox.xib in Resources */,
-				DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info.plist in Resources */,
+				DE95304D2287DF4800E3F688 /* GoogleService-Dev-Info1.plist in Resources */,
 				7666285C236D88A100019B4E /* PaymentPopUpContent.xib in Resources */,
 				76682F51236EB74500F49482 /* SystemNotificationViewController.xib in Resources */,
 				17848B7A23803057008B3A85 /* ImageParkingViewController.xib in Resources */,
@@ -4824,7 +4838,7 @@
 				22B1DC6023A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				175C7361236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B320236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
-				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info.plist in Resources */,
+				DE9530512287DF4800E3F688 /* GoogleService-Prod-Info1.plist in Resources */,
 				DE9531152287E00900E3F688 /* EcoPark_Dev-Info.plist in Resources */,
 				22B4B326236ABC4C004BD8FB /* PreviewPhotoViewController.xib in Resources */,
 				2ACBE6EB2376CDD70067C413 /* RatingCell.xib in Resources */,
@@ -4855,6 +4869,7 @@
 				DE9530F12287DF6400E3F688 /* ForgotPasswordViewController.xib in Resources */,
 				1792FE7723867A160040C8A3 /* OtherPriceCheckoutCell.xib in Resources */,
 				2A456819236C81D800A23FB0 /* HistoryParkingViewController.xib in Resources */,
+				17AE6F8A2510ACD900C3F36F /* GoogleService-Prod-Info.plist in Resources */,
 				17389E6023851B4400ABED8B /* HistoryPartnerDetailCheckoutViewController.xib in Resources */,
 				22EB900A23683B0900F77BC0 /* ParkingDetailContent.xib in Resources */,
 				DEC7F92A22C4EDAA0096D3D1 /* Comfortaa-Light.ttf in Resources */,
@@ -4902,6 +4917,7 @@
 				766AE80222B0234D002D474E /* UpdateFeatureView.xib in Resources */,
 				2243174C235EBCBF00CA1E13 /* OpenSans-Light.ttf in Resources */,
 				7615D23B236C7EA800781AD3 /* QRScannerViewController.xib in Resources */,
+				17AE6F8D2510ACD900C3F36F /* GoogleService-Dev-Info.plist in Resources */,
 				22AE220D236C1A6100148E2C /* AppRatingView.xib in Resources */,
 				7680749F22C88A910015A75C /* Assets.xcassets in Resources */,
 				B1789931237CFC4300BC529E /* MessagePopUpContent.xib in Resources */,
@@ -4927,7 +4943,7 @@
 				2A07B9A5236E9BB1004FE7CE /* ImageLabelView.xib in Resources */,
 				22431749235EBCBF00CA1E13 /* OpenSans-Regular.ttf in Resources */,
 				DE9530FA2287DF6400E3F688 /* AppCheckBox.xib in Resources */,
-				DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info.plist in Resources */,
+				DE9530FB2287DF6400E3F688 /* GoogleService-Dev-Info1.plist in Resources */,
 				7666285D236D88A100019B4E /* PaymentPopUpContent.xib in Resources */,
 				76682F52236EB74500F49482 /* SystemNotificationViewController.xib in Resources */,
 				17848B7B23803057008B3A85 /* ImageParkingViewController.xib in Resources */,
@@ -4956,7 +4972,7 @@
 				22B1DC6123A9D0100041A03C /* SelectCarPopUpContent.xib in Resources */,
 				175C7362236836C7009F03F6 /* SignUpPartnerStep1ViewController.xib in Resources */,
 				22B4B321236ABC4C004BD8FB /* AppImageSlide.xib in Resources */,
-				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info.plist in Resources */,
+				DE9530FF2287DF6400E3F688 /* GoogleService-Prod-Info1.plist in Resources */,
 				DE9531162287E00A00E3F688 /* EcoPark_Dev-Info.plist in Resources */,
 				22B4B327236ABC4C004BD8FB /* PreviewPhotoViewController.xib in Resources */,
 				2ACBE6EC2376CDD70067C413 /* RatingCell.xib in Resources */,

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>700177157720-4dmqlaejsk573e6s0fbaqehi5r44amrf.apps.googleusercontent.com</string>
+	<string>925930271420-g38602u84281v4htrbc2um3o7i70jbi8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.700177157720-4dmqlaejsk573e6s0fbaqehi5r44amrf</string>
+	<string>com.googleusercontent.apps.925930271420-g38602u84281v4htrbc2um3o7i70jbi8</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBVyXDsUb4mroZ8-wKEGbtgf0jVeJMyo1E</string>
+	<string>AIzaSyAwDru9BQm6Vj7DeyCSfqZgAJc3V748aug</string>
 	<key>GCM_SENDER_ID</key>
-	<string>700177157720</string>
+	<string>925930271420</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.engma.ecopark-ios</string>
+	<string>com.nghianguyen.obee-ios</string>
 	<key>PROJECT_ID</key>
-	<string>ecoparkingdev</string>
+	<string>obee-4fa12</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ecoparkingdev.appspot.com</string>
+	<string>obee-4fa12.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:700177157720:ios:2857ae4d23a5bc6182c42d</string>
+	<string>1:925930271420:ios:2908ccbd034d701f</string>
 	<key>DATABASE_URL</key>
-	<string>https://ecoparkingdev.firebaseio.com</string>
+	<string>https://obee-4fa12.firebaseio.com</string>
 </dict>
 </plist>

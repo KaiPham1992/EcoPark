@@ -444,7 +444,8 @@ extension DetailParkingViewController: DetailParkingViewProtocol {
     
     func didGetBookingDetail(info: BookingDetailEntity) {
         displayData(info: info)
-        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(info.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":")
+        
+//        DLVBillFor8Hour.setupViewUnit(title: LocalizableKey.priceCombo.showLanguage + " \(info.number_hours_in_package?.toCurrencyNoVND ?? "") " + LocalizableKey.Hours.showLanguage + ":")
     }
     
     // MARK: Error

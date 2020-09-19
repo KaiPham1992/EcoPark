@@ -46,6 +46,7 @@ class ParkingInfoEntity: BaseEntity {
     var total_rating: String?
     var wait_app: String?
     var phone: String?
+    var number_hours_in_package: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)
@@ -87,6 +88,7 @@ class ParkingInfoEntity: BaseEntity {
         self.total_rating <- map["total_rating"]
         self.wait_app <- map["wait_app"]
         self.phone <- map["phone"]
+        self.number_hours_in_package <- map["number_hours_in_package"]
     }
     
     var url_gpkd_Before:  URL? {

@@ -10,11 +10,19 @@
 import GoogleMaps
 import GooglePlaces
 import Firebase
+//
+//#if PROD
+//    let googleApiKey = "AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
+//#else
+//    let googleApiKey = "AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
+//#endif
 
+
+//new
 #if PROD
-    let googleApiKey = "AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
+    let googleApiKey = "AIzaSyDPoQe4Gjz8jIyiDYzugeHspDXNqdXWtA4"
 #else
-    let googleApiKey = "AIzaSyBAyFmdfB3RdIWjocHRQnYOE0Bv0BxaXaA"
+    let googleApiKey = "AIzaSyDPoQe4Gjz8jIyiDYzugeHspDXNqdXWtA4"
 #endif
 
 extension AppDelegate {

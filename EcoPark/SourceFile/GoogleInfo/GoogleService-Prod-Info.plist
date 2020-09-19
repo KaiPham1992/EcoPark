@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>925930271420-g38602u84281v4htrbc2um3o7i70jbi8.apps.googleusercontent.com</string>
+	<string>449832028116-namnj8rok34pvmo2jlsgprp8ki68ja39.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.925930271420-g38602u84281v4htrbc2um3o7i70jbi8</string>
+	<string>com.googleusercontent.apps.449832028116-namnj8rok34pvmo2jlsgprp8ki68ja39</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>449832028116-9h30ej0260qu2me4e7t4ok0fiuvjut68.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAwDru9BQm6Vj7DeyCSfqZgAJc3V748aug</string>
+	<string>AIzaSyDPoQe4Gjz8jIyiDYzugeHspDXNqdXWtA4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>925930271420</string>
+	<string>449832028116</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.nghianguyen.obee-ios</string>
+	<string>com.engma.ecopark-ios</string>
 	<key>PROJECT_ID</key>
-	<string>obee-4fa12</string>
+	<string>ecoparking-27dcf</string>
 	<key>STORAGE_BUCKET</key>
-	<string>obee-4fa12.appspot.com</string>
+	<string>ecoparking-27dcf.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:925930271420:ios:2908ccbd034d701f</string>
+	<string>1:449832028116:ios:c59c84cd7438cc710b7841</string>
 	<key>DATABASE_URL</key>
-	<string>https://obee-4fa12.firebaseio.com</string>
+	<string>https://ecoparking-27dcf.firebaseio.com</string>
 </dict>
 </plist>
