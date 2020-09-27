@@ -164,6 +164,7 @@ extension UserDefaultHelper {
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.userToken.rawValue)
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.loginUserInfo.rawValue)
         UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.birthday.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultHelperKey.parkingID.rawValue)
     }
     
     func saveUser(user: UserEntity) {

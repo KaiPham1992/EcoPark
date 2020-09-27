@@ -68,6 +68,7 @@ class DetailParkingViewController: BaseViewController {
     weak var delegate: DetailParkingViewControllerDelegate?
     
     var timer: Timer?
+    var isFromList = false
     
     override func setUpViews() {
         super.setUpViews()
@@ -101,6 +102,12 @@ class DetailParkingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if isFromList {
+            addBackToNavigation()
+        } else {
+            addMenu()
+        }
         
         getBookingDetail()
         
