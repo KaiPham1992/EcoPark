@@ -29,6 +29,7 @@ class HistoryWallet: BaseEntity {
     var is_active: Bool?
     var booking_id: String?
     var parking_id: String?
+    var boss_id: String?
     
     override func mapping(map: Map) {
         self.id <- map["_id"]
@@ -40,5 +41,6 @@ class HistoryWallet: BaseEntity {
         self.is_active <- map["is_active"]
         self.booking_id <- map["booking_id"]
         self.parking_id <- map["parking_id"]
+        self.boss_id <- map["boss_id"]
     }
 }

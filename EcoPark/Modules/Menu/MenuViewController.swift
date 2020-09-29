@@ -74,6 +74,13 @@ class MenuViewController: UIViewController, MenuViewProtocol {
         }) { error in
             
         }
+        
+        Provider.shared.userAPIService.getProfileUser(success: { (user) in
+            guard let _user = user else { return }
+            UserDefaultHelper.shared.saveUser(user: _user)
+        }) { (error) in
+            
+        }
     }
     
     func setUserName() {

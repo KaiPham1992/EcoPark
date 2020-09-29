@@ -68,10 +68,10 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     func getData() {
-        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-        if parkingID == "" || parkingID == nil {
-            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-        }
+        var parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//        if parkingID == "" || parkingID == nil {
+//            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//        }
         presenter?.getParkingInfo(id: parkingID&)
         presenter?.getListParkingType()
         presenter?.getNumberHours()

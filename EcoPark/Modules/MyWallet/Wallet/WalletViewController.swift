@@ -239,15 +239,25 @@ extension WalletViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let bookingID = listWalletHistory[indexPath.item].booking_id else { return}
-        if let parkingID = listWalletHistory[indexPath.item].parking_id {
+        if UserDefaultHelper.shared.loginUserInfo?.userIsBoss == true {
+            guard let bookingID = listWalletHistory[indexPath.item].booking_id, let parkingID = listWalletHistory[indexPath.item].parking_id  else { return}
+            if  listWalletHistory[indexPath.item].boss_id != nil {
+                
+                let vc = DetailParkingRouter.createModule(bookingID: bookingID)
+                vc.isFromList = true
+                self.push(controller: vc)
+                return
+            }
+            
             let vc = HistoryPartnerDetailCheckoutRouter.createModule(bookingID: bookingID, parkingID: parkingID)
             vc.isFromList = true
             self.push(controller: vc)
-            return
+        } else {
+            guard let bookingID = listWalletHistory[indexPath.item].booking_id else { return }
+            let vc = DetailParkingRouter.createModule(bookingID: bookingID)
+            vc.isFromList = true
+            self.push(controller: vc)
         }
-        let vc = DetailParkingRouter.createModule(bookingID: bookingID)
-        vc.isFromList = true
-        self.push(controller: vc)
+        
     }
 }
