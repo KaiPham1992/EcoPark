@@ -44,20 +44,20 @@ class HistoryPartnerHoldingViewController: BaseViewController {
         
         vSearch.actionSearch = { text in
             self.isRefresh = true
-            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-            if parkingID == "" || parkingID == nil {
-                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-            }
+//            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//            if parkingID == "" || parkingID == nil {
+                let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//            }
             self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text, offset: 0, limit: limitLoad)
         }
         
         vSearch.tapToTextField = {
             self.isRefresh = true
             let text = self.vSearch.tfInput.text!
-            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-            if parkingID == "" || parkingID == nil {
-                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-            }
+//            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//            if parkingID == "" || parkingID == nil {
+                let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//            }
             self.presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: text, offset: 0, limit: limitLoad)
         }
     }
@@ -74,10 +74,10 @@ class HistoryPartnerHoldingViewController: BaseViewController {
     }
     
     private func getData() {
-        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-        if parkingID == "" || parkingID == nil {
-            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-        }
+//        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//        if parkingID == "" || parkingID == nil {
+            let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//        }
         
         presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "", offset: 0, limit: limitLoad)
     }
@@ -129,10 +129,10 @@ extension HistoryPartnerHoldingViewController: UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let count = historyParkingHolding?.booking.count else { return }
         if indexPath.item == count - 5 && isCanLoadMore {
-            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-            if parkingID == "" || parkingID == nil {
-                parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-            }
+//            var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//            if parkingID == "" || parkingID == nil {
+                let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//            }
             print("load more")
             presenter?.getHistoryReservation(parkingID: parkingID&, status: "checked_in", keyword: "", offset: count, limit: limitLoad)
         }

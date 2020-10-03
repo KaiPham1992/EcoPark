@@ -78,10 +78,10 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     @IBAction func swActive() {
-        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-        if parkingID == "" || parkingID == nil {
-            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-        }
+//        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//        if parkingID == "" || parkingID == nil {
+            let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//        }
         if vActive.isOn {
             lbActive.text = LocalizableKey.switchStatusParkingOff.showLanguage
             presenter?.changeStatusParking(parkingID: parkingID&, isActive: "1")
@@ -92,10 +92,10 @@ class ParkingInfoViewController: BaseViewController {
     }
     
     @IBAction func btnSaveTapped() {
-        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-        if parkingID == "" || parkingID == nil {
-            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-        }
+//        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//        if parkingID == "" || parkingID == nil {
+            let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//        }
         if validateInputData() {
             presenter?.updateInfoParking(param: UpdateInfoParkingParam(parking_id: parkingID&,
                                                                        parking_address: parkingAddress,

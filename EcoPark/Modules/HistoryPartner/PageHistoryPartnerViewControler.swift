@@ -87,10 +87,10 @@ class PageHistoryPartnerViewControler : PageViewController {
     }
     
     func callAPIHistoryPartner() {
-        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
-        if parkingID == "" || parkingID == nil {
-            parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
-        }
+//        var parkingID = UserDefaultHelper.shared.loginUserInfo?.infoParking?.id
+//        if parkingID == "" || parkingID == nil {
+            let parkingID = UserDefaultHelper.shared.loginUserInfo?.parkingID
+//        }
         Provider.shared.parkingAPIService.getHistoryMyParking(parkingID: parkingID&, status: "checked_in", keyword: "", offset: 0, limit: limitLoad, success: { (historyParking) in
             self.parkedNumber = historyParking?.parked_number ?? 0
             self.numberPlace = historyParking?.number_place ?? "0"
