@@ -25,7 +25,7 @@ class HomeFindPresenter: HomeFindPresenterProtocol, HomeFindInteractorOutputProt
     }
     
     func searchPlaceByString(text: String) {
-        let url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?language=vi_VN&region=vn&key=AIzaSyBRqdB7aPIIdu-OmugGHWnfEncKfdTlaws"
+        let url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?language=vi_VN&region=vn&key=AIzaSyA3RbwvBSvzSWj4etJBpYwxUR-jVe55IoU"
         let params: Parameters = ["input": text]
         //            print(section)
         
@@ -50,7 +50,7 @@ class HomeFindPresenter: HomeFindPresenterProtocol, HomeFindInteractorOutputProt
     }
     
     func getPlaceDetail(placeId: String) {
-        let url = "https://maps.googleapis.com/maps/api/place/details/json?&fields=geometry&key=AIzaSyBRqdB7aPIIdu-OmugGHWnfEncKfdTlaws"
+        let url = "https://maps.googleapis.com/maps/api/place/details/json?&fields=geometry&key=AIzaSyA3RbwvBSvzSWj4etJBpYwxUR-jVe55IoU"
         let params: Parameters = ["place_id": placeId]
         
         Alamofire.request(url, method: .get, parameters: params).responseJSON { response in
